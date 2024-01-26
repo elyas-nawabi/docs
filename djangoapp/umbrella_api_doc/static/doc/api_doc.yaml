@@ -96,6 +96,8 @@ paths:
                       type: integer
                     success_message:
                       type: string
+              required: 
+                - code
               example:
                 data:
                   - active: true
@@ -114,11 +116,98 @@ paths:
                 status: 200
                 success_message: null
         '401':
-          description: Authentication credentials were not provided.
+          description: "401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required."
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
+
+  /umbrella/currencies/{obj_id}:
+    get:
+      tags:
+        - Currency
+      summary: Get one currency.
+      description:  Get one currency.
+      operationId: getCurrencyById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: object
+                items: 
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        type: object
+                        active:
+                          type: boolean
+                        code:
+                          type: string
+                        digits: 
+                          type: integer
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                          format: email
+                        numeric_code:
+                          type: string
+                        rate:
+                          type: float
+                        rates:
+                          type: array
+                        rounding:
+                          type: float
+                        symbol:
+                          type: string
+                    errors:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                data:
+                  active: true
+                  code: AFN
+                  digits: 2
+                  id: 1
+                  name: Afghani
+                  numeric_code: ""
+                  rate: 0.0
+                  rates: []
+                  rounding: 0.01
+                  symbol: AFN
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: "401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.  
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP404'
+                
 
 components:
   schemas:
@@ -134,15 +223,7 @@ components:
         errors:
           type: object
         pagination:
-          type: object
-          page:
-            type: integer
-          per_page:
-            type: integer
-          total_pages:
-            type: integer
-          total_records:
-            type: integer
+          type: null
         status:
           type: integer
         success_message:
@@ -156,6 +237,34 @@ components:
         pagination: null
         status: 401
         success_message: null
+    HTTP404:
+      properties:
+        data:
+          type: null
+        errors:
+          type: array
+          properties:
+            error_message:
+              type: string
+            identifier: 
+              type: string
+            serverity: 
+              type: integer
+        pagination:
+          type: null
+        status:
+          type: integer
+        success_message:
+          type: string
+      example:
+        data: null
+        errors:
+          - error_message: "Not found"
+            identifier: "currency.currency"
+            severity: 1
+        pagination: null
+        status: 404
+        success_message: null
 
 
 
@@ -163,8 +272,6 @@ components:
     bearerAuth:   
       type: http
       scheme: bearer        
-      # type: apiKey
-      # in: header
-      # name: Authorization
+     
 security:
   - bearerAuth: [] 
