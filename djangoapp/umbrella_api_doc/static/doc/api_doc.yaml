@@ -1,0 +1,148 @@
+openapi: '3.1.0'
+info:
+  title: "RESTful API Documentation: UMBRELLA"
+  description: |
+    # UMBRELLA API Documentation Description:
+    Welcome to the official documentation for the UMBRELLA RESTful API. 
+    This comprehensive guide is designed to assist developers and integrators, 
+    in effectively utilizing the power of our API.
+    Our RESTful API provides:
+    A simple and efficient way to access and interact 
+    with, currencies, finances ....... 
+    Whether you're building 
+    a web application, mobile app, or integrating 
+    with other services, our API offers the tools 
+    you need to streamline your development process 
+    and unlock the full potential of your project.
+    In this documentation, you'll find detailed 
+    information on how to make API requests, 
+    authentication procedures, available endpoints, 
+    request/response examples, error handling, 
+    and best practices for integrating UMBRELLA
+    into your projects.
+    
+    # Authorization:
+    You can authorize your requests using this authorization method:
+    - TOKEN
+    
+    ## TOKEN
+    - The endpoints are authorized using a TOKEN.
+    - To authorize requests, please add a Token using the 'Authorize' button with the following format:
+      ### "Bearer user-token"
+  version: 1.0.0
+  summary: UMBRELLA Integration REST API
+  contact:
+    name: API Support
+    email: shadab@gmail.com
+
+servers:
+  - url: http://api-alpha.umbrellaerp.com
+  # - url: http://localhost:8000/api/
+
+tags:
+  - name: Currency
+    description: Currency - Currency Data Handling.
+
+paths:
+  /umbrella/currencies:
+    get:
+      tags:
+        - Currency
+      summary:  Get currency details.
+      description: Get currency details.
+      operationId: get_List_of_Currencies
+      responses:
+        '200':
+          description: List of currencies.
+          content: 
+            application/json:
+              schema:
+                type: object
+                items: 
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        type: object
+                        active:
+                          type: boolean
+                        code:
+                          type: string
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                          format: email
+                        numeric_code:
+                          type: string
+                        rate:
+                          type: float
+                        symbol:
+                          type: string
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  - active: true
+                    code: "AFN"
+                    id: 1
+                    name: "Afghani"
+                    numeric_code: ""
+                    rate: 0.0
+                    symbol: "AFN"
+                errors: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 1
+                status: 200
+                success_message: null
+        '401':
+          description: Authentication credentials were not provided.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+
+components:
+  schemas:
+    HTTP200:
+        properties:
+          success_message: 
+            type: string
+            example: OK
+    HTTP401:
+      properties:
+        data: null
+        errors:
+          - error_message: "401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required."
+            identifier: Global
+            severity: 1
+        pagination: null
+        status: 401
+        success_message: null
+  securitySchemes:
+    bearerAuth:   
+      type: http
+      scheme: bearer        
+      # type: apiKey
+      # in: header
+      # name: Authorization
+security:
+  - bearerAuth: [] 
