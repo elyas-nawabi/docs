@@ -2,7 +2,7 @@ openapi: '3.1.0'
 info:
   # title: "RESTful API Documentation: UMBRELLA"
   description: |
-    # UMBRELLA API Documentation Description:
+    ## UMBRELLA API Documentation Description:
     Welcome to the official documentation for the UMBRELLA RESTful API. 
     This comprehensive guide is designed to assist developers and integrators, 
     in effectively utilizing the power of our API.
@@ -21,7 +21,7 @@ info:
     and best practices for integrating UMBRELLA
     into your projects.
     
-    # Authorization:
+    ## Authorization:
     You can authorize your requests using this authorization method:
     - TOKEN
     
@@ -123,12 +123,31 @@ paths:
 components:
   schemas:
     HTTP200:
-        properties:
-          success_message: 
-            type: string
-            example: OK
+      properties:
+        success_message: 
+          type: string
+          example: OK
     HTTP401:
       properties:
+        data:
+          type: null
+        errors:
+          type: object
+        pagination:
+          type: object
+          page:
+            type: integer
+          per_page:
+            type: integer
+          total_pages:
+            type: integer
+          total_records:
+            type: integer
+        status:
+          type: integer
+        success_message:
+          type: string
+      example:
         data: null
         errors:
           - error_message: "401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required."
@@ -137,6 +156,9 @@ components:
         pagination: null
         status: 401
         success_message: null
+
+
+
   securitySchemes:
     bearerAuth:   
       type: http
