@@ -1,6 +1,6 @@
 openapi: '3.1.0'
 info:
-  title: "RESTful API Documentation: UMBRELLA"
+  # title: "RESTful API Documentation: UMBRELLA"
   description: |
     # UMBRELLA API Documentation Description:
     Welcome to the official documentation for the UMBRELLA RESTful API. 
@@ -30,7 +30,7 @@ info:
     - To authorize requests, please add a Token using the 'Authorize' button with the following format:
       ### "Bearer user-token"
   version: 1.0.0
-  summary: UMBRELLA Integration REST API
+  # summary: UMBRELLA Integration REST API
   contact:
     name: API Support
     email: shadab@gmail.com

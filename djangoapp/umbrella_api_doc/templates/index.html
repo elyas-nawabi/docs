@@ -36,11 +36,32 @@
           margin:0;
           background: #fafafa;
         }
+        header {
+          display:flex;
+          background-color: #EBF3FB;
+          color: #3B4151;
+          padding: 10px 140px;
+          position:sticky;
+          top:0;
+          left:0;
+          z-index:100000;
+          box-shadow:1px 1px 8px #ccc;
+        }
+        header .logo {
+          font-size: 24px;
+          font-weight: bold;
+          color: #3B4151;
+          text-decoration: none;
+          font-family:'arial'
+        }
       </style>
 
     </head>
    
   <body>
+    <header>
+      <a href="#" class="logo">Umbrella API Documentation</a>
+    </header>
     <script>
       let url = "{% static 'doc/api_doc.yaml' %}"
     </script>
