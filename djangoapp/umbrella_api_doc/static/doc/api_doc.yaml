@@ -207,10 +207,114 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP404'
-                
 
+    post:            
+      tags:
+        - Currency
+      summary: Create a currency.
+      description:  Create a currency.
+      operationId: postCurrencyById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+                type: object
+                $ref: '#/components/schemas/CreateCurrency'
+      responses:
+        '201':
+          description: OK
+          content: 
+            application/json:
+              schema:
+                items: 
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        type: object
+                        active:
+                          type: boolean
+                        code:
+                          type: string
+                        digits: 
+                          type: integer
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                          format: email
+                        numeric_code:
+                          type: string
+                        rate:
+                          type: float
+                        rates:
+                          type: array
+                        rounding:
+                          type: float
+                        symbol:
+                          type: string
+                    errors:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                data:
+                  active: true
+                  code: "AFN"
+                  digits: 2
+                  name: "Afghani"
+                  numeric_code: "001"
+                  rate: 0.0
+                  rates: []
+                  rounding: 3.0
+                  symbol: "AFN"
+                errors: null
+                pagination: null
+                status: integer
+                success_message: null
+        '401':
+          description: "401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+        
 components:
   schemas:
+    CreateCurrency:
+      properties:
+        active:
+          type: boolean
+        code:
+          type: string
+        digits:
+          type: integer
+        name:
+          type: string
+        numeric_code:
+          type: string
+        rounding:
+          type: float
+        symbol:
+          type: string
+      required:
+        - code
+        - name
+      example:
+        active: true
+        code: "nc2"
+        digits: 2
+        name: "new_currency"
+        numeric_code: "001"
+        rounding: 4.0
+        symbol: "nc2"
+
     HTTP200:
       properties:
         success_message: 
@@ -264,6 +368,34 @@ components:
             severity: 1
         pagination: null
         status: 404
+        success_message: null
+    HTTP400:
+      properties:
+        data:
+          type: null
+        errors:
+          type: array
+          properties:
+            error_message:
+              type: string
+            identifier: 
+              type: string
+            serverity: 
+              type: integer
+        pagination:
+          type: null
+        status:
+          type: integer
+        success_message:
+          type: string
+      example:
+        data: null
+        errors:
+          - error_message: "415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'."
+            identifier: "Global"
+            severity: 1
+        pagination: null
+        status: 400
         success_message: null
 
 
