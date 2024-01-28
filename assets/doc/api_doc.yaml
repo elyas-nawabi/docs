@@ -37,7 +37,6 @@ info:
 
 servers:
   - url: http://api-alpha.umbrellaerp.com
-  # - url: http://localhost:8000/api/
 
 tags:
   - name: Currency
@@ -45,12 +44,13 @@ tags:
 
 paths:
   /umbrella/currencies:
+
     get:
       tags:
         - Currency
       summary:  Get currency details.
       description: Get currency details.
-      operationId: get_List_of_Currencies
+      operationId: getCurrencies
       responses:
         '200':
           description: List of currencies.
@@ -73,7 +73,6 @@ paths:
                           type: integer
                         name: 
                           type: string
-                          format: email
                         numeric_code:
                           type: string
                         rate:
@@ -123,6 +122,7 @@ paths:
                 $ref: '#/components/schemas/HTTP401'
 
   /umbrella/currencies/{obj_id}:
+
     get:
       tags:
         - Currency
@@ -160,7 +160,6 @@ paths:
                           type: integer
                         name: 
                           type: string
-                          format: email
                         numeric_code:
                           type: string
                         rate:
@@ -244,7 +243,6 @@ paths:
                           type: integer
                         name: 
                           type: string
-                          format: email
                         numeric_code:
                           type: string
                         rate:
@@ -284,7 +282,92 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-        
+
+    put:            
+      tags:
+        - Currency
+      summary: Update a currency.
+      description:  Update a currency.
+      operationId: updateCurrencyById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+              type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+                type: object
+                $ref: '#/components/schemas/UpdateCurrency'
+      responses:
+        '200':
+          description: OK
+          content: 
+            application/json:
+              schema:
+                items: 
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type: object
+                        active:
+                          type: boolean
+                        code:
+                          type: string
+                        digits: 
+                          type: integer
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        numeric_code:
+                          type: string
+                        rate:
+                          type: float
+                        rates:
+                          type: array
+                        rounding:
+                          type: float
+                        symbol:
+                          type: string
+                    errors:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                data:
+                  active: true
+                  code: "eu1"
+                  digits: 3
+                  name: "Euro"
+                  numeric_code: "111"
+                  rate: 0.0
+                  rates: []
+                  rounding: 1.0
+                  symbol: "eu"
+                errors: null
+                pagination: null
+                status: integer
+                success_message: null
+        '401':
+          description: "401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+      
+
+
 components:
   schemas:
     CreateCurrency:
@@ -314,6 +397,33 @@ components:
         numeric_code: "001"
         rounding: 4.0
         symbol: "nc2"
+    UpdateCurrency:
+      properties:
+        active:
+          type: boolean
+        code:
+          type: string
+        digits:
+          type: integer
+        name:
+          type: string
+        numeric_code:
+          type: string
+        rounding:
+          type: float
+        symbol:
+          type: string
+      required:
+        - code
+        - id
+      example:
+        active: true
+        code: "er1"
+        digits: 3
+        name: "Euro"
+        numeric_code: "111"
+        rounding: 2.0
+        symbol: "eu"
 
     HTTP200:
       properties:

@@ -1,18 +1,13 @@
-<!-- HTML for static distribution bundle build -->
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Umbrella"
-    />
+    <meta name="description" content="Umbrella" />
     <title>Umbrella API</title>
-    <link rel="stylesheet" type="text/css" href= {% static "css/swagger-ui.css" %} />
-    <link rel="shortcut icon" href={% static 'images/tryton-logo.jpg' %} />
-    <link rel="stylesheet" type="text/css" href={% static "css/index.css" %} />
+    <link rel="stylesheet" type="text/css" href="assets/css/swagger-ui.css" />
+    <link rel="shortcut icon" href='assets/images/tryton-logo.jpg' />
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
     <style>
         .topbar{
           display: none !important;
@@ -23,7 +18,6 @@
           overflow: -moz-scrollbars-vertical;
           overflow-y: scroll;
         }
-  
         *,
         *:before,
         *:after
@@ -54,8 +48,7 @@
           text-decoration: none;
           font-family:'arial'
         }
-      </style>
-
+    </style>
     </head>
    
   <body>
@@ -63,11 +56,11 @@
       <a href="#" class="logo">Umbrella API Documentation</a>
     </header>
     <script>
-      let url = "{% static 'doc/api_doc.yaml' %}"
+      let url = 'assets/doc/api_doc.yaml'
     </script>
     <div id="swagger-ui"></div>
-    <script src={% static "js/swagger-ui-bundle.js" %} charset="UTF-8" crossorigin> </script>
-    <script src={% static "js/swagger-ui-standalone-preset.js" %} charset="UTF-8" crossorigin> </script>
-    <script src={% static "js/swagger-initializer.js" %} charset="UTF-8" crossorigin> </script>
+    <script src="assets/js/swagger-ui-bundle.js"  charset="UTF-8" crossorigin> </script>
+    <script src="assets/js/swagger-ui-standalone-preset.js"  charset="UTF-8" crossorigin> </script>
+    <script src="assets/js/swagger-initializer.js"  charset="UTF-8" crossorigin> </script>
   </body>
 </html>
