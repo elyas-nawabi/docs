@@ -65,9 +65,8 @@ tags:
     description: scheduled rate update - scheduled rate update data handling.
   - name: fiscal year
     description: fiscal year - fiscal year data handling.
-
 paths:
-  /umbrella/currencies:
+  '/umbrella/currencies':
     get:
       tags:
         - currency
@@ -448,6 +447,435 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
+  '/umbrella/scheduled-rate-updates':
+    get:
+      tags:
+        - scheduled rate update
+      summary: Get list of crons.
+      description: Get list of crons.
+      operationId: getCrons
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  type: object
+                  properties:
+                    data: null
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        currency:
+                          type: integer
+                        currency_:
+                          type: object
+                          label:
+                            type: string
+                          value:
+                            type: integer
+                        frequency:
+                          type: string
+                        id:
+                          type: integer
+                        last_update:
+                          type: date
+                        source:
+                          type: string
+                    errors:
+                      type: null
+                    pagination:
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  - currency: 1
+                    currency_:
+                      label: Afghani
+                      value: 1
+                    frequency: monthly
+                    id: 1
+                    last_update: '2024-01-28'
+                    source: ecb
+                errors: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 2
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+  '/umbrella/scheduled-rate-updates/{obj_id}':
+    get:
+      tags:
+        - scheduled rate update
+      summary: Get one cron.
+      description: Get one cron.
+      operationId: getCronById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  type: object
+                  properties:
+                    data: null
+                    type: object
+                    items:
+                      type: object
+                      properties:
+                        currencies:
+                          type: array
+                        currency:
+                          type: integer
+                        currency_:
+                          type: object
+                          label:
+                            type: string
+                          value:
+                            type: integer
+                        day:
+                          type: integer
+                        frequency:
+                          type: string
+                        id:
+                          type: integer
+                        last_update:
+                          type: date
+                        source:
+                          type: string
+                        weekday:
+                          type: integer
+                    errors:
+                      type: object
+                    pagination:
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  currencies: []
+                  currency: 1
+                  currency_:
+                    label: Afghani
+                    value: 1
+                  day: 1
+                  frequency: monthly
+                  id: 1
+                  last_update: '2024-01-28'
+                  source: ecb
+                  weekday: null
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP404'
+    post:
+      tags:
+        - scheduled rate update
+      summary: Create a cron.
+      description: Create a cron.
+      operationId: postCronById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/CreateCron'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type: object
+                        currencies:
+                          type: array
+                        currency:
+                          type: integer
+                        currency_:
+                          type: object
+                          label:
+                            type: string
+                          value:
+                            type: integer
+                        day:
+                          type: integer
+                        frequency:
+                          type: string
+                        id:
+                          type: integer
+                        last_update:
+                          type: date
+                        source:
+                          type: string
+                        weekday:
+                          type: integer
+                    errors:
+                      type: object
+                    pagination:
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  currencies: []
+                  currency: 1
+                  currency_:
+                    label: Afghani
+                    value: 1
+                  day: 1
+                  frequency: monthly
+                  id: 1
+                  last_update: '2024-01-28'
+                  source: ecb
+                  weekday: 'ir.calendar.day,2'
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+    put:
+      tags:
+        - scheduled rate update
+      summary: Update a cron.
+      description: Update a cron.
+      operationId: updateCronById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 4
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/UpdateCron'
+      responses:
+        '200':
+          description: OK.
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  type: object
+                  properties:
+                    data: null
+                    type: object
+                    items:
+                      type: object
+                      properties:
+                        currencies:
+                          type: array
+                        currency:
+                          type: integer
+                        currency_:
+                          type: object
+                          label:
+                            type: string
+                          value:
+                            type: integer
+                        day:
+                          type: integer
+                        frequency:
+                          type: string
+                        id:
+                          type: integer
+                        last_update:
+                          type: date
+                        source:
+                          type: string
+                        weekday:
+                          type: integer
+                    errors:
+                      type: object
+                    pagination:
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  currencies: []
+                  currency: 1
+                  currency_:
+                    label: Afghani
+                    value: 1
+                  day: 1
+                  frequency: monthly
+                  id: 1
+                  last_update: '2024-01-28'
+                  source: ecb
+                  weekday: null
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+    delete:
+      tags:
+        - scheduled rate update
+      summary: Delete a cron.
+      description: Delete a cron.
+      operationId: deleteCronById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 4
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: null
+                    errors:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                data: null
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
   '/umbrella/fiscal-years':
     get:
       tags:
@@ -517,7 +945,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-  
   '/umbrella/fiscal-years/{obj_id}':
     get:
       tags:
