@@ -70,7 +70,7 @@ tags:
   - name: party
     description: party - party data handling.
 paths:
-  '/umbrella/currencies':
+  '/currencies':
     get:
       tags:
         - currency
@@ -126,12 +126,12 @@ paths:
               example:
                 data:
                   - active: true
-                    code: AFN
+                    code: "AFN"
                     id: 1
-                    name: Afghani
-                    numeric_code: ''
+                    name: "Afghani"
+                    numeric_code: "001"
                     rate: 0
-                    symbol: AFN
+                    symbol: "AFN"
                 errors: null
                 pagination:
                   page: 1
@@ -207,14 +207,14 @@ paths:
               example:
                 data:
                   active: true
-                  code: AFN
+                  code: "AFN"
                   digits: 2
-                  name: Afghani
-                  numeric_code: '001'
+                  name: "Afghani"
+                  numeric_code: "001"
                   rate: 0
                   rates: []
                   rounding: 3
-                  symbol: AFN
+                  symbol: "AFN"
                 errors: null
                 pagination: null
                 status: 201
@@ -229,7 +229,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-  '/umbrella/currencies/{obj_id}':
+  '/currencies/{obj_id}':
     get:
       tags:
         - currency
@@ -288,15 +288,15 @@ paths:
               example:
                 data:
                   active: true
-                  code: AFN
+                  code: "AFN"
                   digits: 2
                   id: 1
-                  name: Afghani
-                  numeric_code: ''
+                  name: "Afghani"
+                  numeric_code: "001"
                   rate: 0
                   rates: []
                   rounding: 0.01
-                  symbol: AFN
+                  symbol: "AFN"
                 errors: null
                 pagination: null
                 status: 200
@@ -381,14 +381,14 @@ paths:
               example:
                 data:
                   active: true
-                  code: eu1
+                  code: "eu1"
                   digits: 3
-                  name: Euro
-                  numeric_code: '111'
-                  rate: 0
+                  name: "Euro"
+                  numeric_code: "001"
+                  rate: 1.1
                   rates: []
-                  rounding: 1
-                  symbol: eu
+                  rounding: 0.1
+                  symbol: "eu"
                 errors: null
                 pagination: null
                 status: 200
@@ -451,7 +451,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-  '/umbrella/scheduled-rate-updates':
+  '/scheduled-rate-updates':
     get:
       tags:
         - scheduled rate update
@@ -606,14 +606,14 @@ paths:
                   currencies: []
                   currency: 1
                   currency_:
-                    label: Afghani
+                    label: "Afghani"
                     value: 1
                   day: 1
-                  frequency: monthly
+                  frequency: "monthly"
                   id: 1
-                  last_update: '2024-01-28'
+                  last_update: "2024-01-28"
                   source: ecb
-                  weekday: 'ir.calendar.day,2'
+                  weekday: "2"
                 errors: null
                 pagination: null
                 status: 200
@@ -628,7 +628,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-  '/umbrella/scheduled-rate-updates/{obj_id}':
+  '/scheduled-rate-updates/{obj_id}':
     get:
       tags:
         - scheduled rate update
@@ -702,13 +702,13 @@ paths:
                   currencies: []
                   currency: 1
                   currency_:
-                    label: Afghani
+                    label: "Afghani"
                     value: 1
                   day: 1
-                  frequency: monthly
+                  frequency: "monthly"
                   id: 1
-                  last_update: '2024-01-28'
-                  source: ecb
+                  last_update: "2024-01-28"
+                  source: "ecb"
                   weekday: null
                 errors: null
                 pagination: null
@@ -810,13 +810,13 @@ paths:
                   currencies: []
                   currency: 1
                   currency_:
-                    label: Afghani
+                    label: "Afghani"
                     value: 1
                   day: 1
-                  frequency: monthly
+                  frequency: "monthly"
                   id: 1
-                  last_update: '2024-01-28'
-                  source: ecb
+                  last_update: "2024-01-28"
+                  source: "ecb"
                   weekday: null
                 errors: null
                 pagination: null
@@ -880,7 +880,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-  '/umbrella/fiscal-years':
+  '/fiscal-years':
     get:
       tags:
         - fiscal year
@@ -897,10 +897,10 @@ paths:
                 items:
                   type: object
                   properties:
-                    data: null
-                    type: array
-                    items:
-                      type: object
+                    data:
+                      type: array
+                      items:
+                       type: object
                       properties:
                         id:
                           type: integer
@@ -949,7 +949,154 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-  '/umbrella/fiscal-years/{obj_id}':
+    post:
+      tags:
+        - fiscal year
+      summary: Create a fiscal year.
+      description: Create a fiscal year.
+      operationId: postPartyById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/CreateFiscalYear'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  type: object
+                  properties:
+                    data: 
+                      type: object
+                      properties:
+                      company:
+                        type: integer
+                      company_:
+                        type: object
+                        label:
+                          type: string
+                        value:
+                          type: integer
+                      end_date:
+                        type: date
+                      id:
+                        type: integer
+                      name:
+                        type: string
+                      periods:
+                        type: array
+                        properties:
+                          items:
+                          type: object
+                          company:
+                            type: integer
+                          company_:
+                            type: object
+                            label:
+                              type: string
+                            value:
+                              type: integer
+                          end_date:
+                            type: date
+                          id:
+                            type: integer
+                          name:
+                            type: string
+                          post_move_sequence:
+                            type: integer
+                          post_move_sequence_:
+                            type: object
+                            label:
+                              type: string
+                            value:
+                              type: integer
+                          start_date:
+                            type: date
+                          state:
+                            type: string
+                      post_move_sequence:
+                        type: integer
+                      post_move_sequence_:
+                        type: object
+                        label:
+                          type: string
+                        value:
+                          type: integer
+                      start_date:
+                        type: date
+                      state:
+                        type: string
+                  errors:
+                    type: object
+                  pagination:
+                    items:
+                      type: object
+                    properties:
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                  status:
+                    type: integer
+                  success_message:
+                    type: string
+              example:
+                data:
+                  company: 1
+                  company_:
+                    label: "Party 1"
+                    value: 1
+                  end_date: "2024-12-31"
+                  id: 2
+                  name: "2024"
+                  periods:
+                    - company: 1
+                      company_:
+                        label: "Party 1"
+                        value: 1
+                      end_date: "2024-01-31"
+                      fiscalyear: 2
+                      id: 13
+                      name: "2024-01"
+                      post_move_sequence: 4
+                      post_move_sequence_:
+                        label: "2024"
+                        value: 4
+                      start_date: "2024-01-01"
+                      state: "open"
+                      type: "standard"
+                  post_move_sequence: 4
+                  post_move_sequence_:
+                    label: "2024"
+                    value: 4
+                  start_date: "2024-01-01"
+                  state: "open"
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+  
+  '/fiscal-years/{obj_id}':
     get:
       tags:
         - fiscal year
@@ -1052,7 +1199,7 @@ paths:
                 data:
                   company: 1
                   company_:
-                    label: Party 1
+                    label: "Party 1"
                     value: 1
                   end_date: "2024-12-31"
                   id: 2
@@ -1060,7 +1207,7 @@ paths:
                   periods:
                     - company: 1
                       company_:
-                        label: Party 1
+                        label: "Party 1"
                         value: 1
                       end_date: "2024-01-31"
                       fiscalyear: 2
@@ -1071,14 +1218,14 @@ paths:
                         label: "2024"
                         value: 4
                       start_date: "2024-01-01"
-                      state: open
-                      type: standard
+                      state: "open"
+                      type: "standard"
                   post_move_sequence: 4
                   post_move_sequence_:
                     label: "2024"
                     value: 4
                   start_date: "2024-01-01"
-                  state: open
+                  state: "open"
                 errors: null
                 pagination: null
                 status: 200
@@ -1147,7 +1294,7 @@ paths:
               application/json:
                 schema:
                   $ref: '#/components/schemas/HTTP401'
-  '/umbrella/login':
+  '/login':
     post:
       tags:
         - auth
@@ -1192,7 +1339,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP403'
-  '/umbrella/parties':
+  '/parties':
     get:
       tags:
         - party
@@ -1331,7 +1478,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-  '/umbrella/parties/{obj_id}':
+  '/parties/{obj_id}':
     get:
       tags:
         - party
@@ -1548,12 +1695,12 @@ components:
         - name
       example:
         active: true
-        code: nc2
+        code: "nc2"
         digits: 2
-        name: new_currency
-        numeric_code: '001'
+        name: "new_currency"
+        numeric_code: "001"
         rounding: 4
-        symbol: nc2
+        symbol: "nc2"
     UpdateCurrency:
       properties:
         active:
@@ -1575,12 +1722,12 @@ components:
         - id
       example:
         active: true
-        code: er1
+        code: "er1"
         digits: 3
-        name: Euro
-        numeric_code: '111'
+        name: "Euro"
+        numeric_code: "111"
         rounding: 2
-        symbol: eu
+        symbol: "eu"
     CreateCron:
       properties:
         data:
@@ -1612,13 +1759,12 @@ components:
         - frequency
         - source
       example:
-        data:
           currency: 1
           day: 1
-          frequency: monthly
-          last_update: '2024-01-28'
-          source: ecb
-          weekday: 'ir.calendar.day,2'
+          frequency: "monthly"
+          last_update: "2024-01-28"
+          source: "ecb"
+          weekday: "2"
     UpdateCron:
       properties:
         data:
@@ -1650,51 +1796,48 @@ components:
         - frequency
         - source
       example:
-        data:
-          currency: 1
-          day: 1
-          frequency: monthly
-          last_update: '2024-01-28'
-          source: ecb
-          weekday: 'ir.calendar.day,2'
+        currency: 1
+        day: 1
+        frequency: "monthly"
+        last_update: "2024-01-28"
+        source: "ecb"
+        weekday: "2"
     CreateFiscalYear:
       properties:
         data:
           type: object
           properties:
             type: object
-            currencies:
-              type: array
-            currency:
+            company:
               type: integer
-            currency_:
-              type: object
-              label:
-                type: string
-              value:
-                type: integer
-            day:
-              type: integer
-            frequency:
-              type: string
-            last_update:
+            end_date:
               type: date
-            source:
+            name:
               type: string
-            weekday:
+            post_move_sequence:
               type: integer
+            start_date:
+              type: date
+            periods:
+              type: array
+            state:
+              type: string
       required:
-        - currency
-        - frequency
-        - source
+        - company
+        - end_date
+        - start_date
+        - name
+        - post_move_sequence
+        - start_date
+        - state
       example:
-        data:
-          currency: 1
-          day: 1
-          frequency: monthly
-          last_update: '2024-01-28'
-          source: ecb
-          weekday: 'ir.calendar.day,2'
+        company: 1
+        end_date: "2027-12-31"
+        name: "2027"
+        periods: []
+        post_move_sequence: 7
+        start_date: "2027-01-01"
+        state: "open"
     CreateAuth:
       properties:
         data:
@@ -1709,9 +1852,8 @@ components:
         - username
         - password
       example:
-        data:
-          username: "elyas"
-          password: "elyas"
+        username: "elyas"
+        password: "elyas"
     CreateParty:
       properties:
         active:
