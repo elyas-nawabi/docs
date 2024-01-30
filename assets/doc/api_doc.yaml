@@ -1195,7 +1195,7 @@ paths:
   '/umbrella/parties':
     get:
       tags:
-        - parties
+        - party
       summary: Get party details.
       description: Get party details.
       operationId: getParties
@@ -1254,6 +1254,264 @@ paths:
                   per_page: 100
                   total_pages: 1
                   total_records: 1
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+  '/umbrella/parties/{obj_id}':
+    get:
+      tags:
+        - party
+      summary: Get one party.
+      description: Get one party.
+      operationId: getPartyById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type: object
+                        active:
+                          type: boolean
+                        code:
+                          type: string
+                        create_date:
+                          type: date
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                    errors:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                data:
+                  active: true
+                  code: "1"
+                  create_date: "2024-01-23T16:52:29.278731"
+                  id: 1
+                  name: "Party 1"
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP404'
+    post:
+      tags:
+        - party
+      summary: Create a party.
+      description: Create a party.
+      operationId: postPartyById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/CreateParty'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        type: object
+                        active:
+                          type: boolean
+                        code:
+                          type: string
+                        create_date:
+                          type: date
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                    errors:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                data:
+                  active: true
+                  code: "19"
+                  create_date: "2024-01-23T16:52:29.278731"
+                  id: 19
+                  name: "Party 19"
+                errors: null
+                pagination: null
+                status: 201
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+    put:
+      tags:
+        - party
+      summary: Update a party.
+      description: Update a party.
+      operationId: updatePartyById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/UpdateParty'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type: object
+                        active:
+                          type: boolean
+                        code:
+                          type: string
+                        create_date:
+                          type: integer
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                    errors:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                data:
+                  active: true
+                  code: "20"
+                  create_date: "2025-01-23T16:52:29.278731"
+                  id: 20
+                  name: "Party 20"
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+    delete:
+      tags:
+        - party
+      summary: Delete a party.
+      description: Delete a party.
+      operationId: deletePartyById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 20
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: null
+                    errors:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                data: null
+                errors: null
+                pagination: null
                 status: 200
                 success_message: null
         '401':
@@ -1454,6 +1712,35 @@ components:
         data:
           username: "elyas"
           password: "elyas"
+    CreateParty:
+      properties:
+        active:
+          type: boolean
+        code:
+          type: string
+        name:
+          type: string
+      required:
+        - code
+        - name
+      example:
+        active: true
+        code: "19"
+        name: "Party 19"
+    UpdateParty:
+      properties:
+        active:
+          type: boolean
+        code:
+          type: string
+        name:
+          type: string
+      required:
+        - name
+      example:
+        active: true
+        code: "61"
+        name: "Party 61"
     HTTP200:
       properties:
         success_message:
