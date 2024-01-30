@@ -65,6 +65,10 @@ tags:
     description: scheduled rate update - scheduled rate update data handling.
   - name: fiscal year
     description: fiscal year - fiscal year data handling.
+  - name: auth
+    description: auth - auth data handling.
+  - name: party
+    description: party - party data handling.
 paths:
   '/umbrella/currencies':
     get:
@@ -1143,6 +1147,52 @@ paths:
               application/json:
                 schema:
                   $ref: '#/components/schemas/HTTP401'
+  '/umbrella/login':
+    post:
+      tags:
+        - auth
+      summary: Create an auth.
+      description: Create an auth.
+      operationId: postAuth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/CreateAuth'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: string
+                      format: jwt
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwibmFtZSI6IkFkbWluaXN0cmF0b3Iif._4_a1NBBiLWBSD4uUlfP1mSQUg6U8Lkss-1W3Xjaaa"
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '403':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP403'
+    
 components:
   schemas:
     CreateCurrency:
@@ -1313,6 +1363,23 @@ components:
           last_update: '2024-01-28'
           source: ecb
           weekday: 'ir.calendar.day,2'
+    CreateAuth:
+      properties:
+        data:
+          type: object
+          properties:
+            type: object
+            username: 
+              type: string
+            password:
+              type: string
+      required:
+        - username
+        - password
+      example:
+        data:
+          username: "elyas"
+          password: "elyas"
     HTTP200:
       properties:
         success_message:
@@ -1401,6 +1468,36 @@ components:
         pagination: null
         status: 400
         success_message: null
+    HTTP403:
+      properties:
+        data:
+          type: null
+        errors:
+          type: array
+          properties:
+            error_message:
+              type: string
+            identifier:
+              type: string
+            serverity:
+              type: integer
+        pagination:
+          type: null
+        status:
+          type: integer
+        success_message:
+          type: string
+      example:
+        data: null
+        errors:
+          - error_message: >-
+              User already logged in.
+            identifier: auth
+            severity: 1
+        pagination: null
+        status: 403
+        success_message: null
+  
   securitySchemes:
     bearerAuth:
       type: http
