@@ -1820,6 +1820,19 @@ components:
               type: date
             periods:
               type: array
+              properties:
+                end_date:
+                  type: date
+                name:
+                  type: string
+                post_move_sequence:
+                  type: integer
+                start_date:
+                  type: date
+                state:
+                  type: string
+                type:
+                  type: string
             state:
               type: string
       required:
@@ -1832,11 +1845,19 @@ components:
         - state
       example:
         company: 1
-        end_date: "2027-12-31"
+        end_date: "2029-12-31"
         name: "2027"
-        periods: []
+        periods:
+          type: array
+          properties:
+            end_date: "2029-12-31"
+            name: "2024-01"
+            post_move_sequence: 9
+            start_date: "2029-01-01"
+            state: "open"
+            type: "standard"
         post_move_sequence: 7
-        start_date: "2027-01-01"
+        start_date: "2029-01-01"
         state: "open"
     CreateAuth:
       properties:
