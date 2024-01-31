@@ -69,6 +69,8 @@ tags:
     description: auth - auth data handling.
   - name: party
     description: party - party data handling.
+  - name: category
+    description: category - category data handling.
 paths:
   '/currencies':
     get:
@@ -1599,7 +1601,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-    
+  '/category':
+    get:
+      tags:
+        - category
+      summary: Get categories.
+      description: Get categories.
+      operationId: getCategory
+  '/category/{obj_id}':
+
 components:
   schemas:
     CreateCurrency:
