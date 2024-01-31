@@ -1138,7 +1138,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-  
   '/fiscal-years/{obj_id}':
     get:
       tags:
@@ -1485,32 +1484,14 @@ paths:
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/Delete'
+              $ref: '#/components/schemas/DeleteRequestBody'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                items:
-                  type: object
-                  properties:
-                    data:
-                      type: null
-                    errors:
-                      type: null
-                    pagination:
-                      type: null
-                    status:
-                      type: integer
-                    success_message:
-                      type: null
-              example:
-                data: null
-                errors: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: '#/components/schemas/DeleteApiResponse'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -1899,6 +1880,14 @@ components:
         active: true
         code: "61"
         name: "Party 61"
+    DeleteRequestBody: 
+      properties:
+        ids:
+          type: array 
+      required:
+        - ids 
+      example:
+        ids: [18,13]
     DeleteApiResponse:
       items:
         type: object
@@ -1918,15 +1907,7 @@ components:
         errors: null
         pagination: null
         status: 200
-        success_message: null
-    Delete: 
-      properties:
-        ids:
-          type: array 
-      required:
-        - ids 
-      example:
-        ids: [18,13]
+        success_message: null   
     HTTP200:
       properties:
         success_message:
