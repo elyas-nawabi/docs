@@ -1109,7 +1109,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-  
+    delete:
+      tags:
+        - currency
+      summary: Delete fiscal years.
+      description: Delete fiscal years.
+      operationId: deleteFiscalYearsById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/Delete'
   '/fiscal-years/{obj_id}':
     get:
       tags:
@@ -1260,54 +1272,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP404'
-    delete:
-        tags:
-          - fiscal year
-        summary: Delete a fiscal year.
-        description: Delete a fiscal year.
-        operationId: deleteFiscalYearById
-        parameters:
-          - name: obj_id
-            rquired: true
-            in: path
-            schema:
-              type: integer
-            example: 2
-        responses:
-          '200':
-            description: OK
-            content:
-              application/json:
-                schema:
-                  items:
-                    type: object
-                    properties:
-                      data:
-                        type: null
-                      errors:
-                        type: null
-                      pagination:
-                        type: null
-                      status:
-                        type: integer
-                      success_message:
-                        type: null
-                example:
-                  data: null
-                  errors: null
-                  pagination: null
-                  status: 200
-                  success_message: null
-          '401':
-            description: >-
-              401 Unauthorized: The server could not verify that you are
-              authorized to access the URL requested. You either supplied the
-              wrong credentials (e.g. a bad password), or your browser doesn't
-              understand how to supply the credentials required.
-            content:
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/HTTP401'
   '/login':
     post:
       tags:
