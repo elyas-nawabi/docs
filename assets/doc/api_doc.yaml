@@ -229,6 +229,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
+    delete:
+      tags:
+        - currency
+      summary: Delete currencies.
+      description: Delete currencies.
+      operationId: deleteCurrenciesById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/Delete'
   '/currencies/{obj_id}':
     get:
       tags:
@@ -403,19 +416,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-    delete:
-      tags:
-        - currency
-      summary: Delete a currency.
-      description: Delete a currency.
-      operationId: deleteCurrencyById
-      parameters:
-        - name: obj_id
-          rquired: true
-          in: path
-          schema:
-            type: integer
-          example: 19
+    
       responses:
         '200':
           description: OK
@@ -1478,6 +1479,54 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
+    delete:
+      tags:
+        - party
+      summary: Delete parties.
+      description: Delete parties.
+      operationId: deletePartiesById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/Delete'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: null
+                    errors:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                data: null
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
   '/parties/{obj_id}':
     get:
       tags:
@@ -1623,55 +1672,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'
-    delete:
-      tags:
-        - party
-      summary: Delete a party.
-      description: Delete a party.
-      operationId: deletePartyById
-      parameters:
-        - name: obj_id
-          rquired: true
-          in: path
-          schema:
-            type: integer
-          example: 20
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                items:
-                  type: object
-                  properties:
-                    data:
-                      type: null
-                    errors:
-                      type: null
-                    pagination:
-                      type: null
-                    status:
-                      type: integer
-                    success_message:
-                      type: null
-              example:
-                data: null
-                errors: null
-                pagination: null
-                status: 200
-                success_message: null
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTP401'
-  
+    
 components:
   schemas:
     CreateCurrency:
@@ -1904,6 +1905,14 @@ components:
         active: true
         code: "61"
         name: "Party 61"
+    Delete: 
+      properties:
+        ids:
+          type: array 
+      required:
+        - ids 
+      example:
+        ids: [18,13]
     HTTP200:
       properties:
         success_message:
