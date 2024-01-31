@@ -1120,7 +1120,25 @@ paths:
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/Delete'
+              $ref: '#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+  
   '/fiscal-years/{obj_id}':
     get:
       tags:
