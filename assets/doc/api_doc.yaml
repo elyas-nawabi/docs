@@ -241,7 +241,25 @@ paths:
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/Delete'
+              $ref: '#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+                
   '/currencies/{obj_id}':
     get:
       tags:
@@ -402,42 +420,6 @@ paths:
                   rates: []
                   rounding: 0.1
                   symbol: "eu"
-                errors: null
-                pagination: null
-                status: 200
-                success_message: null
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTP401'
-    
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                items:
-                  type: object
-                  properties:
-                    data:
-                      type: null
-                    errors:
-                      type: null
-                    pagination:
-                      type: null
-                    status:
-                      type: integer
-                    success_message:
-                      type: null
-              example:
-                data: null
                 errors: null
                 pagination: null
                 status: 200
@@ -641,7 +623,24 @@ paths:
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/Delete'
+              $ref: '#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
   '/scheduled-rate-updates/{obj_id}':
     get:
       tags:
@@ -1882,6 +1881,26 @@ components:
         active: true
         code: "61"
         name: "Party 61"
+    DeleteApiResponse:
+      items:
+        type: object
+        properties:
+          data:
+            type: null
+          errors:
+            type: null
+          pagination:
+            type: null
+          status:
+            type: integer
+          success_message:
+            type: null
+      example:
+        data: null
+        errors: null
+        pagination: null
+        status: 200
+        success_message: null
     Delete: 
       properties:
         ids:
