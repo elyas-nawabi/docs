@@ -1712,6 +1712,8 @@ paths:
                     success_message:
                       type: null
               example:
+              - Please remove the square brackets from the start and end lines during post operation.
+              - You are limited to selecting one example from the following.
               - data:
                   childs: []
                   id: 12
@@ -1830,7 +1832,7 @@ paths:
                         parent:
                           anyOf:
                             - type: integer
-                            - type: null
+                            - type: 'null'
                         parent_:
                           type: object
                     errors:
@@ -1901,7 +1903,114 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTP401'  
-    
+    put:
+      tags:
+        - category
+      summary: Update a category.
+      description: Update a category.
+      operationId: updateCategoryById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/UpdateCategory'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type: object
+                        childs:
+                          type: array
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                        parent:
+                          anyOf:
+                            - type: integer
+                            - type: null
+                        parent_:
+                          type: object
+                    errors:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+              - Please remove the square brackets from the start and end lines during update operation.
+              - You are limited to selecting one example from the following.
+              - data:
+                  childs: []
+                  id: 12
+                  name: "testCtg1"
+                  parent: null
+                  parent_: {}
+                errors: null
+                pagination: null
+                status: 201
+                success_message: null
+              - data:
+                  childs: []
+                  id: 13
+                  name: "testCtg2"
+                  parent: 4
+                  parent_:
+                    label: "parentCtg"
+                    value: 4
+                errors: null
+                pagination: null
+                status: 201
+                success_message: null
+              - data:
+                  childs:
+                    childs: []
+                    id: 7
+                    name: "test1"
+                    parent: 6
+                    parent_: 
+                        label: "parentctg / testCtg"
+                        value: 6
+                  id: 14
+                  name: "testCtg4"
+                  parent: 4
+                  parent_:
+                    label: "parentCtg"
+                    value: 4
+                errors: null
+                pagination: null
+                status: 201
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+  
 components:
   schemas:
     CreateCurrency:
@@ -2183,6 +2292,24 @@ components:
           childs: []
           name: "test1"
           parent: 4
+    UpdateCategory:
+      properties:
+        name:
+          type: string
+        parent:
+          anyOf:
+            - type: integer
+            - type: null
+        childs:
+          type: array
+          properties:
+            type: object
+      required:
+        - name
+      example:
+        name: "testCtg4"
+        parent: 4
+        childs: []
     HTTP200:
       properties:
         success_message:
