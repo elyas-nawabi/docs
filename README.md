@@ -1,4 +1,3 @@
-```markdown
 # Umbrella API Documentation
 
 Welcome to the API documentation for the Umbrella project. This document provides comprehensive information on the Tryton-based API endpoints, usage guidelines, and essential details for developers and users.
