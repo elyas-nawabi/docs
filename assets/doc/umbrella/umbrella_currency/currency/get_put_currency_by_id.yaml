@@ -1,0 +1,173 @@
+get:
+  tags:
+    - currency
+  summary: Get one currency.
+  description: Get one currency.
+  operationId: getCurrencyById
+  parameters:
+    - name: obj_id
+      in: path
+      schema:
+        type: integer
+      rquired: true
+      example: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            items:
+              type: object
+              properties:
+                data:
+                  type: array
+                  properties:
+                    type: object
+                    active:
+                      type: boolean
+                    code:
+                      type: string
+                    digits:
+                      type: integer
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    numeric_code:
+                      type: string
+                    rate:
+                      type: float
+                    rates:
+                      type: array
+                    rounding:
+                      type: float
+                    symbol:
+                      type: string
+                errors:
+                  type: null
+                pagination:
+                  type: null
+                status:
+                  type: integer
+                success_message:
+                  type: null
+          example:
+            data:
+              active: true
+              code: "AFN"
+              digits: 2
+              id: 1
+              name: "Afghani"
+              numeric_code: "001"
+              rate: 0
+              rates: []
+              rounding: 0.01
+              symbol: "AFN"
+            errors: null
+            pagination: null
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTP401'
+    '404':
+      description: 404 Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTP404'
+put:
+  tags:
+    - currency
+  summary: Update a currency.
+  description: Update a currency.
+  operationId: updateCurrencyById
+  parameters:
+    - name: obj_id
+      rquired: true
+      in: path
+      schema:
+        type: integer
+      example: 19
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '#/components/schemas/UpdateCurrency'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            items:
+              type: object
+              properties:
+                data:
+                  type: object
+                  properties:
+                    type: object
+                    active:
+                      type: boolean
+                    code:
+                      type: string
+                    digits:
+                      type: integer
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    numeric_code:
+                      type: string
+                    rate:
+                      type: float
+                    rates:
+                      type: array
+                    rounding:
+                      type: float
+                    symbol:
+                      type: string
+                errors:
+                  type: null
+                pagination:
+                  type: null
+                status:
+                  type: integer
+                success_message:
+                  type: null
+          example:
+            data:
+              active: true
+              code: "eu1"
+              digits: 3
+              name: "Euro"
+              numeric_code: "001"
+              rate: 1.1
+              rates: []
+              rounding: 0.1
+              symbol: "eu"
+            errors: null
+            pagination: null
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTP401'

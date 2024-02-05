@@ -1,0 +1,207 @@
+    get:
+      tags:
+        - scheduled rate update
+      summary: Get list of crons.
+      description: Get list of crons.
+      operationId: getCrons
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  type: object
+                  properties:
+                    data: null
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        currency:
+                          type: integer
+                        currency_:
+                          type: object
+                          label:
+                            type: string
+                          value:
+                            type: integer
+                        frequency:
+                          type: string
+                        id:
+                          type: integer
+                        last_update:
+                          type: date
+                        source:
+                          type: string
+                    errors:
+                      type: null
+                    pagination:
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  - currency: 1
+                    currency_:
+                      label: Afghani
+                      value: 1
+                    frequency: monthly
+                    id: 1
+                    last_update: '2024-01-28'
+                    source: ecb
+                errors: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 2
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+    post:
+      tags:
+        - scheduled rate update
+      summary: Create a cron.
+      description: Create a cron.
+      operationId: postCronById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/CreateCron'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type: object
+                        currencies:
+                          type: array
+                        currency:
+                          type: integer
+                        currency_:
+                          type: object
+                          label:
+                            type: string
+                          value:
+                            type: integer
+                        day:
+                          type: integer
+                        frequency:
+                          type: string
+                        id:
+                          type: integer
+                        last_update:
+                          type: date
+                        source:
+                          type: string
+                        weekday:
+                          type: integer
+                    errors:
+                      type: object
+                    pagination:
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  currencies: []
+                  currency: 1
+                  currency_:
+                    label: "Afghani"
+                    value: 1
+                  day: 1
+                  frequency: "monthly"
+                  id: 1
+                  last_update: "2024-01-28"
+                  source: ecb
+                  weekday: "2"
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+    delete:
+      tags:
+        - scheduled rate update
+      summary: Delete scheduled rate updates.
+      description: Delete scheduled rate updates.
+      operationId: deleteScheduledRateUpdatesById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTP401'
+  
