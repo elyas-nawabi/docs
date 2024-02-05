@@ -10,7 +10,7 @@ post:
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/CreateAuth'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateAuth'
       responses:
         '200':
           description: OK
@@ -41,5 +41,5 @@ post:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP403'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP403'
   

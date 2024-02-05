@@ -63,7 +63,7 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'  
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
     post:
       tags:
         - category
@@ -76,7 +76,7 @@
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/CreateCategory'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateCategory'
       responses:
         '201':
           description: OK
@@ -163,7 +163,7 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
         - category
@@ -176,14 +176,14 @@
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/DeleteRequestBody'
+              $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DeleteApiResponse'
+                $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -193,5 +193,5 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
   

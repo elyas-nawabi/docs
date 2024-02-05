@@ -104,7 +104,7 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'  
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
     put:
       tags:
         - category
@@ -124,7 +124,7 @@
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/UpdateCategory'
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateCategory'
       responses:
         '200':
           description: OK
@@ -211,5 +211,5 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
   

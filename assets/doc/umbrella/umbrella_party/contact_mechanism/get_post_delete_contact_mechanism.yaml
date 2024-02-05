@@ -90,7 +90,7 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'  
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
     post:
       tags:
         - contact mechanism
@@ -103,7 +103,7 @@
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/CreateContactMechanism'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateContactMechanism'
       responses:
         '201':
           description: OK
@@ -191,7 +191,7 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
         - contact mechanism
@@ -204,14 +204,14 @@
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/DeleteRequestBody'
+              $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DeleteApiResponse'
+                $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -221,5 +221,5 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
   

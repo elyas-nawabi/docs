@@ -79,9 +79,9 @@ paths:
   '/currencies/{obj_id}':
     $ref: 'umbrella/umbrella_currency/currency/get_put_currency_by_id.yaml'
   '/scheduled-rate-updates':
-    $ref: 'umbrella/umbrella_currency/currency/get_post_delete_scheduled_rate_updates.yaml'
+    $ref: 'umbrella/umbrella_currency/scheduled_rate_update/get_post_delete_scheduled_rate_updates.yaml'
   '/scheduled-rate-updates/{obj_id}':
-    $ref: 'umbrella/umbrella_currency/currency/get_put_scheduled_rate_updates_by_id.yaml'
+    $ref: 'umbrella/umbrella_currency/scheduled_rate_update/get_put_scheduled_rate_updates_by_id.yaml'
   '/fiscal-years':
     $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_post_delete_fiscal_year.yaml'
   '/fiscal-years/{obj_id}':

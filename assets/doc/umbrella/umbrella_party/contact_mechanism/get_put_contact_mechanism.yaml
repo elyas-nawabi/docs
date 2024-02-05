@@ -98,7 +98,7 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'  
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
     put:
       tags:
         - contact mechanism
@@ -118,7 +118,7 @@
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/UpdateContactMechanism'
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateContactMechanism'
       responses:
         '200':
           description: OK
@@ -206,5 +206,5 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
   

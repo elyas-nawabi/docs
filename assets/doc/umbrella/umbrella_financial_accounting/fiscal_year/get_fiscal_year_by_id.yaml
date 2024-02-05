@@ -140,11 +140,11 @@ get:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
         '404':
           description: 404 Not Found.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP404'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
   

@@ -92,13 +92,13 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
         '404':
           description: 404 Not Found.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP404'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
         - scheduled rate update
@@ -118,7 +118,7 @@
           application/json:
             schema:
               type: object
-              $ref: '#/components/schemas/UpdateCron'
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateCron'
       responses:
         '200':
           description: OK.
@@ -200,5 +200,5 @@
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
   
