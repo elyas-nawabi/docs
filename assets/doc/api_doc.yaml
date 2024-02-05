@@ -75,194 +75,7 @@ tags:
     description: contact mechanism - contact mechanism data management.
 paths:
   '/currencies':
-    get:
-      tags:
-        - currency
-      summary: Get currency details.
-      description: Get currency details.
-      operationId: getCurrencies
-      responses:
-        '200':
-          description: List of currencies.
-          content:
-            application/json:
-              schema:
-                type: object
-                items:
-                  type: object
-                  properties:
-                    data:
-                      type: array
-                      properties:
-                        type: object
-                        active:
-                          type: boolean
-                        code:
-                          type: string
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        numeric_code:
-                          type: string
-                        rate:
-                          type: float
-                        symbol:
-                          type: string
-                    errors:
-                      type: object
-                    pagination:
-                      type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-              required:
-                - code
-              example:
-                data:
-                  - active: true
-                    code: "AFN"
-                    id: 1
-                    name: "Afghani"
-                    numeric_code: "001"
-                    rate: 0
-                    symbol: "AFN"
-                errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 1
-                status: 200
-                success_message: null
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTP401'
-    post:
-      tags:
-        - currency
-      summary: Create a currency.
-      description: Create a currency.
-      operationId: postCurrencyById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '#/components/schemas/CreateCurrency'
-      responses:
-        '201':
-          description: OK
-          content:
-            application/json:
-              schema:
-                items:
-                  type: object
-                  properties:
-                    data:
-                      type: array
-                      properties:
-                        type: object
-                        active:
-                          type: boolean
-                        code:
-                          type: string
-                        digits:
-                          type: integer
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        numeric_code:
-                          type: string
-                        rate:
-                          type: float
-                        rates:
-                          type: array
-                        rounding:
-                          type: float
-                        symbol:
-                          type: string
-                    errors:
-                      type: null
-                    pagination:
-                      type: null
-                    status:
-                      type: integer
-                    success_message:
-                      type: null
-              example:
-                data:
-                  active: true
-                  code: "AFN"
-                  digits: 2
-                  name: "Afghani"
-                  numeric_code: "001"
-                  rate: 0
-                  rates: []
-                  rounding: 3
-                  symbol: "AFN"
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTP401'
-    delete:
-      tags:
-        - currency
-      summary: Delete currencies.
-      description: Delete currencies.
-      operationId: deleteCurrenciesById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '#/components/schemas/DeleteRequestBody'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/DeleteApiResponse'
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTP401'                
+    $ref: 'umbrella/umbrella_currency/currency/get_post_delete_currency.yaml'
   '/currencies/{obj_id}':
     get:
       tags:
@@ -2078,7 +1891,7 @@ paths:
                 data:
                   address: 2
                   address_:
-                    label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan",
+                    label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
                     value: 2
                   id: 2
                   name: "ctm1"
@@ -2185,7 +1998,7 @@ paths:
                 active: true
                 address: 2
                 address_:
-                  label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan",
+                  label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
                   value: 2
                 comment: "information about contact name"
                 language: "en"
@@ -2317,7 +2130,7 @@ paths:
                 active: true
                 address: 2
                 address_:
-                  label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan",
+                  label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
                   value: 2
                 comment: "information about contact name"
                 language: "en"
@@ -2425,7 +2238,7 @@ paths:
                 active: true
                 address: 2
                 address_:
-                  label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan",
+                  label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
                   value: 2
                 comment: "information about contact name"
                 language: "en"
