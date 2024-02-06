@@ -74,31 +74,31 @@ tags:
   - name: contact mechanism
     description: contact mechanism - contact mechanism data management.
 paths:
-  '/currencies':
+  '/currency/currencies':
     $ref: 'umbrella/umbrella_currency/currency/get_post_delete_currency.yaml'
-  '/currencies/{obj_id}':
+  '/currency/currencies/{obj_id}':
     $ref: 'umbrella/umbrella_currency/currency/get_put_currency_by_id.yaml'
-  '/scheduled-rate-updates':
+  '/currency/scheduled-rate-updates':
     $ref: 'umbrella/umbrella_currency/scheduled_rate_update/get_post_delete_scheduled_rate_updates.yaml'
-  '/scheduled-rate-updates/{obj_id}':
+  '/currency/scheduled-rate-updates/{obj_id}':
     $ref: 'umbrella/umbrella_currency/scheduled_rate_update/get_put_scheduled_rate_updates_by_id.yaml'
-  '/fiscal-years':
+  '/financial-accounting/fiscal-years':
     $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_post_delete_fiscal_year.yaml'
-  '/fiscal-years/{obj_id}':
+  '/financial-accounting/fiscal-years/{obj_id}':
     $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_fiscal_year_by_id.yaml'
   '/login':
     $ref: 'umbrella/umbrella/auth/post_auth.yaml'
-  '/parties':
+  '/party/parties':
     $ref: 'umbrella/umbrella_party/party/get_post_delete_auth.yaml'
-  '/parties/{obj_id}':
+  '/party/parties/{obj_id}':
     $ref: 'umbrella/umbrella_party/party/get_put_auth_by_id.yaml'
-  '/categories':
+  '/party/categories':
     $ref: 'umbrella/umbrella_party/category/get_post_delete_categories.yaml'
-  '/categories/{obj_id}':
+  '/party/categories/{obj_id}':
     $ref: 'umbrella/umbrella_party/category/get_put_categories_by_id.yaml'
-  '/contact-mechanism':
+  '/party/contact-mechanisms':
     $ref: 'umbrella/umbrella_party/contact_mechanism/get_post_delete_contact_mechanism.yaml'
-  '/contact-mechanism/{obj_id}':
+  '/party/contact-mechanisms/{obj_id}':
     $ref: 'umbrella/umbrella_party/contact_mechanism/get_put_contact_mechanism.yaml'
     
 components:
