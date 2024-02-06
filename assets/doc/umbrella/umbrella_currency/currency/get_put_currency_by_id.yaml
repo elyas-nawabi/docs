@@ -41,6 +41,13 @@ get:
                       type: float
                     rates:
                       type: array
+                      properties:
+                        date: 
+                          type: date
+                        id: 
+                          type: integer
+                        rate: 
+                          type: float
                     rounding:
                       type: float
                     symbol:
@@ -62,7 +69,10 @@ get:
               name: "Afghani"
               numeric_code: "001"
               rate: 0
-              rates: []
+              rates:
+                - date: "2024-02-06"
+                  id: 6
+                  rate: 0.1
               rounding: 0.01
               symbol: "AFN"
             errors: null
@@ -130,10 +140,15 @@ put:
                       type: string
                     numeric_code:
                       type: string
-                    rate:
-                      type: float
                     rates:
                       type: array
+                      properties:
+                        date: 
+                          type: date
+                        id: 
+                          type: integer
+                        rate: 
+                          type: float
                     rounding:
                       type: float
                     symbol:
@@ -154,7 +169,10 @@ put:
               name: "Euro"
               numeric_code: "001"
               rate: 1.1
-              rates: []
+              rates:
+                - date: "2024-02-06"
+                  id: 6
+                  rate: 0.1
               rounding: 0.1
               symbol: "eu"
             errors: null

@@ -105,31 +105,57 @@ components:
   schemas:
     CreateCurrency:
       properties:
-        active:
-          type: boolean
-        code:
-          type: string
-        digits:
+        data:
+          type: array
+          properties:
+            type: object
+            active:
+              type: boolean
+            code:
+              type: string
+            digits:
+              type: integer
+            id:
+              type: integer
+            name:
+              type: string
+            numeric_code:
+              type: string
+            rate:
+              type: float
+            rates:
+              type: array
+              properties:
+                date: 
+                  type: date
+                rate: 
+                  type: float
+            rounding:
+              type: float
+            symbol:
+              type: string
+        errors:
+          type: null
+        pagination:
+          type: null
+        status:
           type: integer
-        name:
-          type: string
-        numeric_code:
-          type: string
-        rounding:
-          type: float
-        symbol:
-          type: string
+        success_message:
+          type: null
       required:
         - code
         - name
       example:
         active: true
-        code: "nc2"
-        digits: 2
-        name: "new_currency"
-        numeric_code: "001"
-        rounding: 4
-        symbol: "nc2"
+        code: "AFN"
+        digits: 0
+        name: "Afghani"
+        numeric_code: ""
+        rates:
+          - date: "2024-02-06"
+            rate: 0.0
+        rounding: 0.0
+        symbol: "AFN"
     UpdateCurrency:
       properties:
         active:
@@ -142,6 +168,13 @@ components:
           type: string
         numeric_code:
           type: string
+        rates:
+          type: array
+          properties:
+            date:
+              type: date
+            rate:
+              type: float
         rounding:
           type: float
         symbol:
@@ -155,6 +188,9 @@ components:
         digits: 3
         name: "Euro"
         numeric_code: "111"
+        rates:
+          - date: "2024-02-06"
+            rate: 0.0
         rounding: 2
         symbol: "eu"
     CreateCron:
