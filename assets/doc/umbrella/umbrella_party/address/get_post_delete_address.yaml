@@ -1,12 +1,12 @@
     get:
       tags:
-        - category
-      summary: Get categories.
-      description: Get categories.
-      operationId: getCategories
+        - address
+      summary: Get addresses.
+      description: Get addresses.
+      operationId: getAddresses
       responses:
         '200':
-          description: List of categories.
+          description: List of addresses.
           content:
             application/json:
               schema:
@@ -18,10 +18,38 @@
                       type: array
                       properties:
                         type: object
+                        city:
+                          type: string
+                        country:
+                          type: integer
                         id:
                           type: integer
                         name:
                           type: string
+                        party: 
+                          type: integer
+                        party_:
+                          type: object
+                          properties:
+                            label: 
+                              type: string
+                            value:
+                              type: integer
+                        party_name:
+                          type: string
+                        postal_code:
+                          type: string 
+                        street: 
+                          type: string
+                        subdivision:
+                          type: integer
+                        subdivision_:
+                          type: object
+                          properties:
+                            label: 
+                              type: string
+                            value:
+                              type: integer
                     errors:
                       type: object
                     pagination:
@@ -40,12 +68,24 @@
                       type: string
               example:
                 data:
-                  - id: 1
-                    name: "parentCategory"
-                  - id: 2
-                    name: "childCategory"
-                  - id: 3
-                    name: "simpleCategory"
+                  city: "kabul"
+                  country: 1
+                  country_:
+                    label: "Afghanistan"
+                    value: 1
+                  id: 1
+                  name: "shamali tower"
+                  party: 1
+                  party_:
+                      label: "Party 1"
+                      value: 1
+                  party_name: "prt1"
+                  postal_code: "1001"
+                  street: "2nd street"
+                  subdivision: 1
+                  subdivision_:
+                    label: "sbd1"
+                    value: 2
                 errors: null
                 pagination:
                   page: 1
@@ -66,17 +106,17 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
     post:
       tags:
-        - category
-      summary: Create a category.
-      description: Create a category.
-      operationId: postCategory
+        - address
+      summary: Create an address.
+      description: Create an address.
+      operationId: postAddress
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateCategory'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateAddress'
       responses:
         '201':
           description: OK
@@ -90,19 +130,40 @@
                       type: object
                       properties:
                         type: object
-                        childs:
-                          type: array
-                        id:
-                          type: integer
-                        name:
+                        active:
+                          type: boolean
+                        city:
                           type: string
-                        parent:
-                          anyOf:
-                            - type: integer
-                            - type: null
-                        parent_:
-                          type: object
-                    errors:
+                        contact_mechanisms:
+                          type: array
+                          properties:
+                            type: 
+                              type: enum[phone, mobile, fax, e-mail, website, skype, sip, irc, jabber, other]
+                            value:
+                              type: string
+                            name: 
+                              type: string
+                            party:
+                              type: integer
+                            address:
+                              type: integer
+                        country:
+                          type: integer
+                        name: 
+                          type: string 
+                        party: 
+                          type: integer
+                        party_name:
+                          type: string
+                        postal_code:
+                          type: string 
+                        sequence: 
+                          type: integer
+                        street: 
+                          type: string 
+                        subdivision: 
+                          type: integer
+                    error:
                       type: null
                     pagination:
                       type: null
@@ -111,49 +172,22 @@
                     success_message:
                       type: null
               example:
-              - Please remove the square brackets from the start and end lines during post operation.
-              - You are limited to selecting one example from the following.
-              - data:
-                  childs: []
-                  id: 12
-                  name: "testCtg1"
-                  parent: null
-                  parent_: {}
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
-              - data:
-                  childs: []
-                  id: 13
-                  name: "testCtg2"
-                  parent: 4
-                  parent_:
-                    label: "parentCtg"
-                    value: 4
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
-              - data:
-                  childs:
-                    childs: []
-                    id: 7
-                    name: "test1"
-                    parent: 6
-                    parent_: 
-                        label: "parentctg / testCtg"
-                        value: 6
-                  id: 14
-                  name: "testCtg4"
-                  parent: 4
-                  parent_:
-                    label: "parentCtg"
-                    value: 4
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
+                active: true
+                city: "Herat"
+                contact_mechanisms:
+                  type: "phone"
+                  value: "0771680235"
+                  name: "ctm1"
+                  party: 1 
+                  address: 1
+                country: 1
+                name: "herat tower"
+                party: 1
+                party_name: "prt2"
+                postal_code: "1002"
+                sequence: 1
+                street: "street 2"
+                subdivision: 3
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -166,10 +200,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
-        - category
-      summary: Delete categories.
-      description: Delete categories.
-      operationId: deleteCategoriesById
+        - address
+      summary: Delete addresses.
+      description: Delete addresses.
+      operationId: deleteAddressesById
       requestBody:
         required: true
         content:
