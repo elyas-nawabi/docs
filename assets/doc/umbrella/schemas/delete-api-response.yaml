@@ -1,0 +1,19 @@
+      items:
+        type: object
+        properties:
+          data:
+            type: null
+          errors:
+            type: null
+          pagination:
+            type: null
+          status:
+            type: integer
+          success_message:
+            type: null
+      example:
+        data: null
+        errors: null
+        pagination: null
+        status: 200
+        success_message: null   

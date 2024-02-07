@@ -1,0 +1,231 @@
+    get:
+      tags:
+        - address
+      summary: Get addresses.
+      description: Get addresses.
+      operationId: getAddresses
+      responses:
+        '200':
+          description: List of addresses.
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        type: object
+                        city:
+                          type: string
+                        country:
+                          type: integer
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                        party: 
+                          type: integer
+                        party_:
+                          type: object
+                          properties:
+                            label: 
+                              type: string
+                            value:
+                              type: integer
+                        party_name:
+                          type: string
+                        postal_code:
+                          type: string 
+                        street: 
+                          type: string
+                        subdivision:
+                          type: integer
+                        subdivision_:
+                          type: object
+                          properties:
+                            label: 
+                              type: string
+                            value:
+                              type: integer
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  city: "kabul"
+                  country: 1
+                  country_:
+                    label: "Afghanistan"
+                    value: 1
+                  id: 1
+                  name: "shamali tower"
+                  party: 1
+                  party_:
+                      label: "Party 1"
+                      value: 1
+                  party_name: "prt1"
+                  postal_code: "1001"
+                  street: "2nd street"
+                  subdivision: 1
+                  subdivision_:
+                    label: "sbd1"
+                    value: 2
+                errors: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 1
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
+    post:
+      tags:
+        - address
+      summary: Create an address.
+      description: Create an address.
+      operationId: postAddress
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateAddress'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type: object
+                        active:
+                          type: boolean
+                        city:
+                          type: string
+                        contact_mechanisms:
+                          type: array
+                          properties:
+                            type: 
+                              type: enum[phone, mobile, fax, e-mail, website, skype, sip, irc, jabber, other]
+                            value:
+                              type: string
+                            name: 
+                              type: string
+                            party:
+                              type: integer
+                            address:
+                              type: integer
+                        country:
+                          type: integer
+                        name: 
+                          type: string 
+                        party: 
+                          type: integer
+                        party_name:
+                          type: string
+                        postal_code:
+                          type: string 
+                        sequence: 
+                          type: integer
+                        street: 
+                          type: string 
+                        subdivision: 
+                          type: integer
+                    error:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                active: true
+                city: "Herat"
+                contact_mechanisms:
+                  type: "phone"
+                  value: "0771680235"
+                  name: "ctm1"
+                  party: 1 
+                  address: 1
+                country: 1
+                name: "herat tower"
+                party: 1
+                party_name: "prt2"
+                postal_code: "1002"
+                sequence: 1
+                street: "street 2"
+                subdivision: 3
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    delete:
+      tags:
+        - address
+      summary: Delete addresses.
+      description: Delete addresses.
+      operationId: deleteAddressesById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+  

@@ -1,0 +1,28 @@
+      properties:
+        data:
+          type: null
+        errors:
+          type: array
+          properties:
+            error_message:
+              type: string
+            identifier:
+              type: string
+            serverity:
+              type: integer
+        pagination:
+          type: null
+        status:
+          type: integer
+        success_message:
+          type: string
+      example:
+        data: null
+        errors:
+          - error_message: >-
+              User already logged in.
+            identifier: auth
+            severity: 1
+        pagination: null
+        status: 403
+        success_message: null

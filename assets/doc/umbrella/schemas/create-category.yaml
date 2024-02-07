@@ -1,0 +1,20 @@
+      properties:
+        name:
+          type: string
+        parent:
+          anyOf:
+            - type: integer
+            - type: null
+        childs:
+          type: array
+          properties:
+            type: object
+      required:
+        - name
+      example:
+        name: "testCtg4"
+        parent: 4
+        childs: 
+          childs: []
+          name: "test1"
+          parent: 4

@@ -1,0 +1,36 @@
+      properties:
+        active:
+          type: boolean
+        code:
+          type: string
+        digits:
+          type: integer
+        name:
+          type: string
+        numeric_code:
+          type: string
+        rates:
+          type: array
+          properties:
+            date:
+              type: date
+            rate:
+              type: float
+        rounding:
+          type: float
+        symbol:
+          type: string
+      required:
+        - code
+        - id
+      example:
+        active: true
+        code: "er1"
+        digits: 3
+        name: "Euro"
+        numeric_code: "111"
+        rates:
+          - date: "2024-02-06"
+            rate: 0.0
+        rounding: 2
+        symbol: "eu"

@@ -1,0 +1,295 @@
+    get:
+      tags:
+        - address
+      summary: Get one address.
+      description: Get one address.
+      operationId: getAddressById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 3
+      responses:
+        '200':
+          description: OK.
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type: object
+                        active:
+                          type: boolean
+                        city:
+                          type: string
+                        contact_mechanisms:
+                          type: array
+                          properties:
+                            address: 
+                              type: integer
+                            address_: 
+                              type: object
+                              properties:
+                                label: 
+                                  type: string
+                                value: 
+                                  type: integer
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                            party: 
+                              type: integer
+                            party_:
+                              type: object
+                              properties:
+                                label: 
+                                  type: string
+                                value:
+                                  type: integer
+                            type: 
+                              type: enum[phone, mobile, fax, e-mail, website, skype, sip, irc, jabber, other]
+                            value:
+                              type: string
+                        country:
+                          type: integer
+                        country_:
+                          label: "Afghanistan"
+                          value: 1
+                        name: 
+                          type: string 
+                        id: 
+                          type: integer 
+                        party: 
+                          type: integer
+                        party_:
+                          label: "Party 1"
+                          value: 1
+                        party_name:
+                          type: string
+                        postal_code:
+                          type: string 
+                        sequence: 
+                          type: integer
+                        street: 
+                          type: string 
+                        subdivision: 
+                          type: integer
+                        subdivision_: 
+                          label: "sbd1"
+                          value: 3
+                    error:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                data:
+                  active: true
+                  city: "Kabul"
+                  contact_mechanisms":
+                          address": 1
+                          address_":
+                              label: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
+                              value: 1
+                          id: 9
+                          name: "Mohammad elyas Nawabi"
+                          party: 1
+                          party_:
+                              label: "Party 1"
+                              value: 1
+                          type": "mobile"
+                          value": "0771680435"
+                  country: 1
+                  country_: 
+                      label: "Afghanistan"
+                      value: 1
+                  id: 1
+                  name: "ahmad tower"
+                  party: 1
+                  party_:
+                      label: "Party 1"
+                      value: 1
+                  party_name": ""
+                  postal_code": "1001"
+                  sequence": null,
+                  street": "street 2"
+                  subdivision": 3
+                  subdivision_":
+                      label: "sbd1"
+                      value: 3
+              error": null,
+              pagination": null,
+              status": 200,
+              success_message": null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
+    put:
+      tags:
+        - address
+      summary: Update a address.
+      description: Update a address.
+      operationId: updateAdressById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateAddress'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type: object
+                        active:
+                          type: boolean
+                        city:
+                          type: string
+                        contact_mechanisms:
+                          type: array
+                          properties:
+                            address: 
+                              type: integer
+                            address_: 
+                              type: object
+                              properties:
+                                label: 
+                                  type: string
+                                value: 
+                                  type: integer
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                            party: 
+                              type: integer
+                            party_:
+                              type: object
+                              properties:
+                                label: 
+                                  type: string
+                                value:
+                                  type: integer
+                            type: 
+                              type: enum[phone, mobile, fax, e-mail, website, skype, sip, irc, jabber, other]
+                            value:
+                              type: string
+                        country:
+                          type: integer
+                        country_:
+                          label: "Afghanistan"
+                          value: 1
+                        name: 
+                          type: string 
+                        id: 
+                          type: integer 
+                        party: 
+                          type: integer
+                        party_:
+                          label: "Party 1"
+                          value: 1
+                        party_name:
+                          type: string
+                        postal_code:
+                          type: string 
+                        sequence: 
+                          type: integer
+                        street: 
+                          type: string 
+                        subdivision: 
+                          type: integer
+                        subdivision_: 
+                          label: "sbd1"
+                          value: 3
+                    error:
+                      type: null
+                    pagination:
+                      type: null
+                    status:
+                      type: integer
+                    success_message:
+                      type: null
+              example:
+                data:
+                  active: true
+                  city: "Kabul"
+                  contact_mechanisms":
+                          address": 1
+                          address_":
+                              label: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
+                              value: 1
+                          id: 9
+                          name: "Mohammad elyas Nawabi"
+                          party: 1
+                          party_:
+                              label: "Party 1"
+                              value: 1
+                          type": "mobile"
+                          value": "0771680435"
+                  country: 1
+                  country_: 
+                      label: "Afghanistan"
+                      value: 1
+                  id: 1
+                  name: "ahmad tower"
+                  party: 1
+                  party_:
+                      label: "Party 1"
+                      value: 1
+                  party_name": ""
+                  postal_code": "1001"
+                  sequence": null,
+                  street": "street 2"
+                  subdivision": 3
+                  subdivision_":
+                      label: "sbd1"
+                      value: 3
+              error": null,
+              pagination": null,
+              status": 200,
+              success_message": null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+  
