@@ -1,0 +1,4 @@
+properties:
+  success_message:
+    type: string
+    example: OK

@@ -1,0 +1,13 @@
+      properties:
+        active:
+          type: boolean
+        code:
+          type: string
+        name:
+          type: string
+      required:
+        - name
+      example:
+        active: true
+        code: "61"
+        name: "Party 61"

@@ -1,0 +1,52 @@
+      properties:
+        active: 
+          type: boolean
+        address:
+          type: integer
+        address_:
+          type: object
+          properties:
+            label:
+              type: string
+            value:
+              type: integer
+        comment:
+          type: string
+        language:
+          type: string
+        name: 
+          type: string
+        party:
+          type: integer 
+        party_:
+          type: object
+          properties:
+            label: 
+              type: string
+            value: 
+              type: integer
+        sequence:
+          type: integer
+        type:
+          type: string
+        value:
+          type: string 
+      required:
+        - name
+        - party
+      example:
+        active: true
+        address: 2
+        address_:
+          label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
+          value: 2
+        comment: "abcParty comments"
+        language: "en"
+        name: "ctm2"
+        party: 1
+        party_:
+          label: "Party 1"
+          value: 1
+        sequence: 1
+        type: "phone"
+        value: "8888"

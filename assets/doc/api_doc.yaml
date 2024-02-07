@@ -73,6 +73,8 @@ tags:
     description: category - category data management.
   - name: contact mechanism
     description: contact mechanism - contact mechanism data management.
+  - name: address
+    description: address - address data management.
 paths:
   '/currency/currencies':
     $ref: 'umbrella/umbrella_currency/currency/get_post_delete_currency.yaml'
@@ -100,566 +102,52 @@ paths:
     $ref: 'umbrella/umbrella_party/contact_mechanism/get_post_delete_contact_mechanism.yaml'
   '/party/contact-mechanisms/{obj_id}':
     $ref: 'umbrella/umbrella_party/contact_mechanism/get_put_contact_mechanism.yaml'
+  '/party/address':
+    $ref: 'umbrella/umbrella_party/address/get_post_delete_address.yaml'
+  '/party/address/{obj_id}':
+    $ref: 'umbrella/umbrella_party/address/get_put_address_by_id.yaml'
     
 components:
   schemas:
     CreateCurrency:
-      properties:
-        data:
-          type: array
-          properties:
-            type: object
-            active:
-              type: boolean
-            code:
-              type: string
-            digits:
-              type: integer
-            id:
-              type: integer
-            name:
-              type: string
-            numeric_code:
-              type: string
-            rate:
-              type: float
-            rates:
-              type: array
-              properties:
-                date: 
-                  type: date
-                rate: 
-                  type: float
-            rounding:
-              type: float
-            symbol:
-              type: string
-        errors:
-          type: null
-        pagination:
-          type: null
-        status:
-          type: integer
-        success_message:
-          type: null
-      required:
-        - code
-        - name
-      example:
-        active: true
-        code: "AFN"
-        digits: 0
-        name: "Afghani"
-        numeric_code: ""
-        rates:
-          - date: "2024-02-06"
-            rate: 0.0
-        rounding: 0.0
-        symbol: "AFN"
+      $ref: 'umbrella/schemas/create-currency.yaml'
     UpdateCurrency:
-      properties:
-        active:
-          type: boolean
-        code:
-          type: string
-        digits:
-          type: integer
-        name:
-          type: string
-        numeric_code:
-          type: string
-        rates:
-          type: array
-          properties:
-            date:
-              type: date
-            rate:
-              type: float
-        rounding:
-          type: float
-        symbol:
-          type: string
-      required:
-        - code
-        - id
-      example:
-        active: true
-        code: "er1"
-        digits: 3
-        name: "Euro"
-        numeric_code: "111"
-        rates:
-          - date: "2024-02-06"
-            rate: 0.0
-        rounding: 2
-        symbol: "eu"
+      $ref: 'umbrella/schemas/update-currency.yaml'
     CreateCron:
-      properties:
-        data:
-          type: object
-          properties:
-            type: object
-            currencies:
-              type: array
-            currency:
-              type: integer
-            currency_:
-              type: object
-              label:
-                type: string
-              value:
-                type: integer
-            day:
-              type: integer
-            frequency:
-              type: string
-            last_update:
-              type: date
-            source:
-              type: string
-            weekday:
-              type: integer
-      required:
-        - currency
-        - frequency
-        - source
-      example:
-          currency: 1
-          day: 1
-          frequency: "monthly"
-          last_update: "2024-01-28"
-          source: "ecb"
-          weekday: "2"
+      $ref: 'umbrella/schemas/create-cron.yaml'
     UpdateCron:
-      properties:
-        data:
-          type: object
-          properties:
-            type: object
-            currencies:
-              type: array
-            currency:
-              type: integer
-            currency_:
-              type: object
-              label:
-                type: string
-              value:
-                type: integer
-            day:
-              type: integer
-            frequency:
-              type: string
-            last_update:
-              type: date
-            source:
-              type: string
-            weekday:
-              type: integer
-      required:
-        - currency
-        - frequency
-        - source
-      example:
-        currency: 1
-        day: 1
-        frequency: "monthly"
-        last_update: "2024-01-28"
-        source: "ecb"
-        weekday: "2"
+      $ref: 'umbrella/schemas/update-cron.yaml'
     CreateFiscalYear:
-      properties:
-        data:
-          type: object
-          properties:
-            type: object
-            company:
-              type: integer
-            end_date:
-              type: date
-            name:
-              type: string
-            post_move_sequence:
-              type: integer
-            start_date:
-              type: date
-            periods:
-              type: array
-              properties:
-                end_date:
-                  type: date
-                name:
-                  type: string
-                post_move_sequence:
-                  type: integer
-                start_date:
-                  type: date
-                state:
-                  type: string
-                type:
-                  type: string
-            state:
-              type: string
-      required:
-        - company
-        - end_date
-        - start_date
-        - name
-        - post_move_sequence
-        - start_date
-        - state
-      example:
-        company: 1
-        end_date: "2029-12-31"
-        name: "2027"
-        periods:
-          type: array
-          properties:
-            end_date: "2029-12-31"
-            name: "2024-01"
-            post_move_sequence: 9
-            start_date: "2029-01-01"
-            state: "open"
-            type: "standard"
-        post_move_sequence: 7
-        start_date: "2029-01-01"
-        state: "open"
+      $ref: 'umbrella/schemas/create-fiscal-year.yaml'
     CreateAuth:
-      properties:
-        data:
-          type: object
-          properties:
-            type: object
-            username: 
-              type: string
-            password:
-              type: string
-      required:
-        - username
-        - password
-      example:
-        username: "elyas"
-        password: "elyas"
+      $ref: 'umbrella/schemas/create-auth.yaml'
     CreateParty:
-      properties:
-        active:
-          type: boolean
-        code:
-          type: string
-        name:
-          type: string
-      required:
-        - code
-        - name
-      example:
-        active: true
-        code: "19"
-        name: "Party 19"
+      $ref: 'umbrella/schemas/create-party.yaml'
     UpdateParty:
-      properties:
-        active:
-          type: boolean
-        code:
-          type: string
-        name:
-          type: string
-      required:
-        - name
-      example:
-        active: true
-        code: "61"
-        name: "Party 61"
+      $ref: 'umbrella/schemas/update-party.yaml'
     DeleteRequestBody: 
-      properties:
-        ids:
-          type: array 
-      required:
-        - ids 
-      example:
-        ids: [18,13]
+      $ref: 'umbrella/schemas/delete-request-body.yaml'
     DeleteApiResponse:
-      items:
-        type: object
-        properties:
-          data:
-            type: null
-          errors:
-            type: null
-          pagination:
-            type: null
-          status:
-            type: integer
-          success_message:
-            type: null
-      example:
-        data: null
-        errors: null
-        pagination: null
-        status: 200
-        success_message: null   
+      $ref: 'umbrella/schemas/delete-api-response.yaml'
     CreateCategory:
-      properties:
-        name:
-          type: string
-        parent:
-          anyOf:
-            - type: integer
-            - type: null
-        childs:
-          type: array
-          properties:
-            type: object
-      required:
-        - name
-      example:
-        name: "testCtg4"
-        parent: 4
-        childs: 
-          childs: []
-          name: "test1"
-          parent: 4
+      $ref: 'umbrella/schemas/create-category.yaml'
     UpdateCategory:
-      properties:
-        name:
-          type: string
-        parent:
-          anyOf:
-            - type: integer
-            - type: null
-        childs:
-          type: array
-          properties:
-            type: object
-      required:
-        - name
-      example:
-        name: "testCtg4"
-        parent: 4
-        childs: []
+      $ref: 'umbrella/schemas/update-category.yaml'
     CreateContactMechanism:
-      properties:
-        active: 
-          type: boolean
-        address:
-          type: integer
-        address_:
-          type: object
-          properties:
-            label:
-              type: string
-            value:
-              type: integer
-        comment:
-          type: string
-        language:
-          type: string
-        name: 
-          type: string
-        party:
-          type: integer 
-        party_:
-          type: object
-          properties:
-            label: 
-              type: string
-            value: 
-              type: integer
-        sequence:
-          type: integer
-        type:
-          type: string
-        value:
-          type: string 
-      required:
-        - name
-        - party
-      example:
-        active: true
-        address: 2
-        address_:
-          label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
-          value: 2
-        comment: "abcParty comments"
-        language: "en"
-        name: "ctm2"
-        party: 1
-        party_:
-          label: "Party 1"
-          value: 1
-        sequence: 1
-        type: "phone"
-        value: "8888"
+      $ref: 'umbrella/schemas/create-contact-mechanism.yaml'
     UpdateContactMechanism:
-      properties:
-        active: 
-          type: boolean
-        address:
-          type: integer
-        address_:
-          type: object
-          properties:
-            label:
-              type: string
-            value:
-              type: integer
-        comment:
-          type: string
-        language:
-          type: string
-        name: 
-          type: string
-        party:
-          type: integer 
-        party_:
-          type: object
-          properties:
-            label: 
-              type: string
-            value: 
-              type: integer
-        sequence:
-          type: integer
-        type:
-          type: string
-        value:
-          type: string 
-      required:
-        - name
-        - party
-      example:
-        active: true
-        address: 2
-        address_:
-          label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
-          value: 2
-        comment: "abcParty comments"
-        language: "en"
-        name: "ctm2"
-        party: 1
-        party_:
-          label: "Party 1"
-          value: 1
-        sequence: 1
-        type: "phone"
-        value: "8888"
+      $ref: 'umbrella/schemas/update-contact-mechanism.yaml'
   
     HTTP200:
-      properties:
-        success_message:
-          type: string
-          example: OK
+      $ref: 'umbrella/schemas/http-responses/http200.yaml'
     HTTP401:
-      properties:
-        data:
-          type: null
-        errors:
-          type: object
-        pagination:
-          type: null
-        status:
-          type: integer
-        success_message:
-          type: string
-      example:
-        data: null
-        errors:
-          - error_message: >-
-              401 Unauthorized: The server could not verify that you are
-              authorized to access the URL requested. You either supplied the
-              wrong credentials (e.g. a bad password), or your browser doesn't
-              understand how to supply the credentials required.
-            identifier: Global
-            severity: 1
-        pagination: null
-        status: 401
-        success_message: null
+      $ref: 'umbrella/schemas/http-responses/http401.yaml'
     HTTP404:
-      properties:
-        data:
-          type: null
-        errors:
-          type: array
-          properties:
-            error_message:
-              type: string
-            identifier:
-              type: string
-            serverity:
-              type: integer
-        pagination:
-          type: null
-        status:
-          type: integer
-        success_message:
-          type: string
-      example:
-        data: null
-        errors:
-          - error_message: Not found
-            identifier: currency.currency
-            severity: 1
-        pagination: null
-        status: 404
-        success_message: null
+      $ref: 'umbrella/schemas/http-responses/http404.yaml'
     HTTP400:
-      properties:
-        data:
-          type: null
-        errors:
-          type: array
-          properties:
-            error_message:
-              type: string
-            identifier:
-              type: string
-            serverity:
-              type: integer
-        pagination:
-          type: null
-        status:
-          type: integer
-        success_message:
-          type: string
-      example:
-        data: null
-        errors:
-          - error_message: >-
-              415 Unsupported Media Type: Did not attempt to load JSON data
-              because the request Content-Type was not 'application/json'.
-            identifier: Global
-            severity: 1
-        pagination: null
-        status: 400
-        success_message: null
+      $ref: 'umbrella/schemas/http-responses/http400.yaml'
     HTTP403:
-      properties:
-        data:
-          type: null
-        errors:
-          type: array
-          properties:
-            error_message:
-              type: string
-            identifier:
-              type: string
-            serverity:
-              type: integer
-        pagination:
-          type: null
-        status:
-          type: integer
-        success_message:
-          type: string
-      example:
-        data: null
-        errors:
-          - error_message: >-
-              User already logged in.
-            identifier: auth
-            severity: 1
-        pagination: null
-        status: 403
-        success_message: null
+      $ref: 'umbrella/schemas/http-responses/http403.yaml'
   
   securitySchemes:
     bearerAuth:
