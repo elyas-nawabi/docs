@@ -1,0 +1,94 @@
+    properties:
+              active:
+                type: boolean
+              city:
+                type: string
+              contact_mechanisms:
+                properties:
+                  - address: 
+                      type: integer
+                    address_: 
+                      type: object
+                      properties:
+                        label: 
+                          type: string
+                        value: 
+                          type: integer
+                    id: 
+                      type: integer
+                    name: 
+                      type: string
+                    party: 
+                      type: integer
+                    party_:
+                      type: object
+                      properties:
+                        label: 
+                          type: string
+                        value:
+                          type: integer
+                    type: 
+                      type: string
+                    value:
+                      type: string
+              country:
+                type: integer
+              country_:
+                label: "Afghanistan"
+                value: 1
+              name: 
+                type: string 
+              id: 
+                type: integer 
+              party: 
+                type: integer
+              party_:
+                label: "Party 1"
+                value: 1
+              party_name:
+                type: string
+              postal_code:
+                type: string 
+              sequence: 
+                type: integer
+              street: 
+                type: string 
+              subdivision: 
+                type: integer
+              subdivision_: 
+                label: "sbd1"
+                value: 3
+    example:
+      active: true
+      city: "Kabul"
+      contact_mechanisms:
+        - address: 1
+          address_:
+              label: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
+              value: 1
+          id: 9
+          name: "suhaib"
+          party: 1
+          party_:
+              label: "Party 1"
+              value: 1
+          type: "mobile"
+          value: "0771680435"
+      country: 1
+      country_: 
+          label: "Afghanistan"
+          value: 1
+      id: 1
+      name: "ahmad tower"
+      party: 1
+      party_:
+          label: "Party 1"
+          value: 1
+      party_name: ""
+      postal_code: "1001"
+      sequence: 1
+      street": "street 2"
+      subdivision: 3
+      subdivision_:
+          label: "sbd1"
+          value: 3

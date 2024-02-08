@@ -1,0 +1,63 @@
+      properties:
+            data:
+              type: object
+              properties:
+                type: object
+                active:
+                  type: boolean
+                city:
+                  type: string
+                contact_mechanisms:
+                  type: array
+                  properties:
+                    type: 
+                      type: enum[phone, mobile, fax, e-mail, website, skype, sip, irc, jabber, other]
+                    value:
+                      type: string
+                    name: 
+                      type: string
+                    party:
+                      type: integer
+                    address:
+                      type: integer
+                country:
+                  type: integer
+                name: 
+                  type: string 
+                party: 
+                  type: integer
+                party_name:
+                  type: string
+                postal_code:
+                  type: string 
+                sequence: 
+                  type: integer
+                street: 
+                  type: string 
+                subdivision: 
+                  type: integer
+            error:
+              type: null
+            pagination:
+              type: null
+            status:
+              type: integer
+            success_message:
+              type: null
+      example:
+        active: true
+        city: "Herat"
+        contact_mechanisms:
+          type: "phone"
+          value: "0771680235"
+          name: "ctm1"
+          party: 1 
+          address: 1
+        country: 1
+        name: "herat tower"
+        party: 1
+        party_name: "prt2"
+        postal_code: "1002"
+        sequence: 1
+        street: "street 2"
+        subdivision: 3
