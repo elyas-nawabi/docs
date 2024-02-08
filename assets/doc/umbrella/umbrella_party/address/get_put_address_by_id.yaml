@@ -55,7 +55,7 @@
                                 value:
                                   type: integer
                             type: 
-                              type: enum[phone, mobile, fax, e-mail, website, skype, sip, irc, jabber, other]
+                              type: string
                             value:
                               type: string
                         country:
@@ -97,19 +97,19 @@
                 data:
                   active: true
                   city: "Kabul"
-                  contact_mechanisms":
-                          address": 1
-                          address_":
-                              label: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
-                              value: 1
-                          id: 9
-                          name: "Mohammad elyas Nawabi"
-                          party: 1
-                          party_:
-                              label: "Party 1"
-                              value: 1
-                          type": "mobile"
-                          value": "0771680435"
+                  contact_mechanisms:
+                  - address: 1
+                    address_:
+                        label: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
+                        value: 1
+                    id: 9
+                    name: "suhaib"
+                    party: 1
+                    party_:
+                        label: "Party 1"
+                        value: 1
+                    type: "mobile"
+                    value: "0771680435"
                   country: 1
                   country_: 
                       label: "Afghanistan"
@@ -120,18 +120,18 @@
                   party_:
                       label: "Party 1"
                       value: 1
-                  party_name": ""
-                  postal_code": "1001"
-                  sequence": null,
-                  street": "street 2"
-                  subdivision": 3
-                  subdivision_":
+                  party_name: ""
+                  postal_code: "1001"
+                  sequence: null,
+                  street: "street 2"
+                  subdivision: 3
+                  subdivision_:
                       label: "sbd1"
                       value: 3
-              error": null,
-              pagination": null,
-              status": 200,
-              success_message": null
+              error: null,
+              pagination: null,
+              status: 200,
+              success_message: null
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -145,8 +145,8 @@
     put:
       tags:
         - address
-      summary: Update a address.
-      description: Update a address.
+      summary: Update an address.
+      description: Update an address.
       operationId: updateAdressById
       parameters:
         - name: obj_id
@@ -156,7 +156,7 @@
             type: integer
           example: 19
       requestBody:
-        required: true
+        required: false
         content:
           application/json:
             schema:
@@ -205,7 +205,7 @@
                                 value:
                                   type: integer
                             type: 
-                              type: enum[phone, mobile, fax, e-mail, website, skype, sip, irc, jabber, other]
+                              type: string
                             value:
                               type: string
                         country:
@@ -247,19 +247,19 @@
                 data:
                   active: true
                   city: "Kabul"
-                  contact_mechanisms":
-                          address": 1
-                          address_":
-                              label: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
-                              value: 1
-                          id: 9
-                          name: "Mohammad elyas Nawabi"
-                          party: 1
-                          party_:
-                              label: "Party 1"
-                              value: 1
-                          type": "mobile"
-                          value": "0771680435"
+                  contact_mechanisms:
+                    -   address: 1
+                        address_:
+                            label: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
+                            value: 1
+                        id: 9
+                        name: "suhaib"
+                        party: 1
+                        party_:
+                            label: "Party 1"
+                            value: 1
+                        type: "mobile"
+                        value: "0771680435"
                   country: 1
                   country_: 
                       label: "Afghanistan"
@@ -270,18 +270,18 @@
                   party_:
                       label: "Party 1"
                       value: 1
-                  party_name": ""
-                  postal_code": "1001"
-                  sequence": null,
-                  street": "street 2"
-                  subdivision": 3
-                  subdivision_":
+                  party_name: ""
+                  postal_code: "1001"
+                  sequence: null,
+                  street: "street 2"
+                  subdivision: 3
+                  subdivision_:
                       label: "sbd1"
                       value: 3
-              error": null,
-              pagination": null,
-              status": 200,
-              success_message": null
+              error: null,
+              pagination: null,
+              status: 200,
+              success_message: null
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
