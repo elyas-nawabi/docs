@@ -1,14 +1,132 @@
       properties:
-        active:
-          type: boolean
-        code:
-          type: string
-        name:
-          type: string
+        data:
+          type: array
+          properties:
+            type: object
+            addresses: 
+              properties:
+                active: 
+                  type: boolean
+                city: 
+                  type: string
+                contact_mechanisms: 
+                  type: array
+                country:
+                  type: integer
+                country_: 
+                  label:
+                    type: string
+                  value:
+                    type: integer
+                id: 
+                  type: integer
+                name: 
+                  type: string
+                party:
+                  type: integer
+                party_: 
+                  label:
+                    type: string
+                  value:
+                    type: integer
+                party_name: 
+                  type: string
+                postal_code: 
+                  type: string
+                sequence: 
+                  type: integer
+                street:
+                  type: string
+                subdivision:
+                  type: integer
+                subdivision_: 
+                  label:
+                    type: string
+                  value:
+                    type: integer
+            categories:
+              type: integer
+            code:
+              type: string
+            contact_mechanisms: 
+              properties:
+                active:
+                  type: boolean
+                comment:
+                  type: string
+                language:
+                  type: integer
+                name:
+                  type: integer
+                party: 
+                  type: integer
+                party_: 
+                  label:
+                    type: string
+                  value:
+                    type: integer
+                sequence:
+                  type: integer
+                type:
+                  type: integer
+                value:
+                  type: integer
+            create_date:
+              type: date
+            name:
+              type: string
+            payable:
+              type: integer
+            payable_today:
+              type: integer
+            receivable:
+              type: integer
+            receivable_today:
+              type: integer
       required:
-        - code
-        - name
+          - code
+          - name    
       example:
-        active: true
-        code: "19"
-        name: "Party 19"
+        addresses:
+        - active: true
+          city: Herat
+          contact_mechanisms: []
+          country: 1
+          country_:
+            label: Afghanistan
+            value: 1
+          id: 3
+          name: herat tower
+          party: 1
+          party_:
+            label: Party 1
+            value: 1
+          party_name: prt2
+          postal_code: '1002'
+          sequence: 1
+          street: street 2
+          subdivision: 3
+          subdivision_:
+            label: sbd1
+            value: 3
+        categories:
+        - 3
+        code: '01'
+        contact_mechanisms:
+        - active: true
+          comment: no comment
+          language: 1
+          name: ctm1
+          party: 14
+          party_:
+            label: Party 1
+            value: 1
+          sequence: 1
+          type: phone
+          value: '8888'
+        create_date: '2024-01-23T16:52:29.278731'
+        name: Party 15
+        payable: 0
+        payable_today: 0
+        receivable: 0
+        receivable_today: 0
