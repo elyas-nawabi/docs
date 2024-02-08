@@ -91,9 +91,9 @@ paths:
   '/login':
     $ref: 'umbrella/umbrella/auth/post_auth.yaml'
   '/party/parties':
-    $ref: 'umbrella/umbrella_party/party/get_post_delete_auth.yaml'
+    $ref: 'umbrella/umbrella_party/party/get_post_delete_party.yaml'
   '/party/parties/{obj_id}':
-    $ref: 'umbrella/umbrella_party/party/get_put_auth_by_id.yaml'
+    $ref: 'umbrella/umbrella_party/party/get_put_party_by_id.yaml'
   '/party/categories':
     $ref: 'umbrella/umbrella_party/category/get_post_delete_categories.yaml'
   '/party/categories/{obj_id}':
