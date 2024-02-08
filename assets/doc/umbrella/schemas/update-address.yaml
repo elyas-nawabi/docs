@@ -7,8 +7,6 @@
                 properties:
                   - address: 
                       type: integer
-                    id: 
-                      type: integer
                     name: 
                       type: string
                     party: 
@@ -21,8 +19,6 @@
                 type: integer
               name: 
                 type: string 
-              id: 
-                type: integer 
               party: 
                 type: integer
               party_name:
@@ -39,11 +35,11 @@
       active: true
       city: "Kabul"
       contact_mechanisms:
-        - address: 1
-          name: "suhaib"
-          party: 1
-          type: "mobile"
-          value: "0771680435"
+      - address: 1
+        name: "suhaib"
+        party: 1
+        type: "mobile"
+        value: "0771680435"
       country: 1
       name: "ahmad tower"
       party: 1
