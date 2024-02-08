@@ -137,7 +137,10 @@ components:
       $ref: 'umbrella/schemas/create-contact-mechanism.yaml'
     UpdateContactMechanism:
       $ref: 'umbrella/schemas/update-contact-mechanism.yaml'
-  
+    CreateAddress:
+      $ref: 'umbrella/schemas/create-address.yaml'
+    UpdateAddress:
+      $ref: 'umbrella/schemas/update-address.yaml'
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
     HTTP401:

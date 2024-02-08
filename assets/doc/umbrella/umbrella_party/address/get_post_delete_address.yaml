@@ -138,7 +138,7 @@
                           type: array
                           properties:
                             type: 
-                              type: enum[phone, mobile, fax, e-mail, website, skype, sip, irc, jabber, other]
+                              type: string
                             value:
                               type: string
                             name: 
