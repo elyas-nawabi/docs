@@ -2,13 +2,15 @@
         name:
           type: string
         parent:
-          anyOf:
-            - type: integer
-            - type: null
+          type: integer
         childs:
           type: array
           properties:
             type: object
+            name:
+              type: string
+            parent:
+              type: integer
       required:
         - name
       example:

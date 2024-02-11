@@ -1,40 +1,40 @@
     properties:
-              active:
-                type: boolean
-              city:
-                type: string
-              contact_mechanisms:
-                properties:
-                  - address: 
-                      type: integer
-                    id: 
-                      type: integer
-                    name: 
-                      type: string
-                    party: 
-                      type: integer
-                    type: 
-                      type: string
-                    value:
-                      type: string
-              country:
-                type: integer
-              name: 
-                type: string 
-              id: 
-                type: integer 
-              party: 
-                type: integer
-              party_name:
-                type: string
-              postal_code:
-                type: string 
-              sequence: 
-                type: integer
-              street: 
-                type: string 
-              subdivision: 
-                type: integer
+      active:
+        type: boolean
+      city:
+        type: string
+      contact_mechanisms:
+        properties:
+          - address: 
+              type: integer
+            id: 
+              type: integer
+            name: 
+              type: string
+            party: 
+              type: integer
+            type: 
+              type: string
+            value:
+              type: string
+      country:
+        type: integer
+      name: 
+        type: string 
+      id: 
+        type: integer 
+      party: 
+        type: integer
+      party_name:
+        type: string
+      postal_code:
+        type: string 
+      sequence: 
+        type: integer
+      street: 
+        type: string 
+      subdivision: 
+        type: integer
     example:
       active: true
       city: "Kabul"

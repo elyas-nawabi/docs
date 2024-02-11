@@ -1,28 +1,25 @@
       properties:
-        data:
+        currencies:
+          type: array
+        currency:
+          type: integer
+        currency_:
           type: object
-          properties:
-            type: object
-            currencies:
-              type: array
-            currency:
-              type: integer
-            currency_:
-              type: object
-              label:
-                type: string
-              value:
-                type: integer
-            day:
-              type: integer
-            frequency:
-              type: string
-            last_update:
-              type: date
-            source:
-              type: string
-            weekday:
-              type: integer
+          label:
+            type: string
+          value:
+            type: integer
+        day:
+          type: integer
+        frequency:
+          type: string
+        last_update:
+          type: date
+        source:
+          type: string
+        weekday:
+          type: integer
+  
       required:
         - currency
         - frequency
