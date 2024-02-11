@@ -14,10 +14,8 @@
                 items:
                   type: object
                   properties:
-                    data: null
-                    type: array
-                    items:
-                      type: object
+                    data:
+                      type: array
                       properties:
                         currency:
                           type: integer
@@ -105,9 +103,8 @@
                   type: object
                   properties:
                     data:
-                      type: object
+                      type: array
                       properties:
-                        type: object
                         currencies:
                           type: array
                         currency:
@@ -150,7 +147,7 @@
                       type: string
               example:
                 data:
-                  currencies: []
+                - currencies: []
                   currency: 1
                   currency_:
                     label: "Afghani"

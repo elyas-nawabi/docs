@@ -17,8 +17,6 @@
           content:
             application/json:
               schema:
-                items:
-                  type: object
                   properties:
                     data:
                       type: object
@@ -125,8 +123,6 @@
           content:
             application/json:
               schema:
-                items:
-                  type: object
                   properties:
                     data:
                       type: array

@@ -10,11 +10,10 @@ get:
       content:
         application/json:
           schema:
-            type: object
-            items:
               type: object
               properties:
                 data:
+                  type: array
                   properties:
                     active:
                       type: boolean
@@ -94,10 +93,9 @@ post:
       content:
         application/json:
           schema:
-            items:
-              type: object
               properties:
                 data:
+                  type: array
                   properties:
                     active:
                       type: boolean

@@ -10,8 +10,6 @@
           content:
             application/json:
               schema:
-                type: object
-                items:
                   type: object
                   properties:
                     data:
@@ -94,8 +92,6 @@
           content:
             application/json:
               schema:
-                items:
-                  type: object
                   properties:
                     data:
                       type: array
