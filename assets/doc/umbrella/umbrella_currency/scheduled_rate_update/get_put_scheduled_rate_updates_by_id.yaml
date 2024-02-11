@@ -47,8 +47,6 @@
                     errors:
                       type: object
                     pagination:
-                      items:
-                        type: object
                       properties:
                         page:
                           type: integer
@@ -151,8 +149,6 @@
                     errors:
                       type: object
                     pagination:
-                      items:
-                        type: object
                       properties:
                         page:
                           type: integer

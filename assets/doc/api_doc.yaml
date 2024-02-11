@@ -65,6 +65,8 @@ tags:
     description: scheduled rate update - scheduled rate update data management.
   - name: fiscal year
     description: fiscal year - fiscal year data management.
+  - name: fiscal period
+    description: fiscal period - fiscal period data management.
   - name: auth
     description: auth - auth data management.
   - name: party
@@ -88,6 +90,10 @@ paths:
     $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_post_delete_fiscal_year.yaml'
   '/financial-accounting/fiscal-year/{obj_id}':
     $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_put_fiscal_year_by_id.yaml'
+  '/financial-accounting/fiscal-periods':
+    $ref: 'umbrella/umbrella_financial_accounting/fiscal_period/get_post_delete_fiscal_period.yaml'
+  '/financial-accounting/fiscal-periods/{obj_id}':
+    $ref: 'umbrella/umbrella_financial_accounting/fiscal_period/get_put_fiscal_period_by_id.yaml'
   '/login':
     $ref: 'umbrella/umbrella/auth/post_auth.yaml'
   '/party/parties':
@@ -121,6 +127,10 @@ components:
       $ref: 'umbrella/schemas/create-fiscal-year.yaml'
     UpdateFiscalYear:
       $ref: 'umbrella/schemas/update-fiscal-year.yaml'
+    CreateFiscalPeriod:
+      $ref: 'umbrella/schemas/create-fiscal-period.yaml'
+    UpdateFiscalPeriod:
+      $ref: 'umbrella/schemas/update-fiscal-period.yaml'
     CreateAuth:
       $ref: 'umbrella/schemas/create-auth.yaml'
     CreateParty:

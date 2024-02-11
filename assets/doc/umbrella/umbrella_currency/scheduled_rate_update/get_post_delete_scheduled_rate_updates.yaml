@@ -10,8 +10,6 @@
           content:
             application/json:
               schema:
-                type: object
-                items:
                   type: object
                   properties:
                     data:
@@ -37,8 +35,6 @@
                       type: object
                       nullable: true
                     pagination:
-                      items:
-                        type: object
                       properties:
                         page:
                           type: integer
@@ -99,8 +95,6 @@
           content:
             application/json:
               schema:
-                items:
-                  type: object
                   properties:
                     data:
                       type: array
@@ -130,8 +124,6 @@
                     errors:
                       type: object
                     pagination:
-                      items:
-                        type: object
                       properties:
                         page:
                           type: integer
