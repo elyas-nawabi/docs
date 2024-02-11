@@ -86,13 +86,16 @@
                           label: "sbd1"
                           value: 3
                     error:
-                      type: null
+                      type: object
+                      nullable: true
                     pagination:
-                      type: null
+                      type: object
+                      nullable: true
                     status:
                       type: integer
                     success_message:
-                      type: null
+                      type: string
+                      nullable: true
               example:
                 data:
                   active: true
@@ -236,13 +239,16 @@
                           label: "sbd1"
                           value: 3
                     error:
-                      type: null
+                      type: object
+                      nullable: true
                     pagination:
-                      type: null
+                      type: object
+                      nullable: true
                     status:
                       type: integer
                     success_message:
-                      type: null
+                      type: object
+                      nullable: true
               example:
                 data:
                   active: true

@@ -15,9 +15,7 @@ get:
               type: object
               properties:
                 data:
-                  type: array
                   properties:
-                    type: object
                     active:
                       type: boolean
                     code:
@@ -100,9 +98,7 @@ post:
               type: object
               properties:
                 data:
-                  type: array
                   properties:
-                    type: object
                     active:
                       type: boolean
                     code:
@@ -131,13 +127,16 @@ post:
                     symbol:
                       type: string
                 errors:
-                  type: null
+                  type: object
+                  nullable: true
                 pagination:
-                  type: null
+                  type: object
+                  nullable: true
                 status:
                   type: integer
                 success_message:
-                  type: null
+                  type: string
+                  nullable: true
           example:
             data:
               active: true

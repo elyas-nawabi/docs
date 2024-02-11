@@ -182,13 +182,16 @@
                         receivable_today:
                           type: integer
                     errors:
-                      type: null
+                      type: object
+                      nullable: true
                     pagination:
-                      type: null
+                      type: object
+                      nullable: true
                     status:
                       type: integer
                     success_message:
-                      type: null
+                      type: string
+                      nullable: true
               required:
                 - name
                 - code 

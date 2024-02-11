@@ -1,10 +1,12 @@
       properties:
         data:
-          type: null
+          type: object
+          nullable: true
         errors:
           type: object
         pagination:
-          type: null
+          type: object
+          nullable: true
         status:
           type: integer
         success_message:

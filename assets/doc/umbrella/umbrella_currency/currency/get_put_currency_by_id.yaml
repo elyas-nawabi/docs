@@ -24,7 +24,6 @@ get:
                 data:
                   type: array
                   properties:
-                    type: object
                     active:
                       type: boolean
                     code:
@@ -53,13 +52,16 @@ get:
                     symbol:
                       type: string
                 errors:
-                  type: null
+                  type: object
+                  nullable: true
                 pagination:
-                  type: null
+                  type: object
+                  nullable: true
                 status:
                   type: integer
                 success_message:
-                  type: null
+                  type: object
+                  nullable: true
           example:
             data:
               active: true
@@ -127,7 +129,6 @@ put:
                 data:
                   type: object
                   properties:
-                    type: object
                     active:
                       type: boolean
                     code:
@@ -154,13 +155,16 @@ put:
                     symbol:
                       type: string
                 errors:
-                  type: null
+                  type: object
+                  nullable: true
                 pagination:
-                  type: null
+                  type: object
+                  nullable: true
                 status:
                   type: integer
                 success_message:
-                  type: null
+                  type: object
+                  nullable: true
           example:
             data:
               active: true

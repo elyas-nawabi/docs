@@ -36,7 +36,8 @@
                         source:
                           type: string
                     errors:
-                      type: null
+                      type: object
+                      nullable: true
                     pagination:
                       items:
                         type: object

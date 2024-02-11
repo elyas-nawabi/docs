@@ -164,13 +164,16 @@
                         subdivision: 
                           type: integer
                     error:
-                      type: null
+                      type: object
+                      nullable: true
                     pagination:
-                      type: null
+                      type: object
+                      nullable: true
                     status:
                       type: integer
                     success_message:
-                      type: null
+                      type: string
+                      nullable: true
               example:
                 active: true
                 city: "Herat"
