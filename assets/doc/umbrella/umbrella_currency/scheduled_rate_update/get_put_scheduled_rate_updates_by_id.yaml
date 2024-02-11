@@ -17,14 +17,10 @@
           content:
             application/json:
               schema:
-                type: object
-                items:
                   type: object
                   properties:
-                    data: null
-                    type: object
-                    items:
-                      type: object
+                    data:
+                      type: array
                       properties:
                         currencies:
                           type: array
@@ -68,7 +64,7 @@
                       type: string
               example:
                 data:
-                  currencies: []
+                - currencies: []
                   currency: 1
                   currency_:
                     label: "Afghani"
@@ -125,14 +121,10 @@
           content:
             application/json:
               schema:
-                type: object
-                items:
                   type: object
                   properties:
-                    data: null
-                    type: object
-                    items:
-                      type: object
+                    data:
+                      type: array
                       properties:
                         currencies:
                           type: array
@@ -176,7 +168,7 @@
                       type: string
               example:
                 data:
-                  currencies: []
+                - currencies: []
                   currency: 1
                   currency_:
                     label: "Afghani"

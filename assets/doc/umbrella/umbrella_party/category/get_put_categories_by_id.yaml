@@ -17,8 +17,6 @@
           content:
             application/json:
               schema:
-                type: object
-                items:
                   type: object
                   properties:
                     data:
@@ -131,8 +129,6 @@
           content:
             application/json:
               schema:
-                items:
-                  type: object
                   properties:
                     data:
                       type: object
@@ -145,19 +141,21 @@
                         name:
                           type: string
                         parent:
-                          anyOf:
-                            - type: integer
-                            - type: null
+                          type: integer
+                          nullable: true
                         parent_:
                           type: object
                     errors:
-                      type: null
+                      type: object
+                      nullable: true
                     pagination:
-                      type: null
+                      type: object
+                      nullable: true
                     status:
                       type: integer
                     success_message:
-                      type: null
+                      type: string
+                      nullable: true
               example:
               - Please remove the square brackets from the start and end lines during update operation.
               - You are limited to selecting one example from the following.

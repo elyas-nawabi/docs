@@ -17,8 +17,6 @@ get:
           content:
             application/json:
               schema:
-                type: object
-                items:
                   type: object
                   properties:
                     data:
@@ -178,8 +176,6 @@ put:
           content:
             application/json:
               schema:
-                items:
-                  type: object
                   properties:
                     data:
                       type: object
