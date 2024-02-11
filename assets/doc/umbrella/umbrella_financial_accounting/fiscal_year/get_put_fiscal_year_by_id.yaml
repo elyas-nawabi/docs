@@ -22,7 +22,6 @@ get:
                     data:
                       type: object
                       properties:
-                        type: object
                         company:
                           type: integer
                         company_:
@@ -40,8 +39,6 @@ get:
                         periods:
                           type: array
                           properties:
-                            items:
-                            type: object
                             company:
                               type: integer
                             company_:
@@ -83,8 +80,6 @@ get:
                     errors:
                       type: object
                     pagination:
-                      items:
-                        type: object
                       properties:
                         page:
                           type: integer
@@ -198,8 +193,6 @@ put:
                         periods:
                           type: array
                           properties:
-                            items:
-                            type: object
                             company:
                               type: integer
                             company_:
@@ -241,8 +234,6 @@ put:
                     errors:
                       type: object
                     pagination:
-                      items:
-                        type: object
                       properties:
                         page:
                           type: integer

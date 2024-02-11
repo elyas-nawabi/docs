@@ -14,8 +14,6 @@
                   properties:
                     data:
                       type: array
-                      items:
-                       type: object
                       properties:
                         id:
                           type: integer
@@ -26,8 +24,6 @@
                     errors:
                       type: object
                     pagination:
-                      items:
-                        type: object
                       properties:
                         page:
                           type: integer
@@ -105,8 +101,6 @@
                         periods:
                           type: array
                           properties:
-                            items:
-                            type: object
                             company:
                               type: integer
                             company_:
@@ -148,8 +142,6 @@
                     errors:
                       type: object
                     pagination:
-                      items:
-                        type: object
                       properties:
                         page:
                           type: integer
