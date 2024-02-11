@@ -26,8 +26,8 @@
               type: string
         state:
           type: string
+  
       required:
-        - company
         - end_date
         - start_date
         - name
