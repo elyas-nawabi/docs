@@ -17,8 +17,6 @@ post:
           content:
             application/json:
               schema:
-                items:
-                  type: object
                   properties:
                     data:
                       type: string

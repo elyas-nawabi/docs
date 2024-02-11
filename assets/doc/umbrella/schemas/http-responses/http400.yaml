@@ -1,6 +1,7 @@
       properties:
         data:
-          type: null
+          type: object
+          nullable: true
         errors:
           type: array
           properties:
@@ -11,7 +12,8 @@
             serverity:
               type: integer
         pagination:
-          type: null
+          type: object
+          nullable: true
         status:
           type: integer
         success_message:

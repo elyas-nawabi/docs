@@ -17,14 +17,11 @@
           content:
             application/json:
               schema:
-                type: object
-                items:
                   type: object
                   properties:
                     data:
                       type: object
                       properties:
-                        type: object
                         active:
                           type: boolean
                         city:
@@ -86,13 +83,16 @@
                           label: "sbd1"
                           value: 3
                     error:
-                      type: null
+                      type: object
+                      nullable: true
                     pagination:
-                      type: null
+                      type: object
+                      nullable: true
                     status:
                       type: integer
                     success_message:
-                      type: null
+                      type: string
+                      nullable: true
               example:
                 data:
                   active: true
@@ -168,13 +168,10 @@
           content:
             application/json:
               schema:
-                items:
-                  type: object
                   properties:
                     data:
                       type: object
                       properties:
-                        type: object
                         active:
                           type: boolean
                         city:
@@ -236,13 +233,16 @@
                           label: "sbd1"
                           value: 3
                     error:
-                      type: null
+                      type: object
+                      nullable: true
                     pagination:
-                      type: null
+                      type: object
+                      nullable: true
                     status:
                       type: integer
                     success_message:
-                      type: null
+                      type: object
+                      nullable: true
               example:
                 data:
                   active: true

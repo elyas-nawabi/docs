@@ -2,16 +2,21 @@
         name:
           type: string
         parent:
-          anyOf:
-            - type: integer
-            - type: null
+          type: integer
         childs:
           type: array
           properties:
             type: object
+            name:
+              type: string
+            parent:
+              type: integer
       required:
         - name
       example:
         name: "testCtg4"
         parent: 4
-        childs: []
+        childs: 
+          childs: []
+          name: "test1"
+          parent: 4

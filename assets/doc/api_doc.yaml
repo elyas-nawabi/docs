@@ -84,16 +84,16 @@ paths:
     $ref: 'umbrella/umbrella_currency/scheduled_rate_update/get_post_delete_scheduled_rate_updates.yaml'
   '/currency/scheduled-rate-updates/{obj_id}':
     $ref: 'umbrella/umbrella_currency/scheduled_rate_update/get_put_scheduled_rate_updates_by_id.yaml'
-  '/financial-accounting/fiscal-years':
+  '/financial-accounting/fiscal-year':
     $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_post_delete_fiscal_year.yaml'
-  '/financial-accounting/fiscal-years/{obj_id}':
-    $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_fiscal_year_by_id.yaml'
+  '/financial-accounting/fiscal-year/{obj_id}':
+    $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_put_fiscal_year_by_id.yaml'
   '/login':
     $ref: 'umbrella/umbrella/auth/post_auth.yaml'
   '/party/parties':
-    $ref: 'umbrella/umbrella_party/party/get_post_delete_auth.yaml'
+    $ref: 'umbrella/umbrella_party/party/get_post_delete_party.yaml'
   '/party/parties/{obj_id}':
-    $ref: 'umbrella/umbrella_party/party/get_put_auth_by_id.yaml'
+    $ref: 'umbrella/umbrella_party/party/get_put_party_by_id.yaml'
   '/party/categories':
     $ref: 'umbrella/umbrella_party/category/get_post_delete_categories.yaml'
   '/party/categories/{obj_id}':
@@ -119,6 +119,8 @@ components:
       $ref: 'umbrella/schemas/update-cron.yaml'
     CreateFiscalYear:
       $ref: 'umbrella/schemas/create-fiscal-year.yaml'
+    UpdateFiscalYear:
+      $ref: 'umbrella/schemas/update-fiscal-year.yaml'
     CreateAuth:
       $ref: 'umbrella/schemas/create-auth.yaml'
     CreateParty:

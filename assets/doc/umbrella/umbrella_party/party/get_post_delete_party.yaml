@@ -1,0 +1,283 @@
+    get:
+      tags:
+        - party
+      summary: Get party details.
+      description: Get party details.
+      operationId: getParties
+      responses:
+        '200':
+          description: List of parties.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        type: object
+                        code:
+                          type: string
+                        create_date:
+                          type: date
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                        payable_today:
+                          type: float
+                        receivable_today:
+                          type: float
+                        tax_identifier:
+                          type: string
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  - code: "1"
+                    create_date: "2024-01-23T16:52:29.278731"
+                    id: 1
+                    name: "Party 1"
+                    payable_today: 0.0,
+                    receivable_today: 0.0,
+                    tax_identifier: null
+                errors: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 1
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    post:
+      tags:
+        - party
+      summary: Create a party.
+      description: Create a party.
+      operationId: postPartyById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateParty'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        type: object
+                        addresses: 
+                          properties:
+                            active: 
+                              type: boolean
+                            city: 
+                              type: string
+                            contact_mechanisms: 
+                              type: array
+                            country:
+                              type: integer
+                            country_: 
+                              label:
+                                type: string
+                              value:
+                                type: integer
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                            party:
+                              type: integer
+                            party_: 
+                              label:
+                                type: string
+                              value:
+                                type: integer
+                            party_name: 
+                              type: string
+                            postal_code: 
+                              type: string
+                            sequence: 
+                              type: integer
+                            street:
+                              type: string
+                            subdivision:
+                              type: integer
+                            subdivision_: 
+                              label:
+                                type: string
+                              value:
+                                type: integer
+                        categories:
+                          type: integer
+                        code:
+                          type: string
+                        contact_mechanisms: 
+                          properties:
+                            active:
+                              type: boolean
+                            comment:
+                              type: string
+                            language:
+                              type: integer
+                            name:
+                              type: integer
+                            party: 
+                              type: integer
+                            party_: 
+                              label:
+                                type: string
+                              value:
+                                type: integer
+                            sequence:
+                              type: integer
+                            type:
+                              type: integer
+                            value:
+                              type: integer
+                        create_date:
+                          type: date
+                        name:
+                          type: string
+                        payable:
+                          type: integer
+                        payable_today:
+                          type: integer
+                        receivable:
+                          type: integer
+                        receivable_today:
+                          type: integer
+                    errors:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              required:
+                - name
+                - code 
+              example:
+                data:
+                  addresses:
+                  - active: true
+                    city: Herat
+                    contact_mechanisms: []
+                    country: 1
+                    country_:
+                      label: Afghanistan
+                      value: 1
+                    id: 3
+                    name: herat tower
+                    party: 1
+                    party_:
+                      label: Party 1
+                      value: 1
+                    party_name: prt2
+                    postal_code: '1002'
+                    sequence: 1
+                    street: street 2
+                    subdivision: 3
+                    subdivision_:
+                      label: sbd1
+                      value: 3
+                  categories:
+                  - 3
+                  code: '01'
+                  contact_mechanisms:
+                  - active: true
+                    comment: no comment
+                    language: 1
+                    name: ctm1
+                    party: 14
+                    party_:
+                      label: Party 1
+                      value: 1
+                    sequence: 1
+                    type: phone
+                    value: '8888'
+                  create_date: '2024-01-23T16:52:29.278731'
+                  name: Party 15
+                  payable: 0
+                  payable_today: 0
+                  receivable: 0
+                  receivable_today: 0
+                errors: null
+                pagination: null
+                status: 201
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    delete:
+      tags:
+        - party
+      summary: Delete parties.
+      description: Delete parties.
+      operationId: deletePartiesById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+  
