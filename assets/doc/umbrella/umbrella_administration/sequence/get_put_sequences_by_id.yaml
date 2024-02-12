@@ -1,0 +1,224 @@
+    get:
+      tags:
+        - sequence
+      summary: Get one sequence.
+      description: Get one sequence.
+      operationId: getSequenceById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      active:
+                        type: boolean
+                      company:
+                        type: integer
+                      company_:
+                        label:
+                          type: string
+                        value:
+                          type: integer
+                      id:
+                        type: integer
+                      name:
+                        type: string
+                      number_increment:
+                        type: integer
+                      number_next:
+                        type: integer
+                      padding:
+                        type: integer
+                      prefix:
+                        type: string
+                      preview:
+                        type: string
+                      sequence_type:
+                        type: integer
+                      sequence_type_:
+                        label:
+                          type: string
+                        value: 
+                          type: integer
+                      suffix:
+                        type: string
+                      type:
+                        type: string
+                    error:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  active: true
+                  company: 1
+                  company_:
+                    label: 'Party 1'
+                    value: 1
+                  id: 4
+                  name: '2024'
+                  number_increment: 1
+                  number_next: 1
+                  padding: 0
+                  prefix: ''
+                  preview: '1'
+                  sequence_type: 3
+                  sequence_type_:
+                    label: 'Account Move'
+                    value: 3
+                  suffix: ''
+                  type: 'incremental'
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
+      tags:
+        - sequence
+      summary: Update a sequence.
+      description: Update a sequence.
+      operationId: updateSequenceById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateSequence'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    active:
+                      type: boolean
+                    company:
+                      type: integer
+                    company_:
+                      label:
+                        type: string
+                      value:
+                        type: integer
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    number_increment:
+                      type: integer
+                    number_next:
+                      type: integer
+                    padding:
+                      type: integer
+                    prefix:
+                      type: string
+                    preview:
+                      type: string
+                    sequence_type:
+                      type: integer
+                    sequence_type_:
+                      label:
+                        type: string
+                      value: 
+                        type: integer
+                    suffix:
+                      type: string
+                    type:
+                      type: string 
+                  errors:
+                    type: object
+                    nullable: true
+                  pagination:
+                    type: object
+                    nullable: true
+                  status:
+                    type: integer
+                  success_message:
+                    type: string
+                    nullable: true
+              
+              required:
+                - name
+                - number_increment
+                - number_next
+                - padding
+                - sequence_type
+                - type 
+              
+              example:
+                data:
+                  active: true
+                  company: 1
+                  company_:
+                    label: 'Party 1'
+                    value: 1
+                  id: 4
+                  name: '2024'
+                  number_increment: 1
+                  number_next: 1
+                  padding: 0
+                  prefix: ''
+                  preview: '1'
+                  sequence_type: 3
+                  sequence_type_:
+                    label: 'Account Move'
+                    value: 3
+                  suffix: ''
+                  type: 'incremental'
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+  

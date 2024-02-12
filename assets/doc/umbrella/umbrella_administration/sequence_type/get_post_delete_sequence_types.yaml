@@ -1,12 +1,12 @@
     get:
       tags:
-        - category
-      summary: Get categories.
-      description: Get categories.
-      operationId: getCategories
+        - sequence type
+      summary: Get sequence type details.
+      description: Get sequence type details.
+      operationId: getSequenceTypes
       responses:
         '200':
-          description: List of categories.
+          description: List of sequence type.
           content:
             application/json:
               schema:
@@ -35,14 +35,11 @@
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
                 data:
                   - id: 1
-                    name: "parentCategory"
-                  - id: 2
-                    name: "childCategory"
-                  - id: 3
-                    name: "simpleCategory"
+                    name: "Account Journal"
                 errors: null
                 pagination:
                   page: 1
@@ -60,20 +57,20 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     post:
       tags:
-        - category
-      summary: Create a category.
-      description: Create a category.
-      operationId: postCategory
+        - sequence type
+      summary: Create a Sequence type.
+      description: Create a Sequence type.
+      operationId: postSequenceTypeById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateCategory'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateSequenceType'
       responses:
         '201':
           description: OK
@@ -82,18 +79,23 @@
               schema:
                   properties:
                     data:
-                      type: object
+                      type: array
                       properties:
-                        childs:
+                        groups:
                           type: array
-                        id:
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                            parent:
+                              type: integer
+                            parent_:
+                              type: object
+                        id: 
                           type: integer
                         name:
                           type: string
-                        parent:
-                          type: integer
-                        parent_:
-                          type: object
                     errors:
                       type: object
                       nullable: true
@@ -105,46 +107,17 @@
                     success_message:
                       type: string
                       nullable: true
+              required:
+                - name
               example:
-              - Please remove the square brackets from the start and end lines during post operation.
-              - You are limited to selecting one example from the following.
-              - data:
-                  childs: []
-                  id: 12
-                  name: "testCtg1"
-                  parent: null
-                  parent_: {}
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
-              - data:
-                  childs: []
-                  id: 13
-                  name: "testCtg2"
-                  parent: 4
-                  parent_:
-                    label: "parentCtg"
-                    value: 4
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
-              - data:
-                  childs:
-                    childs: []
-                    id: 7
-                    name: "test1"
-                    parent: 6
-                    parent_: 
-                        label: "parentctg / testCtg"
-                        value: 6
-                  id: 14
-                  name: "testCtg4"
-                  parent: 4
-                  parent_:
-                    label: "parentCtg"
-                    value: 4
+                data:
+                  groups:
+                    - id: 1
+                      name: Administration
+                      parent: null
+                      parent_: {}
+                  id: 7
+                  name: seq1
                 errors: null
                 pagination: null
                 status: 201
@@ -161,10 +134,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
-        - category
-      summary: Delete categories.
-      description: Delete categories.
-      operationId: deleteCategoriesById
+        - sequence type
+      summary: Delete sequence type.
+      description: Delete sequence type.
+      operationId: deleteSequenceTypeById
       requestBody:
         required: true
         content:

@@ -1,0 +1,156 @@
+    get:
+      tags:
+        - sequence type
+      summary: Get one sequence type.
+      description: Get one sequence type.
+      operationId: getSequenceTypeById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        groups:
+                          type: array
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                            parent:
+                              type: integer
+                              nullable: true
+                            parent_:  
+                              type: object
+                        id:
+                          type: integer
+                        name: 
+                          type: string
+                    error: 
+                      type: string
+                    pagination: 
+                      type: string
+                    status:
+                      type: integer
+                    success_message: 
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  groups:
+                    - id: 1
+                      name: "Administration"
+                      parent: null
+                      parent_: {} 
+                error: null
+                pagination: null
+                status: 200
+                success_message: null 
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
+      tags:
+        - sequence type
+      summary: Update a sequence type.
+      description: Update a sequence type.
+      operationId: updateSequenceTypeById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateSequenceType'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  properties:
+                    data:
+                      properties:
+                        groups:
+                          type: array
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                            parent:
+                              type: integer
+                            parent_:
+                              type: object
+                        id: 
+                          type: integer
+                        name:
+                          type: string
+                    errors:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
+                    status:
+                      type: integer
+                    success_message:
+                      type: object
+                      nullable: true
+
+              example:
+                data:
+                  groups:
+                    - id: 1
+                      name: Administration
+                      parent: null
+                      parent_: {}
+                  id: 7
+                  name: seq1
+                errors: null
+                pagination: null
+                status: 201
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+  

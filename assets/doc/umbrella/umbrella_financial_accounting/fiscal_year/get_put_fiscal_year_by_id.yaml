@@ -175,7 +175,6 @@ put:
                     data:
                       type: object
                       properties:
-                        type: object
                         company:
                           type: integer
                         company_:

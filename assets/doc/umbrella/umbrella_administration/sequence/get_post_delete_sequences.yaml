@@ -1,12 +1,12 @@
     get:
       tags:
-        - category
-      summary: Get categories.
-      description: Get categories.
-      operationId: getCategories
+        - sequence
+      summary: Get sequence details.
+      description: Get sequence details.
+      operationId: getSequences
       responses:
         '200':
-          description: List of categories.
+          description: List of sequences.
           content:
             application/json:
               schema:
@@ -18,6 +18,12 @@
                         id:
                           type: integer
                         name:
+                          type: string
+                        sequence_type:
+                          type: integer
+                        sequence_type_:
+                          type: object
+                        type:
                           type: string
                     errors:
                       type: object
@@ -35,20 +41,22 @@
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
                 data:
-                  - id: 1
-                    name: "parentCategory"
-                  - id: 2
-                    name: "childCategory"
-                  - id: 3
-                    name: "simpleCategory"
-                errors: null
+                - id: 4
+                  name: '2024'
+                  sequence_type: 3
+                  sequence_type_:
+                    label: 'Account Move'
+                    value: 3
+                  type: 'incremental'
+                error: null
                 pagination:
                   page: 1
                   per_page: 100
                   total_pages: 1
-                  total_records: 1
+                  total_records: 9
                 status: 200
                 success_message: null
         '401':
@@ -60,94 +68,105 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     post:
       tags:
-        - category
-      summary: Create a category.
-      description: Create a category.
-      operationId: postCategory
+        - sequence
+      summary: Create a sequence.
+      description: Create a sequence.
+      operationId: postSequenceById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateCategory'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateSequence'
       responses:
         '201':
           description: OK
           content:
             application/json:
               schema:
-                  properties:
-                    data:
-                      type: object
-                      properties:
-                        childs:
-                          type: array
+                    properties:
+                      data:
+                        active:
+                          type: boolean
+                        company:
+                          type: integer
+                        company_:
+                          label:
+                            type: string
+                          value:
+                            type: integer
                         id:
                           type: integer
                         name:
                           type: string
-                        parent:
+                        number_increment:
                           type: integer
-                        parent_:
-                          type: object
-                    errors:
-                      type: object
-                      nullable: true
-                    pagination:
-                      type: object
-                      nullable: true
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
+                        number_next:
+                          type: integer
+                        padding:
+                          type: integer
+                        prefix:
+                          type: string
+                        preview:
+                          type: string
+                        sequence_type:
+                          type: integer
+                        sequence_type_:
+                          label:
+                            type: string
+                          value: 
+                            type: integer
+                        suffix:
+                          type: string
+                        type:
+                          type: string 
+                      errors:
+                        type: object
+                        nullable: true
+                      pagination:
+                        type: object
+                        nullable: true
+                      status:
+                        type: integer
+                      success_message:
+                        type: string
+                        nullable: true
+
+              required:
+                - name
+                - number_increment
+                - number_next
+                - padding
+                - sequence_type
+                - type 
+
               example:
-              - Please remove the square brackets from the start and end lines during post operation.
-              - You are limited to selecting one example from the following.
-              - data:
-                  childs: []
-                  id: 12
-                  name: "testCtg1"
-                  parent: null
-                  parent_: {}
-                errors: null
+                data:
+                  active: true
+                  company: 1
+                  company_:
+                    label: 'Party 1'
+                    value: 1
+                  id: 4
+                  name: '2024'
+                  number_increment: 1
+                  number_next: 1
+                  padding: 0
+                  prefix: ''
+                  preview: '1'
+                  sequence_type: 3
+                  sequence_type_:
+                    label: 'Account Move'
+                    value: 3
+                  suffix: ''
+                  type: 'incremental'
+                error: null
                 pagination: null
-                status: 201
-                success_message: null
-              - data:
-                  childs: []
-                  id: 13
-                  name: "testCtg2"
-                  parent: 4
-                  parent_:
-                    label: "parentCtg"
-                    value: 4
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
-              - data:
-                  childs:
-                    childs: []
-                    id: 7
-                    name: "test1"
-                    parent: 6
-                    parent_: 
-                        label: "parentctg / testCtg"
-                        value: 6
-                  id: 14
-                  name: "testCtg4"
-                  parent: 4
-                  parent_:
-                    label: "parentCtg"
-                    value: 4
-                errors: null
-                pagination: null
-                status: 201
+                status: 200
                 success_message: null
         '401':
           description: >-
@@ -161,10 +180,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
-        - category
-      summary: Delete categories.
-      description: Delete categories.
-      operationId: deleteCategoriesById
+        - sequence
+      summary: Delete sequences.
+      description: Delete sequences.
+      operationId: deleteSequencesById
       requestBody:
         required: true
         content:

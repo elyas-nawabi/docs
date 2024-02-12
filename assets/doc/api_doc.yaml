@@ -77,6 +77,10 @@ tags:
     description: contact mechanism - contact mechanism data management.
   - name: address
     description: address - address data management.
+  - name: sequence
+    description: sequence - sequence data management.
+  - name: sequence type
+    description: sequence type - sequence type data management.
 paths:
   '/currency/currencies':
     $ref: 'umbrella/umbrella_currency/currency/get_post_delete_currency.yaml'
@@ -112,6 +116,16 @@ paths:
     $ref: 'umbrella/umbrella_party/address/get_post_delete_address.yaml'
   '/party/address/{obj_id}':
     $ref: 'umbrella/umbrella_party/address/get_put_address_by_id.yaml'
+  '/administration/sequence_types':
+    $ref: 'umbrella/umbrella_administration/sequence_type/get_post_delete_sequence_types.yaml'
+  '/administration/sequence_types/{obj_id}':
+    $ref: 'umbrella/umbrella_administration/sequence_type/get_put_sequence_types_by_id.yaml'
+  
+  '/administration/sequences':
+    $ref: 'umbrella/umbrella_administration/sequence/get_post_delete_sequences.yaml'
+  '/administration/sequences/{obj_id}':
+    $ref: 'umbrella/umbrella_administration/sequence/get_put_sequences_by_id.yaml'
+  
     
 components:
   schemas:
@@ -153,6 +167,14 @@ components:
       $ref: 'umbrella/schemas/create-address.yaml'
     UpdateAddress:
       $ref: 'umbrella/schemas/update-address.yaml'
+    CreateSequence:
+      $ref: 'umbrella/schemas/create-sequence.yaml'
+    UpdateSequence:
+      $ref: 'umbrella/schemas/update-sequence.yaml'
+    CreateSequenceType:
+      $ref: 'umbrella/schemas/create-sequence-type.yaml'
+    UpdateSequenceType:
+      $ref: 'umbrella/schemas/update-sequence-type.yaml'
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
     HTTP401:

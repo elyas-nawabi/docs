@@ -15,7 +15,6 @@
                     data:
                       type: array
                       properties:
-                        type: object
                         code:
                           type: string
                         create_date:
@@ -33,15 +32,15 @@
                     errors:
                       type: object
                     pagination:
-                      type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
                     status:
                       type: integer
                     success_message:
@@ -96,7 +95,6 @@
                     data:
                       type: array
                       properties:
-                        type: object
                         addresses: 
                           properties:
                             active: 

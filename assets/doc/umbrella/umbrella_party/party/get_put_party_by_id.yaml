@@ -22,7 +22,6 @@
                     data:
                       type: object
                       properties:
-                        type: object
                         account_payable:
                           type: string
                         account_receivable: 
@@ -258,7 +257,6 @@
                     data:
                       type: array
                       properties:
-                        type: object
                         addresses: 
                           properties:
                             active: 
