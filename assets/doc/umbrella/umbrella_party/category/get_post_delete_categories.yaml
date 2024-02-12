@@ -15,7 +15,6 @@
                     data:
                       type: array
                       properties:
-                        type: object
                         id:
                           type: integer
                         name:
@@ -85,7 +84,6 @@
                     data:
                       type: object
                       properties:
-                        type: object
                         childs:
                           type: array
                         id:

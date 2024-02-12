@@ -17,14 +17,11 @@
           content:
             application/json:
               schema:
-                type: object
-                items:
                   type: object
                   properties:
                     data:
                       type: object
                       properties:
-                        type: object
                         account_payable:
                           type: string
                         account_receivable: 
@@ -256,13 +253,10 @@
           content:
             application/json:
               schema:
-                items:
-                  type: object
                   properties:
                     data:
                       type: array
                       properties:
-                        type: object
                         addresses: 
                           properties:
                             active: 

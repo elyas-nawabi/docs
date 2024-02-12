@@ -22,7 +22,6 @@
                     data:
                       type: object
                       properties:
-                        type: object
                         childs:
                           type: array
                         id:
@@ -133,7 +132,6 @@
                     data:
                       type: object
                       properties:
-                        type: object
                         childs:
                           type: array
                         id:

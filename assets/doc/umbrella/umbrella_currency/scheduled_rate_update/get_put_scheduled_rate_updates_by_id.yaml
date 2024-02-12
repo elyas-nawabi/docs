@@ -47,8 +47,6 @@
                     errors:
                       type: object
                     pagination:
-                      items:
-                        type: object
                       properties:
                         page:
                           type: integer

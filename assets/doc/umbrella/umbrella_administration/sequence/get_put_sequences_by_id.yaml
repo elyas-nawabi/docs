@@ -137,7 +137,6 @@
                     data:
                       type: array
                       properties:
-                        type: object
                         addresses: 
                           properties:
                             active: 

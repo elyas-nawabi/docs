@@ -15,7 +15,6 @@
                     data:
                       type: array
                       properties:
-                        type: object
                         code:
                           type: string
                         create_date:
@@ -96,7 +95,6 @@
                     data:
                       type: array
                       properties:
-                        type: object
                         addresses: 
                           properties:
                             active: 
