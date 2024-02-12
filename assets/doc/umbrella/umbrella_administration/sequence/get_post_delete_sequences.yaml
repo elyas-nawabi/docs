@@ -88,73 +88,85 @@
           content:
             application/json:
               schema:
-                  properties:
-                    data:
-                      type: array
-                      properties:
-                        
-                    errors:
-                      type: object
-                      nullable: true
-                    pagination:
-                      type: object
-                      nullable: true
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
+                    properties:
+                      data:
+                        active:
+                          type: boolean
+                        company:
+                          type: integer
+                        company_:
+                          label:
+                            type: string
+                          value:
+                            type: integer
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                        number_increment:
+                          type: integer
+                        number_next:
+                          type: integer
+                        padding:
+                          type: integer
+                        prefix:
+                          type: string
+                        preview:
+                          type: string
+                        sequence_type:
+                          type: integer
+                        sequence_type_:
+                          label:
+                            type: string
+                          value: 
+                            type: integer
+                        suffix:
+                          type: string
+                        type:
+                          type: string 
+                      errors:
+                        type: object
+                        nullable: true
+                      pagination:
+                        type: object
+                        nullable: true
+                      status:
+                        type: integer
+                      success_message:
+                        type: string
+                        nullable: true
+
               required:
                 - name
-                - code 
+                - number_increment
+                - number_next
+                - padding
+                - sequence_type
+                - type 
+
               example:
                 data:
-                  addresses:
-                  - active: true
-                    city: Herat
-                    contact_mechanisms: []
-                    country: 1
-                    country_:
-                      label: Afghanistan
-                      value: 1
-                    id: 3
-                    name: herat tower
-                    party: 1
-                    party_:
-                      label: Party 1
-                      value: 1
-                    party_name: prt2
-                    postal_code: '1002'
-                    sequence: 1
-                    street: street 2
-                    subdivision: 3
-                    subdivision_:
-                      label: sbd1
-                      value: 3
-                  categories:
-                  - 3
-                  code: '01'
-                  contact_mechanisms:
-                  - active: true
-                    comment: no comment
-                    language: 1
-                    name: ctm1
-                    party: 14
-                    party_:
-                      label: Party 1
-                      value: 1
-                    sequence: 1
-                    type: phone
-                    value: '8888'
-                  create_date: '2024-01-23T16:52:29.278731'
-                  name: Party 15
-                  payable: 0
-                  payable_today: 0
-                  receivable: 0
-                  receivable_today: 0
-                errors: null
+                  active: true
+                  company: 1
+                  company_:
+                    label: 'Party 1'
+                    value: 1
+                  id: 4
+                  name: '2024'
+                  number_increment: 1
+                  number_next: 1
+                  padding: 0
+                  prefix: ''
+                  preview: '1'
+                  sequence_type: 3
+                  sequence_type_:
+                    label: 'Account Move'
+                    value: 3
+                  suffix: ''
+                  type: 'incremental'
+                error: null
                 pagination: null
-                status: 201
+                status: 200
                 success_message: null
         '401':
           description: >-

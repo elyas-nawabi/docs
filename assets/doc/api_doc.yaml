@@ -157,6 +157,14 @@ components:
       $ref: 'umbrella/schemas/create-address.yaml'
     UpdateAddress:
       $ref: 'umbrella/schemas/update-address.yaml'
+    CreateSequence:
+      $ref: 'umbrella/schemas/create-sequence.yaml'
+    UpdateSequence:
+      $ref: 'umbrella/schemas/update-sequence.yaml'
+    CreateSequenceType:
+      $ref: 'umbrella/schemas/create-sequence-type.yaml'
+    UpdateSequenceType:
+      $ref: 'umbrella/schemas/update-sequence-type.yaml'
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
     HTTP401:

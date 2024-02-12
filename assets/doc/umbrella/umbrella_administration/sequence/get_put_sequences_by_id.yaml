@@ -124,156 +124,90 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateParty'
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateSequence'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                items:
-                  type: object
-                  properties:
-                    data:
-                      type: array
-                      properties:
-                        addresses: 
-                          properties:
-                            active: 
-                              type: boolean
-                            city: 
-                              type: string
-                            contact_mechanisms: 
-                              type: array
-                            country:
-                              type: integer
-                            country_: 
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
-                            party:
-                              type: integer
-                            party_: 
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            party_name: 
-                              type: string
-                            postal_code: 
-                              type: string
-                            sequence: 
-                              type: integer
-                            street:
-                              type: string
-                            subdivision:
-                              type: integer
-                            subdivision_: 
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                        categories:
-                          type: integer
-                        code:
-                          type: string
-                        contact_mechanisms: 
-                          properties:
-                            active:
-                              type: boolean
-                            comment:
-                              type: string
-                            language:
-                              type: integer
-                            name:
-                              type: integer
-                            party: 
-                              type: integer
-                            party_: 
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            sequence:
-                              type: integer
-                            type:
-                              type: integer
-                            value:
-                              type: integer
-                        create_date:
-                          type: date
-                        name:
-                          type: string
-                        payable:
-                          type: integer
-                        payable_today:
-                          type: integer
-                        receivable:
-                          type: integer
-                        receivable_today:
-                          type: integer
-                    errors:
-                      type: object
-                      nullable: true
-                    pagination:
-                      type: object
-                      nullable: true
-                    status:
+                properties:
+                  data:
+                    active:
+                      type: boolean
+                    company:
                       type: integer
-                    success_message:
-                      type: object
-                      nullable: true
-
+                    company_:
+                      label:
+                        type: string
+                      value:
+                        type: integer
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    number_increment:
+                      type: integer
+                    number_next:
+                      type: integer
+                    padding:
+                      type: integer
+                    prefix:
+                      type: string
+                    preview:
+                      type: string
+                    sequence_type:
+                      type: integer
+                    sequence_type_:
+                      label:
+                        type: string
+                      value: 
+                        type: integer
+                    suffix:
+                      type: string
+                    type:
+                      type: string 
+                  errors:
+                    type: object
+                    nullable: true
+                  pagination:
+                    type: object
+                    nullable: true
+                  status:
+                    type: integer
+                  success_message:
+                    type: string
+                    nullable: true
+              
+              required:
+                - name
+                - number_increment
+                - number_next
+                - padding
+                - sequence_type
+                - type 
+              
               example:
-                addresses:
-                - active: true
-                  city: Herat
-                  contact_mechanisms: []
-                  country: 1
-                  country_:
-                    label: Afghanistan
+                data:
+                  active: true
+                  company: 1
+                  company_:
+                    label: 'Party 1'
                     value: 1
-                  id: 3
-                  name: herat tower
-                  party: 1
-                  party_:
-                    label: Party 1
-                    value: 1
-                  party_name: prt2
-                  postal_code: '1002'
-                  sequence: 1
-                  street: street 2
-                  subdivision: 3
-                  subdivision_:
-                    label: sbd1
+                  id: 4
+                  name: '2024'
+                  number_increment: 1
+                  number_next: 1
+                  padding: 0
+                  prefix: ''
+                  preview: '1'
+                  sequence_type: 3
+                  sequence_type_:
+                    label: 'Account Move'
                     value: 3
-                categories:
-                - 3
-                code: '01'
-                contact_mechanisms:
-                - active: true
-                  comment: no comment
-                  language: 1
-                  name: ctm1
-                  party: 14
-                  party_:
-                    label: Party 1
-                    value: 1
-                  sequence: 1
-                  type: phone
-                  value: '8888'
-                create_date: '2024-01-23T16:52:29.278731'
-                name: Party 15
-                payable: 0
-                payable_today: 0
-                receivable: 0
-                receivable_today: 0
-                errors: null
+                  suffix: ''
+                  type: 'incremental'
+                error: null
                 pagination: null
                 status: 200
                 success_message: null
