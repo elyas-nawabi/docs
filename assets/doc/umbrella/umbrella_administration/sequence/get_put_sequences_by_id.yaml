@@ -1,9 +1,9 @@
     get:
       tags:
-        - party
-      summary: Get one party.
-      description: Get one party.
-      operationId: getPartyById
+        - sequence
+      summary: Get one sequence.
+      description: Get one sequence.
+      operationId: getSequenceById
       parameters:
         - name: obj_id
           in: path
@@ -20,197 +20,75 @@
                   type: object
                   properties:
                     data:
+                      active:
+                        type: boolean
+                      company:
+                        type: integer
+                      company_:
+                        label:
+                          type: string
+                        value:
+                          type: integer
+                      id:
+                        type: integer
+                      name:
+                        type: string
+                      number_increment:
+                        type: integer
+                      number_next:
+                        type: integer
+                      padding:
+                        type: integer
+                      prefix:
+                        type: string
+                      preview:
+                        type: string
+                      sequence_type:
+                        type: integer
+                      sequence_type_:
+                        label:
+                          type: string
+                        value: 
+                          type: integer
+                      suffix:
+                        type: string
+                      type:
+                        type: string
+                    error:
                       type: object
-                      properties:
-                        account_payable:
-                          type: string
-                        account_receivable: 
-                          type: string
-                        addresses:
-                          properties:
-                            active:
-                              type: boolean
-                            city: 
-                              type: string
-                            contact_mechanisms:
-                              type: array
-                            country:
-                              type: integer
-                            country_:
-                              label: 
-                                type: string
-                              value:
-                                type: integer
-                            id:
-                              type: integer
-                            name: 
-                              type: string
-                            party:
-                              type: integer
-                            party_:
-                              label: 
-                                type: string
-                              value:
-                                type: integer
-                            party_name: 
-                              type: string
-                            postal_code: 
-                              type: string
-                            sequence:
-                              type: integer
-                            street: 
-                              type: string
-                            subdivision:
-                              type: integer
-                            subdivision_:
-                              label: 
-                                type: string
-                              value:
-                                type: integer
-                        categories:
-                          properties:
-                            childs:
-                              type: array
-                                - (structure similar to categories)
-                            id:
-                              type: integer
-                            name: 
-                              type: string
-                            parent:
-                              type: integer
-                            parent_:
-                              label: 
-                                type: string
-                              value:
-                                type: integer
-                        code: 
-                          type: string
-                        contact_mechanisms:
-                          properties:
-                            active:
-                              type: boolean
-                            address:
-                              type: integer
-                            address_:
-                              label: 
-                                type: string
-                              value:
-                                type: integer
-                            comment: 
-                              type: string
-                            id:
-                              type: integer
-                            language: 
-                              type: string
-                            name: 
-                              type: string
-                            party:
-                              type: integer
-                            party_:
-                              label: 
-                                type: string
-                              value:
-                                type: integer
-                            sequence:
-                              type: integer
-                            type: 
-                              type: string
-                            value: 
-                              type: string
-                        create_date:
-                          type: date 
-                        customer_tax_rule:
-                          type: integer
-                        id:
-                          type: integer
-                        name: 
-                          type: string
-                        payable:
-                          type: integer
-                        payable_today:
-                          type: integer
-                        receivable:
-                          type: integer
-                        receivable_today:
-                          type: integer
-                        supplier_tax_rule:
-                          type: integer
-                        tax_identifier: 
-                          type: string
-                    error: 
-                      type: string
-                    pagination: 
-                      type: string
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
                     status:
                       type: integer
-                    success_message: 
+                    success_message:
                       type: string
+                      nullable: true
               example:
                 data:
-                  account_payable: 
-                  account_receivable: 
-                  addresses:
-                  - active: true
-                    city: "Herat"
-                    contact_mechanisms: []
-                    country: 1
-                    country_:
-                      label: "Afghanistan"
-                      value: 1
-                    id: 3
-                    name: "herat tower"
-                    party: 1
-                    party_:
-                      label: "Party 1"
-                      value: 1
-                    party_name: "prt2"
-                    postal_code: "1002"
-                    sequence: 
-                    street: "street 2"
-                    subdivision: 3
-                    subdivision_:
-                      label: "sbd1"
-                      value: 3
-                  categories:
-                  - childs: []
-                    id: 5
-                    name: "test1"
-                    parent: 4
-                    parent_:
-                      label: "parentctg"
-                      value: 4
-                  code: '1'
-                  contact_mechanisms:
-                  - active: true
-                    address: 2
-                    address_:
-                      label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan, 1"
-                      value: 2
-                    comment: 
-                    id: 2
-                    language: 
-                    name: "ctm1"
-                    party: 1
-                    party_:
-                      label: "Party 1"
-                      value: 1
-                    sequence: 
-                    type: "phone"
-                    value: '8888'
-                  create_date: '2024-01-23T16:52:29.278731'
-                  customer_tax_rule: 
-                  id: 1
-                  name: "Party 1"
-                  payable: 0
-                  payable_today: 0
-                  receivable: 0
-                  receivable_today: 0
-                  supplier_tax_rule: 
-                  tax_identifier: 
-                error: 
-                pagination: 
+                  active: true
+                  company: 1
+                  company_:
+                    label: 'Party 1'
+                    value: 1
+                  id: 4
+                  name: '2024'
+                  number_increment: 1
+                  number_next: 1
+                  padding: 0
+                  prefix: ''
+                  preview: '1'
+                  sequence_type: 3
+                  sequence_type_:
+                    label: 'Account Move'
+                    value: 3
+                  suffix: ''
+                  type: 'incremental'
+                error: null
+                pagination: null
                 status: 200
-                success_message: null 
+                success_message: null
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -229,10 +107,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - party
-      summary: Update a party.
-      description: Update a party.
-      operationId: updatePartyById
+        - sequence
+      summary: Update a sequence.
+      description: Update a sequence.
+      operationId: updateSequenceById
       parameters:
         - name: obj_id
           rquired: true

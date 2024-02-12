@@ -75,6 +75,10 @@ tags:
     description: contact mechanism - contact mechanism data management.
   - name: address
     description: address - address data management.
+  - name: sequence
+    description: sequence - sequence data management.
+  - name: sequence type
+    description: sequence type - sequence type data management.
 paths:
   '/currency/currencies':
     $ref: 'umbrella/umbrella_currency/currency/get_post_delete_currency.yaml'
@@ -106,6 +110,16 @@ paths:
     $ref: 'umbrella/umbrella_party/address/get_post_delete_address.yaml'
   '/party/address/{obj_id}':
     $ref: 'umbrella/umbrella_party/address/get_put_address_by_id.yaml'
+  '/administration/sequence_types':
+    $ref: 'umbrella/umbrella_administration/sequence_type/get_post_delete_sequence_types.yaml'
+  '/administration/sequence_types/{obj_id}':
+    $ref: 'umbrella/umbrella_administration/sequence_type/get_put_sequence_types_by_id.yaml'
+  
+  '/administration/sequences':
+    $ref: 'umbrella/umbrella_administration/sequence/get_post_delete_sequences.yaml'
+  '/administration/sequences/{obj_id}':
+    $ref: 'umbrella/umbrella_administration/sequence/get_put_sequences_by_id.yaml'
+  
     
 components:
   schemas:

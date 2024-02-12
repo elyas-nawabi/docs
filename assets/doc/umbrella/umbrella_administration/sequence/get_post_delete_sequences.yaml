@@ -1,12 +1,12 @@
     get:
       tags:
-        - party
-      summary: Get party details.
-      description: Get party details.
-      operationId: getParties
+        - sequence
+      summary: Get sequence details.
+      description: Get sequence details.
+      operationId: getSequences
       responses:
         '200':
-          description: List of parties.
+          description: List of sequences.
           content:
             application/json:
               schema:
@@ -15,51 +15,48 @@
                     data:
                       type: array
                       properties:
-                        code:
-                          type: string
-                        create_date:
-                          type: date
                         id:
                           type: integer
                         name:
                           type: string
-                        payable_today:
-                          type: float
-                        receivable_today:
-                          type: float
-                        tax_identifier:
+                        sequence_type:
+                          type: integer
+                        sequence_type_:
+                          type: object
+                        type:
                           type: string
                     errors:
                       type: object
                     pagination:
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
                     status:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
                 data:
-                  - code: "1"
-                    create_date: "2024-01-23T16:52:29.278731"
-                    id: 1
-                    name: "Party 1"
-                    payable_today: 0.0,
-                    receivable_today: 0.0,
-                    tax_identifier: null
-                errors: null
+                - id: 4
+                  name: '2024'
+                  sequence_type: 3
+                  sequence_type_:
+                    label: 'Account Move'
+                    value: 3
+                  type: 'incremental'
+                error: null
                 pagination:
                   page: 1
                   per_page: 100
                   total_pages: 1
-                  total_records: 1
+                  total_records: 9
                 status: 200
                 success_message: null
         '401':
@@ -74,17 +71,17 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     post:
       tags:
-        - party
-      summary: Create a party.
-      description: Create a party.
-      operationId: postPartyById
+        - sequence
+      summary: Create a sequence.
+      description: Create a sequence.
+      operationId: postSequenceById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateParty'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateSequence'
       responses:
         '201':
           description: OK
@@ -95,6 +92,7 @@
                     data:
                       type: array
                       properties:
+                        type: object
                         addresses: 
                           properties:
                             active: 
@@ -250,10 +248,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
-        - party
-      summary: Delete parties.
-      description: Delete parties.
-      operationId: deletePartiesById
+        - sequence
+      summary: Delete sequences.
+      description: Delete sequences.
+      operationId: deleteSequencesById
       requestBody:
         required: true
         content:

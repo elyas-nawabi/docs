@@ -1,12 +1,12 @@
     get:
       tags:
-        - party
-      summary: Get party details.
-      description: Get party details.
-      operationId: getParties
+        - sequence type
+      summary: Get sequence type details.
+      description: Get sequence type details.
+      operationId: getSequenceTypes
       responses:
         '200':
-          description: List of parties.
+          description: List of sequence type.
           content:
             application/json:
               schema:
@@ -15,6 +15,7 @@
                     data:
                       type: array
                       properties:
+                        type: object
                         code:
                           type: string
                         create_date:
@@ -32,15 +33,15 @@
                     errors:
                       type: object
                     pagination:
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
                     status:
                       type: integer
                     success_message:
@@ -74,17 +75,17 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     post:
       tags:
-        - party
-      summary: Create a party.
-      description: Create a party.
-      operationId: postPartyById
+        - sequence type
+      summary: Create a Sequence type.
+      description: Create a Sequence type.
+      operationId: postSequenceTypeById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateParty'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateSequenceType'
       responses:
         '201':
           description: OK
@@ -95,6 +96,7 @@
                     data:
                       type: array
                       properties:
+                        type: object
                         addresses: 
                           properties:
                             active: 
@@ -250,10 +252,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
-        - party
-      summary: Delete parties.
-      description: Delete parties.
-      operationId: deletePartiesById
+        - sequence type
+      summary: Delete sequence type.
+      description: Delete sequence type.
+      operationId: deleteSequenceTypeById
       requestBody:
         required: true
         content:

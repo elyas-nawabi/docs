@@ -1,9 +1,9 @@
     get:
       tags:
-        - party
-      summary: Get one party.
-      description: Get one party.
-      operationId: getPartyById
+        - sequence type
+      summary: Get one sequence type.
+      description: Get one sequence type.
+      operationId: getSequenceTypeById
       parameters:
         - name: obj_id
           in: path
@@ -17,11 +17,14 @@
           content:
             application/json:
               schema:
+                type: object
+                items:
                   type: object
                   properties:
                     data:
                       type: object
                       properties:
+                        type: object
                         account_payable:
                           type: string
                         account_receivable: 
@@ -229,10 +232,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - party
-      summary: Update a party.
-      description: Update a party.
-      operationId: updatePartyById
+        - sequence type
+      summary: Update a sequence type.
+      description: Update a sequence type.
+      operationId: updateSequenceTypeById
       parameters:
         - name: obj_id
           rquired: true
@@ -246,7 +249,7 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateParty'
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateSequenceType'
       responses:
         '200':
           description: OK
