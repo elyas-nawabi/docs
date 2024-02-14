@@ -18,15 +18,18 @@
                         code:
                           type: string
                         create_date:
-                          type: date
+                          type: string
+                          format: date
                         id:
                           type: integer
                         name:
                           type: string
                         payable_today:
-                          type: float
+                          type: number
+                          format: float
                         receivable_today:
-                          type: float
+                          type: number
+                          format: float
                         tax_identifier:
                           type: string
                     errors:
@@ -164,7 +167,8 @@
                             value:
                               type: integer
                         create_date:
-                          type: date
+                          type: string
+                          format: date
                         name:
                           type: string
                         payable:

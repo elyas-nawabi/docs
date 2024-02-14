@@ -14,7 +14,8 @@
         frequency:
           type: string
         last_update:
-          type: date
+          type: string
+          format: date
         source:
           type: string
         weekday:

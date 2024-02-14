@@ -2,24 +2,28 @@
         company:
           type: integer
         end_date:
-          type: date
+          type: string
+          format: date
         name:
           type: string
         post_move_sequence:
           type: integer
         start_date:
-          type: date
+          type: string
+          format: date
         periods:
           type: array
           properties:
             end_date:
-              type: date
+              type: string
+              format: date
             name:
               type: string
             post_move_sequence:
               type: integer
             start_date:
-              type: date
+              type: string
+              format: date
             state:
               type: string
             type:

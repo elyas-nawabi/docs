@@ -2,7 +2,8 @@
         company:
           type: integer
         end_date:
-          type: date
+          type: string
+          format: date
         fiscalyear:
           type: integer
         name:
@@ -10,7 +11,8 @@
         post_move_sequence:
           type: integer
         start_date:
-          type: date
+          type: string
+          format: date
         state:
           type: string
         type:

@@ -118,7 +118,8 @@
                             value: 
                               type: string
                         create_date:
-                          type: date 
+                          type: string
+                          format: date 
                         customer_tax_rule:
                           type: integer
                         id:
@@ -326,7 +327,8 @@
                             value:
                               type: integer
                         create_date:
-                          type: date
+                          type: string
+                          format: date
                         name:
                           type: string
                         payable:

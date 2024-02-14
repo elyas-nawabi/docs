@@ -28,7 +28,8 @@
                         id:
                           type: integer
                         last_update:
-                          type: date
+                          type: string
+                          format: date
                         source:
                           type: string
                     errors:
@@ -116,7 +117,8 @@
                         id:
                           type: integer
                         last_update:
-                          type: date
+                          type: string
+                          format: date
                         source:
                           type: string
                         weekday:
