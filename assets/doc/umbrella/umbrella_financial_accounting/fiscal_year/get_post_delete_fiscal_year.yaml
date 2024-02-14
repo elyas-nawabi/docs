@@ -93,7 +93,8 @@
                           value:
                             type: integer
                         end_date:
-                          type: date
+                          type: string
+                          format: date
                         id:
                           type: integer
                         name:
@@ -110,7 +111,8 @@
                               value:
                                 type: integer
                             end_date:
-                              type: date
+                              type: string
+                              format: date
                             id:
                               type: integer
                             name:
@@ -124,7 +126,8 @@
                               value:
                                 type: integer
                             start_date:
-                              type: date
+                              type: string
+                              format: date
                             state:
                               type: string
                         post_move_sequence:
@@ -136,7 +139,8 @@
                           value:
                             type: integer
                         start_date:
-                          type: date
+                          type: string
+                          format: date
                         state:
                           type: string
                     errors:

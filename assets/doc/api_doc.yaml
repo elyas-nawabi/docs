@@ -81,6 +81,12 @@ tags:
     description: sequence - sequence data management.
   - name: sequence type
     description: sequence type - sequence type data management.
+  - name: company
+    description: company - company data management.
+  - name: organization
+    description: organization - organization data management.
+  - name: region
+    description: region - region data management.
 paths:
   '/currency/currencies':
     $ref: 'umbrella/umbrella_currency/currency/get_post_delete_currency.yaml'
@@ -125,6 +131,12 @@ paths:
     $ref: 'umbrella/umbrella_administration/sequence/get_post_delete_sequences.yaml'
   '/administration/sequences/{obj_id}':
     $ref: 'umbrella/umbrella_administration/sequence/get_put_sequences_by_id.yaml'
+  
+  
+  '/company/companies':
+    $ref: 'umbrella/umbrella_company/company/get_post_delete_company.yaml'
+  '/company/companies/{obj_id}':
+    $ref: 'umbrella/umbrella_company/company/get_put_company_by_id.yaml'
   
     
 components:
@@ -175,6 +187,10 @@ components:
       $ref: 'umbrella/schemas/create-sequence-type.yaml'
     UpdateSequenceType:
       $ref: 'umbrella/schemas/update-sequence-type.yaml'
+    CreateCompany:
+      $ref: 'umbrella/schemas/create-company.yaml'
+    UpdateCompany:
+      $ref: 'umbrella/schemas/update-company.yaml'
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
     HTTP401:

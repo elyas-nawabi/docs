@@ -26,7 +26,8 @@ get:
                     numeric_code:
                       type: string
                     rate:
-                      type: float
+                      type: number
+                      format: float
                     symbol:
                       type: string
                 errors:
@@ -110,18 +111,22 @@ post:
                     numeric_code:
                       type: string
                     rate:
-                      type: float
+                      type: number
+                      format: float
                     rates:
                       type: array
                       properties:
                         date: 
-                          type: date
+                          type: string
+                          format: date
                         id: 
                           type: integer
                         rate: 
-                          type: float
+                          type: number
+                          format: float
                     rounding:
-                      type: float
+                      type: number
+                      format: float
                     symbol:
                       type: string
                 errors:

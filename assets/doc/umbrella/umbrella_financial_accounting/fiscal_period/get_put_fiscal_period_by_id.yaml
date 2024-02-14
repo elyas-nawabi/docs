@@ -31,7 +31,8 @@ get:
                           value:
                             type: integer
                         end_date:
-                          type: date
+                          type: string
+                          format: date
                         id:
                           type: integer
                         name:
@@ -45,7 +46,8 @@ get:
                           value:
                             type: integer
                         start_date:
-                          type: date
+                          type: string
+                          format: date
                         state:
                           type: string
                         type:
@@ -143,7 +145,8 @@ put:
                         company:
                           type: integer
                         end_date:
-                          type: date
+                          type: string
+                          format: date
                         fiscalyear:
                           type: integer
                         name:
@@ -151,7 +154,8 @@ put:
                         post_move_sequence:
                           type: integer
                         start_date:
-                          type: date
+                          type: string
+                          format: date
                         state:
                           type: string
                         type:

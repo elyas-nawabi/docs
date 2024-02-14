@@ -68,7 +68,8 @@
             value:
               type: integer
         create_date:
-          type: date
+          type: string
+          format: date
         name:
           type: string
         payable:
