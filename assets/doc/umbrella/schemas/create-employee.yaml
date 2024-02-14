@@ -1,0 +1,38 @@
+      properties:
+          currency: 
+            type: integer
+          employees:
+            type: array
+            properties:
+              name:
+                type: string
+              party:
+                type: integer
+          party:
+            type: integer
+          payable:
+            type: integer
+          payable_today:
+            type: integer
+          receivable:
+            type: integer
+          receivable_today:
+            type: integer
+          timezone:
+            type: string
+  
+      required:
+          - currency
+          - party
+             
+      example:
+        currency: 1
+        employees:
+        - name: Party 1
+          party: 1
+        party: 1
+        payable: 0
+        payable_today: 0
+        receivable: 0
+        receivable_today: 0
+        timezone: Asia/Kabul

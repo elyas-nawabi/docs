@@ -83,6 +83,12 @@ tags:
     description: sequence type - sequence type data management.
   - name: company
     description: company - company data management.
+  - name: employee
+    description: employee - employee data management.
+  - name: timezone
+    description: timezone - timezone data management.
+  - name: country
+    description: country - country data management.
   - name: organization
     description: organization - organization data management.
   - name: region
@@ -126,17 +132,34 @@ paths:
     $ref: 'umbrella/umbrella_administration/sequence_type/get_post_delete_sequence_types.yaml'
   '/administration/sequence_types/{obj_id}':
     $ref: 'umbrella/umbrella_administration/sequence_type/get_put_sequence_types_by_id.yaml'
-  
   '/administration/sequences':
     $ref: 'umbrella/umbrella_administration/sequence/get_post_delete_sequences.yaml'
   '/administration/sequences/{obj_id}':
     $ref: 'umbrella/umbrella_administration/sequence/get_put_sequences_by_id.yaml'
-  
-  
   '/company/companies':
     $ref: 'umbrella/umbrella_company/company/get_post_delete_company.yaml'
   '/company/companies/{obj_id}':
     $ref: 'umbrella/umbrella_company/company/get_put_company_by_id.yaml'
+  '/company/employees':
+    $ref: 'umbrella/umbrella_company/employee/get_post_delete_employee.yaml'
+  '/company/employees/{obj_id}':
+    $ref: 'umbrella/umbrella_company/employee/get_put_employee_by_id.yaml'
+  '/company/timezones':
+    $ref: 'umbrella/umbrella_company/timezone/get_post_delete_timezone.yaml'
+  '/company/timezones/{obj_id}':
+    $ref: 'umbrella/umbrella_company/timezone/get_put_timezone_by_id.yaml'
+  '/country/countries':
+    $ref: 'umbrella/umbrella_country/country/get_post_delete_country.yaml'
+  '/country/countries/{obj_id}':
+    $ref: 'umbrella/umbrella_country/country/get_put_country_by_id.yaml'
+  '/country/organizations':
+    $ref: 'umbrella/umbrella_country/organization/get_post_delete_organization.yaml'
+  '/country/organizations/{obj_id}':
+    $ref: 'umbrella/umbrella_country/organization/get_put_organization_by_id.yaml'
+  '/country/regions':
+    $ref: 'umbrella/umbrella_country/region/get_post_delete_region.yaml'
+  '/country/regions/{obj_id}':
+    $ref: 'umbrella/umbrella_country/region/get_put_region_by_id.yaml'
   
     
 components:
