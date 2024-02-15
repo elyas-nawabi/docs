@@ -15,35 +15,25 @@
                     data:
                       type: array
                       properties:
-                        id:
-                          type: integer
-                        party:
+                        code:
                           type: string
-                        party_:
-                          type: object
-                          properties:
-                            label:
-                              type: string
-                            value: 
-                              type: integer
-                        payable_today:
-                          type: number
-                          format: float
-                        receivable_today:
-                          type: number
-                          format: float
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
                     errors:
                       type: object
                     pagination:
                       type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
                     status:
                       type: integer
                     success_message:
@@ -51,13 +41,9 @@
                       nullable: true
               example:
                 data:
-                - id: 1
-                  party: 1
-                  party_:
-                    label: Party 1
-                    value: 1
-                  payable_today: 0
-                  receivable_today: 0
+                - code: EU
+                  id: 1
+                  name: European Union
                 error: null
                 pagination:
                   page: 1
@@ -97,40 +83,30 @@
               schema:
                     properties:
                       data:
-                        active:
-                          type: boolean
-                        company:
-                          type: integer
-                        company_:
-                          label:
-                            type: string
-                          value:
-                            type: integer
+                        code:
+                          type: string
                         id:
                           type: integer
-                        name:
+                        members:
+                          type: array
+                          properties:
+                            country:
+                              type: integer
+                            country_:
+                              label:
+                                type: string
+                              value:
+                                type: integer
+                            from_date:
+                              type: string
+                              format: date
+                            id:
+                              type: integer
+                            to_date:
+                              type: string
+                              format: date
+                        name: 
                           type: string
-                        number_increment:
-                          type: integer
-                        number_next:
-                          type: integer
-                        padding:
-                          type: integer
-                        prefix:
-                          type: string
-                        preview:
-                          type: string
-                        sequence_type:
-                          type: integer
-                        sequence_type_:
-                          label:
-                            type: string
-                          value: 
-                            type: integer
-                        suffix:
-                          type: string
-                        type:
-                          type: string 
                       errors:
                         type: object
                         nullable: true
@@ -143,34 +119,19 @@
                         type: string
                         nullable: true
 
-              required:
-                - name
-                - number_increment
-                - number_next
-                - padding
-                - sequence_type
-                - type 
-
               example:
                 data:
-                  active: true
-                  company: 1
-                  company_:
-                    label: 'Party 1'
-                    value: 1
-                  id: 4
-                  name: '2024'
-                  number_increment: 1
-                  number_next: 1
-                  padding: 0
-                  prefix: ''
-                  preview: '1'
-                  sequence_type: 3
-                  sequence_type_:
-                    label: 'Account Move'
-                    value: 3
-                  suffix: ''
-                  type: 'incremental'
+                  code: EU
+                  id: 1
+                  members:
+                  - country: 1
+                    country_:
+                      label: "Afghanistan"
+                      value: 1
+                    from_date: '2024-02-15'
+                    id: 1
+                    to_date: '2024-02-20'
+                  name: European Union
                 error: null
                 pagination: null
                 status: 200

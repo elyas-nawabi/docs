@@ -20,55 +20,29 @@
                   type: object
                   properties:
                     data:
-                      currency:
-                        type: integer
-                      employees:
-                        type: array 
-                        properties:
-                          company:
-                            type: integer
-                          company_:
-                            label:
-                              type: string
-                            value:
-                              type: integer
-                          end_date:
-                            type: string
-                            format: date
-                          id:
-                            type: integer
-                          party:
-                            type: integer
-                          party_:
-                            label:
-                              type: string
-                            value:
-                              type: integer
-                          start_date:
-                            type: string
-                            format: date
-                          supervisor: 
-                            type: integer
-                          supervisor_:
-                            type: object
+                      code:
+                        type: string
                       id:
                         type: integer
-                      party:
-                        type: integer
-                      party_:
-                        label:
-                          type: string
-                        value:
-                          type: integer
-                      payable:
-                        type: integer
-                      payable_today:
-                        type: integer
-                      receivable:
-                        type: integer
-                      receivable_today:
-                        type: integer
-                      timezone:
+                      members:
+                        type: array
+                        properties:
+                            country:
+                              type: integer
+                            country_:
+                              label:
+                                type: string
+                              value:
+                                type: integer
+                            from_date:
+                              type: string
+                              format: date
+                            id:
+                              type: integer
+                            to_date:
+                              type: string
+                              format: date
+                      name: 
                         type: string
                     error:
                       type: object
@@ -83,31 +57,17 @@
                       nullable: true
               example:
                 data:
-                  currency: 1
-                  employees:
-                  - company: 1
-                    company_:
-                      label: Party 1
-                      value: 1
-                    end_date: '2024-02-29'
-                    id: 2
-                    party: 24
-                    party_:
-                      label: 'Party 13'
-                      value: 24
-                    start_date: '2024-02-01'
-                    supervisor: 
-                    supervisor_: {}
+                  code: EU
                   id: 1
-                  party: 1
-                  party_:
-                    label: 'Party 1'
-                    value: 1
-                  payable: 0
-                  payable_today: 0
-                  receivable: 0
-                  receivable_today: 0
-                  timezone: 'Asia/Kabul'
+                  members:
+                  - country: 1
+                    country_:
+                      label: "Afghanistan"
+                      value: 1
+                    from_date: '2024-02-15'
+                    id: 1
+                    to_date: '2024-02-20'
+                  name: European Union
                 error: null
                 pagination: null
                 status: 200
@@ -156,55 +116,29 @@
               schema:
                 properties:
                   data:
-                    currency:
-                      type: integer
-                    employees:
-                      type: array 
-                      properties:
-                        company:
-                          type: integer
-                        company_:
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        end_date:
-                          type: string
-                          format: date
-                        id:
-                          type: integer
-                        party:
-                          type: integer
-                        party_:
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        start_date:
-                          type: string
-                          format: date
-                        supervisor: 
-                          type: integer
-                        supervisor_:
-                          type: object
+                    code:
+                      type: string
                     id:
                       type: integer
-                    party:
-                      type: integer
-                    party_:
-                      label:
-                        type: string
-                      value:
-                        type: integer
-                    payable:
-                      type: integer
-                    payable_today:
-                      type: integer
-                    receivable:
-                      type: integer
-                    receivable_today:
-                      type: integer
-                    timezone:
+                    members:
+                      type: array
+                      properties:
+                          country:
+                            type: integer
+                          country_:
+                            label:
+                              type: string
+                            value:
+                              type: integer
+                          from_date:
+                            type: string
+                            format: date
+                          id:
+                            type: integer
+                          to_date:
+                            type: string
+                            format: date
+                    name: 
                       type: string
                   errors:
                     type: object
@@ -219,36 +153,22 @@
                     nullable: true
               
               required:
-                - currency
-                - party
+                - code
+                - name
               
               example:
                 data:
-                  currency: 1
-                  employees:
-                  - company: 1
-                    company_:
-                      label: Party 1
+                  code: SAFTA20
+                  id: 20
+                  members:
+                  - country: 1
+                    country_:
+                      label: "Afghanistan"
                       value: 1
-                    end_date: '2024-02-29'
-                    id: 2
-                    party: 24
-                    party_:
-                      label: 'Party 13'
-                      value: 24
-                    start_date: '2024-02-01'
-                    supervisor: 
-                    supervisor_: {}
-                  id: 1
-                  party: 1
-                  party_:
-                    label: 'Party 1'
-                    value: 1
-                  payable: 0
-                  payable_today: 0
-                  receivable: 0
-                  receivable_today: 0
-                  timezone: 'Asia/Kabul'
+                    from_date: '2024-02-15'
+                    id: 5
+                    to_date: '2024-02-20'
+                  name: South Asian Free Trade Area20
                 error: null
                 pagination: null
                 status: 200

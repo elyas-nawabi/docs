@@ -1,34 +1,26 @@
       properties:
-        currencies:
+        code:
+          type: string
+        members:
           type: array
-        currency:
-          type: integer
-        currency_:
-          type: object
-          label:
-            type: string
-          value:
-            type: integer
-        day:
-          type: integer
-        frequency:
+          properties:
+            country:
+              type: integer
+            from_date:
+              type: string
+              format: date
+            to_date:
+              type: string
+              format: date
+        name: 
           type: string
-        last_update:
-          type: string
-          format: date
-        source:
-          type: string
-        weekday:
-          type: integer
-  
       required:
-        - currency
-        - frequency
-        - source
+        - code
+        - name
       example:
-        currency: 1
-        day: 1
-        frequency: "monthly"
-        last_update: "2024-01-28"
-        source: "ecb"
-        weekday: "2"
+          code: SAFTA3
+          members:
+          - country: 3
+            from_date: '2024-02-15'
+            to_date: '2024-02-20'
+          name: South Asian Free Trade Area3
