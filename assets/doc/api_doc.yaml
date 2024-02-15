@@ -100,14 +100,18 @@ paths:
     $ref: 'umbrella/umbrella_currency/scheduled_rate_update/get_post_delete_scheduled_rate_updates.yaml'
   '/currency/scheduled-rate-updates/{obj_id}':
     $ref: 'umbrella/umbrella_currency/scheduled_rate_update/get_put_scheduled_rate_updates_by_id.yaml'
-  '/financial-accounting/fiscal-year':
+  '/financial-accounting/fiscal-years':
     $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_post_delete_fiscal_year.yaml'
-  '/financial-accounting/fiscal-year/{obj_id}':
+  '/financial-accounting/fiscal-years/{obj_id}':
     $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_put_fiscal_year_by_id.yaml'
   '/financial-accounting/fiscal-periods':
     $ref: 'umbrella/umbrella_financial_accounting/fiscal_period/get_post_delete_fiscal_period.yaml'
   '/financial-accounting/fiscal-periods/{obj_id}':
     $ref: 'umbrella/umbrella_financial_accounting/fiscal_period/get_put_fiscal_period_by_id.yaml'
+  '/financial-accounting/accounts':
+    $ref: 'umbrella/umbrella_financial_accounting/account/get_post_delete_account.yaml'
+  '/financial-accounting/accounts/{obj_id}':
+    $ref: 'umbrella/umbrella_financial_accounting/account/get_put_account_by_id.yaml'
   '/login':
     $ref: 'umbrella/umbrella/auth/post_auth.yaml'
   '/party/parties':
@@ -122,9 +126,9 @@ paths:
     $ref: 'umbrella/umbrella_party/contact_mechanism/get_post_delete_contact_mechanism.yaml'
   '/party/contact-mechanisms/{obj_id}':
     $ref: 'umbrella/umbrella_party/contact_mechanism/get_put_contact_mechanism.yaml'
-  '/party/address':
+  '/party/addresses':
     $ref: 'umbrella/umbrella_party/address/get_post_delete_address.yaml'
-  '/party/address/{obj_id}':
+  '/party/addresses/{obj_id}':
     $ref: 'umbrella/umbrella_party/address/get_put_address_by_id.yaml'
   '/administration/sequence_types':
     $ref: 'umbrella/umbrella_administration/sequence_type/get_post_delete_sequence_types.yaml'
