@@ -1,0 +1,186 @@
+    get:
+      tags:
+        - organization
+      summary: Get one organization.
+      description: Get one organization.
+      operationId: getOrganizationById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      code:
+                        type: string
+                      id:
+                        type: integer
+                      members:
+                        type: array
+                        properties:
+                            country:
+                              type: integer
+                            country_:
+                              label:
+                                type: string
+                              value:
+                                type: integer
+                            from_date:
+                              type: string
+                              format: date
+                            id:
+                              type: integer
+                            to_date:
+                              type: string
+                              format: date
+                      name: 
+                        type: string
+                    error:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  code: EU
+                  id: 1
+                  members:
+                  - country: 1
+                    country_:
+                      label: "Afghanistan"
+                      value: 1
+                    from_date: '2024-02-15'
+                    id: 1
+                    to_date: '2024-02-20'
+                  name: European Union
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
+      tags:
+        - organization
+      summary: Update a organization.
+      description: Update a organization.
+      operationId: updateOrganizationById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateOrganization'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    code:
+                      type: string
+                    id:
+                      type: integer
+                    members:
+                      type: array
+                      properties:
+                          country:
+                            type: integer
+                          country_:
+                            label:
+                              type: string
+                            value:
+                              type: integer
+                          from_date:
+                            type: string
+                            format: date
+                          id:
+                            type: integer
+                          to_date:
+                            type: string
+                            format: date
+                    name: 
+                      type: string
+                  errors:
+                    type: object
+                    nullable: true
+                  pagination:
+                    type: object
+                    nullable: true
+                  status:
+                    type: integer
+                  success_message:
+                    type: string
+                    nullable: true
+              
+              required:
+                - code
+                - name
+              
+              example:
+                data:
+                  code: SAFTA20
+                  id: 20
+                  members:
+                  - country: 1
+                    country_:
+                      label: "Afghanistan"
+                      value: 1
+                    from_date: '2024-02-15'
+                    id: 5
+                    to_date: '2024-02-20'
+                  name: South Asian Free Trade Area20
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+  

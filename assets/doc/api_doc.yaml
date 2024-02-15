@@ -83,6 +83,10 @@ tags:
     description: sequence type - sequence type data management.
   - name: company
     description: company - company data management.
+  - name: employee
+    description: employee - employee data management.
+  - name: country
+    description: country - country data management.
   - name: organization
     description: organization - organization data management.
   - name: region
@@ -126,71 +130,128 @@ paths:
     $ref: 'umbrella/umbrella_administration/sequence_type/get_post_delete_sequence_types.yaml'
   '/administration/sequence_types/{obj_id}':
     $ref: 'umbrella/umbrella_administration/sequence_type/get_put_sequence_types_by_id.yaml'
-  
   '/administration/sequences':
     $ref: 'umbrella/umbrella_administration/sequence/get_post_delete_sequences.yaml'
   '/administration/sequences/{obj_id}':
     $ref: 'umbrella/umbrella_administration/sequence/get_put_sequences_by_id.yaml'
-  
-  
   '/company/companies':
     $ref: 'umbrella/umbrella_company/company/get_post_delete_company.yaml'
   '/company/companies/{obj_id}':
     $ref: 'umbrella/umbrella_company/company/get_put_company_by_id.yaml'
+  '/company/employees':
+    $ref: 'umbrella/umbrella_company/employee/get_post_delete_employee.yaml'
+  '/company/employees/{obj_id}':
+    $ref: 'umbrella/umbrella_company/employee/get_put_employee_by_id.yaml'
+  '/country/countries':
+    $ref: 'umbrella/umbrella_country/country/get_post_delete_country.yaml'
+  '/country/countries/{obj_id}':
+    $ref: 'umbrella/umbrella_country/country/get_put_country_by_id.yaml'
+  '/country/organizations':
+    $ref: 'umbrella/umbrella_country/organization/get_post_delete_organization.yaml'
+  '/country/organizations/{obj_id}':
+    $ref: 'umbrella/umbrella_country/organization/get_put_organization_by_id.yaml'
+  '/country/regions':
+    $ref: 'umbrella/umbrella_country/region/get_post_delete_region.yaml'
+  '/country/regions/{obj_id}':
+    $ref: 'umbrella/umbrella_country/region/get_put_region_by_id.yaml'
   
     
 components:
   schemas:
     CreateCurrency:
-      $ref: 'umbrella/schemas/create-currency.yaml'
+      $ref: 'umbrella/schemas/umbrella_currency/create-currency.yaml'
     UpdateCurrency:
-      $ref: 'umbrella/schemas/update-currency.yaml'
+      $ref: 'umbrella/schemas/umbrella_currency/update-currency.yaml'
     CreateCron:
-      $ref: 'umbrella/schemas/create-cron.yaml'
+      $ref: 'umbrella/schemas/umbrella_currency/create-cron.yaml'
     UpdateCron:
-      $ref: 'umbrella/schemas/update-cron.yaml'
+      $ref: 'umbrella/schemas/umbrella_currency/update-cron.yaml'
     CreateFiscalYear:
-      $ref: 'umbrella/schemas/create-fiscal-year.yaml'
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-fiscal-year.yaml'
     UpdateFiscalYear:
-      $ref: 'umbrella/schemas/update-fiscal-year.yaml'
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-fiscal-year.yaml'
     CreateFiscalPeriod:
-      $ref: 'umbrella/schemas/create-fiscal-period.yaml'
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-fiscal-period.yaml'
     UpdateFiscalPeriod:
-      $ref: 'umbrella/schemas/update-fiscal-period.yaml'
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-fiscal-period.yaml'
+    CreateAccount:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account.yaml'
+    UpdateAccount:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account.yaml'
+    CreateAccountType:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account-type.yaml'
+    UpdateAccountType:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account-type.yaml'
+    CreateJournal:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-journal.yaml'
+    UpdateJournal:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-journal.yaml'
+    CreateTaxCode:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-code.yaml'
+    UpdateTaxCode:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-tax-code.yaml'
+    CreateTaxGroup:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-group.yaml'
+    UpdateTaxGroup:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-tax-group.yaml'
+    CreateTaxRule:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-group.yaml'
+    UpdateTaxRule:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-tax-group.yaml'
+    CreateWriteOff:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-write-off.yaml'
+    UpdateWriteOff:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-write-off.yaml'
     CreateAuth:
-      $ref: 'umbrella/schemas/create-auth.yaml'
+      $ref: 'umbrella/schemas/umbrella/create-auth.yaml'
     CreateParty:
-      $ref: 'umbrella/schemas/create-party.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/create-party.yaml'
     UpdateParty:
-      $ref: 'umbrella/schemas/update-party.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/update-party.yaml'
     DeleteRequestBody: 
       $ref: 'umbrella/schemas/delete-request-body.yaml'
     DeleteApiResponse:
       $ref: 'umbrella/schemas/delete-api-response.yaml'
     CreateCategory:
-      $ref: 'umbrella/schemas/create-category.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/create-category.yaml'
     UpdateCategory:
-      $ref: 'umbrella/schemas/update-category.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/update-category.yaml'
     CreateContactMechanism:
-      $ref: 'umbrella/schemas/create-contact-mechanism.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/create-contact-mechanism.yaml'
     UpdateContactMechanism:
-      $ref: 'umbrella/schemas/update-contact-mechanism.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/update-contact-mechanism.yaml'
     CreateAddress:
-      $ref: 'umbrella/schemas/create-address.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/create-address.yaml'
     UpdateAddress:
-      $ref: 'umbrella/schemas/update-address.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/update-address.yaml'
     CreateSequence:
-      $ref: 'umbrella/schemas/create-sequence.yaml'
+      $ref: 'umbrella/schemas/umbrella_administration/create-sequence.yaml'
     UpdateSequence:
-      $ref: 'umbrella/schemas/update-sequence.yaml'
+      $ref: 'umbrella/schemas/umbrella_administration/update-sequence.yaml'
     CreateSequenceType:
-      $ref: 'umbrella/schemas/create-sequence-type.yaml'
+      $ref: 'umbrella/schemas/umbrella_administration/create-sequence-type.yaml'
     UpdateSequenceType:
-      $ref: 'umbrella/schemas/update-sequence-type.yaml'
+      $ref: 'umbrella/schemas/umbrella_administration/update-sequence-type.yaml'
     CreateCompany:
-      $ref: 'umbrella/schemas/create-company.yaml'
+      $ref: 'umbrella/schemas/umbrella_company/create-company.yaml'
     UpdateCompany:
-      $ref: 'umbrella/schemas/update-company.yaml'
+      $ref: 'umbrella/schemas/umbrella_company/update-company.yaml'
+    CreateEmployee:
+      $ref: 'umbrella/schemas/umbrella_company/create-employee.yaml'
+    UpdateEmployee:
+      $ref: 'umbrella/schemas/umbrella_company/update-employee.yaml'
+    CreateCountry:
+      $ref: 'umbrella/schemas/umbrella_country/create-country.yaml'
+    UpdateCountry:
+      $ref: 'umbrella/schemas/umbrella_country/update-country.yaml'
+    CreateOrganization:
+      $ref: 'umbrella/schemas/umbrella_country/create-organization.yaml'
+    UpdateOrganization:
+      $ref: 'umbrella/schemas/umbrella_country/update-organization.yaml'
+    CreateRegion:
+      $ref: 'umbrella/schemas/umbrella_country/create-region.yaml'
+    UpdateRegion:
+      $ref: 'umbrella/schemas/umbrella_country/update-region.yaml'
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
     HTTP401:

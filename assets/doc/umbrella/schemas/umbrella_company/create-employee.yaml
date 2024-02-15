@@ -1,0 +1,24 @@
+      properties:
+          company:
+            type: integer
+          end_date:
+            type: string
+            format: date
+          party:
+            type: integer
+          start_date:
+            type: string
+            format: date
+          supervisor:
+            type: integer
+  
+      required:
+          - currency
+          - party
+             
+      example:
+        company: 2
+        end_date: '2024-02-13'
+        party: 1
+        start_date: '2024-02-01'
+        supervisor: 5

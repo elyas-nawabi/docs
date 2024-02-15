@@ -1,0 +1,260 @@
+    get:
+      tags:
+        - country
+      summary: Get one country.
+      description: Get one country.
+      operationId: getCountryById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        active:
+                          type: boolean
+                        code:
+                          type: string
+                        code3:
+                          type: string
+                        code_numeric:
+                          type: string
+                        id:
+                          type: integer
+                        members:
+                          type: array
+                        name:
+                          type: string
+                        region:
+                          type: integer
+                        region_:
+                          type: object
+                          properties:
+                            label:
+                              type: string
+                            value:
+                              type: integer
+                        subdivisions:
+                          type: array
+                          properties:
+                            active:
+                              type: boolean
+                            code:
+                              type: string
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                            parent: 
+                              type: integer
+                            parent_:
+                              type: object
+                            type:
+                              type: string
+                    error:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  active: true
+                  code: '3'
+                  code3: '103'
+                  code_numeric: '10003'
+                  id: 7
+                  members: []
+                  name: Asia
+                  region: 5
+                  region_:
+                    label: Asia
+                    value: 5
+                  subdivisions:
+                  - active: true
+                    code: '10001'
+                    id: 5
+                    name: sbd1
+                    parent: 
+                    parent_: {}
+                    type: city
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
+      tags:
+        - country
+      summary: Update a country.
+      description: Update a country.
+      operationId: updateCountryById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateCountry'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      active:
+                        type: boolean
+                      code:
+                        type: string
+                      code3:
+                        type: string
+                      code_numeric:
+                        type: string
+                      id:
+                        type: integer
+                      members:
+                        type: array
+                        properties:
+                            country:
+                              type: integer
+                            country_:
+                              label:
+                                type: string
+                              value:
+                                type: integer
+                            from_date:
+                              type: string
+                              format: date
+                            id:
+                              type: integer
+                            to_date:
+                              type: string
+                              format: date
+                      name:
+                        type: string
+                      region:
+                        type: integer
+                      region_:
+                        type: object
+                        properties:
+                          label:
+                            type: string
+                          value:
+                            type: integer
+                      subdivisions:
+                        type: array
+                        properties:
+                          active:
+                            type: boolean
+                          code:
+                            type: string
+                          id:
+                            type: integer
+                          name:
+                            type: string
+                          parent: 
+                            type: integer
+                          parent_:
+                            type: object
+                          type:
+                            type: string
+                  errors:
+                    type: object
+                    nullable: true
+                  pagination:
+                    type: object
+                    nullable: true
+                  status:
+                    type: integer
+                  success_message:
+                    type: string
+                    nullable: true
+              
+              required:
+                - name
+
+              example:
+                data:
+                  active: true
+                  code: '3'
+                  code3: '103'
+                  code_numeric: '10003'
+                  id: 7
+                  members:
+                  - country: 1
+                    country_:
+                      label: "Afghanistan"
+                      value: 1
+                    from_date: '2024-02-15'
+                    id: 1
+                    to_date: '2024-02-20'
+                  name: Asia
+                  region: 5
+                  region_:
+                    label: Asia
+                    value: 5
+                  subdivisions:
+                  - active: true
+                    code: '10001'
+                    id: 5
+                    name: sbd1
+                    parent: 
+                    parent_: {}
+                    type: city
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+  

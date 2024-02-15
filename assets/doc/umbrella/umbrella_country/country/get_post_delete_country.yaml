@@ -1,12 +1,12 @@
     get:
       tags:
-        - company
-      summary: Get company details.
-      description: Get company details.
-      operationId: getCompanies
+        - country
+      summary: Get country details.
+      description: Get country details.
+      operationId: getCountries
       responses:
         '200':
-          description: List of companies.
+          description: List of countries.
           content:
             application/json:
               schema:
@@ -17,33 +17,22 @@
                       properties:
                         id:
                           type: integer
-                        party:
+                        name:
                           type: string
-                        party_:
-                          type: object
-                          properties:
-                            label:
-                              type: string
-                            value: 
-                              type: integer
-                        payable_today:
-                          type: number
-                          format: float
-                        receivable_today:
-                          type: number
-                          format: float
                     errors:
                       type: object
+                      nullable: true
                     pagination:
                       type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
                     status:
                       type: integer
                     success_message:
@@ -52,12 +41,7 @@
               example:
                 data:
                 - id: 1
-                  party: 1
-                  party_:
-                    label: Party 1
-                    value: 1
-                  payable_today: 0
-                  receivable_today: 0
+                  name: "Afghanistan"
                 error: null
                 pagination:
                   page: 1
@@ -78,17 +62,17 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     post:
       tags:
-        - company
-      summary: Create a company.
-      description: Create a company.
-      operationId: postCompanyById
+        - country
+      summary: Create a country.
+      description: Create a country.
+      operationId: postCountryById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateCompany'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateCountry'
       responses:
         '201':
           description: OK
@@ -97,56 +81,64 @@
               schema:
                     properties:
                       data:
-                        currency:
-                        type: integer
-                        employees:
-                          type: array 
-                          properties:
-                            company:
+                        type: object
+                        properties:
+                          active:
+                            type: boolean
+                          code:
+                            type: string
+                          code3:
+                            type: string
+                          code_numeric:
+                            type: string
+                          id:
+                            type: integer
+                          members:
+                            type: array
+                            properties:
+                            country:
                               type: integer
-                            company_:
+                            country_:
                               label:
                                 type: string
                               value:
                                 type: integer
-                            end_date:
+                            from_date:
                               type: string
                               format: date
                             id:
                               type: integer
-                            party:
-                              type: integer
-                            party_:
+                            to_date:
+                              type: string
+                              format: date
+                          name:
+                            type: string
+                          region:
+                            type: integer
+                          region_:
+                            type: object
+                            properties:
                               label:
                                 type: string
                               value:
                                 type: integer
-                            start_date:
-                              type: string
-                              format: date
-                            supervisor: 
-                              type: integer
-                            supervisor_:
-                              type: object
-                        id:
-                          type: integer
-                        party:
-                          type: integer
-                        party_:
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        payable:
-                          type: integer
-                        payable_today:
-                          type: integer
-                        receivable:
-                          type: integer
-                        receivable_today:
-                          type: integer
-                        timezone:
-                          type: string  
+                          subdivisions:
+                            type: array
+                            properties:
+                            - active:
+                                type: boolean
+                              code:
+                                type: string
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                              parent: 
+                                type: integer
+                              parent_:
+                                type: object
+                              type:
+                                type: string
                       errors:
                         type: object
                         nullable: true
@@ -158,34 +150,34 @@
                       success_message:
                         type: string
                         nullable: true
-
-              required:
-                - currency
-                - party
-
               example:
                 data:
-                  currency: 1
-                  employees:
-                  - company: 13
-                    company_:
-                      label: Party 1
-                      value: 13
-                    end_date: '2024-02-13'
-                    id: 13
-                    party: 1
-                    party_:
-                      label: Party 1
+                  active: true
+                  code: '3'
+                  code3: '103'
+                  code_numeric: '10003'
+                  id: 7
+                  members:
+                  - country: 1
+                    country_:
+                      label: "Afghanistan"
                       value: 1
-                    start_date: '2024-02-01'
-                    supervisor: 
-                    supervisor_: {}
-                  id: 13
-                  party: 3
-                  party_:
-                    label: Party 1
-                    value: 3
-                  timezone: null
+                    from_date: '2024-02-15'
+                    id: 1
+                    to_date: '2024-02-20'
+                  name: Asia
+                  region: 5
+                  region_:
+                    label: Asia
+                    value: 5
+                  subdivisions:
+                  - active: true
+                    code: '10001'
+                    id: 5
+                    name: sbd1
+                    parent: 
+                    parent_: {}
+                    type: city
                 error: null
                 pagination: null
                 status: 200
@@ -202,10 +194,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
-        - company
-      summary: Delete companys.
-      description: Delete companys.
-      operationId: deleteCompaniesById
+        - country
+      summary: Delete countries.
+      description: Delete countries.
+      operationId: deleteCountriesById
       requestBody:
         required: true
         content:

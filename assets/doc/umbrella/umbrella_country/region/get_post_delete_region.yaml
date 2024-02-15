@@ -1,12 +1,12 @@
     get:
       tags:
-        - company
-      summary: Get company details.
-      description: Get company details.
-      operationId: getCompanies
+        - region
+      summary: Get region details.
+      description: Get region details.
+      operationId: getRegion
       responses:
         '200':
-          description: List of companies.
+          description: List of regions.
           content:
             application/json:
               schema:
@@ -17,21 +17,8 @@
                       properties:
                         id:
                           type: integer
-                        party:
+                        name:
                           type: string
-                        party_:
-                          type: object
-                          properties:
-                            label:
-                              type: string
-                            value: 
-                              type: integer
-                        payable_today:
-                          type: number
-                          format: float
-                        receivable_today:
-                          type: number
-                          format: float
                     errors:
                       type: object
                     pagination:
@@ -52,12 +39,7 @@
               example:
                 data:
                 - id: 1
-                  party: 1
-                  party_:
-                    label: Party 1
-                    value: 1
-                  payable_today: 0
-                  receivable_today: 0
+                  name: Afghanistan
                 error: null
                 pagination:
                   page: 1
@@ -78,17 +60,17 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     post:
       tags:
-        - company
-      summary: Create a company.
-      description: Create a company.
-      operationId: postCompanyById
+        - region
+      summary: Create a region.
+      description: Create a region.
+      operationId: postRegionById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateCompany'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateRegion'
       responses:
         '201':
           description: OK
@@ -97,56 +79,23 @@
               schema:
                     properties:
                       data:
-                        currency:
-                        type: integer
-                        employees:
-                          type: array 
+                        code_numeric:
+                          type: string
+                        name:
+                          type: string
+                        parent:
+                          type: integer
+                        subregions:
+                          type: array
                           properties:
-                            company:
-                              type: integer
-                            company_:
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            end_date:
+                            code_numeric:
                               type: string
-                              format: date
-                            id:
-                              type: integer
-                            party:
-                              type: integer
-                            party_:
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            start_date:
+                            name: 
                               type: string
-                              format: date
-                            supervisor: 
+                            parent:
                               type: integer
-                            supervisor_:
-                              type: object
-                        id:
-                          type: integer
-                        party:
-                          type: integer
-                        party_:
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        payable:
-                          type: integer
-                        payable_today:
-                          type: integer
-                        receivable:
-                          type: integer
-                        receivable_today:
-                          type: integer
-                        timezone:
-                          type: string  
+                            subregions:
+                              type: array
                       errors:
                         type: object
                         nullable: true
@@ -160,32 +109,17 @@
                         nullable: true
 
               required:
-                - currency
-                - party
-
+                - name
               example:
                 data:
-                  currency: 1
-                  employees:
-                  - company: 13
-                    company_:
-                      label: Party 1
-                      value: 13
-                    end_date: '2024-02-13'
-                    id: 13
-                    party: 1
-                    party_:
-                      label: Party 1
-                      value: 1
-                    start_date: '2024-02-01'
-                    supervisor: 
-                    supervisor_: {}
-                  id: 13
-                  party: 3
-                  party_:
-                    label: Party 1
-                    value: 3
-                  timezone: null
+                  code_numeric: '190'
+                  name: NewCountry
+                  parent: 1
+                  subregions:
+                  - code_numeric: '015'
+                    name: Northern Africa
+                    parent: 2
+                    subregions: []
                 error: null
                 pagination: null
                 status: 200
@@ -202,10 +136,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
-        - company
-      summary: Delete companys.
-      description: Delete companys.
-      operationId: deleteCompaniesById
+        - region
+      summary: Delete regions.
+      description: Delete regions.
+      operationId: deleteRegionsById
       requestBody:
         required: true
         content:

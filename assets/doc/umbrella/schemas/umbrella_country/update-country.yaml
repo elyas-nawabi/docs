@@ -1,0 +1,50 @@
+      properties:
+        active:
+          type: boolean
+        code:
+          type: string
+        code3:
+          type: string
+        code_numeric:
+          type: string
+        members:
+          type: array
+        name:
+          type: string
+        region:
+          type: integer
+        subdivisions:
+          type: array
+          properties:
+          - active:
+              type: boolean
+            code:
+              type: string
+            id:
+              type: integer
+            name:
+              type: string
+            parent: 
+              type: integer
+            parent_:
+              type: object
+            type:
+              type: string
+      required:
+        - name
+        
+      example:
+          active: true
+          code: '3'
+          code3: '103'
+          code_numeric: '10003'
+          members: []
+          name: Asia
+          region: 5
+          subdivisions:
+          - active: true
+            code: '10001'
+            id: 5
+            name: sbd1
+            parent: 1
+            type: city

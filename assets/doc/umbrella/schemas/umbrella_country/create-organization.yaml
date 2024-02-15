@@ -1,0 +1,26 @@
+      properties:
+        code:
+          type: string
+        members:
+          type: array
+          properties:
+            country:
+              type: integer
+            from_date:
+              type: string
+              format: date
+            to_date:
+              type: string
+              format: date
+        name: 
+          type: string
+      required:
+        - code
+        - name
+      example:
+          code: SAFTA3
+          members:
+          - country: 3
+            from_date: '2024-02-15'
+            to_date: '2024-02-20'
+          name: South Asian Free Trade Area3

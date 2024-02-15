@@ -1,0 +1,209 @@
+    get:
+      tags:
+        - region
+      summary: Get one region.
+      description: Get one region.
+      operationId: getRegionById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      code_numeric:
+                        type: string
+                      id: 
+                        type: integer
+                      name:
+                        type: string
+                      parent:
+                        type: integer
+                      parent_:
+                        label:
+                          type: string
+                        value:
+                          type: integer
+                      subregions:
+                        type: array
+                        properties:
+                          code_numeric:
+                            type: string
+                          id:
+                            type: integer
+                          name:
+                            type: string
+                          parent:
+                            type: integer
+                          parent_:
+                            type: object
+                            properties:
+                              label:
+                                type: string
+                              value:
+                                type: integer
+                          subregions:
+                            type: array
+                    errors:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
+                    status:
+                    type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  code_numeric: '002'
+                  id: 2
+                  name: Africa
+                  parent: 1
+                  parent_:
+                    label: World
+                    value: 1
+                  subregions:
+                  - code_numeric: '015'
+                    id: 8
+                    name: Northern Africa
+                    parent: 2
+                    parent_:
+                      label: Africa
+                      value: 2
+                    subregions: []
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
+      tags:
+        - region
+      summary: Update a region.
+      description: Update a region.
+      operationId: updateRegionById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateRegion'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    code_numeric:
+                      type: string
+                    id: 
+                      type: integer
+                    name:
+                      type: string
+                    parent:
+                      type: integer
+                    parent_:
+                      label:
+                        type: string
+                      value:
+                        type: integer
+                    subregions:
+                      type: array
+                      properties:
+                        code_numeric:
+                          type: string
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                        parent:
+                          type: integer
+                        parent_:
+                          type: object
+                          properties:
+                            label:
+                              type: string
+                            value:
+                              type: integer
+                        subregions:
+                          type: array
+                  errors:
+                    type: object
+                    nullable: true
+                  pagination:
+                    type: object
+                    nullable: true
+                  status:
+                    type: integer
+                  success_message:
+                    type: string
+                    nullable: true
+              example:
+                data:
+                  code_numeric: '002'
+                  id: 2
+                  name: Africa
+                  parent: 1
+                  parent_:
+                    label: World
+                    value: 1
+                  subregions:
+                  - code_numeric: '015'
+                    id: 8
+                    name: Northern Africa
+                    parent: 2
+                    parent_:
+                      label: Africa
+                      value: 2
+                    subregions: []
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+  

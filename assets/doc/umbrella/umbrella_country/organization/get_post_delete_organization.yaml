@@ -1,12 +1,12 @@
     get:
       tags:
-        - company
-      summary: Get company details.
-      description: Get company details.
-      operationId: getCompanies
+        - organization
+      summary: Get organization details.
+      description: Get organization details.
+      operationId: getOrganizations
       responses:
         '200':
-          description: List of companies.
+          description: List of organizations.
           content:
             application/json:
               schema:
@@ -15,35 +15,25 @@
                     data:
                       type: array
                       properties:
-                        id:
-                          type: integer
-                        party:
+                        code:
                           type: string
-                        party_:
-                          type: object
-                          properties:
-                            label:
-                              type: string
-                            value: 
-                              type: integer
-                        payable_today:
-                          type: number
-                          format: float
-                        receivable_today:
-                          type: number
-                          format: float
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
                     errors:
                       type: object
                     pagination:
                       type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
                     status:
                       type: integer
                     success_message:
@@ -51,13 +41,9 @@
                       nullable: true
               example:
                 data:
-                - id: 1
-                  party: 1
-                  party_:
-                    label: Party 1
-                    value: 1
-                  payable_today: 0
-                  receivable_today: 0
+                - code: EU
+                  id: 1
+                  name: European Union
                 error: null
                 pagination:
                   page: 1
@@ -78,17 +64,17 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     post:
       tags:
-        - company
-      summary: Create a company.
-      description: Create a company.
-      operationId: postCompanyById
+        - organization
+      summary: Create a organization.
+      description: Create a organization.
+      operationId: postOrganizationById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateCompany'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateOrganization'
       responses:
         '201':
           description: OK
@@ -97,56 +83,30 @@
               schema:
                     properties:
                       data:
-                        currency:
-                        type: integer
-                        employees:
-                          type: array 
+                        code:
+                          type: string
+                        id:
+                          type: integer
+                        members:
+                          type: array
                           properties:
-                            company:
+                            country:
                               type: integer
-                            company_:
+                            country_:
                               label:
                                 type: string
                               value:
                                 type: integer
-                            end_date:
+                            from_date:
                               type: string
                               format: date
                             id:
                               type: integer
-                            party:
-                              type: integer
-                            party_:
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            start_date:
+                            to_date:
                               type: string
                               format: date
-                            supervisor: 
-                              type: integer
-                            supervisor_:
-                              type: object
-                        id:
-                          type: integer
-                        party:
-                          type: integer
-                        party_:
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        payable:
-                          type: integer
-                        payable_today:
-                          type: integer
-                        receivable:
-                          type: integer
-                        receivable_today:
-                          type: integer
-                        timezone:
-                          type: string  
+                        name: 
+                          type: string
                       errors:
                         type: object
                         nullable: true
@@ -159,33 +119,19 @@
                         type: string
                         nullable: true
 
-              required:
-                - currency
-                - party
-
               example:
                 data:
-                  currency: 1
-                  employees:
-                  - company: 13
-                    company_:
-                      label: Party 1
-                      value: 13
-                    end_date: '2024-02-13'
-                    id: 13
-                    party: 1
-                    party_:
-                      label: Party 1
+                  code: EU
+                  id: 1
+                  members:
+                  - country: 1
+                    country_:
+                      label: "Afghanistan"
                       value: 1
-                    start_date: '2024-02-01'
-                    supervisor: 
-                    supervisor_: {}
-                  id: 13
-                  party: 3
-                  party_:
-                    label: Party 1
-                    value: 3
-                  timezone: null
+                    from_date: '2024-02-15'
+                    id: 1
+                    to_date: '2024-02-20'
+                  name: European Union
                 error: null
                 pagination: null
                 status: 200
@@ -202,10 +148,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
-        - company
-      summary: Delete companys.
-      description: Delete companys.
-      operationId: deleteCompaniesById
+        - organization
+      summary: Delete organizations.
+      description: Delete organizations.
+      operationId: deleteOrganizationsById
       requestBody:
         required: true
         content:

@@ -1,0 +1,29 @@
+      properties:
+        code_numeric:
+          type: string
+        name:
+          type: string
+        parent:
+          type: integer
+        subregions:
+          type: array
+          properties:
+            code_numeric:
+              type: string
+            name: 
+              type: string
+            parent:
+              type: integer
+            subregions:
+              type: array
+      required:
+        - name
+      example:
+          code_numeric: '190'
+          name: NewCountry
+          parent: 1
+          subregions:
+          - code_numeric: '015'
+            name: Northern Africa
+            parent: 2
+            subregions: []

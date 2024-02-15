@@ -1,12 +1,12 @@
     get:
       tags:
-        - company
-      summary: Get company details.
-      description: Get company details.
-      operationId: getCompanies
+        - employee
+      summary: Get employee details.
+      description: Get employee details.
+      operationId: getEmployees
       responses:
         '200':
-          description: List of companies.
+          description: List of employees.
           content:
             application/json:
               schema:
@@ -26,12 +26,6 @@
                               type: string
                             value: 
                               type: integer
-                        payable_today:
-                          type: number
-                          format: float
-                        receivable_today:
-                          type: number
-                          format: float
                     errors:
                       type: object
                     pagination:
@@ -51,13 +45,11 @@
                       nullable: true
               example:
                 data:
-                - id: 1
+                - id: 5
                   party: 1
                   party_:
                     label: Party 1
                     value: 1
-                  payable_today: 0
-                  receivable_today: 0
                 error: null
                 pagination:
                   page: 1
@@ -78,17 +70,17 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     post:
       tags:
-        - company
-      summary: Create a company.
-      description: Create a company.
-      operationId: postCompanyById
+        - employee
+      summary: Create a employee.
+      description: Create a employee.
+      operationId: postEmployeeById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateCompany'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateEmployee'
       responses:
         '201':
           description: OK
@@ -97,56 +89,18 @@
               schema:
                     properties:
                       data:
-                        currency:
-                        type: integer
-                        employees:
-                          type: array 
-                          properties:
-                            company:
-                              type: integer
-                            company_:
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            end_date:
-                              type: string
-                              format: date
-                            id:
-                              type: integer
-                            party:
-                              type: integer
-                            party_:
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            start_date:
-                              type: string
-                              format: date
-                            supervisor: 
-                              type: integer
-                            supervisor_:
-                              type: object
-                        id:
+                        company:
                           type: integer
+                        end_date:
+                          type: string
+                          format: date
                         party:
                           type: integer
-                        party_:
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        payable:
+                        start_date:
+                          type: string
+                          format: date
+                        supervisor:
                           type: integer
-                        payable_today:
-                          type: integer
-                        receivable:
-                          type: integer
-                        receivable_today:
-                          type: integer
-                        timezone:
-                          type: string  
                       errors:
                         type: object
                         nullable: true
@@ -160,32 +114,15 @@
                         nullable: true
 
               required:
-                - currency
                 - party
-
+                - company
               example:
                 data:
-                  currency: 1
-                  employees:
-                  - company: 13
-                    company_:
-                      label: Party 1
-                      value: 13
-                    end_date: '2024-02-13'
-                    id: 13
-                    party: 1
-                    party_:
-                      label: Party 1
-                      value: 1
-                    start_date: '2024-02-01'
-                    supervisor: 
-                    supervisor_: {}
-                  id: 13
-                  party: 3
-                  party_:
-                    label: Party 1
-                    value: 3
-                  timezone: null
+                  company: 2
+                  end_date: '2024-02-13'
+                  party: 1
+                  start_date: '2024-02-01'
+                  supervisor: 5
                 error: null
                 pagination: null
                 status: 200
@@ -202,10 +139,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
-        - company
-      summary: Delete companys.
-      description: Delete companys.
-      operationId: deleteCompaniesById
+        - employee
+      summary: Delete employees.
+      description: Delete employees.
+      operationId: deleteEmployeesById
       requestBody:
         required: true
         content:
