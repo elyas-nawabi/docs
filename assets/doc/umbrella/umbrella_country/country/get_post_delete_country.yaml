@@ -3,7 +3,7 @@
         - country
       summary: Get country details.
       description: Get country details.
-      operationId: getcountries
+      operationId: getCountries
       responses:
         '200':
           description: List of countries.
@@ -17,33 +17,22 @@
                       properties:
                         id:
                           type: integer
-                        party:
+                        name:
                           type: string
-                        party_:
-                          type: object
-                          properties:
-                            label:
-                              type: string
-                            value: 
-                              type: integer
-                        payable_today:
-                          type: number
-                          format: float
-                        receivable_today:
-                          type: number
-                          format: float
                     errors:
                       type: object
+                      nullable: true
                     pagination:
                       type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
                     status:
                       type: integer
                     success_message:
@@ -52,12 +41,7 @@
               example:
                 data:
                 - id: 1
-                  party: 1
-                  party_:
-                    label: Party 1
-                    value: 1
-                  payable_today: 0
-                  receivable_today: 0
+                  name: "Afghanistan"
                 error: null
                 pagination:
                   page: 1
@@ -97,40 +81,48 @@
               schema:
                     properties:
                       data:
-                        active:
-                          type: boolean
-                        company:
-                          type: integer
-                        company_:
-                          label:
+                        type: object
+                        properties:
+                          active:
+                            type: boolean
+                          code:
                             type: string
-                          value:
-                            type: integer
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        number_increment:
-                          type: integer
-                        number_next:
-                          type: integer
-                        padding:
-                          type: integer
-                        prefix:
-                          type: string
-                        preview:
-                          type: string
-                        sequence_type:
-                          type: integer
-                        sequence_type_:
-                          label:
+                          code3:
                             type: string
-                          value: 
+                          code_numeric:
+                            type: string
+                          id:
                             type: integer
-                        suffix:
-                          type: string
-                        type:
-                          type: string 
+                          members:
+                            type: array
+                          name:
+                            type: string
+                          region:
+                            type: integer
+                          region_:
+                            type: object
+                            properties:
+                              label:
+                                type: string
+                              value:
+                                type: integer
+                          subdivisions:
+                            type: array
+                            properties:
+                            - active:
+                                type: boolean
+                              code:
+                                type: string
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                              parent: 
+                                type: integer
+                              parent_:
+                                type: object
+                              type:
+                                type: string
                       errors:
                         type: object
                         nullable: true
@@ -142,35 +134,27 @@
                       success_message:
                         type: string
                         nullable: true
-
-              required:
-                - name
-                - number_increment
-                - number_next
-                - padding
-                - sequence_type
-                - type 
-
               example:
                 data:
                   active: true
-                  company: 1
-                  company_:
-                    label: 'Party 1'
-                    value: 1
-                  id: 4
-                  name: '2024'
-                  number_increment: 1
-                  number_next: 1
-                  padding: 0
-                  prefix: ''
-                  preview: '1'
-                  sequence_type: 3
-                  sequence_type_:
-                    label: 'Account Move'
-                    value: 3
-                  suffix: ''
-                  type: 'incremental'
+                  code: '3'
+                  code3: '103'
+                  code_numeric: '10003'
+                  id: 7
+                  members: []
+                  name: Asia
+                  region: 5
+                  region_:
+                    label: Asia
+                    value: 5
+                  subdivisions:
+                  - active: true
+                    code: '10001'
+                    id: 5
+                    name: sbd1
+                    parent: 
+                    parent_: {}
+                    type: city
                 error: null
                 pagination: null
                 status: 200

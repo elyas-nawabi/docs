@@ -1,33 +1,48 @@
       properties:
-        currencies:
+        active:
+          type: boolean
+        code:
+          type: string
+        code3:
+          type: string
+        code_numeric:
+          type: string
+        members:
           type: array
-        currency:
-          type: integer
-        currency_:
-          type: object
-          label:
-            type: string
-          value:
-            type: integer
-        day:
-          type: integer
-        frequency:
+        name:
           type: string
-        last_update:
-          type: string
-          format: date
-        source:
-          type: string
-        weekday:
+        region:
           type: integer
+        subdivisions:
+          type: array
+          properties:
+          - active:
+              type: boolean
+            code:
+              type: string
+            id:
+              type: integer
+            name:
+              type: string
+            parent: 
+              type: integer
+            type:
+              type: string
       required:
-        - currency
-        - frequency
-        - source
+        - name
+        
       example:
-          currency: 1
-          day: 1
-          frequency: "monthly"
-          last_update: "2024-01-28"
-          source: "ecb"
-          weekday: "2"
+          active: true
+          code: '3'
+          code3: '103'
+          code_numeric: '10003'
+          members: []
+          name: Asia
+          region: 5
+          subdivisions:
+          - active: true
+            code: '10001'
+            id: 5
+            name: sbd1
+            parent: 1
+            type: city
