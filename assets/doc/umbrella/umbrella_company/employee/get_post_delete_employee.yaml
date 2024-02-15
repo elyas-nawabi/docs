@@ -26,12 +26,6 @@
                               type: string
                             value: 
                               type: integer
-                        payable_today:
-                          type: number
-                          format: float
-                        receivable_today:
-                          type: number
-                          format: float
                     errors:
                       type: object
                     pagination:
@@ -51,13 +45,11 @@
                       nullable: true
               example:
                 data:
-                - id: 1
+                - id: 5
                   party: 1
                   party_:
                     label: Party 1
                     value: 1
-                  payable_today: 0
-                  receivable_today: 0
                 error: null
                 pagination:
                   page: 1
@@ -97,40 +89,18 @@
               schema:
                     properties:
                       data:
-                        active:
-                          type: boolean
                         company:
                           type: integer
-                        company_:
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        id:
-                          type: integer
-                        name:
+                        end_date:
                           type: string
-                        number_increment:
+                          format: date
+                        party:
                           type: integer
-                        number_next:
-                          type: integer
-                        padding:
-                          type: integer
-                        prefix:
+                        start_date:
                           type: string
-                        preview:
-                          type: string
-                        sequence_type:
+                          format: date
+                        supervisor:
                           type: integer
-                        sequence_type_:
-                          label:
-                            type: string
-                          value: 
-                            type: integer
-                        suffix:
-                          type: string
-                        type:
-                          type: string 
                       errors:
                         type: object
                         nullable: true
@@ -144,33 +114,15 @@
                         nullable: true
 
               required:
-                - name
-                - number_increment
-                - number_next
-                - padding
-                - sequence_type
-                - type 
-
+                - party
+                - company
               example:
                 data:
-                  active: true
-                  company: 1
-                  company_:
-                    label: 'Party 1'
-                    value: 1
-                  id: 4
-                  name: '2024'
-                  number_increment: 1
-                  number_next: 1
-                  padding: 0
-                  prefix: ''
-                  preview: '1'
-                  sequence_type: 3
-                  sequence_type_:
-                    label: 'Account Move'
-                    value: 3
-                  suffix: ''
-                  type: 'incremental'
+                  company: 2
+                  end_date: '2024-02-13'
+                  party: 1
+                  start_date: '2024-02-01'
+                  supervisor: 5
                 error: null
                 pagination: null
                 status: 200

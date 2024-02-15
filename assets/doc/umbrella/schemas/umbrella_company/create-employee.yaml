@@ -1,38 +1,24 @@
       properties:
-          currency: 
+          company:
             type: integer
-          employees:
-            type: array
-            properties:
-              name:
-                type: string
-              party:
-                type: integer
+          end_date:
+            type: string
+            format: date
           party:
             type: integer
-          payable:
-            type: integer
-          payable_today:
-            type: integer
-          receivable:
-            type: integer
-          receivable_today:
-            type: integer
-          timezone:
+          start_date:
             type: string
+            format: date
+          supervisor:
+            type: integer
   
       required:
           - currency
           - party
              
       example:
-        currency: 1
-        employees:
-        - name: Party 1
-          party: 1
+        company: 2
+        end_date: '2024-02-13'
         party: 1
-        payable: 0
-        payable_today: 0
-        receivable: 0
-        receivable_today: 0
-        timezone: Asia/Kabul
+        start_date: '2024-02-01'
+        supervisor: 5
