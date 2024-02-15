@@ -1,33 +1,29 @@
       properties:
-        currencies:
+        code_numeric:
+          type: string
+        name:
+          type: string
+        parent:
+          type: integer
+        subregions:
           type: array
-        currency:
-          type: integer
-        currency_:
-          type: object
-          label:
-            type: string
-          value:
-            type: integer
-        day:
-          type: integer
-        frequency:
-          type: string
-        last_update:
-          type: string
-          format: date
-        source:
-          type: string
-        weekday:
-          type: integer
+          properties:
+            code_numeric:
+              type: string
+            name: 
+              type: string
+            parent:
+              type: integer
+            subregions:
+              type: array
       required:
-        - currency
-        - frequency
-        - source
+        - name
       example:
-          currency: 1
-          day: 1
-          frequency: "monthly"
-          last_update: "2024-01-28"
-          source: "ecb"
-          weekday: "2"
+          code_numeric: '190'
+          name: NewCountry
+          parent: 1
+          subregions:
+          - code_numeric: '015'
+            name: Northern Africa
+            parent: 2
+            subregions: []

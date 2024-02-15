@@ -17,21 +17,8 @@
                       properties:
                         id:
                           type: integer
-                        party:
+                        name:
                           type: string
-                        party_:
-                          type: object
-                          properties:
-                            label:
-                              type: string
-                            value: 
-                              type: integer
-                        payable_today:
-                          type: number
-                          format: float
-                        receivable_today:
-                          type: number
-                          format: float
                     errors:
                       type: object
                     pagination:
@@ -52,12 +39,7 @@
               example:
                 data:
                 - id: 1
-                  party: 1
-                  party_:
-                    label: Party 1
-                    value: 1
-                  payable_today: 0
-                  receivable_today: 0
+                  name: Afghanistan
                 error: null
                 pagination:
                   page: 1
@@ -97,40 +79,23 @@
               schema:
                     properties:
                       data:
-                        active:
-                          type: boolean
-                        company:
-                          type: integer
-                        company_:
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        id:
-                          type: integer
+                        code_numeric:
+                          type: string
                         name:
                           type: string
-                        number_increment:
+                        parent:
                           type: integer
-                        number_next:
-                          type: integer
-                        padding:
-                          type: integer
-                        prefix:
-                          type: string
-                        preview:
-                          type: string
-                        sequence_type:
-                          type: integer
-                        sequence_type_:
-                          label:
-                            type: string
-                          value: 
-                            type: integer
-                        suffix:
-                          type: string
-                        type:
-                          type: string 
+                        subregions:
+                          type: array
+                          properties:
+                            code_numeric:
+                              type: string
+                            name: 
+                              type: string
+                            parent:
+                              type: integer
+                            subregions:
+                              type: array
                       errors:
                         type: object
                         nullable: true
@@ -145,32 +110,16 @@
 
               required:
                 - name
-                - number_increment
-                - number_next
-                - padding
-                - sequence_type
-                - type 
-
               example:
                 data:
-                  active: true
-                  company: 1
-                  company_:
-                    label: 'Party 1'
-                    value: 1
-                  id: 4
-                  name: '2024'
-                  number_increment: 1
-                  number_next: 1
-                  padding: 0
-                  prefix: ''
-                  preview: '1'
-                  sequence_type: 3
-                  sequence_type_:
-                    label: 'Account Move'
-                    value: 3
-                  suffix: ''
-                  type: 'incremental'
+                  code_numeric: '190'
+                  name: NewCountry
+                  parent: 1
+                  subregions:
+                  - code_numeric: '015'
+                    name: Northern Africa
+                    parent: 2
+                    subregions: []
                 error: null
                 pagination: null
                 status: 200
