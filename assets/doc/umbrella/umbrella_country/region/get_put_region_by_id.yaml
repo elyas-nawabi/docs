@@ -1,0 +1,266 @@
+    get:
+      tags:
+        - region
+      summary: Get one region.
+      description: Get one region.
+      operationId: getRegionById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      currency:
+                        type: integer
+                      employees:
+                        type: array 
+                        properties:
+                          company:
+                            type: integer
+                          company_:
+                            label:
+                              type: string
+                            value:
+                              type: integer
+                          end_date:
+                            type: string
+                            format: date
+                          id:
+                            type: integer
+                          party:
+                            type: integer
+                          party_:
+                            label:
+                              type: string
+                            value:
+                              type: integer
+                          start_date:
+                            type: string
+                            format: date
+                          supervisor: 
+                            type: integer
+                          supervisor_:
+                            type: object
+                      id:
+                        type: integer
+                      party:
+                        type: integer
+                      party_:
+                        label:
+                          type: string
+                        value:
+                          type: integer
+                      payable:
+                        type: integer
+                      payable_today:
+                        type: integer
+                      receivable:
+                        type: integer
+                      receivable_today:
+                        type: integer
+                      timezone:
+                        type: string
+                    error:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  currency: 1
+                  employees:
+                  - company: 1
+                    company_:
+                      label: Party 1
+                      value: 1
+                    end_date: '2024-02-29'
+                    id: 2
+                    party: 24
+                    party_:
+                      label: 'Party 13'
+                      value: 24
+                    start_date: '2024-02-01'
+                    supervisor: 
+                    supervisor_: {}
+                  id: 1
+                  party: 1
+                  party_:
+                    label: 'Party 1'
+                    value: 1
+                  payable: 0
+                  payable_today: 0
+                  receivable: 0
+                  receivable_today: 0
+                  timezone: 'Asia/Kabul'
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
+      tags:
+        - region
+      summary: Update a region.
+      description: Update a region.
+      operationId: updateRegionById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateRegion'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    currency:
+                      type: integer
+                    employees:
+                      type: array 
+                      properties:
+                        company:
+                          type: integer
+                        company_:
+                          label:
+                            type: string
+                          value:
+                            type: integer
+                        end_date:
+                          type: string
+                          format: date
+                        id:
+                          type: integer
+                        party:
+                          type: integer
+                        party_:
+                          label:
+                            type: string
+                          value:
+                            type: integer
+                        start_date:
+                          type: string
+                          format: date
+                        supervisor: 
+                          type: integer
+                        supervisor_:
+                          type: object
+                    id:
+                      type: integer
+                    party:
+                      type: integer
+                    party_:
+                      label:
+                        type: string
+                      value:
+                        type: integer
+                    payable:
+                      type: integer
+                    payable_today:
+                      type: integer
+                    receivable:
+                      type: integer
+                    receivable_today:
+                      type: integer
+                    timezone:
+                      type: string
+                  errors:
+                    type: object
+                    nullable: true
+                  pagination:
+                    type: object
+                    nullable: true
+                  status:
+                    type: integer
+                  success_message:
+                    type: string
+                    nullable: true
+              
+              required:
+                - currency
+                - party
+              
+              example:
+                data:
+                  currency: 1
+                  employees:
+                  - company: 1
+                    company_:
+                      label: Party 1
+                      value: 1
+                    end_date: '2024-02-29'
+                    id: 2
+                    party: 24
+                    party_:
+                      label: 'Party 13'
+                      value: 24
+                    start_date: '2024-02-01'
+                    supervisor: 
+                    supervisor_: {}
+                  id: 1
+                  party: 1
+                  party_:
+                    label: 'Party 1'
+                    value: 1
+                  payable: 0
+                  payable_today: 0
+                  receivable: 0
+                  receivable_today: 0
+                  timezone: 'Asia/Kabul'
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+  

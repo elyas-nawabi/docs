@@ -1,9 +1,9 @@
     get:
       tags:
-        - company
-      summary: Get one company.
-      description: Get one company.
-      operationId: getCompanyById
+        - employee
+      summary: Get one employee.
+      description: Get one employee.
+      operationId: getEmployeeById
       parameters:
         - name: obj_id
           in: path
@@ -130,10 +130,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - company
-      summary: Update a company.
-      description: Update a company.
-      operationId: updateCompanyById
+        - employee
+      summary: Update a employee.
+      description: Update a employee.
+      operationId: updateEmployeeById
       parameters:
         - name: obj_id
           rquired: true
@@ -147,7 +147,7 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateCompany'
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateEmployee'
       responses:
         '200':
           description: OK

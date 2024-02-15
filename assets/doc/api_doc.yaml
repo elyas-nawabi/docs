@@ -219,17 +219,17 @@ components:
     DeleteApiResponse:
       $ref: 'umbrella/schemas/delete-api-response.yaml'
     CreateCategory:
-      $ref: 'umbrella/schemas/umbrella_party/umbrella_party/create-category.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/create-category.yaml'
     UpdateCategory:
-      $ref: 'umbrella/schemas/umbrella_party/umbrella_party/update-category.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/update-category.yaml'
     CreateContactMechanism:
-      $ref: 'umbrella/schemas/umbrella_party/umbrella_party/create-contact-mechanism.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/create-contact-mechanism.yaml'
     UpdateContactMechanism:
-      $ref: 'umbrella/schemas/umbrella_party/umbrella_party/update-contact-mechanism.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/update-contact-mechanism.yaml'
     CreateAddress:
-      $ref: 'umbrella/schemas/umbrella_party/umbrella_party/create-address.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/create-address.yaml'
     UpdateAddress:
-      $ref: 'umbrella/schemas/umbrella_party/umbrella_party/update-address.yaml'
+      $ref: 'umbrella/schemas/umbrella_party/update-address.yaml'
     CreateSequence:
       $ref: 'umbrella/schemas/umbrella_administration/create-sequence.yaml'
     UpdateSequence:
@@ -246,14 +246,14 @@ components:
       $ref: 'umbrella/schemas/umbrella_company/create-employee.yaml'
     UpdateEmployee:
       $ref: 'umbrella/schemas/umbrella_company/update-employee.yaml'
-    CreateTimeZone:
+    CreateTimezone:
       $ref: 'umbrella/schemas/umbrella_company/create-timezone.yaml'
-    UpdateTimeZone:
+    UpdateTimezone:
       $ref: 'umbrella/schemas/umbrella_company/update-timezone.yaml'
     CreateCountry:
-      $ref: 'umbrella/schemas/umbrella_country/create-company.yaml'
+      $ref: 'umbrella/schemas/umbrella_country/create-country.yaml'
     UpdateCountry:
-      $ref: 'umbrella/schemas/umbrella_country/update-company.yaml'
+      $ref: 'umbrella/schemas/umbrella_country/update-country.yaml'
     CreateOrganization:
       $ref: 'umbrella/schemas/umbrella_country/create-organization.yaml'
     UpdateOrganization:
