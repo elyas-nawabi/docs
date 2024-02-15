@@ -85,8 +85,6 @@ tags:
     description: company - company data management.
   - name: employee
     description: employee - employee data management.
-  - name: timezone
-    description: timezone - timezone data management.
   - name: country
     description: country - country data management.
   - name: organization
@@ -144,10 +142,6 @@ paths:
     $ref: 'umbrella/umbrella_company/employee/get_post_delete_employee.yaml'
   '/company/employees/{obj_id}':
     $ref: 'umbrella/umbrella_company/employee/get_put_employee_by_id.yaml'
-  '/company/timezones':
-    $ref: 'umbrella/umbrella_company/timezone/get_post_delete_timezone.yaml'
-  '/company/timezones/{obj_id}':
-    $ref: 'umbrella/umbrella_company/timezone/get_put_timezone_by_id.yaml'
   '/country/countries':
     $ref: 'umbrella/umbrella_country/country/get_post_delete_country.yaml'
   '/country/countries/{obj_id}':
@@ -246,10 +240,6 @@ components:
       $ref: 'umbrella/schemas/umbrella_company/create-employee.yaml'
     UpdateEmployee:
       $ref: 'umbrella/schemas/umbrella_company/update-employee.yaml'
-    CreateTimezone:
-      $ref: 'umbrella/schemas/umbrella_company/create-timezone.yaml'
-    UpdateTimezone:
-      $ref: 'umbrella/schemas/umbrella_company/update-timezone.yaml'
     CreateCountry:
       $ref: 'umbrella/schemas/umbrella_country/create-country.yaml'
     UpdateCountry:
