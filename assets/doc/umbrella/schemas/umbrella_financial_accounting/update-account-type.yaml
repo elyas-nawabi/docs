@@ -1,54 +1,136 @@
       properties:
-        company:
-          type: integer
-        end_date:
-          type: string
-          format: date
-        name:
-          type: string
-        post_move_sequence:
-          type: integer
-        start_date:
-          type: string
-          format: date
-        periods:
+        childs:
           type: array
+          nullable: true
           properties:
-            end_date:
-              type: string
-              format: date
+            childs:
+              type: array
+              properties:
+                childs:
+                  type: array
+                company:
+                  type: integer
+                company_:
+                  type: object
+                  properties:
+                    label:
+                      type: string
+                    value:
+                      type: integer
+                id:
+                  type: integer
+                name:
+                  type: string
+                parent:
+                  type: integer
+                parent_: 
+                  type: object
+                rec_name:
+                  type: string
+                sequence:
+                  type: integer
+                statement: 
+                  type: string
+                stock:
+                  type: boolean
+            company:
+              type: integer
+            company_:
+              type: object
+              properties:
+                label:
+                  type: string
+                value:
+                  type: integer
+            id:
+              type: integer
             name:
               type: string
-            post_move_sequence:
+            parent:
               type: integer
-            start_date:
+            parent_: 
+              type: object
+            rec_name:
               type: string
-              format: date
-            state:
+            sequence:
+              type: integer
+            statement: 
               type: string
-            type:
+            stock:
+              type: boolean
+        company:
+          type: integer
+        company_:
+          type: object
+          properties:
+            label:
               type: string
-        state:
+            value:
+              type: integer
+        id:
+          type: integer
+        name:
           type: string
-  
+        parent:
+          type: integer
+          nullable: true
+        parent_: 
+          type: object
+        rec_name:
+          type: string
+        sequence:
+          type: integer
+          nullable: true
+        statement: 
+          type: string
+          nullable: true
+        stock:
+          type: boolean
+          nullable: true
       required:
-        - end_date
-        - start_date
+        - company
         - name
-        - post_move_sequence
-        - start_date
-        - state
       example:
+        childs:
+        - childs:
+          - childs: []
+            company: 1
+            company_:
+              label: Party 1
+              value: 1
+            id: 7
+            name: Long-term
+            parent: 2
+            parent_:
+              label: Minimal Account Type Chart\Asset
+              value: 2
+            rec_name: Minimal Account Type Chart\Asset\Long-term
+            sequence: 20
+            statement: balance
+            stock: false
+          company: 1
+          company_:
+            label: Party 1
+            value: 1
+          id: 2
+          name: Asset
+          parent: 1
+          parent_:
+            label: Minimal Account Type Chart
+            value: 1
+          rec_name: Minimal Account Type Chart\Asset
+          sequence: 10
+          statement: balance
+          stock: false
         company: 1
-        end_date: "2029-12-31"
-        name: "2027"
-        periods:
-          - end_date: "2029-12-31"
-            name: "2024-01"
-            post_move_sequence: 9
-            start_date: "2029-01-01"
-            state: "open"
-            type: "standard"
-        post_move_sequence: 7
-        start_date: "2029-01-01"
-        state: "open"
+        company_:
+          label: Party 1
+          value: 1
+        id: 1
+        name: Minimal Account Type Chart
+        parent: 
+        parent_: {}
+        rec_name: Minimal Account Type Chart
+        sequence: 10
+        statement: 
+        stock: false
