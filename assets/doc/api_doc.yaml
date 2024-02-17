@@ -112,6 +112,10 @@ paths:
     $ref: 'umbrella/umbrella_financial_accounting/account/get_post_delete_account.yaml'
   '/financial-accounting/accounts/{obj_id}':
     $ref: 'umbrella/umbrella_financial_accounting/account/get_put_account_by_id.yaml'
+  '/financial-accounting/account-types':
+    $ref: 'umbrella/umbrella_financial_accounting/account_type/get_post_delete_account_type.yaml'
+  '/financial-accounting/account-types/{obj_id}':
+    $ref: 'umbrella/umbrella_financial_accounting/account_type/get_put_account_type_by_id.yaml'
   '/login':
     $ref: 'umbrella/umbrella/auth/post_auth.yaml'
   '/party/parties':
