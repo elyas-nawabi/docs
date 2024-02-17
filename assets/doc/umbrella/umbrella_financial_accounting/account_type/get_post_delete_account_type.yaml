@@ -70,8 +70,8 @@
     post:
       tags:
         - account type
-      summary: Create a account type.
-      description: Create a account type.
+      summary: Create an account type.
+      description: Create an account type.
       operationId: postAccountTypeById
       requestBody:
         required: true
