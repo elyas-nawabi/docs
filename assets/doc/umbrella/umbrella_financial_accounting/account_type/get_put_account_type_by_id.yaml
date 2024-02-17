@@ -1,9 +1,9 @@
 get:
       tags:
-        - fiscal period
-      summary: Get one fiscal period.
-      description: Get one fiscal period.
-      operationId: getFiscalPeriodById
+        - account type
+      summary: Get one account type.
+      description: Get one account type.
+      operationId: getAccountTypeById
       parameters:
         - name: obj_id
           in: path
@@ -22,36 +22,89 @@ get:
                     data:
                       type: object
                       properties:
+                        childs:
+                          type: array
+                          properties:
+                            childs:
+                              type: array
+                              properties:
+                                childs:
+                                  type: array
+                                company:
+                                  type: integer
+                                company_:
+                                  type: object
+                                  properties:
+                                    label:
+                                      type: string
+                                    value:
+                                      type: integer
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                                parent:
+                                  type: integer
+                                parent_: 
+                                  type: object
+                                rec_name:
+                                  type: string
+                                sequence:
+                                  type: integer
+                                statement: 
+                                  type: string
+                                stock:
+                                  type: boolean
+                            company:
+                              type: integer
+                            company_:
+                              type: object
+                              properties:
+                                label:
+                                  type: string
+                                value:
+                                  type: integer
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                            parent:
+                              type: integer
+                            parent_: 
+                              type: object
+                            rec_name:
+                              type: string
+                            sequence:
+                              type: integer
+                            statement: 
+                              type: string
+                            stock:
+                              type: boolean
                         company:
                           type: integer
                         company_:
                           type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        end_date:
-                          type: string
-                          format: date
+                          properties:
+                            label:
+                              type: string
+                            value:
+                              type: integer
                         id:
                           type: integer
                         name:
                           type: string
-                        post_move_sequence:
+                        parent:
                           type: integer
-                        post_move_sequence_:
+                        parent_: 
                           type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        start_date:
+                        rec_name:
                           type: string
-                          format: date
-                        state:
+                        sequence:
+                          type: integer
+                        statement: 
                           type: string
-                        type:
-                          type: string
+                        stock:
+                          type: boolean
                     errors:
                       type: object
                     pagination:
@@ -73,24 +126,49 @@ get:
                       nullable: true
               example:
                 data:
+                  childs:
+                  - childs:
+                    - childs: []
+                      company: 1
+                      company_:
+                        label: Party 1
+                        value: 1
+                      id: 7
+                      name: Long-term
+                      parent: 2
+                      parent_:
+                        label: Minimal Account Type Chart\Asset
+                        value: 2
+                      rec_name: Minimal Account Type Chart\Asset\Long-term
+                      sequence: 20
+                      statement: balance
+                      stock: false
+                    company: 1
+                    company_:
+                      label: Party 1
+                      value: 1
+                    id: 2
+                    name: Asset
+                    parent: 1
+                    parent_:
+                      label: Minimal Account Type Chart
+                      value: 1
+                    rec_name: Minimal Account Type Chart\Asset
+                    sequence: 10
+                    statement: balance
+                    stock: false
                   company: 1
                   company_:
                     label: Party 1
                     value: 1
-                  end_date: '2024-02-29'
-                  fiscalyear: 2
-                  fiscalyear_:
-                    label: '2024'
-                    value: 2
-                  id: 14
-                  name: "2024-02"
-                  post_move_sequence: 4
-                  post_move_sequence_:
-                    label: '2024'
-                    value: 4
-                  start_date: '2024-02-01'
-                  state: "open"
-                  type: "standard"
+                  id: 1
+                  name: Minimal Account Type Chart
+                  parent: 
+                  parent_: {}
+                  rec_name: Minimal Account Type Chart
+                  sequence: 10
+                  statement: 
+                  stock: false
                 error: null
                 pagination: null
                 status: 200
@@ -114,10 +192,10 @@ get:
 
 put:
       tags:
-        - fiscal period
-      summary: Update a fiscal period.
-      description: Update a fiscal period.
-      operationId: updateFiscalPeriodById
+        - account type
+      summary: Update an account type.
+      description: Update an account type.
+      operationId: updateAccountTypeById
       parameters:
         - name: obj_id
           rquired: true
@@ -131,7 +209,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateFiscalPeriod'
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateAccountType'
       responses:
         '200':
           description: OK
@@ -142,24 +220,89 @@ put:
                     data:
                       type: object
                       properties:
+                        childs:
+                          type: array
+                          properties:
+                            childs:
+                              type: array
+                              properties:
+                                childs:
+                                  type: array
+                                company:
+                                  type: integer
+                                company_:
+                                  type: object
+                                  properties:
+                                    label:
+                                      type: string
+                                    value:
+                                      type: integer
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                                parent:
+                                  type: integer
+                                parent_: 
+                                  type: object
+                                rec_name:
+                                  type: string
+                                sequence:
+                                  type: integer
+                                statement: 
+                                  type: string
+                                stock:
+                                  type: boolean
+                            company:
+                              type: integer
+                            company_:
+                              type: object
+                              properties:
+                                label:
+                                  type: string
+                                value:
+                                  type: integer
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                            parent:
+                              type: integer
+                            parent_: 
+                              type: object
+                            rec_name:
+                              type: string
+                            sequence:
+                              type: integer
+                            statement: 
+                              type: string
+                            stock:
+                              type: boolean
                         company:
                           type: integer
-                        end_date:
-                          type: string
-                          format: date
-                        fiscalyear:
+                        company_:
+                          type: object
+                          properties:
+                            label:
+                              type: string
+                            value:
+                              type: integer
+                        id:
                           type: integer
                         name:
                           type: string
-                        post_move_sequence:
+                        parent:
                           type: integer
-                        start_date:
+                        parent_: 
+                          type: object
+                        rec_name:
                           type: string
-                          format: date
-                        state:
+                        sequence:
+                          type: integer
+                        statement: 
                           type: string
-                        type:
-                          type: string
+                        stock:
+                          type: boolean
                     errors:
                       type: object
                     pagination:
@@ -180,21 +323,49 @@ put:
                       type: string
               example:
                 data:
+                  childs:
+                  - childs:
+                    - childs: []
+                      company: 1
+                      company_:
+                        label: Party 1
+                        value: 1
+                      id: 7
+                      name: Long-term
+                      parent: 2
+                      parent_:
+                        label: Minimal Account Type Chart\Asset
+                        value: 2
+                      rec_name: Minimal Account Type Chart\Asset\Long-term
+                      sequence: 20
+                      statement: balance
+                      stock: false
+                    company: 1
+                    company_:
+                      label: Party 1
+                      value: 1
+                    id: 2
+                    name: Asset
+                    parent: 1
+                    parent_:
+                      label: Minimal Account Type Chart
+                      value: 1
+                    rec_name: Minimal Account Type Chart\Asset
+                    sequence: 10
+                    statement: balance
+                    stock: false
                   company: 1
                   company_:
-                    label: "Party 1"
+                    label: Party 1
                     value: 1
-                  end_date: "2024-12-31"
-                  fiscalyear: 2
-                  id: 2
-                  name: "2024"
-                  post_move_sequence: 4
-                  post_move_sequence_:
-                    label: "2024"
-                    value: 4
-                  start_date: "2024-01-01"
-                  state: "open"
-                  type: "standard"
+                  id: 1
+                  name: Minimal Account Type Chart
+                  parent: 
+                  parent_: {}
+                  rec_name: Minimal Account Type Chart
+                  sequence: 10
+                  statement: 
+                  stock: false
                 errors: null
                 pagination: null
                 status: 200

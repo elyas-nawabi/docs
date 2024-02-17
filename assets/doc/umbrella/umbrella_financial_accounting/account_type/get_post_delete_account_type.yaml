@@ -1,9 +1,9 @@
     get:
       tags:
-        - fiscal period
-      summary: Get list of fiscal period.
-      description: Get list of fiscal period.
-      operationId: getFiscalPeriod
+        - account type
+      summary: Get list of account types.
+      description: Get list of account types.
+      operationId: getAccountType
       responses:
         '200':
           description: OK
@@ -15,14 +15,15 @@
                     data:
                       type: array
                       properties:
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        state:
-                          type: string
-                        type:
-                          type: string
+                          company: 
+                            type: integer
+                          company_:
+                            label:
+                              type: string
+                            value:
+                              type: integer 
+                          id: 1
+                          rec_name: Minimal Account Type Chart
                     errors:
                       type: object
                     pagination:
@@ -42,10 +43,12 @@
                       nullable: true
               example:
                 data:
-                  - id: 2
-                    name: "2024"
-                    state: "open"
-                    type: "standard"
+                  - company: 1
+                    company_:
+                      label: Party 1
+                      value: 1
+                    id: 1
+                    rec_name: Minimal Account Type Chart
                 errors: null
                 pagination:
                   page: 1
@@ -66,17 +69,17 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     post:
       tags:
-        - fiscal period
-      summary: Create a fiscal period.
-      description: Create a fiscal period.
-      operationId: postFiscalPeriodById
+        - account type
+      summary: Create a account type.
+      description: Create a account type.
+      operationId: postAccountTypeById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateFiscalPeriod'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateAccountType'
       responses:
         '201':
           description: Created
@@ -88,65 +91,89 @@
                     data: 
                       type: object
                       properties:
-                        company:
-                          type: integer
-                        company_:
-                          type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        end_date:
-                          type: string
-                          format: date
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        periods:
+                        childs:
                           type: array
                           properties:
+                            childs:
+                              type: array
+                              properties:
+                                childs:
+                                  type: array
+                                company:
+                                  type: integer
+                                company_:
+                                  type: object
+                                  properties:
+                                    label:
+                                      type: string
+                                    value:
+                                      type: integer
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                                parent:
+                                  type: integer
+                                parent_: 
+                                  type: object
+                                rec_name:
+                                  type: string
+                                sequence:
+                                  type: integer
+                                statement: 
+                                  type: string
+                                stock:
+                                  type: boolean
                             company:
                               type: integer
                             company_:
                               type: object
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            end_date:
-                              type: string
-                              format: date
+                              properties:
+                                label:
+                                  type: string
+                                value:
+                                  type: integer
                             id:
                               type: integer
                             name:
                               type: string
-                            post_move_sequence:
+                            parent:
                               type: integer
-                            post_move_sequence_:
+                            parent_: 
                               type: object
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            start_date:
+                            rec_name:
                               type: string
-                              format: date
-                            state:
+                            sequence:
+                              type: integer
+                            statement: 
                               type: string
-                        post_move_sequence:
+                            stock:
+                              type: boolean
+                        company:
                           type: integer
-                        post_move_sequence_:
+                        company_:
                           type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        start_date:
+                          properties:
+                            label:
+                              type: string
+                            value:
+                              type: integer
+                        id:
+                          type: integer
+                        name:
                           type: string
-                          format: date
-                        state:
+                        parent:
+                          type: integer
+                        parent_: 
+                          type: object
+                        rec_name:
                           type: string
+                        sequence:
+                          type: integer
+                        statement: 
+                          type: string
+                        stock:
+                          type: boolean
                     errors:
                       type: object
                     pagination:
@@ -165,35 +192,49 @@
                       type: string
               example:
                 data:
+                  childs:
+                  - childs:
+                    - childs: []
+                      company: 1
+                      company_:
+                        label: Party 1
+                        value: 1
+                      id: 7
+                      name: Long-term
+                      parent: 2
+                      parent_:
+                        label: Minimal Account Type Chart\Asset
+                        value: 2
+                      rec_name: Minimal Account Type Chart\Asset\Long-term
+                      sequence: 20
+                      statement: balance
+                      stock: false
+                    company: 1
+                    company_:
+                      label: Party 1
+                      value: 1
+                    id: 2
+                    name: Asset
+                    parent: 1
+                    parent_:
+                      label: Minimal Account Type Chart
+                      value: 1
+                    rec_name: Minimal Account Type Chart\Asset
+                    sequence: 10
+                    statement: balance
+                    stock: false
                   company: 1
                   company_:
-                    label: "Party 1"
+                    label: Party 1
                     value: 1
-                  end_date: "2024-12-31"
-                  id: 2
-                  name: "2024"
-                  periods:
-                    - company: 1
-                      company_:
-                        label: "Party 1"
-                        value: 1
-                      end_date: "2024-01-31"
-                      fiscalyear: 2
-                      id: 13
-                      name: "2024-01"
-                      post_move_sequence: 4
-                      post_move_sequence_:
-                        label: "2024"
-                        value: 4
-                      start_date: "2024-01-01"
-                      state: "open"
-                      type: "standard"
-                  post_move_sequence: 4
-                  post_move_sequence_:
-                    label: "2024"
-                    value: 4
-                  start_date: "2024-01-01"
-                  state: "open"
+                  id: 1
+                  name: Minimal Account Type Chart
+                  parent: 
+                  parent_: {}
+                  rec_name: Minimal Account Type Chart
+                  sequence: 10
+                  statement: 
+                  stock: false
                 errors: null
                 pagination: null
                 status: 200
@@ -210,10 +251,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
-        - fiscal period
-      summary: Delete fiscal period.
-      description: Delete fiscal period.
-      operationId: deleteFiscalPeriodById
+        - account type
+      summary: Delete account types.
+      description: Delete account types.
+      operationId: deleteAccountTypeById
       requestBody:
         required: true
         content:
