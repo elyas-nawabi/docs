@@ -91,6 +91,12 @@ tags:
     description: organization - organization data management.
   - name: region
     description: region - region data management.
+  - name: configuration
+    description: configuration - configuration data management.
+  - name: account
+    description: account - account data management.
+  - name: account type
+    description: account type - account type data management.
 paths:
   '/currency/currencies':
     $ref: 'umbrella/umbrella_currency/currency/get_post_delete_currency.yaml'
@@ -114,6 +120,8 @@ paths:
     $ref: 'umbrella/umbrella_financial_accounting/account/get_put_account_by_id.yaml'
   '/financial-accounting/account-types':
     $ref: 'umbrella/umbrella_financial_accounting/account_type/get_post_delete_account_type.yaml'
+  '/financial-accounting/configurations':
+    $ref: 'umbrella/umbrella_financial_accounting/configuration/get_put_configuration.yaml'
   '/financial-accounting/account-types/{obj_id}':
     $ref: 'umbrella/umbrella_financial_accounting/account_type/get_put_account_type_by_id.yaml'
   '/login':
@@ -190,6 +198,8 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account-type.yaml'
     UpdateAccountType:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account-type.yaml'
+    UpdateConfiguration:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-configuration.yaml'
     CreateJournal:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-journal.yaml'
     UpdateJournal:
