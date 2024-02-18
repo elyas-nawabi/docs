@@ -97,6 +97,8 @@ tags:
     description: account - account data management.
   - name: account type
     description: account type - account type data management.
+  - name: account move line
+    description: account move line - account move line data management.
 paths:
   '/currency/currencies':
     $ref: 'umbrella/umbrella_currency/currency/get_post_delete_currency.yaml'
@@ -124,6 +126,12 @@ paths:
     $ref: 'umbrella/umbrella_financial_accounting/configuration/get_put_configuration.yaml'
   '/financial-accounting/account-types/{obj_id}':
     $ref: 'umbrella/umbrella_financial_accounting/account_type/get_put_account_type_by_id.yaml'
+  '/financial-accounting/account_move_line':
+    $ref: 'umbrella/umbrella_financial_accounting/account_move_line/get_post_delete_account_move_line.yaml'
+  '/financial-accounting/journals':
+    $ref: 'umbrella/umbrella_financial_accounting/journal/get_post_delete_journal.yaml'
+  '/financial-accounting/journals/{obj_id}':
+    $ref: 'umbrella/umbrella_financial_accounting/journal/get_put_journal_by_id.yaml'
   '/login':
     $ref: 'umbrella/umbrella/auth/post_auth.yaml'
   '/party/parties':
@@ -220,6 +228,10 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-write-off.yaml'
     UpdateWriteOff:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/update-write-off.yaml'
+    CreateAccountMoveLine:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account-move-line.yaml'
+    UpdateAccountMoveLine:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account-move-line.yaml'
     CreateAuth:
       $ref: 'umbrella/schemas/umbrella/create-auth.yaml'
     CreateParty:
