@@ -1,54 +1,26 @@
       properties:
-        company:
-          type: integer
-        end_date:
+        active:
+          type: boolean
+        code:
           type: string
-          format: date
+        matching_sequence:
+          type: integer
         name:
           type: string
-        post_move_sequence:
-          type: integer
-        start_date:
+        rec_name:
           type: string
-          format: date
-        periods:
-          type: array
-          properties:
-            end_date:
-              type: string
-              format: date
-            name:
-              type: string
-            post_move_sequence:
-              type: integer
-            start_date:
-              type: string
-              format: date
-            state:
-              type: string
-            type:
-              type: string
-        state:
+        sequence: 
           type: string
-  
+        type: 
+          type: string
       required:
-        - end_date
-        - start_date
         - name
-        - post_move_sequence
-        - start_date
-        - state
+        - type
       example:
-        company: 1
-        end_date: "2029-12-31"
-        name: "2027"
-        periods:
-          - end_date: "2029-12-31"
-            name: "2024-01"
-            post_move_sequence: 9
-            start_date: "2029-01-01"
-            state: "open"
-            type: "standard"
-        post_move_sequence: 7
-        start_date: "2029-01-01"
-        state: "open"
+        active: true
+        code: REV
+        matching_sequence: 
+        name: Revenue
+        rec_name: Revenue
+        sequence: 2
+        type: revenue

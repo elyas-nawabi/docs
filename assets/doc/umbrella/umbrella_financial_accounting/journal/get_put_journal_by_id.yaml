@@ -1,9 +1,9 @@
 get:
       tags:
-        - fiscal period
-      summary: Get one fiscal period.
-      description: Get one fiscal period.
-      operationId: getFiscalPeriodById
+        - journal
+      summary: Get one journal.
+      description: Get one journal.
+      operationId: getJournalById
       parameters:
         - name: obj_id
           in: path
@@ -22,35 +22,26 @@ get:
                     data:
                       type: object
                       properties:
-                        company:
-                          type: integer
-                        company_:
-                          type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        end_date:
+                        active:
+                          type: boolean
+                        code:
                           type: string
-                          format: date
                         id:
+                          type: integer
+                        matching_sequence:
                           type: integer
                         name:
                           type: string
-                        post_move_sequence:
-                          type: integer
-                        post_move_sequence_:
-                          type: object
+                        rec_name:
+                          type: string
+                        sequence: 
+                          type: string
+                        sequence_:
                           label:
                             type: string
                           value:
                             type: integer
-                        start_date:
-                          type: string
-                          format: date
-                        state:
-                          type: string
-                        type:
+                        type: 
                           type: string
                     errors:
                       type: object
@@ -73,24 +64,17 @@ get:
                       nullable: true
               example:
                 data:
-                  company: 1
-                  company_:
-                    label: Party 1
-                    value: 1
-                  end_date: '2024-02-29'
-                  fiscalyear: 2
-                  fiscalyear_:
-                    label: '2024'
+                  active: true
+                  code: REV
+                  id: 1
+                  matching_sequence: 
+                  name: Revenue
+                  rec_name: Revenue
+                  sequence: 2
+                  sequence_:
+                    label: Default Account Journal
                     value: 2
-                  id: 14
-                  name: "2024-02"
-                  post_move_sequence: 4
-                  post_move_sequence_:
-                    label: '2024'
-                    value: 4
-                  start_date: '2024-02-01'
-                  state: "open"
-                  type: "standard"
+                  type: revenue
                 error: null
                 pagination: null
                 status: 200
@@ -114,10 +98,10 @@ get:
 
 put:
       tags:
-        - fiscal period
-      summary: Update a fiscal period.
-      description: Update a fiscal period.
-      operationId: updateFiscalPeriodById
+        - journal
+      summary: Update a journal.
+      description: Update a journal.
+      operationId: updateJournalById
       parameters:
         - name: obj_id
           rquired: true
@@ -131,7 +115,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateFiscalPeriod'
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateJournal'
       responses:
         '200':
           description: OK
@@ -142,23 +126,26 @@ put:
                     data:
                       type: object
                       properties:
-                        company:
-                          type: integer
-                        end_date:
+                        active:
+                          type: boolean
+                        code:
                           type: string
-                          format: date
-                        fiscalyear:
+                        id:
+                          type: integer
+                        matching_sequence:
                           type: integer
                         name:
                           type: string
-                        post_move_sequence:
-                          type: integer
-                        start_date:
+                        rec_name:
                           type: string
-                          format: date
-                        state:
+                        sequence: 
                           type: string
-                        type:
+                        sequence_:
+                          label:
+                            type: string
+                          value:
+                            type: integer
+                        type: 
                           type: string
                     errors:
                       type: object
@@ -180,21 +167,17 @@ put:
                       type: string
               example:
                 data:
-                  company: 1
-                  company_:
-                    label: "Party 1"
-                    value: 1
-                  end_date: "2024-12-31"
-                  fiscalyear: 2
-                  id: 2
-                  name: "2024"
-                  post_move_sequence: 4
-                  post_move_sequence_:
-                    label: "2024"
-                    value: 4
-                  start_date: "2024-01-01"
-                  state: "open"
-                  type: "standard"
+                  active: true
+                  code: REV
+                  id: 1
+                  matching_sequence: 
+                  name: Revenue
+                  rec_name: Revenue
+                  sequence: 2
+                  sequence_:
+                    label: Default Account Journal
+                    value: 2
+                  type: revenue
                 errors: null
                 pagination: null
                 status: 200
