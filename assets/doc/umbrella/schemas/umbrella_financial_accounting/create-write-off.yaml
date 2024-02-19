@@ -1,35 +1,30 @@
       properties:
+        active:
+          type: boolean
         company:
           type: integer
-        end_date:
-          type: string
-          format: date
-        fiscalyear:
+        credit_account: 
           type: integer
-        name:
-          type: string
-        post_move_sequence:
+        debit_account: 
           type: integer
-        start_date:
+        journal: 
+          type: integer
+        name:  
           type: string
-          format: date
-        state:
-          type: string
-        type:
+        rec_name:  
           type: string
       required:
-        - end_date
-        - start_date
+        - company
+        - credit_account
+        - debit_account
         - name
-        - start_date
-        - state
-        - type
+        - journal
+       
       example:
+        active: true
         company: 1
-        end_date: "2029-12-31"
-        fiscalyear: 2
-        name: "2027"
-        post_move_sequence: 7
-        start_date: "2029-01-01"
-        state: "open"
-        type: "standard"
+        credit_account: 2
+        debit_account: 2
+        journal: 6
+        name: wr1
+        rec_name: wr1
