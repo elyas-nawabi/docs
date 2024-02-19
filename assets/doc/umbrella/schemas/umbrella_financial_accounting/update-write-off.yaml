@@ -1,54 +1,31 @@
       properties:
+        active:
+          type: boolean
         company:
           type: integer
-        end_date:
-          type: string
-          format: date
-        name:
-          type: string
-        post_move_sequence:
+        credit_account: 
           type: integer
-        start_date:
+        debit_account: 
+          type: integer
+        journal: 
+          type: integer
+        name:  
           type: string
-          format: date
-        periods:
-          type: array
-          properties:
-            end_date:
-              type: string
-              format: date
-            name:
-              type: string
-            post_move_sequence:
-              type: integer
-            start_date:
-              type: string
-              format: date
-            state:
-              type: string
-            type:
-              type: string
-        state:
+        rec_name:  
           type: string
-  
+          
       required:
-        - end_date
-        - start_date
+        - company
+        - credit_account
+        - debit_account
         - name
-        - post_move_sequence
-        - start_date
-        - state
+        - journal
+       
       example:
+        active: true
         company: 1
-        end_date: "2029-12-31"
-        name: "2027"
-        periods:
-          - end_date: "2029-12-31"
-            name: "2024-01"
-            post_move_sequence: 9
-            start_date: "2029-01-01"
-            state: "open"
-            type: "standard"
-        post_move_sequence: 7
-        start_date: "2029-01-01"
-        state: "open"
+        credit_account: 2
+        debit_account: 2
+        journal: 6
+        name: wr1
+        rec_name: wr1

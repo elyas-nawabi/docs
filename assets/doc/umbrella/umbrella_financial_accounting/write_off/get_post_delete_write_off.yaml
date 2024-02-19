@@ -1,9 +1,9 @@
     get:
       tags:
-        - fiscal period
-      summary: Get list of fiscal period.
-      description: Get list of fiscal period.
-      operationId: getFiscalPeriod
+        - write off
+      summary: Get list of write offs.
+      description: Get list of write offs.
+      operationId: getWriteOffs
       responses:
         '200':
           description: OK
@@ -15,14 +15,30 @@
                     data:
                       type: array
                       properties:
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        state:
-                          type: string
-                        type:
-                          type: string
+                          company:
+                            type: integer
+                          company_:
+                            type: object
+                            properties:
+                              label:
+                                type: string
+                              value:
+                                type: integer
+                          id: 
+                            type: integer
+                          journal: 
+                            type: integer
+                          journal_:
+                            type: object
+                            properties:
+                              label: 
+                                type: string
+                              value: 
+                                type: integer
+                          name: 
+                            type: string
+                          rec_name: 
+                            type: string
                     errors:
                       type: object
                     pagination:
@@ -42,10 +58,17 @@
                       nullable: true
               example:
                 data:
-                  - id: 2
-                    name: "2024"
-                    state: "open"
-                    type: "standard"
+                  - company: 1
+                    company_:
+                      label: Party 1
+                      value: 1
+                    id: 1
+                    journal: 6
+                    journal_:
+                      label: Currency Exchange
+                      value: 6
+                    name: wr1
+                    rec_name: wr1
                 errors: null
                 pagination:
                   page: 1
@@ -66,17 +89,17 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     post:
       tags:
-        - fiscal period
-      summary: Create a fiscal period.
-      description: Create a fiscal period.
-      operationId: postFiscalPeriodById
+        - write off
+      summary: Create a write off.
+      description: Create a write off.
+      operationId: postWriteOffById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateFiscalPeriod'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateWriteOff'
       responses:
         '201':
           description: Created
@@ -88,64 +111,19 @@
                     data: 
                       type: object
                       properties:
+                        active:
+                          type: boolean
                         company:
                           type: integer
-                        company_:
-                          type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        end_date:
-                          type: string
-                          format: date
-                        id:
+                        credit_account: 
                           type: integer
-                        name:
-                          type: string
-                        periods:
-                          type: array
-                          properties:
-                            company:
-                              type: integer
-                            company_:
-                              type: object
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            end_date:
-                              type: string
-                              format: date
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                            post_move_sequence:
-                              type: integer
-                            post_move_sequence_:
-                              type: object
-                              label:
-                                type: string
-                              value:
-                                type: integer
-                            start_date:
-                              type: string
-                              format: date
-                            state:
-                              type: string
-                        post_move_sequence:
+                        debit_account: 
                           type: integer
-                        post_move_sequence_:
-                          type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        start_date:
+                        journal: 
+                          type: integer
+                        name:  
                           type: string
-                          format: date
-                        state:
+                        rec_name:  
                           type: string
                     errors:
                       type: object
@@ -165,35 +143,26 @@
                       type: string
               example:
                 data:
+                  active: true
                   company: 1
                   company_:
-                    label: "Party 1"
+                    label: Party 1
                     value: 1
-                  end_date: "2024-12-31"
-                  id: 2
-                  name: "2024"
-                  periods:
-                    - company: 1
-                      company_:
-                        label: "Party 1"
-                        value: 1
-                      end_date: "2024-01-31"
-                      fiscalyear: 2
-                      id: 13
-                      name: "2024-01"
-                      post_move_sequence: 4
-                      post_move_sequence_:
-                        label: "2024"
-                        value: 4
-                      start_date: "2024-01-01"
-                      state: "open"
-                      type: "standard"
-                  post_move_sequence: 4
-                  post_move_sequence_:
-                    label: "2024"
-                    value: 4
-                  start_date: "2024-01-01"
-                  state: "open"
+                  credit_account: 2
+                  credit_account_:
+                    label: Main Cash
+                    value: 2
+                  debit_account: 2
+                  debit_account_:
+                    label: Main Cash
+                    value: 2
+                  id: 1
+                  journal: 6
+                  journal_:
+                    label: Currency Exchange
+                    value: 6
+                  name: wr1
+                  rec_name: wr1
                 errors: null
                 pagination: null
                 status: 200
@@ -210,10 +179,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     delete:
       tags:
-        - fiscal period
-      summary: Delete fiscal period.
-      description: Delete fiscal period.
-      operationId: deleteFiscalPeriodById
+        - write off
+      summary: Delete write off.
+      description: Delete write off.
+      operationId: deleteWriteOffById
       requestBody:
         required: true
         content:

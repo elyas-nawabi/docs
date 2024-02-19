@@ -99,6 +99,8 @@ tags:
     description: account type - account type data management.
   - name: account move line
     description: account move line - account move line data management.
+  - name: write off
+    description: write_off - write_off data management.
 paths:
   '/currency/currencies':
     $ref: 'umbrella/umbrella_currency/currency/get_post_delete_currency.yaml'
@@ -132,6 +134,12 @@ paths:
     $ref: 'umbrella/umbrella_financial_accounting/journal/get_post_delete_journal.yaml'
   '/financial-accounting/journals/{obj_id}':
     $ref: 'umbrella/umbrella_financial_accounting/journal/get_put_journal_by_id.yaml'
+  '/financial-accounting/journals-periods':
+    $ref: 'umbrella/umbrella_financial_accounting/journal_period/get_post_delete_journal_period.yaml'
+  '/financial-accounting/write-offs':
+    $ref: 'umbrella/umbrella_financial_accounting/write_off/get_post_delete_write_off.yaml'
+  '/financial-accounting/write-offs/{obj_id}':
+    $ref: 'umbrella/umbrella_financial_accounting/write_off/get_put_write_off_by_id.yaml'
   '/login':
     $ref: 'umbrella/umbrella/auth/post_auth.yaml'
   '/party/parties':
