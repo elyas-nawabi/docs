@@ -165,11 +165,12 @@
                         currency_exchange_journal: 
                           type: integer 
                         currency_exchange_journal_: 
-                          type: integer
-                          label:
-                            type: string
-                          value: 
-                            type: integer 
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         default_account_payable: 
                           type: integer
                         default_account_payable_:
