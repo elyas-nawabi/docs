@@ -13,10 +13,10 @@
                 company_:
                   type: object
                   properties:
-                    label:
-                      type: string
-                    value:
+                    id:
                       type: integer
+                    name:
+                      type: string
                 id:
                   type: integer
                 name:
@@ -38,10 +38,10 @@
             company_:
               type: object
               properties:
-                label:
-                  type: string
-                value:
+                id:
                   type: integer
+                name:
+                  type: string
             id:
               type: integer
             name:
@@ -63,10 +63,10 @@
         company_:
           type: object
           properties:
-            label:
-              type: string
-            value:
+            id:
               type: integer
+            name:
+              type: string
         id:
           type: integer
         name:
@@ -96,36 +96,36 @@
           - childs: []
             company: 1
             company_:
-              label: Party 1
-              value: 1
+              id: 1
+              name: Party 1
             id: 7
             name: Long-term
             parent: 2
             parent_:
-              label: Minimal Account Type Chart\Asset
-              value: 2
+              id: 2
+              name: Minimal Account Type Chart\Asset
             rec_name: Minimal Account Type Chart\Asset\Long-term
             sequence: 20
             statement: balance
             stock: false
           company: 1
           company_:
-            label: Party 1
-            value: 1
+            id: 1
+            name: Party 1
           id: 2
           name: Asset
           parent: 1
           parent_:
-            label: Minimal Account Type Chart
-            value: 1
+            id: 1
+            name: Minimal Account Type Chart
           rec_name: Minimal Account Type Chart\Asset
           sequence: 10
           statement: balance
           stock: false
         company: 1
         company_:
-          label: Party 1
-          value: 1
+          id: 1
+          name: Party 1
         id: 1
         name: Minimal Account Type Chart
         parent: 
