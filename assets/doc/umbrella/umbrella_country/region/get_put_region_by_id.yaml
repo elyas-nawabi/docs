@@ -29,10 +29,10 @@
                       parent:
                         type: integer
                       parent_:
-                        label:
-                          type: string
-                        value:
+                        id:
                           type: integer
+                        name:
+                          type: string
                       subregions:
                         type: array
                         properties:
@@ -47,10 +47,10 @@
                           parent_:
                             type: object
                             properties:
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                           subregions:
                             type: array
                     errors:
@@ -71,16 +71,16 @@
                   name: Africa
                   parent: 1
                   parent_:
-                    label: World
-                    value: 1
+                    id: 1
+                    name: World
                   subregions:
                   - code_numeric: '015'
                     id: 8
                     name: Northern Africa
                     parent: 2
                     parent_:
-                      label: Africa
-                      value: 2
+                      id: 2
+                      name: Africa
                     subregions: []
                 error: null
                 pagination: null
@@ -139,10 +139,10 @@
                     parent:
                       type: integer
                     parent_:
-                      label:
-                        type: string
-                      value:
+                      id:
                         type: integer
+                      name:
+                        type: string
                     subregions:
                       type: array
                       properties:
@@ -157,10 +157,10 @@
                         parent_:
                           type: object
                           properties:
-                            label:
-                              type: string
-                            value:
+                            id:
                               type: integer
+                            name:
+                              type: string
                         subregions:
                           type: array
                   errors:
@@ -181,16 +181,16 @@
                   name: Africa
                   parent: 1
                   parent_:
-                    label: World
-                    value: 1
+                    id: 1
+                    name: World
                   subregions:
                   - code_numeric: '015'
                     id: 8
                     name: Northern Africa
                     parent: 2
                     parent_:
-                      label: Africa
-                      value: 2
+                      id: 2
+                      name: Africa
                     subregions: []
                 error: null
                 pagination: null

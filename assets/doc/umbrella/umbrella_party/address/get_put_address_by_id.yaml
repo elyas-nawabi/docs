@@ -34,10 +34,10 @@
                             address_: 
                               type: object
                               properties:
-                                label: 
-                                  type: string
-                                value: 
+                                id:
                                   type: integer
+                                name:
+                                  type: string
                             id: 
                               type: integer
                             name: 
@@ -47,10 +47,10 @@
                             party_:
                               type: object
                               properties:
-                                label: 
-                                  type: string
-                                value:
+                                id:
                                   type: integer
+                                name:
+                                  type: string
                             type: 
                               type: string
                             value:
@@ -58,8 +58,8 @@
                         country:
                           type: integer
                         country_:
-                          label: "Afghanistan"
-                          value: 1
+                          id: 1
+                          name: "Afghanistan"
                         name: 
                           type: string 
                         id: 
@@ -67,8 +67,8 @@
                         party: 
                           type: integer
                         party_:
-                          label: "Party 1"
-                          value: 1
+                          id: 1
+                          name: "Party 1"
                         party_name:
                           type: string
                         postal_code:
@@ -80,8 +80,8 @@
                         subdivision: 
                           type: integer
                         subdivision_: 
-                          label: "sbd1"
-                          value: 3
+                          id: 3
+                          name: "sbd1"
                     error:
                       type: object
                       nullable: true
@@ -100,34 +100,34 @@
                   contact_mechanisms:
                   - address: 1
                     address_:
-                        label: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
-                        value: 1
+                        id: 1
+                        name: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
                     id: 9
                     name: "suhaib"
                     party: 1
                     party_:
-                        label: "Party 1"
-                        value: 1
+                        id: 1
+                        name: "Party 1"
                     type: "mobile"
                     value: "0771680435"
                   country: 1
                   country_: 
-                      label: "Afghanistan"
-                      value: 1
+                      id: 1
+                      name: "Afghanistan"
                   id: 1
                   name: "ahmad tower"
                   party: 1
                   party_:
-                      label: "Party 1"
-                      value: 1
+                      id: 1
+                      name: "Party 1"
                   party_name: ""
                   postal_code: "1001"
                   sequence: null,
                   street: "street 2"
                   subdivision: 3
                   subdivision_:
-                      label: "sbd1"
-                      value: 3
+                      id: 3
+                      name: "sbd1"
               error: null,
               pagination: null,
               status: 200,
@@ -184,10 +184,10 @@
                             address_: 
                               type: object
                               properties:
-                                label: 
-                                  type: string
-                                value: 
+                                id:
                                   type: integer
+                                name:
+                                  type: string
                             id: 
                               type: integer
                             name: 
@@ -197,10 +197,10 @@
                             party_:
                               type: object
                               properties:
-                                label: 
-                                  type: string
-                                value:
+                                id:
                                   type: integer
+                                name:
+                                  type: string
                             type: 
                               type: string
                             value:
@@ -208,8 +208,8 @@
                         country:
                           type: integer
                         country_:
-                          label: "Afghanistan"
-                          value: 1
+                          id: 1
+                          name: "Afghanistan"
                         name: 
                           type: string 
                         id: 
@@ -217,8 +217,8 @@
                         party: 
                           type: integer
                         party_:
-                          label: "Party 1"
-                          value: 1
+                          id: 1
+                          name: "Party 1"
                         party_name:
                           type: string
                         postal_code:
@@ -230,8 +230,8 @@
                         subdivision: 
                           type: integer
                         subdivision_: 
-                          label: "sbd1"
-                          value: 3
+                          id: 3
+                          name: "sbd1"
                     error:
                       type: object
                       nullable: true
@@ -250,34 +250,34 @@
                   contact_mechanisms:
                     -   address: 1
                         address_:
-                            label: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
-                            value: 1
+                            id: 1
+                            name: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
                         id: 9
                         name: "suhaib"
                         party: 1
                         party_:
-                            label: "Party 1"
-                            value: 1
+                            id: 1
+                            name: "Party 1"
                         type: "mobile"
                         value: "0771680435"
                   country: 1
                   country_: 
-                      label: "Afghanistan"
-                      value: 1
+                      id: 1
+                      name: "Afghanistan"
                   id: 1
                   name: "ahmad tower"
                   party: 1
                   party_:
-                      label: "Party 1"
-                      value: 1
+                      id: 1
+                      name: "Party 1"
                   party_name: ""
                   postal_code: "1001"
                   sequence: null,
                   street: "street 2"
                   subdivision: 3
                   subdivision_:
-                      label: "sbd1"
-                      value: 3
+                      id: 3
+                      name: "sbd1"
               error: null,
               pagination: null,
               status: 200,

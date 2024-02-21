@@ -28,10 +28,10 @@
                           company:
                             type: integer
                           company_:
-                            label:
-                              type: string
-                            value:
+                            id:
                               type: integer
+                            name:
+                              type: string
                           end_date:
                             type: string
                             format: date
@@ -40,10 +40,10 @@
                           party:
                             type: integer
                           party_:
-                            label:
-                              type: string
-                            value:
+                            id:
                               type: integer
+                            name:
+                              type: string
                           start_date:
                             type: string
                             format: date
@@ -56,10 +56,10 @@
                       party:
                         type: integer
                       party_:
-                        label:
-                          type: string
-                        value:
+                        id:
                           type: integer
+                        name:
+                          type: string
                       payable:
                         type: integer
                       payable_today:
@@ -87,22 +87,22 @@
                   employees:
                   - company: 1
                     company_:
-                      label: Party 1
-                      value: 1
+                      id: 1
+                      name: Party 1
                     end_date: '2024-02-29'
                     id: 2
                     party: 24
                     party_:
-                      label: 'Party 13'
-                      value: 24
+                      id: 24
+                      name: 'Party 13'
                     start_date: '2024-02-01'
                     supervisor: 
                     supervisor_: {}
                   id: 1
                   party: 1
                   party_:
-                    label: 'Party 1'
-                    value: 1
+                    id: 1
+                    name: 'Party 1'
                   payable: 0
                   payable_today: 0
                   receivable: 0
@@ -164,10 +164,10 @@
                         company:
                           type: integer
                         company_:
-                          label:
-                            type: string
-                          value:
+                          id:
                             type: integer
+                          name:
+                            type: string
                         end_date:
                           type: string
                           format: date
@@ -176,10 +176,10 @@
                         party:
                           type: integer
                         party_:
-                          label:
-                            type: string
-                          value:
+                          id:
                             type: integer
+                          name:
+                            type: string
                         start_date:
                           type: string
                           format: date
@@ -192,10 +192,10 @@
                     party:
                       type: integer
                     party_:
-                      label:
-                        type: string
-                      value:
+                      id:
                         type: integer
+                      name:
+                        type: string
                     payable:
                       type: integer
                     payable_today:
@@ -228,22 +228,22 @@
                   employees:
                   - company: 1
                     company_:
-                      label: Party 1
-                      value: 1
+                      id: 1
+                      name: Party 1
                     end_date: '2024-02-29'
                     id: 2
                     party: 24
                     party_:
-                      label: 'Party 13'
-                      value: 24
+                      id: 24
+                      name: 'Party 13'
                     start_date: '2024-02-01'
                     supervisor: 
                     supervisor_: {}
                   id: 1
                   party: 1
                   party_:
-                    label: 'Party 1'
-                    value: 1
+                    id: 1
+                    name: 'Party 1'
                   payable: 0
                   payable_today: 0
                   receivable: 0

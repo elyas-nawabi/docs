@@ -30,10 +30,10 @@
                             country:
                               type: integer
                             country_:
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             from_date:
                               type: string
                               format: date
@@ -62,8 +62,8 @@
                   members:
                   - country: 1
                     country_:
-                      label: "Afghanistan"
-                      value: 1
+                      id: 1
+                      name: "Afghanistan"
                     from_date: '2024-02-15'
                     id: 1
                     to_date: '2024-02-20'
@@ -126,10 +126,10 @@
                           country:
                             type: integer
                           country_:
-                            label:
-                              type: string
-                            value:
+                            id:
                               type: integer
+                            name:
+                              type: string
                           from_date:
                             type: string
                             format: date
@@ -163,8 +163,8 @@
                   members:
                   - country: 1
                     country_:
-                      label: "Afghanistan"
-                      value: 1
+                      id: 1
+                      name: "Afghanistan"
                     from_date: '2024-02-15'
                     id: 5
                     to_date: '2024-02-20'

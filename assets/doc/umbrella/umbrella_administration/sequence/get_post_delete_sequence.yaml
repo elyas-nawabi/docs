@@ -48,8 +48,8 @@
                   name: '2024'
                   sequence_type: 3
                   sequence_type_:
-                    label: 'Account Move'
-                    value: 3
+                    id: 3
+                    name: 'Account Move'
                   type: 'incremental'
                 error: null
                 pagination:
@@ -95,10 +95,10 @@
                         company:
                           type: integer
                         company_:
-                          label:
-                            type: string
-                          value:
+                          id:
                             type: integer
+                          name:
+                            type: string
                         id:
                           type: integer
                         name:
@@ -116,10 +116,10 @@
                         sequence_type:
                           type: integer
                         sequence_type_:
-                          label:
-                            type: string
-                          value: 
+                          id:
                             type: integer
+                          name:
+                            type: string
                         suffix:
                           type: string
                         type:
@@ -149,8 +149,8 @@
                   active: true
                   company: 1
                   company_:
-                    label: 'Party 1'
-                    value: 1
+                    id: 1
+                    name: 'Party 1'
                   id: 4
                   name: '2024'
                   number_increment: 1
@@ -160,8 +160,8 @@
                   preview: '1'
                   sequence_type: 3
                   sequence_type_:
-                    label: 'Account Move'
-                    value: 3
+                    id: 3
+                    name: 'Account Move'
                   suffix: ''
                   type: 'incremental'
                 error: null

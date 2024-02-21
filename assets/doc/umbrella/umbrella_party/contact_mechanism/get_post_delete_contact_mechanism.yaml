@@ -20,10 +20,10 @@
                         address_:
                           type: object
                           properties:
-                            label:
-                              type: string
-                            value:
+                            id:
                               type: integer
+                            name:
+                              type: string
                         id:
                           type: integer
                         name: 
@@ -33,10 +33,10 @@
                         party_:
                           type: object
                           properties:
-                            label: 
-                              type: string
-                            value: 
+                            id:
                               type: integer
+                            name:
+                              type: string
                         type:
                           type: string
                         value:
@@ -61,14 +61,14 @@
                 data:
                   address: 2
                   address_:
-                    label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
-                    value: 2
+                    id: 2
+                    name: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
                   id: 2
                   name: "ctm1"
                   party: 1
                   party_:
-                      "label": "Party 1"
-                      "value": 1
+                      "id": 1
+                      "name": "Party 1"
                   type: "phone"
                   value: "8888"
                 errors: null
@@ -119,10 +119,10 @@
                         address_:
                           type: object
                           properties:
-                            label:
-                              type: string
-                            value:
+                            id:
                               type: integer
+                            name:
+                              type: string
                         comment:
                           type: string
                         id:
@@ -136,10 +136,10 @@
                         party_:
                           type: object
                           properties:
-                            label: 
-                              type: string
-                            value: 
+                            id:
                               type: integer
+                            name:
+                              type: string
                         sequence:
                           type: integer
                         type:
@@ -166,15 +166,15 @@
                 active: true
                 address: 2
                 address_:
-                  label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
-                  value: 2
+                  id: 2
+                  name: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
                 comment: "information about contact name"
                 language: "en"
                 name: "ctm1"
                 party: 1
                 party_:
-                    "label": "Party 1"
-                    "value": 1
+                    "id": 1
+                    "name": "Party 1"
                 sequence: 1
                 type: "phone"
                 value: "8888"

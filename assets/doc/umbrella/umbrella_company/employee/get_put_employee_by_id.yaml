@@ -26,10 +26,10 @@
                         company_:
                           type: object
                           properties:
-                            label:
-                              type: string
-                            value:
+                            id:
                               type: integer
+                            name:
+                              type: string
                         end_date:
                           type: string
                           format: date
@@ -40,10 +40,10 @@
                         party_:
                           type: object
                           properties:
-                            label:
-                              type: string
-                            value:
+                            id:
                               type: integer
+                            name:
+                              type: string
                         start_date: 
                           type: string
                           format: date
@@ -66,14 +66,14 @@
                 data:
                   company: 2
                   company_:
-                    label: Party 1
-                    value: 2
+                    id: 2
+                    name: Party 1
                   end_date: '2024-02-13'
                   id: 5
                   party: 1
                   party_:
-                    label: Party 1
-                    value: 1
+                    id: 1
+                    name: Party 1
                   start_date: '2024-02-01'
                   supervisor: 
                   supervisor_: {}
@@ -130,10 +130,10 @@
                     company_:
                       type: object
                       properties:
-                        label:
-                          type: string
-                        value:
+                        id:
                           type: integer
+                        name:
+                          type: string
                     end_date:
                       type: string
                       format: date
@@ -144,10 +144,10 @@
                     party_:
                       type: object
                       properties:
-                        label:
-                          type: string
-                        value:
+                        id:
                           type: integer
+                        name:
+                          type: string
                     start_date: 
                       type: string
                       format: date
@@ -164,14 +164,14 @@
                 data:
                   company: 2
                   company_:
-                    label: Party 1
-                    value: 2
+                    id: 2
+                    name: Party 1
                   end_date: '2024-02-13'
                   id: 5
                   party: 1
                   party_:
-                    label: Party 1
-                    value: 1
+                    id: 1
+                    name: Party 1
                   start_date: '2024-02-01'
                   supervisor: 
                   supervisor_: {}

@@ -28,10 +28,11 @@
                           type: integer
                         currency_:
                           type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         day:
                           type: integer
                         frequency:
@@ -66,8 +67,8 @@
                 - currencies: []
                   currency: 1
                   currency_:
-                    label: "Afghani"
-                    value: 1
+                    id: 1
+                    name: "Afghani"
                   day: 1
                   frequency: "monthly"
                   id: 1
@@ -131,10 +132,11 @@
                           type: integer
                         currency_:
                           type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         day:
                           type: integer
                         frequency:
@@ -169,8 +171,8 @@
                 - currencies: []
                   currency: 1
                   currency_:
-                    label: "Afghani"
-                    value: 1
+                    id: 1
+                    name: "Afghani"
                   day: 1
                   frequency: "monthly"
                   id: 1

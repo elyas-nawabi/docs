@@ -26,10 +26,11 @@ get:
                           type: integer
                         company_:
                           type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         end_date:
                           type: string
                           format: date
@@ -44,10 +45,11 @@ get:
                               type: integer
                             company_:
                               type: object
-                              label:
-                                type: string
-                              value:
+                              properties:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             end_date:
                               type: string
                               format: date
@@ -59,10 +61,11 @@ get:
                               type: integer
                             post_move_sequence_:
                               type: object
-                              label:
-                                type: string
-                              value:
-                                type: integer
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
                             start_date:
                               type: string
                               format: date
@@ -72,10 +75,11 @@ get:
                           type: integer
                         post_move_sequence_:
                           type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         start_date:
                           type: string
                           format: date
@@ -101,31 +105,31 @@ get:
                 data:
                   company: 1
                   company_:
-                    label: "Party 1"
-                    value: 1
+                    id: 1
+                    name: "Party 1"
                   end_date: "2024-12-31"
                   id: 2
                   name: "2024"
                   periods:
                     - company: 1
                       company_:
-                        label: "Party 1"
-                        value: 1
+                        id: 1
+                        name: "Party 1"
                       end_date: "2024-01-31"
                       fiscalyear: 2
                       id: 13
                       name: "2024-01"
                       post_move_sequence: 4
                       post_move_sequence_:
-                        label: "2024"
-                        value: 4
+                        id: 4
+                        name: "2024"
                       start_date: "2024-01-01"
                       state: "open"
                       type: "standard"
                   post_move_sequence: 4
                   post_move_sequence_:
-                    label: "2024"
-                    value: 4
+                    id: 4
+                    name: "2024"
                   start_date: "2024-01-01"
                   state: "open"
                 errors: null
@@ -183,10 +187,11 @@ put:
                           type: integer
                         company_:
                           type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         end_date:
                           type: string
                           format: date
@@ -201,10 +206,11 @@ put:
                               type: integer
                             company_:
                               type: object
-                              label:
-                                type: string
-                              value:
-                                type: integer
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
                             end_date:
                               type: string
                               format: date
@@ -216,10 +222,11 @@ put:
                               type: integer
                             post_move_sequence_:
                               type: object
-                              label:
-                                type: string
-                              value:
-                                type: integer
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
                             start_date:
                               type: string
                               format: date
@@ -229,10 +236,11 @@ put:
                           type: integer
                         post_move_sequence_:
                           type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         start_date:
                           type: string
                           format: date
@@ -258,31 +266,31 @@ put:
                 data:
                   company: 1
                   company_:
-                    label: "Party 1"
-                    value: 1
+                    id: 1
+                    name: "Party 1"
                   end_date: "2024-12-31"
                   id: 2
                   name: "2024"
                   periods:
                     - company: 1
                       company_:
-                        label: "Party 1"
-                        value: 1
+                        id: 1
+                        name: "Party 1"
                       end_date: "2024-01-31"
                       fiscalyear: 2
                       id: 13
                       name: "2024-01"
                       post_move_sequence: 4
                       post_move_sequence_:
-                        label: "2024"
-                        value: 4
+                        id: 4
+                        name: "2024"
                       start_date: "2024-01-01"
                       state: "open"
                       type: "standard"
                   post_move_sequence: 4
                   post_move_sequence_:
-                    label: "2024"
-                    value: 4
+                    id: 4
+                    name: "2024"
                   start_date: "2024-01-01"
                   state: "open"
                 errors: null

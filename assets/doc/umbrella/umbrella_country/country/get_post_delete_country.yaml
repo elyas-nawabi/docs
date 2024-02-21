@@ -99,10 +99,10 @@
                             country:
                               type: integer
                             country_:
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             from_date:
                               type: string
                               format: date
@@ -118,10 +118,10 @@
                           region_:
                             type: object
                             properties:
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                           subdivisions:
                             type: array
                             properties:
@@ -160,16 +160,16 @@
                   members:
                   - country: 1
                     country_:
-                      label: "Afghanistan"
-                      value: 1
+                      id: 1
+                      name: "Afghanistan"
                     from_date: '2024-02-15'
                     id: 1
                     to_date: '2024-02-20'
                   name: Asia
                   region: 5
                   region_:
-                    label: Asia
-                    value: 5
+                    id: 5
+                    name: Asia
                   subdivisions:
                   - active: true
                     code: '10001'
