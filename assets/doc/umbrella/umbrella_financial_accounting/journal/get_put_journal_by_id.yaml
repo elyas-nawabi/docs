@@ -37,10 +37,10 @@ get:
                         sequence: 
                           type: string
                         sequence_:
-                          label:
-                            type: string
-                          value:
+                          id:
                             type: integer
+                          name:
+                            type: string
                         type: 
                           type: string
                     errors:
@@ -72,8 +72,8 @@ get:
                   rec_name: Revenue
                   sequence: 2
                   sequence_:
-                    label: Default Account Journal
-                    value: 2
+                    id: 2
+                    name: Default Account Journal
                   type: revenue
                 error: null
                 pagination: null
@@ -141,10 +141,10 @@ put:
                         sequence: 
                           type: string
                         sequence_:
-                          label:
-                            type: string
-                          value:
+                          id:
                             type: integer
+                          name:
+                            type: string
                         type: 
                           type: string
                     errors:
@@ -175,8 +175,8 @@ put:
                   rec_name: Revenue
                   sequence: 2
                   sequence_:
-                    label: Default Account Journal
-                    value: 2
+                    id: 2
+                    name: Default Account Journal
                   type: revenue
                 errors: null
                 pagination: null
