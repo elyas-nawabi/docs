@@ -28,10 +28,10 @@
                         party_:
                           type: object
                           properties:
-                            label: 
-                              type: string
-                            value:
+                            id:
                               type: integer
+                            name:
+                              type: string
                         party_name:
                           type: string
                         postal_code:
@@ -43,10 +43,10 @@
                         subdivision_:
                           type: object
                           properties:
-                            label: 
-                              type: string
-                            value:
+                            id:
                               type: integer
+                            name:
+                              type: string
                     errors:
                       type: object
                     pagination:
@@ -68,21 +68,21 @@
                 - city: "kabul"
                   country: 1
                   country_:
-                    label: "Afghanistan"
-                    value: 1
+                    id: 1
+                    name: "Afghanistan"
                   id: 1
                   name: "shamali tower"
                   party: 1
                   party_:
-                      label: "Party 1"
-                      value: 1
+                      id: 1
+                      name: "Party 1"
                   party_name: "prt1"
                   postal_code: "1001"
                   street: "2nd street"
                   subdivision: 1
                   subdivision_:
-                    label: "sbd1"
-                    value: 2
+                    id: 2
+                    name: "sbd1"
                 errors: null
                 pagination:
                   page: 1
