@@ -124,8 +124,8 @@
                   name: "testCtg2"
                   parent: 4
                   parent_:
-                    label: "parentCtg"
-                    value: 4
+                    id: 4
+                    name: "parentCtg"
                 errors: null
                 pagination: null
                 status: 201
@@ -137,14 +137,14 @@
                     name: "test1"
                     parent: 6
                     parent_: 
-                        label: "parentctg / testCtg"
-                        value: 6
+                        id: 6
+                        name: "parentctg / testCtg"
                   id: 14
                   name: "testCtg4"
                   parent: 4
                   parent_:
-                    label: "parentCtg"
-                    value: 4
+                    id: 4
+                    name: "parentCtg"
                 errors: null
                 pagination: null
                 status: 201
