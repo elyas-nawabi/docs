@@ -9,7 +9,8 @@
     <link rel="shortcut icon" href='assets/images/tryton-logo.jpg' />
     <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/dropdown.css" />
-    <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
         .topbar{
           display: none !important;
         }
@@ -87,59 +88,84 @@
 
     </script>
      <header>
-      <div class="dropdown">
-        <button class="dropbtn">Currency</button>
-        <div class="dropdown-content">
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/currency/currency.yaml')">Currency</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/scheduled_rate_update/scheduled_rate_update.yaml')">Sheduled_rate_update</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Financial-accounting</button>
-        <div class="dropdown-content">
-          <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account/account.yaml')">Account</a>
-          <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_move_line/account_move_line.yaml')">Account_move_line</a>
-          <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_type/account_type.yaml')">Account_type</a>
-          <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/configuration/configuration.yaml')">Configuration</a>
-          <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/fiscal_year/fiscal_year.yaml')">Fiscal_year</a>
-          <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/fiscal_period/fiscal_period.yaml')">Fiscal_period</a>
-          <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/journal/journal.yaml')">Journal</a>
-          <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/journal_period/journal_period.yaml')">Journal_period</a>
-          <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/write_off/write_off.yaml')">Write_off</a>
-          <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/tax/tax.yaml')">Tax</a>
-
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Administration</button>
-        <div class="dropdown-content">
+      <div class="topnav" id="myTopnav">
+        <div class="dropdown">
+          <button class="dropbtn">Currency 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#"
+            onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/currency/currency.yaml')"
+            >
+            Currency
+            </a>
+            <a href="#"
+            onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/scheduled_rate_update/scheduled_rate_update.yaml')"
+            >
+            Scheduled Rate Update
+            </a>
+          </div>
+        </div> 
+        <div class="dropdown">
+          <button class="dropbtn">Financial Accounting 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account/account.yaml')">Account</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_move_line/account_move_line.yaml')">Account Movel Line</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_type/account_type.yaml')">Account Type</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/configuration/configuration.yaml')">Configuration</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/fiscal_year/fiscal_year.yaml')">Fiscal Year</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/fiscal_period/fiscal_period.yaml')">Fiscal Period</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/journal/journal.yaml')">Journal</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/journal_period/journal_period.yaml')">Journal Period</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/write_off/write_off.yaml')">Write Off</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/tax/tax.yaml')">Tax</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/tax_code/tax_code.yaml')">Tax Code</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/tax_group/tax_group.yaml')">Tax Group</a>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/tax_rule/tax_rule.yaml')">Tax Rule</a>
+          </div>
+        </div> 
+        <div class="dropdown">
+          <button class="dropbtn">Administration 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
             <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequence/sequence.yaml')">Sequence</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequence_type/sequence_type.yaml')">Sequence_type</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Company</button>
-        <div class="dropdown-content">
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequence_type/sequence_type.yaml')">Sequence Type</a>
+          </div>
+        </div> 
+        <div class="dropdown">
+          <button class="dropbtn">Company 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
             <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_company/company/company.yaml')">Company</a>
             <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_company/employee/employee.yaml')">Employee</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Country</button>
-        <div class="dropdown-content">
+          </div>
+        </div> 
+        <div class="dropdown">
+          <button class="dropbtn">Country 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
             <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_country/country/country.yaml')">Country</a>
             <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_country/orgainzation/orgainzation.yaml')">Orgainzation</a>
             <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_country/region/region.yaml')">Region</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Party</button>
-        <div class="dropdown-content">
+          </div>
+        </div> 
+        <div class="dropdown">
+          <button class="dropbtn">Party 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
             <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_party/party/party.yaml')">Party</a>
             <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_party/address/address.yaml')">Address</a>
             <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_party/category/category.yaml')">Category</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_party/contact_mechanism/contact_mechanism.yaml')">Contact_mechanism</a>
-        </div>
+            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_party/contact_mechanism/contact_mechanism.yaml')">Contact Mechanism</a>
+          </div>
+        </div> 
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
     </header>
     <div id="tokenBox">
@@ -178,5 +204,16 @@
       "<div style='color:red'> Set Token </div>";
 
     </script>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
   </body>
 </html>

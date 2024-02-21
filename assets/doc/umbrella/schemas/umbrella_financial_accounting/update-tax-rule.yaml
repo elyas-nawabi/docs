@@ -1,54 +1,6 @@
       properties:
-        company:
-          type: integer
-        end_date:
-          type: string
-          format: date
-        name:
-          type: string
-        post_move_sequence:
-          type: integer
-        start_date:
-          type: string
-          format: date
-        periods:
-          type: array
-          properties:
-            end_date:
-              type: string
-              format: date
-            name:
-              type: string
-            post_move_sequence:
-              type: integer
-            start_date:
-              type: string
-              format: date
-            state:
-              type: string
-            type:
-              type: string
-        state:
-          type: string
-  
+        
       required:
-        - end_date
-        - start_date
-        - name
-        - post_move_sequence
-        - start_date
-        - state
+        
       example:
-        company: 1
-        end_date: "2029-12-31"
-        name: "2027"
-        periods:
-          - end_date: "2029-12-31"
-            name: "2024-01"
-            post_move_sequence: 9
-            start_date: "2029-01-01"
-            state: "open"
-            type: "standard"
-        post_move_sequence: 7
-        start_date: "2029-01-01"
-        state: "open"
+        

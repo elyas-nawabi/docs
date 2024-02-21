@@ -62,8 +62,8 @@ tags:
   - name: tax
     description: tax - tax data management.
 paths:
-  '/financial_accounting/taxs':
+  '/financial_accounting/taxes':
     $ref: 'get_post_delete_tax.yaml'
-  '/financial_accounting/taxs/{obj_id}':
+  '/financial_accounting/taxes/{obj_id}':
     $ref: 'get_put_tax_by_id.yaml'
   
