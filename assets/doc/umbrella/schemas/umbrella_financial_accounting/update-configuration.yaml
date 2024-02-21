@@ -13,27 +13,26 @@
           type: integer 
           nullable: true
         currency_exchange_journal_: 
-          type: integer
-          label:
-            type: string
-          value: 
-            type: integer 
+          id:
+            type: integer
+          name:
+            type: string 
         default_account_payable: 
           type: integer
           nullable: true
         default_account_payable_:
-          label: 
+          id:
+              type: integer
+          name:
             type: string
-          value: 
-            type: integer
         default_account_receivable: 
           type: integer
           nullable: true
         default_account_receivable_:
-          label:
-            type: string
-          value: 
+          id:
             type: integer
+          name:
+            type: string
         default_customer_tax_rule:
           type: integer
           nullable: true
@@ -53,10 +52,10 @@
           type: integer
           nullable: true
         reconciliation_sequence_:
-          label:
-            type: string
-          value: 
+          id:
             type: integer
+          name:
+            type: string
         tax_rounding:
           type: string
 
@@ -71,16 +70,16 @@
         currency_exchange_debit_account_: {}
         currency_exchange_journal: 6
         currency_exchange_journal_:
-          label: Currency Exchange
-          value: 6
+          id: 6
+          name: Currency Exchange
         default_account_payable: 4
         default_account_payable_:
-          label: Main Payable
-          value: 4
+          id: 4
+          name: Main Payable
         default_account_receivable: 5
         default_account_receivable_:
-          label: Main Receivable
-          value: 5
+          id: 5
+          name: Main Receivable
         default_customer_tax_rule: null
         default_customer_tax_rule_: {}
         default_supplier_tax_rule: null
@@ -89,6 +88,6 @@
         rec_name: '1'
         reconciliation_sequence: 3
         reconciliation_sequence_:
-          label: Default Account Move Reconciliation
-          value: 3
+          id: 3
+          name: Default Account Move Reconciliation
         tax_rounding: document
