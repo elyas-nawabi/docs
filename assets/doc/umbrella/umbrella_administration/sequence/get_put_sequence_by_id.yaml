@@ -25,10 +25,10 @@
                       company:
                         type: integer
                       company_:
-                        label:
-                          type: string
-                        value:
+                        id:
                           type: integer
+                        name:
+                          type: string
                       id:
                         type: integer
                       name:

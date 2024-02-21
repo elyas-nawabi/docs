@@ -22,10 +22,10 @@
                         party_:
                           type: object
                           properties:
-                            label:
-                              type: string
-                            value: 
+                            id:
                               type: integer
+                            name:
+                              type: string
                     errors:
                       type: object
                     pagination:
@@ -48,8 +48,8 @@
                 - id: 5
                   party: 1
                   party_:
-                    label: Party 1
-                    value: 1
+                    id: 1
+                    name: Party 1
                 error: null
                 pagination:
                   page: 1
