@@ -5,10 +5,10 @@
           type: integer
         currency_:
           type: object
-          label:
-            type: string
-          value:
+          id:
             type: integer
+          name:
+            type: string
         day:
           type: integer
         frequency:
