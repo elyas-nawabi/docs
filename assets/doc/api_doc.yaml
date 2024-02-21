@@ -220,6 +220,10 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-journal.yaml'
     UpdateJournal:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/update-journal.yaml'
+    CreateTax:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax.yaml'
+    UpdateTax:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-tax.yaml'
     CreateTaxCode:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-code.yaml'
     UpdateTaxCode:
