@@ -109,10 +109,10 @@
                             country:
                               type: integer
                             country_: 
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             id: 
                               type: integer
                             name: 
@@ -120,10 +120,10 @@
                             party:
                               type: integer
                             party_: 
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             party_name: 
                               type: string
                             postal_code: 
@@ -135,10 +135,10 @@
                             subdivision:
                               type: integer
                             subdivision_: 
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                         categories:
                           type: integer
                         code:
@@ -156,10 +156,10 @@
                             party: 
                               type: integer
                             party_: 
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             sequence:
                               type: integer
                             type:
@@ -201,22 +201,22 @@
                     contact_mechanisms: []
                     country: 1
                     country_:
-                      label: Afghanistan
-                      value: 1
+                      id: 1
+                      name: Afghanistan
                     id: 3
                     name: herat tower
                     party: 1
                     party_:
-                      label: Party 1
-                      value: 1
+                      id: 1
+                      name: Party 1
                     party_name: prt2
                     postal_code: '1002'
                     sequence: 1
                     street: street 2
                     subdivision: 3
                     subdivision_:
-                      label: sbd1
-                      value: 3
+                      id: 3
+                      name: sbd1
                   categories:
                   - 3
                   code: '01'
@@ -227,8 +227,8 @@
                     name: ctm1
                     party: 14
                     party_:
-                      label: Party 1
-                      value: 1
+                      id: 1
+                      name: Party 1
                     sequence: 1
                     type: phone
                     value: '8888'
