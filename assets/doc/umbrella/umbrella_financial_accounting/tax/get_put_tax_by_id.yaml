@@ -1,9 +1,9 @@
 get:
       tags:
-        - fiscal period
-      summary: Get one fiscal period.
-      description: Get one fiscal period.
-      operationId: getFiscalPeriodById
+        - tax
+      summary: Get one tax.
+      description: Get one tax.
+      operationId: getTaxById
       parameters:
         - name: obj_id
           in: path
@@ -22,36 +22,7 @@ get:
                     data:
                       type: object
                       properties:
-                        company:
-                          type: integer
-                        company_:
-                          type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        end_date:
-                          type: string
-                          format: date
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        post_move_sequence:
-                          type: integer
-                        post_move_sequence_:
-                          type: object
-                          label:
-                            type: string
-                          value:
-                            type: integer
-                        start_date:
-                          type: string
-                          format: date
-                        state:
-                          type: string
-                        type:
-                          type: string
+                      
                     errors:
                       type: object
                     pagination:
@@ -73,24 +44,7 @@ get:
                       nullable: true
               example:
                 data:
-                  company: 1
-                  company_:
-                    label: Party 1
-                    value: 1
-                  end_date: '2024-02-29'
-                  fiscalyear: 2
-                  fiscalyear_:
-                    label: '2024'
-                    value: 2
-                  id: 14
-                  name: "2024-02"
-                  post_move_sequence: 4
-                  post_move_sequence_:
-                    label: '2024'
-                    value: 4
-                  start_date: '2024-02-01'
-                  state: "open"
-                  type: "standard"
+                  
                 error: null
                 pagination: null
                 status: 200
@@ -114,10 +68,10 @@ get:
 
 put:
       tags:
-        - fiscal period
-      summary: Update a fiscal period.
-      description: Update a fiscal period.
-      operationId: updateFiscalPeriodById
+        - tax
+      summary: Update a tax.
+      description: Update a tax.
+      operationId: updateTaxById
       parameters:
         - name: obj_id
           rquired: true
@@ -131,7 +85,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateFiscalPeriod'
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateTax'
       responses:
         '200':
           description: OK
@@ -142,24 +96,7 @@ put:
                     data:
                       type: object
                       properties:
-                        company:
-                          type: integer
-                        end_date:
-                          type: string
-                          format: date
-                        fiscalyear:
-                          type: integer
-                        name:
-                          type: string
-                        post_move_sequence:
-                          type: integer
-                        start_date:
-                          type: string
-                          format: date
-                        state:
-                          type: string
-                        type:
-                          type: string
+                        
                     errors:
                       type: object
                     pagination:
@@ -180,21 +117,7 @@ put:
                       type: string
               example:
                 data:
-                  company: 1
-                  company_:
-                    label: "Party 1"
-                    value: 1
-                  end_date: "2024-12-31"
-                  fiscalyear: 2
-                  id: 2
-                  name: "2024"
-                  post_move_sequence: 4
-                  post_move_sequence_:
-                    label: "2024"
-                    value: 4
-                  start_date: "2024-01-01"
-                  state: "open"
-                  type: "standard"
+                  
                 errors: null
                 pagination: null
                 status: 200

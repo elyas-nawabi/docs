@@ -59,27 +59,11 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: currency
-    description: currency - currency data management.
+  - name: tax group
+    description: tax group - tax group data management.
 paths:
-  '/currency/currencies':
-    $ref: 'get_post_delete_currency.yaml'
-  '/currency/currencies/{obj_id}':
-    $ref: 'get_put_currency_by_id.yaml'
+  '/financial_accounting/tax-groups':
+    $ref: 'get_post_delete_tax_group.yaml'
+  '/financial_accounting/tax-groups/{obj_id}':
+    $ref: 'get_put_tax_group_by_id.yaml'
   
- 
-    
-components:
-  schemas:
-    CreateCurrency:
-      $ref: '../../schemas/umbrella_currency/create-currency.yaml'
-    UpdateCurrency:
-      $ref: '../../schemas/umbrella_currency/update-currency.yaml'
-  
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
-
-security:
-  - bearerAuth: []
