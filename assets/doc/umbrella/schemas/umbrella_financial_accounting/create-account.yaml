@@ -26,10 +26,10 @@
             company_:
               type: object
               properties:
-                label:
-                  type: string
-                value:
+                id:
                   type: integer
+                name:
+                  type: string
             credit:
               type: number
               format: float
@@ -42,10 +42,10 @@
             currency_:
               type: object
               properties:
-                label: 
-                  type: string
-                value: 
+                id:
                   type: integer
+                name:
+                  type: string
             debit:
               type: integer
             debit_type: 
@@ -76,10 +76,10 @@
             parent_:
               type: object
               properties:
-                label: 
-                  type: string
-                value:
+                id:
                   type: integer
+                name:
+                  type: string
             party_required: 
               type: boolean
             rec_name: 
@@ -106,10 +106,10 @@
             template_:
               type: object
               properties:
-                label:
-                  type: string
-                value:
+                id:
                   type: integer
+                name:
+                  type: string
             template_override:
               type: boolean
             type: 
@@ -117,10 +117,10 @@
             type_:
               type: object
               properties:
-                label:
-                  type: string
-                value:
+                id:
                   type: integer
+                name:
+                  type: string
         closed:
           type: boolean
         code:
@@ -131,10 +131,10 @@
         company_:
           type: object
           properties:
-            label:
-              type: string
-            value:
+            id:
               type: integer
+            name:
+              type: string
         credit:
           type: number
           format: float
@@ -147,10 +147,10 @@
         currency_:
           type: object
           properties:
-            label: 
-              type: string
-            value: 
+            id:
               type: integer
+            name:
+              type: string
         debit:
           type: integer
         debit_type: 
@@ -181,10 +181,10 @@
         parent_:
           type: object
           properties:
-            label: 
-              type: string
-            value:
+            id:
               type: integer
+            name:
+              type: string
         party_required: 
           type: boolean
         rec_name: 
@@ -211,10 +211,10 @@
         template_:
           type: object
           properties:
-            label:
-              type: string
-            value:
+            id:
               type: integer
+            name:
+              type: string
         template_override:
           type: boolean
         type: 
@@ -222,10 +222,10 @@
         type_:
           type: object
           properties:
-            label:
-              type: string
-            value:
+            id:
               type: integer
+            name:
+              type: string
 
       required:
         - company
@@ -246,15 +246,15 @@
           code: 
           company: 1
           company_:
-            label: Party 1
-            value: 1
+            id: 1
+            name: Party 1
           credit: 0
           credit_type: 
           credit_type_: {}
           currency: 1
           currency_:
-            label: Afghani
-            value: 1
+            id: 1
+            name: Afghani
           debit: 0
           debit_type: 
           debit_type_: {}
@@ -269,8 +269,8 @@
           note: 
           parent: 1
           parent_:
-            label: Minimal Account Chart
-            value: 1
+            id: 1
+            name: Minimal Account Chart
           party_required: false
           rec_name: Main Cash
           reconcile: false
@@ -283,26 +283,26 @@
           taxes: []
           template: 6
           template_:
-            label: Main Cash
-            value: 6
+            id: 6
+            name: Main Cash
           template_override: false
           type: 11
           type_:
-            label: Minimal Account Type Chart\Asset\Current\Cash
-            value: 11
+            id: 11
+            name: Minimal Account Type Chart\Asset\Current\Cash
         closed: true
         code: 
         company: 1
         company_:
-          label: Party 1
-          value: 1
+          id: 1
+          name: Party 1
         credit: 0
         credit_type: 
         credit_type_: {}
         currency: 1
         currency_:
-          label: Afghani
-          value: 1
+          id: 1
+          name: Afghani
         debit: 0
         debit_type: 
         debit_type_: {}
@@ -329,10 +329,10 @@
         taxes: []
         template: 1
         template_:
-          label: Minimal Account Chart
-          value: 1
+          id: 1
+          name: Minimal Account Chart
         template_override: false
         type: 1
         type_:
-          label: Minimal Account Type Chart
-          value: 1
+          id: 1
+          name: Minimal Account Type Chart
