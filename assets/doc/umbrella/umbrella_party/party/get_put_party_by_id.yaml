@@ -37,10 +37,10 @@
                             country:
                               type: integer
                             country_:
-                              label: 
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             id:
                               type: integer
                             name: 
@@ -48,10 +48,10 @@
                             party:
                               type: integer
                             party_:
-                              label: 
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             party_name: 
                               type: string
                             postal_code: 
@@ -63,10 +63,10 @@
                             subdivision:
                               type: integer
                             subdivision_:
-                              label: 
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                         categories:
                           properties:
                             childs:
@@ -79,10 +79,10 @@
                             parent:
                               type: integer
                             parent_:
-                              label: 
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                         code: 
                           type: string
                         contact_mechanisms:
@@ -92,10 +92,10 @@
                             address:
                               type: integer
                             address_:
-                              label: 
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             comment: 
                               type: string
                             id:
@@ -107,10 +107,10 @@
                             party:
                               type: integer
                             party_:
-                              label: 
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             sequence:
                               type: integer
                             type: 
@@ -156,45 +156,45 @@
                     contact_mechanisms: []
                     country: 1
                     country_:
-                      label: "Afghanistan"
-                      value: 1
+                      id: 1
+                      name: "Afghanistan"
                     id: 3
                     name: "herat tower"
                     party: 1
                     party_:
-                      label: "Party 1"
-                      value: 1
+                      id: 1
+                      name: "Party 1"
                     party_name: "prt2"
                     postal_code: "1002"
                     sequence: 
                     street: "street 2"
                     subdivision: 3
                     subdivision_:
-                      label: "sbd1"
-                      value: 3
+                      id: 3
+                      name: "sbd1"
                   categories:
                   - childs: []
                     id: 5
                     name: "test1"
                     parent: 4
                     parent_:
-                      label: "parentctg"
-                      value: 4
+                      id: 4
+                      name: "parentctg"
                   code: '1'
                   contact_mechanisms:
                   - active: true
                     address: 2
                     address_:
-                      label: "abcParty, bl1, st12, 1007, Kabul, Afghanistan, 1"
-                      value: 2
+                      id: 2
+                      name: "abcParty, bl1, st12, 1007, Kabul, Afghanistan, 1"
                     comment: 
                     id: 2
                     language: 
                     name: "ctm1"
                     party: 1
                     party_:
-                      label: "Party 1"
-                      value: 1
+                      id: 1
+                      name: "Party 1"
                     sequence: 
                     type: "phone"
                     value: '8888'
@@ -269,10 +269,10 @@
                             country:
                               type: integer
                             country_: 
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             id: 
                               type: integer
                             name: 
@@ -280,10 +280,10 @@
                             party:
                               type: integer
                             party_: 
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             party_name: 
                               type: string
                             postal_code: 
@@ -295,10 +295,10 @@
                             subdivision:
                               type: integer
                             subdivision_: 
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                         categories:
                           type: integer
                         code:
@@ -316,10 +316,10 @@
                             party: 
                               type: integer
                             party_: 
-                              label:
-                                type: string
-                              value:
+                              id:
                                 type: integer
+                              name:
+                                type: string
                             sequence:
                               type: integer
                             type:
@@ -358,22 +358,22 @@
                   contact_mechanisms: []
                   country: 1
                   country_:
-                    label: Afghanistan
-                    value: 1
+                    id: 1
+                    name: Afghanistan
                   id: 3
                   name: herat tower
                   party: 1
                   party_:
-                    label: Party 1
-                    value: 1
+                    id: 1
+                    name: Party 1
                   party_name: prt2
                   postal_code: '1002'
                   sequence: 1
                   street: street 2
                   subdivision: 3
                   subdivision_:
-                    label: sbd1
-                    value: 3
+                    id: 3
+                    name: sbd1
                 categories:
                 - 3
                 code: '01'
@@ -384,8 +384,8 @@
                   name: ctm1
                   party: 14
                   party_:
-                    label: Party 1
-                    value: 1
+                    id: 1
+                    name: Party 1
                   sequence: 1
                   type: phone
                   value: '8888'
