@@ -1,0 +1,58 @@
+post:
+      tags:
+        - auth
+      summary: Create an auth.
+      description: Create an auth.
+      operationId: postAuth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateAuth'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  properties:
+                    data:
+                      properties:
+                        email:
+                          type: string
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        token:
+                          type: string
+                          format: jwt
+                        username:
+                          type: string
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  email: admin@gmail.com
+                  id: 1
+                  name: Administrator
+                  token: ab8197b27e0d4132801ba5b2d50c89e192080b020f0742b4b5c46535e893b3e18b315b70207d4b18a38d818b9045f1afe8a862f4a0d44707b21a301a77a4f3bc
+                  username: admin
+                error: 
+                pagination: 
+                status: 200
+                success_message: Logged in successfully
+        '403':
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP403'
+  

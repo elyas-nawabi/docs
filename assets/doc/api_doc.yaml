@@ -246,6 +246,8 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account-move-line.yaml'
     CreateAuth:
       $ref: 'umbrella/schemas/umbrella/create-auth.yaml'
+    CreateLogout:
+      $ref: 'umbrella/schemas/umbrella/create-logout.yaml'
     CreateParty:
       $ref: 'umbrella/schemas/umbrella_party/create-party.yaml'
     UpdateParty:
