@@ -1,16 +1,16 @@
 post:
       tags:
         - auth
-      summary: Create an auth.
-      description: Create an auth.
-      operationId: postAuth
+      summary: Create a user application user.
+      description: Create a user application user.
+      operationId: postLogin
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateAuth'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateLogin'
       responses:
         '200':
           description: OK

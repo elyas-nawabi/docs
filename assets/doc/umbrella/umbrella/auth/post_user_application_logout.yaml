@@ -4,6 +4,7 @@ post:
       summary: Make logout request.
       description: Make logout request.
       operationId: postLogout
+      
       requestBody:
         required: true
         content:

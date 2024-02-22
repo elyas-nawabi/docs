@@ -19,22 +19,38 @@ post:
               schema:
                   properties:
                     data:
-                      type: string
-                      format: jwt
+                      email: 
+                        type: string
+                      id:
+                        type: integer
+                      name:
+                        type: string
+                      token: 
+                        type: string
+                        format: jwt
+                      username:
+                        type: string
                     errors:
-                      type: object
+                      type: string
+                      nullable: true
                     pagination:
                       type: object
+                      nullable: true
                     status:
                       type: integer
                     success_message:
                       type: string
               example:
-                data: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwibmFtZSI6IkFkbWluaXN0cmF0b3Iif._4_a1NBBiLWBSD4uUlfP1mSQUg6U8Lkss-1W3Xjaaa"
-                errors: null
+                data:
+                  email: admin@gmail.com
+                  id: 1
+                  name: Administrator
+                  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwibmFtZSI6IkFkbWluaXN0cmF0b3IifQ._4_a1NBBiLWBSD4uUlfP1mSQUg6U8Lkss-1W3XjaaaA
+                  username: admin
+                error: null
                 pagination: null
                 status: 200
-                success_message: null
+                success_message: Logged in successfully
         '403':
           content:
             application/json:
