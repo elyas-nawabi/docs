@@ -1,8 +1,8 @@
 post:
       tags:
         - auth
-      summary: Make logout request.
-      description: Make logout request.
+      summary: Logout an application user.
+      description: Logout an application user.
       operationId: postLogout
       
       requestBody:
