@@ -59,10 +59,14 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: login
-    description: login - login data management.
+  - name: auth
+    description: auth - auth data management.
 paths:
   '/jwt/login':
     $ref: 'post_auth.yaml'
+  '/user-application/login':
+    $ref: 'post_user_application_login.yaml'
+  '/user-application/logout':
+    $ref: 'post_user_application_logout.yaml'
  
   

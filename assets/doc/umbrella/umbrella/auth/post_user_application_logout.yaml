@@ -1,0 +1,47 @@
+post:
+      tags:
+        - auth
+      summary: Logout an application user.
+      description: Logout an application user.
+      operationId: postLogout
+      
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateLogout'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  properties:
+                    data:
+                      type: string
+                      nullable: true
+                    errors:
+                      type: string
+                      nullable: true
+                    pagination:
+                      type: string
+                      nullable: true
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data: null
+                error: null
+                pagination: null
+                status: 200
+                success_message: Logged out successfully
+
+        '403':
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP403'
+  

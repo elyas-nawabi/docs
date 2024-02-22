@@ -1,16 +1,16 @@
 post:
       tags:
         - auth
-      summary: Create an auth.
-      description: Create an auth.
-      operationId: postAuth
+      summary: Create a user application user.
+      description: Create a user application user.
+      operationId: postLogin
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateAuth'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateLogin'
       responses:
         '200':
           description: OK
@@ -19,23 +19,22 @@ post:
               schema:
                   properties:
                     data:
-                      email: 
-                        type: string
-                      id:
-                        type: integer
-                      name:
-                        type: string
-                      token: 
-                        type: string
-                        format: jwt
-                      username:
-                        type: string
+                      properties:
+                        email:
+                          type: string
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        token:
+                          type: string
+                          format: jwt
+                        username:
+                          type: string
                     errors:
-                      type: string
-                      nullable: true
+                      type: object
                     pagination:
                       type: object
-                      nullable: true
                     status:
                       type: integer
                     success_message:
@@ -45,10 +44,10 @@ post:
                   email: admin@gmail.com
                   id: 1
                   name: Administrator
-                  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwibmFtZSI6IkFkbWluaXN0cmF0b3IifQ._4_a1NBBiLWBSD4uUlfP1mSQUg6U8Lkss-1W3XjaaaA
+                  token: ab8197b27e0d4132801ba5b2d50c89e192080b020f0742b4b5c46535e893b3e18b315b70207d4b18a38d818b9045f1afe8a862f4a0d44707b21a301a77a4f3bc
                   username: admin
-                error: null
-                pagination: null
+                error: 
+                pagination: 
                 status: 200
                 success_message: Logged in successfully
         '403':
