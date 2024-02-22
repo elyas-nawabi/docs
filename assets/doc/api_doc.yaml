@@ -58,7 +58,7 @@ info:
     email: shadab@gmail.com
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
-# tags:
+tags:
 #   - name: currency
 #     description: currency - currency data management.
 #   - name: scheduled rate update
@@ -67,8 +67,8 @@ servers:
 #     description: fiscal year - fiscal year data management.
 #   - name: fiscal period
 #     description: fiscal period - fiscal period data management.
-#   - name: auth
-#     description: auth - auth data management.
+  - name: auth
+    description: auth - auth data management.
 #   - name: party
 #     description: party - party data management.
 #   - name: category
@@ -101,9 +101,13 @@ servers:
 #     description: account move line - account move line data management.
 #   - name: write off
 #     description: write_off - write_off data management.
-# paths:
-  # '/currency/currencies':
-  #   $ref: 'umbrella/umbrella_currency/currency/get_post_delete_currency.yaml'
+paths:
+  '/jwt/login':
+    $ref: 'umbrella/umbrella/auth/post_auth.yaml'
+  '/user-application/login':
+    $ref: 'umbrella/umbrella/auth/post_user_application_login.yaml'
+  '/user-application/logout':
+    $ref: 'umbrella/umbrella/auth/post_user_application_logout.yaml'
 #   '/currency/currencies/{obj_id}':
 #     $ref: 'umbrella/umbrella_currency/currency/get_put_currency_by_id.yaml'
 #   '/currency/scheduled-rate-updates':

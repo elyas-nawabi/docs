@@ -10,13 +10,13 @@ get:
           schema:
             type: string
           rquired: true
-          example: 1
+          example: currency.cron
         - name: enum_name
           in: path
           schema:
             type: string
           rquired: true
-          example: 1
+          example: frequency
       responses:
         '200':
           description: OK
