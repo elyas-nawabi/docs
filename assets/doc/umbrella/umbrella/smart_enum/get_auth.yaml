@@ -1,43 +1,63 @@
-post:
+get:
       tags:
-        - auth
-      summary: Create an auth.
-      description: Create an auth.
-      operationId: postAuth
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateAuth'
+        - smart enum
+      summary: Get one smart enum.
+      description: Get one smart enum.
+      operationId: getSmartEnumById
+      parameters:
+        - name: model
+          in: path
+          schema:
+            type: string
+          rquired: true
+          example: 1
+        - name: enum_name
+          in: path
+          schema:
+            type: string
+          rquired: true
+          example: 1
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
+                  type: object
                   properties:
                     data:
-                      type: string
-                      format: jwt
-                    errors:
+                      
+                    error:
                       type: object
+                      nullable: true
                     pagination:
                       type: object
+                      nullable: true
                     status:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
-                data: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwibmFtZSI6IkFkbWluaXN0cmF0b3Iif._4_a1NBBiLWBSD4uUlfP1mSQUg6U8Lkss-1W3Xjaaa"
-                errors: null
+                data:
+                  
+                error: null
                 pagination: null
                 status: 200
                 success_message: null
-        '403':
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP403'
-  
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'

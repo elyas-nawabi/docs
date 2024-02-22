@@ -62,8 +62,8 @@ tags:
   - name: write off
     description: write off - write off data management.
 paths:
-  '/financial_accounting/write_offs':
+  '/financial-accounting/write-offs':
     $ref: 'get_post_delete_write_off.yaml'
-  '/financial_accounting/write_offs/{obj_id}':
+  '/financial-accounting/write-offs/{obj_id}':
     $ref: 'get_put_write_off_by_id.yaml'
   

@@ -1,63 +1,63 @@
 openapi: 3.1.0
-info:
-  description: >
-    ## UMBRELLA API Documentation Description:
+# info:
+#   description: >
+#     ## UMBRELLA API Documentation Description:
 
-    Welcome to the official documentation for the UMBRELLA RESTful API. 
+#     Welcome to the official documentation for the UMBRELLA RESTful API. 
 
-    This comprehensive guide is designed to assist developers and integrators, 
+#     This comprehensive guide is designed to assist developers and integrators, 
 
-    in effectively utilizing the power of our API.
+#     in effectively utilizing the power of our API.
 
-    Our RESTful API provides:
+#     Our RESTful API provides:
 
-    A simple and efficient way to access and interact 
+#     A simple and efficient way to access and interact 
 
-    with, currencies, finances ....... 
+#     with, currencies, finances ....... 
 
-    Whether you're building 
+#     Whether you're building 
 
-    a web application, mobile app, or integrating 
+#     a web application, mobile app, or integrating 
 
-    with other services, our API offers the tools 
+#     with other services, our API offers the tools 
 
-    you need to streamline your development process 
+#     you need to streamline your development process 
 
-    and unlock the full potential of your project.
+#     and unlock the full potential of your project.
 
-    In this documentation, you'll find detailed 
+#     In this documentation, you'll find detailed 
 
-    information on how to make API requests, 
+#     information on how to make API requests, 
 
-    authentication procedures, available endpoints, 
+#     authentication procedures, available endpoints, 
 
-    request/response examples, error handling, 
+#     request/response examples, error handling, 
 
-    and best practices for integrating UMBRELLA
+#     and best practices for integrating UMBRELLA
 
-    into your projects.
-
-
-    ## Authorization:
-
-    You can authorize your requests using this authorization method:
-
-    - TOKEN
+#     into your projects.
 
 
-    ## TOKEN
+#     ## Authorization:
 
-    - The endpoints are authorized using a TOKEN.
+#     You can authorize your requests using this authorization method:
 
-    - To authorize requests, please add a Token using the 'Authorize' button
-    with the following format:
-      ### "Bearer user-token"
-  version: 1.0.0
-  contact:
-    name: API Support
-    email: shadab@gmail.com
-servers:
-  - url: 'http://api-alpha.umbrellaerp.com'
+#     - TOKEN
+
+
+#     ## TOKEN
+
+#     - The endpoints are authorized using a TOKEN.
+
+#     - To authorize requests, please add a Token using the 'Authorize' button
+#     with the following format:
+#       ### "Bearer user-token"
+#   version: 1.0.0
+#   contact:
+#     name: API Support
+#     email: shadab@gmail.com
+# servers:
+#   - url: 'http://api-alpha.umbrellaerp.com'
 # tags:
 #   - name: currency
 #     description: currency - currency data management.
@@ -101,7 +101,7 @@ servers:
 #     description: account move line - account move line data management.
 #   - name: write off
 #     description: write_off - write_off data management.
-paths:
+# paths:
   # '/currency/currencies':
   #   $ref: 'umbrella/umbrella_currency/currency/get_post_delete_currency.yaml'
 #   '/currency/currencies/{obj_id}':

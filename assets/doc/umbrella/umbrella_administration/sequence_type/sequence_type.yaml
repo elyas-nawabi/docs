@@ -62,8 +62,8 @@ tags:
   - name: sequence type
     description: sequence type - sequence type data management.
 paths:
-  '/administration/sequence_types':
+  '/administration/sequence-types':
     $ref: 'get_post_delete_sequence_type.yaml'
-  '/administration/sequence_types/{obj_id}':
+  '/administration/sequence-types/{obj_id}':
     $ref: 'get_put_sequence_type_by_id.yaml'
   

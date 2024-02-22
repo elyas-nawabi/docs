@@ -62,7 +62,7 @@ tags:
   - name: smart enum
     description: smart enum - smart enum data management.
 paths:
-  '/login':
-    $ref: 'post_auth.yaml'
+  '/smart-enum/{<string:model>}/{<string:enum_name>}':
+    $ref: 'get_auth.yaml'
  
   

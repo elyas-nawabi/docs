@@ -62,8 +62,8 @@ tags:
   - name: fiscal period
     description: fiscal period - fiscal period data management.
 paths:
-  '/financial_accounting/fiscal_periods':
+  '/financial-accounting/fiscal-periods':
     $ref: 'get_post_delete_fiscal_period.yaml'
-  '/financial_accounting/fiscal_periods/{obj_id}':
+  '/financial-accounting/fiscal-periods/{obj_id}':
     $ref: 'get_put_fiscal_period_by_id.yaml'
   

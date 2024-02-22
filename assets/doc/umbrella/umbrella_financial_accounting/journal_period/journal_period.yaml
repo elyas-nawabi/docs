@@ -62,7 +62,7 @@ tags:
   - name: journal period
     description: journal period - journal period data management.
 paths:
-  '/financial_accounting/journal_periods':
+  '/financial-accounting/journal-periods':
     $ref: 'get_post_delete_journal_period.yaml'
   
   

@@ -62,8 +62,8 @@ tags:
   - name: journal
     description: journal - journal data management.
 paths:
-  '/financial_accounting/journals':
+  '/financial-accounting/journals':
     $ref: 'get_post_delete_journal.yaml'
-  '/financial_accounting/journals/{obj_id}':
+  '/financial-accounting/journals/{obj_id}':
     $ref: 'get_put_journal_by_id.yaml'
   
