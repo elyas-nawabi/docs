@@ -62,8 +62,8 @@ tags:
   - name: fiscal year
     description: fiscal year - fiscal year data management.
 paths:
-  '/financial_accounting/fiscal_years':
+  '/financial-accounting/fiscal-years':
     $ref: 'get_post_delete_fiscal_year.yaml'
-  '/financial_accounting/fiscal_years/{obj_id}':
+  '/financial-accounting/fiscal-years/{obj_id}':
     $ref: 'get_put_fiscal_year_by_id.yaml'
   

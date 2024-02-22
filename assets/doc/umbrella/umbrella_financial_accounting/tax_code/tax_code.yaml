@@ -62,8 +62,8 @@ tags:
   - name: tax code
     description: tax code - tax code data management.
 paths:
-  '/financial_accounting/tax-codes':
+  '/financial-accounting/tax-codes':
     $ref: 'get_post_delete_tax_code.yaml'
-  '/financial_accounting/tax-codes/{obj_id}':
+  '/financial-accounting/tax-codes/{obj_id}':
     $ref: 'get_put_tax_code_by_id.yaml'
   

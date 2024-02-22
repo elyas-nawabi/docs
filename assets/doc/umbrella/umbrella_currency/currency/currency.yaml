@@ -70,11 +70,11 @@ paths:
  
     
 components:
-  schemas:
-    CreateCurrency:
-      $ref: '../../schemas/umbrella_currency/create-currency.yaml'
-    UpdateCurrency:
-      $ref: '../../schemas/umbrella_currency/update-currency.yaml'
+  # schemas:
+  #   CreateCurrency:
+  #     $ref: '../../schemas/umbrella_currency/create-currency.yaml'
+  #   UpdateCurrency:
+  #     $ref: '../../schemas/umbrella_currency/update-currency.yaml'
   
   securitySchemes:
     bearerAuth:

@@ -62,7 +62,7 @@ tags:
   - name: login
     description: login - login data management.
 paths:
-  '/login':
+  '/jwt/login':
     $ref: 'post_auth.yaml'
  
   
