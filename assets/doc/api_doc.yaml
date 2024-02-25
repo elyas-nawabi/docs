@@ -305,7 +305,9 @@ components:
 
     # get with filters feature
     ListAddress:
-      $ref: 'umbrella/schemas/umbrella_party/list-address.yaml'
+      $ref: 'umbrella/schemas/filter.yaml'
+    ListCategory:
+      $ref: 'umbrella/schemas/filter.yaml'
 
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
