@@ -1,10 +1,9 @@
     post:
       tags:
-        - address
-      summary: Get addresses.
-      description: Get addresses.
-      operationId: getAddresses
-     
+        - party
+      summary: Get party details.
+      description: Get party details.
+      operationId: getParties
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -14,7 +13,7 @@
               $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of addresses.
+          description: List of parties.
           content:
             application/json:
               schema:
@@ -23,74 +22,48 @@
                     data:
                       type: array
                       properties:
-                        city:
+                        code:
                           type: string
-                        country:
-                          type: integer
+                        create_date:
+                          type: string
+                          format: date
                         id:
                           type: integer
                         name:
                           type: string
-                        party: 
-                          type: integer
-                        party_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                        party_name:
+                        payable_today:
+                          type: number
+                          format: float
+                        receivable_today:
+                          type: number
+                          format: float
+                        tax_identifier:
                           type: string
-                        postal_code:
-                          type: string 
-                        street: 
-                          type: string
-                        subdivision:
-                          type: integer
-                        subdivision_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
                     errors:
                       type: object
                     pagination:
-                      type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
                     status:
                       type: integer
                     success_message:
                       type: string
               example:
                 data:
-                - city: "kabul"
-                  country: 1
-                  country_:
+                  - code: "1"
+                    create_date: "2024-01-23T16:52:29.278731"
                     id: 1
-                    name: "Afghanistan"
-                  id: 1
-                  name: "shamali tower"
-                  party: 1
-                  party_:
-                      id: 1
-                      name: "Party 1"
-                  party_name: "prt1"
-                  postal_code: "1001"
-                  street: "2nd street"
-                  subdivision: 1
-                  subdivision_:
-                    id: 2
-                    name: "sbd1"
+                    name: "Party 1"
+                    payable_today: 0.0,
+                    receivable_today: 0.0,
+                    tax_identifier: null
                 errors: null
                 pagination:
                   page: 1
@@ -108,14 +81,14 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
-    
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+   
     delete:
       tags:
-        - address
-      summary: Delete addresses.
-      description: Delete addresses.
-      operationId: deleteAddressesById
+        - party
+      summary: Delete parties.
+      description: Delete parties.
+      operationId: deletePartiesById
       requestBody:
         required: true
         content:

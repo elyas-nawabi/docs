@@ -304,8 +304,8 @@ components:
       $ref: 'umbrella/schemas/umbrella_country/update-region.yaml'
 
     # get with filters feature
-    ListAddress:
-      $ref: 'umbrella/schemas/umbrella_party/list-address.yaml'
+    Filter:
+      $ref: 'umbrella/schemas/filter.yaml'
 
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'

@@ -1,10 +1,9 @@
     post:
       tags:
-        - address
-      summary: Get addresses.
-      description: Get addresses.
-      operationId: getAddresses
-     
+        - category
+      summary: Get categories.
+      description: Get categories.
+      operationId: getCategories
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -14,7 +13,7 @@
               $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of addresses.
+          description: List of categories.
           content:
             application/json:
               schema:
@@ -23,38 +22,10 @@
                     data:
                       type: array
                       properties:
-                        city:
-                          type: string
-                        country:
-                          type: integer
                         id:
                           type: integer
                         name:
                           type: string
-                        party: 
-                          type: integer
-                        party_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                        party_name:
-                          type: string
-                        postal_code:
-                          type: string 
-                        street: 
-                          type: string
-                        subdivision:
-                          type: integer
-                        subdivision_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
                     errors:
                       type: object
                     pagination:
@@ -73,24 +44,12 @@
                       type: string
               example:
                 data:
-                - city: "kabul"
-                  country: 1
-                  country_:
-                    id: 1
-                    name: "Afghanistan"
-                  id: 1
-                  name: "shamali tower"
-                  party: 1
-                  party_:
-                      id: 1
-                      name: "Party 1"
-                  party_name: "prt1"
-                  postal_code: "1001"
-                  street: "2nd street"
-                  subdivision: 1
-                  subdivision_:
-                    id: 2
-                    name: "sbd1"
+                  - id: 1
+                    name: "parentCategory"
+                  - id: 2
+                    name: "childCategory"
+                  - id: 3
+                    name: "simpleCategory"
                 errors: null
                 pagination:
                   page: 1
@@ -109,13 +68,12 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
-    
     delete:
       tags:
-        - address
-      summary: Delete addresses.
-      description: Delete addresses.
-      operationId: deleteAddressesById
+        - category
+      summary: Delete categories.
+      description: Delete categories.
+      operationId: deleteCategoriesById
       requestBody:
         required: true
         content:

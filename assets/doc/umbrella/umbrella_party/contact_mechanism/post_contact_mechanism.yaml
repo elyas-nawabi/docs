@@ -1,0 +1,99 @@
+post:
+      tags:
+        - contact mechanism
+      summary: Create a contact mechanism.
+      description: Create a contact mechanism.
+      operationId: postContactMechanism
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateContactMechanism'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        active: 
+                          type: boolean
+                        address:
+                          type: integer
+                        address_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                        comment:
+                          type: string
+                        id:
+                          type: integer
+                        language:
+                          type: string
+                        name: 
+                          type: string
+                        party:
+                          type: integer 
+                        party_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                        sequence:
+                          type: integer
+                        type:
+                          type: string
+                        value:
+                          type: string 
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                active: true
+                address: 2
+                address_:
+                  id: 2
+                  name: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
+                comment: "information about contact name"
+                language: "en"
+                name: "ctm1"
+                party: 1
+                party_:
+                    "id": 1
+                    "name": "Party 1"
+                sequence: 1
+                type: "phone"
+                value: "8888"
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
