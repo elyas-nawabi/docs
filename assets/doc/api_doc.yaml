@@ -302,6 +302,11 @@ components:
       $ref: 'umbrella/schemas/umbrella_country/create-region.yaml'
     UpdateRegion:
       $ref: 'umbrella/schemas/umbrella_country/update-region.yaml'
+
+    # get with filters feature
+    ListAddress:
+      $ref: 'umbrella/schemas/umbrella_party/list-address.yaml'
+
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
     HTTP401:
@@ -312,7 +317,7 @@ components:
       $ref: 'umbrella/schemas/http-responses/http400.yaml'
     HTTP403:
       $ref: 'umbrella/schemas/http-responses/http403.yaml'
-  
+
   securitySchemes:
     bearerAuth:
       type: http
