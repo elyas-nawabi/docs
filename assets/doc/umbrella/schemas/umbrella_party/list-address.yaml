@@ -1,0 +1,19 @@
+properties:
+  filters:
+    type: array 
+    properties:
+      field:
+        type: string
+      operator:
+        type: string
+      value: 
+        type: string
+required:
+  - field
+  - operator 
+  - value 
+example:
+  filters:
+  - field: state
+    operator: "="
+    value: open
