@@ -62,8 +62,10 @@ tags:
   - name: company
     description: company - company data management.
 paths:
+  '/company/companies/search':
+    $ref: 'post_delete_company.yaml'
   '/company/companies':
-    $ref: 'get_post_delete_company.yaml'
+    $ref: 'post_company.yaml'
   '/company/companies/{obj_id}':
     $ref: 'get_put_company_by_id.yaml'
   

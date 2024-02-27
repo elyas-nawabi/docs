@@ -1,9 +1,16 @@
-    get:
+    post:
       tags:
         - scheduled rate update
       summary: Get list of crons.
       description: Get list of crons.
       operationId: getCrons
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
           description: OK
@@ -81,98 +88,7 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    post:
-      tags:
-        - scheduled rate update
-      summary: Create a cron.
-      description: Create a cron.
-      operationId: postCronById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateCron'
-      responses:
-        '201':
-          description: OK
-          content:
-            application/json:
-              schema:
-                  properties:
-                    data:
-                      type: array
-                      properties:
-                        currencies:
-                          type: array
-                        currency:
-                          type: integer
-                        currency_:
-                          type: object
-                          id:
-                            type: integer
-                          name:
-                            type: string
-                        day:
-                          type: integer
-                        frequency:
-                          type: string
-                        id:
-                          type: integer
-                        last_update:
-                          type: string
-                          format: date
-                        rec_name:
-                          type: string
-                        source:
-                          type: string
-                        weekday:
-                          type: integer
-                    errors:
-                      type: object
-                    pagination:
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-              example:
-                data:
-                - currencies: []
-                  currency: 1
-                  currency_:
-                    id: 1
-                    name: "Afghani"
-                  day: 1
-                  frequency: "monthly"
-                  id: 1
-                  last_update: "2024-01-28"
-                  rec_name: "62"
-                  source: ecb
-                  weekday: "2"
-                errors: null
-                pagination: null
-                status: 200
-                success_message: null
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
     delete:
       tags:
         - scheduled rate update

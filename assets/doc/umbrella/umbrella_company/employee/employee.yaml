@@ -62,8 +62,10 @@ tags:
   - name: employee
     description: employee - employee data management.
 paths:
+  '/company/employees/search':
+    $ref: 'post_delete_employee.yaml'
   '/company/employees':
-    $ref: 'get_post_delete_employee.yaml'
+    $ref: 'post_employee.yaml'
   '/company/employees/{obj_id}':
     $ref: 'get_put_employee_by_id.yaml'
   

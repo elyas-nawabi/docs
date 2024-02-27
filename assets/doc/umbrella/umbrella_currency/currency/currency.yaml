@@ -62,8 +62,10 @@ tags:
   - name: currency
     description: currency - currency data management.
 paths:
+  '/currency/currencies/search':
+    $ref: 'post_delete_currency.yaml'
   '/currency/currencies':
-    $ref: 'get_post_delete_currency.yaml'
+    $ref: 'post_currency.yaml'
   '/currency/currencies/{obj_id}':
     $ref: 'get_put_currency_by_id.yaml'
   

@@ -1,0 +1,75 @@
+post:
+      tags:
+        - sequence type
+      summary: Create a Sequence type.
+      description: Create a Sequence type.
+      operationId: postSequenceTypeById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateSequenceType'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        groups:
+                          type: array
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                            parent:
+                              type: integer
+                            parent_:
+                              type: object
+                        id: 
+                          type: integer
+                        name:
+                          type: string
+                    errors:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              required:
+                - name
+              example:
+                data:
+                  groups:
+                    - id: 1
+                      name: Administration
+                      parent: null
+                      parent_: {}
+                  id: 7
+                  name: seq1
+                errors: null
+                pagination: null
+                status: 201
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    

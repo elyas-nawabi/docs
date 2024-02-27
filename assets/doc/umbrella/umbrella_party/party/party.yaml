@@ -62,8 +62,10 @@ tags:
   - name: party
     description: party - party data management.
 paths:
+  '/party/parties/search':
+    $ref: 'post_delete_party.yaml'
   '/party/parties':
-    $ref: 'get_post_delete_party.yaml'
+    $ref: 'post_party.yaml'
   '/party/parties/{obj_id}':
     $ref: 'get_put_party_by_id.yaml'
   
