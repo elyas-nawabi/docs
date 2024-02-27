@@ -1,9 +1,16 @@
-    get:
+    post:
       tags:
-        - tax code
-      summary: Get list of tax codes.
-      description: Get list of tax codes.
-      operationId: getTaxCodes
+        - tax
+      summary: Get list of taxes.
+      description: Get list of taxes.
+      operationId: getTaxes
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
           description: OK
@@ -54,68 +61,13 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    post:
-      tags:
-        - tax code
-      summary: Create a tax code.
-      description: Create a tax code.
-      operationId: postTaxCodeById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateTaxCode'
-      responses:
-        '201':
-          description: Created
-          content:
-            application/json:
-              schema:
-                  type: object
-                  properties:
-                    data: 
-                      
-                    errors:
-                      type: object
-                    pagination:
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-              example:
-                data:
-                  
-                errors: null
-                pagination: null
-                status: 200
-                success_message: null
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
     delete:
       tags:
-        - tax code
-      summary: Delete tax code.
-      description: Delete tax code.
-      operationId: deleteTaxCodeById
+        - tax
+      summary: Delete tax.
+      description: Delete tax.
+      operationId: deleteTaxById
       requestBody:
         required: true
         content:

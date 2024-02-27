@@ -62,8 +62,10 @@ tags:
   - name: account type
     description: account type - account type data management.
 paths:
+  '/financial-accounting/account-types/search':
+    $ref: 'post_delete_account_type.yaml'
   '/financial-accounting/account-types':
-    $ref: 'get_post_delete_account_type.yaml'
+    $ref: 'post_account_type.yaml'
   '/financial-accounting/account-types/{obj_id}':
     $ref: 'get_put_account_type_by_id.yaml'
   

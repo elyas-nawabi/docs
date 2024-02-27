@@ -1,9 +1,16 @@
-    get:
+    post:
       tags:
-        - tax group
-      summary: Get list of tax groups.
-      description: Get list of tax groups.
-      operationId: getTaxGroup
+        - account type
+      summary: Get list of account types.
+      description: Get list of account types.
+      operationId: getAccountType
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
           description: OK
@@ -15,7 +22,15 @@
                     data:
                       type: array
                       properties:
-                        
+                          company: 
+                            type: integer
+                          company_:
+                            id:
+                              type: integer
+                            name:
+                              type: string 
+                          id: 1
+                          rec_name: Minimal Account Type Chart
                     errors:
                       type: object
                     pagination:
@@ -35,7 +50,12 @@
                       nullable: true
               example:
                 data:
-                  - 
+                  - company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    id: 1
+                    rec_name: Minimal Account Type Chart
                 errors: null
                 pagination:
                   page: 1
@@ -54,68 +74,13 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    post:
-      tags:
-        - tax group
-      summary: Create a tax group.
-      description: Create a tax group.
-      operationId: postTaxGroupById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateTaxGroup'
-      responses:
-        '201':
-          description: Created
-          content:
-            application/json:
-              schema:
-                  type: object
-                  properties:
-                    data: 
-                      
-                    errors:
-                      type: object
-                    pagination:
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-              example:
-                data:
-                  
-                errors: null
-                pagination: null
-                status: 200
-                success_message: null
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
     delete:
       tags:
-        - tax code
-      summary: Delete tax code.
-      description: Delete tax code.
-      operationId: deleteTaxCodeById
+        - account type
+      summary: Delete account types.
+      description: Delete account types.
+      operationId: deleteAccountTypeById
       requestBody:
         required: true
         content:

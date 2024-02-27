@@ -1,21 +1,26 @@
-    get:
+post:
       tags:
-        - journal period
-      summary: Get list of journal periods.
-      description: Get list of journal periods.
-      operationId: getJournalPeriod
+        - tax
+      summary: Create a tax.
+      description: Create a tax.
+      operationId: postTaxById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateTax'
       responses:
-        '200':
-          description: OK
+        '201':
+          description: Created
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data:
-                      type: array
-                      properties:
-                       
+                    data: 
+                      
                     errors:
                       type: object
                     pagination:
@@ -32,16 +37,11 @@
                       type: integer
                     success_message:
                       type: string
-                      nullable: true
               example:
                 data:
-                  - 
+                  
                 errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 12
+                pagination: null
                 status: 200
                 success_message: null
         '401':
@@ -54,3 +54,4 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
