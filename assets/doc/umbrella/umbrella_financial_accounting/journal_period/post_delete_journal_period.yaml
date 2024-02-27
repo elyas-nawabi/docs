@@ -1,9 +1,16 @@
-    get:
+    post:
       tags:
         - journal period
       summary: Get list of journal periods.
       description: Get list of journal periods.
       operationId: getJournalPeriod
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
           description: OK

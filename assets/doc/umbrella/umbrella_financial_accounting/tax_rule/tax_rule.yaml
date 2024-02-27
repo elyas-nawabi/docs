@@ -62,8 +62,10 @@ tags:
   - name: tax rule
     description: tax rule - tax rule data management.
 paths:
+  '/financial-accounting/tax-rules/search':
+    $ref: 'post_delete_tax_rule.yaml'
   '/financial-accounting/tax-rules':
-    $ref: 'get_post_delete_tax_rule.yaml'
+    $ref: 'post_tax_rule.yaml'
   '/financial-accounting/tax-rules/{obj_id}':
     $ref: 'get_put_tax_rule_by_id.yaml'
   

@@ -1,9 +1,16 @@
-    get:
+    post:
       tags:
         - journal
       summary: Get list of journal.
       description: Get list of journal.
       operationId: getJournal
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
           description: OK
@@ -68,87 +75,7 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    post:
-      tags:
-        - journal
-      summary: Create a journal.
-      description: Create a journal.
-      operationId: postJournalById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateJournal'
-      responses:
-        '201':
-          description: Created
-          content:
-            application/json:
-              schema:
-                  type: object
-                  properties:
-                    data: 
-                      type: object
-                      properties:
-                        active:
-                          type: boolean
-                        code:
-                          type: string
-                        matching_sequence:
-                          type: integer
-                        name:
-                          type: string
-                        rec_name:
-                          type: string
-                        sequence: 
-                          type: string
-                        type: 
-                          type: string
-                    errors:
-                      type: object
-                    pagination:
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-              example:
-                data:
-                  active: true
-                  code: REV
-                  id: 1
-                  matching_sequence: 
-                  name: Revenue
-                  rec_name: Revenue
-                  sequence: 2
-                  sequence_:
-                    id: 2
-                    name: Default Account Journal
-                  type: revenue
-                errors: null
-                pagination: null
-                status: 200
-                success_message: null
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
     delete:
       tags:
         - journal
