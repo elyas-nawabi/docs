@@ -63,5 +63,5 @@ tags:
     description: account move line - account move line data management.
 paths:
   '/financial-accounting/account-move-lines':
-    $ref: 'get_post_delete_account_move_line.yaml'
+    $ref: 'post_delete_account_move_line.yaml'
   
