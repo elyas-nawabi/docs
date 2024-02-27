@@ -63,8 +63,10 @@ tags:
     description: scheduled rate update - scheduled rate update data management.
 
 paths:
+  '/currency/scheduled-rate-updates/search':
+    $ref: 'post_delete_scheduled_rate_updates.yaml'
   '/currency/scheduled-rate-updates':
-    $ref: 'get_post_delete_scheduled_rate_updates.yaml'
+    $ref: 'post_scheduled_rate_updates.yaml'
   '/currency/scheduled-rate-updates/{obj_id}':
     $ref: 'get_put_scheduled_rate_updates_by_id.yaml'
 

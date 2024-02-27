@@ -1,9 +1,16 @@
-get:
+post:
   tags:
     - currency
   summary: Get currency details.
   description: Get currency details.
   operationId: getCurrencies
+  requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
   responses:
     '200':
       description: List of currencies.
@@ -75,99 +82,7 @@ get:
         application/json:
           schema:
             $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-post:
-  tags:
-    - currency
-  summary: Create a currency.
-  description: Create a currency.
-  operationId: postCurrencyById
-  requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          type: object
-          $ref: '../../../api_doc.yaml#/components/schemas/CreateCurrency'
-  responses:
-    '201':
-      description: OK
-      content:
-        application/json:
-          schema:
-              properties:
-                data:
-                  type: array
-                  properties:
-                    active:
-                      type: boolean
-                    code:
-                      type: string
-                    digits:
-                      type: integer
-                    id:
-                      type: integer
-                    name:
-                      type: string
-                    numeric_code:
-                      type: string
-                    rate:
-                      type: number
-                      format: float
-                    rates:
-                      type: array
-                      properties:
-                        date: 
-                          type: string
-                          format: date
-                        id: 
-                          type: integer
-                        rate: 
-                          type: number
-                          format: float
-                    rounding:
-                      type: number
-                      format: float
-                    symbol:
-                      type: string
-                errors:
-                  type: object
-                  nullable: true
-                pagination:
-                  type: object
-                  nullable: true
-                status:
-                  type: integer
-                success_message:
-                  type: string
-                  nullable: true
-          example:
-            data:
-              active: true
-              code: "AFN"
-              digits: 2
-              name: "Afghani"
-              numeric_code: "001"
-              rate: 0
-              rates:
-                - date: "2024-02-06"
-                  id: 6
-                  rate: 0.1
-              rounding: 3
-              symbol: "AFN"
-            errors: null
-            pagination: null
-            status: 201
-            success_message: null
-    '401':
-      description: >-
-        401 Unauthorized: The server could not verify that you are
-        authorized to access the URL requested. You either supplied the
-        wrong credentials (e.g. a bad password), or your browser doesn't
-        understand how to supply the credentials required.
-      content:
-        application/json:
-          schema:
-            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
 delete:
   tags:
     - currency
