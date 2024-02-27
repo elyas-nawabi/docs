@@ -62,8 +62,10 @@ tags:
   - name: country
     description: country - country data management.
 paths:
+  '/country/countries/search':
+    $ref: 'post_delete_country.yaml'
   '/country/countries':
-    $ref: 'get_post_delete_country.yaml'
+    $ref: 'post_country.yaml'
   '/country/countries/{obj_id}':
     $ref: 'get_put_country_by_id.yaml'
   

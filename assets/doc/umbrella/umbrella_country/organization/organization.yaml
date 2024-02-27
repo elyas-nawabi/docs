@@ -62,8 +62,10 @@ tags:
   - name: organization
     description: organization - organization data management.
 paths:
+  '/country/organizations/se':
+    $ref: 'post_delete_organization.yaml'
   '/country/organizations':
-    $ref: 'get_post_delete_organization.yaml'
+    $ref: 'post_organization.yaml'
   '/country/organizations/{obj_id}':
     $ref: 'get_put_organization_by_id.yaml'
   
