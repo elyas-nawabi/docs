@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: tax
-    description: tax - tax data management.
+  - name: reports
+    description: reports - reports data management.
 paths:
-  '/financial-accounting/taxes/search':
-    $ref: 'post_delete_tax.yaml'
-  '/financial-accounting/taxes':
-    $ref: 'post_tax.yaml'
-  '/financial-accounting/taxes/{obj_id}':
-    $ref: 'get_put_tax_by_id.yaml'
+  '/financial-accounting/reports/search':
+    $ref: 'post_delete_reports.yaml'
+  '/financial-accounting/reports':
+    $ref: 'post_reports.yaml'
+  '/financial-accounting/reports/{obj_id}':
+    $ref: 'get_put_reports_by_id.yaml'
   

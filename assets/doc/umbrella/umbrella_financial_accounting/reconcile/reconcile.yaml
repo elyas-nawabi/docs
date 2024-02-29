@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: tax
-    description: tax - tax data management.
+  - name: reconcile
+    description: reconcile - reconcile data management.
 paths:
-  '/financial-accounting/taxes/search':
-    $ref: 'post_delete_tax.yaml'
-  '/financial-accounting/taxes':
-    $ref: 'post_tax.yaml'
-  '/financial-accounting/taxes/{obj_id}':
-    $ref: 'get_put_tax_by_id.yaml'
+  '/financial-accounting/reconciles/search':
+    $ref: 'post_delete_reconcile.yaml'
+  '/financial-accounting/reconciles':
+    $ref: 'post_reconcile.yaml'
+  '/financial-accounting/reconciles/{obj_id}':
+    $ref: 'get_put_reconcile_by_id.yaml'
   

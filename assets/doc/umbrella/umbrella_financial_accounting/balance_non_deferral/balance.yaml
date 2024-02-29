@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: tax
-    description: tax - tax data management.
+  - name: balance non deferral
+    description: balance non deferral - balance non deferral data management.
 paths:
-  '/financial-accounting/taxes/search':
-    $ref: 'post_delete_tax.yaml'
-  '/financial-accounting/taxes':
-    $ref: 'post_tax.yaml'
-  '/financial-accounting/taxes/{obj_id}':
-    $ref: 'get_put_tax_by_id.yaml'
+  '/financial-accounting/balance-non-deferals/search':
+    $ref: 'post_delete_balance.yaml'
+  '/financial-accounting/balance-non-deferals':
+    $ref: 'post_balance.yaml'
+  '/financial-accounting/balance-non-deferals/{obj_id}':
+    $ref: 'get_put_balance_by_id.yaml'
   
