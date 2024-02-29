@@ -62,10 +62,10 @@ tags:
   - name: reconcile
     description: reconcile - reconcile data management.
 paths:
-  '/financial-accounting/reconciles/search':
-    $ref: 'post_delete_reconcile.yaml'
-  '/financial-accounting/reconciles':
+  '/financial-accounting/reconcile-accounts/execute':
     $ref: 'post_reconcile.yaml'
-  '/financial-accounting/reconciles/{obj_id}':
-    $ref: 'get_put_reconcile_by_id.yaml'
+  '/financial-accounting/reconcile-accounts/lines':
+    $ref: 'lines.yaml'
+  '/financial-accounting/reconcile-accounts/skip':
+    $ref: 'skip.yaml'
   
