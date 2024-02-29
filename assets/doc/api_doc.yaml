@@ -302,6 +302,10 @@ components:
       $ref: 'umbrella/schemas/umbrella_country/create-region.yaml'
     UpdateRegion:
       $ref: 'umbrella/schemas/umbrella_country/update-region.yaml'
+    CreateAccountMove:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account-move.yaml'
+    UpdateAccountMove:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account-move.yaml'
 
     # get with filters feature
     Filter:

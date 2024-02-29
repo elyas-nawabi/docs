@@ -1,9 +1,9 @@
     post:
       tags:
-        - tax
-      summary: Get list of taxes.
-      description: Get list of taxes.
-      operationId: getTaxes
+        - account move
+      summary: Get list of account moves.
+      description: Get list of account moves.
+      operationId: getAccountMoves
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -22,7 +22,45 @@
                     data:
                       type: array
                       properties:
-                        
+                          date:
+                            type: string
+                            format: date
+                          description:
+                            type: string
+                          id:
+                            type: integer
+                          journal: 
+                            type: integer
+                          journal_:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                          number:
+                            type: string
+                          origin:
+                            type: string
+                          origin_:
+                            type: object
+                          period:
+                            type: integer
+                          period_:
+                            properties:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                          post_date: 
+                            type: string
+                            format: date
+                          post_number: 
+                            type: string
+                          rec_name:
+                            type: string
+                          state:
+                            type: string
                     errors:
                       type: object
                     pagination:
@@ -42,7 +80,24 @@
                       nullable: true
               example:
                 data:
-                  - 
+                  - date: '2026-01-27'
+                    description: some description here
+                    id: 2
+                    journal: 13
+                    journal_:
+                      id: 13
+                      name: Statement
+                    number: '1'
+                    origin: account.move,-1
+                    origin_: {}
+                    period: 79
+                    period_:
+                      id: 79
+                      name: '1'
+                    post_date: 
+                    post_number: 
+                    rec_name: '1'
+                    state: draft 
                 errors: null
                 pagination:
                   page: 1
@@ -64,10 +119,10 @@
     
     delete:
       tags:
-        - tax
-      summary: Delete tax.
-      description: Delete tax.
-      operationId: deleteTaxById
+        - account move
+      summary: Delete account move.
+      description: Delete account move.
+      operationId: deleteAccountMoveById
       requestBody:
         required: true
         content:
