@@ -1,0 +1,61 @@
+      properties:
+        company:
+          type: integer
+        date:
+          type: string
+          format: date
+        description: 
+          type: string
+        journal:
+          type: integer
+        lines:
+          type: array
+          nullable: true
+        number:
+          type: string
+        origin:
+          type: string
+        origin_: 
+          type: object
+        period:
+          type: integer
+        post_date: 
+          type: string
+          format: date
+        post_number: 
+          type: string
+        rec_name:
+          type: string
+        state:
+          type: string
+
+      required:
+        - company
+        - date
+        - journal
+        - period
+        
+      example:
+        company: 1
+        company_:
+          id: 1
+          name: Party 1
+        date: '2026-01-27'
+        description: some description here
+        id: 2
+        journal: 13
+        journal_:
+          id: 13
+          name: Statement
+        lines: []
+        number: '1'
+        origin: account.move,-1
+        origin_: {}
+        period: 79
+        period_:
+          id: 79
+          name: '1'
+        post_date: 
+        post_number: 
+        rec_name: '1'
+        state: draft
