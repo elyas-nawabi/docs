@@ -63,5 +63,7 @@ tags:
     description: reports - reports data management.
 paths:
   '/financial-accounting/reports/general-ledger/default-context':
-    $ref: 'get_default_context.yaml'
+    $ref: 'get_general_ledger.yaml'
+  '/financial-accounting/reports/balance-sheet/default-context':
+    $ref: 'get_balance_sheet.yaml'
   
