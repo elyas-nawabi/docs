@@ -1,8 +1,8 @@
 get:
       tags:
         - general ledger
-      summary: Get one general ledger.
-      description: Get one general ledger.
+      summary: Get general ledgers.
+      description: Get general ledgers.
       operationId: getGeneralLedger
       responses:
         '200':

@@ -1,9 +1,9 @@
 get:
       tags:
-        - balance sheet
-      summary: Get balance sheets.
-      description: Get balance sheets.
-      operationId: getBalanceSheet
+        - income statement
+      summary: Get income statements.
+      description: Get income statements.
+      operationId: getIncomeStatement
       responses:
         '200':
           description: OK
@@ -26,9 +26,8 @@ get:
                               type: string
                         comparison:
                           type: boolean
-                        date: 
-                          type: string
-                          format: date
+                        fiscalyear:
+                          type: integer
                         posted:
                           type: boolean
                     errors:
@@ -57,7 +56,7 @@ get:
                     id: 1
                     name: Party 1
                   comparison: false
-                  date: '2024-03-03'
+                  fiscalyear: 2
                   posted: false
                 error: null
                 pagination: null

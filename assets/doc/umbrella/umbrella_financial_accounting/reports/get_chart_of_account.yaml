@@ -1,9 +1,9 @@
 get:
       tags:
-        - balance sheet
-      summary: Get balance sheets.
-      description: Get balance sheets.
-      operationId: getBalanceSheet
+        - chart of account
+      summary: Get chart of accounts.
+      description: Get chart of accounts.
+      operationId: getChartOfAccount
       responses:
         '200':
           description: OK
@@ -24,11 +24,6 @@ get:
                               type: integer
                             name:
                               type: string
-                        comparison:
-                          type: boolean
-                        date: 
-                          type: string
-                          format: date
                         posted:
                           type: boolean
                     errors:
@@ -56,8 +51,6 @@ get:
                   company_:
                     id: 1
                     name: Party 1
-                  comparison: false
-                  date: '2024-03-03'
                   posted: false
                 error: null
                 pagination: null
