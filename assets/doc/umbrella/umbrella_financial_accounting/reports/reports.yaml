@@ -70,4 +70,6 @@ paths:
     $ref: 'get_income_statement.yaml'
   '/financial-accounting/reports/chart-of-account/default-context':
     $ref: 'get_chart_of_account.yaml'
+  '/financial-accounting/reports/chart-of-account':
+    $ref: 'post_chart_of_account.yaml'
   
