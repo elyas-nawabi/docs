@@ -1,0 +1,10 @@
+      properties:
+
+      required:
+        - fiscalyear
+        - journal
+        - period
+        - credit_account
+        - debit_account
+        
+      example:

@@ -1,16 +1,16 @@
 post:
       tags:
-        - tax
-      summary: Create a tax.
-      description: Create a tax.
-      operationId: postTaxById
+        - balance non deferral
+      summary: Create a balance non deferral.
+      description: Create a balance non deferral.
+      operationId: postBalanceById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateTax'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateBalanceNonDeferral'
       responses:
         '201':
           description: Created
