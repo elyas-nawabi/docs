@@ -1,16 +1,16 @@
 post:
       tags:
-        - tax
-      summary: Create a tax.
-      description: Create a tax.
-      operationId: postTaxById
+        - chart of account
+      summary: Create a chart of account.
+      description: Create a chart of account.
+      operationId: postChartOfAccount
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateTax'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreatechartOfAccount'
       responses:
         '201':
           description: Created
@@ -20,6 +20,106 @@ post:
                   type: object
                   properties:
                     data: 
+                      type: array
+                      properties:
+                        active:
+                          type: boolean
+                        amount_second_currency: 
+                          type: integer
+                        balance: 
+                          type: integer
+                        childs:
+                          type: array
+                        closed:
+                          type: boolean
+                        code:
+                          type: string
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                        credit: 
+                          type: integer
+                          format: decimal
+                        credit_type:
+                          type: integer
+                        credit_type_:
+                          type: object
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                        debit: 
+                          type: integer
+                        debit_type: 
+                          type: integer
+                        debit_type_:
+                          type: object
+                        deferral:
+                          type: boolean
+                        deferrals:
+                          type: array
+                        end_date: 
+                          type: string
+                          format: date
+                        general_ledger_balance:
+                          type: boolean
+                        id:  
+                          type: integer
+                        left: 
+                          type: integer
+                        line_count: 
+                          type: integer
+                        name:
+                          type: string
+                        note:
+                          type: string
+                        parent: 
+                          type: integer
+                        parent_:
+                          type: object
+                        party_required:
+                          type: boolean
+                        rec_name: 1 - 1
+                        reconcile:
+                          type: boolean
+                        replaced_by: 
+                        replaced_by_:
+                          type: object
+                        right: 
+                          type: integer
+                        second_currency: 
+                        second_currency_:
+                          type: object
+                        start_date:
+                          type: string
+                          format: date
+                        taxes:
+                          type: array
+                        template: 
+                        template_:
+                          type: object
+                        template_override:
+                          type: boolean
+                        type:  
+                          type: integer
+                        type_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
                       
                     errors:
                       type: object
@@ -39,7 +139,54 @@ post:
                       type: string
               example:
                 data:
-                  
+                  - active: true
+                    amount_second_currency: 0
+                    balance: 0
+                    childs: []
+                    closed: false
+                    code: '1'
+                    company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    credit: 0
+                    credit_type: 
+                    credit_type_: {}
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    debit: 0
+                    debit_type: 
+                    debit_type_: {}
+                    deferral: false
+                    deferrals: []
+                    end_date: '2024-02-29'
+                    general_ledger_balance: false
+                    id: 29
+                    left: 103
+                    line_count: 0
+                    name: '1'
+                    note: ''
+                    parent: 
+                    parent_: {}
+                    party_required: false
+                    rec_name: 1 - 1
+                    reconcile: true
+                    replaced_by: 
+                    replaced_by_: {}
+                    right: 104
+                    second_currency: 
+                    second_currency_: {}
+                    start_date: '2024-02-27'
+                    taxes: []
+                    template: 
+                    template_: {}
+                    template_override: false
+                    type: 23
+                    type_:
+                      id: 23
+                      name: Minimal Account Type Chart 2
                 errors: null
                 pagination: null
                 status: 200
