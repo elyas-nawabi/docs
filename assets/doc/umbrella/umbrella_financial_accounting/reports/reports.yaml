@@ -64,6 +64,8 @@ tags:
 paths:
   '/financial-accounting/reports/general-ledger/default-context':
     $ref: 'get_general_ledger.yaml'
+  '/financial-accounting/reports/general-ledger':
+    $ref: 'post_general_ledger.yaml'
   '/financial-accounting/reports/balance-sheet/default-context':
     $ref: 'get_balance_sheet.yaml'
   '/financial-accounting/reports/income-statement/default-context':
