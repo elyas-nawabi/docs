@@ -1,0 +1,207 @@
+post:
+      tags:
+        - balance sheet
+      summary: Create a balance sheet.
+      description: Create a balance sheet.
+      operationId: postBalanceSheet
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateBalanceSheet'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data: 
+                      type: array
+                      properties:
+                        amount:
+                          type: integer
+                        amount_cmp:
+                          type: integer
+                        childs:
+                          type: array
+                          properties:
+                            amount:
+                              type: integer
+                            amount_cmp:
+                              type: integer
+                            childs:
+                              type: array
+                            company:
+                              type: integer
+                            company_:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name: 
+                                  type: string
+                            currency:
+                              type: integer
+                            currency_:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name: 
+                                  type: string
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                            parent: 
+                              type: integer
+                            parent_:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name: 
+                                  type: string
+                            rec_name:
+                              type: string
+                            sequence:
+                              type: integer
+                            statement: balance
+                            stock:
+                              type: boolean
+                            template: 
+                              type: integer
+                            template_:
+                              type: object
+                            template_override:
+                              type: boolean
+                        company:
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        currency:
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        id: 
+                          type: integer
+                        name:
+                          type: string
+                        parent: 
+                          type: integer
+                        parent_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                        rec_name:
+                          type: string
+                        sequence:
+                          type: integer
+                        statement: balance
+                        stock:
+                          type: boolean
+                        template: 
+                          type: integer
+                        template_:
+                          type: object
+                        template_override:
+                          type: boolean
+                      
+                    errors:
+                      type: object
+                    pagination:
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  - amount: 0
+                    amount_cmp: 0
+                    childs:
+                    - amount: 0
+                      amount_cmp: 0
+                      childs: []
+                      company: 1
+                      company_:
+                        id: 1
+                        name: Party 1
+                      currency: 1
+                      currency_:
+                        id: 1
+                        name: Afghani
+                      id: 25
+                      name: '1'
+                      parent: 24
+                      parent_:
+                        id: 24
+                        name: Minimal Account Type Chart 2\1
+                      rec_name: Minimal Account Type Chart 2\1\1
+                      sequence: 1
+                      statement: balance
+                      stock: true
+                      template: 
+                      template_: {}
+                      template_override: false
+                    company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    id: 24
+                    name: '1'
+                    parent: 23
+                    parent_:
+                      id: 23
+                      name: Minimal Account Type Chart 2
+                    rec_name: Minimal Account Type Chart 2\1
+                    sequence: 1
+                    statement: balance
+                    stock: true
+                    template: 
+                    template_: {}
+                    template_override: false
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    

@@ -312,6 +312,10 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-reports.yaml'
     UpdateReports:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/update-reports.yaml'
+    CreateChartOfAccount:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-chart-of-account.yaml'
+    CreateGeneralLedger:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-general-ledger.yaml'
 
     # get with filters feature
     Filter:

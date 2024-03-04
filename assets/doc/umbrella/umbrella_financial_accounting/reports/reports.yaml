@@ -64,10 +64,16 @@ tags:
 paths:
   '/financial-accounting/reports/general-ledger/default-context':
     $ref: 'get_general_ledger.yaml'
+  '/financial-accounting/reports/general-ledger':
+    $ref: 'post_general_ledger.yaml'
   '/financial-accounting/reports/balance-sheet/default-context':
     $ref: 'get_balance_sheet.yaml'
+  '/financial-accounting/reports/balance-sheet':
+    $ref: 'post_balance_sheet.yaml'
   '/financial-accounting/reports/income-statement/default-context':
     $ref: 'get_income_statement.yaml'
+  '/financial-accounting/reports/income-statement':
+    $ref: 'post_income_statement.yaml'
   '/financial-accounting/reports/chart-of-account/default-context':
     $ref: 'get_chart_of_account.yaml'
   '/financial-accounting/reports/chart-of-account':

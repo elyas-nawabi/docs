@@ -10,7 +10,7 @@ post:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreatechartOfAccount'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateChartOfAccount'
       responses:
         '201':
           description: Created
@@ -90,15 +90,18 @@ post:
                           type: object
                         party_required:
                           type: boolean
-                        rec_name: 1 - 1
+                        rec_name:
+                          type: string
                         reconcile:
                           type: boolean
                         replaced_by: 
+                          type: integer
                         replaced_by_:
                           type: object
                         right: 
                           type: integer
                         second_currency: 
+                          type: integer
                         second_currency_:
                           type: object
                         start_date:
@@ -107,6 +110,7 @@ post:
                         taxes:
                           type: array
                         template: 
+                          type: integer
                         template_:
                           type: object
                         template_override:
@@ -157,7 +161,7 @@ post:
                       id: 1
                       name: Afghani
                     debit: 0
-                    debit_type: 
+                    debit_type: null
                     debit_type_: {}
                     deferral: false
                     deferrals: []
@@ -168,19 +172,19 @@ post:
                     line_count: 0
                     name: '1'
                     note: ''
-                    parent: 
+                    parent: null
                     parent_: {}
                     party_required: false
                     rec_name: 1 - 1
                     reconcile: true
-                    replaced_by: 
+                    replaced_by: null
                     replaced_by_: {}
                     right: 104
-                    second_currency: 
+                    second_currency: null
                     second_currency_: {}
                     start_date: '2024-02-27'
                     taxes: []
-                    template: 
+                    template: null
                     template_: {}
                     template_override: false
                     type: 23
