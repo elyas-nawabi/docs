@@ -25,11 +25,12 @@ get:
                         company:
                           type: integer
                         company_:
+                          type: object
                           properties:
-                              id:
-                                type: integer
-                              name:
-                                type: string
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         date:
                           type: string
                           format: date
@@ -40,14 +41,89 @@ get:
                         journal:
                           type: integer
                         journal_:
+                          type: object
                           properties:
-                              id:
-                                type: integer
-                              name:
-                                type: string
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         lines:
                           type: array
                           nullable: true
+                          properties:
+                              account:
+                                type: integer
+                              account_:
+                                type: object
+                                properties:
+                                  id:
+                                    type: integer
+                                  name:
+                                    type: string
+                              amount_second_currency: 
+                                type: integer
+                              company: 
+                                type: integer
+                              company_:
+                                type: object
+                                properties:
+                                  id:
+                                    type: integer
+                                  name:
+                                    type: string
+                              credit:
+                                type: number
+                                format: float
+                              date:
+                                type: string
+                                format: date
+                              debit:
+                                type: integer
+                              delegated_amount: 
+                                type: integer
+                              description:
+                                type: string
+                              id: 
+                                type: integer
+                              move: 
+                                type: integer
+                              move_:
+                                type: object
+                                properties:
+                                  id:
+                                    type: integer
+                                  name:
+                                    type: string
+                              move_description_used:
+                                type: string
+                              move_origin:
+                                type: string
+                              move_origin_:
+                                type: object
+                              move_state:
+                                type: string
+                              origin:
+                                type: integer 
+                              origin_:
+                                type: object
+                              party:
+                                type: integer 
+                              party_:
+                                type: object
+                              rec_name:
+                                type: string
+                              reconciliation: 
+                                type: integer
+                              reconciliation_:
+                                type: object
+                              second_currency: 
+                                type: integer
+                              second_currency_:
+                                type: object
+                              state: 
+                                type: string
+                              tax_lines:
+                                type: array
                         number:
                           type: string
                         origin:
@@ -103,7 +179,41 @@ get:
                   journal_:
                     id: 13
                     name: Statement
-                  lines: []
+                  lines:
+                    - account: 30
+                      account_:
+                        id: 30
+                        name: 1 - 1
+                      amount_second_currency: null
+                      company: 1
+                      company_:
+                        id: 1
+                        name: Party 1
+                      credit: 0.03
+                      date: '2026-01-27'
+                      debit: 0
+                      delegated_amount: null
+                      description: ''
+                      id: 2
+                      move: 11
+                      move_:
+                        id: 11
+                        name: '8'
+                      move_description_used: some description here
+                      move_origin: account.fiscalyear,-1
+                      move_origin_: {}
+                      move_state: draft
+                      origin: 
+                      origin_: {}
+                      party: 
+                      party_: {}
+                      rec_name: "(1 - 1)"
+                      reconciliation: 
+                      reconciliation_: {}
+                      second_currency: 
+                      second_currency_: {}
+                      state: draft
+                      tax_lines: []
                   number: '1'
                   origin: account.move,-1
                   origin_: {}
@@ -168,44 +278,63 @@ put:
                       properties:
                         company:
                           type: integer
-                        company_:
-                          properties:
-                              id:
-                                type: integer
-                              name:
-                                type: string
                         date:
                           type: string
                           format: date
                         description: 
                           type: string
-                        id:
-                          type: integer
                         journal:
                           type: integer
-                        journal_:
-                          properties:
-                              id:
-                                type: integer
-                              name:
-                                type: string
                         lines:
                           type: array
                           nullable: true
+                          properties:
+                              account:
+                                type: integer
+                              amount_second_currency: 
+                                type: integer
+                              company: 
+                                type: integer
+                              credit:
+                                type: number
+                                format: float
+                              date:
+                                type: string
+                                format: date
+                              debit:
+                                type: integer
+                              delegated_amount: 
+                                type: integer
+                              description:
+                                type: string
+                              move: 
+                                type: integer
+                              move_description_used:
+                                type: string
+                              move_origin:
+                                type: string
+                              move_state:
+                                type: string
+                              origin:
+                                type: integer 
+                              party:
+                                type: integer 
+                              rec_name:
+                                type: string
+                              reconciliation: 
+                                type: integer
+                              second_currency: 
+                                type: integer
+                              state: 
+                                type: string
+                              tax_lines:
+                                type: array
                         number:
                           type: string
                         origin:
                           type: string
-                        origin_: 
-                          type: object
                         period:
                           type: integer
-                        period_:
-                          properties:
-                              id:
-                                type: integer
-                              name:
-                                type: string
                         post_date: 
                           type: string
                           format: date
@@ -236,24 +365,32 @@ put:
               example:
                 data:
                   company: 1
-                  company_:
-                    id: 1
-                    name: Party 1
                   date: '2026-01-27'
                   description: some description here
-                  id: 2
                   journal: 13
-                  journal_:
-                    id: 13
-                    name: Statement
-                  lines: []
+                  lines:
+                  - account: 30
+                    amount_second_currency: null 
+                    company: 1
+                    credit: 0.03
+                    date: '2026-01-27'
+                    debit: 0
+                    delegated_amount: null
+                    description: ''
+                    move: 11
+                    move_description_used: some description here
+                    move_origin: account.fiscalyear,-1
+                    move_state: draft
+                    origin: 
+                    party: 
+                    rec_name: "(1 - 1)"
+                    reconciliation: 
+                    second_currency: 
+                    state: draft
+                    tax_lines: []
                   number: '1'
                   origin: account.move,-1
-                  origin_: {}
                   period: 79
-                  period_:
-                    id: 79
-                    name: '1'
                   post_date: 
                   post_number: 
                   rec_name: '1'
