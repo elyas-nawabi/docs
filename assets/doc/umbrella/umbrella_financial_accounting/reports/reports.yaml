@@ -78,4 +78,16 @@ paths:
     $ref: 'get_chart_of_account.yaml'
   '/financial-accounting/reports/chart-of-account':
     $ref: 'post_chart_of_account.yaml'
+  '/financial-accounting/reports/chart-of-tax-codes/default-context':
+    $ref: 'get_chart_of_tax_codes.yaml'
+  '/financial-accounting/reports/chart-of-tax-codes':
+    $ref: 'post_chart_of_tax_codes.yaml'
+  '/financial-accounting/reports/aged-balance/default-context':
+    $ref: 'get_aged_balance.yaml'
+  '/financial-accounting/reports/aged-balance':
+    $ref: 'post_aged_balance.yaml'
+  '/financial-accounting/reports/journal-cash/default-context':
+    $ref: 'get_journal_cash.yaml'
+  '/financial-accounting/reports/journal-cash':
+    $ref: 'post_journal_cash.yaml'
   
