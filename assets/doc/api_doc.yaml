@@ -324,6 +324,8 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-aged-balance.yaml'
     CreateJournalCash:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-journal-cash.yaml'
+    CreateChartOfTaxCodes:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-chart-of-tax-codes.yaml'
 
     # get with filters feature
     Filter:
