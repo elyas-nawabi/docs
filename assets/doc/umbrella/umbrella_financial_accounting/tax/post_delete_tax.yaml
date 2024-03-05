@@ -22,7 +22,32 @@
                     data:
                       type: array
                       properties:
-                        
+                          company:
+                            type: integer
+                          company_: 
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                              name: 
+                                type: string
+                          group:
+                            type: integer
+                          group_:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                              name: 
+                                type: string
+                          id:
+                            type: integer
+                          name:
+                            type: string
+                          rec_name:
+                            type: string
+                          type: 
+                            type: string
                     errors:
                       type: object
                     pagination:
@@ -42,7 +67,18 @@
                       nullable: true
               example:
                 data:
-                  - 
+                  - company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    group: 20
+                    group_:
+                      id: 20
+                      name: '1'
+                    id: 23
+                    name: tx1
+                    rec_name: tx1
+                    type: percentage
                 errors: null
                 pagination:
                   page: 1
