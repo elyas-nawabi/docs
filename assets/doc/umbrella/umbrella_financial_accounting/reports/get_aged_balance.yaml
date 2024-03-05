@@ -1,0 +1,93 @@
+get:
+      tags:
+        - aged balance
+      summary: Get aged balances.
+      description: Get aged balances.
+      operationId: getAgedBalances
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        company:
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        date:
+                          type: string
+                          format: date
+                        posted: 
+                          type: boolean
+                        term1:
+                          type: integer
+                        term2:
+                          type: integer
+                        term3:
+                          type: integer
+                        type:
+                          type: string
+                        unit: 
+                          type: string
+                    errors:
+                      type: object
+                    pagination:
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  date: '2024-03-05'
+                  posted: false
+                  term1: 30
+                  term2: 60
+                  term3: 90
+                  type: customer
+                  unit: day
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'

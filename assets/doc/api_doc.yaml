@@ -320,6 +320,10 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-balance-sheet.yaml'
     CreateIncomeStatement:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-income-statement.yaml'
+    CreateAgedBalance:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-aged-balance.yaml'
+    CreateJournalCash:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-journal-cash.yaml'
 
     # get with filters feature
     Filter:
