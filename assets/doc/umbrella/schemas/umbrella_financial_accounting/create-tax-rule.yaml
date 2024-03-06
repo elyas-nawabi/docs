@@ -1,6 +1,60 @@
       properties:
-        
+            company: 
+               type: integer
+            kind:
+               type: string
+            lines:
+               type: array
+               properties:
+                  end_date:
+                    type: string
+                    format: date
+                  group: 
+                    type: integer
+                  keep_origin: 
+                    type: boolean
+                  origin_tax: 
+                    type: integer
+                  rec_name:
+                    type: string
+                  sequence: 
+                    type: integer
+                  start_date: 
+                    type: string
+                    format: date
+                  tax:
+                    type: integer
+                  template:
+                    type: integer 
+                  template_override:
+                    type: boolean
+            name: 
+              type: string
+            rec_name: 
+              type: string
+            template: 
+              type: integer
+            template_override:
+              type: boolean
       required:
-        
+        - company
+        - name
+        - kind
       example:
-        
+        company: 1
+        kind: both
+        lines:
+        - end_date: '2025-03-31'
+          group: 20
+          keep_origin: true
+          origin_tax: 24
+          rec_name: '1'
+          sequence: 2
+          start_date: '2025-03-04'
+          tax: 23
+          template: 
+          template_override: true
+        name: tx_rule_2
+        rec_name: tx_rule_2
+        template: null
+        template_override: false
