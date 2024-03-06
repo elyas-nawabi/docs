@@ -20,7 +20,16 @@ post:
                   type: object
                   properties:
                     data: 
-                      
+                      code: 
+                        type: string
+                      id:
+                        type: integer
+                      kind:
+                        type: string
+                      name: 
+                        type: string
+                      rec_name: 
+                        type: string
                     errors:
                       type: object
                     pagination:
@@ -39,7 +48,11 @@ post:
                       type: string
               example:
                 data:
-                  
+                  code: vst_reduced_test
+                  id: 21
+                  kind: purchase
+                  name: Vorsteuer ermäßigt
+                  rec_name: Vorsteuer ermäßigt
                 errors: null
                 pagination: null
                 status: 200

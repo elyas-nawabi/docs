@@ -22,7 +22,16 @@
                     data:
                       type: array
                       properties:
-                        
+                          code: 
+                            type: string
+                          id:
+                            type: integer
+                          kind:
+                            type: string
+                          name: 
+                            type: string
+                          rec_name: 
+                            type: string
                     errors:
                       type: object
                     pagination:
@@ -42,7 +51,11 @@
                       nullable: true
               example:
                 data:
-                  - 
+                  - code: vst_reduced
+                    id: 1
+                    kind: purchase
+                    name: Vorsteuer ermäßigt
+                    rec_name: Vorsteuer ermäßigt
                 errors: null
                 pagination:
                   page: 1

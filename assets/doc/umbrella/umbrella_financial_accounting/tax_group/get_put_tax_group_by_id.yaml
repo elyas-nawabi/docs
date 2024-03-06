@@ -22,7 +22,16 @@ get:
                     data:
                       type: object
                       properties:
-                      
+                        code: 
+                            type: string
+                        id:
+                          type: integer
+                        kind:
+                          type: string
+                        name: 
+                          type: string
+                        rec_name: 
+                          type: string
                     errors:
                       type: object
                     pagination:
@@ -44,7 +53,11 @@ get:
                       nullable: true
               example:
                 data:
-                  
+                  code: vst_reduced
+                  id: 1
+                  kind: purchase
+                  name: Vorsteuer ermäßigt
+                  rec_name: Vorsteuer ermäßigt
                 error: null
                 pagination: null
                 status: 200
@@ -96,7 +109,16 @@ put:
                     data:
                       type: object
                       properties:
-                        
+                        code: 
+                            type: string
+                        id:
+                          type: integer
+                        kind:
+                          type: string
+                        name: 
+                          type: string
+                        rec_name: 
+                          type: string
                     errors:
                       type: object
                     pagination:
@@ -117,7 +139,11 @@ put:
                       type: string
               example:
                 data:
-                  
+                  code: vst_reduced
+                  id: 1
+                  kind: purchase
+                  name: Vorsteuer ermäßigt
+                  rec_name: Vorsteuer ermäßigt
                 errors: null
                 pagination: null
                 status: 200
