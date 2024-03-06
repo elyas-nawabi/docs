@@ -22,7 +22,67 @@ get:
                     data:
                       type: object
                       properties:
-                      
+                        active: 
+                          type: boolean
+                        amount: 
+                          type: integer
+                        childs:
+                          type: array
+                        code: 
+                          type: string
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        description:
+                          type: string
+                        end_date:
+                          type: string
+                          format: date
+                        id: 
+                          type: integer
+                        lines: 
+                          type: array
+                        name: 
+                          type: string
+                        parent: 
+                          type: integer
+                        parent_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        rec_name: 
+                          type: string
+                        start_date: 
+                          type: string
+                        template: 
+                          type: integer
+                        template_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        template_override: 
+                          type: boolean
                     errors:
                       type: object
                     pagination:
@@ -44,7 +104,32 @@ get:
                       nullable: true
               example:
                 data:
-                  
+                  active: true
+                  amount: 0
+                  childs: []
+                  code: '1'
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  description: ''
+                  end_date: '2024-03-31'
+                  id: 4
+                  lines: []
+                  name: '1'
+                  parent: 3
+                  parent_:
+                    id: 3
+                    name: 1 - txcode1
+                  rec_name: 1 - 1
+                  start_date: '2024-03-01'
+                  template: 
+                  template_: {}
+                  template_override: false
                 error: null
                 pagination: null
                 status: 200
@@ -96,7 +181,67 @@ put:
                     data:
                       type: object
                       properties:
-                        
+                        active: 
+                          type: boolean
+                        amount: 
+                          type: integer
+                        childs:
+                          type: array
+                        code: 
+                          type: string
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        description:
+                          type: string
+                        end_date:
+                          type: string
+                          format: date
+                        id: 
+                          type: integer
+                        lines: 
+                          type: array
+                        name: 
+                          type: string
+                        parent: 
+                          type: integer
+                        parent_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        rec_name: 
+                          type: string
+                        start_date: 
+                          type: string
+                        template: 
+                          type: integer
+                        template_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        template_override: 
+                          type: boolean
                     errors:
                       type: object
                     pagination:
@@ -117,7 +262,32 @@ put:
                       type: string
               example:
                 data:
-                  
+                  active: true
+                  amount: 0
+                  childs: []
+                  code: '1'
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  description: ''
+                  end_date: '2024-03-31'
+                  id: 4
+                  lines: []
+                  name: '1'
+                  parent: 3
+                  parent_:
+                    id: 3
+                    name: 1 - txcode1
+                  rec_name: 1 - 1
+                  start_date: '2024-03-01'
+                  template: 
+                  template_: {}
+                  template_override: false
                 errors: null
                 pagination: null
                 status: 200

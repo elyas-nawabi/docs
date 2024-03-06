@@ -22,7 +22,23 @@
                     data:
                       type: array
                       properties:
-                        
+                        code:
+                          type: string
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                        id:
+                          type: integer
+                        name: 
+                          type: string
+                        rec_name: 
+                          type: string
                     errors:
                       type: object
                     pagination:
@@ -42,7 +58,14 @@
                       nullable: true
               example:
                 data:
-                  - 
+                  - code: '1'
+                    company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    id: 3
+                    name: txcode1
+                    rec_name: 1 - txcode1
                 errors: null
                 pagination:
                   page: 1
