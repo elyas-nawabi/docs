@@ -326,6 +326,14 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-journal-cash.yaml'
     CreateChartOfTaxCodes:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-chart-of-tax-codes.yaml'
+    CreatePaymentJournal:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_payment/create-payment-journal.yaml'
+    UpdatePaymentJournal:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_payment/create-payment-journal.yaml'
+    CreateStatementJournal:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement-journal.yaml'
+    UpdateStatementJournal:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement-journal.yaml'
 
     # get with filters feature
     Filter:
