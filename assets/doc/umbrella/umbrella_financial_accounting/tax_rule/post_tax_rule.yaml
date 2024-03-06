@@ -20,7 +20,82 @@ post:
                   type: object
                   properties:
                     data: 
-                      
+                      company: 
+                          type: integer
+                      company_:
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name:
+                            type: string
+                      id: 
+                        type: integer
+                      kind:
+                        type: string
+                      lines:
+                        type: array
+                        properties:
+                          end_date:
+                            type: string
+                            format: date
+                          group: 
+                            type: integer
+                          group_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          id: 
+                            type: integer
+                          keep_origin: 
+                            type: boolean
+                          origin_tax: 
+                            type: integer
+                          origin_tax_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          rec_name:
+                            type: string
+                          sequence: 
+                            type: integer
+                          start_date: 
+                            type: string
+                            format: date
+                          tax:
+                            type: integer
+                          tax_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          template:
+                            type: integer 
+                          template_: 
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          template_override:
+                            type: boolean
+                      name: 
+                        type: string
+                      rec_name: 
+                        type: string
+                      template: 
+                        type: integer
+                      template_override:
+                        type: boolean
                     errors:
                       type: object
                     pagination:
@@ -39,7 +114,38 @@ post:
                       type: string
               example:
                 data:
-                  
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  id: 1
+                  kind: both
+                  lines:
+                  - end_date: '2025-03-31'
+                    group: 20
+                    group_:
+                      id: 20
+                      name: '1'
+                    id: 1
+                    keep_origin: true
+                    origin_tax: 24
+                    origin_tax_:
+                      id: 24
+                      name: tx1
+                    rec_name: '1'
+                    sequence: 1
+                    start_date: '2025-03-04'
+                    tax: 23
+                    tax_:
+                      id: 23
+                      name: tx1
+                    template: 
+                    template_: {}
+                    template_override: false
+                  name: tx_rule_2
+                  rec_name: tx_rule_2
+                  template: 
+                  template_override: true
                 errors: null
                 pagination: null
                 status: 200
