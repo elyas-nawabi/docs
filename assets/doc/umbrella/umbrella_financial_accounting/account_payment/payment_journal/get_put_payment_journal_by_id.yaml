@@ -22,7 +22,95 @@ get:
                     data:
                       type: object
                       properties:
-                        
+                        active:
+                          type: boolean
+                        braintree_account: 
+                          type: integer
+                        braintree_account_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        clearing_account:
+                          type: integer
+                        clearing_account_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        clearing_journal: 
+                          type: integer
+                        clearing_journal_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        clearing_posting_delay: 
+                          type: integer
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        es_sepa_request_advancement:
+                          type: string
+                        id: 
+                          type: integer
+                        name:
+                          type: string
+                        process_method: 
+                          type: string
+                        rec_name:
+                          type: string
+                        sepa_bank_account_number: 
+                          type: integer
+                        sepa_bank_account_number_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        sepa_batch_booking:
+                          type: boolean
+                        sepa_charge_bearer:
+                          type: string
+                        sepa_payable_flavor:
+                          type: string 
+                        sepa_payable_initiator_id: 
+                          type: string
+                        sepa_receivable_flavor:
+                          type: string 
+                        sepa_receivable_initiator_id:
+                          type: string 
+                        stripe_account: 
+                          type: integer
+                        stripe_account_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                     errors:
                       type: object
                     pagination:
@@ -44,7 +132,43 @@ get:
                       nullable: true
               example:
                 data:
-                  
+                  active: true
+                  braintree_account: 
+                  braintree_account_: {}
+                  clearing_account: 29
+                  clearing_account_:
+                    id: 29
+                    name: 1 - 1
+                  clearing_journal: 3
+                  clearing_journal_:
+                    id: 3
+                    name: Cash
+                  clearing_posting_delay: 1
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  es_sepa_request_advancement: 'False'
+                  id: 1
+                  name: payment_journal
+                  process_method: stripe
+                  rec_name: payment_journal
+                  sepa_bank_account_number: 
+                  sepa_bank_account_number_: {}
+                  sepa_batch_booking: false
+                  sepa_charge_bearer: SLEV
+                  sepa_payable_flavor: 
+                  sepa_payable_initiator_id: 
+                  sepa_receivable_flavor: 
+                  sepa_receivable_initiator_id: 
+                  stripe_account: 1
+                  stripe_account_:
+                    id: 1
+                    name: alpha
                 error: null
                 pagination: null
                 status: 200
@@ -96,7 +220,95 @@ put:
                     data:
                       type: object
                       properties:
-                        
+                        active:
+                          type: boolean
+                        braintree_account: 
+                          type: integer
+                        braintree_account_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        clearing_account:
+                          type: integer
+                        clearing_account_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        clearing_journal: 
+                          type: integer
+                        clearing_journal_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        clearing_posting_delay: 
+                          type: integer
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        es_sepa_request_advancement:
+                          type: string
+                        id: 
+                          type: integer
+                        name:
+                          type: string
+                        process_method: 
+                          type: string
+                        rec_name:
+                          type: string
+                        sepa_bank_account_number: 
+                          type: integer
+                        sepa_bank_account_number_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        sepa_batch_booking:
+                          type: boolean
+                        sepa_charge_bearer:
+                          type: string
+                        sepa_payable_flavor:
+                          type: string 
+                        sepa_payable_initiator_id: 
+                          type: string
+                        sepa_receivable_flavor:
+                          type: string 
+                        sepa_receivable_initiator_id:
+                          type: string 
+                        stripe_account: 
+                          type: integer
+                        stripe_account_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                     errors:
                       type: object
                     pagination:
@@ -117,7 +329,43 @@ put:
                       type: string
               example:
                 data:
-                  
+                  active: true
+                  braintree_account: 
+                  braintree_account_: {}
+                  clearing_account: 29
+                  clearing_account_:
+                    id: 29
+                    name: 1 - 1
+                  clearing_journal: 3
+                  clearing_journal_:
+                    id: 3
+                    name: Cash
+                  clearing_posting_delay: 1
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  es_sepa_request_advancement: 'False'
+                  id: 1
+                  name: payment_journal
+                  process_method: stripe
+                  rec_name: payment_journal
+                  sepa_bank_account_number: 
+                  sepa_bank_account_number_: {}
+                  sepa_batch_booking: false
+                  sepa_charge_bearer: SLEV
+                  sepa_payable_flavor: 
+                  sepa_payable_initiator_id: 
+                  sepa_receivable_flavor: 
+                  sepa_receivable_initiator_id: 
+                  stripe_account: 1
+                  stripe_account_:
+                    id: 1
+                    name: alpha
                 errors: null
                 pagination: null
                 status: 200

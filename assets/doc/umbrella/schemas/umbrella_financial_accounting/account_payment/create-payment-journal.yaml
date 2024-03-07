@@ -1,5 +1,70 @@
 properties:
-
+  active:
+    type: boolean
+  braintree_account: 
+    type: integer
+  clearing_account:
+    type: integer
+  clearing_journal: 
+    type: integer
+  clearing_posting_delay: 
+    type: integer
+  company: 
+    type: integer
+  currency: 
+    type: integer
+  es_sepa_request_advancement:
+    type: string
+  id: 
+    type: integer
+  name:
+    type: string
+  process_method: 
+    type: string
+  rec_name:
+    type: string
+  sepa_bank_account_number: 
+    type: integer
+  sepa_batch_booking:
+    type: boolean
+  sepa_charge_bearer:
+    type: string
+  sepa_payable_flavor:
+    type: string 
+  sepa_payable_initiator_id: 
+    type: string
+  sepa_receivable_flavor:
+    type: string 
+  sepa_receivable_initiator_id:
+    type: string 
+  stripe_account: 
+    type: integer
+  
 required:
-
+  - company
+  - currency
+  - name
+  - process_method
+  - sepa_charge_bearer
+  - stripe_account
+  
 example:
+  active: true
+  braintree_account: null
+  clearing_account: 29
+  clearing_journal: 3
+  clearing_posting_delay: 1
+  company: 1
+  currency: 1
+  es_sepa_request_advancement: 'False'
+  name: payment_journal_test
+  process_method: stripe
+  rec_name: payment_journal_test
+  sepa_bank_account_number: 
+  sepa_batch_booking: false
+  sepa_charge_bearer: SLEV
+  sepa_payable_flavor: null
+  sepa_payable_initiator_id: null
+  sepa_receivable_flavor: null
+  sepa_receivable_initiator_id: null
+  stripe_account: 1
