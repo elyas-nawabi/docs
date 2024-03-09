@@ -1,9 +1,9 @@
 post:
       tags:
         - balance sheet
-      summary: Create a balance sheet.
-      description: Create a balance sheet.
-      operationId: postBalanceSheet
+      summary: Get balance sheet based on the context provided in the body.
+      description: Get balance sheet based on the context provided in the body.
+      operationId: getBalanceSheets
       requestBody:
         required: true
         content:

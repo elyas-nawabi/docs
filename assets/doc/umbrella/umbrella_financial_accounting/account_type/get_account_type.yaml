@@ -1,28 +1,36 @@
-post:
+    post:
       tags:
-        - aged balance
-      summary: Get aged balance based on the context provided in the body.
-      description: Get aged balance based on the context provided in the body.
-      operationId: getAgedBalances
+        - account type
+      summary: Get list of account types.
+      description: Get list of account types.
+      operationId: getAccountType
       requestBody:
-        required: true
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateAgedBalance'
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
-        '201':
-          description: Created
+        '200':
+          description: OK
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data: 
+                    data:
                       type: array
                       properties:
-                        
+                          company: 
+                            type: integer
+                          company_:
+                            id:
+                              type: integer
+                            name:
+                              type: string 
+                          id: 1
+                          rec_name: Minimal Account Type Chart
                     errors:
                       type: object
                     pagination:
@@ -39,19 +47,21 @@ post:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
                 data:
-                  context:
-                    company: 1
-                    date: '2024-03-05'
-                    posted: true
-                    term1: 30
-                    term2: 60
-                    term3: 90
-                    type: customer
-                    unit: day
+                  - company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    id: 1
+                    rec_name: Minimal Account Type Chart
                 errors: null
-                pagination: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 12
                 status: 200
                 success_message: null
         '401':
@@ -64,4 +74,5 @@ post:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
     

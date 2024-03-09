@@ -1,36 +1,110 @@
-    post:
+post:
       tags:
         - account type
-      summary: Get list of account types.
-      description: Get list of account types.
-      operationId: getAccountType
+      summary: Create an account type.
+      description: Create an account type.
+      operationId: postAccountTypeById
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateAccountType'
       responses:
-        '200':
-          description: OK
+        '201':
+          description: Created
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data:
-                      type: array
+                    data: 
+                      type: object
                       properties:
-                          company: 
-                            type: integer
-                          company_:
+                        childs:
+                          type: array
+                          properties:
+                            childs:
+                              type: array
+                              properties:
+                                childs:
+                                  type: array
+                                company:
+                                  type: integer
+                                company_:
+                                  type: object
+                                  properties:
+                                    id:
+                                      type: integer
+                                    name:
+                                      type: string
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                                parent:
+                                  type: integer
+                                parent_: 
+                                  type: object
+                                rec_name:
+                                  type: string
+                                sequence:
+                                  type: integer
+                                statement: 
+                                  type: string
+                                stock:
+                                  type: boolean
+                            company:
+                              type: integer
+                            company_:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
                             id:
                               type: integer
                             name:
-                              type: string 
-                          id: 1
-                          rec_name: Minimal Account Type Chart
+                              type: string
+                            parent:
+                              type: integer
+                            parent_: 
+                              type: object
+                            rec_name:
+                              type: string
+                            sequence:
+                              type: integer
+                            statement: 
+                              type: string
+                            stock:
+                              type: boolean
+                        company:
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                        parent:
+                          type: integer
+                        parent_: 
+                          type: object
+                        rec_name:
+                          type: string
+                        sequence:
+                          type: integer
+                        statement: 
+                          type: string
+                        stock:
+                          type: boolean
                     errors:
                       type: object
                     pagination:
@@ -47,21 +121,53 @@
                       type: integer
                     success_message:
                       type: string
-                      nullable: true
               example:
                 data:
-                  - company: 1
+                  childs:
+                  - childs:
+                    - childs: []
+                      company: 1
+                      company_:
+                        id: 1
+                        name: Party 1
+                      id: 7
+                      name: Long-term
+                      parent: 2
+                      parent_:
+                        id: 2
+                        name: Minimal Account Type Chart\Asset
+                      rec_name: Minimal Account Type Chart\Asset\Long-term
+                      sequence: 20
+                      statement: balance
+                      stock: false
+                    company: 1
                     company_:
                       id: 1
                       name: Party 1
+                    id: 2
+                    name: Asset
+                    parent: 1
+                    parent_:
+                      id: 1
+                      name: Minimal Account Type Chart
+                    rec_name: Minimal Account Type Chart\Asset
+                    sequence: 10
+                    statement: balance
+                    stock: false
+                  company: 1
+                  company_:
                     id: 1
-                    rec_name: Minimal Account Type Chart
+                    name: Party 1
+                  id: 1
+                  name: Minimal Account Type Chart
+                  parent: 
+                  parent_: {}
+                  rec_name: Minimal Account Type Chart
+                  sequence: 10
+                  statement: 
+                  stock: false
                 errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 12
+                pagination: null
                 status: 200
                 success_message: null
         '401':
@@ -75,7 +181,7 @@
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     
-    delete:
+delete:
       tags:
         - account type
       summary: Delete account types.

@@ -1,69 +1,89 @@
-    post:
+post:
       tags:
         - statement journal
-      summary: Get list of statement journals.
-      description: Get list of statement journals.
-      operationId: getStatementJournal
+      summary: Create a statement journal.
+      description: Create a statement journal.
+      operationId: postStatementJournalById
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../../api_doc.yaml#/components/schemas/CreateStatementJournal'
       responses:
-        '200':
-          description: OK
+        '201':
+          description: Created
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data:
-                      type: array
-                      properties:
-                          bank_account: 
-                            type: integer
-                          bank_account_: 
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name: 
-                                type: string
-                          company: 
-                            type: integer
-                          company_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name: 
-                                type: string
-                          currency: 
-                            type: integer
-                          currency_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name: 
-                                type: string
+                    data: 
+                      account: 
+                        type: integer
+                      account_:
+                        type: object
+                        properties:
                           id: 
                             type: integer
-                          journal:
-                            type: integer
-                          journal_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name: 
-                                type: string
                           name: 
                             type: string
-                          rec_name: 
-                            type: string 
+                      active:
+                        type: boolean
+                      bank_account:
+                        type: integer 
+                      bank_account_: 
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name: 
+                            type: string
+                      company: 
+                        type: integer
+                      company_:
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name: 
+                            type: string
+                      company_party: 
+                        type: integer
+                      company_party_:
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name: 
+                            type: string
+                      currency:
+                        type: integer
+                      currency_:
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name: 
+                            type: string
+                      id: 
+                        type: integer
+                      journal:
+                        type: integer
+                      journal_:
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name: 
+                            type: string
+                      name:
+                        type: string
+                      rec_name:
+                        type: string
+                      validation:
+                        type: string
                     errors:
                       type: object
                     pagination:
@@ -80,33 +100,38 @@
                       type: integer
                     success_message:
                       type: string
-                      nullable: true
               example:
                 data:
-                  - bank_account: null
-                    bank_account_: {}
-                    company: 1
-                    company_:
-                      id: 1
-                      name: Party 1
-                    currency: 1
-                    currency_:
-                      id: 1
-                      name: Afghani
-                    id: 6
-                    journal: 13
-                    journal_:
-                      id: 13
-                      name: Statement
-                    name: statementj1
-                    rec_name: statementj1
+                  account: 29
+                  account_:
+                    id: 29
+                    name: 1 - 1
+                  active: true
+                  bank_account: null
+                  bank_account_: {}
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  company_party: 3
+                  company_party_:
+                    id: 3
+                    name: Party 1
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  id: 6
+                  journal: 13
+                  journal_:
+                    id: 13
+                    name: Statement
+                  name: statementj1
+                  rec_name: statementj1
+                  validation: balance
                 errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 12
-                status: 200
+                pagination: null
+                status: 201
                 success_message: null
         '401':
           description: >-
@@ -118,8 +143,8 @@
             application/json:
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
-    
-    delete:
+
+delete:
       tags:
         - statement journal
       summary: Delete statement journal.
@@ -150,3 +175,4 @@
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
   
+    

@@ -63,9 +63,9 @@ tags:
     description: account move - account move data management.
 paths:
   '/financial-accounting/account-moves/search':
-    $ref: 'post_delete_account_move.yaml'
+    $ref: 'get_account_move.yaml'
   '/financial-accounting/account-moves':
-    $ref: 'post_account_move.yaml'
+    $ref: 'post_delete_account_move.yaml'
   '/financial-accounting/account-moves/{obj_id}':
     $ref: 'get_put_account_move_by_id.yaml'
   

@@ -1,9 +1,9 @@
 post:
       tags:
         - general ledger
-      summary: Create a general ledger.
-      description: Create a general ledger.
-      operationId: postGeneralLedger
+      summary: Get general ledger based on the context provided in the body.
+      description: Get general ledger based on the context provided in the body.
+      operationId: getGeneralLedgers
       requestBody:
         required: true
         content:

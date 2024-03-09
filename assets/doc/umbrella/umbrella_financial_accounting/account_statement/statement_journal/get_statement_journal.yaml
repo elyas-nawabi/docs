@@ -1,36 +1,47 @@
-post:
+    post:
       tags:
-        - journal cash
-      summary: Get journal cash based on the context provided in the body.
-      description: Get journal cash based on the context provided in the body.
-      operationId: getJournalCashs
+        - statement journal
+      summary: Get list of statement journals.
+      description: Get list of statement journals.
+      operationId: getStatementJournal
       requestBody:
-        required: true
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateJournalCash'
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
-        '201':
-          description: Created
+        '200':
+          description: OK
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data: 
+                    data:
                       type: array
                       properties:
-                          active: 
-                            type: boolean
-                          balance: 
+                          bank_account: 
                             type: integer
-                          code:
-                            type: string
-                          credit: 
+                          bank_account_: 
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name: 
+                                type: string
+                          company: 
                             type: integer
+                          company_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name: 
+                                type: string
                           currency: 
+                            type: integer
                           currency_:
                             type: object
                             properties:
@@ -38,27 +49,21 @@ post:
                                 type: integer
                               name: 
                                 type: string
-                          debit: 
-                            type: integer
                           id: 
                             type: integer
-                          matching_sequence: 
+                          journal:
                             type: integer
-                          name:
-                            type: string
-                          rec_name:
-                            type: string
-                          sequence: 
-                            type: integer
-                          sequence_:
+                          journal_:
                             type: object
                             properties:
                               id: 
                                 type: integer
                               name: 
                                 type: string
-                          type:
+                          name: 
                             type: string
+                          rec_name: 
+                            type: string 
                     errors:
                       type: object
                     pagination:
@@ -75,26 +80,32 @@ post:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
                 data:
-                  - active: true
-                    balance: 0
-                    code: CASH
-                    credit: 0
-                    currency: 
-                    currency_: {}
-                    debit: 0
-                    id: 3
-                    matching_sequence: 
-                    name: Cash
-                    rec_name: Cash
-                    sequence: 2
-                    sequence_:
-                      id: 2
-                      name: Default Account Journal
-                    type: cash
+                  - bank_account: null
+                    bank_account_: {}
+                    company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    id: 6
+                    journal: 13
+                    journal_:
+                      id: 13
+                      name: Statement
+                    name: statementj1
+                    rec_name: statementj1
                 errors: null
-                pagination: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 12
                 status: 200
                 success_message: null
         '401':
@@ -106,5 +117,6 @@ post:
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
     
+   

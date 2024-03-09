@@ -1,28 +1,155 @@
-    post:
+post:
       tags:
         - account
-      summary: Get list of accounts.
-      description: Get list of accounts.
-      operationId: getAccount
+      summary: Create an account.
+      description: Create an account.
+      operationId: postAccountById
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateAccount'
       responses:
-        '200':
-          description: OK
+        '201':
+          description: Created
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data:
-                      type: array
+                    data: 
+                      type: object
                       properties:
-                        company:
+                        active:
+                          type: boolean
+                        amount_second_currency:
+                          type: integer
+                        balance:
+                          type: integer
+                        childs:
+                          type: array
+                          properties:
+                            active:
+                              type: boolean
+                            amount_second_currency:
+                              type: integer
+                            balance:
+                              type: integer
+                            childs:
+                              type: array
+                            closed:
+                              type: boolean
+                            code:
+                              type: string
+                              nullable: true
+                            company:  
+                              type: integer
+                            company_:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                            credit:
+                              type: number
+                              format: float
+                            credit_type: 
+                              type: integer
+                            credit_type_:
+                              type: object
+                            currency:
+                              type: integer
+                            currency_:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                            debit:
+                              type: integer
+                            debit_type: 
+                              type: integer
+                            debit_type_:
+                              type: object
+                            deferral:
+                              type: boolean
+                            deferrals:
+                              type: array
+                            end_date: 
+                              type: string
+                              format: date
+                            general_ledger_balance: 
+                              type: boolean
+                            id: 
+                              type: integer
+                            left: 
+                              type: integer
+                            line_count: 
+                              type: integer
+                            name: 
+                              type: string
+                            note: 
+                              type: string
+                            parent: 
+                              type: integer
+                            parent_:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                            party_required: 
+                              type: boolean
+                            rec_name: 
+                              type: string
+                            reconcile: 
+                              type: boolean
+                            replaced_by: 
+                              type: integer
+                            replaced_by_:
+                              type: object
+                            right: 
+                              type: integer
+                            second_currency: 
+                              type: integer
+                            second_currency_: 
+                              type: object
+                            start_date: 
+                              type: string
+                              format: date
+                            taxes:
+                              type: array
+                            template:
+                              type: integer
+                            template_:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                            template_override:
+                              type: boolean
+                            type: 
+                              type: integer
+                            type_:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                        closed:
+                          type: boolean
+                        code:
+                          type: string
+                          nullable: true
+                        company:  
                           type: integer
                         company_:
                           type: object
@@ -31,26 +158,97 @@
                               type: integer
                             name:
                               type: string
+                        credit:
+                          type: number
+                          format: float
                         credit_type: 
                           type: integer
-                        credit_type_: 
+                        credit_type_:
                           type: object
+                        currency:
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                        debit:
+                          type: integer
                         debit_type: 
                           type: integer
                         debit_type_:
                           type: object
+                        deferral:
+                          type: boolean
+                        deferrals:
+                          type: array
+                        end_date: 
+                          type: string
+                          format: date
+                        general_ledger_balance: 
+                          type: boolean
                         id: 
                           type: integer
+                        left: 
+                          type: integer
+                        line_count: 
+                          type: integer
+                        name: 
+                          type: string
+                        note: 
+                          type: string
+                        parent: 
+                          type: integer
+                        parent_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                        party_required: 
+                          type: boolean
                         rec_name: 
                           type: string
+                        reconcile: 
+                          type: boolean
+                        replaced_by: 
+                          type: integer
+                        replaced_by_:
+                          type: object
+                        right: 
+                          type: integer
+                        second_currency: 
+                          type: integer
+                        second_currency_: 
+                          type: object
+                        start_date: 
+                          type: string
+                          format: date
+                        taxes:
+                          type: array
+                        template:
+                          type: integer
+                        template_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                        template_override:
+                          type: boolean
                         type: 
                           type: integer
                         type_:
-                          id:
-                            type: integer
-                          name:
-                            type: string
-                
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                     errors:
                       type: object
                     pagination:
@@ -67,29 +265,112 @@
                       type: integer
                     success_message:
                       type: string
-                      nullable: true
               example:
                 data:
-                - company: 1
+                  active: true
+                  amount_second_currency: 0
+                  balance: 0
+                  childs:
+                  - active: true
+                    amount_second_currency: 0
+                    balance: 0
+                    childs: []
+                    closed: false
+                    code: 
+                    company: 1
+                    company_:
+                      name: Party 1
+                      id: 1
+                    credit: 0
+                    credit_type: 
+                    credit_type_: {}
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    debit: 0
+                    debit_type: 
+                    debit_type_: {}
+                    deferral: true
+                    deferrals: []
+                    end_date: 
+                    general_ledger_balance: false
+                    id: 2
+                    left: 2
+                    line_count: 0
+                    name: Main Cash
+                    note: 
+                    parent: 1
+                    parent_:
+                      id: 1
+                      name: Minimal Account Chart
+                    party_required: false
+                    rec_name: Main Cash
+                    reconcile: false
+                    replaced_by: 
+                    replaced_by_: {}
+                    right: 3
+                    second_currency: 
+                    second_currency_: {}
+                    start_date: 
+                    taxes: []
+                    template: 6
+                    template_:
+                      id: 6
+                      name: Main Cash
+                    template_override: false
+                    type: 11
+                    type_:
+                      id: 11
+                      name: Minimal Account Type Chart\Asset\Current\Cash
+                  closed: true
+                  code: 
+                  company: 1
                   company_:
                     id: 1
                     name: Party 1
+                  credit: 0
                   credit_type: 
                   credit_type_: {}
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  debit: 0
                   debit_type: 
                   debit_type_: {}
-                  id: 2
+                  deferral: false
+                  deferrals: []
+                  end_date: 
+                  general_ledger_balance: false
+                  id: 1
+                  left: 1
+                  line_count: 0
+                  name: Minimal Account Chart
+                  note: 
+                  parent: 
+                  parent_: {}
+                  party_required: false
                   rec_name: Minimal Account Chart
+                  reconcile: false
+                  replaced_by: 
+                  replaced_by_: {}
+                  right: 14
+                  second_currency: 
+                  second_currency_: {}
+                  start_date: 
+                  taxes: []
+                  template: 1
+                  template_:
+                    id: 1
+                    name: Minimal Account Chart
+                  template_override: false
                   type: 1
                   type_:
                     id: 1
                     name: Minimal Account Type Chart
                 errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 12
+                pagination: null
                 status: 200
                 success_message: null
         '401':
@@ -103,7 +384,7 @@
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     
-    delete:
+delete:
       tags:
         - account
       summary: Delete accounts.
