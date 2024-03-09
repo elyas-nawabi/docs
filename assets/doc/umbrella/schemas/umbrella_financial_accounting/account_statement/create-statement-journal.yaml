@@ -1,5 +1,39 @@
 properties:
-
+  account: 
+    type: integer
+  active:
+    type: boolean
+  bank_account:
+    type: integer 
+  company: 
+    type: integer
+  company_party: 
+    type: integer
+  currency:
+    type: integer
+  journal:
+    type: integer
+  name:
+    type: string
+  rec_name:
+    type: string
+  validation:
+    type: string
 required:
-
+  - account
+  - company
+  - currency
+  - journal
+  - name 
+  - validation
 example:
+  account: 30
+  active: false
+  bank_account: null
+  company: 1
+  company_party: 3
+  currency: 1
+  journal: 13
+  name: statementj2
+  rec_name: statementj2
+  validation: balance
