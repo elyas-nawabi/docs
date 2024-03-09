@@ -63,9 +63,9 @@ tags:
     description: region - region data management.
 paths:
   '/country/regions/search':
-    $ref: 'post_delete_region.yaml'
+    $ref: 'get_region.yaml'
   '/country/regions':
-    $ref: 'post_region.yaml'
+    $ref: 'post_delete_region.yaml'
   '/country/regions/{obj_id}':
     $ref: 'get_put_region_by_id.yaml'
   
