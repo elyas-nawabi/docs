@@ -1,27 +1,28 @@
-    post:
+post:
       tags:
         - contact mechanism
-      summary: Get contact mechanism.
-      description: Get contact mechanism.
-      operationId: getContactMechanism
+      summary: Create a contact mechanism.
+      description: Create a contact mechanism.
+      operationId: postContactMechanism
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateContactMechanism'
       responses:
-        '200':
-          description: List of contact mechanisms.
+        '201':
+          description: OK
           content:
             application/json:
               schema:
-                  type: object
                   properties:
                     data:
                       type: array
                       properties:
+                        active: 
+                          type: boolean
                         address:
                           type: integer
                         address_:
@@ -31,8 +32,12 @@
                               type: integer
                             name:
                               type: string
+                        comment:
+                          type: string
                         id:
                           type: integer
+                        language:
+                          type: string
                         name: 
                           type: string
                         party:
@@ -44,6 +49,8 @@
                               type: integer
                             name:
                               type: string
+                        sequence:
+                          type: integer
                         type:
                           type: string
                         value:
@@ -65,27 +72,21 @@
                     success_message:
                       type: string
               example:
-                data:
-                  address: 2
-                  address_:
-                    id: 2
-                    name: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
+                active: true
+                address: 2
+                address_:
                   id: 2
-                  name: "ctm1"
-                  party: 1
-                  party_:
-                      "id": 1
-                      "name": "Party 1"
-                  type: "phone"
-                  value: "8888"
-                errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 1
-                status: 200
-                success_message: null
+                  name: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
+                comment: "information about contact name"
+                language: "en"
+                name: "ctm1"
+                party: 1
+                party_:
+                    "id": 1
+                    "name": "Party 1"
+                sequence: 1
+                type: "phone"
+                value: "8888"
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -95,9 +96,10 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
-    
-    delete:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+
+delete:
       tags:
         - contact mechanism
       summary: Delete contact mechanism.

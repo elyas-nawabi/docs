@@ -63,9 +63,9 @@ tags:
     description: contact mechanism - contact mechanism data management.
 paths:
   '/party/contact-mechanisms/search':
-    $ref: 'post_delete_contact_mechanism.yaml'
+    $ref: 'get_contact_mechanism.yaml'
   '/party/contact-mechanisms':
-    $ref: 'post_contact_mechanism.yaml'
+    $ref: 'post_delete_contact_mechanism.yaml'
   '/party/contact-mechanisms/{obj_id}':
     $ref: 'get_put_contact_mechanism_by_id.yaml'
   

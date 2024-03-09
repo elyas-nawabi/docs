@@ -63,9 +63,9 @@ tags:
     description: address - address data management.
 paths:
   '/party/addresses/search':
-    $ref: 'post_delete_address.yaml'
+    $ref: 'get_address.yaml'
   '/party/addresses':
-    $ref: 'post_address.yaml'
+    $ref: 'post_delete_address.yaml'
   '/party/addresses/{obj_id}':
     $ref: 'get_put_address_by_id.yaml'
   

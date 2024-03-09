@@ -1,62 +1,90 @@
-    post:
+post:
       tags:
         - category
-      summary: Get categories.
-      description: Get categories.
-      operationId: getCategories
+      summary: Create a category.
+      description: Create a category.
+      operationId: postCategory
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateCategory'
       responses:
-        '200':
-          description: List of categories.
+        '201':
+          description: OK
           content:
             application/json:
               schema:
-                  type: object
                   properties:
                     data:
-                      type: array
+                      type: object
                       properties:
+                        childs:
+                          type: array
                         id:
                           type: integer
                         name:
                           type: string
+                        parent:
+                          type: integer
+                        parent_:
+                          type: object
                     errors:
                       type: object
+                      nullable: true
                     pagination:
                       type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
+                      nullable: true
                     status:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
-                data:
-                  - id: 1
-                    name: "parentCategory"
-                  - id: 2
-                    name: "childCategory"
-                  - id: 3
-                    name: "simpleCategory"
+              - Please remove the square brackets from the start and end lines during post operation.
+              - You are limited to selecting one example from the following.
+              - data:
+                  childs: []
+                  id: 12
+                  name: "testCtg1"
+                  parent: null
+                  parent_: {}
                 errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 1
-                status: 200
+                pagination: null
+                status: 201
+                success_message: null
+              - data:
+                  childs: []
+                  id: 13
+                  name: "testCtg2"
+                  parent: 4
+                  parent_:
+                    id: 4
+                    name: "parentCtg"
+                errors: null
+                pagination: null
+                status: 201
+                success_message: null
+              - data:
+                  childs:
+                    childs: []
+                    id: 7
+                    name: "test1"
+                    parent: 6
+                    parent_: 
+                        id: 6
+                        name: "parentctg / testCtg"
+                  id: 14
+                  name: "testCtg4"
+                  parent: 4
+                  parent_:
+                    id: 4
+                    name: "parentCtg"
+                errors: null
+                pagination: null
+                status: 201
                 success_message: null
         '401':
           description: >-
@@ -67,8 +95,9 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
-    delete:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
       tags:
         - category
       summary: Delete categories.
@@ -98,4 +127,4 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-  
+    
