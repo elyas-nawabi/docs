@@ -1,53 +1,114 @@
-    post:
+post:
       tags:
         - payment journal
-      summary: Get list of payment journals.
-      description: Get list of payment journals.
-      operationId: getPaymentJournal
+      summary: Create a payment journal.
+      description: Create a payment journal.
+      operationId: postPaymentJournalById
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../../api_doc.yaml#/components/schemas/CreatePaymentJournal'
       responses:
-        '200':
-          description: OK
+        '201':
+          description: Created
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data:
-                      type: array
-                      properties:
-                          company: 
-                            type: integer
-                          company_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name:
-                                type: string
-                          currency: 
-                            type: integer
-                          currency_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name:
-                                type: string
+                    data: 
+                      active:
+                        type: boolean
+                      braintree_account: 
+                        type: integer
+                      braintree_account_:
+                        type: object
+                        properties:
                           id: 
                             type: integer
-                          name:
+                          name: 
                             type: string
-                          process_method:
+                      clearing_account:
+                        type: integer
+                      clearing_account_:
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name: 
                             type: string
-                          rec_name:
-                            type: string  
+                      clearing_journal: 
+                        type: integer
+                      clearing_journal_:
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name: 
+                            type: string
+                      clearing_posting_delay: 
+                        type: integer
+                      company: 
+                        type: integer
+                      company_:
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name: 
+                            type: string
+                      currency: 
+                        type: integer
+                      currency_:
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name: 
+                            type: string
+                      es_sepa_request_advancement:
+                        type: string
+                      id: 
+                        type: integer
+                      name:
+                        type: string
+                      process_method: 
+                        type: string
+                      rec_name:
+                        type: string
+                      sepa_bank_account_number: 
+                        type: integer
+                      sepa_bank_account_number_:
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name: 
+                            type: string
+                      sepa_batch_booking:
+                        type: boolean
+                      sepa_charge_bearer:
+                        type: string
+                      sepa_payable_flavor:
+                        type: string 
+                      sepa_payable_initiator_id: 
+                        type: string
+                      sepa_receivable_flavor:
+                        type: string 
+                      sepa_receivable_initiator_id:
+                        type: string 
+                      stripe_account: 
+                        type: integer
+                      stripe_account_:
+                        type: object
+                        properties:
+                          id: 
+                            type: integer
+                          name: 
+                            type: string
                     errors:
                       type: object
                     pagination:
@@ -64,28 +125,48 @@
                       type: integer
                     success_message:
                       type: string
-                      nullable: true
               example:
                 data:
-                  - company: 1
-                    company_:
-                      id: 1
-                      name: Party 1
-                    currency: 1
-                    currency_:
-                      id: 1
-                      name: Afghani
+                  active: true
+                  braintree_account: null
+                  braintree_account_: {}
+                  clearing_account: 29
+                  clearing_account_:
+                    id: 29
+                    name: 1 - 1
+                  clearing_journal: 3
+                  clearing_journal_:
+                    id: 3
+                    name: Cash
+                  clearing_posting_delay: 1
+                  company: 1
+                  company_:
                     id: 1
-                    name: payment_journal
-                    process_method: stripe
-                    rec_name: payment_journal
+                    name: Party 1
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  es_sepa_request_advancement: 'False'
+                  id: 1
+                  name: payment_journal
+                  process_method: stripe
+                  rec_name: payment_journal
+                  sepa_bank_account_number: 
+                  sepa_bank_account_number_: {}
+                  sepa_batch_booking: false
+                  sepa_charge_bearer: SLEV
+                  sepa_payable_flavor: null
+                  sepa_payable_initiator_id: null
+                  sepa_receivable_flavor: null
+                  sepa_receivable_initiator_id: null
+                  stripe_account: 1
+                  stripe_account_:
+                    id: 1
+                    name: alpha
                 errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 12
-                status: 200
+                pagination: null
+                status: 201
                 success_message: null
         '401':
           description: >-
@@ -98,7 +179,7 @@
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
     
-    delete:
+delete:
       tags:
         - payment journal
       summary: Delete payment journal.

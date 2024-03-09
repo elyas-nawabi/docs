@@ -63,9 +63,9 @@ tags:
     description: payment journal - payment journal data management.
 paths:
   '/financial-accounting/payment-journals/search':
-    $ref: 'post_delete_payment_journal.yaml'
+    $ref: 'get_payment_journal.yaml'
   '/financial-accounting/payment-journals':
-    $ref: 'post_payment_journal.yaml'
+    $ref: 'post_delete_payment_journal.yaml'
   '/financial-accounting/payment-journals/{obj_id}':
     $ref: 'get_put_payment_journal_by_id.yaml'
   
