@@ -63,9 +63,9 @@ tags:
     description: tax group - tax group data management.
 paths:
   '/financial-accounting/tax-groups/search':
-    $ref: 'post_delete_tax_group.yaml'
+    $ref: 'get_tax_group.yaml'
   '/financial-accounting/tax-groups':
-    $ref: 'post_tax_group.yaml'
+    $ref: 'post_delete_tax_group.yaml'
   '/financial-accounting/tax-groups/{obj_id}':
     $ref: 'get_put_tax_group_by_id.yaml'
   
