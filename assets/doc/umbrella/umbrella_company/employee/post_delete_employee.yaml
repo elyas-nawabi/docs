@@ -1,68 +1,60 @@
-    post:
+post:
       tags:
         - employee
-      summary: Get employee details.
-      description: Get employee details.
-      operationId: getEmployees
+      summary: Create a employee.
+      description: Create a employee.
+      operationId: postEmployeeById
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateEmployee'
       responses:
-        '200':
-          description: List of employees.
+        '201':
+          description: OK
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data:
-                      type: array
-                      properties:
-                        id:
+                    properties:
+                      data:
+                        company:
                           type: integer
-                        party:
+                        end_date:
                           type: string
-                        party_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                    errors:
-                      type: object
-                    pagination:
-                      type: object
-                      page:
+                          format: date
+                        party:
+                          type: integer
+                        start_date:
+                          type: string
+                          format: date
+                        supervisor:
+                          type: integer
+                      errors:
+                        type: object
+                        nullable: true
+                      pagination:
+                        type: object
+                        nullable: true
+                      status:
                         type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
+                      success_message:
+                        type: string
+                        nullable: true
+
+              required:
+                - party
+                - company
               example:
                 data:
-                - id: 5
+                  company: 2
+                  end_date: '2024-02-13'
                   party: 1
-                  party_:
-                    id: 1
-                    name: Party 1
+                  start_date: '2024-02-01'
+                  supervisor: 5
                 error: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 9
+                pagination: null
                 status: 200
                 success_message: null
         '401':
@@ -76,7 +68,7 @@
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     
-    delete:
+delete:
       tags:
         - employee
       summary: Delete employees.
