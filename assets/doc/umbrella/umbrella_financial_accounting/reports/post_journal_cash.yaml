@@ -1,9 +1,9 @@
 post:
       tags:
         - journal cash
-      summary: Create a journal cash.
-      description: Create a journal cash.
-      operationId: postJournalCash
+      summary: Get journal cash based on the context provided in the body.
+      description: Get journal cash based on the context provided in the body.
+      operationId: getJournalCashs
       requestBody:
         required: true
         content:

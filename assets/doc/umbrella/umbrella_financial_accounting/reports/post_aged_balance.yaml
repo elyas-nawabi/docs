@@ -1,9 +1,9 @@
 post:
       tags:
         - aged balance
-      summary: Create an aged balance.
-      description: Create an aged balance.
-      operationId: postAgedBalance
+      summary: Get aged balance based on the context provided in the body.
+      description: Get aged balance based on the context provided in the body.
+      operationId: getAgedBalances
       requestBody:
         required: true
         content:

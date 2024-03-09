@@ -1,9 +1,9 @@
 post:
       tags:
         - chart of tax codes
-      summary: Create a chart of tax codes.
-      description: Create a chart of tax codes.
-      operationId: postChartOfTaxCodes
+      summary: Get chart of tax codes based on the context provided in the body..
+      description: Get chart of tax codes based on the context provided in the body..
+      operationId: getChartOfTaxCodes
       requestBody:
         required: true
         content:

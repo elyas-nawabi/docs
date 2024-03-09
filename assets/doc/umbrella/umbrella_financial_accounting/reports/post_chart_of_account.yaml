@@ -1,9 +1,9 @@
 post:
       tags:
         - chart of account
-      summary: Create a chart of account.
-      description: Create a chart of account.
-      operationId: postChartOfAccount
+      summary: Get chart of account based on the context provided in the body.
+      description: Get chart of account based on the context provided in the body.
+      operationId: getChartOfAccounts
       requestBody:
         required: true
         content:

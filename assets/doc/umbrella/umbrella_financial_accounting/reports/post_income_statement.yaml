@@ -1,9 +1,9 @@
 post:
       tags:
         - income statement
-      summary: Create an income statement.
-      description: Create an income statement.
-      operationId: postIncomeStatement
+      summary: Get income statement based on the context provided in the body.
+      description: Get income statement based on the context provided in the body.
+      operationId: getIncomeStatements
       requestBody:
         required: true
         content:
