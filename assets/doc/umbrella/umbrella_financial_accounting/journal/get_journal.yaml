@@ -1,40 +1,36 @@
-post:
+    post:
       tags:
-        - write off
-      summary: Create a write off.
-      description: Create a write off.
-      operationId: postWriteOffById
+        - journal
+      summary: Get list of journal.
+      description: Get list of journal.
+      operationId: getJournal
       requestBody:
-        required: true
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateWriteOff'
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
-        '201':
-          description: Created
+        '200':
+          description: OK
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data: 
-                      type: object
+                    data:
+                      type: array
                       properties:
-                        active:
-                          type: boolean
-                        company:
+                        code:
                           type: integer
-                        credit_account: 
+                        id:
                           type: integer
-                        debit_account: 
-                          type: integer
-                        journal: 
-                          type: integer
-                        name:  
+                        name:
                           type: string
-                        rec_name:  
+                        rec_name:
+                          type: string
+                        type:
                           type: string
                     errors:
                       type: object
@@ -52,32 +48,23 @@ post:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
                 data:
-                  active: true
-                  company: 1
-                  company_:
-                    id: 1
-                    name: Party 1
-                  credit_account: 2
-                  credit_account_:
-                    id: 2
-                    name: Main Cash
-                  debit_account: 2
-                  debit_account_:
-                    id: 2
-                    name: Main Cash
+                - code: REV
                   id: 1
-                  journal: 6
-                  journal_:
-                    id: 6
-                    name: Currency Exchange
-                  name: wr1
-                  rec_name: wr1
-                errors: null
-                pagination: null
+                  name: Revenue
+                  rec_name: Revenue
+                  type: revenue
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 6
                 status: 200
                 success_message: null
+
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -88,4 +75,5 @@ post:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-   
+    
+    

@@ -1,40 +1,34 @@
-post:
+    post:
       tags:
-        - journal
-      summary: Create a journal.
-      description: Create a journal.
-      operationId: postJournalById
+        - fiscal period
+      summary: Get list of fiscal period.
+      description: Get list of fiscal period.
+      operationId: getFiscalPeriod
       requestBody:
-        required: true
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateJournal'
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
-        '201':
-          description: Created
+        '200':
+          description: OK
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data: 
-                      type: object
+                    data:
+                      type: array
                       properties:
-                        active:
-                          type: boolean
-                        code:
-                          type: string
-                        matching_sequence:
+                        id:
                           type: integer
                         name:
                           type: string
-                        rec_name:
+                        state:
                           type: string
-                        sequence: 
-                          type: string
-                        type: 
+                        type:
                           type: string
                     errors:
                       type: object
@@ -52,21 +46,19 @@ post:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
                 data:
-                  active: true
-                  code: REV
-                  id: 1
-                  matching_sequence: 
-                  name: Revenue
-                  rec_name: Revenue
-                  sequence: 2
-                  sequence_:
-                    id: 2
-                    name: Default Account Journal
-                  type: revenue
+                  - id: 2
+                    name: "2024"
+                    state: "open"
+                    type: "standard"
                 errors: null
-                pagination: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 12
                 status: 200
                 success_message: null
         '401':
@@ -79,13 +71,13 @@ post:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-
-delete:
+    
+    delete:
       tags:
-        - journal
-      summary: Delete journal.
-      description: Delete journal.
-      operationId: deleteJournalById
+        - fiscal period
+      summary: Delete fiscal period.
+      description: Delete fiscal period.
+      operationId: deleteFiscalPeriodById
       requestBody:
         required: true
         content:
@@ -111,3 +103,4 @@ delete:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
   
+    
