@@ -1,0 +1,120 @@
+    post:
+      tags:
+        - account move
+      summary: Get list of account moves.
+      description: Get list of account moves.
+      operationId: getAccountMoves
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                          date:
+                            type: string
+                            format: date
+                          description:
+                            type: string
+                          id:
+                            type: integer
+                          journal: 
+                            type: integer
+                          journal_:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                          number:
+                            type: string
+                          origin:
+                            type: string
+                          origin_:
+                            type: object
+                          period:
+                            type: integer
+                          period_:
+                            properties:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                          post_date: 
+                            type: string
+                            format: date
+                          post_number: 
+                            type: string
+                          rec_name:
+                            type: string
+                          state:
+                            type: string
+                    errors:
+                      type: object
+                    pagination:
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - date: '2026-01-27'
+                    description: some description here
+                    id: 2
+                    journal: 13
+                    journal_:
+                      id: 13
+                      name: Statement
+                    number: '1'
+                    origin: account.move,-1
+                    origin_: {}
+                    period: 79
+                    period_:
+                      id: 79
+                      name: '1'
+                    post_date: 
+                    post_number: 
+                    rec_name: '1'
+                    state: draft 
+                errors: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 12
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    
