@@ -1,41 +1,51 @@
-post:
+    post:
       tags:
         - write off
-      summary: Create a write off.
-      description: Create a write off.
-      operationId: postWriteOffById
+      summary: Get list of write offs.
+      description: Get list of write offs.
+      operationId: getWriteOffs
       requestBody:
-        required: true
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateWriteOff'
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
-        '201':
-          description: Created
+        '200':
+          description: OK
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data: 
-                      type: object
+                    data:
+                      type: array
                       properties:
-                        active:
-                          type: boolean
-                        company:
-                          type: integer
-                        credit_account: 
-                          type: integer
-                        debit_account: 
-                          type: integer
-                        journal: 
-                          type: integer
-                        name:  
-                          type: string
-                        rec_name:  
-                          type: string
+                          company:
+                            type: integer
+                          company_:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                          id: 
+                            type: integer
+                          journal: 
+                            type: integer
+                          journal_:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                          name: 
+                            type: string
+                          rec_name: 
+                            type: string
                     errors:
                       type: object
                     pagination:
@@ -52,30 +62,26 @@ post:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
                 data:
-                  active: true
-                  company: 1
-                  company_:
+                  - company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
                     id: 1
-                    name: Party 1
-                  credit_account: 2
-                  credit_account_:
-                    id: 2
-                    name: Main Cash
-                  debit_account: 2
-                  debit_account_:
-                    id: 2
-                    name: Main Cash
-                  id: 1
-                  journal: 6
-                  journal_:
-                    id: 6
-                    name: Currency Exchange
-                  name: wr1
-                  rec_name: wr1
+                    journal: 6
+                    journal_:
+                      id: 6
+                      name: Currency Exchange
+                    name: wr1
+                    rec_name: wr1
                 errors: null
-                pagination: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 12
                 status: 200
                 success_message: null
         '401':
@@ -88,13 +94,13 @@ post:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-
-delete:
+    
+    delete:
       tags:
-        - tax rule
-      summary: Delete tax rule.
-      description: Delete tax rule.
-      operationId: deleteTaxRuleById
+        - write off
+      summary: Delete write off.
+      description: Delete write off.
+      operationId: deleteWriteOffById
       requestBody:
         required: true
         content:
