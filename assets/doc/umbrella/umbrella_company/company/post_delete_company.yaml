@@ -1,76 +1,115 @@
-    post:
+post:
       tags:
         - company
-      summary: Get company details.
-      description: Get company details.
-      operationId: getCompanies
+      summary: Create a company.
+      description: Create a company.
+      operationId: postCompanyById
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateCompany'
       responses:
-        '200':
-          description: List of companies.
+        '201':
+          description: OK
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data:
-                      type: array
-                      properties:
+                    properties:
+                      data:
+                        currency:
+                        type: integer
+                        employees:
+                          type: array 
+                          properties:
+                            company:
+                              type: integer
+                            company_:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                            end_date:
+                              type: string
+                              format: date
+                            id:
+                              type: integer
+                            party:
+                              type: integer
+                            party_:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                            start_date:
+                              type: string
+                              format: date
+                            supervisor: 
+                              type: integer
+                            supervisor_:
+                              type: object
                         id:
                           type: integer
                         party:
-                          type: string
+                          type: integer
                         party_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
+                          id:
+                            type: integer
+                          name:
+                            type: string
+                        payable:
+                          type: integer
                         payable_today:
-                          type: number
-                          format: float
+                          type: integer
+                        receivable:
+                          type: integer
                         receivable_today:
-                          type: number
-                          format: float
-                    errors:
-                      type: object
-                    pagination:
-                      type: object
-                      page:
+                          type: integer
+                        timezone:
+                          type: string  
+                      errors:
+                        type: object
+                        nullable: true
+                      pagination:
+                        type: object
+                        nullable: true
+                      status:
                         type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
+                      success_message:
+                        type: string
+                        nullable: true
+
+              required:
+                - currency
+                - party
+
               example:
                 data:
-                - id: 1
-                  party: 1
+                  currency: 1
+                  employees:
+                  - company: 13
+                    company_:
+                      id: 13
+                      name: Party 1
+                    end_date: '2024-02-13'
+                    id: 13
+                    party: 1
+                    party_:
+                      id: 1
+                      name: Party 1
+                    start_date: '2024-02-01'
+                    supervisor: 
+                    supervisor_: {}
+                  id: 13
+                  party: 3
                   party_:
-                    id: 1
+                    id: 3
                     name: Party 1
-                  payable_today: 0
-                  receivable_today: 0
+                  timezone: null
                 error: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 9
+                pagination: null
                 status: 200
                 success_message: null
         '401':
@@ -83,8 +122,8 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    
-    delete:
+
+delete:
       tags:
         - company
       summary: Delete companys.
@@ -114,4 +153,4 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-  
+    

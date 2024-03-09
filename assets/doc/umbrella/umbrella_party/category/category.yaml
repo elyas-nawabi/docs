@@ -63,9 +63,9 @@ tags:
     description: category - category data management.
 paths:
   '/party/categories/search':
-    $ref: 'post_delete_categories.yaml'
+    $ref: 'get_categories.yaml'
   '/party/categories':
-    $ref: 'post_categories.yaml'
+    $ref: 'post_delete_categories.yaml'
   '/party/categories/{obj_id}':
     $ref: 'get_put_categories_by_id.yaml'
   

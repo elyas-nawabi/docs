@@ -1,60 +1,123 @@
-    post:
+post:
       tags:
         - country
-      summary: Get country details.
-      description: Get country details.
-      operationId: getCountries
+      summary: Create a country.
+      description: Create a country.
+      operationId: postCountryById
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateCountry'
       responses:
-        '200':
-          description: List of countries.
+        '201':
+          description: OK
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data:
-                      type: array
-                      properties:
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                    errors:
-                      type: object
-                      nullable: true
-                    pagination:
-                      type: object
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          active:
+                            type: boolean
+                          code:
+                            type: string
+                          code3:
+                            type: string
+                          code_numeric:
+                            type: string
+                          id:
+                            type: integer
+                          members:
+                            type: array
+                            properties:
+                            country:
+                              type: integer
+                            country_:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                            from_date:
+                              type: string
+                              format: date
+                            id:
+                              type: integer
+                            to_date:
+                              type: string
+                              format: date
+                          name:
+                            type: string
+                          region:
+                            type: integer
+                          region_:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                          subdivisions:
+                            type: array
+                            properties:
+                            - active:
+                                type: boolean
+                              code:
+                                type: string
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                              parent: 
+                                type: integer
+                              parent_:
+                                type: object
+                              type:
+                                type: string
+                      errors:
+                        type: object
+                        nullable: true
+                      pagination:
+                        type: object
+                        nullable: true
+                      status:
+                        type: integer
+                      success_message:
+                        type: string
+                        nullable: true
               example:
                 data:
-                - id: 1
-                  name: "Afghanistan"
+                  active: true
+                  code: '3'
+                  code3: '103'
+                  code_numeric: '10003'
+                  id: 7
+                  members:
+                  - country: 1
+                    country_:
+                      id: 1
+                      name: "Afghanistan"
+                    from_date: '2024-02-15'
+                    id: 1
+                    to_date: '2024-02-20'
+                  name: Asia
+                  region: 5
+                  region_:
+                    id: 5
+                    name: Asia
+                  subdivisions:
+                  - active: true
+                    code: '10001'
+                    id: 5
+                    name: sbd1
+                    parent: 
+                    parent_: {}
+                    type: city
                 error: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 9
+                pagination: null
                 status: 200
                 success_message: null
         '401':
@@ -68,7 +131,7 @@
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     
-    delete:
+delete:
       tags:
         - country
       summary: Delete countries.

@@ -1,66 +1,63 @@
-post:
+    post:
       tags:
-        - sequence type
-      summary: Create a Sequence type.
-      description: Create a Sequence type.
-      operationId: postSequenceTypeById
+        - organization
+      summary: Get organization details.
+      description: Get organization details.
+      operationId: getOrganizations
       requestBody:
-        required: true
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateSequenceType'
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
-        '201':
-          description: OK
+        '200':
+          description: List of organizations.
           content:
             application/json:
               schema:
+                  type: object
                   properties:
                     data:
                       type: array
                       properties:
-                        groups:
-                          type: array
-                          properties:
-                            id: 
-                              type: integer
-                            name:
-                              type: string
-                            parent:
-                              type: integer
-                            parent_:
-                              type: object
+                        code:
+                          type: string
                         id: 
                           type: integer
-                        name:
+                        name: 
                           type: string
                     errors:
                       type: object
-                      nullable: true
                     pagination:
                       type: object
-                      nullable: true
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
                     status:
                       type: integer
                     success_message:
                       type: string
                       nullable: true
-              required:
-                - name
               example:
                 data:
-                  groups:
-                    - id: 1
-                      name: Administration
-                      parent: null
-                      parent_: {}
-                  id: 7
-                  name: seq1
-                errors: null
-                pagination: null
-                status: 201
+                - code: EU
+                  id: 1
+                  name: European Union
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
                 success_message: null
         '401':
           description: >-
@@ -72,4 +69,5 @@ post:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
     

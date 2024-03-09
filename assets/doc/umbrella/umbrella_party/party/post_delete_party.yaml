@@ -1,76 +1,169 @@
-    post:
+ post:
       tags:
         - party
-      summary: Get party details.
-      description: Get party details.
-      operationId: getParties
+      summary: Create a party.
+      description: Create a party.
+      operationId: postPartyById
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateParty'
       responses:
-        '200':
-          description: List of parties.
+        '201':
+          description: OK
           content:
             application/json:
               schema:
-                  type: object
                   properties:
                     data:
                       type: array
                       properties:
+                        addresses: 
+                          properties:
+                            active: 
+                              type: boolean
+                            city: 
+                              type: string
+                            contact_mechanisms: 
+                              type: array
+                            country:
+                              type: integer
+                            country_: 
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                            party:
+                              type: integer
+                            party_: 
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                            party_name: 
+                              type: string
+                            postal_code: 
+                              type: string
+                            sequence: 
+                              type: integer
+                            street:
+                              type: string
+                            subdivision:
+                              type: integer
+                            subdivision_: 
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                        categories:
+                          type: integer
                         code:
                           type: string
+                        contact_mechanisms: 
+                          properties:
+                            active:
+                              type: boolean
+                            comment:
+                              type: string
+                            language:
+                              type: integer
+                            name:
+                              type: integer
+                            party: 
+                              type: integer
+                            party_: 
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                            sequence:
+                              type: integer
+                            type:
+                              type: integer
+                            value:
+                              type: integer
                         create_date:
                           type: string
                           format: date
-                        id:
-                          type: integer
                         name:
                           type: string
+                        payable:
+                          type: integer
                         payable_today:
-                          type: number
-                          format: float
+                          type: integer
+                        receivable:
+                          type: integer
                         receivable_today:
-                          type: number
-                          format: float
-                        tax_identifier:
-                          type: string
+                          type: integer
                     errors:
                       type: object
+                      nullable: true
                     pagination:
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
+                      type: object
+                      nullable: true
                     status:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
+              required:
+                - name
+                - code 
               example:
                 data:
-                  - code: "1"
-                    create_date: "2024-01-23T16:52:29.278731"
-                    id: 1
-                    name: "Party 1"
-                    payable_today: 0.0,
-                    receivable_today: 0.0,
-                    tax_identifier: null
+                  addresses:
+                  - active: true
+                    city: Herat
+                    contact_mechanisms: []
+                    country: 1
+                    country_:
+                      id: 1
+                      name: Afghanistan
+                    id: 3
+                    name: herat tower
+                    party: 1
+                    party_:
+                      id: 1
+                      name: Party 1
+                    party_name: prt2
+                    postal_code: '1002'
+                    sequence: 1
+                    street: street 2
+                    subdivision: 3
+                    subdivision_:
+                      id: 3
+                      name: sbd1
+                  categories:
+                  - 3
+                  code: '01'
+                  contact_mechanisms:
+                  - active: true
+                    comment: no comment
+                    language: 1
+                    name: ctm1
+                    party: 14
+                    party_:
+                      id: 1
+                      name: Party 1
+                    sequence: 1
+                    type: phone
+                    value: '8888'
+                  create_date: '2024-01-23T16:52:29.278731'
+                  name: Party 15
+                  payable: 0
+                  payable_today: 0
+                  receivable: 0
+                  receivable_today: 0
                 errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 1
-                status: 200
+                pagination: null
+                status: 201
                 success_message: null
         '401':
           description: >-
@@ -82,8 +175,9 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-   
-    delete:
+
+
+ delete:
       tags:
         - party
       summary: Delete parties.

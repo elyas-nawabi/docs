@@ -63,9 +63,10 @@ tags:
     description: sequence - sequence data management.
 paths:
   '/administration/sequences/search':
-    $ref: 'post_delete_sequence.yaml'
+    $ref: 'get_sequence.yaml'
   '/administration/sequences':
-    $ref: 'post_sequence.yaml'
+    $ref: 'post_delete_sequence.yaml'
   '/administration/sequences/{obj_id}':
     $ref: 'get_put_sequence_by_id.yaml'
+    
   

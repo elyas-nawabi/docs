@@ -1,38 +1,36 @@
-post:
+    post:
       tags:
         - scheduled rate update
-      summary: Create a cron.
-      description: Create a cron.
-      operationId: postCronById
+      summary: Get list of crons.
+      description: Get list of crons.
+      operationId: getCrons
       requestBody:
-        required: true
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateCron'
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
-        '201':
+        '200':
           description: OK
           content:
             application/json:
               schema:
+                  type: object
                   properties:
                     data:
                       type: array
                       properties:
-                        currencies:
-                          type: array
                         currency:
                           type: integer
                         currency_:
                           type: object
-                          id:
-                            type: integer
-                          name:
-                            type: string
-                        day:
-                          type: integer
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         frequency:
                           type: string
                         id:
@@ -44,10 +42,9 @@ post:
                           type: string
                         source:
                           type: string
-                        weekday:
-                          type: integer
                     errors:
                       type: object
+                      nullable: true
                     pagination:
                       properties:
                         page:
@@ -64,20 +61,21 @@ post:
                       type: string
               example:
                 data:
-                - currencies: []
-                  currency: 1
-                  currency_:
+                  - currency: 132
+                    currency_:
+                      id: Afghani
+                      name: 1
+                    frequency: monthly
                     id: 1
-                    name: "Afghani"
-                  day: 1
-                  frequency: "monthly"
-                  id: 1
-                  last_update: "2024-01-28"
-                  rec_name: "62"
-                  source: ecb
-                  weekday: "2"
+                    last_update: '2024-01-28'
+                    rec_name: '62'
+                    source: ecb
                 errors: null
-                pagination: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 2
                 status: 200
                 success_message: null
         '401':
@@ -90,4 +88,5 @@ post:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
     

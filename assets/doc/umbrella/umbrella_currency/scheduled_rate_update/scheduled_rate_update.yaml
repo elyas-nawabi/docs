@@ -64,9 +64,9 @@ tags:
 
 paths:
   '/currency/scheduled-rate-updates/search':
-    $ref: 'post_delete_scheduled_rate_updates.yaml'
+    $ref: 'get_scheduled_rate_updates.yaml'
   '/currency/scheduled-rate-updates':
-    $ref: 'post_scheduled_rate_updates.yaml'
+    $ref: 'post_delete_scheduled_rate_updates.yaml'
   '/currency/scheduled-rate-updates/{obj_id}':
     $ref: 'get_put_scheduled_rate_updates_by_id.yaml'
 

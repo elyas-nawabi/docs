@@ -1,104 +1,87 @@
-    post:
+post:
       tags:
         - address
-      summary: Get addresses.
-      description: Get addresses.
-      operationId: getAddresses
-     
+      summary: Create an address.
+      description: Create an address.
+      operationId: postAddress
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateAddress'
       responses:
-        '200':
-          description: List of addresses.
+        '201':
+          description: OK
           content:
             application/json:
               schema:
-                  type: object
                   properties:
                     data:
-                      type: array
+                      type: object
                       properties:
+                        active:
+                          type: boolean
                         city:
                           type: string
+                        contact_mechanisms:
+                          type: array
+                          properties:
+                            type: 
+                              type: string
+                            value:
+                              type: string
+                            name: 
+                              type: string
+                            party:
+                              type: integer
+                            address:
+                              type: integer
                         country:
                           type: integer
-                        id:
-                          type: integer
-                        name:
-                          type: string
+                        name: 
+                          type: string 
                         party: 
                           type: integer
-                        party_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
                         party_name:
                           type: string
                         postal_code:
                           type: string 
-                        street: 
-                          type: string
-                        subdivision:
+                        sequence: 
                           type: integer
-                        subdivision_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                    errors:
+                        street: 
+                          type: string 
+                        subdivision: 
+                          type: integer
+                    error:
                       type: object
+                      nullable: true
                     pagination:
                       type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
+                      nullable: true
                     status:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
-                data:
-                - city: "kabul"
-                  country: 1
-                  country_:
-                    id: 1
-                    name: "Afghanistan"
-                  id: 1
-                  name: "shamali tower"
-                  party: 1
-                  party_:
-                      id: 1
-                      name: "Party 1"
-                  party_name: "prt1"
-                  postal_code: "1001"
-                  street: "2nd street"
-                  subdivision: 1
-                  subdivision_:
-                    id: 2
-                    name: "sbd1"
-                errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 1
-                status: 200
-                success_message: null
+                active: true
+                city: "Herat"
+                contact_mechanisms:
+                  type: "phone"
+                  value: "0771680235"
+                  name: "ctm1"
+                  party: 1 
+                  address: 1
+                country: 1
+                name: "herat tower"
+                party: 1
+                party_name: "prt2"
+                postal_code: "1002"
+                sequence: 1
+                street: "street 2"
+                subdivision: 3
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -108,9 +91,9 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
-    
-    delete:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
       tags:
         - address
       summary: Delete addresses.

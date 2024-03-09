@@ -1,23 +1,22 @@
 post:
   tags:
     - currency
-  summary: Get currency details.
-  description: Get currency details.
-  operationId: getCurrencies
+  summary: Create a currency.
+  description: Create a currency.
+  operationId: postCurrencyById
   requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/CreateCurrency'
   responses:
-    '200':
-      description: List of currencies.
+    '201':
+      description: OK
       content:
         application/json:
           schema:
-              type: object
               properties:
                 data:
                   type: array
@@ -26,6 +25,8 @@ post:
                       type: boolean
                     code:
                       type: string
+                    digits:
+                      type: integer
                     id:
                       type: integer
                     name:
@@ -35,42 +36,50 @@ post:
                     rate:
                       type: number
                       format: float
+                    rates:
+                      type: array
+                      properties:
+                        date: 
+                          type: string
+                          format: date
+                        id: 
+                          type: integer
+                        rate: 
+                          type: number
+                          format: float
+                    rounding:
+                      type: number
+                      format: float
                     symbol:
                       type: string
                 errors:
                   type: object
+                  nullable: true
                 pagination:
                   type: object
-                  page:
-                    type: integer
-                  per_page:
-                    type: integer
-                  total_pages:
-                    type: integer
-                  total_records:
-                    type: integer
+                  nullable: true
                 status:
                   type: integer
                 success_message:
                   type: string
-          required:
-            - code
+                  nullable: true
           example:
             data:
-              - active: true
-                code: "AFN"
-                id: 1
-                name: "Afghani"
-                numeric_code: "001"
-                rate: 0.1
-                symbol: "AFN"
+              active: true
+              code: "AFN"
+              digits: 2
+              name: "Afghani"
+              numeric_code: "001"
+              rate: 0
+              rates:
+                - date: "2024-02-06"
+                  id: 6
+                  rate: 0.1
+              rounding: 3
+              symbol: "AFN"
             errors: null
-            pagination:
-              page: 1
-              per_page: 100
-              total_pages: 1
-              total_records: 1
-            status: 200
+            pagination: null
+            status: 201
             success_message: null
     '401':
       description: >-
