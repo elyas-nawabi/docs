@@ -62,7 +62,7 @@ tags:
   - name: balance non deferral
     description: balance non deferral - balance non deferral data management.
 paths:
-  '/financial-accounting/balance-non-deferals/execute':
+  '/financial-accounting/balance-non-deferral/execute':
     $ref: 'post_balance.yaml'
   
   
