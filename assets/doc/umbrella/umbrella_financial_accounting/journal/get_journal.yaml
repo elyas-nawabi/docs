@@ -1,40 +1,36 @@
-post:
+    post:
       tags:
         - journal
-      summary: Create a journal.
-      description: Create a journal.
-      operationId: postJournalById
+      summary: Get list of journal.
+      description: Get list of journal.
+      operationId: getJournal
       requestBody:
-        required: true
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateJournal'
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
-        '201':
-          description: Created
+        '200':
+          description: OK
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data: 
-                      type: object
+                    data:
+                      type: array
                       properties:
-                        active:
-                          type: boolean
                         code:
-                          type: string
-                        matching_sequence:
+                          type: integer
+                        id:
                           type: integer
                         name:
                           type: string
                         rec_name:
                           type: string
-                        sequence: 
-                          type: string
-                        type: 
+                        type:
                           type: string
                     errors:
                       type: object
@@ -52,23 +48,23 @@ post:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
                 data:
-                  active: true
-                  code: REV
+                - code: REV
                   id: 1
-                  matching_sequence: 
                   name: Revenue
                   rec_name: Revenue
-                  sequence: 2
-                  sequence_:
-                    id: 2
-                    name: Default Account Journal
                   type: revenue
-                errors: null
-                pagination: null
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 6
                 status: 200
                 success_message: null
+
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -79,4 +75,5 @@ post:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
     
