@@ -1,59 +1,66 @@
-    post:
+post:
       tags:
         - sequence type
-      summary: Get sequence type details.
-      description: Get sequence type details.
-      operationId: getSequenceTypes
+      summary: Create a Sequence type.
+      description: Create a Sequence type.
+      operationId: postSequenceTypeById
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateSequenceType'
       responses:
-        '200':
-          description: List of sequence type.
+        '201':
+          description: OK
           content:
             application/json:
               schema:
-                  type: object
                   properties:
                     data:
                       type: array
                       properties:
-                        id:
+                        groups:
+                          type: array
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                            parent:
+                              type: integer
+                            parent_:
+                              type: object
+                        id: 
                           type: integer
                         name:
                           type: string
                     errors:
                       type: object
+                      nullable: true
                     pagination:
                       type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
+                      nullable: true
                     status:
                       type: integer
                     success_message:
                       type: string
                       nullable: true
+              required:
+                - name
               example:
                 data:
-                  - id: 1
-                    name: "Account Journal"
+                  groups:
+                    - id: 1
+                      name: Administration
+                      parent: null
+                      parent_: {}
+                  id: 7
+                  name: seq1
                 errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 1
-                status: 200
+                pagination: null
+                status: 201
                 success_message: null
         '401':
           description: >-
@@ -65,8 +72,8 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    
-    delete:
+
+delete:
       tags:
         - sequence type
       summary: Delete sequence type.
