@@ -62,7 +62,11 @@ tags:
   - name: journal period
     description: journal period - journal period data management.
 paths:
-  '/financial-accounting/journal-periods':
-    $ref: 'post_delete_journal_period.yaml'
+  '/financial-accounting/journals-periods/search':
+    $ref: 'get_journal_period.yaml'
+  '/financial-accounting/journals-periods/{obj_id}/close':
+    $ref: 'close_journals_period.yaml'
+  '/financial-accounting/journals-periods/{obj_id}/reopen':
+    $ref: 'reopen_journals_period.yaml'
   
   

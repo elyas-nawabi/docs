@@ -22,7 +22,30 @@
                     data:
                       type: array
                       properties:
-                       
+                        id: 
+                          type: integer
+                        journal: 
+                          type: integer
+                        journal_:
+                         type: object
+                         properties:
+                          id: 
+                            type: integer
+                          name:
+                            type: string
+                        period: 
+                          type: integer
+                        period_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                        rec_name:
+                          type: string
+                        state:
+                          type: string
                     errors:
                       type: object
                     pagination:
@@ -42,7 +65,17 @@
                       nullable: true
               example:
                 data:
-                  - 
+                  - id: 1
+                    journal: 5
+                    journal_:
+                      id: 5
+                      name: Miscellaneous
+                    period: 75
+                    period_:
+                      id: 75
+                      name: New
+                    rec_name: Miscellaneous - New
+                    state: open
                 errors: null
                 pagination:
                   page: 1

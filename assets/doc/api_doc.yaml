@@ -307,7 +307,7 @@ components:
     UpdateAccountMove:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account-move.yaml'
     CreateBalanceNonDeferral:
-      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-balance.yaml'
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-balance-non-deferral.yaml'
     CreateReports:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-reports.yaml'
     UpdateReports:

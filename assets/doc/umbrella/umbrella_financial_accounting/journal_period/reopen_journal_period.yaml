@@ -1,29 +1,27 @@
-post:
+    get:
       tags:
-        - balance non deferral
-      summary: Create a balance non deferral.
-      description: Create a balance non deferral.
-      operationId: postBalanceById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateBalanceNonDeferral'
+        - journal period
+      summary: reopen journal period.
+      description: reopen journal period.
+      operationId: reopenJournalPeriod
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
       responses:
-        '201':
-          description: Created
+        '200':
+          description: OK
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data: 
-                      type: object
+                    data:
+                      type: array
                       properties:
-                        id:
-                          type: integer
                     errors:
                       type: object
                     pagination:
@@ -40,10 +38,9 @@ post:
                       type: integer
                     success_message:
                       type: string
+                      nullable: true
               example:
-                data:
-                  id: 
-                    type: integer
+                data: null
                 errors: null
                 pagination: null
                 status: 200
@@ -58,4 +55,3 @@ post:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    
