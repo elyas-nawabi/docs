@@ -63,9 +63,9 @@ tags:
     description: account - account data management.
 paths:
   '/financial-accounting/accounts/search':
-    $ref: 'post_delete_account.yaml'
+    $ref: 'get_account.yaml'
   '/financial-accounting/accounts':
-    $ref: 'post_account.yaml'
+    $ref: 'post_delete_account.yaml'
   '/financial-accounting/accounts/{obj_id}':
     $ref: 'get_put_account_by_id.yaml'
   
