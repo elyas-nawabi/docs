@@ -17,7 +17,7 @@ paths:
   '/financial-accounting/statements/{obj_id}':
     $ref: 'get_put_statement_by_id.yaml'
   '/financial-accounting/{obj_id}/apply-rules':
-    $ref: 'get_apply_rules_by_id.yaml'
+    $ref: 'get_apply_rule_by_id.yaml'
   '/financial-accounting/{obj_id}/validate':
     $ref: 'get_validate_by_id.yaml'
   '/financial-accounting/{obj_id}/cancel':
