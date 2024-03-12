@@ -335,17 +335,17 @@ components:
     UpdateStatementJournal:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement-journal.yaml'
     CreatePayment:
-      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-payment.yaml'
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_payment/create-payment.yaml'
     UpdatePayment:
-      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-payment.yaml'
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_payment/create-payment.yaml'
     CreateLineGroup:
-      $ref: 'umbrella/schemas/umbrella_financial_accounting/line_group/create-line-group.yaml'
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-line-group.yaml'
     UpdateLineGroup:
-      $ref: 'umbrella/schemas/umbrella_financial_accounting/line_group/create-line-group.yaml'
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-line-group.yaml'
     CreateStatement:
-      $ref: 'umbrella/schemas/umbrella_financial_accounting/statement/create-statement.yaml'
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement.yaml'
     UpdateStatement:
-      $ref: 'umbrella/schemas/umbrella_financial_accounting/statement/create-statement.yaml'
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement.yaml'
 
     # get with filters feature
     Filter:
