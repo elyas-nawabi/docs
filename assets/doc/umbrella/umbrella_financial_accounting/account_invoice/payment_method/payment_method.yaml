@@ -1,0 +1,18 @@
+openapi: 3.1.0
+info:
+  description: >
+  contact:
+    name: API Support
+    email: shadab@gmail.com
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: payment method
+    description: payment method - payment method data management.
+paths:
+  '/financial-accounting/payment-methods/search':
+    $ref: 'get_payment_method.yaml'
+  '/financial-accounting/payment-methods':
+    $ref: 'post_delete_payment_method.yaml'
+  '/financial-accounting/payment-methods/{obj_id}':
+    $ref: 'get_put_payment_method_by_id.yaml'

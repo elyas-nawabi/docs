@@ -346,6 +346,16 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement.yaml'
     UpdateStatement:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement.yaml'
+    CreatePaymentMethod:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-payment-method.yaml'
+    UpdatePaymentMethod:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-payment-method.yaml'
+    CreatePaymentTerm:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-payment-term.yaml'
+    CreateTest:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-test.yaml'
+    UpdatePaymentTerm:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-payment-term.yaml'
 
     # get with filters feature
     Filter:
