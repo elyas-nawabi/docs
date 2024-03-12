@@ -1,0 +1,28 @@
+openapi: 3.1.0
+info:
+  description: >
+  contact:
+    name: API Support
+    email: shadab@gmail.com
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: statement
+    description: statement - statement data management.
+paths:
+  '/financial-accounting/statements/search':
+    $ref: 'get_statement.yaml'
+  '/financial-accounting/statements':
+    $ref: 'post_delete_statement.yaml'
+  '/financial-accounting/statements/{obj_id}':
+    $ref: 'get_put_statement_by_id.yaml'
+  '/financial-accounting/{obj_id}/apply-rules':
+    $ref: 'get_apply_rules_by_id.yaml'
+  '/financial-accounting/{obj_id}/validate':
+    $ref: 'get_validate_by_id.yaml'
+  '/financial-accounting/{obj_id}/cancel':
+    $ref: 'get_cancel_by_id.yaml'
+  '/financial-accounting/{obj_id}/draft':
+    $ref: 'get_draft_by_id.yaml'
+  '/financial-accounting/{obj_id}/post':
+    $ref: 'get_post_by_id.yaml'
