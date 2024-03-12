@@ -1,0 +1,20 @@
+openapi: 3.1.0
+info:
+  description: >
+  contact:
+    name: API Support
+    email: shadab@gmail.com
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: payment term
+    description: payment term - payment term data management.
+paths:
+  '/financial-accounting/payment-terms/search':
+    $ref: 'get_payment_term.yaml'
+  '/financial-accounting/payment-terms':
+    $ref: 'post_delete_payment_term.yaml'
+  '/financial-accounting/payment-terms/{obj_id}':
+    $ref: 'get_put_payment_term_by_id.yaml'
+  '/financial-accounting/payment-terms/test':
+    $ref: 'post_test.yaml'
