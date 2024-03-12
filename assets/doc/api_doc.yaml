@@ -334,6 +334,10 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement-journal.yaml'
     UpdateStatementJournal:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement-journal.yaml'
+    CreatePayment:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-payment.yaml'
+    UpdatePayment:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-payment.yaml'
 
     # get with filters feature
     Filter:
