@@ -22,7 +22,12 @@
                     data:
                       type: array
                       properties:
-                          
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        rec_name: 
+                          type: string  
                     errors:
                       type: object
                     pagination:
@@ -42,7 +47,9 @@
                       nullable: true
               example:
                 data:
-                  
+                  - id: 1
+                    name: paymentTerm1
+                    rec_name: paymentTerm1
                 errors: null
                 pagination:
                   page: 1
