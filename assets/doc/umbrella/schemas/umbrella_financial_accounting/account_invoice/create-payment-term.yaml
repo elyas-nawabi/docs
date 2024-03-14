@@ -1,5 +1,53 @@
 properties:
-  
+  active:
+    type: boolean
+  description: 
+    type: string
+  lines:
+    properties:
+      amount: 
+        type: integer
+      currency: 
+        type: integer
+      divisor: 
+        type: integer
+      payment: 
+        type: integer
+      ratio: 
+        type: integer
+      rec_name: 
+        type: string
+      relativedeltas:
+        type: array
+        properties:
+          day: 
+            type: integer
+          days: 
+            type: integer
+          id: 
+            type: integer
+          line: 
+            type: integer
+          month: 
+            type: integer
+          months: 
+            type: integer
+          rec_name:
+            type: string
+          sequence: 
+            type: integer
+          weekday: 
+            type: integer
+          weeks: 
+            type: integer
+    sequence: 
+      type: integer
+    type: 
+      type: string
+  name: 
+    type: string
+  rec_name: 
+    type: string
 required:
   
 example:
