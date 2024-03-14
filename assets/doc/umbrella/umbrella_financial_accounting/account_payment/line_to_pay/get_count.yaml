@@ -22,7 +22,8 @@ get:
                     data:
                       type: object
                       properties:
-                        
+                        count: 
+                          type: integer
                     errors:
                       type: object
                     pagination:
@@ -44,7 +45,7 @@ get:
                       nullable: true
               example:
                 data:
-                  
+                  count: 1
                 error: null
                 pagination: null
                 status: 200
