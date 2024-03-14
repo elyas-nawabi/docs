@@ -22,7 +22,158 @@
                     data:
                       type: array
                       properties:
-                            
+                          account:
+                            type: integer
+                          account_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          amount:
+                            type: number
+                            format: decimal
+                          amount_currency: 
+                            type: integer
+                          amount_second_currency: 
+                            type: integer
+                          company: 
+                            type: integer
+                          company_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          credit: 
+                            type: number
+                            format: decimal
+                          currency:
+                            type: integer
+                          currency_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          date:
+                            type: string 
+                            format: date
+                          debit: 
+                            type: integer
+                          delegated_amount: 
+                            type: integer
+                          description:
+                            type: string
+                          has_maturity_date: 
+                            type: boolean
+                          id: 
+                            type: integer
+                          journal: 
+                            type: integer
+                          journal_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          maturity_date: 
+                            type: string
+                            format: date
+                          move: 
+                            type: integer
+                          move_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          move_description_used:
+                            type: string
+                          move_origin:
+                            type: string
+                          move_origin_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          move_state: 
+                            type: string
+                          origin: 
+                            type: integer
+                          origin_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          party: 
+                            type: integer
+                          party_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          party_required: 
+                            type: boolean
+                          payable_receivable_balance: 
+                            type: integer
+                          payment_blocked: 
+                            type: boolean
+                          payment_kind: 
+                            type: string
+                          period:
+                            type: integer
+                          period_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          rec_name: 
+                            type: string
+                          reconciliation: 
+                            type: integer
+                          reconciliation_: 
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          second_currency: 
+                            type: integer
+                          second_currency_: 
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          second_currency_required: 
+                            type: integer
+                          second_currency_required_: 
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          state: 
+                            type: string
+                          tax_lines: 
+                            type: array  
                     errors:
                       type: object
                     pagination:
@@ -42,7 +193,62 @@
                       nullable: true
               example:
                 data:
-                  
+                  - account: 30
+                    account_:
+                      id: 30
+                      name: 1 - 1
+                    amount: -0.03
+                    amount_currency: 1
+                    amount_second_currency: 
+                    company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    credit: 0.03
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    date: '2026-01-27'
+                    debit: 0
+                    delegated_amount: 
+                    description: ''
+                    has_maturity_date: false
+                    id: 2
+                    journal: 12
+                    journal_:
+                      id: 12
+                      name: Asset
+                    maturity_date: null
+                    move: 11
+                    move_:
+                      id: 11
+                      name: '8'
+                    move_description_used: some description here
+                    move_origin: account.fiscalyear,-1
+                    move_origin_: {}
+                    move_state: draft
+                    origin: 
+                    origin_: {}
+                    party: 
+                    party_: {}
+                    party_required: false
+                    payable_receivable_balance: 
+                    payment_blocked: false
+                    payment_kind: 
+                    period: 79
+                    period_:
+                      id: 79
+                      name: '1'
+                    rec_name: "(1 - 1)"
+                    reconciliation: 
+                    reconciliation_: {}
+                    second_currency: 
+                    second_currency_: {}
+                    second_currency_required: 
+                    second_currency_required_: {}
+                    state: draft
+                    tax_lines: []
                 errors: null
                 pagination:
                   page: 1

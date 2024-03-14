@@ -19,32 +19,19 @@ get:
               schema:
                   type: object
                   properties:
-                    data:
-                      type: object
-                      properties:
-                        
-                    errors:
-                      type: object
-                    pagination:
-                      items:
-                        type: object
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
+                    data: 
+                      type: null
+                    error: 
+                      type: null
+                    pagination: 
+                      type: null
                     status:
                       type: integer
-                    success_message:
-                      type: string
-                      nullable: true
+                    success_message: 
+                      type: null
+                    
               example:
-                data:
-                  
+                data: null
                 error: null
                 pagination: null
                 status: 200
