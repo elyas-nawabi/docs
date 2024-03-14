@@ -22,7 +22,30 @@
                     data:
                       type: array
                       properties:
-                          
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        id: 
+                          type: integer
+                        journal: 
+                          type: integer
+                        journal_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        name: 
+                          type: string
+                        rec_name: 
+                          type: string  
                     errors:
                       type: object
                     pagination:
@@ -42,7 +65,17 @@
                       nullable: true
               example:
                 data:
-                  
+                  - company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    id: 1
+                    journal: 3
+                    journal_:
+                      id: 3
+                      name: Cash
+                    name: payment method1
+                    rec_name: payment method1
                 errors: null
                 pagination:
                   page: 1
