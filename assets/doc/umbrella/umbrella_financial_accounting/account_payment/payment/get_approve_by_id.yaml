@@ -1,9 +1,9 @@
 get:
       tags:
         - payment
-      summary: Draft payment.
-      description: Draft payment.
-      operationId: getPaymentDraftById
+      summary: Approve payment.
+      description: Approve payment.
+      operationId: AprovePaymentById
       parameters:
         - name: obj_id
           in: path

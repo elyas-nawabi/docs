@@ -1,8 +1,8 @@
 get:
       tags:
         - payment
-      summary: Draft payment.
-      description: Draft payment.
+      summary: Get one draft.
+      description: Get one draft.
       operationId: getPaymentDraftById
       parameters:
         - name: obj_id
@@ -21,20 +21,30 @@ get:
                   properties:
                     data:
                       type: object
-                      nullable: true
+                      properties:
+                        
                     errors:
                       type: object
-                      nullable: true
                     pagination:
-                      type: object
-                      nullable: true
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
                     status:
                       type: integer
                     success_message:
                       type: string
                       nullable: true
               example:
-                data: null
+                data:
+                  
                 error: null
                 pagination: null
                 status: 200
