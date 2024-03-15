@@ -21,30 +21,20 @@ get:
                   properties:
                     data:
                       type: object
-                      properties:
-                        
+                      nullable: true
                     errors:
                       type: object
+                      nullable: true
                     pagination:
-                      items:
-                        type: object
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
+                      type: object
+                      nullable: true
                     status:
                       type: integer
                     success_message:
                       type: string
                       nullable: true
               example:
-                data:
-                  
+                data: null 
                 error: null
                 pagination: null
                 status: 200
