@@ -22,7 +22,24 @@
                     data:
                       type: array
                       properties:
-                          
+                        date: 
+                          type: string
+                          format: date
+                        id: 
+                          type: integer
+                        journal: 
+                          type: integer
+                        journal_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        name: 
+                          type: string
+                        rec_name: 
+                          type: string  
                     errors:
                       type: object
                     pagination:
@@ -42,7 +59,14 @@
                       nullable: true
               example:
                 data:
-                  
+                  - date: '2024-03-14'
+                    id: 1
+                    journal: 6
+                    journal_:
+                      id: 6
+                      name: statementj1
+                    name: st1
+                    rec_name: st1
                 errors: null
                 pagination:
                   page: 1
