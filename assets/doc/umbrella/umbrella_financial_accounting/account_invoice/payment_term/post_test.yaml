@@ -17,10 +17,23 @@ post:
           content:
             application/json:
               schema:
-                  type: object
+                  type: array
                   properties:
                     data: 
-                      
+                        amount: 
+                          type: integer
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        date:
+                          type: string 
+                          format: date
                     errors:
                       type: object
                     pagination:
@@ -39,7 +52,12 @@ post:
                       type: string
               example:
                 data:
-                  
+                  - amount: 1
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    date: '2024-02-12'
                 errors: null
                 pagination: null
                 status: 201
