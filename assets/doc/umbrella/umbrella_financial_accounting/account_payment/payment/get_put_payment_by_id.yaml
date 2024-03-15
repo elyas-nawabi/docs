@@ -252,118 +252,118 @@ put:
                     data:
                       type: object
                       properties:
-                          amount: 
-                            type: integer
-                          approved_by: 
-                            type: integer
-                          approved_by_:
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name: 
-                                type: string
-                          company: 
-                            type: integer
-                          company_:
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name: 
-                                type: string
-                          create_date: 
-                            type: string
-                            format: date
-                          currency: 
-                            type: integer
-                          currency_:
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name: 
-                                type: string
-                          date: 
-                            type: string
-                            format: date
-                          description: 
-                            type: string
-                          failed_by: 
-                            type: integer
-                          failed_by_:
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name: 
-                                type: string
-                          group: 
-                            type: integer
-                          group_: 
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name: 
-                                type: string
-                          id: 
-                            type: integer
-                          journal: 
-                            type: integer
-                          journal_:
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name: 
-                                type: string
-                          kind: 
-                            type: string
-                          line: 
-                            type: integer
-                          line_: 
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name: 
-                                type: string
-                          origin: 
-                            type: string
-                          party: 
-                            type: integer
-                          party_:
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name: 
-                                type: string
-                          process_method:
-                            type: string
-                          rec_name:
-                            type: string
-                          state:
-                            type: string
-                          submitted_by:
-                            type: integer
-                          submitted_by_:
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name: 
-                                type: string
-                          succeeded_by:
-                            type: integer
-                          succeeded_by_:
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name: 
-                                type: string
+                        amount: 
+                          type: integer
+                        approved_by: 
+                          type: integer
+                        approved_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        create_date: 
+                          type: string
+                          format: date
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        date: 
+                          type: string
+                          format: date
+                        description: 
+                          type: string
+                        failed_by: 
+                          type: integer
+                        failed_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        group: 
+                          type: integer
+                        group_: 
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        id: 
+                          type: integer
+                        journal: 
+                          type: integer
+                        journal_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        kind: 
+                          type: string
+                        line: 
+                          type: integer
+                        line_: 
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        origin: 
+                          type: string
+                        party: 
+                          type: integer
+                        party_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        process_method:
+                          type: string
+                        rec_name:
+                          type: string
+                        state:
+                          type: string
+                        submitted_by:
+                          type: integer
+                        submitted_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        succeeded_by:
+                          type: integer
+                        succeeded_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
                     errors:
                       type: object
                     pagination:
