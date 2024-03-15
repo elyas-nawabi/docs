@@ -22,7 +22,118 @@ get:
                     data:
                       type: object
                       properties:
-                        
+                        amount: 
+                          type: integer
+                        approved_by: 
+                          type: integer
+                        approved_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        create_date: 
+                          type: string
+                          format: date
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        date: 
+                          type: string
+                          format: date
+                        description: 
+                          type: string
+                        failed_by: 
+                          type: integer
+                        failed_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        group: 
+                          type: integer
+                        group_: 
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        id: 
+                          type: integer
+                        journal: 
+                          type: integer
+                        journal_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        kind: 
+                          type: string
+                        line: 
+                          type: integer
+                        line_: 
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        origin: 
+                          type: string
+                        party: 
+                          type: integer
+                        party_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        process_method:
+                          type: string
+                        rec_name:
+                          type: string
+                        state:
+                          type: string
+                        submitted_by:
+                          type: integer
+                        submitted_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        succeeded_by:
+                          type: integer
+                        succeeded_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
                     errors:
                       type: object
                     pagination:
@@ -44,7 +155,52 @@ get:
                       nullable: true
               example:
                 data:
-                  
+                  amount: 1
+                  approved_by: 21
+                  approved_by_:
+                    id: 21
+                    name: Party 1
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  create_date: '2024-03-15T05:26:37.654975'
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  date: '2024-03-15'
+                  description: this is some description
+                  failed_by: 21
+                  failed_by_:
+                    id: 21
+                    name: Party 1
+                  group: 
+                  group_: {}
+                  id: 9
+                  journal: 1
+                  journal_:
+                    id: 1
+                    name: payment_journal
+                  kind: receivable
+                  line: 
+                  line_: {}
+                  origin: 
+                  party: 1
+                  party_:
+                    id: 1
+                    name: Party 1
+                  process_method: stripe
+                  rec_name: '9'
+                  state: draft
+                  submitted_by: 21
+                  submitted_by_:
+                    id: 21
+                    name: Party 1
+                  succeeded_by: 21
+                  succeeded_by_:
+                    id: 21
+                    name: Party 1
                 error: null
                 pagination: null
                 status: 200
@@ -96,7 +252,118 @@ put:
                     data:
                       type: object
                       properties:
-                        
+                        amount: 
+                          type: integer
+                        approved_by: 
+                          type: integer
+                        approved_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        create_date: 
+                          type: string
+                          format: date
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        date: 
+                          type: string
+                          format: date
+                        description: 
+                          type: string
+                        failed_by: 
+                          type: integer
+                        failed_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        group: 
+                          type: integer
+                        group_: 
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        id: 
+                          type: integer
+                        journal: 
+                          type: integer
+                        journal_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        kind: 
+                          type: string
+                        line: 
+                          type: integer
+                        line_: 
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        origin: 
+                          type: string
+                        party: 
+                          type: integer
+                        party_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        process_method:
+                          type: string
+                        rec_name:
+                          type: string
+                        state:
+                          type: string
+                        submitted_by:
+                          type: integer
+                        submitted_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
+                        succeeded_by:
+                          type: integer
+                        succeeded_by_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name: 
+                              type: string
                     errors:
                       type: object
                     pagination:
@@ -117,7 +384,52 @@ put:
                       type: string
               example:
                 data:
-                  
+                  amount: 1
+                  approved_by: 21
+                  approved_by_:
+                    id: 21
+                    name: Party 1
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  create_date: '2024-03-15T05:26:37.654975'
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  date: '2024-03-15'
+                  description: this is some description
+                  failed_by: 21
+                  failed_by_:
+                    id: 21
+                    name: Party 1
+                  group: 
+                  group_: {}
+                  id: 9
+                  journal: 1
+                  journal_:
+                    id: 1
+                    name: payment_journal
+                  kind: receivable
+                  line: 
+                  line_: {}
+                  origin: 
+                  party: 1
+                  party_:
+                    id: 1
+                    name: Party 1
+                  process_method: stripe
+                  rec_name: '9'
+                  state: draft
+                  submitted_by: 21
+                  submitted_by_:
+                    id: 21
+                    name: Party 1
+                  succeeded_by: 21
+                  succeeded_by_:
+                    id: 21
+                    name: Party 1
                 errors: null
                 pagination: null
                 status: 200

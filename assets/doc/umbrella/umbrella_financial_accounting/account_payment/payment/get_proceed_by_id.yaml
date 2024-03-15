@@ -1,9 +1,9 @@
 get:
       tags:
         - payment
-      summary: Process payment.
-      description: Process payment.
-      operationId: getPaymentProcessById
+      summary: Proceed payment.
+      description: Proceed payment.
+      operationId: getPaymentProceedById
       parameters:
         - name: obj_id
           in: path
@@ -34,7 +34,7 @@ get:
                       type: string
                       nullable: true
               example:
-                data: null     
+                data: null
                 error: null
                 pagination: null
                 status: 200
@@ -55,4 +55,3 @@ get:
             application/json:
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
-                
