@@ -1,6 +1,18 @@
 properties:
-  
+  payment_term: 
+    type: integer
+  currency: 
+    type: integer
+  date: 
+    type: string
+    format: date
+  amount: 
+    type: integer
+    
 required:
-  
+  -
 example:
-  
+  payment_term: 1
+  currency: 1
+  date: '2024-03-15'
+  amount: 1
