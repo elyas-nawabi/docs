@@ -22,7 +22,29 @@
                     data:
                       type: array
                       properties:
-                           
+                          id: 
+                            type: integer
+                          journal: 
+                            type: integer
+                          journal_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name: 
+                                type: string
+                          kind: 
+                            type: string
+                          number: 
+                            type: string
+                          payment_amount: 
+                            type: integer
+                          payment_amount_succeeded: 
+                            type: integer
+                          payment_count: 
+                            type: integer
+                          rec_name: 
+                            type: string  
                     errors:
                       type: object
                     pagination:
@@ -42,7 +64,17 @@
                       nullable: true
               example:
                 data:
-                  
+                  - id: 1
+                    journal: 10
+                    journal_:
+                      id: 10
+                      name: payment_journal_test
+                    kind: receivable
+                    number: '1'
+                    payment_amount: 6
+                    payment_amount_succeeded: 5
+                    payment_count: 6
+                    rec_name: '1'
                 errors: null
                 pagination:
                   page: 1
