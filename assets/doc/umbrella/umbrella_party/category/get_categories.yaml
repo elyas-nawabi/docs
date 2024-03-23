@@ -26,6 +26,8 @@
                           type: integer
                         name:
                           type: string
+                        rec_name:
+                          type: string
                     errors:
                       type: object
                     pagination:
@@ -46,10 +48,7 @@
                 data:
                   - id: 1
                     name: "parentCategory"
-                  - id: 2
-                    name: "childCategory"
-                  - id: 3
-                    name: "simpleCategory"
+                    rec_name: parentctg
                 errors: null
                 pagination:
                   page: 1

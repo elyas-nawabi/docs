@@ -27,6 +27,13 @@
                           type: string
                         country:
                           type: integer
+                        country_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         id:
                           type: integer
                         name:
@@ -44,6 +51,8 @@
                           type: string
                         postal_code:
                           type: string 
+                        rec_name: 
+                          type: string
                         street: 
                           type: string
                         subdivision:
@@ -86,6 +95,7 @@
                       name: "Party 1"
                   party_name: "prt1"
                   postal_code: "1001"
+                  rec_name: prt2, herat tower, street 2, 1002, Herat, 1
                   street: "2nd street"
                   subdivision: 1
                   subdivision_:

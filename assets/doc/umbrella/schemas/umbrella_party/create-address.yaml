@@ -6,16 +6,20 @@ properties:
   contact_mechanisms:
     type: array
     properties:
+      address: 
+        type: integer
+      language: 
+        type: integer
+      name: 
+        type: string
+      party: 
+        type: integer
+      rec_name: 
+        type: string
       type: 
         type: string
       value:
         type: string
-      name: 
-        type: string
-      party:
-        type: integer
-      address:
-        type: integer
   country:
     type: integer
   name: 
@@ -28,6 +32,8 @@ properties:
     type: string 
   sequence: 
     type: integer
+  rec_name:
+    type: string 
   street: 
     type: string 
   subdivision: 
@@ -36,18 +42,21 @@ required:
   - party
 example:
   active: true
-  city: "Herat"
+  city: "Kabul"
   contact_mechanisms:
-    - type: "phone"
-      value: "0771680235"
-      name: "ctm1"
-      party: 1 
-      address: 1
+  - address: 1
+    language: null
+    name: "suhaib"
+    party: 1
+    rec_name: suhaib <0771680435>
+    type: "mobile"
+    value: "0771680435"
   country: 1
-  name: "herat tower"
+  name: "ahmad tower"
   party: 1
-  party_name: "prt2"
-  postal_code: "1002"
-  sequence: 1
+  party_name: ""
+  postal_code: "1001"
+  rec_name: ptupdate, ahmad tower, street 3, 1004, Kabul, 1
+  sequence: null
   street: "street 2"
   subdivision: 3

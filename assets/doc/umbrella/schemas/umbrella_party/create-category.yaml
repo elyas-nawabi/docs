@@ -1,22 +1,31 @@
       properties:
+        childs:
+          type: array
+          properties:
+            childs: 
+              type: array
+            name: 
+              type: string
+            parent: 
+              type: integer
+              nullable: true
+            rec_name:
+              type: string
         name:
           type: string
         parent:
           type: integer
-        childs:
-          type: array
-          properties:
-            type: object
-            name:
-              type: string
-            parent:
-              type: integer
+          nullable: true
+        rec_name:
+          type: string
       required:
         - name
       example:
-        name: "testCtg4"
-        parent: 4
-        childs: 
-          childs: []
-          name: "test1"
-          parent: 4
+        childs:
+          - childs: []
+            name: "testCtg1"
+            parent: null
+            rec_name: "parentctg"
+        name: "testCtg1"
+        parent: null
+        rec_name: "parentctg"

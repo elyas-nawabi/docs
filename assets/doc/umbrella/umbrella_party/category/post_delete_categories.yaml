@@ -23,14 +23,29 @@ post:
                       properties:
                         childs:
                           type: array
+                          properties:
+                            childs: []
+                            id: 12
+                            name: "testCtg1"
+                            parent: null
+                            parent_: {}
+                            rec_name: "parentctg"
                         id:
                           type: integer
                         name:
                           type: string
                         parent:
                           type: integer
+                          nullable: true
                         parent_:
                           type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        rec_name:
+                          type: string
                     errors:
                       type: object
                       nullable: true
@@ -43,45 +58,19 @@ post:
                       type: string
                       nullable: true
               example:
-              - Please remove the square brackets from the start and end lines during post operation.
-              - You are limited to selecting one example from the following.
-              - data:
-                  childs: []
+                data: 
+                  childs:
+                    - childs: []
+                      id: 12
+                      name: "testCtg1"
+                      parent: null
+                      parent_: {}
+                      rec_name: "parentctg"
                   id: 12
                   name: "testCtg1"
                   parent: null
                   parent_: {}
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
-              - data:
-                  childs: []
-                  id: 13
-                  name: "testCtg2"
-                  parent: 4
-                  parent_:
-                    id: 4
-                    name: "parentCtg"
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
-              - data:
-                  childs:
-                    childs: []
-                    id: 7
-                    name: "test1"
-                    parent: 6
-                    parent_: 
-                        id: 6
-                        name: "parentctg / testCtg"
-                  id: 14
-                  name: "testCtg4"
-                  parent: 4
-                  parent_:
-                    id: 4
-                    name: "parentCtg"
+                  rec_name: "parentctg"
                 errors: null
                 pagination: null
                 status: 201

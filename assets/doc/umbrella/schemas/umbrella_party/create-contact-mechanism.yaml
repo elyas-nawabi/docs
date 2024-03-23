@@ -3,50 +3,33 @@
           type: boolean
         address:
           type: integer
-        address_:
-          type: object
-          properties:
-            id:
-              type: integer
-            name:
-              type: string
         comment:
           type: string
         language:
-          type: string
+          type: integer
         name: 
           type: string
         party:
           type: integer 
-        party_:
-          type: object
-          properties:
-            id:
-              type: integer
-            name:
-              type: string
+        rec_name:
+          type: string
         sequence:
           type: integer
         type:
           type: string
         value:
-          type: string 
+          type: string  
       required:
         - name
         - party
       example:
         active: true
         address: 2
-        address_:
-          id: 2
-          name: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
-        comment: "abcParty comments"
-        language: "en"
-        name: "ctm2"
+        comment: "information about contact name"
+        language: 1
+        name: ahmad
         party: 1
-        party_:
-          id: 1
-          name: "Party 1"
+        rec_name: ahmad <123>
         sequence: 1
-        type: "phone"
-        value: "8888"
+        type: phone
+        value: '8888'
