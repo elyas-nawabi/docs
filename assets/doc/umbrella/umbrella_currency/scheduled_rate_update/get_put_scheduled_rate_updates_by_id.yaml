@@ -20,7 +20,7 @@
                   type: object
                   properties:
                     data:
-                      type: array
+                      type: object
                       properties:
                         currencies:
                           type: array
@@ -42,6 +42,8 @@
                         last_update:
                           type: string
                           format: date
+                        rec_name: 
+                          type: string
                         source:
                           type: string
                         weekday:
@@ -73,6 +75,7 @@
                   frequency: "monthly"
                   id: 1
                   last_update: "2024-01-28"
+                  rec_name: '81'
                   source: "ecb"
                   weekday: null
                 errors: null
@@ -124,7 +127,7 @@
                   type: object
                   properties:
                     data:
-                      type: array
+                      type: object
                       properties:
                         currencies:
                           type: array
@@ -146,6 +149,8 @@
                         last_update:
                           type: string
                           format: date
+                        rec_name:
+                          type: string
                         source:
                           type: string
                         weekday:
@@ -177,6 +182,7 @@
                   frequency: "monthly"
                   id: 1
                   last_update: "2024-01-28"
+                  rec_name: '81'
                   source: "ecb"
                   weekday: null
                 errors: null
