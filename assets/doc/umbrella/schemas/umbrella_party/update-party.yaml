@@ -1,130 +1,134 @@
+  properties:
+    account_payable:
+      type: string
+      nullable: true
+    account_receivable: 
+      type: string
+      nullable: true
+    addresses:
+      type: array
       properties:
-        addresses: 
-          properties:
-            active: 
-              type: boolean
-            city: 
-              type: string
-            contact_mechanisms: 
-              type: array
-            country:
-              type: integer
-            country_: 
-              id:
-                type: integer
-              name:
-                type: string
-            id: 
-              type: integer
-            name: 
-              type: string
-            party:
-              type: integer
-            party_: 
-              id:
-                type: integer
-              name:
-                type: string
-            party_name: 
-              type: string
-            postal_code: 
-              type: string
-            sequence: 
-              type: integer
-            street:
-              type: string
-            subdivision:
-              type: integer
-            subdivision_: 
-              id:
-                type: integer
-              name:
-                type: string
-        categories:
-          type: integer
-        code:
+        active:
+          type: boolean
+        city: 
           type: string
-        contact_mechanisms: 
-          properties:
-            active:
-              type: boolean
-            comment:
-              type: string
-            language:
-              type: integer
-            name:
-              type: integer
-            party: 
-              type: integer
-            party_: 
-              id:
-                type: integer
-              name:
-                type: string
-            sequence:
-              type: integer
-            type:
-              type: integer
-            value:
-              type: integer
-        create_date:
-          type: string
-          format: date
-        name:
-          type: string
-        payable:
-          type: integer
-        payable_today:
-          type: integer
-        receivable:
-          type: integer
-        receivable_today:
-          type: integer
-  
-      required:
-          - code
-          - name    
-      example:
-        addresses:
-        - active: true
-          city: Herat
-          contact_mechanisms: []
-          country: 1
-          country_:
-            id: 1
-            name: Afghanistan
-          id: 3
-          name: herat tower
-          party: 1
-          party_:
-            id: 1
-            name: Party 1
-          party_name: prt2
-          postal_code: '1002'
-          sequence: 1
-          street: street 2
-          subdivision: 3
-          subdivision_:
-            id: 3
-            name: sbd1
-        categories:
-        - 3
-        code: '01'
         contact_mechanisms:
-        - active: true
-          comment: no comment
-          language: 1
-          name: ctm1
-          party: 14
-          party_:
-            id: 1
-            name: Party 1
-          sequence: 1
-          type: phone
-          value: '8888'
-        create_date: '2024-01-23T16:52:29.278731'
-        name: Party 15
-        payable: 0
-        payable_today: 0
-        receivable: 0
-        receivable_today: 0
+          type: array
+        country:
+          type: integer
+        name: 
+          type: string
+        party:
+          type: integer
+        party_name: 
+          type: string
+        postal_code: 
+          type: string
+        rec_name:
+          type: string
+        sequence:
+          type: integer
+        street: 
+          type: string
+        subdivision:
+          type: integer
+    categories:
+      type: array
+      properties:
+        childs:
+          type: array
+        name: 
+          type: string
+        parent:
+          type: integer
+        rec_name:
+          type: string
+    code: 
+      type: string
+    contact_mechanisms:
+      type: array
+      properties:
+        active:
+          type: boolean
+        address:
+          type: integer
+        comment: 
+          type: string
+        language: 
+          type: string
+        name: 
+          type: string
+        party:
+          type: integer
+        rec_name: 
+          type: string
+        sequence:
+          type: integer
+        type: 
+          type: string
+        value: 
+          type: string
+    customer_tax_rule:
+      type: integer
+      nullable: true
+    lang:
+      type: integer
+    name: 
+      type: string
+    payable:
+      type: integer
+    payable_today:
+      type: integer
+    receivable:
+      type: integer
+    receivable_today:
+      type: integer
+    supplier_tax_rule:
+      type: integer
+      nullable: true
+    tax_identifier: 
+      type: string
+      nullable: true
+  required:
+    - code
+    - name    
+  example:
+    account_payable: null
+    account_receivable: null
+    addresses:
+    - active: true
+      city: "Herat"
+      contact_mechanisms: []
+      country: 1
+      name: "herat tower"
+      party: 1
+      party_name: "prt2"
+      postal_code: "1002"
+      sequence: null
+      street: "street 2"
+      subdivision: 3
+    categories:
+    - childs: []
+      name: "test1"
+      parent: 4
+    code: '1'
+    contact_mechanisms:
+    - active: true
+      address: 2
+      comment: 
+      language: null
+      name: "ctm1"
+      party: 1
+      rec_name: ctm1 <8888>
+      sequence: null
+      type: "phone"
+      value: '8888'
+    customer_tax_rule: null
+    lang: 1
+    name: "Party 1"
+    payable: 0
+    payable_today: 0
+    receivable: 0
+    receivable_today: 0
+    supplier_tax_rule: null
+    tax_identifier: null    
