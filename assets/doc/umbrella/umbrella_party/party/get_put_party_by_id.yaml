@@ -24,9 +24,12 @@
                       properties:
                         account_payable:
                           type: string
+                          nullable: true
                         account_receivable: 
                           type: string
+                          nullable: true
                         addresses:
+                          type: array
                           properties:
                             active:
                               type: boolean
@@ -56,6 +59,8 @@
                               type: string
                             postal_code: 
                               type: string
+                            rec_name:
+                              type: string
                             sequence:
                               type: integer
                             street: 
@@ -68,6 +73,7 @@
                               name:
                                 type: string
                         categories:
+                          type: array
                           properties:
                             childs:
                               type: array
@@ -83,9 +89,12 @@
                                 type: integer
                               name:
                                 type: string
+                            rec_name:
+                              type: string
                         code: 
                           type: string
                         contact_mechanisms:
+                          type: array
                           properties:
                             active:
                               type: boolean
@@ -111,18 +120,20 @@
                                 type: integer
                               name:
                                 type: string
+                            rec_name: 
+                              type: string
                             sequence:
                               type: integer
                             type: 
                               type: string
                             value: 
                               type: string
-                        create_date:
-                          type: string
-                          format: date 
                         customer_tax_rule:
                           type: integer
+                          nullable: true
                         id:
+                          type: integer
+                        lang:
                           type: integer
                         name: 
                           type: string
@@ -136,8 +147,10 @@
                           type: integer
                         supplier_tax_rule:
                           type: integer
+                          nullable: true
                         tax_identifier: 
                           type: string
+                          nullable: true
                     error: 
                       type: string
                     pagination: 
@@ -148,8 +161,8 @@
                       type: string
               example:
                 data:
-                  account_payable: 
-                  account_receivable: 
+                  account_payable: null
+                  account_receivable: null
                   addresses:
                   - active: true
                     city: "Herat"
@@ -189,27 +202,28 @@
                       name: "abcParty, bl1, st12, 1007, Kabul, Afghanistan, 1"
                     comment: 
                     id: 2
-                    language: 
+                    language: null
                     name: "ctm1"
                     party: 1
                     party_:
                       id: 1
                       name: "Party 1"
-                    sequence: 
+                    rec_name: ctm1 <8888>
+                    sequence: null
                     type: "phone"
                     value: '8888'
-                  create_date: '2024-01-23T16:52:29.278731'
-                  customer_tax_rule: 
+                  customer_tax_rule: null
                   id: 1
+                  lang: 1
                   name: "Party 1"
                   payable: 0
                   payable_today: 0
                   receivable: 0
                   receivable_today: 0
-                  supplier_tax_rule: 
-                  tax_identifier: 
-                error: 
-                pagination: 
+                  supplier_tax_rule: null
+                  tax_identifier: null
+                error: null
+                pagination: null
                 status: 200
                 success_message: null 
         '401':
@@ -258,28 +272,35 @@
                     data:
                       type: array
                       properties:
-                        addresses: 
+                        account_payable:
+                          type: string
+                          nullable: true
+                        account_receivable: 
+                          type: string
+                          nullable: true
+                        addresses:
+                          type: array
                           properties:
-                            active: 
+                            active:
                               type: boolean
                             city: 
                               type: string
-                            contact_mechanisms: 
+                            contact_mechanisms:
                               type: array
                             country:
                               type: integer
-                            country_: 
+                            country_:
                               id:
                                 type: integer
                               name:
                                 type: string
-                            id: 
+                            id:
                               type: integer
                             name: 
                               type: string
                             party:
                               type: integer
-                            party_: 
+                            party_:
                               id:
                                 type: integer
                               name:
@@ -288,48 +309,83 @@
                               type: string
                             postal_code: 
                               type: string
-                            sequence: 
+                            rec_name:
+                              type: string
+                            sequence:
                               type: integer
-                            street:
+                            street: 
                               type: string
                             subdivision:
                               type: integer
-                            subdivision_: 
+                            subdivision_:
                               id:
                                 type: integer
                               name:
                                 type: string
                         categories:
-                          type: integer
-                        code:
-                          type: string
-                        contact_mechanisms: 
+                          type: array
                           properties:
-                            active:
-                              type: boolean
-                            comment:
+                            childs:
+                              type: array
+                                - (structure similar to categories)
+                            id:
+                              type: integer
+                            name: 
                               type: string
-                            language:
+                            parent:
                               type: integer
-                            name:
-                              type: integer
-                            party: 
-                              type: integer
-                            party_: 
+                            parent_:
                               id:
                                 type: integer
                               name:
                                 type: string
+                            rec_name:
+                              type: string
+                        code: 
+                          type: string
+                        contact_mechanisms:
+                          type: array
+                          properties:
+                            active:
+                              type: boolean
+                            address:
+                              type: integer
+                            address_:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                            comment: 
+                              type: string
+                            id:
+                              type: integer
+                            language: 
+                              type: string
+                            name: 
+                              type: string
+                            party:
+                              type: integer
+                            party_:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                            rec_name: 
+                              type: string
                             sequence:
                               type: integer
-                            type:
-                              type: integer
-                            value:
-                              type: integer
-                        create_date:
-                          type: string
-                          format: date
-                        name:
+                            type: 
+                              type: string
+                            value: 
+                              type: string
+                        customer_tax_rule:
+                          type: integer
+                          nullable: true
+                        id:
+                          type: integer
+                        lang:
+                          type: integer
+                        name: 
                           type: string
                         payable:
                           type: integer
@@ -339,6 +395,12 @@
                           type: integer
                         receivable_today:
                           type: integer
+                        supplier_tax_rule:
+                          type: integer
+                          nullable: true
+                        tax_identifier: 
+                          type: string
+                          nullable: true
                     errors:
                       type: object
                       nullable: true
@@ -352,49 +414,68 @@
                       nullable: true
 
               example:
-                addresses:
-                - active: true
-                  city: Herat
-                  contact_mechanisms: []
-                  country: 1
-                  country_:
-                    id: 1
-                    name: Afghanistan
-                  id: 3
-                  name: herat tower
-                  party: 1
-                  party_:
-                    id: 1
-                    name: Party 1
-                  party_name: prt2
-                  postal_code: '1002'
-                  sequence: 1
-                  street: street 2
-                  subdivision: 3
-                  subdivision_:
+                data:
+                  account_payable: null
+                  account_receivable: null
+                  addresses:
+                  - active: true
+                    city: "Herat"
+                    contact_mechanisms: []
+                    country: 1
+                    country_:
+                      id: 1
+                      name: "Afghanistan"
                     id: 3
-                    name: sbd1
-                categories:
-                - 3
-                code: '01'
-                contact_mechanisms:
-                - active: true
-                  comment: no comment
-                  language: 1
-                  name: ctm1
-                  party: 14
-                  party_:
-                    id: 1
-                    name: Party 1
-                  sequence: 1
-                  type: phone
-                  value: '8888'
-                create_date: '2024-01-23T16:52:29.278731'
-                name: Party 15
-                payable: 0
-                payable_today: 0
-                receivable: 0
-                receivable_today: 0
+                    name: "herat tower"
+                    party: 1
+                    party_:
+                      id: 1
+                      name: "Party 1"
+                    party_name: "prt2"
+                    postal_code: "1002"
+                    sequence: 
+                    street: "street 2"
+                    subdivision: 3
+                    subdivision_:
+                      id: 3
+                      name: "sbd1"
+                  categories:
+                  - childs: []
+                    id: 5
+                    name: "test1"
+                    parent: 4
+                    parent_:
+                      id: 4
+                      name: "parentctg"
+                  code: '1'
+                  contact_mechanisms:
+                  - active: true
+                    address: 2
+                    address_:
+                      id: 2
+                      name: "abcParty, bl1, st12, 1007, Kabul, Afghanistan, 1"
+                    comment: 
+                    id: 2
+                    language: null
+                    name: "ctm1"
+                    party: 1
+                    party_:
+                      id: 1
+                      name: "Party 1"
+                    rec_name: ctm1 <8888>
+                    sequence: null
+                    type: "phone"
+                    value: '8888'
+                  customer_tax_rule: null
+                  id: 1
+                  lang: 1
+                  name: "Party 1"
+                  payable: 0
+                  payable_today: 0
+                  receivable: 0
+                  receivable_today: 0
+                  supplier_tax_rule: null
+                  tax_identifier: null
                 errors: null
                 pagination: null
                 status: 200

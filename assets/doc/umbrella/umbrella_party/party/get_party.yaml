@@ -24,16 +24,17 @@
                       properties:
                         code:
                           type: string
-                        create_date:
-                          type: string
-                          format: date
                         id:
+                          type: integer
+                        lang:
                           type: integer
                         name:
                           type: string
                         payable_today:
                           type: number
                           format: float
+                        rec_name:
+                          type: string
                         receivable_today:
                           type: number
                           format: float
@@ -58,11 +59,12 @@
               example:
                 data:
                   - code: "1"
-                    create_date: "2024-01-23T16:52:29.278731"
                     id: 1
+                    lang: 1
                     name: "Party 1"
-                    payable_today: 0.0,
-                    receivable_today: 0.0,
+                    payable_today: 0.0
+                    rec_name: Party 1
+                    receivable_today: 0.0
                     tax_identifier: null
                 errors: null
                 pagination:
