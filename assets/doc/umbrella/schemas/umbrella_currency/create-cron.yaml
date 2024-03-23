@@ -3,13 +3,6 @@
           type: array
         currency:
           type: integer
-        currency_:
-          type: object
-          properties:
-            id:
-              type: integer
-            name:
-              type: string
         day:
           type: integer
         frequency:
@@ -28,10 +21,11 @@
         - frequency
         - source
       example:
+          currencies: []
           currency: 1
           day: 1
           frequency: "monthly"
           last_update: "2024-01-28"
           rec_name: "62"
-          source: "ecb"
+          source: ecb
           weekday: "2"

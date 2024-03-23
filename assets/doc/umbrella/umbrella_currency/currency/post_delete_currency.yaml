@@ -47,6 +47,8 @@ post:
                         rate: 
                           type: number
                           format: float
+                    rec_name:
+                      type: string
                     rounding:
                       type: number
                       format: float
@@ -68,6 +70,7 @@ post:
               active: true
               code: "AFN"
               digits: 2
+              id: 1
               name: "Afghani"
               numeric_code: "001"
               rate: 0
@@ -75,7 +78,8 @@ post:
                 - date: "2024-02-06"
                   id: 6
                   rate: 0.1
-              rounding: 3
+              rec_name: "2028"
+              rounding: 0.01
               symbol: "AFN"
             errors: null
             pagination: null

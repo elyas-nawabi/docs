@@ -19,7 +19,7 @@ post:
               schema:
                   properties:
                     data:
-                      type: array
+                      type: object
                       properties:
                         currencies:
                           type: array

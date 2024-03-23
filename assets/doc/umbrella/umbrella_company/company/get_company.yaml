@@ -22,6 +22,15 @@
                     data:
                       type: array
                       properties:
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         id:
                           type: integer
                         party:
@@ -36,9 +45,13 @@
                         payable_today:
                           type: number
                           format: float
+                        rec_name:
+                          type: string
                         receivable_today:
                           type: number
                           format: float
+                        timezone: 
+                          type: string
                     errors:
                       type: object
                     pagination:
@@ -58,13 +71,19 @@
                       nullable: true
               example:
                 data:
-                - id: 1
+                - currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  id: 1
                   party: 1
                   party_:
                     id: 1
                     name: Party 1
                   payable_today: 0
+                  rec_name: Party 1
                   receivable_today: 0
+                  timezone: Asia/Kabul
                 error: null
                 pagination:
                   page: 1
