@@ -48,6 +48,8 @@ get:
                         rate: 
                           type: number
                           format: float
+                    rec_name:
+                      type: string
                     rounding:
                       type: number
                       format: float
@@ -77,6 +79,7 @@ get:
                 - date: "2024-02-06"
                   id: 6
                   rate: 0.1
+              rec_name: "2028"
               rounding: 0.01
               symbol: "AFN"
             errors: null
@@ -141,6 +144,9 @@ put:
                       type: string
                     numeric_code:
                       type: string
+                    rate:
+                      type: number
+                      format: float
                     rates:
                       type: array
                       properties:
@@ -152,6 +158,8 @@ put:
                         rate: 
                           type: number
                           format: float
+                    rec_name:
+                      type: string
                     rounding:
                       type: number
                       format: float
@@ -171,17 +179,19 @@ put:
           example:
             data:
               active: true
-              code: "eu1"
-              digits: 3
-              name: "Euro"
+              code: "AFN"
+              digits: 2
+              id: 1
+              name: "Afghani"
               numeric_code: "001"
-              rate: 1.1
+              rate: 0
               rates:
                 - date: "2024-02-06"
                   id: 6
                   rate: 0.1
-              rounding: 0.1
-              symbol: "eu"
+              rec_name: "2028"
+              rounding: 0.01
+              symbol: "AFN"
             errors: null
             pagination: null
             status: 200

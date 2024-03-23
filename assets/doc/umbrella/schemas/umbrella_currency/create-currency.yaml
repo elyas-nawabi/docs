@@ -5,8 +5,6 @@
       type: string
     digits:
       type: integer
-    id:
-      type: integer
     name:
       type: string
     numeric_code:
@@ -23,6 +21,8 @@
         rate: 
           type: number
           format: float
+    rec_name:
+      type: string
     rounding:
       type: number
       format: float
@@ -34,11 +34,13 @@
   example:
     active: true
     code: "AFN"
-    digits: 0
+    digits: 2
     name: "Afghani"
-    numeric_code: ""
+    numeric_code: "001"
+    rate: 0
     rates:
       - date: "2024-02-06"
-        rate: 0.0
-    rounding: 0.0
+        rate: 0.1
+    rec_name: "2028"
+    rounding: 0.01
     symbol: "AFN"

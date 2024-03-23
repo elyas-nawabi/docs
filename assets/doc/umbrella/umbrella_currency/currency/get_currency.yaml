@@ -22,8 +22,6 @@ post:
                 data:
                   type: array
                   properties:
-                    active:
-                      type: boolean
                     code:
                       type: string
                     id:
@@ -35,6 +33,8 @@ post:
                     rate:
                       type: number
                       format: float
+                    rec_name:
+                      type: string
                     symbol:
                       type: string
                 errors:
@@ -57,12 +57,12 @@ post:
             - code
           example:
             data:
-              - active: true
-                code: "AFN"
+              - code: "AFN"
                 id: 1
                 name: "Afghani"
                 numeric_code: "001"
                 rate: 0.1
+                rec_name: "2028"
                 symbol: "AFN"
             errors: null
             pagination:

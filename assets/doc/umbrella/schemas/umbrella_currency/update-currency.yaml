@@ -1,39 +1,46 @@
+  properties:
+    active:
+      type: boolean
+    code:
+      type: string
+    digits:
+      type: integer
+    name:
+      type: string
+    numeric_code:
+      type: string
+    rate:
+      type: number
+      format: float
+    rates:
+      type: array
       properties:
-        active:
-          type: boolean
-        code:
+        date: 
           type: string
-        digits:
-          type: integer
-        name:
-          type: string
-        numeric_code:
-          type: string
-        rates:
-          type: array
-          properties:
-            date:
-              type: string
-              format: date
-            rate:
-              type: number
-              format: float
-        rounding:
+          format: date
+        rate: 
           type: number
           format: float
-        symbol:
-          type: string
-      required:
-        - code
-        - id
-      example:
-        active: true
-        code: "er1"
-        digits: 3
-        name: "Euro"
-        numeric_code: "111"
-        rates:
-          - date: "2024-02-06"
-            rate: 0.0
-        rounding: 2
-        symbol: "eu"
+    rec_name:
+      type: string
+    rounding:
+      type: number
+      format: float
+    symbol:
+      type: string
+  required:
+    - code
+    - name
+  example:
+    active: true
+    code: "AFN"
+    digits: 2
+    name: "Afghani"
+    numeric_code: "001"
+    rate: 0
+    rates:
+      - date: "2024-02-06"
+        rate: 0.1
+    rec_name: "2028"
+    rounding: 0.01
+    symbol: "AFN"
