@@ -40,6 +40,8 @@
                                   type: string
                             id: 
                               type: integer
+                            language: 
+                              type: integer
                             name: 
                               type: string
                             party: 
@@ -51,6 +53,8 @@
                                   type: integer
                                 name:
                                   type: string
+                            rec_name: 
+                              type: string
                             type: 
                               type: string
                             value:
@@ -58,8 +62,12 @@
                         country:
                           type: integer
                         country_:
-                          id: 1
-                          name: "Afghanistan"
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                         name: 
                           type: string 
                         id: 
@@ -67,21 +75,31 @@
                         party: 
                           type: integer
                         party_:
-                          id: 1
-                          name: "Party 1"
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                         party_name:
                           type: string
                         postal_code:
                           type: string 
                         sequence: 
                           type: integer
+                        rec_name:
+                          type: string 
                         street: 
                           type: string 
                         subdivision: 
                           type: integer
                         subdivision_: 
-                          id: 3
-                          name: "sbd1"
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                     error:
                       type: object
                       nullable: true
@@ -103,11 +121,13 @@
                         id: 1
                         name: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
                     id: 9
+                    language: null
                     name: "suhaib"
                     party: 1
                     party_:
                         id: 1
                         name: "Party 1"
+                    rec_name: suhaib <0771680435>
                     type: "mobile"
                     value: "0771680435"
                   country: 1
@@ -122,7 +142,8 @@
                       name: "Party 1"
                   party_name: ""
                   postal_code: "1001"
-                  sequence: null,
+                  rec_name: ptupdate, ahmad tower, street 3, 1004, Kabul, 1
+                  sequence: null
                   street: "street 2"
                   subdivision: 3
                   subdivision_:
@@ -190,6 +211,8 @@
                                   type: string
                             id: 
                               type: integer
+                            language: 
+                              type: integer
                             name: 
                               type: string
                             party: 
@@ -201,6 +224,8 @@
                                   type: integer
                                 name:
                                   type: string
+                            rec_name: 
+                              type: string
                             type: 
                               type: string
                             value:
@@ -208,8 +233,12 @@
                         country:
                           type: integer
                         country_:
-                          id: 1
-                          name: "Afghanistan"
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                         name: 
                           type: string 
                         id: 
@@ -217,21 +246,31 @@
                         party: 
                           type: integer
                         party_:
-                          id: 1
-                          name: "Party 1"
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                         party_name:
                           type: string
                         postal_code:
                           type: string 
                         sequence: 
                           type: integer
+                        rec_name:
+                          type: string 
                         street: 
                           type: string 
                         subdivision: 
                           type: integer
                         subdivision_: 
-                          id: 3
-                          name: "sbd1"
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                     error:
                       type: object
                       nullable: true
@@ -248,18 +287,20 @@
                   active: true
                   city: "Kabul"
                   contact_mechanisms:
-                    -   address: 1
-                        address_:
-                            id: 1
-                            name: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
-                        id: 9
-                        name: "suhaib"
-                        party: 1
-                        party_:
-                            id: 1
-                            name: "Party 1"
-                        type: "mobile"
-                        value: "0771680435"
+                  - address: 1
+                    address_:
+                        id: 1
+                        name: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
+                    id: 9
+                    language: null
+                    name: "suhaib"
+                    party: 1
+                    party_:
+                        id: 1
+                        name: "Party 1"
+                    rec_name: suhaib <0771680435>
+                    type: "mobile"
+                    value: "0771680435"
                   country: 1
                   country_: 
                       id: 1
@@ -272,7 +313,8 @@
                       name: "Party 1"
                   party_name: ""
                   postal_code: "1001"
-                  sequence: null,
+                  rec_name: ptupdate, ahmad tower, street 3, 1004, Kabul, 1
+                  sequence: null
                   street: "street 2"
                   subdivision: 3
                   subdivision_:
