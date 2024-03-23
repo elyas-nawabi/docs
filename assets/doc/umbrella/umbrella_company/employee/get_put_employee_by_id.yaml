@@ -44,6 +44,8 @@
                               type: integer
                             name:
                               type: string
+                        rec_name:
+                          type: string
                         start_date: 
                           type: string
                           format: date
@@ -51,6 +53,11 @@
                           type: integer
                         supervisor_:
                           type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                     error:
                       type: object
                       nullable: true
@@ -74,9 +81,12 @@
                   party_:
                     id: 1
                     name: Party 1
+                  rec_name: Party 1
                   start_date: '2024-02-01'
-                  supervisor: 
-                  supervisor_: {}
+                  supervisor: 5 
+                  supervisor_: 
+                    id: 5
+                    name: Party 1
                 error: null
                 pagination: null
                 status: 200
@@ -148,6 +158,8 @@
                           type: integer
                         name:
                           type: string
+                    rec_name:
+                      type: string
                     start_date: 
                       type: string
                       format: date
@@ -155,11 +167,11 @@
                       type: integer
                     supervisor_:
                       type: object
-              
-              required:
-                - company
-                - party
-              
+                      properties:
+                        id:
+                          type: integer
+                        name:
+                          type: string
               example:
                 data:
                   company: 2
@@ -172,9 +184,12 @@
                   party_:
                     id: 1
                     name: Party 1
+                  rec_name: Party 1
                   start_date: '2024-02-01'
-                  supervisor: 
-                  supervisor_: {}
+                  supervisor: 5 
+                  supervisor_: 
+                    id: 5
+                    name: Party 1
                 error: null
                 pagination: null
                 status: 200

@@ -22,11 +22,37 @@
                     data:
                       type: array
                       properties:
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                        end_date:
+                          type: string
+                          format: date
                         id:
                           type: integer
                         party:
                           type: string
                         party_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                        rec_name:
+                          type: string
+                        start_date: 
+                          type: string
+                          format: date
+                        supervisor:
+                          type: integer
+                        supervisor_:
                           type: object
                           properties:
                             id:
@@ -52,10 +78,21 @@
                       nullable: true
               example:
                 data:
-                - id: 5
+                - company: 2
+                  company_:
+                    id: 2
+                    name: Party 1
+                  end_date: '2024-02-13'
+                  id: 5
                   party: 1
                   party_:
                     id: 1
+                    name: Party 1
+                  rec_name: Party 1
+                  start_date: '2024-02-01'
+                  supervisor: 5
+                  supervisor_:
+                    id: 5
                     name: Party 1
                 error: null
                 pagination:

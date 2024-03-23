@@ -1,8 +1,8 @@
 post:
       tags:
         - employee
-      summary: Create a employee.
-      description: Create a employee.
+      summary: Create an employee.
+      description: Create an employee.
       operationId: postEmployeeById
       requestBody:
         required: true
@@ -21,16 +21,41 @@ post:
                       data:
                         company:
                           type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         end_date:
                           type: string
                           format: date
-                        party:
+                        id:
                           type: integer
-                        start_date:
+                        party: 
+                          type: integer
+                        party_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                        rec_name:
+                          type: string
+                        start_date: 
                           type: string
                           format: date
                         supervisor:
                           type: integer
+                        supervisor_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                       errors:
                         type: object
                         nullable: true
@@ -42,17 +67,24 @@ post:
                       success_message:
                         type: string
                         nullable: true
-
-              required:
-                - party
-                - company
               example:
                 data:
                   company: 2
+                  company_:
+                    id: 2
+                    name: Party 1
                   end_date: '2024-02-13'
+                  id: 5
                   party: 1
+                  party_:
+                    id: 1
+                    name: Party 1
+                  rec_name: Party 1
                   start_date: '2024-02-01'
-                  supervisor: 5
+                  supervisor: 5 
+                  supervisor_: 
+                    id: 5
+                    name: Party 1
                 error: null
                 pagination: null
                 status: 200
