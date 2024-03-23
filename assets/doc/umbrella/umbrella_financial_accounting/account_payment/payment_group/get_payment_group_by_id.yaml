@@ -20,7 +20,7 @@ get:
                   type: object
                   properties:
                     data:
-                      type: array
+                      type: object
                       properties:
                         company: 
                           type: integer
