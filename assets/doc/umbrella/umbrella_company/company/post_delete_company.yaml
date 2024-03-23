@@ -20,17 +20,26 @@ post:
                     properties:
                       data:
                         currency:
-                        type: integer
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
                         employees:
                           type: array 
                           properties:
                             company:
                               type: integer
                             company_:
-                              id:
-                                type: integer
-                              name:
-                                type: string
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
                             end_date:
                               type: string
                               format: date
@@ -43,6 +52,8 @@ post:
                                 type: integer
                               name:
                                 type: string
+                            rec_name:
+                              type: string
                             start_date:
                               type: string
                               format: date
@@ -50,6 +61,10 @@ post:
                               type: integer
                             supervisor_:
                               type: object
+                        footer: 
+                          type: string
+                        header: 
+                          type: string
                         id:
                           type: integer
                         party:
@@ -63,12 +78,14 @@ post:
                           type: integer
                         payable_today:
                           type: integer
+                        rec_name: 
+                          type: string
                         receivable:
                           type: integer
                         receivable_today:
                           type: integer
                         timezone:
-                          type: string  
+                          type: string 
                       errors:
                         type: object
                         nullable: true
@@ -80,34 +97,40 @@ post:
                       success_message:
                         type: string
                         nullable: true
-
-              required:
-                - currency
-                - party
-
               example:
                 data:
                   currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
                   employees:
-                  - company: 13
+                  - company: 1
                     company_:
-                      id: 13
-                      name: Party 1
-                    end_date: '2024-02-13'
-                    id: 13
-                    party: 1
-                    party_:
                       id: 1
                       name: Party 1
+                    end_date: '2024-02-29'
+                    id: 2
+                    party: 24
+                    party_:
+                      id: 24
+                      name: 'Party 13'
+                    rec_name: Party 1
                     start_date: '2024-02-01'
                     supervisor: 
                     supervisor_: {}
-                  id: 13
-                  party: 3
+                  footer: ''
+                  header: ''
+                  id: 1
+                  party: 1
                   party_:
-                    id: 3
-                    name: Party 1
-                  timezone: null
+                    id: 1
+                    name: 'Party 1'
+                  payable: 0
+                  payable_today: 0
+                  rec_name: Party 1
+                  receivable: 0
+                  receivable_today: 0
+                  timezone: 'Asia/Kabul'
                 error: null
                 pagination: null
                 status: 200
