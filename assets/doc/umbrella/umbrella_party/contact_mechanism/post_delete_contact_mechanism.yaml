@@ -37,7 +37,7 @@ post:
                         id:
                           type: integer
                         language:
-                          type: string
+                          type: integer
                         name: 
                           type: string
                         party:
@@ -49,12 +49,14 @@ post:
                               type: integer
                             name:
                               type: string
+                        rec_name:
+                          type: string
                         sequence:
                           type: integer
                         type:
                           type: string
                         value:
-                          type: string 
+                          type: string  
                     errors:
                       type: object
                     pagination:
@@ -78,15 +80,16 @@ post:
                   id: 2
                   name: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
                 comment: "information about contact name"
-                language: "en"
-                name: "ctm1"
+                language: 1
+                name: ahmad
                 party: 1
                 party_:
                     "id": 1
                     "name": "Party 1"
+                rec_name: ahmad <123>
                 sequence: 1
-                type: "phone"
-                value: "8888"
+                type: phone
+                value: '8888'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
