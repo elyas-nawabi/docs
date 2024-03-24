@@ -9,42 +9,58 @@
           type: string
         members:
           type: array
+          properties:
+              from_date: 
+                type: string
+                format: date
+              organization:
+                type: integer
+              rec_name: 
+                type: string
+              to_date: 
+                type: string
+                format: date
         name:
+          type: string
+        rec_name: 
           type: string
         region:
           type: integer
         subdivisions:
           type: array
           properties:
-          - active:
+            active:
               type: boolean
             code:
               type: string
-            id:
-              type: integer
             name:
               type: string
             parent: 
               type: integer
-            parent_:
-              type: object
+            rec_name: 
+              type: string
             type:
               type: string
       required:
         - name
         
       example:
-          active: true
-          code: '3'
-          code3: '103'
-          code_numeric: '10003'
-          members: []
-          name: Asia
-          region: 5
-          subdivisions:
-          - active: true
-            code: '10001'
-            id: 5
-            name: sbd1
-            parent: 1
-            type: city
+        active: true
+        code: '1'
+        code3: '101'
+        code_numeric: '10001'
+        members:
+        - from_date: '2024-02-15'
+          organization: 20
+          rec_name: '5'
+          to_date: '2024-02-20'
+        name: Afghanistan
+        rec_name: "Afghanistan"
+        region: 34
+        subdivisions:
+        - active: true
+          code: '10001'
+          name: sbd1
+          parent: 
+          rec_name: sbd1
+          type: city

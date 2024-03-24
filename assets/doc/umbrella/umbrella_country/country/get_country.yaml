@@ -22,10 +22,27 @@
                     data:
                       type: array
                       properties:
-                        id:
+                        code:
+                          type: string
+                        code3:
+                          type: string
+                        code_numeric: 
+                          type: string
+                        id: 
                           type: integer
                         name:
                           type: string
+                        rec_name: 
+                          type: string
+                        region: 
+                          type: integer
+                        region_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                     errors:
                       type: object
                       nullable: true
@@ -47,8 +64,16 @@
                       nullable: true
               example:
                 data:
-                - id: 1
-                  name: "Afghanistan"
+                - code: '1'
+                  code3: '101'
+                  code_numeric: '10001'
+                  id: 1
+                  name: Afghanistan
+                  rec_name: "Afghanistan"
+                  region: 34
+                  region_:
+                    id: 34
+                    name: kabul
                 error: null
                 pagination:
                   page: 1
