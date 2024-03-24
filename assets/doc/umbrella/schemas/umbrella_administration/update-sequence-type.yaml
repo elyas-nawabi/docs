@@ -1,14 +1,25 @@
       properties:
-          groups:
-            type: array
-            description: "put an array of numbers inside square brackets (e.g: [1,2])"
-          id: 
-            type: integer
-          name:
-            type: string  
+        groups:
+          type: array
+          properties:
+            name: 
+              type: string
+            parent:
+              type: integer
+              nullable: true
+            rec_name:  
+              type: string
+        name: 
+          type: string
+        rec_name: 
+          type: string
+  
       required:
           - name
       example:
-        groups: [1]
-        id: 7
-        name: seq1
+        groups:
+          - name: "Administration"
+            parent: null
+            rec_name: Administration
+        name: "Administration"
+        rec_name: Administration

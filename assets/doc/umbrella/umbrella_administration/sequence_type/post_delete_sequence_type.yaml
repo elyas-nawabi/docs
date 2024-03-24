@@ -24,17 +24,22 @@ post:
                         groups:
                           type: array
                           properties:
-                            id: 
+                            id:
                               type: integer
-                            name:
+                            name: 
                               type: string
                             parent:
                               type: integer
-                            parent_:
+                              nullable: true
+                            parent_:  
                               type: object
-                        id: 
+                            rec_name:  
+                              type: string
+                        id:
                           type: integer
-                        name:
+                        name: 
+                          type: string
+                        rec_name: 
                           type: string
                     errors:
                       type: object
@@ -53,11 +58,13 @@ post:
                 data:
                   groups:
                     - id: 1
-                      name: Administration
+                      name: "Administration"
                       parent: null
                       parent_: {}
-                  id: 7
-                  name: seq1
+                      rec_name: Administration
+                  id: 1
+                  name: "Administration"
+                  rec_name: Administration
                 errors: null
                 pagination: null
                 status: 201
