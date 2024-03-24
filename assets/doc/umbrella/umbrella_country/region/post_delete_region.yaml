@@ -21,19 +21,39 @@ post:
                       data:
                         code_numeric:
                           type: string
+                        id: 
+                          type: integer
                         name:
                           type: string
                         parent:
                           type: integer
+                        parent_:
+                          id:
+                            type: integer
+                          name:
+                            type: string
+                        rec_name:
+                          type: string
                         subregions:
                           type: array
                           properties:
                             code_numeric:
                               type: string
-                            name: 
+                            id:
+                              type: integer
+                            name:
                               type: string
                             parent:
                               type: integer
+                            parent_:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                            rec_name: 
+                              type: string
                             subregions:
                               type: array
                       errors:
@@ -47,18 +67,26 @@ post:
                       success_message:
                         type: string
                         nullable: true
-
-              required:
-                - name
+              
               example:
                 data:
-                  code_numeric: '190'
-                  name: NewCountry
+                  code_numeric: '002'
+                  id: 2
+                  name: Africa
                   parent: 1
+                  parent_:
+                    id: 1
+                    name: World
+                  rec_name: World
                   subregions:
                   - code_numeric: '015'
+                    id: 8
                     name: Northern Africa
                     parent: 2
+                    parent_:
+                      id: 2
+                      name: Africa
+                    rec_name: World
                     subregions: []
                 error: null
                 pagination: null
