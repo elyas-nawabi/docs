@@ -28,6 +28,8 @@
                           type: integer
                         name: 
                           type: string
+                        rec_name:
+                          type: string
                     errors:
                       type: object
                     pagination:
@@ -51,6 +53,7 @@
                 - code: EU
                   id: 1
                   name: European Union
+                  rec_name: South Asian Free Trade Area3
                 error: null
                 pagination:
                   page: 1
