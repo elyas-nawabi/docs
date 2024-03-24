@@ -43,13 +43,17 @@
                         type: string
                       preview:
                         type: string
+                      rec_name:
+                        type: string
                       sequence_type:
                         type: integer
                       sequence_type_:
-                        id:
-                          type: integer
-                        name:
-                          type: string
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                          name:
+                            type: string
                       suffix:
                         type: string
                       type:
@@ -68,23 +72,22 @@
               example:
                 data:
                   active: true
-                  company: 1
-                  company_:
-                    id: 1
-                    name: 'Party 1'
-                  id: 4
-                  name: '2024'
+                  company: 
+                  company_: {}
+                  id: 1
+                  name: Party
                   number_increment: 1
-                  number_next: 1
+                  number_next: 4
                   padding: 0
-                  prefix: ''
-                  preview: '1'
-                  sequence_type: 3
+                  prefix: 
+                  preview: '4'
+                  rec_name: Party
+                  sequence_type: 1
                   sequence_type_:
-                    id: 3
-                    name: 'Account Move'
-                  suffix: ''
-                  type: 'incremental'
+                    id: 1
+                    name: Party
+                  suffix: 
+                  type: incremental
                 error: null
                 pagination: null
                 status: 200
@@ -156,13 +159,17 @@
                       type: string
                     preview:
                       type: string
+                    rec_name:
+                      type: string
                     sequence_type:
                       type: integer
                     sequence_type_:
-                      id:
-                        type: integer
-                      name:
-                        type: string
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        name:
+                          type: string
                     suffix:
                       type: string
                     type:
@@ -190,23 +197,22 @@
               example:
                 data:
                   active: true
-                  company: 1
-                  company_:
-                    id: 1
-                    name: 'Party 1'
-                  id: 4
-                  name: '2024'
+                  company: 
+                  company_: {}
+                  id: 1
+                  name: Party
                   number_increment: 1
-                  number_next: 1
+                  number_next: 4
                   padding: 0
-                  prefix: ''
-                  preview: '1'
-                  sequence_type: 3
+                  prefix: 
+                  preview: '4'
+                  rec_name: Party
+                  sequence_type: 1
                   sequence_type_:
-                    id: 3
-                    name: 'Account Move'
-                  suffix: ''
-                  type: 'incremental'
+                    id: 1
+                    name: Party
+                  suffix: 
+                  type: incremental
                 error: null
                 pagination: null
                 status: 200

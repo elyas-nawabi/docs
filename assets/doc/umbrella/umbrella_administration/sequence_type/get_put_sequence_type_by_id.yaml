@@ -34,9 +34,13 @@
                               nullable: true
                             parent_:  
                               type: object
+                            rec_name:  
+                              type: string
                         id:
                           type: integer
                         name: 
+                          type: string
+                        rec_name: 
                           type: string
                     error: 
                       type: string
@@ -53,7 +57,11 @@
                     - id: 1
                       name: "Administration"
                       parent: null
-                      parent_: {} 
+                      parent_: {}
+                      rec_name: Administration
+                  id: 1
+                  name: "Administration"
+                  rec_name: Administration
                 error: null
                 pagination: null
                 status: 200
@@ -103,21 +111,26 @@
                   properties:
                     data:
                       properties:
-                        groups:
+                         groups:
                           type: array
                           properties:
-                            id: 
+                            id:
                               type: integer
-                            name:
+                            name: 
                               type: string
                             parent:
                               type: integer
-                            parent_:
+                              nullable: true
+                            parent_:  
                               type: object
-                        id: 
-                          type: integer
-                        name:
-                          type: string
+                            rec_name:  
+                              type: string
+                         id:
+                           type: integer
+                         name: 
+                           type: string
+                         rec_name: 
+                           type: string
                     errors:
                       type: object
                       nullable: true
@@ -134,11 +147,13 @@
                 data:
                   groups:
                     - id: 1
-                      name: Administration
+                      name: "Administration"
                       parent: null
                       parent_: {}
-                  id: 7
-                  name: seq1
+                      rec_name: Administration
+                  id: 1
+                  name: "Administration"
+                  rec_name: Administration
                 errors: null
                 pagination: null
                 status: 201

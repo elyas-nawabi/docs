@@ -29,10 +29,14 @@
                       parent:
                         type: integer
                       parent_:
-                        id:
-                          type: integer
-                        name:
-                          type: string
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                          name:
+                            type: string
+                      rec_name:
+                        type: string
                       subregions:
                         type: array
                         properties:
@@ -51,6 +55,8 @@
                                 type: integer
                               name:
                                 type: string
+                          rec_name:
+                            type: string
                           subregions:
                             type: array
                     errors:
@@ -73,6 +79,7 @@
                   parent_:
                     id: 1
                     name: World
+                  rec_name: World
                   subregions:
                   - code_numeric: '015'
                     id: 8
@@ -81,6 +88,7 @@
                     parent_:
                       id: 2
                       name: Africa
+                    rec_name: World
                     subregions: []
                 error: null
                 pagination: null
@@ -143,6 +151,8 @@
                         type: integer
                       name:
                         type: string
+                    rec_name:
+                      type: string
                     subregions:
                       type: array
                       properties:
@@ -161,6 +171,8 @@
                               type: integer
                             name:
                               type: string
+                        rec_name: 
+                          type: string
                         subregions:
                           type: array
                   errors:
@@ -183,6 +195,7 @@
                   parent_:
                     id: 1
                     name: World
+                  rec_name: World
                   subregions:
                   - code_numeric: '015'
                     id: 8
@@ -191,6 +204,7 @@
                     parent_:
                       id: 2
                       name: Africa
+                    rec_name: World
                     subregions: []
                 error: null
                 pagination: null

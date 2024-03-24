@@ -26,6 +26,8 @@
                           type: integer
                         name:
                           type: string
+                        rec_name:
+                          type: string
                     errors:
                       type: object
                     pagination:
@@ -47,6 +49,7 @@
                 data:
                   - id: 1
                     name: "Account Journal"
+                    rec_name: "Account Journal"
                 errors: null
                 pagination:
                   page: 1
