@@ -1,26 +1,28 @@
       properties:
-          active:
-            type: boolean
-          company:
-            type: integer
-          name:
-            type: string
-          number_increment:
-            type: integer
-          number_next:
-            type: integer
-          padding:
-            type: integer
-          prefix:
-            type: string
-          preview:
-            type: string
-          sequence_type:
-            type: integer
-          suffix:
-            type: string
-          type:
-            type: string
+        active:
+          type: boolean
+        company:
+          type: integer
+        name:
+          type: string
+        number_increment:
+          type: integer
+        number_next:
+          type: integer
+        padding:
+          type: integer
+        prefix:
+          type: string
+        preview:
+          type: string
+        rec_name:
+          type: string
+        sequence_type:
+          type: integer
+        suffix:
+          type: string
+        type:
+          type: string
   
       required:
           - name
