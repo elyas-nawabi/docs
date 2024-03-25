@@ -1,0 +1,233 @@
+properties:
+  account: 
+    type: integer
+  accounting_date:
+    type: string
+    format: date
+  allow_cancel:
+    type: boolean
+  amount_to_pay: 
+    type: integer
+  amount_to_pay_today: 
+    type: integer
+  cancel_move:
+    type: integer 
+  comment: 
+    type: string
+  company: 
+    type: integer
+  company_party: 
+    type: integer
+  consolidation_company: 
+    type: integer
+  currency: 
+    type: integer
+  currency_date:
+    type: string
+    format: date
+  description:
+    type: string
+  has_payment_method:
+    type: boolean
+  has_report_cache: 
+    type: boolean
+  id: 
+    type: integer
+  invoice_address: 
+    type: integer
+  invoice_date: 
+    type: string
+    format: date
+  journal: 
+    type: integer
+  lines:
+    type: array
+    properties:
+      account: 
+        type: integer
+      properties:
+        name: 
+          type: string
+      amount: 
+        type: integer
+      company: 
+        type: integer
+      currency: 
+        type: integer
+      description: 
+        type: string
+      invoice: 
+        type: integer
+      invoice_description: 
+        type: string
+      invoice_party: 
+        type: integer
+      invoice_state: 
+        type: string
+      invoice_type: 
+        type: string
+      note: 
+        type: string
+      origin:
+        type: string 
+      party: 
+        type: integer
+      party_lang: 
+        type: string
+      product: 
+        type: integer
+      product_uom_category: 
+        type: integer
+      quantity: 
+        type: integer
+      rec_name: 
+        type: string
+      summary: 
+        type: string
+      taxes: 
+        type: array
+      taxes_date: 
+        type: string
+        format: date
+      taxes_deductible_rate: 
+        type: integer
+      type: 
+        type: string
+      unit:
+        type: integer
+      unit_price: 
+        type: integer
+  lines_to_pay: 
+    type: array
+  move: 
+    type: integer
+  number: 
+    type: string
+  origins: 
+    type: string
+  party: 
+    type: integer
+  party_lang: 
+    type: string
+  party_tax_identifier: 
+    type: string
+  payment_lines:
+    type: array
+  payment_term: 
+    type: integer
+  payment_term_date:
+    type: string
+    format: date
+  posted_by: 
+    type: integer
+  rec_name: 
+    type: string
+  reconciled: 
+    type: boolean
+  reconciliation_lines:
+    type: string
+  reference: 
+    type: string
+  sequence: 
+    type: integer
+  state: 
+    type: string
+  tax_amount: 
+    type: integer
+  tax_amount_cache: 
+    type: number
+    format: decimal
+  tax_identifier: 
+    type: integer
+  taxes: 
+    type: array
+  total_amount: 
+    type: integer
+  total_amount_cache:
+    type: number
+    format: decimal 
+  type: 
+    type: string
+  type_name: 
+    type: string
+  untaxed_amount: 
+    type: integer
+  untaxed_amount_cache: 
+    type: number
+    format: decimal
+  validated_by:
+    type: integer 
+required:
+  -
+example:
+  account: 5
+  accounting_date: '2024-03-18'
+  allow_cancel: true
+  amount_to_pay: 0
+  amount_to_pay_today: 0
+  cancel_move: 
+  comment: ''
+  company: 1
+  company_party: 3
+  consolidation_company: 2
+  currency: 1
+  currency_date: '2024-03-25'
+  description: this is some description
+  has_payment_method: true
+  has_report_cache: false
+  invoice_address: 3
+  invoice_date: '2024-03-25'
+  journal: 1
+  lines:
+  - account: 31
+    amount: 1
+    company: 1
+    currency: 1
+    description: ''
+    invoice: 2
+    invoice_description: this is some description
+    invoice_party: 1
+    invoice_state: draft
+    invoice_type: out
+    note: ''
+    origin: 
+    party: 
+    party_lang: en
+    product: 1
+    product_uom_category: 8
+    quantity: 1
+    rec_name: 1.00 AFN [11] 1 @ [1]
+    summary: ''
+    taxes_date: '2024-03-25'
+    taxes_deductible_rate: 1
+    type: line
+    unit: 36
+    unit_price: 1
+  lines_to_pay: []
+  move: 
+  number: 
+  origins: ''
+  party: 1
+  party_lang: en
+  party_tax_identifier: 
+  payment_lines: []
+  payment_term: 1
+  payment_term_date: '2024-03-18'
+  posted_by: 
+  rec_name: "[1]"
+  reconciled: 
+  reconciliation_lines: []
+  reference: '1'
+  sequence: 
+  state: draft
+  tax_amount: 0
+  tax_amount_cache: 
+  tax_identifier: 
+  taxes: []
+  total_amount: 1
+  total_amount_cache: 
+  type: out
+  type_name: Customer
+  untaxed_amount: 1
+  untaxed_amount_cache: 
+  validated_by: 

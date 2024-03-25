@@ -1,0 +1,1041 @@
+get:
+      tags:
+        - invoice
+      summary: Get one invoice.
+      description: Get one invoice.
+      operationId: getInvoiceById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 2
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        account: 
+                          type: integer
+                        account_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        accounting_date:
+                          type: string
+                          format: date
+                        allow_cancel:
+                          type: boolean
+                        amount_to_pay: 
+                          type: integer
+                        amount_to_pay_today: 
+                          type: integer
+                        cancel_move:
+                          type: integer 
+                        cancel_move_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        comment: 
+                          type: string
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        company_party: 
+                          type: integer
+                        company_party_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        consolidation_company: 
+                          type: integer
+                        consolidation_company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        currency_date:
+                          type: string
+                          format: date
+                        description:
+                          type: string
+                        has_payment_method:
+                          type: boolean
+                        has_report_cache: 
+                          type: boolean
+                        id: 
+                          type: integer
+                        invoice_address: 
+                          type: integer
+                        invoice_address_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        invoice_date: 
+                          type: string
+                          format: date
+                        journal: 
+                          type: integer
+                        journal_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        lines:
+                          type: array
+                          properties:
+                            account: 
+                              type: integer
+                            account_:
+                              type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name: 
+                                type: string
+                            amount: 
+                              type: integer
+                            company: 
+                              type: integer
+                            company_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            currency: 
+                              type: integer
+                            currency_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            description: 
+                              type: string
+                            id: 
+                              type: integer
+                            invoice: 
+                              type: integer
+                            invoice_description: 
+                              type: string
+                            invoice_party: 
+                              type: integer
+                            invoice_party_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            invoice_state: 
+                              type: string
+                            invoice_type: 
+                              type: string
+                            note: 
+                              type: string
+                            origin:
+                              type: string 
+                            origin_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            party: 
+                              type: integer
+                            party_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            party_lang: 
+                              type: string
+                            product: 
+                              type: integer
+                            product_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            product_uom_category: 
+                              type: integer
+                            product_uom_category_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            quantity: 
+                              type: integer
+                            rec_name: 
+                              type: string
+                            summary: 
+                              type: string
+                            taxes: 
+                              type: array
+                            taxes_date: 
+                              type: string
+                              format: date
+                            taxes_deductible_rate: 
+                              type: integer
+                            type: 
+                              type: string
+                            unit:
+                              type: integer
+                            unit_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            unit_price: 
+                              type: integer
+                        lines_to_pay: 
+                          type: array
+                        move: 
+                          type: integer
+                        move_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        number: 
+                          type: string
+                        origins: 
+                          type: string
+                        party: 
+                          type: integer
+                        party_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        party_lang: 
+                          type: string
+                        party_tax_identifier: 
+                          type: string
+                        party_tax_identifier_: 
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        payment_lines:
+                          type: array
+                        payment_term: 
+                          type: integer
+                        payment_term_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        payment_term_date:
+                          type: string
+                          format: date
+                        posted_by: 
+                          type: integer
+                        posted_by_: 
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        rec_name: 
+                          type: string
+                        reconciled: 
+                          type: boolean
+                        reconciliation_lines:
+                          type: string
+                        reference: 
+                          type: string
+                        sequence: 
+                          type: integer
+                        state: 
+                          type: string
+                        tax_amount: 
+                          type: integer
+                        tax_amount_cache: 
+                          type: number
+                          format: decimal
+                        tax_identifier: 
+                          type: integer
+                        tax_identifier_: 
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        taxes: 
+                          type: array
+                        total_amount: 
+                          type: integer
+                        total_amount_cache:
+                          type: number
+                          format: decimal 
+                        type: 
+                          type: string
+                        type_name: 
+                          type: string
+                        untaxed_amount: 
+                          type: integer
+                        untaxed_amount_cache: 
+                          type: number
+                          format: decimal
+                        validated_by:
+                          type: integer 
+                        validated_by_: 
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                    errors:
+                      type: object
+                    pagination:
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  account: 5
+                  account_:
+                    id: 5
+                    name: Main Receivable
+                  accounting_date: '2024-03-18'
+                  allow_cancel: true
+                  amount_to_pay: 0
+                  amount_to_pay_today: 0
+                  cancel_move: 
+                  cancel_move_: {}
+                  comment: ''
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  company_party: 3
+                  company_party_:
+                    id: 3
+                    name: Party 1
+                  consolidation_company: 2
+                  consolidation_company_:
+                    id: 2
+                    name: Party 1
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  currency_date: '2024-03-25'
+                  description: this is some description
+                  has_payment_method: true
+                  has_report_cache: false
+                  id: 2
+                  invoice_address: 3
+                  invoice_address_:
+                    id: 3
+                    name: prt2, herat tower, street 2, 1002, Herat, 1
+                  invoice_date: '2024-03-25'
+                  journal: 1
+                  journal_:
+                    id: 1
+                    name: Revenue
+                  lines:
+                  - account: 31
+                    account_:
+                      id: 31
+                      name: 1 - 1
+                    amount: 1
+                    company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    description: ''
+                    id: 2
+                    invoice: 2
+                    invoice_description: this is some description
+                    invoice_party: 1
+                    invoice_party_:
+                      id: 1
+                      name: Party 1
+                    invoice_state: draft
+                    invoice_type: out
+                    note: ''
+                    origin: 
+                    origin_: {}
+                    party: 
+                    party_: {}
+                    party_lang: en
+                    product: 1
+                    product_:
+                      id: 1
+                      name: "[11] 1"
+                    product_uom_category: 8
+                    product_uom_category_:
+                      id: 8
+                      name: '1'
+                    quantity: 1
+                    rec_name: 1.00 AFN [11] 1 @ [1]
+                    summary: ''
+                    taxes: []
+                    taxes_date: '2024-03-25'
+                    taxes_deductible_rate: 1
+                    type: line
+                    unit: 36
+                    unit_:
+                      id: 36
+                      name: '1'
+                    unit_price: 1
+                  lines_to_pay: []
+                  move: 
+                  move_: {}
+                  number: 
+                  origins: ''
+                  party: 1
+                  party_:
+                    id: 1
+                    name: Party 1
+                  party_lang: en
+                  party_tax_identifier: 
+                  party_tax_identifier_: {}
+                  payment_lines: []
+                  payment_term: 1
+                  payment_term_:
+                    id: 1
+                    name: paymentTerm1
+                  payment_term_date: '2024-03-18'
+                  posted_by: 
+                  posted_by_: {}
+                  rec_name: "[1]"
+                  reconciled: 
+                  reconciliation_lines: []
+                  reference: '1'
+                  sequence: 
+                  state: draft
+                  tax_amount: 0
+                  tax_amount_cache: 
+                  tax_identifier: 
+                  tax_identifier_: {}
+                  taxes: []
+                  total_amount: 1
+                  total_amount_cache: 
+                  type: out
+                  type_name: Customer
+                  untaxed_amount: 1
+                  untaxed_amount_cache: 
+                  validated_by: 
+                  validated_by_: {}
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+
+put:
+      tags:
+        - invoice
+      summary: Update an invoice.
+      description: Update an invoice.
+      operationId: updateInvoiceById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/UpdateInvoice'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        account: 
+                          type: integer
+                        account_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        accounting_date:
+                          type: string
+                          format: date
+                        allow_cancel:
+                          type: boolean
+                        amount_to_pay: 
+                          type: integer
+                        amount_to_pay_today: 
+                          type: integer
+                        cancel_move:
+                          type: integer 
+                        cancel_move_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        comment: 
+                          type: string
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        company_party: 
+                          type: integer
+                        company_party_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        consolidation_company: 
+                          type: integer
+                        consolidation_company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        currency_date:
+                          type: string
+                          format: date
+                        description:
+                          type: string
+                        has_payment_method:
+                          type: boolean
+                        has_report_cache: 
+                          type: boolean
+                        id: 
+                          type: integer
+                        invoice_address: 
+                          type: integer
+                        invoice_address_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        invoice_date: 
+                          type: string
+                          format: date
+                        journal: 
+                          type: integer
+                        journal_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        lines:
+                          type: array
+                          properties:
+                            account: 
+                              type: integer
+                            account_:
+                              type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name: 
+                                type: string
+                            amount: 
+                              type: integer
+                            company: 
+                              type: integer
+                            company_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            currency: 
+                              type: integer
+                            currency_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            description: 
+                              type: string
+                            id: 
+                              type: integer
+                            invoice: 
+                              type: integer
+                            invoice_description: 
+                              type: string
+                            invoice_party: 
+                              type: integer
+                            invoice_party_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            invoice_state: 
+                              type: string
+                            invoice_type: 
+                              type: string
+                            note: 
+                              type: string
+                            origin:
+                              type: string 
+                            origin_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            party: 
+                              type: integer
+                            party_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            party_lang: 
+                              type: string
+                            product: 
+                              type: integer
+                            product_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            product_uom_category: 
+                              type: integer
+                            product_uom_category_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            quantity: 
+                              type: integer
+                            rec_name: 
+                              type: string
+                            summary: 
+                              type: string
+                            taxes: 
+                              type: array
+                            taxes_date: 
+                              type: string
+                              format: date
+                            taxes_deductible_rate: 
+                              type: integer
+                            type: 
+                              type: string
+                            unit:
+                              type: integer
+                            unit_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            unit_price: 
+                              type: integer
+                        lines_to_pay: 
+                          type: array
+                        move: 
+                          type: integer
+                        move_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        number: 
+                          type: string
+                        origins: 
+                          type: string
+                        party: 
+                          type: integer
+                        party_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        party_lang: 
+                          type: string
+                        party_tax_identifier: 
+                          type: string
+                        party_tax_identifier_: 
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        payment_lines:
+                          type: array
+                        payment_term: 
+                          type: integer
+                        payment_term_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        payment_term_date:
+                          type: string
+                          format: date
+                        posted_by: 
+                          type: integer
+                        posted_by_: 
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        rec_name: 
+                          type: string
+                        reconciled: 
+                          type: boolean
+                        reconciliation_lines:
+                          type: string
+                        reference: 
+                          type: string
+                        sequence: 
+                          type: integer
+                        state: 
+                          type: string
+                        tax_amount: 
+                          type: integer
+                        tax_amount_cache: 
+                          type: number
+                          format: decimal
+                        tax_identifier: 
+                          type: integer
+                        tax_identifier_: 
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        taxes: 
+                          type: array
+                        total_amount: 
+                          type: integer
+                        total_amount_cache:
+                          type: number
+                          format: decimal 
+                        type: 
+                          type: string
+                        type_name: 
+                          type: string
+                        untaxed_amount: 
+                          type: integer
+                        untaxed_amount_cache: 
+                          type: number
+                          format: decimal
+                        validated_by:
+                          type: integer 
+                        validated_by_: 
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                    errors:
+                      type: object
+                    pagination:
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  account: 5
+                  account_:
+                    id: 5
+                    name: Main Receivable
+                  accounting_date: '2024-03-18'
+                  allow_cancel: true
+                  amount_to_pay: 0
+                  amount_to_pay_today: 0
+                  cancel_move: 
+                  cancel_move_: {}
+                  comment: ''
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  company_party: 3
+                  company_party_:
+                    id: 3
+                    name: Party 1
+                  consolidation_company: 2
+                  consolidation_company_:
+                    id: 2
+                    name: Party 1
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  currency_date: '2024-03-25'
+                  description: this is some description
+                  has_payment_method: true
+                  has_report_cache: false
+                  id: 2
+                  invoice_address: 3
+                  invoice_address_:
+                    id: 3
+                    name: prt2, herat tower, street 2, 1002, Herat, 1
+                  invoice_date: '2024-03-25'
+                  journal: 1
+                  journal_:
+                    id: 1
+                    name: Revenue
+                  lines:
+                  - account: 31
+                    account_:
+                      id: 31
+                      name: 1 - 1
+                    amount: 1
+                    company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    description: ''
+                    id: 2
+                    invoice: 2
+                    invoice_description: this is some description
+                    invoice_party: 1
+                    invoice_party_:
+                      id: 1
+                      name: Party 1
+                    invoice_state: draft
+                    invoice_type: out
+                    note: ''
+                    origin: 
+                    origin_: {}
+                    party: 
+                    party_: {}
+                    party_lang: en
+                    product: 1
+                    product_:
+                      id: 1
+                      name: "[11] 1"
+                    product_uom_category: 8
+                    product_uom_category_:
+                      id: 8
+                      name: '1'
+                    quantity: 1
+                    rec_name: 1.00 AFN [11] 1 @ [1]
+                    summary: ''
+                    taxes: []
+                    taxes_date: '2024-03-25'
+                    taxes_deductible_rate: 1
+                    type: line
+                    unit: 36
+                    unit_:
+                      id: 36
+                      name: '1'
+                    unit_price: 1
+                  lines_to_pay: []
+                  move: 
+                  move_: {}
+                  number: 
+                  origins: ''
+                  party: 1
+                  party_:
+                    id: 1
+                    name: Party 1
+                  party_lang: en
+                  party_tax_identifier: 
+                  party_tax_identifier_: {}
+                  payment_lines: []
+                  payment_term: 1
+                  payment_term_:
+                    id: 1
+                    name: paymentTerm1
+                  payment_term_date: '2024-03-18'
+                  posted_by: 
+                  posted_by_: {}
+                  rec_name: "[1]"
+                  reconciled: 
+                  reconciliation_lines: []
+                  reference: '1'
+                  sequence: 
+                  state: draft
+                  tax_amount: 0
+                  tax_amount_cache: 
+                  tax_identifier: 
+                  tax_identifier_: {}
+                  taxes: []
+                  total_amount: 1
+                  total_amount_cache: 
+                  type: out
+                  type_name: Customer
+                  untaxed_amount: 1
+                  untaxed_amount_cache: 
+                  validated_by: 
+                  validated_by_: {}
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    

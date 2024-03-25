@@ -1,0 +1,26 @@
+openapi: 3.1.0
+info:
+  description: >
+  contact:
+    name: API Support
+    email: shadab@gmail.com
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: invoice
+    description: invoice - invoice data management.
+paths:
+  '/financial-accounting/invoices/search':
+    $ref: 'get_invoice.yaml'
+  '/financial-accounting/invoices':
+    $ref: 'post_delete_invoice.yaml'
+  '/financial-accounting/invoices/{obj_id}':
+    $ref: 'get_put_invoice_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/draft':
+    $ref: 'draft_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/validate':
+    $ref: 'validate_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/post':
+    $ref: 'post_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/cancel':
+    $ref: 'cancel_by_id.yaml'
