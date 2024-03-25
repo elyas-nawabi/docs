@@ -158,7 +158,13 @@ properties:
   validated_by:
     type: integer 
 required:
-  -
+  - account
+  - company
+  - currency
+  - invoice_address
+  - party
+  - state 
+  - type
 example:
   account: 5
   accounting_date: '2024-03-18'
