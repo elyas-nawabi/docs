@@ -278,6 +278,13 @@ put:
                       properties:
                         company:
                           type: integer
+                        company_:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                              name:
+                                type: string
                         date:
                           type: string
                           format: date
@@ -365,6 +372,9 @@ put:
               example:
                 data:
                   company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
                   date: '2026-01-27'
                   description: some description here
                   journal: 13

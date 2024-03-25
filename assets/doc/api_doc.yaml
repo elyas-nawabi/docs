@@ -356,6 +356,10 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-test.yaml'
     UpdatePaymentTerm:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-payment-term.yaml'
+    CreateInvoice:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-invoice.yaml'
+    UpdateInvoice:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-invoice.yaml'
 
     # get with filters feature
     Filter:
