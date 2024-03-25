@@ -68,4 +68,6 @@ paths:
     $ref: 'post_delete_account_move.yaml'
   '/financial-accounting/account-moves/{obj_id}':
     $ref: 'get_put_account_move_by_id.yaml'
+  '/financial-accounting/account-moves/{obj_id}/post':
+    $ref: 'post_account_move_by_id.yaml'
   
