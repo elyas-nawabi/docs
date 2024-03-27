@@ -360,6 +360,12 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-invoice.yaml'
     UpdateInvoice:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-invoice.yaml'
+    ReconcileExecute:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/reconcile-execute.yaml'
+    ReconcileSkip:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/reconcile-skip.yaml'
+    ReconcileLine:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/reconcile-line.yaml'
 
     # get with filters feature
     Filter:
