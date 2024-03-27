@@ -1,9 +1,9 @@
     post:
       tags:
-        - payment method
-      summary: Get list of payment methods.
-      description: Get list of payment methods.
-      operationId: getPaymentMethods
+        - invoice
+      summary: Get list of invoices.
+      description: Get list of invoices.
+      operationId: getInvoices
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
