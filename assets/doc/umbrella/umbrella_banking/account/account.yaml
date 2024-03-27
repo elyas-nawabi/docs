@@ -1,0 +1,71 @@
+openapi: 3.1.0
+info:
+  description: >
+    ## UMBRELLA API Documentation Description:
+
+    Welcome to the official documentation for the UMBRELLA RESTful API. 
+
+    This comprehensive guide is designed to assist developers and integrators, 
+
+    in effectively utilizing the power of our API.
+
+    Our RESTful API provides:
+
+    A simple and efficient way to access and interact 
+
+    with, currencies, finances ....... 
+
+    Whether you're building 
+
+    a web application, mobile app, or integrating 
+
+    with other services, our API offers the tools 
+
+    you need to streamline your development process 
+
+    and unlock the full potential of your project.
+
+    In this documentation, you'll find detailed 
+
+    information on how to make API requests, 
+
+    authentication procedures, available endpoints, 
+
+    request/response examples, error handling, 
+
+    and best practices for integrating UMBRELLA
+
+    into your projects.
+
+
+    ## Authorization:
+
+    You can authorize your requests using this authorization method:
+
+    - TOKEN
+
+
+    ## TOKEN
+
+    - The endpoints are authorized using a TOKEN.
+
+    - To authorize requests, please add a Token using the 'Authorize' button
+    with the following format:
+      ### "Bearer user-token"
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: shadab@gmail.com
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: account
+    description: account - account data management.
+paths:
+  '/banking/accounts/search':
+    $ref: 'get_account.yaml'
+  '/banking/accounts':
+    $ref: 'post_delete_account.yaml'
+  '/banking/accounts/{obj_id}':
+    $ref: 'get_put_account_by_id.yaml'
+  
