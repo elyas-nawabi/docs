@@ -24,3 +24,9 @@ paths:
     $ref: 'post_by_id.yaml'
   '/financial-accounting/invoices/{obj_id}/cancel':
     $ref: 'cancel_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/recall-deposit':
+    $ref: 'recall_deposit_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/process':
+    $ref: 'process_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/pay':
+    $ref: 'pay_by_id.yaml'
