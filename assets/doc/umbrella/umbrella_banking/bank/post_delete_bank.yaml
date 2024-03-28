@@ -19,7 +19,23 @@ post:
               schema:
                     properties:
                       data:
-                        
+                        type: object
+                        properties:
+                          bic:
+                            type: string
+                          id: 
+                            type: integer
+                          party: 
+                            type: integer
+                          party_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name: 
+                                type: string
+                          rec_name: 
+                            type: string
                       errors:
                         type: object
                         nullable: true
@@ -33,7 +49,13 @@ post:
                         nullable: true
               example:
                 data:
-                  
+                  bic: ''
+                  id: 5
+                  party: 1
+                  party_:
+                    id: 1
+                    name: Party 1
+                  rec_name: Party 1
                 error: null
                 pagination: null
                 status: 200
