@@ -22,7 +22,86 @@ get:
                     data:
                       type: object
                       properties:
-
+                        childs:
+                          type: object
+                          properties:
+                            childs:
+                              type: array
+                            id:
+                              type: integer
+                            rec_name: 
+                              type: string
+                        closed: 
+                          type: boolean
+                        code:
+                          type: string 
+                        credit_type:
+                          type: integer
+                        credit_type_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        debit_type: 
+                          type: integer
+                        debit_type_: 
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        deferral:
+                          type: boolean
+                        end_date: 
+                          type: string
+                          format: date
+                        general_ledger_balance: 
+                          type: boolean
+                        id: 
+                          type: integer
+                        name:
+                          type: string
+                        parent: 
+                          type: integer
+                        parent_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        party_required:
+                          type: boolean
+                        rec_name:
+                          type: string
+                        reconcile:
+                          type: boolean
+                        replaced_by: 
+                          type: integer
+                        replaced_by_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        start_date: 
+                          type: string
+                          format: date
+                        taxes: 
+                          type: array
+                        type: 
+                          type: integer
+                        type_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                     errors:
                       type: object
                     pagination:
@@ -42,7 +121,34 @@ get:
                       nullable: true
               example:
                 data:
-                  
+                  childs:
+                  - childs: []
+                    id: 1172
+                    rec_name: Assets
+                  closed: true
+                  code: 
+                  credit_type: 
+                  credit_type_: {}
+                  debit_type: 
+                  debit_type_: {}
+                  deferral: false
+                  end_date: 
+                  general_ledger_balance: false
+                  id: 1
+                  name: Minimal Account Chart
+                  parent: 
+                  parent_: {}
+                  party_required: false
+                  rec_name: Minimal Account Chart
+                  reconcile: false
+                  replaced_by: 
+                  replaced_by_: {}
+                  start_date: 
+                  taxes: []
+                  type: 1
+                  type_:
+                    id: 1
+                    name: Minimal Account Type Chart
                 error: null
                 pagination: null
                 status: 200
