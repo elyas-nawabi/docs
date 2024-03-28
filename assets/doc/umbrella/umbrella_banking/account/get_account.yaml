@@ -22,7 +22,27 @@
                     data:
                       type: array
                       properties:
-                        
+                          bank: 
+                            type: integer
+                          bank_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name: 
+                                type: string
+                          currency: 1
+                          currency_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name: 
+                                type: string
+                          id: 
+                            type: integer
+                          rec_name: 
+                            type: string
                     errors:
                       type: object
                     pagination:
@@ -42,7 +62,14 @@
                       nullable: true
               example:
                 data:
-                
+                  - bank: 
+                    bank_: {}
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    id: 2
+                    rec_name: "(2) [AFN]"
                 error: null
                 pagination:
                   page: 1
