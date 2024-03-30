@@ -22,7 +22,33 @@
                     data:
                       type: array
                       properties:
-                          
+                        childs:
+                          type: array
+                          properties:
+                            childs:
+                              type: array
+                              properties:
+                                childs:
+                                  type: array
+                                  properties:
+                                    childs: 
+                                      type: array
+                                    id:
+                                      type: integer
+                                    rec_name: 
+                                      type: string
+                                id: 
+                                  type: integer
+                                rec_name: 
+                                  type: string
+                            id: 
+                              type: integer
+                            rec_name: 
+                              type: string
+                        id: 
+                          type: integer
+                        rec_name: 
+                          type: string  
                     errors:
                       type: object
                     pagination:
@@ -42,7 +68,18 @@
                       nullable: true
               example:
                 data:
-                  
+                  childs:
+                  - childs:
+                    - childs:
+                      - childs: []
+                        id: 2250
+                        rec_name: 100 - Capital social
+                      id: 2093
+                      rec_name: 10 - Capital
+                    id: 2089
+                    rec_name: 4 - Acreedores y deudores por operaciones comerciales
+                  id: 2085
+                  rec_name: 0 - Plan Contable para PYMES 2008
                 errors: null
                 pagination:
                   page: 1
