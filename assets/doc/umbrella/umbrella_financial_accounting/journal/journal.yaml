@@ -68,4 +68,6 @@ paths:
     $ref: 'post_delete_journal.yaml'
   '/financial-accounting/journals/{obj_id}':
     $ref: 'get_put_journal_by_id.yaml'
+  '/financial-accounting/journals/open':
+    $ref: 'open_journal.yaml'
   

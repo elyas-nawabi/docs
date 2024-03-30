@@ -224,6 +224,8 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-journal.yaml'
     UpdateJournal:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/update-journal.yaml'
+    OpenJournal:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/open-journal.yaml'
     CreateTax:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax.yaml'
     UpdateTax:

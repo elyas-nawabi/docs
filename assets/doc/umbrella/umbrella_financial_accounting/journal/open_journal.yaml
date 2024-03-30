@@ -1,0 +1,65 @@
+post:
+      tags:
+        - journal
+      summary: Open a journal.
+      description: Open a journal.
+      operationId: openJournal
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/OpenJournal'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                  type: array
+                  properties:
+                    data: 
+                      type: object
+                      properties:
+                        account_move_lines:
+                          type: object
+                          properties:
+                            company: 
+                              type: integer
+                            journal: 
+                              type: integer
+                            period: 
+                              type: integer
+                    errors:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data: 
+                  account_move_lines:
+                    company: 1
+                    journal: 12
+                    period: 79
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
