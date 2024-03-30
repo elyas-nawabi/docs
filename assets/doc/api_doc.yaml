@@ -206,6 +206,8 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-fiscal-year.yaml'
     UpdateFiscalYear:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/update-fiscal-year.yaml'
+    RenewFiscalYear:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/renew-fiscal-year.yaml'
     CreateFiscalPeriod:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-fiscal-period.yaml'
     UpdateFiscalPeriod:
