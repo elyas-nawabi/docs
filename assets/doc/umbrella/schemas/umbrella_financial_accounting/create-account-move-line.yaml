@@ -1,8 +1,27 @@
       properties:
-        
+        name:
+          type: string
+        code:
+          type: string
+        type: 
+          type: string
+        period:
+          type: integer
+        journal:
+          type: integer
+        company:
+          type: integer
 
       required:
         - name
+        - period
+        - journal
+        - company
         
       example:
-        
+        name: acmvline1
+        code: '01'
+        type: 
+        period: 71
+        journal: 12
+        company: 1
