@@ -354,6 +354,8 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-payment-term.yaml'
     CreateTest:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-test.yaml'
+    CreateTaxTest:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-test.yaml'
     UpdatePaymentTerm:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-payment-term.yaml'
     CreateInvoice:

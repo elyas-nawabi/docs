@@ -68,4 +68,6 @@ paths:
     $ref: 'post_delete_tax.yaml'
   '/financial-accounting/taxes/{obj_id}':
     $ref: 'get_put_tax_by_id.yaml'
+  '/financial-accounting/taxes/test':
+    $ref: 'test_tax.yaml'
   
