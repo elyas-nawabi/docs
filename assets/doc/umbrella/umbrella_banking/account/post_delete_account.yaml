@@ -1,8 +1,8 @@
 post:
       tags:
         - account
-      summary: Create a account.
-      description: Create a account.
+      summary: Create an account.
+      description: Create an account.
       operationId: postAccountById
       requestBody:
         required: false

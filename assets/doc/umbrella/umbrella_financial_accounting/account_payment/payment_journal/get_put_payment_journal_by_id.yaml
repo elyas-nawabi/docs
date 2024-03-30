@@ -193,8 +193,8 @@ get:
 put:
       tags:
         - payment journal
-      summary: Update an payment journal.
-      description: Update an payment journal.
+      summary: Update a payment journal.
+      description: Update a payment journal.
       operationId: updatePaymentJournalById
       parameters:
         - name: obj_id
