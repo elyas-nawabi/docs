@@ -1,8 +1,8 @@
 post:
       tags:
         - bank
-      summary: Create an bank.
-      description: Create an bank.
+      summary: Create a bank.
+      description: Create a bank.
       operationId: postBankById
       requestBody:
         required: true

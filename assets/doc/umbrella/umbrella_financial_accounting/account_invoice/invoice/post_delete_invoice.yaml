@@ -1,8 +1,8 @@
 post:
       tags:
         - invoice
-      summary: Create a invoice.
-      description: Create a invoice.
+      summary: Create an invoice.
+      description: Create an invoice.
       operationId: postPaymentMethodById
       requestBody:
         required: true
