@@ -1,7 +1,11 @@
       properties:
+        active:
+          type: boolean
         childs:
           type: array
           properties:
+            active:
+              type: boolean
             childs: 
               type: array
             name: 
@@ -21,8 +25,10 @@
       required:
         - name
       example:
+        active: true
         childs:
-          - childs: []
+          - active: true
+            childs: []
             name: "testCtg1"
             parent: null
             rec_name: "parentctg"

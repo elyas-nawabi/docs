@@ -16,6 +16,10 @@
           type: array
         country:
           type: integer
+        delivery:
+          type: integer
+        invoice:
+          type: integer
         name: 
           type: string
         party:
@@ -32,9 +36,57 @@
           type: string
         subdivision:
           type: integer
+    bank_accounts:
+      type: array
+      properties:
+        active: 
+          type: boolean
+        bank: 
+          type: integer
+        currency: 
+          type: integer
+        numbers:
+          type: array
+          properties:
+            account: 
+              type: integer
+            active: 
+              type: integer
+            number: 
+              type: string
+            number_compact: 
+              type: string
+            rec_name: 
+              type: string
+            sequence: 
+              type: integer
+            type: 
+              type: string
+        owners:
+          type: array
+          properties:
+            code:
+              type: string
+            deposit: 
+              type: integer
+            lang: 
+              type: integer
+            name: 
+              type: string
+            payable_today: 
+              type: integer
+            rec_name: 
+              type: string
+            receivable_today: 
+              type: integer
+            tax_identifier: 
+        rec_name: 
+          type: string
     categories:
       type: array
       properties:
+        active:
+          type: boolean
         childs:
           type: array
         name: 
@@ -54,6 +106,10 @@
           type: integer
         comment: 
           type: string
+        delivery: 
+          type: string
+        invoice: 
+          type: integer
         language: 
           type: string
         name: 
@@ -68,54 +124,95 @@
           type: string
         value: 
           type: string
+    credit_amount:
+      type: integer
+    credit_limit_amount: 
+      type: integer 
+    customer_payment_term: 
+      type: integer
     customer_tax_rule:
       type: integer
       nullable: true
+    deposit:
+      type: integer
     lang:
       type: integer
     name: 
       type: string
-    payable:
-      type: integer
     payable_today:
       type: integer
+    rec_name:
+      type: string
     receivable:
       type: integer
     receivable_today:
       type: integer
-    supplier_tax_rule:
+    supplier_payment_term: 
       type: integer
-      nullable: true
+    supplier_tax_rule: 
+      type: integer
     tax_identifier: 
       type: string
       nullable: true
+    payable: 
+      type: integer
   required:
     - code
     - name    
   example:
     account_payable: null
     account_receivable: null
+    active: true
     addresses:
     - active: true
       city: "Herat"
       contact_mechanisms: []
       country: 1
+      delivery: null
+      invoice: null
       name: "herat tower"
       party: 1
       party_name: "prt2"
       postal_code: "1002"
-      sequence: null
+      rec_name: prt2, herat tower, street 2, 1002, Herat, 1
+      sequence: 
       street: "street 2"
       subdivision: 3
+    bank_accounts:
+    - active: true
+      bank: 5
+      currency: 1
+      numbers:
+      - account: 1
+        active: true
+        number: ''
+        number_compact: ''
+        rec_name: ''
+        sequence: 1
+        type: iban
+      owners:
+      - code: '1'
+        deposit: 0
+        lang: 1
+        name: Party 1
+        payable_today: 0
+        rec_name: Party 1
+        receivable_today: 0
+        tax_identifier: 
+      rec_name: "(1) @ Party 1 [AFN]"
     categories:
-    - childs: []
+    - active: true
+      childs: []
       name: "test1"
       parent: 4
+      rec_name: test
     code: '1'
     contact_mechanisms:
     - active: true
       address: 2
-      comment: 
+      comment: null
+      delivery: null
+      invoice: null
       language: null
       name: "ctm1"
       party: 1
@@ -123,12 +220,18 @@
       sequence: null
       type: "phone"
       value: '8888'
-    customer_tax_rule: null
+    credit_amount: 0
+    credit_limit_amount: null 
+    customer_payment_term: null
+    customer_tax_rule: 
+    deposit: 0
     lang: 1
-    name: "Party 1"
+    name: Party 1
     payable: 0
     payable_today: 0
+    rec_name: Party 1
     receivable: 0
     receivable_today: 0
+    supplier_payment_term: null
     supplier_tax_rule: null
     tax_identifier: null    

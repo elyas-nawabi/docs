@@ -7,6 +7,10 @@
           type: string
         language:
           type: integer
+        delivery:
+          type: integer
+        invoice:
+          type: integer
         name: 
           type: string
         party:
@@ -26,6 +30,8 @@
         active: true
         address: 2
         comment: "information about contact name"
+        delivery: null
+        invoice: 1
         language: 1
         name: ahmad
         party: 1

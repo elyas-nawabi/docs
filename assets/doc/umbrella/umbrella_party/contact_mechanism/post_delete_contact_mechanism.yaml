@@ -34,7 +34,11 @@ post:
                               type: string
                         comment:
                           type: string
+                        delivery:
+                          type: integer
                         id:
+                          type: integer
+                        invoice:
                           type: integer
                         language:
                           type: integer
@@ -80,6 +84,9 @@ post:
                   id: 2
                   name: "abcParty, bl1, st12, 1007, Kabul, Afghanistan"
                 comment: "information about contact name"
+                delivery: null
+                id: 1
+                invoice: null
                 language: 1
                 name: ahmad
                 party: 1
