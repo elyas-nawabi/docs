@@ -68,10 +68,14 @@
                               type: integer
                             name: 
                               type: string
+                        delivery:
+                          type: integer 
+                        id: 
+                          type: integer
+                        invoice:
+                          type: integer
                         name: 
                           type: string 
-                        id: 
-                          type: integer 
                         party: 
                           type: integer
                         party_:
@@ -85,10 +89,10 @@
                           type: string
                         postal_code:
                           type: string 
-                        sequence: 
-                          type: integer
                         rec_name:
                           type: string 
+                        sequence: 
+                          type: integer
                         street: 
                           type: string 
                         subdivision: 
@@ -114,41 +118,43 @@
               example:
                 data:
                   active: true
-                  city: "Kabul"
+                  city: Kabul
                   contact_mechanisms:
                   - address: 1
                     address_:
-                        id: 1
-                        name: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
-                    id: 9
-                    language: null
-                    name: "suhaib"
+                      id: 1
+                      name: ptupdate, ahmad tower, street 3, 1004, Kabul, 1
+                    id: 29
+                    language: 
+                    name: suhaib
                     party: 1
                     party_:
-                        id: 1
-                        name: "Party 1"
-                    rec_name: suhaib <0771680435>
-                    type: "mobile"
-                    value: "0771680435"
-                  country: 1
-                  country_: 
                       id: 1
-                      name: "Afghanistan"
+                      name: Party 1
+                    rec_name: suhaib <0771680435>
+                    type: mobile
+                    value: '0771680435'
+                  country: 1
+                  country_:
+                    id: 1
+                    name: "\U0001F1D6 Afghanistan"
+                  delivery: 
                   id: 1
-                  name: "ahmad tower"
+                  invoice: 
+                  name: ahmad tower
                   party: 1
                   party_:
-                      id: 1
-                      name: "Party 1"
-                  party_name: ""
-                  postal_code: "1001"
+                    id: 1
+                    name: Party 1
+                  party_name: ptupdate
+                  postal_code: '1004'
                   rec_name: ptupdate, ahmad tower, street 3, 1004, Kabul, 1
-                  sequence: null
-                  street: "street 2"
+                  sequence: 1
+                  street: street 3
                   subdivision: 3
                   subdivision_:
-                      id: 3
-                      name: "sbd1"
+                    id: 3
+                    name: sbd1
               error: null,
               pagination: null,
               status: 200,
@@ -239,10 +245,14 @@
                               type: integer
                             name: 
                               type: string
+                        delivery:
+                          type: integer 
+                        id: 
+                          type: integer
+                        invoice:
+                          type: integer
                         name: 
                           type: string 
-                        id: 
-                          type: integer 
                         party: 
                           type: integer
                         party_:
@@ -256,10 +266,10 @@
                           type: string
                         postal_code:
                           type: string 
-                        sequence: 
-                          type: integer
                         rec_name:
                           type: string 
+                        sequence: 
+                          type: integer
                         street: 
                           type: string 
                         subdivision: 
@@ -285,41 +295,43 @@
               example:
                 data:
                   active: true
-                  city: "Kabul"
+                  city: Kabul
                   contact_mechanisms:
                   - address: 1
                     address_:
-                        id: 1
-                        name: "Party 1, ahmad tower, street 2, 1001, Kabul, 1"
-                    id: 9
-                    language: null
-                    name: "suhaib"
+                      id: 1
+                      name: ptupdate, ahmad tower, street 3, 1004, Kabul, 1
+                    id: 29
+                    language: 
+                    name: suhaib
                     party: 1
                     party_:
-                        id: 1
-                        name: "Party 1"
-                    rec_name: suhaib <0771680435>
-                    type: "mobile"
-                    value: "0771680435"
-                  country: 1
-                  country_: 
                       id: 1
-                      name: "Afghanistan"
+                      name: Party 1
+                    rec_name: suhaib <0771680435>
+                    type: mobile
+                    value: '0771680435'
+                  country: 1
+                  country_:
+                    id: 1
+                    name: "\U0001F1D6 Afghanistan"
+                  delivery: 
                   id: 1
-                  name: "ahmad tower"
+                  invoice: 
+                  name: ahmad tower
                   party: 1
                   party_:
-                      id: 1
-                      name: "Party 1"
-                  party_name: ""
-                  postal_code: "1001"
+                    id: 1
+                    name: Party 1
+                  party_name: ptupdate
+                  postal_code: '1004'
                   rec_name: ptupdate, ahmad tower, street 3, 1004, Kabul, 1
-                  sequence: null
-                  street: "street 2"
+                  sequence: 1
+                  street: street 3
                   subdivision: 3
                   subdivision_:
-                      id: 3
-                      name: "sbd1"
+                    id: 3
+                    name: sbd1
               error: null,
               pagination: null,
               status: 200,
