@@ -21,7 +21,7 @@ post:
                   properties:
                     data: 
                       company: 
-                          type: integer
+                        type: integer
                       company_:
                         type: object
                         properties:
@@ -39,6 +39,24 @@ post:
                           end_date:
                             type: string
                             format: date
+                          from_country: 
+                            type: integer
+                          from_country_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
+                          from_subdivision: 
+                            type: integer
+                          from_subdivision_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name:
+                                type: string
                           group: 
                             type: integer
                           group_:
@@ -88,6 +106,24 @@ post:
                                 type: string
                           template_override:
                             type: boolean
+                          to_country:
+                            type: integer
+                          to_country_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name: 
+                                type: string
+                          to_subdivision:
+                            type: integer 
+                          to_subdivision_:
+                            type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name: 
+                                type: string
                       name: 
                         type: string
                       rec_name: 
@@ -121,7 +157,15 @@ post:
                   id: 1
                   kind: both
                   lines:
-                  - end_date: '2025-03-31'
+                  - end_date: '2024-03-31'
+                    from_country: 1
+                    from_country_:
+                      id: 1
+                      name: "Afghanistan"
+                    from_subdivision: 3
+                    from_subdivision_:
+                      id: 3
+                      name: sbd1
                     group: 20
                     group_:
                       id: 20
@@ -134,7 +178,7 @@ post:
                       name: tx1
                     rec_name: '1'
                     sequence: 1
-                    start_date: '2025-03-04'
+                    start_date: '2024-03-04'
                     tax: 23
                     tax_:
                       id: 23
@@ -142,10 +186,16 @@ post:
                     template: 
                     template_: {}
                     template_override: false
-                  name: tx_rule_2
-                  rec_name: tx_rule_2
+                    to_country: 4
+                    to_country_:
+                      id: 4
+                      name: "Africa"
+                    to_subdivision: 
+                    to_subdivision_: {}
+                  name: tx_rule_1
+                  rec_name: tx_rule_1
                   template: 
-                  template_override: true
+                  template_override: false
                 errors: null
                 pagination: null
                 status: 200
