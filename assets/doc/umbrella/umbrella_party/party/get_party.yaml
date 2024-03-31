@@ -24,6 +24,8 @@
                       properties:
                         code:
                           type: string
+                        deposit: 
+                          type: integer
                         id:
                           type: integer
                         lang:
@@ -59,6 +61,7 @@
               example:
                 data:
                   - code: "1"
+                    deposit: 0
                     id: 1
                     lang: 1
                     name: "Party 1"
