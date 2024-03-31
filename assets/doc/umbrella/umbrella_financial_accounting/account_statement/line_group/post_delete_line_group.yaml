@@ -39,7 +39,6 @@ post:
                       type: string
               example:
                 data:
-                  
                 errors: null
                 pagination: null
                 status: 201

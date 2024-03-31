@@ -43,8 +43,7 @@ get:
                       type: string
                       nullable: true
               example:
-                data:
-                  
+                data: []
                 error: null
                 pagination: null
                 status: 200

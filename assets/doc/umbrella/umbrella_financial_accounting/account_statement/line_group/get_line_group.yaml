@@ -41,8 +41,7 @@
                       type: string
                       nullable: true
               example:
-                data:
-                  
+                data: []
                 errors: null
                 pagination:
                   page: 1
