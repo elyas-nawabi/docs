@@ -21,14 +21,28 @@ post:
                     data:
                       type: object
                       properties:
+                        active: 
+                          type: boolean
                         childs:
                           type: array
                           properties:
-                            childs: []
-                            id: 12
-                            name: "testCtg1"
-                            parent: null
-                            parent_: {}
+                            active: 
+                              type: boolean
+                            childs: 
+                              type: array
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                            parent: 
+                              type: integer
+                            parent_: 
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
                             rec_name: "parentctg"
                         id:
                           type: integer
@@ -59,8 +73,10 @@ post:
                       nullable: true
               example:
                 data: 
+                  active: true
                   childs:
-                    - childs: []
+                    - active: true
+                      childs: []
                       id: 12
                       name: "testCtg1"
                       parent: null
