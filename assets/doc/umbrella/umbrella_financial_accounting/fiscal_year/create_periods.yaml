@@ -1,44 +1,35 @@
-    post:
+post:
       tags:
         - fiscal year
-      summary: Get list of fiscal years.
-      description: Get list of fiscal years.
-      operationId: getFiscalYears
+      summary: Create periods.
+      description: Create periods.
+      operationId: createPeriods
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 2
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreatePeriod'
       responses:
-        '200':
-          description: OK
+        '201':
+          description: Created
           content:
             application/json:
               schema:
                   type: object
                   properties:
-                    data:
-                      type: array
+                    data: 
+                      type: object
                       properties:
-                        company:
-                          type: integer
-                        company_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string 
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        rec_name:
-                          type: string
-                        state:
-                          type: string
+                        
                     errors:
                       type: object
                     pagination:
@@ -57,20 +48,9 @@
                       type: string
               example:
                 data:
-                  - company: 1
-                    company_:
-                      id: 1
-                      name: Party 1
-                    id: 71
-                    name: '2026'
-                    rec_name: '2026'
-                    state: open
+                  
                 errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 1
+                pagination: null
                 status: 200
                 success_message: null
         '401':
@@ -83,5 +63,4 @@
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    
     

@@ -22,15 +22,6 @@ get:
                     data:
                       type: object
                       properties:
-                        childs:
-                          type: object
-                          properties:
-                            childs:
-                              type: array
-                            id:
-                              type: integer
-                            rec_name: 
-                              type: string
                         closed: 
                           type: boolean
                         code:

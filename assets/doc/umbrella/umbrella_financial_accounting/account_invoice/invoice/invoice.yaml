@@ -30,3 +30,5 @@ paths:
     $ref: 'process_by_id.yaml'
   '/financial-accounting/invoices/{obj_id}/pay':
     $ref: 'pay_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/party-invoices-count':
+    $ref: 'party_invoices_count_by_id.yaml'

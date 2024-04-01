@@ -76,3 +76,5 @@ paths:
     $ref: 'get_reopen_fiscal_year.yaml'
   '/financial-accounting/fiscal-years/renew':
     $ref: 'post_renew_fiscal_year.yaml'
+  '/financial-accounting/fiscal-years/{obj_id}/create-periods':
+    $ref: 'create_periods.yaml'
