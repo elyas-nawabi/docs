@@ -22,6 +22,8 @@
                     data:
                       type: array
                       properties:
+                        active:
+                          type: integer
                         id: 
                           type: integer
                         journal: 
@@ -65,7 +67,8 @@
                       nullable: true
               example:
                 data:
-                  - id: 1
+                  - active: true
+                    id: 1
                     journal: 5
                     journal_:
                       id: 5
