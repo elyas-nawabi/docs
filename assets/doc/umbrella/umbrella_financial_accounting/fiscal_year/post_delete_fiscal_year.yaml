@@ -36,6 +36,8 @@ post:
                           format: date
                         id:
                           type: integer
+                        invoice_sequences:
+                          type: array
                         name:
                           type: string
                         periods:
@@ -53,6 +55,15 @@ post:
                             end_date:
                               type: string
                               format: date
+                            fiscalyear: 
+                              type: integer
+                            fiscalyear_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name:
+                                  type: string
                             id:
                               type: integer
                             name:
@@ -66,6 +77,8 @@ post:
                                   type: integer
                                 name:
                                   type: string
+                            rec_name:
+                              type: string
                             start_date:
                               type: string
                               format: date
@@ -80,6 +93,8 @@ post:
                               type: integer
                             name:
                               type: string
+                        rec_name:
+                          type: string
                         start_date:
                           type: string
                           format: date
@@ -116,13 +131,17 @@ post:
                         id: 1
                         name: "Party 1"
                       end_date: "2024-01-31"
-                      fiscalyear: 2
+                      fiscalyear: 71
+                      fiscalyear_:
+                        id: 71
+                        name: '2026'
                       id: 13
                       name: "2024-01"
                       post_move_sequence: 4
                       post_move_sequence_:
                         id: 4
                         name: "2024"
+                      rec_name: '1'
                       start_date: "2024-01-01"
                       state: "open"
                       type: "standard"
@@ -130,6 +149,7 @@ post:
                   post_move_sequence_:
                     id: 4
                     name: "2024"
+                  rec_name: '2026'
                   start_date: "2024-01-01"
                   state: "open"
                 errors: null
