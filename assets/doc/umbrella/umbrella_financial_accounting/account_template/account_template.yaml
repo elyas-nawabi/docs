@@ -64,6 +64,8 @@ tags:
 paths:
   '/financial-accounting/account-templates/search':
     $ref: 'get_account_template.yaml'
+  '/financial-accounting/account-templates/{obj_id}/childs':
+    $ref: 'get_account_template_childs_by_id.yaml'
   '/financial-accounting/account-templates/{obj_id}':
     $ref: 'get_account_template_by_id.yaml'
   
