@@ -22,7 +22,19 @@ post:
                     data: 
                       type: object
                       properties:
-
+                        defaults:
+                           type: object
+                           properties:
+                            account_payable: 
+                              type: integer
+                            account_receivable: 
+                              type: integer
+                            category_account_expense: 
+                              type: integer
+                            category_account_revenue: 
+                              type: integer
+                        session_id:
+                          type: integer
                     errors:
                       type: object
                     pagination:
@@ -41,6 +53,12 @@ post:
                       type: string
               example:
                 data:
+                  defaults:
+                    account_payable: null
+                    account_receivable: null
+                    category_account_expense: null
+                    category_account_revenue: null
+                  session_id: 173
                 errors: null
                 pagination: null
                 status: 200
