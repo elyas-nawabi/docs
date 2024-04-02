@@ -13,7 +13,7 @@ post:
               $ref: '../../../api_doc.yaml#/components/schemas/UpdateCOATemplate'
       responses:
         '200':
-          description: Created
+          description: OK
           content:
             application/json:
               schema:
@@ -21,6 +21,9 @@ post:
                   properties:
                     data: 
                       type: object
+                      properties:
+                        account:
+                          type: integer
                     errors:
                       type: object
                     pagination:
@@ -38,7 +41,7 @@ post:
                     success_message:
                       type: string
               example:
-                data: []
+                data: null
                 errors: null
                 pagination: null
                 status: 200

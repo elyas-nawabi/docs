@@ -7,7 +7,7 @@ properties:
 required:
  - frequency
  - end_day
- 
+
 example:
-  frequency: "1"
-  end_day: 1
+  frequency: "monthly"
+  end_day: 31

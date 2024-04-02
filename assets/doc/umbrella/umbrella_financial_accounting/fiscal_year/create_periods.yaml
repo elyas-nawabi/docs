@@ -29,7 +29,10 @@ post:
                     data: 
                       type: object
                       properties:
-                        
+                        frequency:
+                          type: string 
+                        end_day: 
+                          type: integer
                     errors:
                       type: object
                     pagination:
@@ -47,8 +50,7 @@ post:
                     success_message:
                       type: string
               example:
-                data:
-                  
+                data: null
                 errors: null
                 pagination: null
                 status: 200

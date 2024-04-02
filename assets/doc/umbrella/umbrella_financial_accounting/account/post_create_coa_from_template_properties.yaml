@@ -12,8 +12,8 @@ post:
               type: object
               $ref: '../../../api_doc.yaml#/components/schemas/CreateCOATemplateProperties'
       responses:
-        '201':
-          description: Created
+        '200':
+          description: OK
           content:
             application/json:
               schema:
@@ -22,7 +22,16 @@ post:
                     data: 
                       type: object
                       properties:
-
+                        account_payable:
+                          type: integer
+                        account_receivable:
+                          type: integer
+                        category_account_expense:
+                          type: integer
+                        category_account_revenue: 
+                          type: integer
+                        session_id:
+                          type: integer
                     errors:
                       type: object
                     pagination:
@@ -40,7 +49,7 @@ post:
                     success_message:
                       type: string
               example:
-                data:
+                data: null
                 errors: null
                 pagination: null
                 status: 200

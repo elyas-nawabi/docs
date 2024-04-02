@@ -13,8 +13,8 @@ required:
  - session_id
 
 example:
-  session_id: 1
-  account_payable: 1
-  account_receivable: 1
-  category_account_expense: 1
-  category_account_revenue: 1
+  session_id: 167
+  account_payable: 4
+  account_receivable: 5
+  category_account_expense: 3615
+  category_account_revenue: 3609
