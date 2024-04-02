@@ -1,0 +1,20 @@
+properties:
+  session_id:
+    type: integer
+  account_payable:
+    type: integer
+  account_receivable:
+    type: integer
+  category_account_expense:
+    type: integer
+  category_account_revenue: 
+    type: integer
+required:
+ - session_id
+
+example:
+  session_id: 1
+  account_payable: 1
+  account_receivable: 1
+  category_account_expense: 1
+  category_account_revenue: 1
