@@ -1,6 +1,9 @@
   properties:
     active:
       type: boolean
+    cash_rounding:
+      type: number 
+      format: decimal
     code:
       type: string
     digits:
@@ -33,6 +36,7 @@
     - name
   example:
     active: true
+    cash_rounding: null
     code: "AFN"
     digits: 2
     name: "Afghani"

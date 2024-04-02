@@ -19,73 +19,79 @@ post:
               schema:
                     properties:
                       data:
-                        currency:
-                          type: integer
-                        currency_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                        employees:
-                          type: array 
-                          properties:
-                            company:
-                              type: integer
-                            company_:
-                              type: object
-                              properties:
-                                id:
-                                  type: integer
-                                name:
-                                  type: string
-                            end_date:
-                              type: string
-                              format: date
-                            id:
-                              type: integer
-                            party:
-                              type: integer
-                            party_:
+                        type: object
+                        properties: 
+                          cancel_invoice_out:
+                            type: boolean
+                          currency:
+                            type: integer
+                          currency_:
+                            type: object
+                            properties:
                               id:
                                 type: integer
                               name:
                                 type: string
-                            rec_name:
-                              type: string
-                            start_date:
-                              type: string
-                              format: date
-                            supervisor: 
-                              type: integer
-                            supervisor_:
-                              type: object
-                        footer: 
-                          type: string
-                        header: 
-                          type: string
-                        id:
-                          type: integer
-                        party:
-                          type: integer
-                        party_:
+                          employees:
+                            type: array 
+                            properties:
+                              company:
+                                type: integer
+                              company_:
+                                type: object
+                                properties:
+                                  id:
+                                    type: integer
+                                  name:
+                                    type: string
+                              end_date:
+                                type: string
+                                format: date
+                              id:
+                                type: integer
+                              party:
+                                type: integer
+                              party_:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                              rec_name:
+                                type: string
+                              start_date:
+                                type: string
+                                format: date
+                              supervisor: 
+                                type: integer
+                              supervisor_:
+                                type: object
+                          footer: 
+                            type: string
+                          header: 
+                            type: string
                           id:
                             type: integer
-                          name:
+                          party:
+                            type: integer
+                          party_:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                          payable:
+                            type: integer
+                          payable_today:
+                            type: integer
+                          purchase_taxes_expense:
+                            type: boolean
+                          rec_name: 
                             type: string
-                        payable:
-                          type: integer
-                        payable_today:
-                          type: integer
-                        rec_name: 
-                          type: string
-                        receivable:
-                          type: integer
-                        receivable_today:
-                          type: integer
-                        timezone:
-                          type: string 
+                          receivable:
+                            type: integer
+                          receivable_today:
+                            type: integer
+                          timezone:
+                            type: string
                       errors:
                         type: object
                         nullable: true
@@ -99,6 +105,7 @@ post:
                         nullable: true
               example:
                 data:
+                  cancel_invoice_out: true
                   currency: 1
                   currency_:
                     id: 1
@@ -127,6 +134,7 @@ post:
                     name: 'Party 1'
                   payable: 0
                   payable_today: 0
+                  purchase_taxes_expense: false
                   rec_name: Party 1
                   receivable: 0
                   receivable_today: 0
