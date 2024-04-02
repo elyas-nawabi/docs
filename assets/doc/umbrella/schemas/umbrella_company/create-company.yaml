@@ -1,4 +1,6 @@
       properties:
+        cancel_invoice_out:
+          type: integer
         currency:
           type: integer
         employees:
@@ -30,6 +32,8 @@
           type: integer
         payable_today:
           type: integer
+        purchase_taxes_expense:
+          type: integer
         rec_name: 
           type: string
         receivable:
@@ -44,6 +48,7 @@
           - party
              
       example:
+        cancel_invoice_out: true
         currency: 1
         employees:
         - company: 1
@@ -57,6 +62,7 @@
         party: 1
         payable: 0
         payable_today: 0
+        purchase_taxes_expense: false
         rec_name: Party 1
         receivable: 0
         receivable_today: 0

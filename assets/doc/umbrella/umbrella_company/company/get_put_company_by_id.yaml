@@ -20,6 +20,178 @@
                   type: object
                   properties:
                     data:
+                      type: object
+                      properties:
+                        cancel_invoice_out:
+                          type: boolean
+                        currency:
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                        employees:
+                          type: array 
+                          properties:
+                            company:
+                              type: integer
+                            company_:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                name:
+                                  type: string
+                            end_date:
+                              type: string
+                              format: date
+                            id:
+                              type: integer
+                            party:
+                              type: integer
+                            party_:
+                              id:
+                                type: integer
+                              name:
+                                type: string
+                            rec_name:
+                              type: string
+                            start_date:
+                              type: string
+                              format: date
+                            supervisor: 
+                              type: integer
+                            supervisor_:
+                              type: object
+                        footer: 
+                          type: string
+                        header: 
+                          type: string
+                        id:
+                          type: integer
+                        party:
+                          type: integer
+                        party_:
+                          id:
+                            type: integer
+                          name:
+                            type: string
+                        payable:
+                          type: integer
+                        payable_today:
+                          type: integer
+                        purchase_taxes_expense:
+                          type: boolean
+                        rec_name: 
+                          type: string
+                        receivable:
+                          type: integer
+                        receivable_today:
+                          type: integer
+                        timezone:
+                          type: string
+                    error:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  cancel_invoice_out: true
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  employees:
+                  - company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    end_date: '2024-02-29'
+                    id: 2
+                    party: 24
+                    party_:
+                      id: 24
+                      name: 'Party 13'
+                    rec_name: Party 1
+                    start_date: '2024-02-01'
+                    supervisor: 
+                    supervisor_: {}
+                  footer: ''
+                  header: ''
+                  id: 1
+                  party: 1
+                  party_:
+                    id: 1
+                    name: 'Party 1'
+                  payable: 0
+                  payable_today: 0
+                  purchase_taxes_expense: false
+                  rec_name: Party 1
+                  receivable: 0
+                  receivable_today: 0
+                  timezone: 'Asia/Kabul'
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
+      tags:
+        - company
+      summary: Update a company.
+      description: Update a company.
+      operationId: updateCompanyById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/UpdateCompany'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      cancel_invoice_out:
+                          type: boolean
                       currency:
                         type: integer
                       currency_:
@@ -79,6 +251,8 @@
                         type: integer
                       payable_today:
                         type: integer
+                      purchase_taxes_expense:
+                        type: boolean
                       rec_name: 
                         type: string
                       receivable:
@@ -87,166 +261,6 @@
                         type: integer
                       timezone:
                         type: string
-                    error:
-                      type: object
-                      nullable: true
-                    pagination:
-                      type: object
-                      nullable: true
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
-              example:
-                data:
-                  currency: 1
-                  currency_:
-                    id: 1
-                    name: Afghani
-                  employees:
-                  - company: 1
-                    company_:
-                      id: 1
-                      name: Party 1
-                    end_date: '2024-02-29'
-                    id: 2
-                    party: 24
-                    party_:
-                      id: 24
-                      name: 'Party 13'
-                    rec_name: Party 1
-                    start_date: '2024-02-01'
-                    supervisor: 
-                    supervisor_: {}
-                  footer: ''
-                  header: ''
-                  id: 1
-                  party: 1
-                  party_:
-                    id: 1
-                    name: 'Party 1'
-                  payable: 0
-                  payable_today: 0
-                  rec_name: Party 1
-                  receivable: 0
-                  receivable_today: 0
-                  timezone: 'Asia/Kabul'
-                error: null
-                pagination: null
-                status: 200
-                success_message: null
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-        '404':
-          description: 404 Not Found.
-          content:
-            application/json:
-              schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
-    put:
-      tags:
-        - company
-      summary: Update a company.
-      description: Update a company.
-      operationId: updateCompanyById
-      parameters:
-        - name: obj_id
-          rquired: true
-          in: path
-          schema:
-            type: integer
-          example: 19
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateCompany'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                properties:
-                  data:
-                    currency:
-                        type: integer
-                    currency_:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                    employees:
-                      type: array 
-                      properties:
-                        company:
-                          type: integer
-                        company_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                        end_date:
-                          type: string
-                          format: date
-                        id:
-                          type: integer
-                        party:
-                          type: integer
-                        party_:
-                          id:
-                            type: integer
-                          name:
-                            type: string
-                        rec_name:
-                          type: string
-                        start_date:
-                          type: string
-                          format: date
-                        supervisor: 
-                          type: integer
-                        supervisor_:
-                          type: object
-                    footer: 
-                      type: string
-                    header: 
-                      type: string
-                    id:
-                      type: integer
-                    party:
-                      type: integer
-                    party_:
-                      id:
-                        type: integer
-                      name:
-                        type: string
-                    payable:
-                      type: integer
-                    payable_today:
-                      type: integer
-                    rec_name: 
-                      type: string
-                    receivable:
-                      type: integer
-                    receivable_today:
-                      type: integer
-                    timezone:
-                      type: string
                   errors:
                     type: object
                     nullable: true
@@ -261,6 +275,7 @@
               
               example:
                 data:
+                  cancel_invoice_out: true
                   currency: 1
                   currency_:
                     id: 1
@@ -289,6 +304,7 @@
                     name: 'Party 1'
                   payable: 0
                   payable_today: 0
+                  purchase_taxes_expense: false
                   rec_name: Party 1
                   receivable: 0
                   receivable_today: 0

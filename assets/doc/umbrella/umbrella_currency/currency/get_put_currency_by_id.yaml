@@ -24,6 +24,9 @@ get:
                   properties:
                     active:
                       type: boolean
+                    cash_rounding: 
+                      type: number
+                      format: float
                     code:
                       type: string
                     digits:
@@ -69,6 +72,7 @@ get:
           example:
             data:
               active: true
+              cash_rounding: null
               code: "AFN"
               digits: 2
               id: 1
@@ -134,6 +138,9 @@ put:
                   properties:
                     active:
                       type: boolean
+                    cash_rounding: 
+                      type: number
+                      format: float
                     code:
                       type: string
                     digits:
@@ -179,6 +186,7 @@ put:
           example:
             data:
               active: true
+              cash_rounding: null
               code: "AFN"
               digits: 2
               id: 1
