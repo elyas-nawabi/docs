@@ -64,7 +64,7 @@ tags:
 paths:
   '/wizard/{wizard}/session/create':
     $ref: 'get_wizard.yaml'
-  '/wizard/{wizard}/session/delete/{session_id:}':
+  '/wizard/{wizard}/session/delete/{session_id}':
     $ref: 'delete_wizard.yaml'
  
   

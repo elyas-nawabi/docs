@@ -6,14 +6,14 @@ get:
       operationId: getWizard
       parameters:
         - name: wizard
-          in: patCreate Wizard Sessionh
+          in: path
           schema:
             type: string
           rquired: true
-          example: wz_1
+          example: account.fiscalyear.renew
       responses:
-        '200':
-          description: OK
+        '201':
+          description: Created
           content:
             application/json:
               schema:
@@ -22,7 +22,8 @@ get:
                     data:
                       type: object
                       properties:
-                        
+                        session_id: 
+                          type: integer
                     errors:
                       type: object
                     pagination:
@@ -43,7 +44,8 @@ get:
                       type: string
                       nullable: true
               example:
-                data: null
+                data: 
+                  session_id: 92
                 error: null
                 pagination: null
                 status: 200

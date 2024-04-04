@@ -4,8 +4,21 @@ delete:
       summary: Delete Wizard Session.
       description: Delete Wizard Session.
       operationId: deleteWizardSession
+      parameters:
+        - name: wizard
+          in: path
+          schema:
+            type: string
+          rquired: true
+          example: account.fiscalyear.renew
+        - name: session_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 19
+        
       requestBody:
-        required: true
         content:
           application/json:
             schema:
