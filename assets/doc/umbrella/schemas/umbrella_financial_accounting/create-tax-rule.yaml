@@ -1,18 +1,24 @@
       properties:
         company: 
           type: integer
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
         kind:
           type: string
         lines:
           type: array
           properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
             end_date:
               type: string
               format: date
-            from_country: 
-              type: integer
-            from_subdivision: 
-              type: integer
             group: 
               type: integer
             keep_origin: 
@@ -32,10 +38,11 @@
               type: integer 
             template_override:
               type: boolean
-            to_country:
+            write_date: 
+              type: string
+              format: date
+            write_uid: 
               type: integer
-            to_subdivision:
-              type: integer 
         name: 
           type: string
         rec_name: 
@@ -44,29 +51,55 @@
           type: integer
         template_override:
           type: boolean
+        write_date: 
+          type: string
+          format: date
+        write_uid: 
+          type: integer
       required:
         - company
         - name
         - kind
       example:
         company: 1
+        company_:
+          id: 1
+          name: Milestone
+        create_date: '2024-04-27T09:22:13.955826'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        id: 7
         kind: both
         lines:
-        - end_date: '2024-03-31'
-          from_country: 1
-          from_subdivision: 3
-          group: 20
+        - create_date: '2024-04-27T09:22:13.955826'
+          create_uid: 1
+          create_uid_:
+            id: 1
+            name: Administrator
+          end_date: '2024-03-31'
+          group: 
+          group_: {}
+          id: 4
           keep_origin: true
-          origin_tax: 24
-          rec_name: '1'
+          origin_tax: null
+          origin_tax_: {}
+          rec_name: '4'
           sequence: 1
           start_date: '2024-03-04'
-          tax: 23
-          template: 
+          tax: null
+          tax_: {}
+          template: null
+          template_: {}
           template_override: false
-          to_country: 4
-          to_subdivision: 
-        name: tx_rule_1
-        rec_name: tx_rule_1
+          write_date: null
+          write_uid: null
+          write_uid_: {}
+        name: tx_rule_2
+        rec_name: tx_rule_2
         template: null
         template_override: false
+        write_date: null
+        write_uid: null
+        write_uid_: {}

@@ -31,6 +31,16 @@
                                 type: integer
                               name: 
                                 type: string
+                          create_date: 
+                            type: string 
+                            format: date 
+                          create_uid: 
+                            type: integer
+                          create_uid_:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                           id: 
                             type: integer
                           kind:
@@ -39,6 +49,13 @@
                             type: string
                           rec_name: 
                             type: string
+                          write_date: 
+                            type: string 
+                            format: date
+                          write_uid: 
+                            type: integer
+                          write_uid_: 
+                            type: object
                     errors:
                       type: object
                     pagination:
@@ -62,10 +79,18 @@
                     company_:
                       id: 1
                       name: Party 1
+                    create_date: '2024-04-27T09:22:13.955826'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
                     id: 1
                     kind: both
                     name: tx_rule_1
                     rec_name: tx_rule_1
+                    write_date: null
+                    write_uid: null
+                    write_uid_: {}
                 errors: null
                 pagination:
                   page: 1
