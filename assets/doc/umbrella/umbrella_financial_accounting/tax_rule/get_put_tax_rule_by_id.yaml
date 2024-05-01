@@ -121,6 +121,12 @@ get:
                               type: integer
                             write_uid_:
                               type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string 
+
                         name: 
                           type: string
                         rec_name: 
