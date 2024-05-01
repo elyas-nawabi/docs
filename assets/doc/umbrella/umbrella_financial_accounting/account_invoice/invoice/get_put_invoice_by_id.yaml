@@ -274,11 +274,11 @@ get:
                               type: integer
                             account_:
                               type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name: 
-                                type: string
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
                             amount: 
                               type: integer
                             amount_currency: 
@@ -672,7 +672,7 @@ get:
                         id: 1
                         name: Units
                       quantity: 1
-                      rec_name: "1\_u [006] Medicine @ 1"
+                      rec_name: "1 [006] Medicine @ 1"
                       summary: ''
                       taxes: []
                       taxes_date: '2024-04-22'
@@ -1503,7 +1503,7 @@ put:
                         id: 1
                         name: Units
                       quantity: 1
-                      rec_name: "1\_u [006] Medicine @ 1"
+                      rec_name: "1 [006] Medicine @ 1"
                       summary: ''
                       taxes: []
                       taxes_date: '2024-04-22'
