@@ -36,6 +36,8 @@ post:
                           format: date
                         allow_cancel:
                           type: boolean
+                        alternative_payees:
+                          type: array
                         amount_to_pay: 
                           type: integer
                         amount_to_pay_today: 
@@ -69,9 +71,12 @@ post:
                               type: integer
                             name: 
                               type: string
-                        consolidation_company: 
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
                           type: integer
-                        consolidation_company_:
+                        create_uid_:
                           type: object
                           properties:
                             id: 
@@ -136,6 +141,18 @@ post:
                             company: 
                               type: integer
                             company_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            create_date: 
+                              type: string 
+                              format: date 
+                            create_uid: 
+                              type: integer
+                            create_uid_:
                               type: object
                               properties:
                                 id: 
@@ -238,8 +255,196 @@ post:
                                   type: string
                             unit_price: 
                               type: integer
+                            write_date:
+                              type: string
+                              format: date 
+                            write_uid:
+                              type: integer
+                            write_uid_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
                         lines_to_pay: 
                           type: array
+                          properties:
+                            account: 
+                              type: integer
+                            account_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            amount: 
+                              type: integer
+                            amount_currency: 
+                              type: integer
+                            amount_second_currency: 
+                              type: integer
+                            company: 
+                              type: integer
+                            company_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            create_date: 
+                              type: string 
+                              format: date 
+                            create_uid: 
+                              type: integer
+                            create_uid_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            credit: 
+                              type: integer
+                            currency: 
+                              type: integer
+                            currency_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            date: 
+                              type: string
+                              format: date 
+                            debit: 
+                              type: integer
+                            delegated_amount: 
+                              type: integer
+                            description: 
+                              type: string
+                            has_maturity_date: 
+                              type: boolean
+                            id: 
+                              type: integer
+                            journal: 
+                              type: integer
+                            journal_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            maturity_date: '2024-07-05'
+                            move: 
+                              type: integer
+                            move_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            move_description_used: 
+                              type: string
+                            move_origin:
+                              type: string
+                            move_origin_:
+                              type: object
+                              properties:
+                                entity:
+                                  type: string
+                                  nullable: true
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            move_state: 
+                              type: string
+                            origin:
+                              type: string 
+                            origin_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            party: 
+                              type: integer
+                            party_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            party_required:
+                              type: boolean
+                            payable_receivable_balance: 
+                              type: integer
+                            payment_blocked:
+                              type: boolean
+                            payment_kind: 
+                              type: string
+                            period: 
+                              type: integer
+                            period_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            rec_name: 
+                              type: string
+                            reconciliation: 
+                              type: string
+                            reconciliation_: 
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            second_currency: 
+                              type: integer
+                            second_currency_: 
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            second_currency_required: 
+                              type: integer
+                            second_currency_required_: 
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            state: 
+                              type: string
+                            tax_lines: 
+                              type: array
+                            write_date:
+                              type: string
+                              format: date 
+                            write_uid:
+                              type: integer
+                            write_uid_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
                         move: 
                           type: integer
                         move_:
@@ -341,6 +546,18 @@ post:
                         validated_by:
                           type: integer 
                         validated_by_: 
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
+                        write_date: 
+                          type: string
+                          format: date
+                        write_uid: 
+                          type: integer
+                        write_uid_:
                           type: object
                           properties:
                             id: 

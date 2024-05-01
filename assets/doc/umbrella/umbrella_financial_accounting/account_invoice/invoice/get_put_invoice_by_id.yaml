@@ -36,6 +36,8 @@ get:
                           format: date
                         allow_cancel:
                           type: boolean
+                        alternative_payees:
+                          type: array
                         amount_to_pay: 
                           type: integer
                         amount_to_pay_today: 
@@ -69,9 +71,12 @@ get:
                               type: integer
                             name: 
                               type: string
-                        consolidation_company: 
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
                           type: integer
-                        consolidation_company_:
+                        create_uid_:
                           type: object
                           properties:
                             id: 
@@ -136,6 +141,18 @@ get:
                             company: 
                               type: integer
                             company_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            create_date: 
+                              type: string 
+                              format: date 
+                            create_uid: 
+                              type: integer
+                            create_uid_:
                               type: object
                               properties:
                                 id: 
@@ -238,8 +255,196 @@ get:
                                   type: string
                             unit_price: 
                               type: integer
+                            write_date:
+                              type: string
+                              format: date 
+                            write_uid:
+                              type: integer
+                            write_uid_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
                         lines_to_pay: 
                           type: array
+                          properties:
+                            account: 
+                              type: integer
+                            account_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            amount: 
+                              type: integer
+                            amount_currency: 
+                              type: integer
+                            amount_second_currency: 
+                              type: integer
+                            company: 
+                              type: integer
+                            company_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            create_date: 
+                              type: string 
+                              format: date 
+                            create_uid: 
+                              type: integer
+                            create_uid_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            credit: 
+                              type: integer
+                            currency: 
+                              type: integer
+                            currency_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            date: 
+                              type: string
+                              format: date 
+                            debit: 
+                              type: integer
+                            delegated_amount: 
+                              type: integer
+                            description: 
+                              type: string
+                            has_maturity_date: 
+                              type: boolean
+                            id: 
+                              type: integer
+                            journal: 
+                              type: integer
+                            journal_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            maturity_date: '2024-07-05'
+                            move: 
+                              type: integer
+                            move_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            move_description_used: 
+                              type: string
+                            move_origin:
+                              type: string
+                            move_origin_:
+                              type: object
+                              properties:
+                                entity:
+                                  type: string
+                                  nullable: true
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            move_state: 
+                              type: string
+                            origin:
+                              type: string 
+                            origin_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            party: 
+                              type: integer
+                            party_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            party_required:
+                              type: boolean
+                            payable_receivable_balance: 
+                              type: integer
+                            payment_blocked:
+                              type: boolean
+                            payment_kind: 
+                              type: string
+                            period: 
+                              type: integer
+                            period_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            rec_name: 
+                              type: string
+                            reconciliation: 
+                              type: string
+                            reconciliation_: 
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            second_currency: 
+                              type: integer
+                            second_currency_: 
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            second_currency_required: 
+                              type: integer
+                            second_currency_required_: 
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            state: 
+                              type: string
+                            tax_lines: 
+                              type: array
+                            write_date:
+                              type: string
+                              format: date 
+                            write_uid:
+                              type: integer
+                            write_uid_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
                         move: 
                           type: integer
                         move_:
@@ -347,6 +552,18 @@ get:
                               type: integer
                             name: 
                               type: string
+                        write_date: 
+                          type: string
+                          format: date
+                        write_uid: 
+                          type: integer
+                        write_uid_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                     errors:
                       type: object
                     pagination:
@@ -371,133 +588,221 @@ get:
                   account: 5
                   account_:
                     id: 5
-                    name: Main Receivable
-                  accounting_date: '2024-03-18'
+                    name: Main Payable
+                  accounting_date: null
                   allow_cancel: true
-                  amount_to_pay: 0
+                  alternative_payees: []
+                  amount_to_pay: 500
                   amount_to_pay_today: 0
-                  cancel_move: 
+                  cancel_move: null
                   cancel_move_: {}
                   comment: ''
                   company: 1
                   company_:
                     id: 1
-                    name: Party 1
-                  company_party: 3
+                    name: Milestone
+                  company_party: 1
                   company_party_:
-                    id: 3
-                    name: Party 1
-                  consolidation_company: 2
-                  consolidation_company_:
-                    id: 2
-                    name: Party 1
+                    id: 1
+                    name: Milestone
+                  create_date: '2024-04-22T06:14:42.276198'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
                   currency: 1
                   currency_:
                     id: 1
                     name: Afghani
-                  currency_date: '2024-03-25'
-                  description: this is some description
-                  has_payment_method: true
+                  currency_date: '2024-04-22'
+                  description: ''
+                  has_payment_method: false
                   has_report_cache: false
-                  id: 2
-                  invoice_address: 3
+                  id: 3
+                  invoice_address: 1
                   invoice_address_:
-                    id: 3
-                    name: prt2, herat tower, street 2, 1002, Herat, 1
-                  invoice_date: '2024-03-25'
-                  journal: 1
-                  journal_:
                     id: 1
-                    name: Revenue
-                  lines:
-                  - account: 31
-                    account_:
-                      id: 31
-                      name: 1 - 1
-                    amount: 1
-                    company: 1
-                    company_:
-                      id: 1
-                      name: Party 1
-                    currency: 1
-                    currency_:
-                      id: 1
-                      name: Afghani
-                    description: ''
+                    name: Milestone
+                  invoice_date: '2024-04-22'
+                  journal: 2
+                  journal_:
                     id: 2
-                    invoice: 2
-                    invoice_description: this is some description
-                    invoice_party: 1
-                    invoice_party_:
-                      id: 1
-                      name: Party 1
-                    invoice_state: draft
-                    invoice_type: out
-                    note: ''
-                    origin: 
-                    origin_: {}
-                    party: 
-                    party_: {}
-                    party_lang: en
-                    product: 1
-                    product_:
-                      id: 1
-                      name: "[11] 1"
-                    product_uom_category: 8
-                    product_uom_category_:
+                    name: Expense
+                  lines:
+                    - account: 4
+                      account_:
+                        id: 4
+                        name: Main Expense
+                      amount: 500
+                      company: 1
+                      company_:
+                        id: 1
+                        name: Milestone
+                      create_date: '2024-04-22T06:14:42.276198'
+                      create_uid: 1
+                      create_uid_:
+                        id: 1
+                        name: Administrator
+                      currency: 1
+                      currency_:
+                        id: 1
+                        name: Afghani
+                      description: ''
+                      id: 3
+                      invoice: 3
+                      invoice_description: ''
+                      invoice_party: 1
+                      invoice_party_:
+                        id: 1
+                        name: Milestone
+                      invoice_state: posted
+                      invoice_type: in
+                      note: ''
+                      origin: null
+                      origin_: {}
+                      party: null
+                      party_: {}
+                      party_lang: en
+                      product: 1
+                      product_:
+                        id: 1
+                        name: '[006] Medicine'
+                      product_uom_category: 1
+                      product_uom_category_:
+                        id: 1
+                        name: Units
+                      quantity: 1
+                      rec_name: "1 [006] Medicine @ 1"
+                      summary: ''
+                      taxes: []
+                      taxes_date: '2024-04-22'
+                      taxes_deductible_rate: 2.e-10
+                      type: line
+                      unit: 1
+                      unit_:
+                        id: 1
+                        name: Unit
+                      unit_price: 500
+                      write_date: null
+                      write_uid: null
+                      write_uid_: {}
+                  lines_to_pay:
+                    - account: 5
+                      account_:
+                        id: 5
+                        name: Main Payable
+                      amount: -500
+                      amount_currency: 1
+                      amount_second_currency: null
+                      company: 1
+                      company_:
+                        id: 1
+                        name: Milestone
+                      create_date: '2024-04-22T06:14:42.794659'
+                      create_uid: 1
+                      create_uid_:
+                        id: 1
+                        name: Administrator
+                      credit: 500
+                      currency: 1
+                      currency_:
+                        id: 1
+                        name: Afghani
+                      date: '2024-04-22'
+                      debit: 0
+                      delegated_amount: null
+                      description: null
+                      has_maturity_date: true
                       id: 8
-                      name: '1'
-                    quantity: 1
-                    rec_name: 1.00 AFN [11] 1 @ [1]
-                    summary: ''
-                    taxes: []
-                    taxes_date: '2024-03-25'
-                    taxes_deductible_rate: 1
-                    type: line
-                    unit: 36
-                    unit_:
-                      id: 36
-                      name: '1'
-                    unit_price: 1
-                  lines_to_pay: []
-                  move: 
-                  move_: {}
-                  number: 
+                      journal: 2
+                      journal_:
+                        id: 2
+                        name: Expense
+                      maturity_date: '2024-07-05'
+                      move: 4
+                      move_:
+                        id: 4
+                        name: '4'
+                      move_description_used: ''
+                      move_origin: 'account.invoice,3'
+                      move_origin_:
+                        entity: null
+                        id: 3
+                        name: '1'
+                      move_state: posted
+                      origin: null
+                      origin_: {}
+                      party: 1
+                      party_:
+                        id: 1
+                        name: Milestone
+                      party_required: true
+                      payable_receivable_balance: -500
+                      payment_blocked: false
+                      payment_kind: payable
+                      period: 9
+                      period_:
+                        id: 9
+                        name: 2024 Periods
+                      rec_name: (Main Payable)
+                      reconciliation: null
+                      reconciliation_: {}
+                      second_currency: null
+                      second_currency_: {}
+                      second_currency_required: null
+                      second_currency_required_: {}
+                      state: valid
+                      tax_lines: []
+                      write_date: '2024-04-22T06:14:42.794659'
+                      write_uid: 1
+                      write_uid_:
+                        id: 1
+                        name: Administrator
+                  move: 4
+                  move_:
+                    id: 4
+                    name: '4'
+                  number: '1'
                   origins: ''
                   party: 1
                   party_:
                     id: 1
-                    name: Party 1
+                    name: Milestone
                   party_lang: en
-                  party_tax_identifier: 
+                  party_tax_identifier: null
                   party_tax_identifier_: {}
                   payment_lines: []
-                  payment_term: 1
+                  payment_term: 5
                   payment_term_:
-                    id: 1
-                    name: paymentTerm1
-                  payment_term_date: '2024-03-18'
-                  posted_by: 
+                    id: 5
+                    name: New term 1
+                  payment_term_date: null
+                  posted_by: null
                   posted_by_: {}
-                  rec_name: "[1]"
-                  reconciled: 
+                  rec_name: '1'
+                  reconciled: null
                   reconciliation_lines: []
-                  reference: '1'
-                  sequence: 
-                  state: draft
+                  reference: ''
+                  sequence: 1
+                  state: posted
                   tax_amount: 0
-                  tax_amount_cache: 
-                  tax_identifier: 
+                  tax_amount_cache: 0
+                  tax_identifier: null
                   tax_identifier_: {}
                   taxes: []
-                  total_amount: 1
-                  total_amount_cache: 
-                  type: out
-                  type_name: Customer
-                  untaxed_amount: 1
-                  untaxed_amount_cache: 
-                  validated_by: 
+                  total_amount: 500
+                  total_amount_cache: 500
+                  type: in
+                  type_name: Supplier
+                  untaxed_amount: 500
+                  untaxed_amount_cache: 500
+                  validated_by: null
                   validated_by_: {}
+                  write_date: '2024-04-22T06:17:47.557704'
+                  write_uid: 1
+                  write_uid_:
+                    id: 1
+                    name: Administrator
                 error: null
                 pagination: null
                 status: 200
@@ -563,6 +868,8 @@ put:
                           format: date
                         allow_cancel:
                           type: boolean
+                        alternative_payees:
+                          type: array
                         amount_to_pay: 
                           type: integer
                         amount_to_pay_today: 
@@ -596,9 +903,12 @@ put:
                               type: integer
                             name: 
                               type: string
-                        consolidation_company: 
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
                           type: integer
-                        consolidation_company_:
+                        create_uid_:
                           type: object
                           properties:
                             id: 
@@ -663,6 +973,18 @@ put:
                             company: 
                               type: integer
                             company_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            create_date: 
+                              type: string 
+                              format: date 
+                            create_uid: 
+                              type: integer
+                            create_uid_:
                               type: object
                               properties:
                                 id: 
@@ -765,8 +1087,196 @@ put:
                                   type: string
                             unit_price: 
                               type: integer
+                            write_date:
+                              type: string
+                              format: date 
+                            write_uid:
+                              type: integer
+                            write_uid_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
                         lines_to_pay: 
                           type: array
+                          properties:
+                            account: 
+                              type: integer
+                            account_:
+                              type: object
+                            properties:
+                              id: 
+                                type: integer
+                              name: 
+                                type: string
+                            amount: 
+                              type: integer
+                            amount_currency: 
+                              type: integer
+                            amount_second_currency: 
+                              type: integer
+                            company: 
+                              type: integer
+                            company_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            create_date: 
+                              type: string 
+                              format: date 
+                            create_uid: 
+                              type: integer
+                            create_uid_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            credit: 
+                              type: integer
+                            currency: 
+                              type: integer
+                            currency_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            date: 
+                              type: string
+                              format: date 
+                            debit: 
+                              type: integer
+                            delegated_amount: 
+                              type: integer
+                            description: 
+                              type: string
+                            has_maturity_date: 
+                              type: boolean
+                            id: 
+                              type: integer
+                            journal: 
+                              type: integer
+                            journal_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            maturity_date: '2024-07-05'
+                            move: 
+                              type: integer
+                            move_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            move_description_used: 
+                              type: string
+                            move_origin:
+                              type: string
+                            move_origin_:
+                              type: object
+                              properties:
+                                entity:
+                                  type: string
+                                  nullable: true
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            move_state: 
+                              type: string
+                            origin:
+                              type: string 
+                            origin_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            party: 
+                              type: integer
+                            party_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            party_required:
+                              type: boolean
+                            payable_receivable_balance: 
+                              type: integer
+                            payment_blocked:
+                              type: boolean
+                            payment_kind: 
+                              type: string
+                            period: 
+                              type: integer
+                            period_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            rec_name: 
+                              type: string
+                            reconciliation: 
+                              type: string
+                            reconciliation_: 
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            second_currency: 
+                              type: integer
+                            second_currency_: 
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            second_currency_required: 
+                              type: integer
+                            second_currency_required_: 
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
+                            state: 
+                              type: string
+                            tax_lines: 
+                              type: array
+                            write_date:
+                              type: string
+                              format: date 
+                            write_uid:
+                              type: integer
+                            write_uid_:
+                              type: object
+                              properties:
+                                id: 
+                                  type: integer
+                                name: 
+                                  type: string
                         move: 
                           type: integer
                         move_:
@@ -874,6 +1384,18 @@ put:
                               type: integer
                             name: 
                               type: string
+                        write_date: 
+                          type: string
+                          format: date
+                        write_uid: 
+                          type: integer
+                        write_uid_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name: 
+                              type: string
                     errors:
                       type: object
                     pagination:
@@ -897,133 +1419,221 @@ put:
                   account: 5
                   account_:
                     id: 5
-                    name: Main Receivable
-                  accounting_date: '2024-03-18'
+                    name: Main Payable
+                  accounting_date: null
                   allow_cancel: true
-                  amount_to_pay: 0
+                  alternative_payees: []
+                  amount_to_pay: 500
                   amount_to_pay_today: 0
-                  cancel_move: 
+                  cancel_move: null
                   cancel_move_: {}
                   comment: ''
                   company: 1
                   company_:
                     id: 1
-                    name: Party 1
-                  company_party: 3
+                    name: Milestone
+                  company_party: 1
                   company_party_:
-                    id: 3
-                    name: Party 1
-                  consolidation_company: 2
-                  consolidation_company_:
-                    id: 2
-                    name: Party 1
+                    id: 1
+                    name: Milestone
+                  create_date: '2024-04-22T06:14:42.276198'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
                   currency: 1
                   currency_:
                     id: 1
                     name: Afghani
-                  currency_date: '2024-03-25'
-                  description: this is some description
-                  has_payment_method: true
+                  currency_date: '2024-04-22'
+                  description: ''
+                  has_payment_method: false
                   has_report_cache: false
-                  id: 2
-                  invoice_address: 3
+                  id: 3
+                  invoice_address: 1
                   invoice_address_:
-                    id: 3
-                    name: prt2, herat tower, street 2, 1002, Herat, 1
-                  invoice_date: '2024-03-25'
-                  journal: 1
-                  journal_:
                     id: 1
-                    name: Revenue
-                  lines:
-                  - account: 31
-                    account_:
-                      id: 31
-                      name: 1 - 1
-                    amount: 1
-                    company: 1
-                    company_:
-                      id: 1
-                      name: Party 1
-                    currency: 1
-                    currency_:
-                      id: 1
-                      name: Afghani
-                    description: ''
+                    name: Milestone
+                  invoice_date: '2024-04-22'
+                  journal: 2
+                  journal_:
                     id: 2
-                    invoice: 2
-                    invoice_description: this is some description
-                    invoice_party: 1
-                    invoice_party_:
-                      id: 1
-                      name: Party 1
-                    invoice_state: draft
-                    invoice_type: out
-                    note: ''
-                    origin: 
-                    origin_: {}
-                    party: 
-                    party_: {}
-                    party_lang: en
-                    product: 1
-                    product_:
-                      id: 1
-                      name: "[11] 1"
-                    product_uom_category: 8
-                    product_uom_category_:
+                    name: Expense
+                  lines:
+                    - account: 4
+                      account_:
+                        id: 4
+                        name: Main Expense
+                      amount: 500
+                      company: 1
+                      company_:
+                        id: 1
+                        name: Milestone
+                      create_date: '2024-04-22T06:14:42.276198'
+                      create_uid: 1
+                      create_uid_:
+                        id: 1
+                        name: Administrator
+                      currency: 1
+                      currency_:
+                        id: 1
+                        name: Afghani
+                      description: ''
+                      id: 3
+                      invoice: 3
+                      invoice_description: ''
+                      invoice_party: 1
+                      invoice_party_:
+                        id: 1
+                        name: Milestone
+                      invoice_state: posted
+                      invoice_type: in
+                      note: ''
+                      origin: null
+                      origin_: {}
+                      party: null
+                      party_: {}
+                      party_lang: en
+                      product: 1
+                      product_:
+                        id: 1
+                        name: '[006] Medicine'
+                      product_uom_category: 1
+                      product_uom_category_:
+                        id: 1
+                        name: Units
+                      quantity: 1
+                      rec_name: "1 [006] Medicine @ 1"
+                      summary: ''
+                      taxes: []
+                      taxes_date: '2024-04-22'
+                      taxes_deductible_rate: 2.e-10
+                      type: line
+                      unit: 1
+                      unit_:
+                        id: 1
+                        name: Unit
+                      unit_price: 500
+                      write_date: null
+                      write_uid: null
+                      write_uid_: {}
+                  lines_to_pay:
+                    - account: 5
+                      account_:
+                        id: 5
+                        name: Main Payable
+                      amount: -500
+                      amount_currency: 1
+                      amount_second_currency: null
+                      company: 1
+                      company_:
+                        id: 1
+                        name: Milestone
+                      create_date: '2024-04-22T06:14:42.794659'
+                      create_uid: 1
+                      create_uid_:
+                        id: 1
+                        name: Administrator
+                      credit: 500
+                      currency: 1
+                      currency_:
+                        id: 1
+                        name: Afghani
+                      date: '2024-04-22'
+                      debit: 0
+                      delegated_amount: null
+                      description: null
+                      has_maturity_date: true
                       id: 8
-                      name: '1'
-                    quantity: 1
-                    rec_name: 1.00 AFN [11] 1 @ [1]
-                    summary: ''
-                    taxes: []
-                    taxes_date: '2024-03-25'
-                    taxes_deductible_rate: 1
-                    type: line
-                    unit: 36
-                    unit_:
-                      id: 36
-                      name: '1'
-                    unit_price: 1
-                  lines_to_pay: []
-                  move: 
-                  move_: {}
-                  number: 
+                      journal: 2
+                      journal_:
+                        id: 2
+                        name: Expense
+                      maturity_date: '2024-07-05'
+                      move: 4
+                      move_:
+                        id: 4
+                        name: '4'
+                      move_description_used: ''
+                      move_origin: 'account.invoice,3'
+                      move_origin_:
+                        entity: null
+                        id: 3
+                        name: '1'
+                      move_state: posted
+                      origin: null
+                      origin_: {}
+                      party: 1
+                      party_:
+                        id: 1
+                        name: Milestone
+                      party_required: true
+                      payable_receivable_balance: -500
+                      payment_blocked: false
+                      payment_kind: payable
+                      period: 9
+                      period_:
+                        id: 9
+                        name: 2024 Periods
+                      rec_name: (Main Payable)
+                      reconciliation: null
+                      reconciliation_: {}
+                      second_currency: null
+                      second_currency_: {}
+                      second_currency_required: null
+                      second_currency_required_: {}
+                      state: valid
+                      tax_lines: []
+                      write_date: '2024-04-22T06:14:42.794659'
+                      write_uid: 1
+                      write_uid_:
+                        id: 1
+                        name: Administrator
+                  move: 4
+                  move_:
+                    id: 4
+                    name: '4'
+                  number: '1'
                   origins: ''
                   party: 1
                   party_:
                     id: 1
-                    name: Party 1
+                    name: Milestone
                   party_lang: en
-                  party_tax_identifier: 
+                  party_tax_identifier: null
                   party_tax_identifier_: {}
                   payment_lines: []
-                  payment_term: 1
+                  payment_term: 5
                   payment_term_:
-                    id: 1
-                    name: paymentTerm1
-                  payment_term_date: '2024-03-18'
-                  posted_by: 
+                    id: 5
+                    name: New term 1
+                  payment_term_date: null
+                  posted_by: null
                   posted_by_: {}
-                  rec_name: "[1]"
-                  reconciled: 
+                  rec_name: '1'
+                  reconciled: null
                   reconciliation_lines: []
-                  reference: '1'
-                  sequence: 
-                  state: draft
+                  reference: ''
+                  sequence: 1
+                  state: posted
                   tax_amount: 0
-                  tax_amount_cache: 
-                  tax_identifier: 
+                  tax_amount_cache: 0
+                  tax_identifier: null
                   tax_identifier_: {}
                   taxes: []
-                  total_amount: 1
-                  total_amount_cache: 
-                  type: out
-                  type_name: Customer
-                  untaxed_amount: 1
-                  untaxed_amount_cache: 
-                  validated_by: 
+                  total_amount: 500
+                  total_amount_cache: 500
+                  type: in
+                  type_name: Supplier
+                  untaxed_amount: 500
+                  untaxed_amount_cache: 500
+                  validated_by: null
                   validated_by_: {}
+                  write_date: '2024-04-22T06:17:47.557704'
+                  write_uid: 1
+                  write_uid_:
+                    id: 1
+                    name: Administrator
                 errors: null
                 pagination: null
                 status: 200
