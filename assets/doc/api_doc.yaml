@@ -388,6 +388,8 @@ components:
       $ref: 'umbrella/schemas/umbrella_banking/create-bank.yaml'
     UpdateBank:
       $ref: 'umbrella/schemas/umbrella_banking/create-bank.yaml'
+
+      
     # get with filters feature
     Filter:
       $ref: 'umbrella/schemas/filter.yaml'
