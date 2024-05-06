@@ -85,7 +85,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateProduct'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateProduct'
       responses:
         '200':
           description: OK

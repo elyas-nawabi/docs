@@ -388,6 +388,18 @@ components:
       $ref: 'umbrella/schemas/umbrella_banking/create-bank.yaml'
     UpdateBank:
       $ref: 'umbrella/schemas/umbrella_banking/create-bank.yaml'
+    UpdateProductConfiguration:
+      $ref: 'umbrella/schemas/umbrella_product/create-configuration.yaml'
+    CreateProduct:
+      $ref: 'umbrella/schemas/umbrella_product/create-product.yaml'
+    CreateProductCategory:
+      $ref: 'umbrella/schemas/umbrella_product/create-product-category.yaml'
+    CreateUnitOfMeasure:
+      $ref: 'umbrella/schemas/umbrella_product/create-unit-of-measure.yaml'
+    CreateUOMCategory:
+      $ref: 'umbrella/schemas/umbrella_product/create-uom-category.yaml'
+    CreateVariant:
+      $ref: 'umbrella/schemas/umbrella_product/create-variant.yaml'
 
       
     # get with filters feature
