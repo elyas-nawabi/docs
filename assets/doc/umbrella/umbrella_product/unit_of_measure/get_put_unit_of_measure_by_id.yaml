@@ -1,6 +1,6 @@
 get:
       tags:
-        - get unit of measure
+        - unit of measure
       summary: Get one get unit of measure.
       description: Get one get unit of measure.
       operationId: getUnitOfMeasureById
@@ -85,7 +85,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateUnitOfMeasure'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateUnitOfMeasure'
       responses:
         '200':
           description: OK

@@ -85,7 +85,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateVariant'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateVariant'
       responses:
         '200':
           description: OK

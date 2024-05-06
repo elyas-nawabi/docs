@@ -85,7 +85,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateUOMCategory'
+              $ref: '../../../api_doc.yaml#/components/schemas/CreateUOMCategory'
       responses:
         '200':
           description: OK
