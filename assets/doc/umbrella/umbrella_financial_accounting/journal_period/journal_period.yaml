@@ -65,8 +65,8 @@ paths:
   '/financial-accounting/journals-periods/search':
     $ref: 'get_journal_period.yaml'
   '/financial-accounting/journals-periods/{obj_id}/close':
-    $ref: 'close_journals_period.yaml'
+    $ref: 'close_journal_period.yaml'
   '/financial-accounting/journals-periods/{obj_id}/reopen':
-    $ref: 'reopen_journals_period.yaml'
+    $ref: 'reopen_journal_period.yaml'
   
   
