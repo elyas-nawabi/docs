@@ -27,24 +27,14 @@
                           approved_by: 
                             type: integer
                           approved_by_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name:
-                                type: string
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                           create_date:
                             type: string
                             format: date
                           currency: 
                             type: integer
                           currency_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name:
-                                type: string
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                           date:
                             type: string
                             format: date
@@ -53,23 +43,13 @@
                           journal: 
                             type: integer
                           journal_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name:
-                                type: string
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                           kind: 
                             type: string
                           party: 
                             type: integer
                           party_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name:
-                                type: string
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                           rec_name:
                             type: string
                           state: 

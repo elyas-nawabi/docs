@@ -26,21 +26,11 @@ post:
                           bank: 
                             type: integer
                           bank_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name: 
-                                type: string
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                           currency: 
                             type: integer
                           currency_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name: 
-                                type: string
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                           id: 
                             type: integer
                           numbers:

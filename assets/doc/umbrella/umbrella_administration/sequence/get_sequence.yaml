@@ -25,12 +25,7 @@
                         company:
                           type: integer
                         company_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         id:
                           type: integer
                         name:
@@ -42,12 +37,7 @@
                         sequence_type:
                           type: integer
                         sequence_type_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         suffix:
                           type: string
                         type:

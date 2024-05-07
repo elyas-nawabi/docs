@@ -32,12 +32,7 @@ post:
                             type: integer
                           currency: 
                           currency_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name: 
-                                type: string
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                           debit: 
                             type: integer
                           id: 
@@ -51,12 +46,7 @@ post:
                           sequence: 
                             type: integer
                           sequence_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name: 
-                                type: string
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                           type:
                             type: string
                     errors:

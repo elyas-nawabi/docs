@@ -25,61 +25,31 @@ get:
                         account: 
                           type: integer
                         account_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         active:
                           type: boolean
                         bank_account:
                           type: integer 
                         bank_account_: 
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         company: 
                           type: integer
                         company_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         company_party: 
                           type: integer
                         company_party_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         currency:
                           type: integer
                         currency_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         id: 
                           type: integer
                         journal:
                           type: integer
                         journal_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         name:
                           type: string
                         rec_name:
@@ -188,61 +158,31 @@ put:
                         account: 
                           type: integer
                         account_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         active:
                           type: boolean
                         bank_account:
                           type: integer 
                         bank_account_: 
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         company: 
                           type: integer
                         company_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         company_party: 
                           type: integer
                         company_party_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         currency:
                           type: integer
                         currency_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         id: 
                           type: integer
                         journal:
                           type: integer
                         journal_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         name:
                           type: string
                         rec_name:

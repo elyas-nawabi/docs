@@ -210,12 +210,7 @@
                         customer_payment_term: 
                           type: integer
                         customer_payment_term_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         customer_tax_rule:
                           type: integer
                           nullable: true
@@ -607,12 +602,7 @@
                         customer_payment_term: 
                           type: integer
                         customer_payment_term_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         customer_tax_rule:
                           type: integer
                           nullable: true

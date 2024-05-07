@@ -220,7 +220,7 @@ components:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account.yaml'
     CreateCOATemplate:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-coa-template.yaml'
-    CreateCOATemplatePropertes:
+    CreateCOATemplateProperties:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-coa-template-properties.yaml'
     UpdateCOATemplate:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/update-coa-template.yaml'
@@ -405,6 +405,14 @@ components:
     # get with filters feature
     Filter:
       $ref: 'umbrella/schemas/filter.yaml'
+
+    CommonType:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
 
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
