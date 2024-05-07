@@ -406,6 +406,14 @@ components:
     Filter:
       $ref: 'umbrella/schemas/filter.yaml'
 
+    CommonType:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
     HTTP401:

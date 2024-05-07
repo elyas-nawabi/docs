@@ -22,7 +22,66 @@
                     data:
                       type: array
                       properties:
-                
+                        account_category: 
+                          type: integer
+                        account_category_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                        active: 
+                          type: boolean
+                        code: 
+                          type: string
+                        cost_price: 
+                          type: number
+                          format: decimal  
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                        default_uom: 
+                          type: integer
+                        default_uom_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                        id: 
+                          type: integer
+                        list_price: 
+                          type: number
+                          format: decimal
+                        name: 
+                          type: string
+                        rec_name: 
+                          type: string
+                        type: 
+                          type: string
+                        write_date: 
+                          type: string
+                          format: date
+                        write_uid: 
+                          type: integer
+                        write_uid_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
                     errors:
                       type: object
                     pagination:
@@ -42,7 +101,28 @@
                       nullable: true
               example:
                 data:
-                
+                  account_category: null
+                  account_category_: {}
+                  active: true
+                  code: null
+                  cost_price: 
+                  create_date: '2024-04-21T12:49:26.385057'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  default_uom: 1
+                  default_uom_:
+                    id: 1
+                    name: Unit
+                  id: 1
+                  list_price: 
+                  name: Medicine
+                  rec_name: Medicine
+                  type: goods
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
                 errors: null
                 pagination:
                   page: 1
