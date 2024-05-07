@@ -29,12 +29,7 @@
                         party: 
                           type: integer
                         party_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         rec_name: 
                           type: string
                     error:

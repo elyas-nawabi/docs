@@ -25,12 +25,7 @@ post:
                         account: 
                           type: integer
                         account_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         accounting_date:
                           type: string
                           format: date
@@ -45,53 +40,28 @@ post:
                         cancel_move:
                           type: integer 
                         cancel_move_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         comment: 
                           type: string
                         company: 
                           type: integer
                         company_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         company_party: 
                           type: integer
                         company_party_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         create_date: 
                           type: string 
                           format: date 
                         create_uid: 
                           type: integer
                         create_uid_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         currency: 
                           type: integer
                         currency_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         currency_date:
                           type: string
                           format: date
@@ -106,68 +76,38 @@ post:
                         invoice_address: 
                           type: integer
                         invoice_address_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         invoice_date: 
                           type: string
                           format: date
                         journal: 
                           type: integer
                         journal_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         lines:
                           type: array
                           properties:
                             account: 
                               type: integer
                             account_:
-                              type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name: 
-                                type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             amount: 
                               type: integer
                             company: 
                               type: integer
                             company_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             create_date: 
                               type: string 
                               format: date 
                             create_uid: 
                               type: integer
                             create_uid_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             currency: 
                               type: integer
                             currency_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             description: 
                               type: string
                             id: 
@@ -179,12 +119,7 @@ post:
                             invoice_party: 
                               type: integer
                             invoice_party_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             invoice_state: 
                               type: string
                             invoice_type: 
@@ -194,41 +129,21 @@ post:
                             origin:
                               type: string 
                             origin_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             party: 
                               type: integer
                             party_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             party_lang: 
                               type: string
                             product: 
                               type: integer
                             product_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             product_uom_category: 
                               type: integer
                             product_uom_category_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             quantity: 
                               type: integer
                             rec_name: 
@@ -247,12 +162,7 @@ post:
                             unit:
                               type: integer
                             unit_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             unit_price: 
                               type: integer
                             write_date:
@@ -261,24 +171,14 @@ post:
                             write_uid:
                               type: integer
                             write_uid_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         lines_to_pay: 
                           type: array
                           properties:
                             account: 
                               type: integer
                             account_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             amount: 
                               type: integer
                             amount_currency: 
@@ -288,35 +188,20 @@ post:
                             company: 
                               type: integer
                             company_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             create_date: 
                               type: string 
                               format: date 
                             create_uid: 
                               type: integer
                             create_uid_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             credit: 
                               type: integer
                             currency: 
                               type: integer
                             currency_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             date: 
                               type: string
                               format: date 
@@ -333,22 +218,12 @@ post:
                             journal: 
                               type: integer
                             journal_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             maturity_date: '2024-07-05'
                             move: 
                               type: integer
                             move_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             move_description_used: 
                               type: string
                             move_origin:
@@ -368,21 +243,11 @@ post:
                             origin:
                               type: string 
                             origin_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             party: 
                               type: integer
                             party_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             party_required:
                               type: boolean
                             payable_receivable_balance: 
@@ -394,41 +259,21 @@ post:
                             period: 
                               type: integer
                             period_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             rec_name: 
                               type: string
                             reconciliation: 
                               type: string
                             reconciliation_: 
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             second_currency: 
                               type: integer
                             second_currency_: 
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             second_currency_required: 
                               type: integer
                             second_currency_required_: 
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                             state: 
                               type: string
                             tax_lines: 
@@ -439,21 +284,11 @@ post:
                             write_uid:
                               type: integer
                             write_uid_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         move: 
                           type: integer
                         move_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         number: 
                           type: string
                         origins: 
@@ -461,46 +296,26 @@ post:
                         party: 
                           type: integer
                         party_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         party_lang: 
                           type: string
                         party_tax_identifier: 
                           type: string
                         party_tax_identifier_: 
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         payment_lines:
                           type: array
                         payment_term: 
                           type: integer
                         payment_term_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         payment_term_date:
                           type: string
                           format: date
                         posted_by: 
                           type: integer
                         posted_by_: 
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         rec_name: 
                           type: string
                         reconciled: 
@@ -521,12 +336,7 @@ post:
                         tax_identifier: 
                           type: integer
                         tax_identifier_: 
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         taxes: 
                           type: array
                         total_amount: 
@@ -546,24 +356,14 @@ post:
                         validated_by:
                           type: integer 
                         validated_by_: 
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         write_date: 
                           type: string
                           format: date
                         write_uid: 
                           type: integer
                         write_uid_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:

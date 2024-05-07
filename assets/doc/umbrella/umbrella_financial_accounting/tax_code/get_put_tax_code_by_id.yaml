@@ -33,21 +33,11 @@ get:
                         company: 
                           type: integer
                         company_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         currency: 
                           type: integer
                         currency_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         description:
                           type: string
                         end_date:
@@ -62,12 +52,7 @@ get:
                         parent: 
                           type: integer
                         parent_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         rec_name: 
                           type: string
                         start_date: 
@@ -75,12 +60,7 @@ get:
                         template: 
                           type: integer
                         template_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         template_override: 
                           type: boolean
                     errors:
@@ -192,21 +172,11 @@ put:
                         company: 
                           type: integer
                         company_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         currency: 
                           type: integer
                         currency_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         description:
                           type: string
                         end_date:
@@ -221,12 +191,7 @@ put:
                         parent: 
                           type: integer
                         parent_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         rec_name: 
                           type: string
                         start_date: 
@@ -234,12 +199,7 @@ put:
                         template: 
                           type: integer
                         template_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         template_override: 
                           type: boolean
                     errors:

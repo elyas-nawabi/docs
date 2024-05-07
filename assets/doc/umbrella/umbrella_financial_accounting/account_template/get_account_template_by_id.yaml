@@ -29,21 +29,11 @@ get:
                         credit_type:
                           type: integer
                         credit_type_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         debit_type: 
                           type: integer
                         debit_type_: 
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         deferral:
                           type: boolean
                         end_date: 
@@ -58,12 +48,7 @@ get:
                         parent: 
                           type: integer
                         parent_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         party_required:
                           type: boolean
                         rec_name:
@@ -73,12 +58,7 @@ get:
                         replaced_by: 
                           type: integer
                         replaced_by_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         start_date: 
                           type: string
                           format: date
@@ -87,12 +67,7 @@ get:
                         type: 
                           type: integer
                         type_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:

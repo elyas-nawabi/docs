@@ -25,23 +25,13 @@
                         company: 
                           type: integer
                         company_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         id: 
                           type: integer
                         journal: 
                           type: integer
                         journal_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         name: 
                           type: string
                         rec_name: 

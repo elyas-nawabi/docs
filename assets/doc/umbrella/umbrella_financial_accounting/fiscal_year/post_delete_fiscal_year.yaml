@@ -58,12 +58,7 @@ post:
                             fiscalyear: 
                               type: integer
                             fiscalyear_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             id:
                               type: integer
                             name:

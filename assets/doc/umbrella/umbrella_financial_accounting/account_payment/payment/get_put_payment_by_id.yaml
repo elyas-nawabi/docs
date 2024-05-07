@@ -27,33 +27,18 @@ get:
                         approved_by: 
                           type: integer
                         approved_by_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         company: 
                           type: integer
                         company_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         create_date: 
                           type: string
                           format: date
                         currency: 
                           type: integer
                         currency_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         date: 
                           type: string
                           format: date
@@ -62,54 +47,29 @@ get:
                         failed_by: 
                           type: integer
                         failed_by_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         group: 
                           type: integer
                         group_: 
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         id: 
                           type: integer
                         journal: 
                           type: integer
                         journal_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         kind: 
                           type: string
                         line: 
                           type: integer
                         line_: 
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         origin: 
                           type: string
                         party: 
                           type: integer
                         party_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         process_method:
                           type: string
                         rec_name:
@@ -119,21 +79,11 @@ get:
                         submitted_by:
                           type: integer
                         submitted_by_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         succeeded_by:
                           type: integer
                         succeeded_by_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -257,33 +207,18 @@ put:
                         approved_by: 
                           type: integer
                         approved_by_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         company: 
                           type: integer
                         company_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         create_date: 
                           type: string
                           format: date
                         currency: 
                           type: integer
                         currency_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         date: 
                           type: string
                           format: date
@@ -292,54 +227,29 @@ put:
                         failed_by: 
                           type: integer
                         failed_by_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         group: 
                           type: integer
                         group_: 
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         id: 
                           type: integer
                         journal: 
                           type: integer
                         journal_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         kind: 
                           type: string
                         line: 
                           type: integer
                         line_: 
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         origin: 
                           type: string
                         party: 
                           type: integer
                         party_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         process_method:
                           type: string
                         rec_name:
@@ -349,21 +259,11 @@ put:
                         submitted_by:
                           type: integer
                         submitted_by_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         succeeded_by:
                           type: integer
                         succeeded_by_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:

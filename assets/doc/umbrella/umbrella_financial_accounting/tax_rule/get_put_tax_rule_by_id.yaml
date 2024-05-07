@@ -37,12 +37,7 @@ get:
                         create_uid: 
                           type: integer
                         create_uid_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         id: 
                           type: integer
                         kind:
@@ -56,24 +51,14 @@ get:
                             create_uid: 
                               type: integer
                             create_uid_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             end_date:
                               type: string
                               format: date
                             group: 
                               type: integer
                             group_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             id: 
                               type: integer
                             keep_origin: 
@@ -81,12 +66,7 @@ get:
                             origin_tax: 
                               type: integer
                             origin_tax_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             rec_name:
                               type: string
                             sequence: 
@@ -97,21 +77,11 @@ get:
                             tax:
                               type: integer
                             tax_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             template:
                               type: integer 
                             template_: 
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             template_override:
                               type: boolean
                             write_date: 
@@ -120,12 +90,7 @@ get:
                             write_uid: 
                               type: integer
                             write_uid_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string 
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType' 
 
                         name: 
                           type: string
@@ -141,7 +106,7 @@ get:
                         write_uid: 
                           type: integer
                         write_uid_:
-                          type: object
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -278,30 +243,15 @@ put:
                             from_country: 
                               type: integer
                             from_country_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             from_subdivision: 
                               type: integer
                             from_subdivision_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             group: 
                               type: integer
                             group_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             id: 
                               type: integer
                             keep_origin: 
@@ -309,12 +259,7 @@ put:
                             origin_tax: 
                               type: integer
                             origin_tax_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             rec_name:
                               type: string
                             sequence: 
@@ -325,41 +270,21 @@ put:
                             tax:
                               type: integer
                             tax_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             template:
                               type: integer 
                             template_: 
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             template_override:
                               type: boolean
                             to_country:
                               type: integer
                             to_country_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             to_subdivision:
                               type: integer 
                             to_subdivision_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         name: 
                           type: string
                         rec_name: 

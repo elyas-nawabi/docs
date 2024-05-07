@@ -37,12 +37,7 @@
                         region: 
                           type: integer
                         region_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                       nullable: true

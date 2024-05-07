@@ -25,12 +25,7 @@ post:
                         currency: 
                           type: integer
                         currency_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         date:
                           type: string 
                           format: date

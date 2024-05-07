@@ -28,34 +28,19 @@
                             account: 
                               type: integer
                             account_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             accounts: 
                               type: array
                             company:
                               type: integer
                             company_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             currencies: 
                               type: array
                             currency:
                               type: integer
                             currency_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             date:
                               type: string 
                               format: date 
@@ -66,12 +51,7 @@
                             party:
                               type: integer
                             party_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name:
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         session_id:
                           type: integer
                     errors:

@@ -38,12 +38,7 @@
                             parent: 
                               type: integer
                             parent_: 
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             rec_name: "parentctg"
                         id:
                           type: integer
@@ -53,12 +48,7 @@
                           type: integer
                           nullable: true
                         parent_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         rec_name:
                           type: string
                     errors:
@@ -150,12 +140,7 @@
                               type: integer
                               nullable: true
                             parent_:
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             rec_name:
                               type: string
                         id:
@@ -166,12 +151,7 @@
                           type: integer
                           nullable: true
                         parent_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         rec_name:
                           type: string
                     errors:

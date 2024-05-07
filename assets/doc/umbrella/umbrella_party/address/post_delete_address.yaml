@@ -61,12 +61,7 @@ post:
                         country:
                           type: integer
                         country_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         delivery:
                           type: integer 
                         id: 
@@ -78,12 +73,7 @@ post:
                         party: 
                           type: integer
                         party_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         party_name:
                           type: string
                         postal_code:
@@ -97,12 +87,7 @@ post:
                         subdivision: 
                           type: integer
                         subdivision_: 
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     error:
                       type: object
                       nullable: true

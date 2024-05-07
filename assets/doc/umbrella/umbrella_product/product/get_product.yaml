@@ -25,12 +25,7 @@
                         account_category: 
                           type: integer
                         account_category_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         active: 
                           type: boolean
                         code: 
@@ -44,21 +39,11 @@
                         create_uid: 
                           type: integer
                         create_uid_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         default_uom: 
                           type: integer
                         default_uom_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         id: 
                           type: integer
                         list_price: 
@@ -76,12 +61,7 @@
                         write_uid: 
                           type: integer
                         write_uid_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:

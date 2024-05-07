@@ -25,12 +25,7 @@
                           company: 
                             type: integer
                           company_:
-                            type: object
-                            properties:
-                              id: 
-                                type: integer
-                              name: 
-                                type: string
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                           create_date: 
                             type: string 
                             format: date 
@@ -55,7 +50,7 @@
                           write_uid: 
                             type: integer
                           write_uid_: 
-                            type: object
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:

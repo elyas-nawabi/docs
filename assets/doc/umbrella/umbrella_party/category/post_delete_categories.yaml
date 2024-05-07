@@ -37,12 +37,7 @@ post:
                             parent: 
                               type: integer
                             parent_: 
-                              type: object
-                              properties:
-                                id: 
-                                  type: integer
-                                name: 
-                                  type: string
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                             rec_name: "parentctg"
                         id:
                           type: integer
@@ -52,12 +47,7 @@ post:
                           type: integer
                           nullable: true
                         parent_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         rec_name:
                           type: string
                     errors:
