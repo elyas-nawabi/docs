@@ -288,6 +288,8 @@ components:
       $ref: 'umbrella/schemas/umbrella_party/update-address.yaml'
     CreateSequence:
       $ref: 'umbrella/schemas/umbrella_administration/create-sequence.yaml'
+    CreateSequenceRestrict:
+      $ref: 'umbrella/schemas/umbrella_administration/create-sequence-restrict.yaml'
     UpdateSequence:
       $ref: 'umbrella/schemas/umbrella_administration/update-sequence.yaml'
     CreateSequenceType:
