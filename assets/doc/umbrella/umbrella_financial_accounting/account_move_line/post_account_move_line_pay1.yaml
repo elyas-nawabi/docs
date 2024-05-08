@@ -1,0 +1,95 @@
+post:
+      tags:
+        - account move line
+      summary: Pay Account Move Line 1.
+      description: Pay Account Move Line 1.
+      operationId: postAccountMoveLine1
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 2
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: Pay Account Move Line 1
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        defaults:
+                          type: object
+                          properties:
+                            company: 
+                              type: integer
+                            company_:
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                            currency: 
+                              type: integer
+                            currency_:
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                            journal: 
+                              type: integer
+                            journal_:
+                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        session_id: 
+                          type: integer
+                    errors:
+                      type: object
+                    pagination:
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  defaults:
+                    company: 1
+                    company_:
+                      id: 1
+                      rec_name: Milestone
+                    currency: 1
+                    currency_:
+                      id: 1
+                      rec_name: Afghani
+                    journal: 3
+                    journal_:
+                      id: 3
+                      rec_name: New Payment
+                  session_id: 45
+                errors: null
+                pagination: null
+                status: 201
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+ 
