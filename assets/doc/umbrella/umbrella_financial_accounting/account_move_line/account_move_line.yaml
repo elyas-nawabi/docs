@@ -66,4 +66,8 @@ paths:
     $ref: 'get_account_move_line.yaml'
   '/financial-accounting/account-move-lines/search/for-payment':
     $ref: 'post_account_move_line.yaml'
+  '/financial-accounting/account-move-lines/{obj_id}/pay1':
+    $ref: 'post_account_move_line_pay1.yaml'
+  '/financial-accounting/account-move-lines/{obj_id}/pay2':
+    $ref: 'post_account_move_line_pay2.yaml'
   
