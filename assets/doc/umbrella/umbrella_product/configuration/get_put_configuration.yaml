@@ -22,7 +22,34 @@ get:
                     data:
                       type: object
                       properties:
-                        
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        default_cost_price_method:
+                          type: string
+                        id: 
+                          type: integer
+                        product_sequence: 
+                          type: integer
+                        product_sequence_: 
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        template_sequence: 
+                          type: integer
+                        template_sequence_: 
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        write_date: 
+                          type: string
+                          format: date
+                        write_uid: 
+                          type: integer
+                        write_uid_: 
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -44,7 +71,21 @@ get:
                       nullable: true
               example:
                 data:
-                  
+                  create_date: '2024-05-08T16:06:02.597623'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  default_cost_price_method: fixed
+                  id: 1
+                  product_sequence: 
+                  product_sequence_: {}
+                  rec_name: 
+                  template_sequence: 
+                  template_sequence_: {}
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
                 error: null
                 pagination: null
                 status: 200
@@ -96,7 +137,34 @@ put:
                     data:
                       type: object
                       properties:
-                        
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        default_cost_price_method:
+                          type: string
+                        id: 
+                          type: integer
+                        product_sequence: 
+                          type: integer
+                        product_sequence_: 
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        template_sequence: 
+                          type: integer
+                        template_sequence_: 
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        write_date: 
+                          type: string
+                          format: date
+                        write_uid: 
+                          type: integer
+                        write_uid_: 
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -117,7 +185,21 @@ put:
                       type: string
               example:
                 data:
-                  
+                  create_date: '2024-05-08T16:06:02.597623'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  default_cost_price_method: fixed
+                  id: 1
+                  product_sequence: 
+                  product_sequence_: {}
+                  rec_name: 
+                  template_sequence: 
+                  template_sequence_: {}
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
                 errors: null
                 pagination: null
                 status: 200

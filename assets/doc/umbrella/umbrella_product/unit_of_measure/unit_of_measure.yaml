@@ -62,11 +62,11 @@ tags:
   - name: unit of measure
     description: unit of measure - unit of measure data management.
 paths:
-  '/product/unit-of-measure/search':
+  '/product/unit-of-measures/search':
     $ref: 'get_unit_of_measure.yaml'
-  '/product/unit-of-measure':
+  '/product/unit-of-measures':
     $ref: 'post_delete_unit_of_measure.yaml'
-  '/product/unit-of-measure/{obj_id}':
+  '/product/unit-of-measures/{obj_id}':
     $ref: 'get_put_unit_of_measure_by_id.yaml'
   
   

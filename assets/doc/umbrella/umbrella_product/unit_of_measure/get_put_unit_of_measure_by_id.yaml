@@ -22,7 +22,44 @@ get:
                     data:
                       type: object
                       properties:
-                        
+                        active:
+                          type: boolean
+                        category: 
+                          type: integer
+                        category_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        digits:
+                          type: integer
+                        factor: 
+                          type: integer
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        rate: 
+                          type: number
+                          format: decimal
+                        rec_name: 
+                          type: string
+                        rounding: 
+                          type: number
+                          format: decimal
+                        symbol: 
+                          type: string
+                        write_date: 
+                          type: string
+                          format: date
+                        write_uid: 
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -44,7 +81,27 @@ get:
                       nullable: true
               example:
                 data:
-                  
+                  active: true
+                  category: 6
+                  category_:
+                    id: 6
+                    name: Surface
+                  create_date: '2024-04-18T04:43:18.098749'
+                  create_uid: 0
+                  create_uid_:
+                    id: 0
+                    name: Root
+                  digits: 2
+                  factor: 100
+                  id: 27
+                  name: Are
+                  rate: 0.01
+                  rec_name: Are
+                  rounding: 0.01
+                  symbol: a
+                  write_date: null
+                  write_uid: null
+                  write_uid_: {}
                 error: null
                 pagination: null
                 status: 200
@@ -96,7 +153,44 @@ put:
                     data:
                       type: object
                       properties:
-                        
+                        active:
+                          type: boolean
+                        category: 
+                          type: integer
+                        category_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        digits:
+                          type: integer
+                        factor: 
+                          type: integer
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        rate: 
+                          type: number
+                          format: decimal
+                        rec_name: 
+                          type: string
+                        rounding: 
+                          type: number
+                          format: decimal
+                        symbol: 
+                          type: string
+                        write_date: 
+                          type: string
+                          format: date
+                        write_uid: 
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -117,7 +211,27 @@ put:
                       type: string
               example:
                 data:
-                  
+                  active: true
+                  category: 6
+                  category_:
+                    id: 6
+                    name: Surface
+                  create_date: '2024-04-18T04:43:18.098749'
+                  create_uid: 0
+                  create_uid_:
+                    id: 0
+                    name: Root
+                  digits: 2
+                  factor: 100
+                  id: 27
+                  name: Are
+                  rate: 0.01
+                  rec_name: Are
+                  rounding: 0.01
+                  symbol: a
+                  write_date: null
+                  write_uid: null
+                  write_uid_: {}
                 errors: null
                 pagination: null
                 status: 200
