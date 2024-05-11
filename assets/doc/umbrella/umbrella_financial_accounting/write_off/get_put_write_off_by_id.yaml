@@ -147,7 +147,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateWriteOff'
+              $ref: 'schemas/create-write-off.yaml'
       responses:
         '200':
           description: OK
