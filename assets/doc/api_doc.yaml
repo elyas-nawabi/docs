@@ -194,11 +194,6 @@ paths:
     
 components:
   schemas:
-    
-    CreateCron:
-      $ref: 'umbrella/schemas/umbrella_currency/create-cron.yaml'
-    UpdateCron:
-      $ref: 'umbrella/schemas/umbrella_currency/update-cron.yaml'
     CreateFiscalYear:
       $ref: 'umbrella/schemas/umbrella_financial_accounting/create-fiscal-year.yaml'
     UpdateFiscalYear:
@@ -412,6 +407,7 @@ components:
           type: integer
         name:
           type: string
+          
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
     HTTP401:

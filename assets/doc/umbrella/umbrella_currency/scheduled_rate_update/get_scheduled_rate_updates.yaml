@@ -17,67 +17,7 @@
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data:
-                      type: array
-                      properties:
-                        currency:
-                          type: integer
-                        currency_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                        frequency:
-                          type: string
-                        id:
-                          type: integer
-                        last_update:
-                          type: string
-                          format: date
-                        rec_name:
-                          type: string
-                        source:
-                          type: string
-                    errors:
-                      type: object
-                      nullable: true
-                    pagination:
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-              example:
-                data:
-                  - currency: 132
-                    currency_:
-                      id: Afghani
-                      name: 1
-                    frequency: monthly
-                    id: 1
-                    last_update: '2024-01-28'
-                    rec_name: '62'
-                    source: ecb
-                errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 2
-                status: 200
-                success_message: null
+                $ref: 'schema_all.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

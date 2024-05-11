@@ -69,19 +69,3 @@ paths:
     $ref: 'post_delete_scheduled_rate_updates.yaml'
   '/currency/scheduled-rate-updates/{obj_id}':
     $ref: 'get_put_scheduled_rate_updates_by_id.yaml'
-
-    
-components:
-  schemas:
-    CreateCron:
-      $ref: 'umbrella/schemas/umbrella_currency/create-cron.yaml'
-    UpdateCron:
-      $ref: 'umbrella/schemas/umbrella_currency/update-cron.yaml'
-  
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
-
-security:
-  - bearerAuth: []
