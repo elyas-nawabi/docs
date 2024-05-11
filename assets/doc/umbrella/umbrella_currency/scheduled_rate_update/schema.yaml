@@ -3,10 +3,6 @@ schema:
     data:
       type: array
       properties:
-        active:
-          type: boolean
-        code:
-          type: string
         create_date: 
           type: string 
           format: date 
@@ -14,35 +10,31 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        digits:
+        currencies:
+          type: array
+        currency:
           type: integer
+        currency_:
+          type: object
+          id:
+            type: integer
+          name:
+            type: string
+        day:
+          type: integer
+        frequency:
+          type: string
         id:
           type: integer
-        name:
+        last_update:
           type: string
-        numeric_code:
-          type: string
-        rate:
-          type: number
-          format: decimal
-        rates:
-          type: array
-          properties:
-            date: 
-              type: string
-              format: date
-            id: 
-              type: integer
-            rate: 
-              type: number
-              format: decimal
+          format: date
         rec_name:
           type: string
-        rounding:
-          type: number
-          format: float
-        symbol:
+        source:
           type: string
+        weekday:
+          type: integer
         write_date:
           type: string
           format: date 
@@ -64,22 +56,23 @@ schema:
 
 example:
     data:
-      active: true
-      code: AFN
-      create_date: '2024-04-18T04:45:21.629821'
+      create_date: '2024-04-18T06:56:45.664564'
       create_uid: 1
       create_uid_:
         id: 1
         name: Administrator
-      digits: 2
-      id: 1
-      name: Afghani
-      numeric_code: ''
-      rate: 0
-      rates: []
-      rec_name: Afghani
-      rounding: 0.01
-      symbol: AFN
+      currencies: []
+      currency: 1
+      currency_:
+        id: 1
+        name: Afghani
+      day: 
+      frequency: daily
+      id: 4
+      last_update: '2024-04-27'
+      rec_name: '4'
+      source: ecb
+      weekday: 
       write_date: 
       write_uid: 
       write_uid_: {}
