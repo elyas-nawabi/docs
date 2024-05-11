@@ -3,10 +3,6 @@ schema:
     data:
       type: array
       properties:
-        active:
-          type: boolean
-        code:
-          type: string
         create_date: 
           type: string 
           format: date 
@@ -14,35 +10,60 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        digits:
-          type: integer
+        active:
+          type: boolean
+        code:
+          type: string
+        code3:
+          type: string
+        code_numeric:
+          type: string
         id:
           type: integer
-        name:
-          type: string
-        numeric_code:
-          type: string
-        rate:
-          type: number
-          format: decimal
-        rates:
+        members:
           type: array
           properties:
-            date: 
+              from_date: 
+                type: string
+                format: date
+              id: 
+                type: integer
+              organization:
+                type: integer
+              organization_:
+                $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+              rec_name: 
+                type: string
+              to_date: 
+                type: string
+                format: date
+        name:
+          type: string
+        rec_name: 
+          type: string
+        region:
+          type: integer
+        region_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        subdivisions:
+          type: array
+          properties:
+            active:
+              type: boolean
+            code:
               type: string
-              format: date
-            id: 
+            id:
               type: integer
-            rate: 
-              type: number
-              format: decimal
-        rec_name:
-          type: string
-        rounding:
-          type: number
-          format: float
-        symbol:
-          type: string
+            name:
+              type: string
+            parent: 
+              type: integer
+            parent_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            type:
+              type: string
         write_date:
           type: string
           format: date 
@@ -64,22 +85,40 @@ schema:
 
 example:
     data:
-      active: true
-      code: AFN
       create_date: '2024-04-18T04:45:21.629821'
       create_uid: 1
       create_uid_:
         id: 1
         name: Administrator
-      digits: 2
+      active: true
+      code: '1'
+      code3: '101'
+      code_numeric: '10001'
       id: 1
-      name: Afghani
-      numeric_code: ''
-      rate: 0
-      rates: []
-      rec_name: Afghani
-      rounding: 0.01
-      symbol: AFN
+      members:
+      - from_date: '2024-02-15'
+        id: 5
+        organization: 20
+        organization_:
+          id: 20
+          name: South Asian Free Trade Area20
+        rec_name: '5'
+        to_date: '2024-02-20'
+      name: Afghanistan
+      rec_name: "Afghanistan"
+      region: 34
+      region_:
+        id: 34
+        name: kabul
+      subdivisions:
+      - active: true
+        code: '10001'
+        id: 3
+        name: sbd1
+        parent: 
+        parent_: {}
+        rec_name: sbd1
+        type: city
       write_date: 
       write_uid: 
       write_uid_: {}

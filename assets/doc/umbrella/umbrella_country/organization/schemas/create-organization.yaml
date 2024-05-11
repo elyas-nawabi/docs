@@ -16,9 +16,9 @@
               format: date
         name: 
           type: string
+          
       required:
-        - code
-        - name
+
       example:
         code: SAFTA20
         members:

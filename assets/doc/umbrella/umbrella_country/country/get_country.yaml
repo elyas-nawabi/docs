@@ -22,6 +22,13 @@
                     data:
                       type: array
                       properties:
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         code:
                           type: string
                         code3:
@@ -37,6 +44,13 @@
                         region: 
                           type: integer
                         region_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
                           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object

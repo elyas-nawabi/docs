@@ -10,88 +10,14 @@ post:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateRegion'
+              $ref: 'schemas/create-region.yaml'
       responses:
         '201':
           description: OK
           content:
             application/json:
               schema:
-                    properties:
-                      data:
-                        code_numeric:
-                          type: string
-                        id: 
-                          type: integer
-                        name:
-                          type: string
-                        parent:
-                          type: integer
-                        parent_:
-                          id:
-                            type: integer
-                          name:
-                            type: string
-                        rec_name:
-                          type: string
-                        subregions:
-                          type: array
-                          properties:
-                            code_numeric:
-                              type: string
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                            parent:
-                              type: integer
-                            parent_:
-                              type: object
-                              properties:
-                                id:
-                                  type: integer
-                                name:
-                                  type: string
-                            rec_name: 
-                              type: string
-                            subregions:
-                              type: array
-                      errors:
-                        type: object
-                        nullable: true
-                      pagination:
-                        type: object
-                        nullable: true
-                      status:
-                        type: integer
-                      success_message:
-                        type: string
-                        nullable: true
-              
-              example:
-                data:
-                  code_numeric: '002'
-                  id: 2
-                  name: Africa
-                  parent: 1
-                  parent_:
-                    id: 1
-                    name: World
-                  rec_name: World
-                  subregions:
-                  - code_numeric: '015'
-                    id: 8
-                    name: Northern Africa
-                    parent: 2
-                    parent_:
-                      id: 2
-                      name: Africa
-                    rec_name: World
-                    subregions: []
-                error: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
