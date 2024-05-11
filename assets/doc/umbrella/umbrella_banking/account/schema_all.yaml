@@ -4,8 +4,6 @@ schema:
     data:
       type: array
       properties:
-        code: 
-          type: string
         create_date: 
           type: string 
           format: date 
@@ -13,18 +11,16 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        id:
+        bank: 
           type: integer
-        name:
-          type: string
-        numeric_code:
-          type: string
-        rate:
-          type: number
-          format: decimal
-        rec_name:
-          type: string
-        symbol:
+        bank_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        currency: 1
+        currency_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        rec_name: 
           type: string
         write_date:
           type: string
@@ -51,18 +47,19 @@ schema:
       type: string
 example:
   data:
-    - code: AFN
-      create_date: '2024-04-18T04:45:21.629821'
+    - bank: 
+      bank_: {}
+      create_date: '2024-04-21T11:10:52.337220'
       create_uid: 1
       create_uid_:
         id: 1
         name: Administrator
+      currency: 1
+      currency_:
+        id: 1
+        name: Afghani
       id: 1
-      name: Afghani
-      numeric_code: ''
-      rate: 0
-      rec_name: Afghani
-      symbol: AFN
+      rec_name: "(1) [AFN]"
       write_date: 
       write_uid: 
       write_uid_: {}

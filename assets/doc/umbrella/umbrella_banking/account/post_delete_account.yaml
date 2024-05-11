@@ -10,116 +10,14 @@ post:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateBankAccount'
+              $ref: 'schemas/create-account.yaml'
       responses:
         '201':
           description: OK
           content:
             application/json:
               schema:
-                    properties:
-                      data:
-                        type: object
-                        properties:
-                          active: 
-                            type: boolean
-                          bank: 
-                            type: integer
-                          bank_:
-                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                          currency: 
-                            type: integer
-                          currency_:
-                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                          id: 
-                            type: integer
-                          numbers:
-                            type: array
-                            properties:
-                              account: 
-                                type: integer
-                              active: 
-                                type: boolean
-                              id: 
-                                type: integer
-                              number: 
-                                type: string
-                              number_compact:
-                                type: string
-                              rec_name:
-                                type: string
-                              sequence: 
-                                type: integer
-                              type: 
-                                type: string
-                          owners:
-                            type: array
-                            properties:
-                              code: 
-                                type: string
-                              id: 
-                                type: integer
-                              lang: 
-                                type: integer
-                              name: 
-                                type: string
-                              payable_today: 
-                                type: integer
-                              rec_name: 
-                                type: string
-                              receivable_today: 
-                                type: integer
-                              tax_identifier: 
-                                type: integer
-                                nullable: true
-                          rec_name: 
-                            type: string
-                      errors:
-                        type: object
-                        nullable: true
-                      pagination:
-                        type: object
-                        nullable: true
-                      status:
-                        type: integer
-                      success_message:
-                        type: string
-                        nullable: true
-              example:
-                data:
-                  active: true
-                  bank: 5
-                  bank_:
-                    id: 5
-                    name: Party 1
-                  currency: 1
-                  currency_:
-                    id: 1
-                    name: Afghani
-                  id: 1
-                  numbers:
-                  - account: 1
-                    active: true
-                    id: 1
-                    number: ''
-                    number_compact: ''
-                    rec_name: ''
-                    sequence: 1
-                    type: iban
-                  owners:
-                  - code: '1'
-                    id: 1
-                    lang: 1
-                    name: Party 1
-                    payable_today: 0
-                    rec_name: Party 1
-                    receivable_today: 0
-                    tax_identifier: 
-                  rec_name: "(1) @ Party 1 [AFN]"
-                error: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
