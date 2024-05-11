@@ -1,0 +1,44 @@
+      properties:
+        currency_exchange_credit_account:
+          type: integer
+        currency_exchange_debit_account: 
+          type: integer
+        currency_exchange_journal: 
+          type: integer 
+        default_account_payable: 
+          type: integer
+        default_account_receivable: 
+          type: integer
+        default_customer_payment_term: 
+          type: integer
+        default_customer_tax_rule:
+          type: integer
+        default_supplier_tax_rule:
+          type: integer
+        payment_group_sequence: 
+          type: integer
+        rec_name:
+          type: string
+        reconciliation_sequence: 
+          type: integer
+        tax_rounding:
+          type: string
+
+      required:
+        - reconciliation_sequence
+        - tax_rounding
+        
+      example:
+        currency_exchange_credit_account: null
+        currency_exchange_debit_account: null
+        currency_exchange_journal: 6
+        default_account_payable: 4
+        default_account_receivable: 5
+        default_customer_payment_term: null
+        default_customer_tax_rule: null
+        default_supplier_tax_rule: null
+        id: 1
+        payment_group_sequence: 25
+        rec_name: '1'
+        reconciliation_sequence: 3
+        tax_rounding: document

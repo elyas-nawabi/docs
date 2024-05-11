@@ -1,0 +1,50 @@
+      properties:
+        context:
+          fiscalyear:
+            type: integer
+          start_period: 
+            type: integer
+          end_period: 
+            type: integer
+          from_date:
+            type: string
+            format: date
+          to_date:
+            type: string
+            format: date
+          company:
+            type: integer
+          posted: 
+            type: boolean
+          comparison: 
+            type: boolean
+          fiscalyear_cmp:
+            type: integer
+          start_period_cmp:
+            type: integer 
+          end_period_cmp:
+            type: integer 
+          from_date_cmp: 
+            type: string
+            format: date
+          to_date_cmp: 
+            type: string
+            format: date
+      required:
+        - company
+        - fiscalyear
+      example:
+        context:
+          fiscalyear: 71
+          start_period: 79
+          end_period: 79
+          from_date: '2024-11-11'
+          to_date: '2026-12-31'
+          company: 1
+          posted: true
+          comparison: true
+          fiscalyear_cmp: 0
+          start_period_cmp: null
+          end_period_cmp: null
+          from_date_cmp: '2024-11-11'
+          to_date_cmp: '2024-12-12'

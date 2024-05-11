@@ -1,0 +1,111 @@
+      properties:
+        company:
+          type: integer
+        date:
+          type: string
+          format: date
+        description: 
+          type: string
+        journal:
+          type: integer
+        lines:
+          type: array
+          nullable: true
+          properties:
+            account:
+              type: integer
+            amount_second_currency: 
+              type: integer
+            company: 
+              type: integer
+            credit:
+              type: number
+              format: float
+            date:
+              type: string
+              format: date
+            debit:
+              type: integer
+            delegated_amount: 
+              type: integer
+            description:
+              type: string
+            id: 
+              type: integer
+            move: 
+              type: integer
+            move_description_used:
+              type: string
+            move_origin:
+              type: string
+            move_state:
+              type: string
+            origin:
+              type: integer 
+            party:
+              type: integer 
+            rec_name:
+              type: string
+            reconciliation: 
+              type: integer
+            second_currency: 
+              type: integer
+            state: 
+              type: string
+            tax_lines:
+              type: array
+        number:
+          type: string
+        origin:
+          type: string
+        period:
+          type: integer
+        post_date: 
+          type: string
+          format: date
+        post_number: 
+          type: string
+        rec_name:
+          type: string
+        state:
+          type: string
+
+      required:
+        - company
+        - date
+        - journal
+        - period
+        
+      example:
+        company: 1
+        date: '2026-01-27'
+        description: some description here
+        id: 2
+        journal: 13
+        lines:
+        - account: 30
+          amount_second_currency: null
+          company: 1
+          credit: 0.03
+          date: '2026-01-27'
+          debit: 0
+          delegated_amount: 
+          description: ''
+          move: 11
+          move_description_used: some description here
+          move_origin: account.fiscalyear,-1
+          move_state: draft
+          origin: null
+          party: null
+          rec_name: "(1 - 1)"
+          reconciliation: null
+          second_currency: null
+          state: draft
+          tax_lines: []
+        number: '1'
+        origin: account.move,-1
+        period: 79
+        post_date: null
+        post_number: null
+        rec_name: '1'
+        state: draft

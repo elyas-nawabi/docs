@@ -1,0 +1,67 @@
+properties:
+  active: 
+    type: boolean
+  bank: 
+    type: integer
+  currency: 
+    type: integer
+  numbers:
+    type: array
+    properties:
+      account: 
+        type: integer
+      active: 
+        type: boolean
+      number: 
+        type: string
+      number_compact:
+        type: string
+      rec_name:
+        type: string
+      sequence: 
+        type: integer
+      type: 
+        type: string
+  owners:
+    type: array
+    properties:
+      code: 
+        type: string
+      lang: 
+        type: integer
+      name: 
+        type: string
+      payable_today: 
+        type: integer
+      rec_name: 
+        type: string
+      receivable_today: 
+        type: integer
+      tax_identifier: 
+        type: integer
+        nullable: true
+  rec_name: 
+    type: string
+required:
+  - 
+example:
+  active: true
+  bank: 5
+  currency: 1
+  numbers:
+  - account: 1
+    active: true
+    number: ''
+    number_compact: ''
+    rec_name: ''
+    sequence: 1
+    type: iban
+  owners:
+  - code: '1'
+    lang: 1
+    name: Party 1
+    payable_today: 0
+    rec_name: Party 1
+    receivable_today: 0
+    tax_identifier: 
+  rec_name: "(1) @ Party 1 [AFN]"

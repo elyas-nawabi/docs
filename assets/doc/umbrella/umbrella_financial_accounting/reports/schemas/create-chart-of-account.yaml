@@ -1,0 +1,20 @@
+      properties:
+        context:
+          type: object
+          properties:
+            fiscalyear:
+              type: integer
+            company:
+              type: integer
+            posted: 
+              type: boolean
+
+      required:
+        - context
+        - company
+        
+      example:
+        context:
+          fiscalyear: 2
+          company: 1
+          posted: true
