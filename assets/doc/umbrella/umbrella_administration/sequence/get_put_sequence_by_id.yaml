@@ -17,81 +17,7 @@
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data:
-                      active:
-                        type: boolean
-                      company:
-                        type: integer
-                      company_:
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                      id:
-                        type: integer
-                      name:
-                        type: string
-                      number_increment:
-                        type: integer
-                      number_next:
-                        type: integer
-                      padding:
-                        type: integer
-                      prefix:
-                        type: string
-                      preview:
-                        type: string
-                      rec_name:
-                        type: string
-                      sequence_type:
-                        type: integer
-                      sequence_type_:
-                        type: object
-                        properties:
-                          id:
-                            type: integer
-                          name:
-                            type: string
-                      suffix:
-                        type: string
-                      type:
-                        type: string
-                    error:
-                      type: object
-                      nullable: true
-                    pagination:
-                      type: object
-                      nullable: true
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
-              example:
-                data:
-                  active: true
-                  company: 
-                  company_: {}
-                  id: 1
-                  name: Party
-                  number_increment: 1
-                  number_next: 4
-                  padding: 0
-                  prefix: 
-                  preview: '4'
-                  rec_name: Party
-                  sequence_type: 1
-                  sequence_type_:
-                    id: 1
-                    name: Party
-                  suffix: 
-                  type: incremental
-                error: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -127,96 +53,14 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateSequence'
+              $ref: 'schemas/create-sequence.yaml'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                properties:
-                  data:
-                    active:
-                      type: boolean
-                    company:
-                      type: integer
-                    company_:
-                      id:
-                        type: integer
-                      name:
-                        type: string
-                    id:
-                      type: integer
-                    name:
-                      type: string
-                    number_increment:
-                      type: integer
-                    number_next:
-                      type: integer
-                    padding:
-                      type: integer
-                    prefix:
-                      type: string
-                    preview:
-                      type: string
-                    rec_name:
-                      type: string
-                    sequence_type:
-                      type: integer
-                    sequence_type_:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                    suffix:
-                      type: string
-                    type:
-                      type: string 
-                  errors:
-                    type: object
-                    nullable: true
-                  pagination:
-                    type: object
-                    nullable: true
-                  status:
-                    type: integer
-                  success_message:
-                    type: string
-                    nullable: true
-              
-              required:
-                - name
-                - number_increment
-                - number_next
-                - padding
-                - sequence_type
-                - type 
-              
-              example:
-                data:
-                  active: true
-                  company: 
-                  company_: {}
-                  id: 1
-                  name: Party
-                  number_increment: 1
-                  number_next: 4
-                  padding: 0
-                  prefix: 
-                  preview: '4'
-                  rec_name: Party
-                  sequence_type: 1
-                  sequence_type_:
-                    id: 1
-                    name: Party
-                  suffix: 
-                  type: incremental
-                error: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

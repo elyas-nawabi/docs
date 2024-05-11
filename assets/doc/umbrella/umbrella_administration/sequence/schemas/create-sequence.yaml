@@ -1,46 +1,61 @@
-      properties:
-        active:
-          type: boolean
-        company:
-          type: integer
-        name:
-          type: string
-        number_increment:
-          type: integer
-        number_next:
-          type: integer
-        padding:
-          type: integer
-        prefix:
-          type: string
-        preview:
-          type: string
-        rec_name:
-          type: string
-        sequence_type:
-          type: integer
-        suffix:
-          type: string
-        type:
-          type: string
-  
-      required:
-          - name
-          - number_increment
-          - number_next
-          - padding
-          - sequence_type
-          - type
-             
-      example:
-        active: true
-        company: 1
-        name: '2024'
-        number_increment: 1
-        number_next: 1
-        padding: 0
-        prefix: ''
-        preview: '1'
-        sequence_type: 3
-        suffix: ''
-        type: 'incremental'
+properties:
+  active:
+    type: boolean
+  code:
+    type: string
+  create_date: 
+    type: string 
+    format: date 
+  create_uid: 
+    type: integer
+  digits:
+    type: integer
+  name:
+    type: string
+  numeric_code:
+    type: string
+  rate:
+    type: number
+    format: decimal
+  rates:
+    type: array
+    properties:
+      date: 
+        type: string
+        format: date
+      rate: 
+        type: number
+        format: decimal
+  rec_name:
+    type: string
+  rounding:
+    type: number
+    format: float
+  symbol:
+    type: string
+  write_date:
+    type: string
+    format: date 
+  write_uid:
+    type: integer
+
+required:
+    -
+        
+example:
+  active: true
+  company: 
+  create_date: '2024-04-18T04:43:03.267809'
+  create_uid: 0
+  name: Party
+  number_increment: 1
+  number_next: 2
+  padding: 0
+  prefix: 
+  preview: '2'
+  rec_name: Party
+  sequence_type: 1
+  suffix: 
+  type: incremental
+  write_date: '2024-04-18T04:43:03.267809'
+  write_uid: 0

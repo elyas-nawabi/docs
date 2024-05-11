@@ -10,65 +10,14 @@ post:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateSequenceType'
+              $ref: 'schemas/create-sequence-type.yaml'
       responses:
         '201':
           description: OK
           content:
             application/json:
               schema:
-                  properties:
-                    data:
-                      type: array
-                      properties:
-                        groups:
-                          type: array
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
-                            parent:
-                              type: integer
-                              nullable: true
-                            parent_:  
-                              type: object
-                            rec_name:  
-                              type: string
-                        id:
-                          type: integer
-                        name: 
-                          type: string
-                        rec_name: 
-                          type: string
-                    errors:
-                      type: object
-                      nullable: true
-                    pagination:
-                      type: object
-                      nullable: true
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
-              required:
-                - name
-              example:
-                data:
-                  groups:
-                    - id: 1
-                      name: "Administration"
-                      parent: null
-                      parent_: {}
-                      rec_name: Administration
-                  id: 1
-                  name: "Administration"
-                  rec_name: Administration
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
