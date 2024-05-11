@@ -22,26 +22,23 @@
                     data:
                       type: array
                       properties:
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         currency: 
                           type: integer
                         currency_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         id:
                           type: integer
                         party:
                           type: string
                         party_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         payable_today:
                           type: number
                           format: float
@@ -52,6 +49,13 @@
                           format: float
                         timezone: 
                           type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -71,7 +75,12 @@
                       nullable: true
               example:
                 data:
-                - currency: 1
+                - create_date: '2024-04-18T04:45:50.705070'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  currency: 1
                   currency_:
                     id: 1
                     name: Afghani
@@ -79,11 +88,14 @@
                   party: 1
                   party_:
                     id: 1
-                    name: Party 1
+                    name: Milestone
                   payable_today: 0
-                  rec_name: Party 1
-                  receivable_today: 0
+                  rec_name: Milestone
+                  receivable_today: -8700
                   timezone: Asia/Kabul
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
                 error: null
                 pagination:
                   page: 1
@@ -92,6 +104,7 @@
                   total_records: 9
                 status: 200
                 success_message: null
+        
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

@@ -22,15 +22,17 @@
                     data:
                       type: array
                       properties:
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         company: 
                           type: integer
                         company_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         end_date:
                           type: string
                           format: date
@@ -39,12 +41,7 @@
                         party:
                           type: string
                         party_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         rec_name:
                           type: string
                         start_date: 
@@ -53,12 +50,14 @@
                         supervisor:
                           type: integer
                         supervisor_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -78,7 +77,12 @@
                       nullable: true
               example:
                 data:
-                - company: 2
+                - create_date: '2024-04-18T04:45:21.629821'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  company: 2
                   company_:
                     id: 2
                     name: Party 1
@@ -94,6 +98,9 @@
                   supervisor_:
                     id: 5
                     name: Party 1
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
                 error: null
                 pagination:
                   page: 1
