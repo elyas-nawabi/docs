@@ -4,8 +4,10 @@ schema:
     data:
       type: array
       properties:
-        code: 
-          type: string
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType' 
         create_date: 
           type: string 
           format: date 
@@ -13,23 +15,26 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        id:
+        id: 
           type: integer
-        name:
+        name: 
           type: string
-        numeric_code:
+        prefix: 
           type: string
-        rate:
-          type: number
-          format: decimal
-        rec_name:
+        rec_name: 
           type: string
-        symbol:
+        sequence_type: 
+          type: integer
+        sequence_type_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType' 
+        suffix: 
           type: string
-        write_date:
+        type: 
           type: string
-          format: date 
-        write_uid:
+        write_date: 
+          type: string
+          format: date
+        write_uid: 
           type: integer
         write_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
@@ -51,21 +56,30 @@ schema:
       type: string
 example:
   data:
-    - code: AFN
-      create_date: '2024-04-18T04:45:21.629821'
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      create_date: '2024-04-21T04:09:20.554302'
       create_uid: 1
       create_uid_:
         id: 1
         name: Administrator
       id: 1
-      name: Afghani
-      numeric_code: ''
-      rate: 0
-      rec_name: Afghani
-      symbol: AFN
-      write_date: 
-      write_uid: 
-      write_uid_: {}
+      name: suppliers
+      prefix: ''
+      rec_name: suppliers
+      sequence_type: 7
+      sequence_type_:
+        id: 7
+        name: Invoice
+      suffix: ''
+      type: incremental
+      write_date: '2024-04-22T06:14:42.794659'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
   errors: null
   pagination:
     page: 1

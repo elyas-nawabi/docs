@@ -10,7 +10,7 @@ post:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateTaxRule'
+              $ref: 'schemas/creat-tax-rule.yaml'
       responses:
         '201':
           description: Created

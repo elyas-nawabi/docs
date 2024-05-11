@@ -3,10 +3,6 @@ schema:
     data:
       type: array
       properties:
-        active:
-          type: boolean
-        code:
-          type: string
         create_date: 
           type: string 
           format: date 
@@ -14,35 +10,43 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        digits:
+        company:
           type: integer
+        company_:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+        end_date:
+          type: string
+          format: date
         id:
           type: integer
-        name:
-          type: string
-        numeric_code:
-          type: string
-        rate:
-          type: number
-          format: decimal
-        rates:
-          type: array
+        party: 
+          type: integer
+        party_:
+          type: object
           properties:
-            date: 
-              type: string
-              format: date
-            id: 
+            id:
               type: integer
-            rate: 
-              type: number
-              format: decimal
+            name:
+              type: string
         rec_name:
           type: string
-        rounding:
-          type: number
-          format: float
-        symbol:
+        start_date: 
           type: string
+          format: date
+        supervisor:
+          type: integer
+        supervisor_:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
         write_date:
           type: string
           format: date 
@@ -64,22 +68,27 @@ schema:
 
 example:
     data:
-      active: true
-      code: AFN
       create_date: '2024-04-18T04:45:21.629821'
       create_uid: 1
       create_uid_:
         id: 1
         name: Administrator
-      digits: 2
-      id: 1
-      name: Afghani
-      numeric_code: ''
-      rate: 0
-      rates: []
-      rec_name: Afghani
-      rounding: 0.01
-      symbol: AFN
+      company: 2
+      company_:
+        id: 2
+        name: Party 1
+      end_date: '2024-02-13'
+      id: 5
+      party: 1
+      party_:
+        id: 1
+        name: Party 1
+      rec_name: Party 1
+      start_date: '2024-02-01'
+      supervisor: 5 
+      supervisor_: 
+        id: 5
+        name: Party 1
       write_date: 
       write_uid: 
       write_uid_: {}

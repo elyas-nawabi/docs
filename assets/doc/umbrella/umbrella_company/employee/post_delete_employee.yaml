@@ -10,85 +10,14 @@ post:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateEmployee'
+              $ref: 'schemas/create-employee.yaml'
       responses:
         '201':
           description: OK
           content:
             application/json:
               schema:
-                    properties:
-                      data:
-                        company:
-                          type: integer
-                        company_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                        end_date:
-                          type: string
-                          format: date
-                        id:
-                          type: integer
-                        party: 
-                          type: integer
-                        party_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                        rec_name:
-                          type: string
-                        start_date: 
-                          type: string
-                          format: date
-                        supervisor:
-                          type: integer
-                        supervisor_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                      errors:
-                        type: object
-                        nullable: true
-                      pagination:
-                        type: object
-                        nullable: true
-                      status:
-                        type: integer
-                      success_message:
-                        type: string
-                        nullable: true
-              example:
-                data:
-                  company: 2
-                  company_:
-                    id: 2
-                    name: Party 1
-                  end_date: '2024-02-13'
-                  id: 5
-                  party: 1
-                  party_:
-                    id: 1
-                    name: Party 1
-                  rec_name: Party 1
-                  start_date: '2024-02-01'
-                  supervisor: 5 
-                  supervisor_: 
-                    id: 5
-                    name: Party 1
-                error: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

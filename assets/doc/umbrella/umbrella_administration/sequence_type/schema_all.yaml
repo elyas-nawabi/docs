@@ -4,8 +4,6 @@ schema:
     data:
       type: array
       properties:
-        code: 
-          type: string
         create_date: 
           type: string 
           format: date 
@@ -17,14 +15,7 @@ schema:
           type: integer
         name:
           type: string
-        numeric_code:
-          type: string
-        rate:
-          type: number
-          format: decimal
         rec_name:
-          type: string
-        symbol:
           type: string
         write_date:
           type: string
@@ -51,18 +42,14 @@ schema:
       type: string
 example:
   data:
-    - code: AFN
-      create_date: '2024-04-18T04:45:21.629821'
-      create_uid: 1
+    - create_date: '2024-04-18T04:43:03.267809'
+      create_uid: 0
       create_uid_:
-        id: 1
-        name: Administrator
+        id: 0
+        name: Root
       id: 1
-      name: Afghani
-      numeric_code: ''
-      rate: 0
-      rec_name: Afghani
-      symbol: AFN
+      name: Party
+      rec_name: Party
       write_date: 
       write_uid: 
       write_uid_: {}

@@ -17,55 +17,7 @@
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data:
-                      type: object
-                      properties:
-                        groups:
-                          type: array
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
-                            parent:
-                              type: integer
-                              nullable: true
-                            parent_:  
-                              type: object
-                            rec_name:  
-                              type: string
-                        id:
-                          type: integer
-                        name: 
-                          type: string
-                        rec_name: 
-                          type: string
-                    error: 
-                      type: string
-                    pagination: 
-                      type: string
-                    status:
-                      type: integer
-                    success_message: 
-                      type: string
-                      nullable: true
-              example:
-                data:
-                  groups:
-                    - id: 1
-                      name: "Administration"
-                      parent: null
-                      parent_: {}
-                      rec_name: Administration
-                  id: 1
-                  name: "Administration"
-                  rec_name: Administration
-                error: null
-                pagination: null
-                status: 200
-                success_message: null 
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -101,63 +53,14 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateSequenceType'
+              $ref: 'schemas/create-sequence-type.yaml'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                  properties:
-                    data:
-                      properties:
-                         groups:
-                          type: array
-                          properties:
-                            id:
-                              type: integer
-                            name: 
-                              type: string
-                            parent:
-                              type: integer
-                              nullable: true
-                            parent_:  
-                              type: object
-                            rec_name:  
-                              type: string
-                         id:
-                           type: integer
-                         name: 
-                           type: string
-                         rec_name: 
-                           type: string
-                    errors:
-                      type: object
-                      nullable: true
-                    pagination:
-                      type: object
-                      nullable: true
-                    status:
-                      type: integer
-                    success_message:
-                      type: object
-                      nullable: true
-
-              example:
-                data:
-                  groups:
-                    - id: 1
-                      name: "Administration"
-                      parent: null
-                      parent_: {}
-                      rec_name: Administration
-                  id: 1
-                  name: "Administration"
-                  rec_name: Administration
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

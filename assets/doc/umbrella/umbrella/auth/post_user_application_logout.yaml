@@ -11,7 +11,7 @@ post:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateLogout'
+              $ref: 'schemas/create-logout.yaml'
       responses:
         '200':
           description: OK

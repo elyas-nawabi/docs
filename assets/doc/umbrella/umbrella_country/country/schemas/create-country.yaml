@@ -42,7 +42,7 @@
             type:
               type: string
       required:
-        - name
+        - 
         
       example:
         active: true

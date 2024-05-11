@@ -278,16 +278,16 @@ components:
       $ref: 'umbrella/schemas/umbrella_party/create-address.yaml'
     UpdateAddress:
       $ref: 'umbrella/schemas/umbrella_party/update-address.yaml'
-    CreateSequence:
-      $ref: 'umbrella/schemas/umbrella_administration/create-sequence.yaml'
-    CreateSequenceRestrict:
-      $ref: 'umbrella/schemas/umbrella_administration/create-sequence-restrict.yaml'
-    UpdateSequence:
-      $ref: 'umbrella/schemas/umbrella_administration/update-sequence.yaml'
-    CreateSequenceType:
-      $ref: 'umbrella/schemas/umbrella_administration/create-sequence-type.yaml'
-    UpdateSequenceType:
-      $ref: 'umbrella/schemas/umbrella_administration/update-sequence-type.yaml'
+    # CreateSequence:
+    #   $ref: 'umbrella/schemas/umbrella_administration/create-sequence.yaml'
+    # CreateSequenceRestrict:
+    #   $ref: 'umbrella/schemas/umbrella_administration/create-sequence-restrict.yaml'
+    # UpdateSequence:
+    #   $ref: 'umbrella/schemas/umbrella_administration/update-sequence.yaml'
+    # CreateSequenceType:
+    #   $ref: 'umbrella/schemas/umbrella_administration/create-sequence-type.yaml'
+    # UpdateSequenceType:
+    #   $ref: 'umbrella/schemas/umbrella_administration/update-sequence-type.yaml'
     CreateCompany:
       $ref: 'umbrella/schemas/umbrella_company/create-company.yaml'
     UpdateCompany:
@@ -407,7 +407,7 @@ components:
           type: integer
         name:
           type: string
-          
+
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
     HTTP401:

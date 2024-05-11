@@ -3,9 +3,7 @@ schema:
     data:
       type: array
       properties:
-        active:
-          type: boolean
-        code:
+        bic:
           type: string
         create_date: 
           type: string 
@@ -14,34 +12,13 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        digits:
+        id: 
           type: integer
-        id:
+        party: 
           type: integer
-        name:
-          type: string
-        numeric_code:
-          type: string
-        rate:
-          type: number
-          format: decimal
-        rates:
-          type: array
-          properties:
-            date: 
-              type: string
-              format: date
-            id: 
-              type: integer
-            rate: 
-              type: number
-              format: decimal
-        rec_name:
-          type: string
-        rounding:
-          type: number
-          format: float
-        symbol:
+        party_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
           type: string
         write_date:
           type: string
@@ -64,25 +41,21 @@ schema:
 
 example:
     data:
-      active: true
-      code: AFN
-      create_date: '2024-04-18T04:45:21.629821'
-      create_uid: 1
-      create_uid_:
-        id: 1
-        name: Administrator
-      digits: 2
-      id: 1
-      name: Afghani
-      numeric_code: ''
-      rate: 0
-      rates: []
-      rec_name: Afghani
-      rounding: 0.01
-      symbol: AFN
-      write_date: 
-      write_uid: 
-      write_uid_: {}
+      - bic: KABUAFKA
+        create_date: '2024-04-21T11:16:24.309788'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        id: 2
+        party: 1
+        party_:
+          id: 1
+          name: Milestone
+        rec_name: Milestone
+        write_date: 
+        write_uid: 
+        write_uid_: {}
     errors: null
     pagination: null
     status: 201

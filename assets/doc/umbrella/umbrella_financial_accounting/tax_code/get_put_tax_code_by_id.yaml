@@ -150,7 +150,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateTaxCode'
+              $ref: 'schemas/creat-tax-code.yaml'
       responses:
         '200':
           description: OK

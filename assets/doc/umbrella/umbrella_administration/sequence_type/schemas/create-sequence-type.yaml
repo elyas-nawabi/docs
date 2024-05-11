@@ -1,25 +1,55 @@
-      properties:
-        groups:
-          type: array
-          properties:
-            name: 
-              type: string
-            parent:
-              type: integer
-              nullable: true
-            rec_name:  
-              type: string
-        name: 
-          type: string
-        rec_name: 
-          type: string
-  
-      required:
-          - name
-      example:
-        groups:
-          - name: "Administration"
-            parent: null
-            rec_name: Administration
-        name: "Administration"
-        rec_name: Administration
+properties:
+  create_date: 
+    type: string 
+    format: date 
+  create_uid: 
+    type: integer
+  groups:
+    type: array
+    properties:
+      create_date: 
+        type: string 
+        format: date 
+      create_uid: 
+        type: integer
+      name: 
+        type: string
+      parent:
+        type: integer
+        nullable: true
+      parent_:  
+        type: object
+      rec_name:  
+        type: string
+      write_date:
+        type: string
+        format: date 
+      write_uid:
+        type: integer
+  name: 
+    type: string
+  rec_name: 
+    type: string
+  write_date:
+    type: string
+    format: date 
+  write_uid:
+    type: integer
+
+required:
+    - 
+example:
+  create_date: '2024-04-18T04:43:07.540328'
+  create_uid: 0
+  groups:
+  - create_date: '2024-04-18T04:43:07.540328'
+    create_uid: 0
+    name: Account Administration
+    parent: 7
+    rec_name: Account Administration
+    write_date: 
+    write_uid: 
+  name: Account Journal
+  rec_name: Account Journal
+  write_date: 
+  write_uid: 

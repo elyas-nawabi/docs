@@ -39,15 +39,8 @@ required:
 example:
   active: true
   company: 1
-  company_:
-    id: 1
-    name: Milestone
   create_date: '2024-04-21T04:09:45.808043'
   create_uid: 1
-  create_uid_:
-    id: 1
-    name: Administrator
-  id: 2
   name: customers
   number_increment: 1
   number_next: 3
@@ -56,13 +49,7 @@ example:
   preview: '3'
   rec_name: customers
   sequence_type: 7
-  sequence_type_:
-    id: 7
-    name: Invoice
   suffix: ''
   type: incremental
   write_date: '2024-05-05T11:12:40.042995'
   write_uid: 1
-  write_uid_:
-    id: 1
-    name: Administrator

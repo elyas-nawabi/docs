@@ -3,10 +3,6 @@ schema:
     data:
       type: array
       properties:
-        active:
-          type: boolean
-        code:
-          type: string
         create_date: 
           type: string 
           format: date 
@@ -14,35 +10,43 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        digits:
-          type: integer
-        id:
+        code_numeric:
+          type: string
+        id: 
           type: integer
         name:
           type: string
-        numeric_code:
-          type: string
-        rate:
-          type: number
-          format: decimal
-        rates:
-          type: array
-          properties:
-            date: 
-              type: string
-              format: date
-            id: 
-              type: integer
-            rate: 
-              type: number
-              format: decimal
+        parent:
+          type: integer
+        parent_:
+          id:
+            type: integer
+          name:
+            type: string
         rec_name:
           type: string
-        rounding:
-          type: number
-          format: float
-        symbol:
-          type: string
+        subregions:
+          type: array
+          properties:
+            code_numeric:
+              type: string
+            id:
+              type: integer
+            name:
+              type: string
+            parent:
+              type: integer
+            parent_:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+            rec_name: 
+              type: string
+            subregions:
+              type: array
         write_date:
           type: string
           format: date 
@@ -64,22 +68,29 @@ schema:
 
 example:
     data:
-      active: true
-      code: AFN
       create_date: '2024-04-18T04:45:21.629821'
       create_uid: 1
       create_uid_:
         id: 1
         name: Administrator
-      digits: 2
-      id: 1
-      name: Afghani
-      numeric_code: ''
-      rate: 0
-      rates: []
-      rec_name: Afghani
-      rounding: 0.01
-      symbol: AFN
+      code_numeric: '002'
+      id: 2
+      name: Africa
+      parent: 1
+      parent_:
+        id: 1
+        name: World
+      rec_name: World
+      subregions:
+      - code_numeric: '015'
+        id: 8
+        name: Northern Africa
+        parent: 2
+        parent_:
+          id: 2
+          name: Africa
+        rec_name: World
+        subregions: []
       write_date: 
       write_uid: 
       write_uid_: {}

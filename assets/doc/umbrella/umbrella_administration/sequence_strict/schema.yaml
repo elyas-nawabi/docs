@@ -3,10 +3,12 @@ schema:
     data:
       type: array
       properties:
-        active:
+        active: 
           type: boolean
-        code:
-          type: string
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
         create_date: 
           type: string 
           format: date 
@@ -14,39 +16,34 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        digits:
+        id: 
           type: integer
-        id:
+        name: 
+          type: string
+        number_increment: 
           type: integer
-        name:
+        number_next: 
+          type: integer
+        padding: 
+          type: integer
+        prefix: 
           type: string
-        numeric_code:
+        preview: 
           type: string
-        rate:
-          type: number
-          format: decimal
-        rates:
-          type: array
-          properties:
-            date: 
-              type: string
-              format: date
-            id: 
-              type: integer
-            rate: 
-              type: number
-              format: decimal
-        rec_name:
+        rec_name: 
           type: string
-        rounding:
-          type: number
-          format: float
-        symbol:
+        sequence_type: 
+          type: integer
+        sequence_type_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType' 
+        suffix: 
           type: string
-        write_date:
+        type: 
           type: string
-          format: date 
-        write_uid:
+        write_date: 
+          type: string
+          format: date
+        write_uid: 
           type: integer
         write_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
@@ -65,24 +62,34 @@ schema:
 example:
     data:
       active: true
-      code: AFN
-      create_date: '2024-04-18T04:45:21.629821'
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      create_date: '2024-04-21T04:09:45.808043'
       create_uid: 1
       create_uid_:
         id: 1
         name: Administrator
-      digits: 2
-      id: 1
-      name: Afghani
-      numeric_code: ''
-      rate: 0
-      rates: []
-      rec_name: Afghani
-      rounding: 0.01
-      symbol: AFN
-      write_date: 
-      write_uid: 
-      write_uid_: {}
+      id: 2
+      name: customers
+      number_increment: 1
+      number_next: 3
+      padding: 0
+      prefix: ''
+      preview: '3'
+      rec_name: customers
+      sequence_type: 7
+      sequence_type_:
+        id: 7
+        name: Invoice
+      suffix: ''
+      type: incremental
+      write_date: '2024-05-05T11:12:40.042995'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
     errors: null
     pagination: null
     status: 201

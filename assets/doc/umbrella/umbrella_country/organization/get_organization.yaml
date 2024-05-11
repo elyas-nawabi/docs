@@ -24,12 +24,26 @@
                       properties:
                         code:
                           type: string
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         id: 
                           type: integer
                         name: 
                           type: string
                         rec_name:
                           type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -51,9 +65,17 @@
               example:
                 data:
                 - code: EU
+                  create_date: '2024-04-18T04:43:01.339243'
+                  create_uid: 0
+                  create_uid_:
+                    id: 0
+                    name: Root
                   id: 1
                   name: European Union
-                  rec_name: South Asian Free Trade Area3
+                  rec_name: European Union
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
                 error: null
                 pagination:
                   page: 1

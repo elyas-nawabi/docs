@@ -17,45 +17,7 @@
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data:
-                      type: array
-                      properties:
-                        bic:
-                          type: string
-                        id: 
-                          type: integer
-                        party: 
-                          type: integer
-                        party_:
-                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        rec_name: 
-                          type: string
-                    error:
-                      type: object
-                      nullable: true
-                    pagination:
-                      type: object
-                      nullable: true
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
-              example:
-                data:
-                  bic: ''
-                  id: 5
-                  party: 1
-                  party_:
-                    id: 1
-                    name: Party 1
-                  rec_name: Party 1
-                error: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -91,56 +53,14 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateBank'
+              $ref: 'schemas/create-bank.yaml'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      bic:
-                        type: string
-                      id: 
-                        type: integer
-                      party: 
-                        type: integer
-                      party_:
-                        type: object
-                        properties:
-                          id: 
-                            type: integer
-                          name: 
-                            type: string
-                      rec_name: 
-                        type: string
-                  errors:
-                    type: object
-                    nullable: true
-                  pagination:
-                    type: object
-                    nullable: true
-                  status:
-                    type: integer
-                  success_message:
-                    type: string
-                    nullable: true
-              example:
-                data:
-                  bic: ''
-                  id: 5
-                  party: 1
-                  party_:
-                    id: 1
-                    name: Party 1
-                  rec_name: Party 1
-                error: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

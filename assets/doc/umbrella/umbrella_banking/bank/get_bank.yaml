@@ -17,55 +17,7 @@
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data:
-                      type: array
-                      properties:
-                        bic:
-                          type: string
-                        id: 
-                          type: integer
-                        party: 
-                          type: integer
-                        party_:
-                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        rec_name: 
-                          type: string
-                    errors:
-                      type: object
-                    pagination:
-                      type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
-              example:
-                data:
-                  bic: ''
-                  id: 5
-                  party: 1
-                  party_:
-                    id: 1
-                    name: Party 1
-                  rec_name: Party 1
-                error: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 9
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
