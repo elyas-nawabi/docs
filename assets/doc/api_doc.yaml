@@ -194,10 +194,7 @@ paths:
     
 components:
   schemas:
-    CreateCurrency:
-      $ref: 'umbrella/schemas/umbrella_currency/create-currency.yaml'
-    UpdateCurrency:
-      $ref: 'umbrella/schemas/umbrella_currency/update-currency.yaml'
+    
     CreateCron:
       $ref: 'umbrella/schemas/umbrella_currency/create-cron.yaml'
     UpdateCron:
@@ -415,7 +412,6 @@ components:
           type: integer
         name:
           type: string
-
     HTTP200:
       $ref: 'umbrella/schemas/http-responses/http200.yaml'
     HTTP401:

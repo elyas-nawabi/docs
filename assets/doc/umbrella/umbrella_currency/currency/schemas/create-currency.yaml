@@ -1,11 +1,13 @@
   properties:
     active:
       type: boolean
-    cash_rounding:
-      type: number 
-      format: decimal
     code:
       type: string
+    create_date: 
+      type: string 
+      format: date 
+    create_uid: 
+      type: integer
     digits:
       type: integer
     name:
@@ -14,7 +16,7 @@
       type: string
     rate:
       type: number
-      format: float
+      format: decimal
     rates:
       type: array
       properties:
@@ -23,7 +25,7 @@
           format: date
         rate: 
           type: number
-          format: float
+          format: decimal
     rec_name:
       type: string
     rounding:
@@ -31,20 +33,25 @@
       format: float
     symbol:
       type: string
+    write_date:
+      type: string
+      format: date 
+    write_uid:
+      type: integer
   required:
-    - code
-    - name
+    
   example:
     active: true
-    cash_rounding: null
-    code: "AFN"
+    code: AFN
+    create_date: '2024-04-18T04:45:21.629821'
+    create_uid: 1
     digits: 2
-    name: "Afghani"
-    numeric_code: "001"
+    name: Afghani
+    numeric_code: ''
     rate: 0
-    rates:
-      - date: "2024-02-06"
-        rate: 0.1
-    rec_name: "2028"
+    rates: []
+    rec_name: Afghani
     rounding: 0.01
-    symbol: "AFN"
+    symbol: AFN
+    write_date: 
+    write_uid: 
