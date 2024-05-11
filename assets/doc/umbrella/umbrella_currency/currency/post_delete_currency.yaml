@@ -10,85 +10,15 @@ post:
       application/json:
         schema:
           type: object
-          $ref: '../../../api_doc.yaml#/components/schemas/CreateCurrency'
+          $ref: 'schemas/create-currency.yaml'
   responses:
     '201':
       description: OK
       content:
         application/json:
           schema:
-              properties:
-                data:
-                  type: array
-                  properties:
-                    active:
-                      type: boolean
-                    cash_rounding:
-                      type: number 
-                      format: decimal
-                    code:
-                      type: string
-                    digits:
-                      type: integer
-                    id:
-                      type: integer
-                    name:
-                      type: string
-                    numeric_code:
-                      type: string
-                    rate:
-                      type: number
-                      format: float
-                    rates:
-                      type: array
-                      properties:
-                        date: 
-                          type: string
-                          format: date
-                        id: 
-                          type: integer
-                        rate: 
-                          type: number
-                          format: float
-                    rec_name:
-                      type: string
-                    rounding:
-                      type: number
-                      format: float
-                    symbol:
-                      type: string
-                errors:
-                  type: object
-                  nullable: true
-                pagination:
-                  type: object
-                  nullable: true
-                status:
-                  type: integer
-                success_message:
-                  type: string
-                  nullable: true
-          example:
-            data:
-              active: true
-              cash_rounding: null
-              code: "AFN"
-              digits: 2
-              id: 1
-              name: "Afghani"
-              numeric_code: "001"
-              rate: 0
-              rates:
-                - date: "2024-02-06"
-                  id: 6
-                  rate: 0.1
-              rec_name: "2028"
-              rounding: 0.01
-              symbol: "AFN"
-            errors: null
-            pagination: null
-            status: 201
-            success_message: null
+            $ref: 'schema.yaml'
+            
     '401':
       description: >-
         401 Unauthorized: The server could not verify that you are

@@ -69,19 +69,3 @@ paths:
   '/currency/currencies/{obj_id}':
     $ref: 'get_put_currency_by_id.yaml'
   
- 
-    
-components:
-  # schemas:
-  #   CreateCurrency:
-  #     $ref: '../../schemas/umbrella_currency/create-currency.yaml'
-  #   UpdateCurrency:
-  #     $ref: '../../schemas/umbrella_currency/update-currency.yaml'
-  
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
-
-security:
-  - bearerAuth: []
