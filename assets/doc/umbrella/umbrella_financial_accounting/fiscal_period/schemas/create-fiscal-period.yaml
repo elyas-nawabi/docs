@@ -1,0 +1,35 @@
+      properties:
+        company:
+          type: integer
+        end_date:
+          type: string
+          format: date
+        fiscalyear:
+          type: integer
+        name:
+          type: string
+        post_move_sequence:
+          type: integer
+        start_date:
+          type: string
+          format: date
+        state:
+          type: string
+        type:
+          type: string
+      required:
+        - end_date
+        - start_date
+        - name
+        - start_date
+        - state
+        - type
+      example:
+        company: 1
+        end_date: "2029-12-31"
+        fiscalyear: 2
+        name: "2027"
+        post_move_sequence: 7
+        start_date: "2029-01-01"
+        state: "open"
+        type: "standard"

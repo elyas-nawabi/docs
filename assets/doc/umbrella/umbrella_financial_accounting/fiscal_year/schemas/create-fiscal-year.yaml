@@ -1,0 +1,65 @@
+      properties:
+        company:
+          type: integer
+        end_date:
+          type: string
+          format: date
+        invoice_sequences:
+          type: array
+        name:
+          type: string
+        periods:
+          type: array
+          properties:
+            company:
+              type: integer
+            end_date:
+              type: string
+              format: date
+            fiscalyear: 
+              type: integer
+            name:
+              type: string
+            post_move_sequence:
+              type: integer
+            rec_name:
+              type: string
+            start_date:
+              type: string
+              format: date
+            state:
+              type: string
+        post_move_sequence:
+          type: integer
+        rec_name:
+          type: string
+        start_date:
+          type: string
+          format: date
+        state:
+          type: string
+  
+      required:
+        - end_date
+        - start_date
+        - name
+        - post_move_sequence
+        - start_date
+        - state
+      example:
+        company: 1
+        name: "2024"
+        periods:
+          - company: 1
+            end_date: "2024-01-31"
+            fiscalyear: 71
+            name: "2024-01"
+            post_move_sequence: 4
+            rec_name: '1'
+            start_date: "2024-01-01"
+            state: "open"
+            type: "standard"
+        post_move_sequence: 4
+        rec_name: '2026'
+        start_date: "2024-01-01"
+        state: "open"

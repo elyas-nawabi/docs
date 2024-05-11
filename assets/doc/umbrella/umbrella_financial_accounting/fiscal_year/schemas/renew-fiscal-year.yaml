@@ -1,0 +1,31 @@
+      properties:
+        previous_fiscalyear: 
+          type: integer
+        company: 
+          type: integer
+        name:
+          type: string
+        start_date: 
+          type: string
+          format: date
+        end_date: 
+          type: string
+          format: date
+        reset_sequences: 
+          type: boolean
+
+      required:
+        - previous_fiscalyear
+        - company
+        - name
+        - start_date
+        - end_date
+        - reset_sequences
+        
+      example:
+        previous_fiscalyear: 71
+        company: 1
+        name: '2024'
+        start_date: '2024-11-11'
+        end_date: '2024-11-12'
+        reset_sequences: false

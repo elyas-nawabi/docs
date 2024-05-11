@@ -1,0 +1,76 @@
+schema:
+  type: object
+  properties:
+    data:
+      type: array
+      properties:
+        code: 
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        id:
+          type: integer
+        name:
+          type: string
+        numeric_code:
+          type: string
+        rate:
+          type: number
+          format: decimal
+        rec_name:
+          type: string
+        symbol:
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+    pagination:
+      type: object
+      page:
+        type: integer
+      per_page:
+        type: integer
+      total_pages:
+        type: integer
+      total_records:
+        type: integer
+    status:
+      type: integer
+    success_message:
+      type: string
+example:
+  data:
+    - code: AFN
+      create_date: '2024-04-18T04:45:21.629821'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      id: 1
+      name: Afghani
+      numeric_code: ''
+      rate: 0
+      rec_name: Afghani
+      symbol: AFN
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+  errors: null
+  pagination:
+    page: 1
+    per_page: 100
+    total_pages: 1
+    total_records: 1
+  status: 200
+  success_message: null

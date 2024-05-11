@@ -1,0 +1,12 @@
+properties:
+  account_template:
+    type: integer
+  company: 
+    type: integer
+required:
+ - account_template
+ - company
+
+example:
+  account_template: 1
+  company: 1
