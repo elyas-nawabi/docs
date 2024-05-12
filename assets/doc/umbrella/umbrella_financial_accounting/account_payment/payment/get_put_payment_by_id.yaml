@@ -191,7 +191,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../../api_doc.yaml#/components/schemas/UpdatePayment'
+              $ref: 'schemas/create-payment.yaml'
       responses:
         '200':
           description: OK

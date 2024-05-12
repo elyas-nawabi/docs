@@ -133,7 +133,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateFiscalPeriod'
+              $ref: 'schemas/create-fiscal-period.yaml'
       responses:
         '200':
           description: OK

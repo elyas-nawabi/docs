@@ -187,7 +187,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateFiscalYear'
+              $ref: 'schemas/create-fiscal-year.yaml'
       responses:
         '200':
           description: OK

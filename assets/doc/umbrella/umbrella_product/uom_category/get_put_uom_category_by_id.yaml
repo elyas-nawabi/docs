@@ -114,7 +114,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateUOMCategory'
+              $ref: 'schemas/create-uom-category.yaml'
       responses:
         '200':
           description: OK

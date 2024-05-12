@@ -84,7 +84,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../../api_doc.yaml#/components/schemas/UpdateLineGroup'
+              $ref: 'schemas/create-line-group.yaml'
       responses:
         '200':
           description: OK

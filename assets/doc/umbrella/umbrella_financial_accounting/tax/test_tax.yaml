@@ -10,7 +10,7 @@ post:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-tax-code.yaml'
+              $ref: 'schemas/create-tax-test.yaml'
       responses:
         '201':
           description: Created

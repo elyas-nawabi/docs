@@ -173,7 +173,7 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateAddress'
+              $ref: 'schemas/create-address.yaml'
       responses:
         '200':
           description: OK

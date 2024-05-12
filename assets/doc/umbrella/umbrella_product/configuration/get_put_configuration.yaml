@@ -126,7 +126,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateProductConfiguration'
+              $ref: 'schemas/create-configuration.yaml'
       responses:
         '200':
           description: OK

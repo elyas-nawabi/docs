@@ -1,0 +1,13 @@
+properties:
+   frequency:
+    type: string
+   end_day:
+    type: integer
+
+required:
+ - frequency
+ - end_day
+
+example:
+  frequency: "monthly"
+  end_day: 31

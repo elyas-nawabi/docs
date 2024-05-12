@@ -10,7 +10,7 @@ post:
           application/json:
             schema:
               type: object
-              $ref: '../../../../api_doc.yaml#/components/schemas/CreateLineGroup'
+              $ref: 'schemas/create-line-group.yaml'
       responses:
         '201':
           description: Created

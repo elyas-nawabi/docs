@@ -403,7 +403,7 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateParty'
+              $ref: 'schemas/create-party.yaml'
       responses:
         '200':
           description: OK

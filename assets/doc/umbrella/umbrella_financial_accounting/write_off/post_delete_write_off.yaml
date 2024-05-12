@@ -91,10 +91,10 @@ post:
 
 delete:
       tags:
-        - tax rule
-      summary: Delete tax rule.
-      description: Delete tax rule.
-      operationId: deleteTaxRuleById
+        - write off
+      summary: Delete write off.
+      description: Delete write off.
+      operationId: deleteWriteOffById
       requestBody:
         required: true
         content:

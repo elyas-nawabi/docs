@@ -10,7 +10,7 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/ReconcileExecute'
+              $ref: 'schemas/reconcile-execute.yaml'
       responses:
         '200':
           description: OK

@@ -126,7 +126,7 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateContactMechanism'
+              $ref: 'schemas/create-contact-mechanism.yaml'
       responses:
         '200':
           description: OK

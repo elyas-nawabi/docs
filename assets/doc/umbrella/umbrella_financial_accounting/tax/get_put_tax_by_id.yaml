@@ -231,7 +231,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/creat-tax.yaml'
+              $ref: 'schemas/create-tax.yaml'
       responses:
         '200':
           description: OK

@@ -10,7 +10,7 @@ post:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/creat-tax-group.yaml'
+              $ref: 'schemas/create-tax-group.yaml'
       responses:
         '201':
           description: Created
@@ -70,7 +70,7 @@ post:
   
 delete:
       tags:
-        - tax code
+        - tax group
       summary: Delete tax code.
       description: Delete tax code.
       operationId: deleteTaxCodeById
