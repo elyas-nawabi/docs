@@ -3,6 +3,16 @@ schema:
     data:
       type: array
       properties:
+        account_expense: 
+          type: integer
+        account_parent: 
+          type: boolean
+        account_revenue: 
+          type: integer
+        accounting: 
+          type: boolean
+        childs: 
+          type: array
         create_date: 
           type: string 
           format: date 
@@ -10,11 +20,28 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
-        write_date:
+        customer_taxes: 
+          type: array
+        id: 
+          type: integer
+        name: 
           type: string
-          format: date 
-        write_uid:
+        parent: 
+          type: integer
+        parent_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        supplier_taxes: 
+          type: array
+        supplier_taxes_deductible_rate: 
+          type: integer
+        taxes_parent: 
+          type: boolean
+        write_date: 
+          type: string
+          format: date
+        write_uid: 
           type: integer
         write_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'

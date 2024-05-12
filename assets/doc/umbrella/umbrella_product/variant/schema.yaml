@@ -3,6 +3,16 @@ schema:
     data:
       type: array
       properties:
+        account_category: 
+          type: integer
+        account_category_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        active:
+          type: boolean
+        code: 
+          type: string
+        cost_price: 
+          type: integer
         create_date: 
           type: string 
           format: date 
@@ -10,7 +20,34 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        default_uom: 
+          type: integer
+        default_uom_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        is_bed:
+          type: boolean
+        is_insurance_plan:
+          type: boolean
+        is_medical_supply: 
+          type: boolean
+        is_medicament:
+          type: boolean
+        is_vaccine:
+          type: boolean
+        list_price:
+          type: integer 
+        name: 
+          type: string
+        rec_name: 
+          type: string
+        template: 
+          type: integer
+        template_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        type: 
+          type: string
         write_date:
           type: string
           format: date 

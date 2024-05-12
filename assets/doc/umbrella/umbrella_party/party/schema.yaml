@@ -10,7 +10,230 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        account_payable:
+          type: string
+          nullable: true
+        account_receivable: 
+          type: string
+          nullable: true
+        addresses:
+          type: array
+          properties:
+            active:
+              type: boolean
+            city: 
+              type: string
+            contact_mechanisms:
+              type: array
+            country:
+              type: integer
+            country_:
+              id:
+                type: integer
+              name:
+                type: string
+            delivery:
+              type: integer
+            id:
+              type: integer
+            invoice:
+              type: integer
+            name: 
+              type: string
+            party:
+              type: integer
+            party_:
+              id:
+                type: integer
+              name:
+                type: string
+            party_name: 
+              type: string
+            postal_code: 
+              type: string
+            rec_name:
+              type: string
+            sequence:
+              type: integer
+            street: 
+              type: string
+            subdivision:
+              type: integer
+            subdivision_:
+              id:
+                type: integer
+              name:
+                type: string
+        bank_accounts:
+          type: array
+          properties:
+            active: 
+              type: boolean
+            bank: 
+              type: integer
+            bank_:
+              type: object
+              properties:
+                id: 
+                  type: integer
+                name: 
+                  type: object
+            currency: 
+              type: integer
+            currency_:
+              type: object
+              properties:
+                id: 
+                  type: integer
+                name: 
+                  type: object
+            id: 
+              type: integer
+            numbers:
+              type: array
+              properties:
+                account: 
+                  type: integer
+                active: 
+                  type: integer
+                id: 
+                  type: integer
+                number: 
+                  type: string
+                number_compact: 
+                  type: string
+                rec_name: 
+                  type: string
+                sequence: 
+                  type: integer
+                type: 
+                  type: string
+            owners:
+              type: array
+              properties:
+                code:
+                  type: string
+                deposit: 
+                  type: integer
+                id: 
+                  type: integer
+                lang: 
+                  type: integer
+                name: 
+                  type: string
+                payable_today: 
+                  type: integer
+                rec_name: 
+                  type: string
+                receivable_today: 
+                  type: integer
+                tax_identifier: 
+            rec_name: 
+              type: string
+        categories:
+          type: array
+          properties:
+            active:
+              type: boolean
+            childs:
+              type: array
+            id:
+              type: integer
+            name: 
+              type: string
+            parent:
+              type: integer
+            parent_:
+              id:
+                type: integer
+              name:
+                type: string
+            rec_name:
+              type: string
+        code: 
+          type: string
+        contact_mechanisms:
+          type: array
+          properties:
+            active:
+              type: boolean
+            address:
+              type: integer
+            address_:
+              id:
+                type: integer
+              name:
+                type: string
+            comment: 
+              type: string
+            delivery: 
+              type: string
+            id: 
+              type: integer
+            invoice: 
+              type: integer
+            language: 
+              type: string
+            name: 
+              type: string
+            party:
+              type: integer
+            party_:
+              id:
+                type: integer
+              name:
+                type: string
+            rec_name: 
+              type: string
+            sequence:
+              type: integer
+            type: 
+              type: string
+            value: 
+              type: string
+        credit_amount:
+          type: integer
+        credit_limit_amount: 
+          type: integer 
+        customer_payment_term: 
+          type: integer
+        customer_payment_term_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        customer_tax_rule:
+          type: integer
+          nullable: true
+        deposit:
+          type: integer
+        id:
+          type: integer
+        lang:
+          type: integer
+        name: 
+          type: string
+        payable_today:
+          type: integer
+        rec_name:
+          type: string
+        receivable:
+          type: integer
+        receivable_today:
+          type: integer
+        supplier_payment_term: 
+          type: integer
+        supplier_payment_term_:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+        supplier_tax_rule: 
+          type: integer
+        tax_identifier: 
+          type: string
+          nullable: true
+        payable: 
+          type: integer
         write_date:
           type: string
           format: date 

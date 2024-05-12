@@ -10,7 +10,46 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        active: 
+          type: boolean
+        address:
+          type: integer
+        address_:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+        comment:
+          type: string
+        delivery:
+          type: integer
+        id:
+          type: integer
+        invoice:
+          type: integer
+        language:
+          type: integer
+        name: 
+          type: string
+        party:
+          type: integer 
+        party_:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+        rec_name:
+          type: string
+        sequence:
+          type: integer
+        type:
+          type: string
+        value:
+          type: string 
         write_date:
           type: string
           format: date 

@@ -10,11 +10,16 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
-        write_date:
+        id: 
+          type: integer
+        name: 
           type: string
-          format: date 
-        write_uid:
+        rec_name: 
+          type: string
+        write_date: 
+          type: string
+          format: date
+        write_uid: 
           type: integer
         write_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'

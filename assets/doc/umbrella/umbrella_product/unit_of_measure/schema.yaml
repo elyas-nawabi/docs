@@ -3,6 +3,12 @@ schema:
     data:
       type: array
       properties:
+        active:
+          type: boolean
+        category: 
+          type: integer
+        category_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
         create_date: 
           type: string 
           format: date 
@@ -10,11 +16,28 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
-        write_date:
+        digits:
+          type: integer
+        factor: 
+          type: integer
+        id: 
+          type: integer
+        name: 
           type: string
-          format: date 
-        write_uid:
+        rate: 
+          type: number
+          format: decimal
+        rec_name: 
+          type: string
+        rounding: 
+          type: number
+          format: decimal
+        symbol: 
+          type: string
+        write_date: 
+          type: string
+          format: date
+        write_uid: 
           type: integer
         write_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'

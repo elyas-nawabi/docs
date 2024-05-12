@@ -28,12 +28,14 @@
                         country:
                           type: integer
                         country_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         id:
                           type: integer
                         name:
@@ -41,12 +43,7 @@
                         party: 
                           type: integer
                         party_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         party_name:
                           type: string
                         postal_code:
@@ -58,12 +55,14 @@
                         subdivision:
                           type: integer
                         subdivision_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -87,6 +86,11 @@
                   country_:
                     id: 1
                     name: "Afghanistan"
+                  create_date: '2024-05-08T12:21:10.626191'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
                   id: 1
                   name: "shamali tower"
                   party: 1
@@ -101,6 +105,9 @@
                   subdivision_:
                     id: 2
                     name: "sbd1"
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
                 errors: null
                 pagination:
                   page: 1
