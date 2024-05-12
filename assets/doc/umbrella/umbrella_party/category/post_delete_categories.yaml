@@ -17,70 +17,7 @@ post:
           content:
             application/json:
               schema:
-                  properties:
-                    data:
-                      type: object
-                      properties:
-                        active: 
-                          type: boolean
-                        childs:
-                          type: array
-                          properties:
-                            active: 
-                              type: boolean
-                            childs: 
-                              type: array
-                            id: 
-                              type: integer
-                            name:
-                              type: string
-                            parent: 
-                              type: integer
-                            parent_: 
-                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                            rec_name: "parentctg"
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        parent:
-                          type: integer
-                          nullable: true
-                        parent_:
-                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        rec_name:
-                          type: string
-                    errors:
-                      type: object
-                      nullable: true
-                    pagination:
-                      type: object
-                      nullable: true
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
-              example:
-                data: 
-                  active: true
-                  childs:
-                    - active: true
-                      childs: []
-                      id: 12
-                      name: "testCtg1"
-                      parent: null
-                      parent_: {}
-                      rec_name: "parentctg"
-                  id: 12
-                  name: "testCtg1"
-                  parent: null
-                  parent_: {}
-                  rec_name: "parentctg"
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

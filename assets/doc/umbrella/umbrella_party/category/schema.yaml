@@ -10,7 +10,35 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        active: 
+          type: boolean
+        childs:
+          type: array
+          properties:
+            active: 
+              type: boolean
+            childs: 
+              type: array
+            id: 
+              type: integer
+            name:
+              type: string
+            parent: 
+              type: integer
+            parent_: 
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: "parentctg"
+        id:
+          type: integer
+        name:
+          type: string
+        parent:
+          type: integer
+          nullable: true
+        parent_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name:
+          type: string
         write_date:
           type: string
           format: date 

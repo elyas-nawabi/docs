@@ -10,13 +10,26 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
-        write_date:
+        default_cost_price_method:
           type: string
-          format: date 
-        write_uid:
+        id: 
           type: integer
-        write_uid_:
+        product_sequence: 
+          type: integer
+        product_sequence_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        template_sequence: 
+          type: integer
+        template_sequence_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date: 
+          type: string
+          format: date
+        write_uid: 
+          type: integer
+        write_uid_: 
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
