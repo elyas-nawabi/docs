@@ -210,7 +210,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/creat-tax-rule.yaml'
+              $ref: 'schemas/create-tax-rule.yaml'
       responses:
         '200':
           description: OK

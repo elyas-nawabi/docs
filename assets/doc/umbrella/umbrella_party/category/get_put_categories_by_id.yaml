@@ -116,7 +116,7 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/UpdateCategory'
+              $ref: 'schemas/create-category.yaml'
       responses:
         '200':
           description: OK

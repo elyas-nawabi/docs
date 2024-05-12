@@ -147,7 +147,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateProductCategory'
+              $ref: 'schemas/create-product-category.yaml'
       responses:
         '200':
           description: OK

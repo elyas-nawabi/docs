@@ -10,7 +10,7 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateAccountMoveLine'
+              $ref: 'schemas/create-account-move-line.yaml'
       responses:
         '201':
           description: Created

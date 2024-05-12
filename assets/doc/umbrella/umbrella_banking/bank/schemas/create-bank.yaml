@@ -8,8 +8,6 @@ properties:
     type: integer
   party: 
     type: integer
-  party_:
-    $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
   rec_name: 
     type: string
   write_date:

@@ -142,7 +142,7 @@ put:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateUnitOfMeasure'
+              $ref: 'schemas/create-unit-of-measure.yaml'
       responses:
         '200':
           description: OK

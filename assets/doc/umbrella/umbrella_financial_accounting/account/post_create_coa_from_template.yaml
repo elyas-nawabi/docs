@@ -10,7 +10,7 @@ post:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateCOATemplate'
+              $ref: 'schemas/create-coa-template.yaml'
       responses:
         '201':
           description: Created

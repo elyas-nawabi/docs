@@ -10,7 +10,7 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/CreateParty'
+              $ref: 'schemas/create-party.yaml'
       responses:
         '201':
           description: OK
