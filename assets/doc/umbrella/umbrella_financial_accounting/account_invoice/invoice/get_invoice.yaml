@@ -27,12 +27,7 @@
                         company: 
                           type: integer
                         company_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         create_date: 
                           type: string 
                           format: date 
@@ -43,12 +38,7 @@
                         currency: 
                           type: integer
                         currency_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         description: 
                           type: string
                         id: 
@@ -61,12 +51,7 @@
                         party: 
                           type: integer
                         party_:
-                          type: object
-                          properties:
-                            id: 
-                              type: integer
-                            name:
-                              type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         rec_name: 
                           type: string
                         reference: 
