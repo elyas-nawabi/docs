@@ -43,26 +43,26 @@ properties:
   subdivision: 
     type: integer
 required:
-  - party
+  - 
 example:
   active: true
   city: Kabul
   contact_mechanisms:
   - address: 1
     language: 
-    name: suhaib
+    name: part 1
     party: 1
-    rec_name: suhaib <0771680435>
+    rec_name: patient 1
     type: mobile
     value: '0771680435'
   country: 1
   delivery: 
   invoice: 
-  name: ahmad tower
+  name: ada
   party: 1
   party_name: ptupdate
   postal_code: '1004'
-  rec_name: ptupdate, ahmad tower, street 3, 1004, Kabul, 1
+  rec_name: patient 1
   sequence: 1
   street: street 3
   subdivision: 3

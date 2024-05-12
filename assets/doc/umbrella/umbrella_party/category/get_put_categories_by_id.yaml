@@ -17,76 +17,7 @@
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data:
-                      type: object
-                      properties:
-                        active: 
-                          type: boolean
-                        childs:
-                          type: array
-                          properties:
-                            active: 
-                              type: boolean
-                            childs: 
-                              type: array
-                            id: 
-                              type: integer
-                            name:
-                              type: string
-                            parent: 
-                              type: integer
-                            parent_: 
-                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                            rec_name: "parentctg"
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        parent:
-                          type: integer
-                          nullable: true
-                        parent_:
-                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        rec_name:
-                          type: string
-                    errors:
-                      type: object
-                    pagination:
-                      type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-              example:
-                  data:
-                    active: true
-                    childs:
-                      - active: true
-                        childs: []
-                        id: 12
-                        name: "testCtg1"
-                        parent: null
-                        parent_: {}
-                        rec_name: "parentctg"
-                    id: 12
-                    name: "testCtg1"
-                    parent: null
-                    parent_: {}
-                    rec_name: "parentctg"
-                  errors: null
-                  pagination: null
-                  status: 201
-                  success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -123,66 +54,7 @@
           content:
             application/json:
               schema:
-                  properties:
-                    data:
-                      type: object
-                      properties:
-                        childs:
-                          type: array
-                          properties:
-                            childs: 
-                              type: array
-                            id: 
-                              type: integer
-                            name: 
-                              type: string
-                            parent: 
-                              type: integer
-                              nullable: true
-                            parent_:
-                              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                            rec_name:
-                              type: string
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        parent:
-                          type: integer
-                          nullable: true
-                        parent_:
-                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        rec_name:
-                          type: string
-                    errors:
-                      type: object
-                      nullable: true
-                    pagination:
-                      type: object
-                      nullable: true
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
-              example:
-                data:
-                  childs:
-                    - childs: []
-                      id: 12
-                      name: "testCtg1"
-                      parent: null
-                      parent_: {}
-                      rec_name: "parentctg"
-                  id: 12
-                  name: "testCtg1"
-                  parent: null
-                  parent_: {}
-                  rec_name: "parentctg"
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
