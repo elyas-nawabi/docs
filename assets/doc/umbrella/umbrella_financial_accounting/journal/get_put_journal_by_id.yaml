@@ -17,68 +17,7 @@ get:
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data:
-                      type: object
-                      properties:
-                        active:
-                          type: boolean
-                        code:
-                          type: string
-                        id:
-                          type: integer
-                        matching_sequence:
-                          type: integer
-                        name:
-                          type: string
-                        rec_name:
-                          type: string
-                        sequence: 
-                          type: string
-                        sequence_:
-                          id:
-                            type: integer
-                          name:
-                            type: string
-                        type: 
-                          type: string
-                    errors:
-                      type: object
-                    pagination:
-                      items:
-                        type: object
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
-              example:
-                data:
-                  active: true
-                  code: REV
-                  id: 1
-                  matching_sequence: 
-                  name: Revenue
-                  rec_name: Revenue
-                  sequence: 2
-                  sequence_:
-                    id: 2
-                    name: Default Account Journal
-                  type: revenue
-                error: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -122,66 +61,7 @@ put:
           content:
             application/json:
               schema:
-                  properties:
-                    data:
-                      type: object
-                      properties:
-                        active:
-                          type: boolean
-                        code:
-                          type: string
-                        id:
-                          type: integer
-                        matching_sequence:
-                          type: integer
-                        name:
-                          type: string
-                        rec_name:
-                          type: string
-                        sequence: 
-                          type: string
-                        sequence_:
-                          id:
-                            type: integer
-                          name:
-                            type: string
-                        type: 
-                          type: string
-                    errors:
-                      type: object
-                    pagination:
-                      items:
-                        type: object
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-              example:
-                data:
-                  active: true
-                  code: REV
-                  id: 1
-                  matching_sequence: 
-                  name: Revenue
-                  rec_name: Revenue
-                  sequence: 2
-                  sequence_:
-                    id: 2
-                    name: Default Account Journal
-                  type: revenue
-                errors: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

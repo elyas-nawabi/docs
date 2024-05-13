@@ -10,7 +10,61 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        active:
+          type: boolean
+        description: 
+          type: string
+        id: 
+          type: integer
+        lines:
+          properties:
+            amount: 
+              type: integer
+            currency: 
+              type: integer
+            currency_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            divisor: 
+              type: integer
+            id: 
+              type: integer
+            payment: 
+              type: integer
+            ratio: 
+              type: integer
+            rec_name: 
+              type: string
+            relativedeltas:
+              type: array
+              properties:
+                day: 
+                  type: integer
+                days: 
+                  type: integer
+                id: 
+                  type: integer
+                line: 
+                  type: integer
+                month: 
+                  type: integer
+                months: 
+                  type: integer
+                rec_name:
+                  type: string
+                sequence: 
+                  type: integer
+                weekday: 
+                  type: integer
+                weeks: 
+                  type: integer
+          sequence: 
+            type: integer
+          type: 
+            type: string
+        name: 
+          type: string
+        rec_name: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -37,7 +91,33 @@ example:
       create_uid_:
         id: 1
         name: Administrator
-      
+      active: true
+      description: payment term description here...
+      id: 1
+      lines:
+      - amount: 0
+        currency: 
+        currency_: {}
+        divisor: 0
+        id: 1
+        payment: 1
+        ratio: 0
+        rec_name: '1'
+        relativedeltas:
+        - day: 1
+          days: 1
+          id: 1
+          line: 1
+          month: 1
+          months: 1
+          rec_name: '1'
+          sequence: 1
+          weekday: 1
+          weeks: 1
+        sequence: 1
+        type: remainder
+      name: paymentTerm1
+      rec_name: paymentTerm1
       write_date: 
       write_uid: 
       write_uid_: {}

@@ -17,86 +17,7 @@ get:
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data:
-                      type: object
-                      properties:
-                        company:
-                          type: integer
-                        company_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                        end_date:
-                          type: string
-                          format: date
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        post_move_sequence:
-                          type: integer
-                        post_move_sequence_:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                        start_date:
-                          type: string
-                          format: date
-                        state:
-                          type: string
-                        type:
-                          type: string
-                    errors:
-                      type: object
-                    pagination:
-                      items:
-                        type: object
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-                      nullable: true
-              example:
-                data:
-                  company: 1
-                  company_:
-                    id: 1
-                    name: Party 1
-                  end_date: '2024-02-29'
-                  fiscalyear: 2
-                  fiscalyear_:
-                    id: 2
-                    name: '2024'
-                  id: 14
-                  name: "2024-02"
-                  post_move_sequence: 4
-                  post_move_sequence_:
-                    id: 4
-                    name: '2024'
-                  start_date: '2024-02-01'
-                  state: "open"
-                  type: "standard"
-                error: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -140,67 +61,7 @@ put:
           content:
             application/json:
               schema:
-                  properties:
-                    data:
-                      type: object
-                      properties:
-                        company:
-                          type: integer
-                        end_date:
-                          type: string
-                          format: date
-                        fiscalyear:
-                          type: integer
-                        name:
-                          type: string
-                        post_move_sequence:
-                          type: integer
-                        start_date:
-                          type: string
-                          format: date
-                        state:
-                          type: string
-                        type:
-                          type: string
-                    errors:
-                      type: object
-                    pagination:
-                      items:
-                        type: object
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-              example:
-                data:
-                  company: 1
-                  company_:
-                    id: 1
-                    name: "Party 1"
-                  end_date: "2024-12-31"
-                  fiscalyear: 2
-                  id: 2
-                  name: "2024"
-                  post_move_sequence: 4
-                  post_move_sequence_:
-                    id: 4
-                    name: "2024"
-                  start_date: "2024-01-01"
-                  state: "open"
-                  type: "standard"
-                errors: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

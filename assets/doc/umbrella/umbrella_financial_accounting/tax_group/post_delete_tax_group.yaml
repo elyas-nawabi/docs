@@ -17,46 +17,7 @@ post:
           content:
             application/json:
               schema:
-                  type: object
-                  properties:
-                    data: 
-                      code: 
-                        type: string
-                      id:
-                        type: integer
-                      kind:
-                        type: string
-                      name: 
-                        type: string
-                      rec_name: 
-                        type: string
-                    errors:
-                      type: object
-                    pagination:
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
-                      type: integer
-                    success_message:
-                      type: string
-              example:
-                data:
-                  code: vst_reduced_test
-                  id: 21
-                  kind: purchase
-                  name: Vorsteuer ermäßigt
-                  rec_name: Vorsteuer ermäßigt
-                errors: null
-                pagination: null
-                status: 200
-                success_message: null
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

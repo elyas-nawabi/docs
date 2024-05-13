@@ -10,7 +10,20 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        active:
+          type: boolean
+        code:
+          type: string
+        matching_sequence:
+          type: integer
+        name:
+          type: string
+        rec_name:
+          type: string
+        sequence: 
+          type: string
+        type: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -37,7 +50,17 @@ example:
       create_uid_:
         id: 1
         name: Administrator
-      
+      active: true
+      code: REV
+      id: 1
+      matching_sequence: 
+      name: Revenue
+      rec_name: Revenue
+      sequence: 2
+      sequence_:
+        id: 2
+        name: Default Account Journal
+      type: revenue
       write_date: 
       write_uid: 
       write_uid_: {}

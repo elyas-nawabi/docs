@@ -10,7 +10,16 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        code: 
+          type: string
+        id:
+          type: integer
+        kind:
+          type: string
+        name: 
+          type: string
+        rec_name: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -37,7 +46,11 @@ example:
       create_uid_:
         id: 1
         name: Administrator
-      
+      code: vst_reduced_test
+      id: 21
+      kind: purchase
+      name: Vorsteuer ermäßigt
+      rec_name: Vorsteuer ermäßigt
       write_date: 
       write_uid: 
       write_uid_: {}

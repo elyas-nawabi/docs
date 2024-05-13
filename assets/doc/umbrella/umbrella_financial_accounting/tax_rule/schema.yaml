@@ -3,10 +3,10 @@ schema:
     data:
       type: array
       properties:
-        active:
-          type: boolean
-        code:
-          type: string
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
         create_date: 
           type: string 
           format: date 
@@ -14,39 +14,71 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        digits:
+        id: 
           type: integer
-        id:
-          type: integer
-        name:
+        kind:
           type: string
-        numeric_code:
-          type: string
-        rate:
-          type: number
-          format: decimal
-        rates:
+        lines:
           type: array
           properties:
-            date: 
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            end_date:
               type: string
               format: date
+            group: 
+              type: integer
+            group_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
             id: 
               type: integer
-            rate: 
-              type: number
-              format: decimal
-        rec_name:
+            keep_origin: 
+              type: boolean
+            origin_tax: 
+              type: integer
+            origin_tax_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name:
+              type: string
+            sequence: 
+              type: integer
+            start_date: 
+              type: string
+              format: date
+            tax:
+              type: integer
+            tax_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            template:
+              type: integer 
+            template_: 
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            template_override:
+              type: boolean
+            write_date: 
+              type: string
+              format: date
+            write_uid: 
+              type: integer
+            write_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
           type: string
-        rounding:
-          type: number
-          format: float
-        symbol:
+        rec_name: 
           type: string
-        write_date:
+        template: 
+          type: integer
+        template_override:
+          type: boolean
+        write_date: 
           type: string
-          format: date 
-        write_uid:
+          format: date
+        write_uid: 
           type: integer
         write_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
@@ -64,24 +96,47 @@ schema:
 
 example:
     data:
-      active: true
-      code: AFN
-      create_date: '2024-04-18T04:45:21.629821'
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      create_date: '2024-04-27T09:22:13.955826'
       create_uid: 1
       create_uid_:
         id: 1
         name: Administrator
-      digits: 2
-      id: 1
-      name: Afghani
-      numeric_code: ''
-      rate: 0
-      rates: []
-      rec_name: Afghani
-      rounding: 0.01
-      symbol: AFN
-      write_date: 
-      write_uid: 
+      id: 7
+      kind: both
+      lines:
+      - create_date: '2024-04-27T09:22:13.955826'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        end_date: '2024-03-31'
+        group: null
+        group_: {}
+        id: 4
+        keep_origin: true
+        origin_tax: null
+        origin_tax_: {}
+        rec_name: '4'
+        sequence: 1
+        start_date: '2024-03-04'
+        tax: null
+        tax_: {}
+        template: null
+        template_: {}
+        template_override: false
+        write_date: null
+        write_uid: null
+        write_uid_: {}
+      name: tx_rule_2
+      rec_name: tx_rule_2
+      template: 
+      template_override: false
+      write_date: null
+      write_uid: null
       write_uid_: {}
     errors: null
     pagination: null
