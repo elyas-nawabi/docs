@@ -10,7 +10,74 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        childs:
+          type: array
+          properties:
+            childs:
+              type: array
+              properties:
+                childs:
+                  type: array
+                company:
+                  type: integer
+                company_:
+                  $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                id:
+                  type: integer
+                name:
+                  type: string
+                parent:
+                  type: integer
+                parent_: 
+                  type: object
+                rec_name:
+                  type: string
+                sequence:
+                  type: integer
+                statement: 
+                  type: string
+                stock:
+                  type: boolean
+            company:
+              type: integer
+            company_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            id:
+              type: integer
+            name:
+              type: string
+            parent:
+              type: integer
+            parent_: 
+              type: object
+            rec_name:
+              type: string
+            sequence:
+              type: integer
+            statement: 
+              type: string
+            stock:
+              type: boolean
+        company:
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        id:
+          type: integer
+        name:
+          type: string
+        parent:
+          type: integer
+        parent_: 
+          type: object
+        rec_name:
+          type: string
+        sequence:
+          type: integer
+        statement: 
+          type: string
+        stock:
+          type: boolean
         write_date:
           type: string
           format: date 
@@ -37,7 +104,49 @@ example:
       create_uid_:
         id: 1
         name: Administrator
-      
+      childs:
+      - childs:
+        - childs: []
+          company: 1
+          company_:
+            id: 1
+            name: Party 1
+          id: 7
+          name: Long-term
+          parent: 2
+          parent_:
+            id: 2
+            name: Minimal Account Type Chart\Asset
+          rec_name: Minimal Account Type Chart\Asset\Long-term
+          sequence: 20
+          statement: balance
+          stock: false
+        company: 1
+        company_:
+          id: 1
+          name: Party 1
+        id: 2
+        name: Asset
+        parent: 1
+        parent_:
+          id: 1
+          name: Minimal Account Type Chart
+        rec_name: Minimal Account Type Chart\Asset
+        sequence: 10
+        statement: balance
+        stock: false
+      company: 1
+      company_:
+        id: 1
+        name: Party 1
+      id: 1
+      name: Minimal Account Type Chart
+      parent: 
+      parent_: {}
+      rec_name: Minimal Account Type Chart
+      sequence: 10
+      statement: 
+      stock: false
       write_date: 
       write_uid: 
       write_uid_: {}

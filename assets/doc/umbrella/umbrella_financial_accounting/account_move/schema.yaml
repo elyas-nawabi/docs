@@ -10,7 +10,43 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        company:
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        date:
+          type: string
+          format: date
+        description: 
+          type: string
+        id:
+          type: integer
+        journal:
+          type: integer
+        journal_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        lines:
+          type: array
+          nullable: true
+        number:
+          type: string
+        origin:
+          type: string
+        origin_: 
+          type: object
+        period:
+          type: integer
+        period_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        post_date: 
+          type: string
+          format: date
+        post_number: 
+          type: string
+        rec_name:
+          type: string
+        state:
+          type: string
         write_date:
           type: string
           format: date 
@@ -37,7 +73,29 @@ example:
       create_uid_:
         id: 1
         name: Administrator
-      
+      company: 1
+      company_:
+        id: 1
+        name: Party 1
+      date: '2026-01-27'
+      description: some description here
+      id: 2
+      journal: 13
+      journal_:
+        id: 13
+        name: Statement
+      lines: []
+      number: '1'
+      origin: account.move,-1
+      origin_: {}
+      period: 79
+      period_:
+        id: 79
+        name: '1'
+      post_date: 
+      post_number: 
+      rec_name: '1'
+      state: draft
       write_date: 
       write_uid: 
       write_uid_: {}

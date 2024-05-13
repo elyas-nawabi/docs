@@ -10,7 +10,65 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        amount: 
+          type: integer
+        approved_by: 
+          type: integer
+        approved_by_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        currency: 
+          type: integer
+        currency_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        date: 
+          type: string
+          format: date
+        description: 
+          type: string
+        failed_by: 
+          type: integer
+        failed_by_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        group: 
+          type: integer
+        group_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        journal: 
+          type: integer
+        journal_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        kind: 
+          type: string
+        line: 
+          type: integer
+        line_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        origin: 
+          type: string
+        party: 
+          type: integer
+        party_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        process_method:
+          type: string
+        rec_name:
+          type: string
+        state:
+          type: string
+        submitted_by:
+          type: integer
+        submitted_by_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        succeeded_by:
+          type: integer
+        succeeded_by_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
         write_date:
           type: string
           format: date 
@@ -37,7 +95,51 @@ example:
       create_uid_:
         id: 1
         name: Administrator
-      
+      amount: 1
+      approved_by: 21
+      approved_by_:
+        id: 21
+        name: Party 1
+      company: 1
+      company_:
+        id: 1
+        name: Party 1
+      currency: 1
+      currency_:
+        id: 1
+        name: Afghani
+      date: '2024-03-15'
+      description: this is some description
+      failed_by: 21
+      failed_by_:
+        id: 21
+        name: Party 1
+      group: 
+      group_: {}
+      id: 9
+      journal: 1
+      journal_:
+        id: 1
+        name: payment_journal
+      kind: receivable
+      line: 
+      line_: {}
+      origin: 
+      party: 1
+      party_:
+        id: 1
+        name: Party 1
+      process_method: stripe
+      rec_name: '9'
+      state: draft
+      submitted_by: 21
+      submitted_by_:
+        id: 21
+        name: Party 1
+      succeeded_by: 21
+      succeeded_by_:
+        id: 21
+        name: Party 1
       write_date: 
       write_uid: 
       write_uid_: {}

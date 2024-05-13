@@ -10,7 +10,146 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        balance: 
+          type: number
+          format: decimal
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        currency: 
+          type: integer
+        currency_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        date: 
+          type: string
+          format: date
+        end_balance:
+          type: number 
+          format: decimal
+        id: 
+          type: integer
+        journal: 
+          type: integer
+        journal_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        lines: 
+          type: array
+          properties:
+              account: 
+                type: integer
+              account_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              amount: 
+                type: number
+                format: decimal
+              company: 
+                type: integer
+              company_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              currency: 
+                type: integer
+              currency_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              date:
+                type: string
+                format: date
+              description: 
+                type: string
+              id: 
+                type: integer
+              move: 
+                type: integer
+              move_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              number: 
+                type: string
+              origin: 
+                type: string
+              origin_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              party: 
+                type: integer
+              party_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              party_required: 
+                type: boolean
+              rec_name: 
+                type: string
+              related_to: 
+                type: string
+              related_to_: 
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              sequence: 
+                type: integer
+              statement: 
+                type: integer
+              statement_state: 
+                type: string
+        name: 
+          type: string
+        number_of_lines: 
+          type: integer
+        origin_file: 
+          type: string
+        origin_file_id: 
+          type: string 
+        origins: 
+          type: array
+          properties:
+              account: 
+                type: integer
+              account_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              amount: 
+                type: integer
+              company: 
+                type: integer
+              company_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              currency: 
+                type: integer
+              currency_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              date: 
+                type: string
+                format: date
+              description: 
+                type: string
+              id: 
+                type: integer
+              lines: 
+                type: array
+              number: 
+                type: string
+              party: 
+                type: integer
+              party_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              pending_amount: 
+                type: integer
+              rec_name: 
+                type: string
+              statement: 
+                type: integer
+              statement_id: 
+                type: integer
+              statement_state:
+                type: string
+        rec_name: 
+          type: string
+        start_balance: 
+          type: number
+          format: decimal
+        state: 
+          type: string
+        to_reconcile: 
+          type: boolean
+        total_amount: 
+          type: number
+          format: decimal
+        validation: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -37,7 +176,87 @@ example:
       create_uid_:
         id: 1
         name: Administrator
-      
+      balance: 0.93
+      company: 1
+      company_:
+        id: 1
+        name: Party 1
+      currency: 1
+      currency_:
+        id: 1
+        name: Afghani
+      date: '2024-03-15'
+      end_balance: 1
+      id: 2
+      journal: 6
+      journal_:
+        id: 6
+        name: statementj1
+      lines:
+      - account: 5
+        account_:
+          id: 5
+          name: Main Receivable
+        amount: 0.04
+        company: 1
+        company_:
+          id: 1
+          name: Party 1
+        currency: 1
+        currency_:
+          id: 1
+          name: Afghani
+        date: '2024-03-13'
+        description: this is some description
+        id: 1
+        move: 
+        move_: {}
+        number: '1'
+        origin: 
+        origin_: {}
+        party: 1
+        party_:
+          id: 1
+          name: Party 1
+        party_required: true
+        rec_name: stm1
+        related_to: account.payment,-1
+        related_to_: {}
+        sequence: 
+        statement: 2
+        statement_state: draft
+      name: stm1
+      number_of_lines: 
+      origin_file: 
+      origin_file_id: 
+      origins:
+      - account: 29
+        account_:
+          id: 29
+          name: 1 - 1
+        amount: 1
+        company: 1
+        company_:
+          id: 1
+          name: Party 1
+        currency: 1
+        currency_:
+          id: 1
+          name: Afghani
+        date: '2024-03-14'
+        description: this is some description
+        id: 1
+        lines: []
+        number: '1'
+        party: 1
+        party_:
+          id: 1
+          name: Party 1
+        pending_amount: 1
+        rec_name: '1'
+        statement: 2
+        statement_id: 2
+        statement_state: draft
       write_date: 
       write_uid: 
       write_uid_: {}

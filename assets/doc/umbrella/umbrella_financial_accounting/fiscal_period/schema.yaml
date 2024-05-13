@@ -10,7 +10,59 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        company:
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        end_date:
+          type: string
+          format: date
+        id:
+          type: integer
+        name:
+          type: string
+        periods:
+          type: array
+          properties:
+            company:
+              type: integer
+            company_:
+              type: object
+              properties: 
+                id:
+                  type: integer
+                name:
+                  type: string
+            end_date:
+              type: string
+              format: date
+            id:
+              type: integer
+            name:
+              type: string
+            post_move_sequence:
+              type: integer
+            post_move_sequence_:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+            start_date:
+              type: string
+              format: date
+            state:
+              type: string
+        post_move_sequence:
+          type: integer
+        post_move_sequence_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        start_date:
+          type: string
+          format: date
+        state:
+          type: string
         write_date:
           type: string
           format: date 
@@ -37,7 +89,35 @@ example:
       create_uid_:
         id: 1
         name: Administrator
-      
+      company: 1
+      company_:
+        id: 1
+        name: "Party 1"
+      end_date: "2024-12-31"
+      id: 2
+      name: "2024"
+      periods:
+        - company: 1
+          company_:
+            id: 1
+            name: "Party 1"
+          end_date: "2024-01-31"
+          fiscalyear: 2
+          id: 13
+          name: "2024-01"
+          post_move_sequence: 4
+          post_move_sequence_:
+            id: 4
+            name: "2024"
+          start_date: "2024-01-01"
+          state: "open"
+          type: "standard"
+      post_move_sequence: 4
+      post_move_sequence_:
+        id: 4
+        name: "2024"
+      start_date: "2024-01-01"
+      state: "open"
       write_date: 
       write_uid: 
       write_uid_: {}

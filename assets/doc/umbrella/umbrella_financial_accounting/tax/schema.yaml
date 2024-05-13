@@ -10,7 +10,76 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        active:
+          type: boolean
+        amount: 
+          type: number
+          format: float
+        childs:
+          type: array
+        company:
+          type: number
+        company_:
+           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        credit_base_amount:
+          type: integer
+        credit_note_account:
+          type: integer
+        credit_note_account_:
+           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        credit_tax_amount:
+          type: integer
+        currency:
+          type: integer
+        currency_:
+           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        description:
+          type: string
+        end_date:
+          type: string
+        group:
+          type: integer
+        group_:
+           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        id:
+          type: integer
+        invoice_account:
+          type: integer
+        invoice_account_:
+           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        invoice_base_amount: 
+          type: number
+          format: float
+        invoice_tax_amount: 
+          type: number
+          format: float
+        legal_notice: 
+          type: string
+        name:
+          type: string
+        parent: 
+          type: integer
+        parent_:
+           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rate:
+          type: number
+          format: float
+        rec_name:
+          type: string
+        sequence:
+          type: integer
+        start_date:
+          type: string
+        template: 
+          type: integer
+        template_:
+           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        template_override:
+          type: boolean
+        type:
+          type: string
+        update_unit_price:
+          type: boolean
         write_date:
           type: string
           format: date 
@@ -37,7 +106,49 @@ example:
       create_uid_:
         id: 1
         name: Administrator
-      
+      active: true
+      amount: null
+      childs: []
+      company: 1
+      company_:
+        id: 1
+        name: Party 1
+      credit_base_amount: 0
+      credit_note_account: 31
+      credit_note_account_:
+        id: 31
+        name: 1 - 1
+      credit_tax_amount: 0
+      currency: 1
+      currency_:
+        id: 1
+        name: Afghani
+      description: no desc
+      end_date: '2024-03-31'
+      group: 20
+      group_:
+        id: 20
+        name: '1'
+      id: 23
+      invoice_account: 30
+      invoice_account_:
+        id: 30
+        name: 1 - 1
+      invoice_base_amount: 0
+      invoice_tax_amount: 0
+      legal_notice: some legal notice
+      name: tx1
+      parent: null
+      parent_: {}
+      rate: 0.01
+      rec_name: tx1
+      sequence: 1
+      start_date: '2024-03-03'
+      template: null
+      template_: {}
+      template_override: false
+      type: percentage
+      update_unit_price: true
       write_date: 
       write_uid: 
       write_uid_: {}
