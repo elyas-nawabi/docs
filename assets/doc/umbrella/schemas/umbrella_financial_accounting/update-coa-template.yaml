@@ -1,9 +1,0 @@
-properties:
-  account:
-    type: integer
-
-required:
- - account
-
-example:
-  account: 1
