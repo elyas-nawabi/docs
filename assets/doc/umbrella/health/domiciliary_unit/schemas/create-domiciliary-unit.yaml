@@ -1,0 +1,79 @@
+      properties:
+        cancel_invoice_out:
+          type: boolean
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        currency:
+          type: integer
+        employees:
+          type: array 
+          properties:
+            company:
+              type: integer
+            end_date:
+              type: string
+              format: date
+            party:
+              type: integer
+            rec_name:
+              type: string
+            start_date:
+              type: string
+              format: date
+            supervisor: 
+              type: integer
+        footer: 
+          type: string
+        header: 
+          type: string
+        party:
+          type: integer
+        payable:
+          type: integer
+        payable_today:
+          type: integer
+        purchase_taxes_expense:
+          type: boolean
+        rec_name: 
+          type: string
+        receivable:
+          type: integer
+        receivable_today:
+          type: integer
+        timezone:
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+  
+      required:
+          - 
+      example:
+        cancel_invoice_out: true
+        create_date: '2024-04-18T04:45:21.629821'
+        create_uid: 1
+        currency: 1
+        employees:
+        - company: 1
+          end_date: '2024-02-29'
+          party: 24
+          rec_name: Party 1
+          start_date: '2024-02-01'
+          supervisor: 
+        footer: ''
+        header: ''
+        party: 1
+        payable: 0
+        payable_today: 0
+        purchase_taxes_expense: false
+        rec_name: Party 1
+        receivable: 0
+        receivable_today: 0
+        timezone: 'Asia/Kabul'
+        write_date: 
+        write_uid: 
