@@ -10,7 +10,7 @@ post:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-company.yaml'
+              $ref: 'schemas/create-domiciliary-unit.yaml'
       responses:
         '201':
           description: OK
