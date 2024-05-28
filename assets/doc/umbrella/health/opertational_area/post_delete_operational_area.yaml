@@ -1,16 +1,16 @@
 post:
       tags:
-        - company
-      summary: Create a company.
-      description: Create a company.
-      operationId: postCompanyById
+        - operational area
+      summary: Create a operational area.
+      description: Create a operational area.
+      operationId: postOperationalAreaById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-company.yaml'
+              $ref: 'schemas/create-operational-area.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - company
-      summary: Delete companys.
-      description: Delete companys.
-      operationId: deleteCompaniesById
+        - operational area
+      summary: Delete operational areas.
+      description: Delete operational areas.
+      operationId: deleteOperationalAreaById
       requestBody:
         required: true
         content:

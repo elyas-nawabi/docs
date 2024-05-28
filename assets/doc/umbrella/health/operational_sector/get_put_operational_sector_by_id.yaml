@@ -1,9 +1,9 @@
     get:
       tags:
-        - company
-      summary: Get one company.
-      description: Get one company.
-      operationId: getCompanyById
+        - operational sector
+      summary: Get one operational sector.
+      description: Get one operational sector.
+      operationId: getOperationalSectorById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - company
-      summary: Update a company.
-      description: Update a company.
-      operationId: updateCompanyById
+        - operational sector
+      summary: Update a operational sector.
+      description: Update a operational sector.
+      operationId: updateOperationalSectorById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-company.yaml'
+              $ref: 'schemas/create-operational-sector.yaml'
       responses:
         '200':
           description: OK

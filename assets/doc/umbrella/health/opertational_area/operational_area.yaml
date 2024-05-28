@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: company
-    description: company - company data management.
+  - name: operational area
+    description: operational area - operational area data management.
 paths:
-  '/company/companies/search':
-    $ref: 'get_company.yaml'
-  '/company/companies':
-    $ref: 'post_delete_company.yaml'
-  '/company/companies/{obj_id}':
-    $ref: 'get_put_company_by_id.yaml'
+  '/health/operational-areas/search':
+    $ref: 'get_operational_area.yaml'
+  '/health/operational-areas':
+    $ref: 'post_delete_operational_area.yaml'
+  '/health/operational-areas/{obj_id}':
+    $ref: 'get_put_operational_area_by_id.yaml'
   

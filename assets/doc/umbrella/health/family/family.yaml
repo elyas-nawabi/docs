@@ -62,10 +62,10 @@ tags:
   - name: family
     description: family - family data management.
 paths:
-  '/family/families/search':
+  '/health/families/search':
     $ref: 'get_family.yaml'
-  '/family/families':
+  '/health/families':
     $ref: 'post_delete_family.yaml'
-  '/family/families/{obj_id}':
+  '/health/families/{obj_id}':
     $ref: 'get_put_family_by_id.yaml'
   

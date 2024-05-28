@@ -62,10 +62,10 @@ tags:
   - name: medical specialty
     description: medical specialty - medical specialty data management.
 paths:
-  '/medical_specialty/medical_specialties/search':
+  '/health/medical_specialties/search':
     $ref: 'get_medical_specialty.yaml'
-  '/medical_specialty/medical_specialties':
+  '/health/medical_specialties':
     $ref: 'post_delete_medical_specialty.yaml'
-  '/medical_specialty/medical_specialties/{obj_id}':
+  '/health/medical_specialties/{obj_id}':
     $ref: 'get_put_medical_specialty_by_id.yaml'
   

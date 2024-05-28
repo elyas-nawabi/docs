@@ -1,9 +1,9 @@
 post:
       tags:
-        - company
-      summary: Create a company.
-      description: Create a company.
-      operationId: postCompanyById
+        - domiciliary unit
+      summary: Create a domiciliary unit.
+      description: Create a domiciliary unit.
+      operationId: postDomiciliaryUnitById
       requestBody:
         required: true
         content:
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - company
-      summary: Delete companys.
-      description: Delete companys.
-      operationId: deleteCompaniesById
+        - domiciliary unit
+      summary: Delete domiciliary units.
+      description: Delete domiciliary units.
+      operationId: deleteDomiciliaryUnitById
       requestBody:
         required: true
         content:

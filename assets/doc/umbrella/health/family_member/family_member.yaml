@@ -62,10 +62,10 @@ tags:
   - name: family member
     description: family member - family member data management.
 paths:
-  '/family_member/family-members/search':
+  '/health/family-members/search':
     $ref: 'get_family_member.yaml'
-  '/family_member/family-members':
+  '/health/family-members':
     $ref: 'post_delete_family_member.yaml'
-  '/family_member/family-members/{obj_id}':
+  '/health/family-members/{obj_id}':
     $ref: 'get_put_family_member_by_id.yaml'
   
