@@ -1,9 +1,9 @@
     get:
       tags:
-        - company
-      summary: Get one company.
-      description: Get one company.
-      operationId: getCompanyById
+        - family member
+      summary: Get one family member.
+      description: Get one family member.
+      operationId: getFamilyMemberById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - company
-      summary: Update a company.
-      description: Update a company.
-      operationId: updateCompanyById
+        - family member
+      summary: Update a family member.
+      description: Update a family member.
+      operationId: updateFamilyMemberById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-company.yaml'
+              $ref: 'schemas/create-family-member.yaml'
       responses:
         '200':
           description: OK

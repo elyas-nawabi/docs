@@ -1,16 +1,16 @@
 post:
       tags:
-        - company
-      summary: Create a company.
-      description: Create a company.
-      operationId: postCompanyById
+        - family member
+      summary: Create a family member.
+      description: Create a family member.
+      operationId: postFamilyMemberById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-company.yaml'
+              $ref: 'schemas/create-family-member.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - company
-      summary: Delete companys.
-      description: Delete companys.
-      operationId: deleteCompaniesById
+        - family member
+      summary: Delete family members.
+      description: Delete family members.
+      operationId: deleteFamilyMembersById
       requestBody:
         required: true
         content:

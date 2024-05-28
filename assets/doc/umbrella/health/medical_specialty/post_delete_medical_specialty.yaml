@@ -1,16 +1,16 @@
 post:
       tags:
-        - company
-      summary: Create a company.
-      description: Create a company.
-      operationId: postCompanyById
+        - medical specialty
+      summary: Create a medical specialty.
+      description: Create a medical specialty.
+      operationId: postMedicalSpecialtyById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-company.yaml'
+              $ref: 'schemas/create-medical-specialty.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - company
-      summary: Delete companys.
-      description: Delete companys.
-      operationId: deleteCompaniesById
+        - medical specialty
+      summary: Delete medical specialties.
+      description: Delete medical specialties.
+      operationId: deleteMedicalSpecialtiesById
       requestBody:
         required: true
         content:

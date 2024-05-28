@@ -1,9 +1,9 @@
     get:
       tags:
-        - company
-      summary: Get one company.
-      description: Get one company.
-      operationId: getCompanyById
+        - domiciliary unit
+      summary: Get one domiciliary unit.
+      description: Get one domiciliary unit.
+      operationId: getDomiciliaryUnitById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - company
-      summary: Update a company.
-      description: Update a company.
-      operationId: updateCompanyById
+        - domiciliary unit
+      summary: Update a domiciliary unit.
+      description: Update a domiciliary unit.
+      operationId: updateDomiciliaryUnitById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-company.yaml'
+              $ref: 'schemas/create-domiciliary-unit.yaml'
       responses:
         '200':
           description: OK

@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: company
-    description: company - company data management.
+  - name: occupation
+    description: occupation - occupation data management.
 paths:
-  '/company/companies/search':
-    $ref: 'get_company.yaml'
-  '/company/companies':
-    $ref: 'post_delete_company.yaml'
-  '/company/companies/{obj_id}':
-    $ref: 'get_put_company_by_id.yaml'
+  '/health/occupations/search':
+    $ref: 'get_occupation.yaml'
+  '/health/occupations':
+    $ref: 'post_delete_occupation.yaml'
+  '/health/occupations/{obj_id}':
+    $ref: 'get_put_occupation_by_id.yaml'
   
