@@ -42,12 +42,19 @@ body {margin:0;font-family:Arial}
   .dropdown-content {
     display: none;
     position: absolute;
+    /* left:0; */
     background-color: #f9f9f9;
-    min-width: 160px;
+    /* min-width: 160px; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    padding: 10px; /* Add padding to each column */
   }
-  
+  .health{
+    width: 100%;
+    left:0;
+    column-count: 5;
+
+  }
   .dropdown-content a {
     float: none;
     color: black;
@@ -55,8 +62,18 @@ body {margin:0;font-family:Arial}
     text-decoration: none;
     display: block;
     text-align: left;
+    
   }
-  
+  .group {
+    padding: 10px 0;
+}
+
+.group h3 {
+    margin: 0;
+    padding: 0 10px;
+    color: #999; /* Color for group header */
+}
+
   .topnav a:hover, .dropdown:hover .dropbtn {
     background-color: #555;
     color: white;
