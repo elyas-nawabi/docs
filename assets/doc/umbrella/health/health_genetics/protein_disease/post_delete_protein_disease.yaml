@@ -1,16 +1,16 @@
 post:
       tags:
-        - body structure
-      summary: Create a body structure.
-      description: Create a body structure.
-      operationId: postBodyStructureById
+        - protein disease
+      summary: Create a protein disease.
+      description: Create a protein disease.
+      operationId: postProteinDiseaseById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-body-structure.yaml'
+              $ref: 'schemas/create-protein-disease.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - body structure
-      summary: Delete body structures.
-      description: Delete body structures.
-      operationId: deleteBodyStructuresById
+        - protein disease
+      summary: Delete protein diseases.
+      description: Delete protein diseases.
+      operationId: deleteProteinDiseasesById
       requestBody:
         required: true
         content:

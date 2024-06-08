@@ -1,9 +1,9 @@
     get:
       tags:
-        - body structure
-      summary: Get one body structure.
-      description: Get one body structure.
-      operationId: getBodyStructureById
+        - gene variant phenotype
+      summary: Get one gene variant phenotype.
+      description: Get one gene variant phenotype.
+      operationId: getGeneVariantPhenotypeById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - body structure
-      summary: Update a body structure.
-      description: Update a body structure.
-      operationId: updateBodyStructureById
+        - gene variant phenotype
+      summary: Update a gene variant phenotype.
+      description: Update a gene variant phenotype.
+      operationId: updateGeneVariantPhenotypeById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-body-structure.yaml'
+              $ref: 'schemas/create-gene-variant-phenotype.yaml'
       responses:
         '200':
           description: OK

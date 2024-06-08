@@ -1,16 +1,16 @@
 post:
       tags:
-        - body structure
-      summary: Create a body structure.
-      description: Create a body structure.
-      operationId: postBodyStructureById
+        - gene variant phenotype
+      summary: Create a gene variant phenotype.
+      description: Create a gene variant phenotype.
+      operationId: postGeneVariantPhenotypeById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-body-structure.yaml'
+              $ref: 'schemas/create-gene-variant-phenotype.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - body structure
-      summary: Delete body structures.
-      description: Delete body structures.
-      operationId: deleteBodyStructuresById
+        - gene variant phenotype
+      summary: Delete gene variant phenotypes.
+      description: Delete gene variant phenotypes.
+      operationId: deleteGeneVariantPhenotypeById
       requestBody:
         required: true
         content:
