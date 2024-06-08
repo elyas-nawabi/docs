@@ -11,7 +11,7 @@ schema:
         create_uid: 
           type: integer
         create_uid_:
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
         id: 
           type: integer
         name: 
@@ -26,7 +26,7 @@ schema:
         write_uid:
           type: integer
         write_uid_:
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true

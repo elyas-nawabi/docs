@@ -11,22 +11,16 @@ schema:
         create_uid: 
           type: integer
         create_uid_:
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        id: 
-          type: integer
-        name: 
-          type: string
-        notes: 
-          type: string
-        rec_name: 
-          type: string
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        
+        
         write_date:
           type: string
           format: date 
         write_uid:
           type: integer
         write_uid_:
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -41,19 +35,7 @@ schema:
 
 example:
     data:
-      - code: BLACK
-        create_date: '2024-05-27T12:26:56.434108'
-        create_uid: 0
-        create_uid_:
-          id: 0
-          name: Root
-        id: 1
-        name: Black
-        notes: 
-        rec_name: Black
-        write_date: 
-        write_uid: 
-        write_uid_: {}
+      
     errors: null
     pagination: null
     status: 201

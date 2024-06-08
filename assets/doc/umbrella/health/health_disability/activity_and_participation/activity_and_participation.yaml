@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: ethnicity
-    description: ethnicity - ethnicity data management.
+  - name: activity and participation
+    description: activity and participation - activity and participation data management.
 paths:
-  '/health/ethnicities/search':
-    $ref: 'get_ethnicity.yaml'
-  '/health/ethnicities':
-    $ref: 'post_delete_ethnicity.yaml'
-  '/health/ethnicities/{obj_id}':
-    $ref: 'get_put_ethnicity_by_id.yaml'
+  '/health-disability/activities-and-participation/search':
+    $ref: 'get_activity_and_participation.yaml'
+  '/health-disability/activities-and-participation':
+    $ref: 'post_delete_activity_and_participation.yaml'
+  '/health-disability/activities-and-participation/{obj_id}':
+    $ref: 'get_put_activity_and_participation_by_id.yaml'
   

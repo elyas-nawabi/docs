@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: ethnicity
-    description: ethnicity - ethnicity data management.
+  - name: imaging test
+    description: imaging test - imaging test data management.
 paths:
-  '/health/ethnicities/search':
-    $ref: 'get_ethnicity.yaml'
-  '/health/ethnicities':
-    $ref: 'post_delete_ethnicity.yaml'
-  '/health/ethnicities/{obj_id}':
-    $ref: 'get_put_ethnicity_by_id.yaml'
+  '/health-imaging/medical-imaging-studies/search':
+    $ref: 'get_imaging_test.yaml'
+  '/health-imaging/medical-imaging-studies':
+    $ref: 'post_delete_imaging_test.yaml'
+  '/health-imaging/medical-imaging-studies/{obj_id}':
+    $ref: 'get_put_imaging_test_by_id.yaml'
   

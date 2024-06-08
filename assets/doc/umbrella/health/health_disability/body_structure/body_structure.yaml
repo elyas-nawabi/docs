@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: ethnicity
-    description: ethnicity - ethnicity data management.
+  - name: body structure
+    description: body structure - body structure data management.
 paths:
-  '/health/ethnicities/search':
-    $ref: 'get_ethnicity.yaml'
-  '/health/ethnicities':
-    $ref: 'post_delete_ethnicity.yaml'
-  '/health/ethnicities/{obj_id}':
-    $ref: 'get_put_ethnicity_by_id.yaml'
+  '/health-disability/body-structures/search':
+    $ref: 'get_body_structure.yaml'
+  '/health-disability/body-structures':
+    $ref: 'post_delete_body_structure.yaml'
+  '/health-disability/body-structures/{obj_id}':
+    $ref: 'get_put_body_structure_by_id.yaml'
   

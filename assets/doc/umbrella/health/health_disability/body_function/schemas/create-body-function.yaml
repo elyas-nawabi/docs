@@ -6,10 +6,7 @@
             format: date 
         create_uid: 
             type: integer
-        name: 
-            type: string
-        notes: 
-            type: string
+        
         rec_name: 
             type: string
         write_date:
@@ -21,10 +18,4 @@
       required:
           - 
       example:
-        code: BLACK
-        create_date: '2024-05-27T12:26:56.434108'
-        create_uid: 0
-        name: Black
-        notes: 
-        rec_name: Black
-        write_date: 
+        

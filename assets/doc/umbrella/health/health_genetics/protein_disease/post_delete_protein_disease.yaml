@@ -1,16 +1,16 @@
 post:
       tags:
-        - ethnicity
-      summary: Create an ethnicity.
-      description: Create an ethnicity.
-      operationId: postEthnicityById
+        - protein disease
+      summary: Create a protein disease.
+      description: Create a protein disease.
+      operationId: postProteinDiseaseById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-ethnicity.yaml'
+              $ref: 'schemas/create-protein-disease.yaml'
       responses:
         '201':
           description: OK
@@ -27,28 +27,28 @@ post:
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
 
 delete:
       tags:
-        - ethnicity
-      summary: Delete ethnicities.
-      description: Delete ethnicities.
-      operationId: deleteEthnicitiesById
+        - protein disease
+      summary: Delete protein diseases.
+      description: Delete protein diseases.
+      operationId: deleteProteinDiseasesById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+              $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+                $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -58,5 +58,5 @@ delete:
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
     

@@ -1,9 +1,9 @@
     get:
       tags:
-        - ethnicity
-      summary: Get one ethnicity.
-      description: Get one ethnicity.
-      operationId: getEthnicityById
+        - gene variant
+      summary: Get one gene variant.
+      description: Get one gene variant.
+      operationId: getGeneVariantById
       parameters:
         - name: obj_id
           in: path
@@ -27,19 +27,19 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
         '404':
           description: 404 Not Found.
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - ethnicity
-      summary: Update an ethnicity.
-      description: Update an ethnicity.
-      operationId: updateEthnicityById
+        - gene variant
+      summary: Update a gene variant.
+      description: Update a gene variant.
+      operationId: updateGeneVariantById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-ethnicity.yaml'
+              $ref: 'schemas/create-gene-variant.yaml'
       responses:
         '200':
           description: OK
@@ -70,5 +70,5 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
   

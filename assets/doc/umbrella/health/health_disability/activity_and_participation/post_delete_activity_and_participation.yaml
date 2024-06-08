@@ -1,16 +1,16 @@
 post:
       tags:
-        - ethnicity
-      summary: Create an ethnicity.
-      description: Create an ethnicity.
-      operationId: postEthnicityById
+        - activity and participation
+      summary: Create an activity and participation.
+      description: Create an activity and participation.
+      operationId: postActivityAndParticipationById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-ethnicity.yaml'
+              $ref: 'schemas/create-activity-and-participation.yaml'
       responses:
         '201':
           description: OK
@@ -27,28 +27,28 @@ post:
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
 
 delete:
       tags:
-        - ethnicity
-      summary: Delete ethnicities.
-      description: Delete ethnicities.
-      operationId: deleteEthnicitiesById
+        - activity and participation
+      summary: Delete activity and participations.
+      description: Delete activity and participations.
+      operationId: deleteactivityAndParticipationsById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+              $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+                $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -58,5 +58,5 @@ delete:
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
     
