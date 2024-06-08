@@ -1,19 +1,19 @@
     post:
       tags:
-        - ethnicity
-      summary: Get ethnicity details.
-      description: Get ethnicity details.
-      operationId: getEthnicities
+        - activity and participation category
+      summary: Get activity and participation category details.
+      description: Get activity and participation category details.
+      operationId: getActivityAndParticipationCategories
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of ethnicities.
+          description: List of activities and participation categories.
           content:
             application/json:
               schema:
@@ -22,21 +22,14 @@
                     data:
                       type: array
                       properties:
-                        code:
-                          type: string
                         create_date: 
                           type: string 
                           format: date 
                         create_uid: 
                           type: integer
                         create_uid_:
-                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        id: 
-                          type: integer
-                        name: 
-                          type: string
-                        notes: 
-                          type: string
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        
                         rec_name: 
                           type: string
                         write_date:
@@ -45,7 +38,7 @@
                         write_uid:
                           type: integer
                         write_uid_:
-                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -65,19 +58,15 @@
                       nullable: true
               example:
                 data:
-                  - code: BLACK
-                    create_date: '2024-05-27T12:26:56.434108'
-                    create_uid: 0
-                    create_uid_:
-                      id: 0
-                      name: Root
-                    id: 1
-                    name: Black
-                    notes: 
-                    rec_name: Black
-                    write_date: 
-                    write_uid: 
-                    write_uid_: {}
+                  create_date: '2024-05-27T12:26:56.434108'
+                  create_uid: 0
+                  create_uid_:
+                    id: 0
+                    name: Root
+                  
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
                 error: null
                 pagination:
                   page: 1
@@ -96,6 +85,6 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
     
     
