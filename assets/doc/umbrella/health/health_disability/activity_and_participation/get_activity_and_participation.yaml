@@ -1,19 +1,19 @@
     post:
       tags:
-        - ethnicity
-      summary: Get ethnicity details.
-      description: Get ethnicity details.
-      operationId: getEthnicities
+        - activity and participation
+      summary: Get activity and participation details.
+      description: Get activity and participation details.
+      operationId: getActivityAndParticipation
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of ethnicities.
+          description: List of activities and participations.
           content:
             application/json:
               schema:
@@ -30,7 +30,7 @@
                         create_uid: 
                           type: integer
                         create_uid_:
-                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         id: 
                           type: integer
                         name: 
@@ -45,7 +45,7 @@
                         write_uid:
                           type: integer
                         write_uid_:
-                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -96,6 +96,6 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
     
     
