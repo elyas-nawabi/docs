@@ -3,7 +3,9 @@ schema:
     data:
       type: array
       properties:
-        code:
+        aliases: 
+          type: string
+        chromosome: 
           type: string
         create_date: 
           type: string 
@@ -12,8 +14,77 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
-        
+        ensembl_id: 
+          type: string
+        gene_id: 
+          type: string
+        gene_type: 
+          type: string
+        hgnc_id:
+          type: string
+        id: 
+          type: integer
+        info: 
+          type: string
+        location: 
+          type: string
+        long_name: 
+          type: string
+        name: 
+          type: string
+        name_aliases: 
+          type: string
+        omim_id:  
+          type: string
+        protein_name:
+          type: string
+        protein_uri: 
+          type: string
+        rec_name: 
+          type: string
+        refseq_accession: 
+          type: string
+        variants:
+          type: array
+          properties:
+            aa_change: 
+              type: string
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            dbsnp: 
+              type: string
+            dbsnp_url: 
+              type: string
+            id: 
+              type: integer
+            name: 
+              type: integer
+            name_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            phenotypes:
+              type: array
+            protein: 
+              type: string
+            rec_name: 
+              type: string
+            significance: 
+              type: string
+            variant:
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        variants_count: 
+          type: integer
         write_date:
           type: string
           format: date 
@@ -35,7 +106,54 @@ schema:
 
 example:
     data:
-      
+      aliases: ''
+      chromosome: '19'
+      create_date: '2024-05-27T12:27:26.974045'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      ensembl_id: ENSG00000121410
+      gene_id: '1'
+      gene_type: protein_coding
+      hgnc_id: HGNC:5
+      id: 1
+      info: 
+      location: 19q13.43
+      long_name: alpha-1-B glycoprotein
+      name: A1BG
+      name_aliases: ''
+      omim_id: '138670'
+      protein_name: P04217
+      protein_uri: http://www.uniprot.org/uniprot/P04217
+      rec_name: A1BG (P04217) :alpha-1-B glycoprotein
+      refseq_accession: NM_130786
+      variants:
+      - aa_change: p.His52Arg
+        create_date: '2024-05-27T12:29:51.795048'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        dbsnp: rs893184
+        dbsnp_url: https://www.ncbi.nlm.nih.gov/snp/rs893184
+        id: 16847
+        name: 1
+        name_:
+          id: 1
+          name: A1BG (P04217) :alpha-1-B glycoprotein
+        phenotypes: []
+        protein: P04217
+        rec_name: 'VAR_018369 : p.His52Arg'
+        significance: lbb
+        variant: VAR_018369
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      variants_count: 2
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201

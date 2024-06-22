@@ -3,7 +3,7 @@ schema:
     data:
       type: array
       properties:
-        code:
+        aa_change:
           type: string
         create_date: 
           type: string 
@@ -12,8 +12,59 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
-        
+        dbsnp: 
+          type: string
+        dbsnp_url: 
+          type: string
+        id: 
+          type: integer
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        phenotypes:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            gene: 
+              type: integer
+            gene_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            name: 
+              type: string
+            phenotype: 
+              type: integer
+            phenotype_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            variant: 
+              type: integer
+            variant_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        protein: 
+          type: string
+        rec_name: 
+          type: string
+        significance: 
+          type: string
+        variant: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -35,7 +86,52 @@ schema:
 
 example:
     data:
-      
+      aa_change: p.Glu142Lys
+      create_date: '2024-05-27T12:29:51.795048'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      dbsnp: rs80358219
+      dbsnp_url: https://www.ncbi.nlm.nih.gov/snp/rs80358219
+      id: 2
+      name: 12188
+      name_:
+        id: 12188
+        name: HSD3B2 (P26439) :hydroxy-delta-5-steroid dehydrogenase, 3 beta- and steroid
+          delta-isomerase 2
+      phenotypes:
+      - create_date: '2024-05-27T12:29:51.795048'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        gene: 12188
+        gene_:
+          id: 12188
+          name: HSD3B2 (P26439) :hydroxy-delta-5-steroid dehydrogenase, 3 beta- and steroid
+            delta-isomerase 2
+        id: 1
+        name: VARPHEN1
+        phenotype: 41
+        phenotype_:
+          id: 41
+          name: DI-00042:Adrenal hyperplasia 2
+        rec_name: DI-00042:Adrenal hyperplasia 2
+        variant: 2
+        variant_:
+          id: 2
+          name: 'VAR_000006 : p.Glu142Lys'
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      protein: P26439
+      rec_name: 'VAR_000006 : p.Glu142Lys'
+      significance: lpp
+      variant: VAR_000006
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201

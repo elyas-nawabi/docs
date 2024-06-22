@@ -22,6 +22,12 @@
                     data:
                       type: array
                       properties:
+                        addiction_level:
+                          type: string
+                        category:
+                          type: string
+                        code: 
+                          type: string
                         create_date: 
                           type: string 
                           format: date 
@@ -29,7 +35,16 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        id: 
+                          type: integer
+                        name:
+                          type: string
+                        rec_name:
+                          type: string
+                        street_name: 
+                          type: string
+                        toxicity: 
+                          type: string
                         write_date:
                           type: string
                           format: date 
@@ -56,12 +71,19 @@
                       nullable: true
               example:
                 data:
-                    create_date: '2024-05-27T12:26:56.434108'
+                  - addiction_level: '1'
+                    category: cannabinoid
+                    code: HASHISH
+                    create_date: '2024-05-27T12:47:10.776868'
                     create_uid: 0
                     create_uid_:
                       id: 0
                       name: Root
-                    
+                    id: 1
+                    name: Hashish
+                    rec_name: Hashish
+                    street_name: boom, chronic, gangster, hash, hash oil, hemp
+                    toxicity: '1'
                     write_date: 
                     write_uid: 
                     write_uid_: {}

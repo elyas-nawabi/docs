@@ -22,6 +22,8 @@
                     data:
                       type: array
                       properties:
+                        chromosome:
+                          type: string 
                         create_date: 
                           type: string 
                           format: date 
@@ -29,7 +31,20 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        gene_type: 
+                          type: string 
+                        hgnc_id: 
+                          type: string 
+                        id: 
+                          type: integer
+                        long_name:
+                          type: string
+                        name:
+                          type: string
+                        rec_name: 
+                          type: string
+                        variants_count: 
+                          type: integer
                         write_date:
                           type: string
                           format: date 
@@ -56,12 +71,19 @@
                       nullable: true
               example:
                 data:
-                    create_date: '2024-05-27T12:26:56.434108'
+                  - chromosome: '19'
+                    create_date: '2024-05-27T12:27:26.974045'
                     create_uid: 0
                     create_uid_:
                       id: 0
                       name: Root
-                    
+                    gene_type: protein_coding
+                    hgnc_id: HGNC:5
+                    id: 1
+                    long_name: alpha-1-B glycoprotein
+                    name: A1BG
+                    rec_name: A1BG (P04217) :alpha-1-B glycoprotein
+                    variants_count: 2
                     write_date: 
                     write_uid: 
                     write_uid_: {}

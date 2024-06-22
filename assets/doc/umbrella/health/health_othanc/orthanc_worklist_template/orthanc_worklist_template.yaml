@@ -62,10 +62,10 @@ tags:
   - name: orthanc worklist template
     description: orthanc worklist template - orthanc worklist template data management.
 paths:
-  '/health-othanc/orthanc-worklist-templates/search':
+  '/health-orthanc/worklist-templates/search':
     $ref: 'get_orthanc_worklist_template.yaml'
-  '/health-othanc/orthanc-worklist-templates':
+  '/health-orthanc/worklist-templates':
     $ref: 'post_delete_orthanc_worklist_template.yaml'
-  '/health-othanc/orthanc-worklist-templates/{obj_id}':
+  '/health-orthanc/worklist-templates/{obj_id}':
     $ref: 'get_put_orthanc_worklist_template_by_id.yaml'
   
