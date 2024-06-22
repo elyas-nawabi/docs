@@ -3,8 +3,6 @@ schema:
     data:
       type: array
       properties:
-        code:
-          type: string
         create_date: 
           type: string 
           format: date 
@@ -12,8 +10,14 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
-        
+        enabled: 
+          type: boolean
+        host: 
+          type: string
+        id: 
+          type: integer
+        rec_name: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -35,7 +39,18 @@ schema:
 
 example:
     data:
-      
+      - create_date: '2024-06-22T11:59:32.553227'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        enabled: true
+        host: localhost
+        id: 1
+        rec_name: 
+        write_date: 
+        write_uid: 
+        write_uid_: {}
     errors: null
     pagination: null
     status: 201
