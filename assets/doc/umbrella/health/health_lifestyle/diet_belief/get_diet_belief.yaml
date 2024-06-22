@@ -22,6 +22,8 @@
                     data:
                       type: array
                       properties:
+                        code:
+                          type: string
                         create_date: 
                           type: string 
                           format: date 
@@ -29,7 +31,14 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        description:
+                          type: string
+                        id:
+                          type: integer
+                        name: 
+                          type: string
+                        rec_name:
+                          type: string
                         write_date:
                           type: string
                           format: date 
@@ -56,12 +65,18 @@
                       nullable: true
               example:
                 data:
-                    create_date: '2024-05-27T12:26:56.434108'
+                  - code: BUDDHIST
+                    create_date: '2024-05-27T12:47:10.776868'
                     create_uid: 0
                     create_uid_:
                       id: 0
                       name: Root
-                    
+                    description: While Buddhism does not have specific dietary rules, some buddhists
+                      practise vegetarianism based on a strict interpretation of the first of the Five
+                      Precepts
+                    id: 1
+                    name: Buddhist
+                    rec_name: Buddhist
                     write_date: 
                     write_uid: 
                     write_uid_: {}
