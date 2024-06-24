@@ -1,0 +1,13 @@
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        
+        write_date:
+            type: string
+            format: date 
+        
+      required:
+          - 
+      example:
+        
