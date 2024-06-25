@@ -1,0 +1,62 @@
+post:
+      tags:
+        - support request
+      summary: Create a support request.
+      description: Create a support request.
+      operationId: postSupportRequestById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: 'schemas/create-support-request.yaml'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: 'schema.yaml'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+      tags:
+        - support request
+      summary: Delete support request.
+      description: Delete support request.
+      operationId: deleteSupportRequestById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
