@@ -1,0 +1,114 @@
+    post:
+      tags:
+        - surgery protocols
+      summary: Get surgery protocol details.
+      description: Get surgery protocol details.
+      operationId: getSurgeryProtocols
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of surgery protocols.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        approach: 
+                          type: string
+                        classification: 
+                          type: string
+                        code: 
+                          type: string
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        description: OBSTETRIC DYSTOCIA/RISK OF LOSS OF FETAL WELFARE
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        pathology: 
+                          type: integer
+                        pathology_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - approach: open
+                    classification: u
+                    code: CSECTURG
+                    create_date: '2024-05-27T12:50:05.039883'
+                    create_uid: 0
+                    create_uid_:
+                      id: 0
+                      name: Root
+                    description: OBSTETRIC DYSTOCIA/RISK OF LOSS OF FETAL WELFARE
+                    id: 1
+                    name: URGENT C-SECTION
+                    pathology: 6828
+                    pathology_:
+                      id: 6828
+                      name: 'O66.0 : Obstructed labour due to shoulder dystocia'
+                    rec_name: URGENT C-SECTION
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

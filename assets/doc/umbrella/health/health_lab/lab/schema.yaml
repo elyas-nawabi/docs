@@ -1,0 +1,163 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        active: 
+          type: boolean
+        code: 
+          type: string 
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        critearea:
+          type: array
+          properties:
+            code: 
+              type: string 
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            excluded: 
+              type: boolean
+            gnuhealth_lab_id: 
+              type: integer
+            gnuhealth_lab_id_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id:
+              type: integer
+            lab_warning_icon: 
+              type: string
+            lower_limit:
+              type: integer
+            name: 
+              type: string
+            normal_range: 
+              type: string
+            rec_name: 
+              type: string
+            remarks:
+              type: string 
+            result: 
+              type: string
+            result_text: 
+              type: string
+            sequence: 
+              type: integer
+            test_type_id: 
+              type: integer
+            test_type_id_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            units: 
+              type: integer
+            units_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            upper_limit: 
+              type: integer
+            warning:
+              type: boolean
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        info: 
+          type: string
+        name: 
+          type: string
+        product_id: 
+          type: integer
+        product_id_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      active: true
+      code: CBC
+      create_date: '2024-05-27T12:29:16.990700'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      critearea:
+      - code: HGB
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        excluded: false
+        gnuhealth_lab_id: 
+        gnuhealth_lab_id_: {}
+        id: 8
+        lab_warning_icon: 
+        lower_limit: 11
+        name: HGB
+        normal_range: 11-16.0
+        rec_name: HGB
+        remarks: 
+        result: 
+        result_text: 
+        sequence: 1
+        test_type_id: 2
+        test_type_id_:
+          id: 2
+          name: COMPLETE BLOOD COUNT
+        units: 4
+        units_:
+          id: 4
+          name: g/dL
+        upper_limit: 16
+        warning: false
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      id: 2
+      info: 
+      name: COMPLETE BLOOD COUNT
+      product_id: 2
+      product_id_:
+        id: 2
+        name: Blood count test charges
+      rec_name: COMPLETE BLOOD COUNT
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null
