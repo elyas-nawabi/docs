@@ -1,0 +1,22 @@
+      properties:
+        code:
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        name: 
+          type: string
+        rec_name:
+          type: string
+        write_date:
+          type: string
+          format: date 
+        
+      required:
+          - 
+      example:
+        code: mcc
+        create_date: '2024-05-27T12:29:16.990700'
+        name: Millions/cc
+        rec_name: Millions/cc
+        write_date: 
