@@ -1,9 +1,9 @@
     get:
       tags:
-        - family
-      summary: Get one family.
-      description: Get one family.
-      operationId: getFamilyById
+        - death certificate
+      summary: Get one death certificate.
+      description: Get one death certificate.
+      operationId: getDeathCertificateById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - family
-      summary: Update a family.
-      description: Update a family.
-      operationId: updateFamilyById
+        - death certificate
+      summary: Update a death certificate.
+      description: Update a death certificate.
+      operationId: updateDeathCertificateById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-family.yaml'
+              $ref: 'schemas/create-death-certificate.yaml'
       responses:
         '200':
           description: OK

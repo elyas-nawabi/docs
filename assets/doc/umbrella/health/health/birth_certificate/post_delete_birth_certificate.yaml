@@ -1,16 +1,16 @@
 ../post:
       tags:
-        - family
-      summary: Create a family.
-      description: Create a family.
-      operationId: postFamilyById
+        - birth certificate
+      summary: Create a birth certificate.
+      description: Create a birth certificate.
+      operationId: postBirthCertificateById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-family.yaml'
+              $ref: 'schemas/create-birth-certificate.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@
 
 delete:
       tags:
-        - family
-      summary: Delete families.
-      description: Delete families.
-      operationId: deleteFamiliesById
+        - birth certificate
+      summary: Delete birth certificates.
+      description: Delete birth certificates.
+      operationId: deleteBirthCertificatesById
       requestBody:
         required: true
         content:

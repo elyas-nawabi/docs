@@ -59,13 +59,22 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: family
-    description: family - family data management.
+  - name: appointment
+    description: appointment - appointment data management.
 paths:
-  '/health/families/search':
-    $ref: 'get_family.yaml'
-  '/health/families':
-    $ref: 'post_delete_family.yaml'
-  '/health/families/{obj_id}':
-    $ref: 'get_put_family_by_id.yaml'
+  '/health/appointments/search':
+    $ref: 'get_appointment.yaml'
+  '/health/appointments':
+    $ref: 'post_delete_appointment.yaml'
+  '/health/appointments/{obj_id}':
+    $ref: 'get_put_appointment_by_id.yaml'
+  
+  '/health/appointments/{obj_id}/check-in':
+    $ref: 'get_check_in.yaml'
+  '/health/appointments/{obj_id}/no-show':
+    $ref: 'get_no_show.yaml'
+  '/health/appointments/{obj_id}/create-patient-evaluation':
+    $ref: 'get_create_patient_evaluation.yaml'
+  '/health/appointments/new-work-schedule':
+    $ref: 'post_new_work_schedule.yaml'
   
