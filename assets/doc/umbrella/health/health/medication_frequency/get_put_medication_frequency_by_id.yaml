@@ -1,9 +1,9 @@
     get:
       tags:
-        - medical specialty
-      summary: Get one medical specialty.
-      description: Get one medical specialty.
-      operationId: getMedicalSpecialtyById
+        - medication frequency
+      summary: Get one medication frequency.
+      description: Get one medication frequency.
+      operationId: getMedicationFrequencyById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - medical specialty
-      summary: Update a medical specialty.
-      description: Update a medical specialty.
-      operationId: updateMedicalSpecialtyById
+        - medication frequency
+      summary: Update a medication frequency.
+      description: Update a medication frequency.
+      operationId: updateMedicationFrequencyById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-medical-specialty.yaml'
+              $ref: 'schemas/create-medication-frequency.yaml'
       responses:
         '200':
           description: OK

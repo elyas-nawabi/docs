@@ -1,16 +1,16 @@
 post:
       tags:
-        - medical specialty
-      summary: Create a medical specialty.
-      description: Create a medical specialty.
-      operationId: postMedicalSpecialtyById
+        - medicament
+      summary: Create a medicament.
+      description: Create a medicament.
+      operationId: postMedicamentById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-medical-specialty.yaml'
+              $ref: 'schemas/create-medicament.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - medical specialty
-      summary: Delete medical specialties.
-      description: Delete medical specialties.
-      operationId: deleteMedicalSpecialtiesById
+        - medicament
+      summary: Delete medicaments.
+      description: Delete medicaments.
+      operationId: deleteMedicamentById
       requestBody:
         required: true
         content:

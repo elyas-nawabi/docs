@@ -1,9 +1,9 @@
     get:
       tags:
-        - family
-      summary: Get one family.
-      description: Get one family.
-      operationId: getFamilyById
+        - hospital bed
+      summary: Get one hospital bed.
+      description: Get one hospital bed.
+      operationId: getHospitalBedById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - family
-      summary: Update a family.
-      description: Update a family.
-      operationId: updateFamilyById
+        - hospital bed
+      summary: Update a hospital bed.
+      description: Update a hospital bed.
+      operationId: updateHospitalBedById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-family.yaml'
+              $ref: 'schemas/create-hospital-bed.yaml'
       responses:
         '200':
           description: OK

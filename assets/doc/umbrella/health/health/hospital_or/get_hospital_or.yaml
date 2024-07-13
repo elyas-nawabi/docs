@@ -1,9 +1,9 @@
     post:
       tags:
-        - family
-      summary: Get family details.
-      description: Get family details.
-      operationId: getFamilies
+        - operating room
+      summary: Get operating room details.
+      description: Get operating room details.
+      operationId: getOperatingRooms
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of families.
+          description: List of operating rooms.
           content:
             application/json:
               schema:

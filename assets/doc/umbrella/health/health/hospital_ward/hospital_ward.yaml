@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: family
-    description: family - family data management.
+  - name: hospital ward
+    description: hospital ward - hospital ward data management.
 paths:
-  '/health/families/search':
-    $ref: 'get_family.yaml'
-  '/health/families':
-    $ref: 'post_delete_family.yaml'
-  '/health/families/{obj_id}':
-    $ref: 'get_put_family_by_id.yaml'
+  '/health/wards/search':
+    $ref: 'get_hospital_ward.yaml'
+  '/health/wards':
+    $ref: 'post_delete_hospital_ward.yaml'
+  '/health/wards/{obj_id}':
+    $ref: 'get_put_hospital_ward_by_id.yaml'
   

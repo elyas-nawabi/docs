@@ -1,9 +1,9 @@
     get:
       tags:
-        - medical specialty
-      summary: Get one medical specialty.
-      description: Get one medical specialty.
-      operationId: getMedicalSpecialtyById
+        - medicament category
+      summary: Get one medicament category.
+      description: Get one medicament category.
+      operationId: getMedicamentCategoryById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - medical specialty
-      summary: Update a medical specialty.
-      description: Update a medical specialty.
-      operationId: updateMedicalSpecialtyById
+        - medicament category
+      summary: Update a medicament category.
+      description: Update a medicament category.
+      operationId: updateMedicamentCategoryById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-medical-specialty.yaml'
+              $ref: 'schemas/create-medicament-category.yaml'
       responses:
         '200':
           description: OK
