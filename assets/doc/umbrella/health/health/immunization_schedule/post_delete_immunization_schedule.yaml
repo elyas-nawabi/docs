@@ -1,16 +1,16 @@
 post:
       tags:
-        - immunization schedule dose
-      summary: Create a immunization schedule dose.
-      description: Create a immunization schedule dose.
-      operationId: postImmunizationScheduleDoseById
+        - immunization schedule
+      summary: Create a immunization schedule.
+      description: Create a immunization schedule.
+      operationId: postImmunizationSchedulById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-immunization-schedule-dose.yaml'
+              $ref: 'schemas/create-immunization-schedule.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - immunization schedule dose
-      summary: Delete immunization schedule doses.
-      description: Delete immunization schedule doses.
-      operationId: deleteImmunizationScheduleDosesById
+        - immunization schedule
+      summary: Delete immunization schedules.
+      description: Delete immunization schedules.
+      operationId: deleteImmunizationSchedulsById
       requestBody:
         required: true
         content:

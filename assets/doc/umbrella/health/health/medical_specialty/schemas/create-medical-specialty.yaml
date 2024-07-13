@@ -1,19 +1,7 @@
       properties:
-        code: 
-            type: string
-        create_date:
-            type: string
-            format: date
-        name: 
-            type: string
-        rec_name: 
-            type: string
+       
   
       required:
           - 
       example:
-        code: ANATOMY
-        create_date: '2024-05-27T12:26:56.434108'
-        create_uid: 0
-        name: Anatomy
-        rec_name: Anatomy
+        

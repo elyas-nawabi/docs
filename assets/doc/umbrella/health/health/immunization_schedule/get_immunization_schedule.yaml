@@ -1,9 +1,9 @@
     post:
       tags:
-        - immunization schedule dose
-      summary: Get immunization schedule dose details.
-      description: Get immunization schedule dose details.
-      operationId: getImmunizationScheduleDoses
+        - immunization schedule
+      summary: Get immunization schedule details.
+      description: Get immunization schedule details.
+      operationId: getImmunizationScheduls
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of immunization schedule doses.
+          description: List of immunization schedules.
           content:
             application/json:
               schema:
