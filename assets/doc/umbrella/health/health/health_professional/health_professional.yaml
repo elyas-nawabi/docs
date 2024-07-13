@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: family
-    description: family - family data management.
+  - name: health professional
+    description: health professional - health professional data management.
 paths:
-  '/health/families/search':
-    $ref: 'get_family.yaml'
-  '/health/families':
-    $ref: 'post_delete_family.yaml'
-  '/health/families/{obj_id}':
-    $ref: 'get_put_family_by_id.yaml'
+  '/health/health-professionals/search':
+    $ref: 'get_health_professional.yaml'
+  '/health/health-professionals':
+    $ref: 'post_delete_health_professional.yaml'
+  '/health/health-professionals/{obj_id}':
+    $ref: 'get_put_health_professional_by_id.yaml'
   

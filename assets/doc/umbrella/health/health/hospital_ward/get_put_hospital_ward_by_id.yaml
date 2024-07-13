@@ -1,9 +1,9 @@
     get:
       tags:
-        - family
-      summary: Get one family.
-      description: Get one family.
-      operationId: getFamilyById
+        - hospital ward
+      summary: Get one hospital ward.
+      description: Get one hospital ward.
+      operationId: getHospitalWardById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - family
-      summary: Update a family.
-      description: Update a family.
-      operationId: updateFamilyById
+        - hospital ward
+      summary: Update a hospital ward.
+      description: Update a hospital ward.
+      operationId: updateHospitalWardById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-family.yaml'
+              $ref: 'schemas/create-hospital-ward.yaml'
       responses:
         '200':
           description: OK

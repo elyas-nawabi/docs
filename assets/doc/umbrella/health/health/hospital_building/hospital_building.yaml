@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: family
-    description: family - family data management.
+  - name: hospital building
+    description: hospital building - hospital building data management.
 paths:
-  '/health/families/search':
-    $ref: 'get_family.yaml'
-  '/health/families':
-    $ref: 'post_delete_family.yaml'
-  '/health/families/{obj_id}':
-    $ref: 'get_put_family_by_id.yaml'
+  '/health/buildings/search':
+    $ref: 'get_hospital_building.yaml'
+  '/health/buildings':
+    $ref: 'post_delete_hospital_building.yaml'
+  '/health/buildings/{obj_id}':
+    $ref: 'get_put_hospital_building_by_id.yaml'
   

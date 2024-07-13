@@ -1,16 +1,16 @@
 ../post:
       tags:
-        - family
-      summary: Create a family.
-      description: Create a family.
-      operationId: postFamilyById
+        - hospital building
+      summary: Create a hospital building.
+      description: Create a hospital building.
+      operationId: postHospitalBuildingById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-family.yaml'
+              $ref: 'schemas/create-hospital-building.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@
 
 delete:
       tags:
-        - family
-      summary: Delete families.
-      description: Delete families.
-      operationId: deleteFamiliesById
+        - hospital building
+      summary: Delete hospital buildings.
+      description: Delete hospital buildings.
+      operationId: deleteHospitalBuildingsById
       requestBody:
         required: true
         content:
