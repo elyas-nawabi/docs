@@ -1,9 +1,9 @@
     post:
       tags:
-        - family
-      summary: Get family details.
-      description: Get family details.
-      operationId: getFamilies
+        - death certificate
+      summary: Get death certificate details.
+      description: Get death certificate details.
+      operationId: getDeathCertificates
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of families.
+          description: List of death certificates.
           content:
             application/json:
               schema:

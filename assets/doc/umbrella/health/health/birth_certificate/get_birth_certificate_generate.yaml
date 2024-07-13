@@ -1,9 +1,9 @@
     post:
       tags:
-        - drug dose unit
-      summary: Get drug dose unit details.
-      description: Get drug dose unit details.
-      operationId: getDrugDoseUnits
+        - birth certificate
+      summary: Generate a Birth Certificate.
+      description: Generate a Birth Certificate.
+      operationId: getBirthCertificates
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of drug dose units.
+          description: Generate a Birth Certificate.
           content:
             application/json:
               schema:

@@ -1,9 +1,9 @@
     get:
       tags:
-        - family
-      summary: Get one family.
-      description: Get one family.
-      operationId: getFamilyById
+        - drug dose unit
+      summary: Get one drug dose unit.
+      description: Get one drug dose unit.
+      operationId: getDrugDoseUnitById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - family
-      summary: Update a family.
-      description: Update a family.
-      operationId: updateFamilyById
+        - drug dose unit
+      summary: Update a drug dose unit.
+      description: Update a drug dose unit.
+      operationId: updateDrugDoseUnitById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-family.yaml'
+              $ref: 'schemas/create-drug-dose-unit.yaml'
       responses:
         '200':
           description: OK

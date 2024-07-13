@@ -1,16 +1,16 @@
 ../post:
       tags:
-        - family
-      summary: Create a family.
-      description: Create a family.
-      operationId: postFamilyById
+        - appointment
+      summary: Create a appointment.
+      description: Create a appointment.
+      operationId: postappointmentById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-family.yaml'
+              $ref: 'schemas/create-appointment.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@
 
 delete:
       tags:
-        - family
-      summary: Delete families.
-      description: Delete families.
-      operationId: deleteFamiliesById
+        - appointment
+      summary: Delete appointments.
+      description: Delete appointments.
+      operationId: deleteAppointmentsById
       requestBody:
         required: true
         content:

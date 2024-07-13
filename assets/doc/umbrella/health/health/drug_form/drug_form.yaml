@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: family
-    description: family - family data management.
+  - name: drug form
+    description: drug form - drug form data management.
 paths:
-  '/health/families/search':
-    $ref: 'get_family.yaml'
-  '/health/families':
-    $ref: 'post_delete_family.yaml'
-  '/health/families/{obj_id}':
-    $ref: 'get_put_family_by_id.yaml'
+  '/health/drug-forms/search':
+    $ref: 'get_drug_form.yaml'
+  '/health/drug-forms':
+    $ref: 'post_delete_drug_form.yaml'
+  '/health/drug-forms/{obj_id}':
+    $ref: 'get_put_drug_form_by_id.yaml'
   
