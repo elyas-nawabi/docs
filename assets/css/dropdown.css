@@ -55,6 +55,9 @@ body {margin:0;font-family:Arial}
     column-count: 5;
 
   }
+  .currency{
+    column-count: 2;
+  }
   .dropdown-content a {
     float: none;
     color: black;

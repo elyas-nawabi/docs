@@ -60,20 +60,30 @@
      <header>
       <div class="topnav" id="myTopnav">
         <div class="dropdown">
-          <button class="dropbtn">Currency 
+          <button class="dropbtn">Currency - Auth - Admin - Product
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M0 0h24v24H0z"/><path fill="white" d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"/></g></svg>
           </button>
-          <div class="dropdown-content">
-            <a href="#"
-            onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/currency/currency.yaml')"
-            >
-            Currency
-            </a>
-            <a href="#"
-            onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/scheduled_rate_update/scheduled_rate_update.yaml')"
-            >
-            Scheduled Rate Update
-            </a>
+          <div class="dropdown-content currency">
+            <div class="group">
+              <h3>Currency</h3>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/currency/currency.yaml')">Currency</a>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/scheduled_rate_update/scheduled_rate_update.yaml')"> Scheduled Rate Update</a>
+              <h3>Auth</h3>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella/auth/auth.yaml')">Auth</a>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella/smart_enum/smart_enum.yaml')">Smart Enum</a>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella/wizard/wizard.yaml')">Wizard</a>
+              <h3>Administration</h3>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequence/sequence.yaml')">Sequence</a>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequence_type/sequence_type.yaml')">Sequence Type</a>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequence_strict/sequence_strict.yaml')">Sequence Strict</a>
+              <h3>Product</h3>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product/product.yaml')">Product</a>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product_category/product_category.yaml')">Product Category</a>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/configuration/configuration.yaml')">Configuration</a>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/variant/variant.yaml')">Variant</a>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/unit_of_measure/unit_of_measure.yaml')">Unit Of Measure</a>
+              <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/uom_category/uom_category.yaml')">UOM Category</a>
+            </div>
           </div>
         </div> 
         <div class="dropdown">
@@ -119,16 +129,7 @@
             
           </div>
         </div> 
-        <div class="dropdown">
-          <button class="dropbtn">Administration 
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M0 0h24v24H0z"/><path fill="white" d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"/></g></svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequence/sequence.yaml')">Sequence</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequence_type/sequence_type.yaml')">Sequence Type</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequence_strict/sequence_strict.yaml')">Sequence Strict</a>
-          </div>
-        </div> 
+        
         <div class="dropdown">
           <button class="dropbtn">Company & Country
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M0 0h24v24H0z"/><path fill="white" d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"/></g></svg>
@@ -142,16 +143,7 @@
           </div>
         </div> 
          
-        <div class="dropdown">
-          <button class="dropbtn">Auth 
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M0 0h24v24H0z"/><path fill="white" d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"/></g></svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella/auth/auth.yaml')">Auth</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella/smart_enum/smart_enum.yaml')">Smart Enum</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella/wizard/wizard.yaml')">Wizard</a>
-          </div>
-        </div> 
+        
         <div class="dropdown">
           <button class="dropbtn">Party & Banking
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M0 0h24v24H0z"/><path fill="white" d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"/></g></svg>
@@ -185,8 +177,32 @@
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/ethnicity/ethnicity.yaml')">Ethnicity</a>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/help_doc/help_doc.yaml')">Help Documentation</a>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/federation_country_config/federation_country_config.yaml')">Federation Country Config</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/immunization_schedule/immunization_schedule.yaml')">Immunization Schedule</a>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/immunization_schedule_line/immunization_schedule_line.yaml')">Immunization Schedule Line</a>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/immunization_schedule_dose/immunization_schedule_dose.yaml')">Immunization Schedule Dose</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/appointment/appointment.yaml')">Appointment</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/birth_certificate/birth_certificate.yaml')">Birth Certificate</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/death_certificate/death_certificate.yaml')">Death Certificate</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/drug_dose_unit/drug_dose_unit.yaml')">Drug Dose Unit</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/drug_form/drug_form.yaml')">Drug Form</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/drug_route/drug_route.yaml')">Drug Route</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/health_institution/health_institution.yaml')">Health Institution</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/health_professional/health_professional.yaml')">Health Professional</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/hospital_bed/hospital_bed.yaml')">Hospital Bed</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/hospital_building/hospital_building.yaml')">Hospital Building</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/hospital_or/hospital_or.yaml')">Hospital Or</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/hospital_unit/hospital_unit.yaml')">Hospital Unit</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/medical_specialty/medical_specialty.yaml')">Medical Specialty</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/medicament/medicament.yaml')">Medicament</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/medicament_category/medicament_category.yaml')">Medicament Category</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/medication_frequency/medication_frequency.yaml')">Medication Frequency</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/page_of_life/page_of_life.yaml')">Page Of Life</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/pathology/pathology.yaml')">Pathology</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/pathology_category/pathology_category.yaml')">Pathology Category</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/pathology_group/pathology_group.yaml')">Pathology Group</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/patient_ecg/patient_ecg.yaml')">Patient ECG</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/patient_prescription_order/patient_prescription_order.yaml')">Pateint Prescription Order</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health/procedure_code/procedure_code.yaml')">Procedure Code</a>
                 <h3>Health Disability</h3>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_disability/activity_and_participation/activity_and_participation.yaml')">Activity and Participation</a>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_disability/activity_and_participation_category/activity_and_participation_category.yaml')">Activity and Participation Category</a>
@@ -209,8 +225,20 @@
                 <h3>Health Imaging</h3>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_imaging/imaging_test/imaging_test.yaml')">Imaging Test</a>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_imaging/imaging_test_type/imaging_test_type.yaml')">Imaging Test Type</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_imaging/imaging_test_result/imaging_test_result.yaml')">Imaging Test Result</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_imaging/imaging_test_request/imaging_test_request.yaml')">Imaging Test Request</a>
                 
-                <h3>Health Inpatient</h3>
+                
+            </div>
+          </div>
+        </div> 
+        <div class="dropdown">
+          <button class="dropbtn">Health 
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M0 0h24v24H0z"/><path fill="white" d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"/></g></svg>
+          </button>
+          <div class="dropdown-content health">
+            <div class="group">
+              <h3>Health Inpatient</h3>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_inpatient/diet_therapeutic/diet_therapeutic.yaml')">Diet Therapeutic</a>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_inpatient/inpatient_meal/inpatient_meal.yaml')">Inpatient Meal</a>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_inpatient/inpatient_meal_order/inpatient_meal_order.yaml')">Inpatient Meal Order</a>
@@ -221,6 +249,8 @@
                 
                 <h3>Health Lab</h3>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_lab/gnu_health_lab_test_unit/gnu_health_lab_test_unit.yaml')">Gnu Health Lab Test Unit</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_lab/gnu_health_patient_lab_test/gnu_health_patient_lab_test.yaml')">Gnu Health Pateint Lab Test</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_lab/lab/lab.yaml')">Lab</a>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_lab/test_type/test_type.yaml')">Test Type</a>
                 
                 <h3>Health Life Style</h3>
@@ -230,12 +260,21 @@
                 <h3>Health Orthanc</h3>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_orthanc/orthanc_server_config/orthanc_server_config.yaml')">Orthanc Server Config</a>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_orthanc/orthanc_worklist_template/orthanc_worklist_template.yaml')">Orthanc WorkList Template</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_orthanc/orthanc_patient/orthanc_patient.yaml')">Orthanc Patient</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_orthanc/orthanc_study/orthanc_study.yaml')">Orthanc Study</a>
+                
+                <h3>Health Pediatrics Growth Chart WHO</h3>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_pediatrics_growth_charts_who/health_pediatrics_growth_charts_who/health_pediatrics_growth_charts_who.yaml')">Health Pediatrics Growth Charts WHO</a>
                 
                 <h3>Health Pediatrics</h3>
-                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_pediatrics_growth_charts_who/health_pediatrics_growth_charts_who/health_pediatrics_growth_charts_who.yaml')">Health Pediatrics Growth Charts WHO</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_pediatrics/new_born/new_born.yaml')">New Born</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_pediatrics/pediatric_symptoms_checklist/pediatric_symptoms_checklist.yaml')">Pediatric Symptoms Checklist</a>
                 
                 <h3>Surgery Protocols</h3>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_surgery/surgery_protocol/surgery_protocol.yaml')">Surgery Protocols</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_surgery/surgery/surgery.yaml')">Surgery</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_surgery/or_scheduler/or_scheduler.yaml')">Or Scheduler</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_surgery/pre_operative_assessment/pre_operative_assessment.yaml')">Pre Operative Assessment</a>
                 
                 <h3>Health Services</h3>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_services/health_service/health_service.yaml')">Health Service</a>
@@ -254,6 +293,7 @@
                 
                 <h3>Health Dentistry</h3>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_dentistry/dentistry_procedure/dentistry_procedure.yaml')">Dentistry Procedure</a>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_dentistry/dentistry_treatment/dentistry_treatment.yaml')">Dentistry Treatment</a>
                 
                 <h3>Health Archive</h3>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_archives/paper_archive/paper_archive.yaml')">Paper Archive</a>
@@ -263,22 +303,13 @@
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_icu/glasgow/glasgow.yaml')">GlasGow</a>
                 <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_icu/inpatient_icu/inpatient_icu.yaml')">Inpatient ICU</a>
                 
+                <h3>Health Contact Tracing</h3>
+                <a href="#" onclick="pageNavigator('assets/doc/umbrella/health/health_contact_tracing/contact_tracing/contact_tracing.yaml')">Contact Tracing</a>
+                
             </div>
           </div>
         </div> 
-        <div class="dropdown">
-          <button class="dropbtn">Product 
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M0 0h24v24H0z"/><path fill="white" d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"/></g></svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product/product.yaml')">Product</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product_category/product_category.yaml')">Product Category</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/configuration/configuration.yaml')">Configuration</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/variant/variant.yaml')">Variant</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/unit_of_measure/unit_of_measure.yaml')">Unit Of Measure</a>
-            <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_product/uom_category/uom_category.yaml')">UOM Category</a>
-          </div>
-        </div> 
+         
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
     </header>
