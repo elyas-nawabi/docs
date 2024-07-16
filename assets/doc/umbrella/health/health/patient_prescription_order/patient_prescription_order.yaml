@@ -59,13 +59,21 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: operational sector
-    description: operational sector - operational sector data management.
+  - name: patient prescription order
+    description: patient prescription order - patient prescription order data management.
 paths:
-  '/health/operational-sectors/search':
-    $ref: 'get_operational_sector.yaml'
-  '/health/operational-sectors':
-    $ref: 'post_delete_operational_sector.yaml'
-  '/health/operational-sectors/{obj_id}':
-    $ref: 'get_put_operational_sector_by_id.yaml'
+  '/health/prescriptions/search':
+    $ref: 'get_patient_prescription_order.yaml'
+  '/health/prescriptions':
+    $ref: 'post_delete_patient_prescription_order.yaml'
+  '/health/prescriptions/{obj_id}':
+    $ref: 'get_put_patient_prescription_order_by_id.yaml'
+  '/health/prescriptions/{obj_id}/update-service':
+    $ref: 'get_ppo_update_service.yaml'
+  '/health/prescriptions/{obj_id}/generate-validation':
+    $ref: 'get_ppo_generate_validation.yaml'
+  '/health/prescriptions/{obj_id}/create':
+    $ref: 'get_ppo_create.yaml'
+  '/health/prescriptions/{obj_id}/create-prescription-stock-move':
+    $ref: 'get_ppo_stock_move.yaml'
   

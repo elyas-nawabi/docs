@@ -1,16 +1,16 @@
 post:
       tags:
-        - operational sector
-      summary: Create a operational sector.
-      description: Create a operational sector.
-      operationId: postOperationalSectorById
+        - procedure code
+      summary: Create a procedure code.
+      description: Create a procedure code.
+      operationId: postProcedureCodeById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-operational-sector.yaml'
+              $ref: 'schemas/create-procedure-code.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - operational sector
-      summary: Delete operational sectors.
-      description: Delete operational sectors.
-      operationId: deleteOperationalSectorById
+        - procedure code
+      summary: Delete procedure codes.
+      description: Delete procedure codes.
+      operationId: deleteProcedureCodeById
       requestBody:
         required: true
         content:

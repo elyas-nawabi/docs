@@ -1,8 +1,8 @@
     post:
       tags:
-        - paper archive
-      summary: Get paper archive details.
-      description: Get paper archive details.
+        - contact tracing
+      summary: Get contact tracing details.
+      description: Get contact tracing details.
       operationId: getPaperArchives
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of paper archives.
+          description: List of contact tracings.
           content:
             application/json:
               schema:

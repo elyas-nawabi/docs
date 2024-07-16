@@ -1,9 +1,9 @@
     post:
       tags:
-        - operational sector
-      summary: Get operational sector details.
-      description: Get operational sector details.
-      operationId: getOperationalSector
+        - procedure code
+      summary: Get procedure code details.
+      description: Get procedure code details.
+      operationId: getProcedureCode
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of operational sectors.
+          description: List of procedure codes.
           content:
             application/json:
               schema:

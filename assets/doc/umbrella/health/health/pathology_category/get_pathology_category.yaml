@@ -1,9 +1,9 @@
     post:
       tags:
-        - operational sector
-      summary: Get operational sector details.
-      description: Get operational sector details.
-      operationId: getOperationalSector
+        - pathology category
+      summary: Get pathology category details.
+      description: Get pathology category details.
+      operationId: getPathologyCategory
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of operational sectors.
+          description: List of pathology categories.
           content:
             application/json:
               schema:

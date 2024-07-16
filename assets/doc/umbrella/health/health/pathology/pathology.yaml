@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: operational sector
-    description: operational sector - operational sector data management.
+  - name: pathology
+    description: pathology - pathology data management.
 paths:
-  '/health/operational-sectors/search':
-    $ref: 'get_operational_sector.yaml'
-  '/health/operational-sectors':
-    $ref: 'post_delete_operational_sector.yaml'
-  '/health/operational-sectors/{obj_id}':
-    $ref: 'get_put_operational_sector_by_id.yaml'
+  '/health/conditions/search':
+    $ref: 'get_pathology.yaml'
+  '/health/conditions':
+    $ref: 'post_delete_pathology.yaml'
+  '/health/conditions/{obj_id}':
+    $ref: 'get_put_pathology_by_id.yaml'
   
