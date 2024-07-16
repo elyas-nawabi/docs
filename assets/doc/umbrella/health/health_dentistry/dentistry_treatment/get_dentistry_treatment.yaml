@@ -1,9 +1,9 @@
     post:
       tags:
-        - dentistry procedure
-      summary: Get dentistry procedure details.
-      description: Get dentistry procedure details.
-      operationId: getDentistryProcedures
+        - dentistry treatment
+      summary: Get dentistry treatment details.
+      description: Get dentistry treatment details.
+      operationId: getDentistryTreatments
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of dentistry procedures.
+          description: List of dentistry treatments.
           content:
             application/json:
               schema:

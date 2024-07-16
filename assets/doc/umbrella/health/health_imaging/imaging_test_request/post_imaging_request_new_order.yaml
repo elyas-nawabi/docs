@@ -1,61 +1,18 @@
-    get:
+post:
       tags:
-        - imaging test
-      summary: Get one imaging test.
-      description: Get one imaging test.
-      operationId: getImagingTestById
-      parameters:
-        - name: obj_id
-          in: path
-          schema:
-            type: integer
-          rquired: true
-          example: 1
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: 'schema.yaml'
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
-        '404':
-          description: 404 Not Found.
-          content:
-            application/json:
-              schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
-    put:
-      tags:
-        - imaging test
-      summary: Update an imaging test.
-      description: Update an imaging test.
-      operationId: updateImagingTestById
-      parameters:
-        - name: obj_id
-          rquired: true
-          in: path
-          schema:
-            type: integer
-          example: 19
+        - imaging test request
+      summary: Create an imaging test request.
+      description: Create an imaging test request.
+      operationId: postImagingTestRequestById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-imaging-test.yaml'
+              $ref: 'schemas/create-imaging-test-request.yaml'
       responses:
-        '200':
+        '201':
           description: OK
           content:
             application/json:
@@ -71,4 +28,35 @@
             application/json:
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
-  
+
+delete:
+      tags:
+        - imaging test request
+      summary: Delete imaging test requests.
+      description: Delete imaging test requests.
+      operationId: deleteImagingTestRequestsById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    

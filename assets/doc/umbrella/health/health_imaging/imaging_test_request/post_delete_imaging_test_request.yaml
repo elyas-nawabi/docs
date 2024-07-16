@@ -1,16 +1,16 @@
 post:
       tags:
-        - imaging test
-      summary: Create an imaging test.
-      description: Create an imaging test.
-      operationId: postImagingTestById
+        - imaging test request
+      summary: Create an imaging test request.
+      description: Create an imaging test request.
+      operationId: postImagingTestRequestById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-imaging-test.yaml'
+              $ref: 'schemas/create-imaging-test-request.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - imaging test
-      summary: Delete imaging tests.
-      description: Delete imaging tests.
-      operationId: deleteImagingTestsById
+        - imaging test request
+      summary: Delete imaging test requests.
+      description: Delete imaging test requests.
+      operationId: deleteImagingTestRequestsById
       requestBody:
         required: true
         content:

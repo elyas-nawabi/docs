@@ -1,16 +1,16 @@
 post:
       tags:
-        - dentistry procedure
-      summary: Create a dentistry procedure.
-      description: Create a dentistry procedure.
-      operationId: postDentistryProcedureById
+        - dentistry treatment
+      summary: Create a dentistry treatment.
+      description: Create a dentistry treatment.
+      operationId: postDentistrytreatmentById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-dentistry-procedure.yaml'
+              $ref: 'schemas/create-dentistry-treatment.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - dentistry procedure
-      summary: Delete dentistry procedure.
-      description: Delete dentistry procedure.
-      operationId: deleteDentistryProcedureById
+        - dentistry treatment
+      summary: Delete dentistry treatment.
+      description: Delete dentistry treatment.
+      operationId: deleteDentistrytreatmentById
       requestBody:
         required: true
         content:

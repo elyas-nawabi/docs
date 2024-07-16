@@ -3,7 +3,7 @@
         - support request
       summary: Get support request details.
       description: Get support request details.
-      operationId: getSurgeryProtocols
+      operationId: getSupportRequest
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:

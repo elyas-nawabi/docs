@@ -1,9 +1,9 @@
     get:
       tags:
-        - dentistry treatment
-      summary: Get one dentistry treatment.
-      description: Get one dentistry treatment.
-      operationId: getDentistryTreatmentById
+        - imaging test result
+      summary: Get one imaging test result.
+      description: Get one imaging test result.
+      operationId: getImagingTestResultById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - dentistry treatment
-      summary: Update a dentistry treatment.
-      description: Update a dentistry treatment.
-      operationId: updateDentistryTreatmentById
+        - imaging test result
+      summary: Update an imaging test result.
+      description: Update an imaging test result.
+      operationId: updateImagingTestResultById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-dentistry-treatment.yaml'
+              $ref: 'schemas/create-imaging-test-result.yaml'
       responses:
         '200':
           description: OK

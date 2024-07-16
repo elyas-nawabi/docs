@@ -1,9 +1,9 @@
     post:
       tags:
-        - imaging test
-      summary: Get imaging test details.
-      description: Get imaging test details.
-      operationId: getImagingTests
+        - imaging test request
+      summary: Get imaging test request details.
+      description: Get imaging test request details.
+      operationId: getImagingTestRequests
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of imaging tests.
+          description: List of imaging test requests.
           content:
             application/json:
               schema:
