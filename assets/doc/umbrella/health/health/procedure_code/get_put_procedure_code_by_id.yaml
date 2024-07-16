@@ -1,9 +1,9 @@
     get:
       tags:
-        - operational sector
-      summary: Get one operational sector.
-      description: Get one operational sector.
-      operationId: getOperationalSectorById
+        - procedure code
+      summary: Get one procedure code.
+      description: Get one procedure code.
+      operationId: getProcedureCodeById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - operational sector
-      summary: Update a operational sector.
-      description: Update a operational sector.
-      operationId: updateOperationalSectorById
+        - procedure code
+      summary: Update a procedure code.
+      description: Update a procedure code.
+      operationId: updateProcedureCodeById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-operational-sector.yaml'
+              $ref: 'schemas/create-procedure-code.yaml'
       responses:
         '200':
           description: OK

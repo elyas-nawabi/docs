@@ -1,9 +1,9 @@
     post:
       tags:
-        - operational sector
-      summary: Get operational sector details.
-      description: Get operational sector details.
-      operationId: getOperationalSector
+        - page of life
+      summary: Get page of life details.
+      description: Get page of life details.
+      operationId: getPageOfLife
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of operational sectors.
+          description: List of page of lives.
           content:
             application/json:
               schema:

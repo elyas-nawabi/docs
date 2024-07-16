@@ -1,16 +1,16 @@
 post:
       tags:
-        - operational sector
-      summary: Create a operational sector.
-      description: Create a operational sector.
-      operationId: postOperationalSectorById
+        - pathology category
+      summary: Create a pathology category.
+      description: Create a pathology category.
+      operationId: postPathologyCategoryById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-operational-sector.yaml'
+              $ref: 'schemas/create-pathology-category.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - operational sector
-      summary: Delete operational sectors.
-      description: Delete operational sectors.
-      operationId: deleteOperationalSectorById
+        - pathology category
+      summary: Delete pathology categorys.
+      description: Delete pathology categorys.
+      operationId: deletePathologyCategoryById
       requestBody:
         required: true
         content:

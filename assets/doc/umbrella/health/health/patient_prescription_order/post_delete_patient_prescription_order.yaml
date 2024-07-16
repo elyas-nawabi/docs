@@ -1,16 +1,16 @@
 post:
       tags:
-        - operational sector
-      summary: Create a operational sector.
-      description: Create a operational sector.
-      operationId: postOperationalSectorById
+        - patient prescription order
+      summary: Create a patient prescription order.
+      description: Create a patient prescription order.
+      operationId: postPPOById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-operational-sector.yaml'
+              $ref: 'schemas/create-patient-prescription-order.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - operational sector
-      summary: Delete operational sectors.
-      description: Delete operational sectors.
-      operationId: deleteOperationalSectorById
+        - patient prescription order
+      summary: Delete patient prescription orders.
+      description: Delete patient prescription orders.
+      operationId: deletePPOById
       requestBody:
         required: true
         content:

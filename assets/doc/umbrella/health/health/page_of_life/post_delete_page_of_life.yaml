@@ -1,16 +1,16 @@
 post:
       tags:
-        - operational sector
-      summary: Create a operational sector.
-      description: Create a operational sector.
-      operationId: postOperationalSectorById
+        - page of life
+      summary: Create a page of life.
+      description: Create a page of life.
+      operationId: postPageOfLifeById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-operational-sector.yaml'
+              $ref: 'schemas/create-page-of-life.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - operational sector
-      summary: Delete operational sectors.
-      description: Delete operational sectors.
-      operationId: deleteOperationalSectorById
+        - page of life
+      summary: Delete page of lives.
+      description: Delete page of lives.
+      operationId: deletePageOfLifeById
       requestBody:
         required: true
         content:

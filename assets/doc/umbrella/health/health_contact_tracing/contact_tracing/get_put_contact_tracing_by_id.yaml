@@ -1,9 +1,9 @@
     get:
       tags:
-        - paper archive
-      summary: Get one paper archive.
-      description: Get one paper archive.
-      operationId: getPaperArchiveById
+        - contact tracing
+      summary: Get one contact tracing.
+      description: Get one contact tracing.
+      operationId: getContactTracingById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - paper archive
-      summary: Update a paper archive.
-      description: Update a paper archive.
-      operationId: updatePaperArchiveById
+        - contact tracing
+      summary: Update a contact tracing.
+      description: Update a contact tracing.
+      operationId: updateContactTracingById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-paper-archive.yaml'
+              $ref: 'schemas/create-contact-tracing.yaml'
       responses:
         '200':
           description: OK
