@@ -1,9 +1,9 @@
     post:
       tags:
-        - orthanc server config
-      summary: Get orthanc server config details.
-      description: Get orthanc server config details.
-      operationId: getOrthancServerConfigs
+        - orthanc patient
+      summary: Get orthanc patient details.
+      description: Get orthanc patient details.
+      operationId: getOrthancPatient
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of orthanc server configs.
+          description: List of orthanc patients.
           content:
             application/json:
               schema:

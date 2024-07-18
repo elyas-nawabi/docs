@@ -1,9 +1,9 @@
     get:
       tags:
-        - orthanc server config
-      summary: Get one orthanc server config.
-      description: Get one orthanc server config.
-      operationId: getOrthancServerConfigById
+        - pediatric symptoms checklist
+      summary: Get one pediatric symptoms checklist.
+      description: Get one pediatric symptoms checklist.
+      operationId: getPediatricSymptomsChecklistById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - orthanc server config
-      summary: Update an orthanc server config.
-      description: Update an orthanc server config.
-      operationId: updateOrthancServerConfigById
+        - pediatric symptoms checklist
+      summary: Update an pediatric symptoms checklist.
+      description: Update an pediatric symptoms checklist.
+      operationId: updatePediatricSymptomsChecklistById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-orthanc-server-config.yaml'
+              $ref: 'schemas/create-pediatric-symptoms-checklist.yaml'
       responses:
         '200':
           description: OK

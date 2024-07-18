@@ -1,16 +1,16 @@
 post:
       tags:
-        - surgery protocols
-      summary: Create a surgery protocol.
-      description: Create a surgery protocol.
-      operationId: postSurgeryProtocolById
+        - surgery
+      summary: Create a surgery .
+      description: Create a surgery .
+      operationId: postSurgeryById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-surgery-protocol.yaml'
+              $ref: 'schemas/create-surgery.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - surgery protocol
-      summary: Delete surgery protocols.
-      description: Delete surgery protocols.
-      operationId: deleteSurgeryProtocolById
+        - surgery 
+      summary: Delete surgery.
+      description: Delete surgery.
+      operationId: deleteSurgeryById
       requestBody:
         required: true
         content:

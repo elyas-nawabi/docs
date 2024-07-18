@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: orthanc server config
-    description: orthanc server config - orthanc server config data management.
+  - name: pediatric symptoms checklist
+    description: pediatric symptoms checklist - pediatric symptoms checklist data management.
 paths:
-  '/health-orthanc/servers/search':
-    $ref: 'get_orthanc_server_config.yaml'
-  '/health-orthanc/servers':
-    $ref: 'post_delete_orthanc_server_config.yaml'
-  '/health-orthanc/servers/{obj_id}':
-    $ref: 'get_put_orthanc_server_config_by_id.yaml'
+  '/health-pediatrics/psc/search':
+    $ref: 'get_pediatric_symptoms_checklist.yaml'
+  '/health-pediatrics/psc':
+    $ref: 'post_delete_pediatric_symptoms_checklist.yaml'
+  '/health-pediatrics/psc/{obj_id}':
+    $ref: 'get_put_pediatric_symptoms_checklist_by_id.yaml'
   

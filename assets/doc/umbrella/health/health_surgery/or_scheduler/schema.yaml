@@ -3,12 +3,7 @@ schema:
     data:
       type: array
       properties:
-        approach: 
-          type: string
-        classification: 
-          type: string
-        code: 
-          type: string
+        
         create_date: 
           type: string 
           format: date 
@@ -16,34 +11,7 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        anesthesia_type: 
-          type: string
-        description: 
-          type: string
-        discharge_instructions: 
-          type: string
-        general_info: 
-          type: string
-        id: 
-          type: integer
-        laterality: 
-          type: string
-        name: 
-          type: string
-        pathology: 
-          type: integer
-        pathology_:
-          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        patient_positioning: 
-          type: string
-        postoperative_guidelines: 
-          type: string
-        rec_name: 
-          type: string
-        surgical_intervention: 
-          type: string
-        surgical_intervention_: 
-          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        
         write_date:
           type: string
           format: date 
@@ -65,36 +33,12 @@ schema:
 
 example:
     data:
-      anesthesia_type: local
-      approach: open
-      classification: o
-      code: RESKELOID
       create_date: '2024-05-27T12:50:05.039883'
       create_uid: 0
       create_uid_:
         id: 0
         name: Root
-      description: KELOID SCAR
-      discharge_instructions: |-
-        - YOUR USUAL TREATMENT, AS ABOVE
-        - IF PAIN, PARACTEAMOL 650MG 1 TABLET/8H. IF PAIN INCREASES, ALTERNATE WITH NOLOTIL 575MG 1 TABLET/8H.
-        - KEEP THE WOUND CLEAN AND DRY
-        - DRESS THE WOUND DAILY WITH ANTISEPTIC AND REMOVE STITCHES/SHRINKAGE WITHIN 10 DAYS AT THE HEALTH CENTER
-      general_info: |-
-        UNDER LOCAL ANESTHESIA, TRIAMCIANOLONE IS INFILTRATED AND THE KELOID IS RESECTED LEAVING ITS BORDERS,
-        CLOSURE WITH NON-ABSORBABLE MONOFILAMENT. REMOVAL OF ALTERNATE STITCHES FROM THE 10TH DAY.
-      id: 2
-      laterality: ''
-      name: KELOID SCAR
-      pathology: 5336
-      pathology_:
-        id: 5336
-        name: 'L90.5 : Scar conditions and fibrosis of skin'
-      patient_positioning: supine_decubitus
-      postoperative_guidelines: ''
-      rec_name: KELOID SCAR
-      surgical_intervention: 
-      surgical_intervention_: {}
+      
       write_date: 
       write_uid: 
       write_uid_: {}

@@ -1,16 +1,16 @@
 post:
       tags:
-        - orthanc server config
-      summary: Create an orthanc server config.
-      description: Create an orthanc server config.
-      operationId: postOrthancServerConfigById
+        - orthanc patient
+      summary: Create an orthanc patient.
+      description: Create an orthanc patient.
+      operationId: postOrthancPatient
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-orthanc-server-config.yaml'
+              $ref: 'schemas/create-orthanc-patient.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - orthanc server config
-      summary: Delete orthanc server configs.
-      description: Delete orthanc server configs.
-      operationId: deleteOrthancServerConfigsById
+        - orthanc patient
+      summary: Delete orthanc patients.
+      description: Delete orthanc patients.
+      operationId: deleteOrthancPatient
       requestBody:
         required: true
         content:
