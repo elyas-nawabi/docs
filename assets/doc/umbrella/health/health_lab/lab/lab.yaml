@@ -59,13 +59,21 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: test type
-    description: test type - test type data management.
+  - name: lab
+    description: lab - lab data management.
 paths:
-  '/health-lab/lab-test-types/search':
-    $ref: 'get_test_type.yaml'
-  '/health-lab/lab-test-types':
-    $ref: 'post_delete_test_type.yaml'
-  '/health-lab/lab-test-types/{obj_id}':
-    $ref: 'get_put_test_type_by_id.yaml'
+  '/health-lab/lab-results/search':
+    $ref: 'get_lab.yaml'
+  '/health-lab/lab-results':
+    $ref: 'post_delete_lab.yaml'
+  '/health-lab/lab-results/{obj_id}':
+    $ref: 'get_put_lab_by_id.yaml'
+  '/health-lab/lab-results/{obj_id}/done':
+    $ref: 'get_lab_done.yaml'
+  '/health-lab/lab-results/{obj_id}/draft':
+    $ref: 'get_lab_draft.yaml'
+  '/health-lab/lab-results/{obj_id}/validate':
+    $ref: 'get_lab_validate.yaml'
+  '/health-lab/lab-results/{obj_id}/complete-criteareas':
+    $ref: 'get_lab_complete_criteareas.yaml'
   

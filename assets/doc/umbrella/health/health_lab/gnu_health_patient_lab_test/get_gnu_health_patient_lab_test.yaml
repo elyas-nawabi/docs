@@ -1,9 +1,9 @@
     post:
       tags:
-        - gnu health lab test unit
-      summary: Get gnu health lab test unit details.
-      description: Get gnu health lab test unit details.
-      operationId: getGnuHealthLabUestUnits
+        - gnu health patient lab test
+      summary: Get gnu health patient lab test details.
+      description: Get gnu health patient lab test details.
+      operationId: getGnuHealthPatientLabTest
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of gnu health lab test units.
+          description: List of gnu health patient lab tests.
           content:
             application/json:
               schema:

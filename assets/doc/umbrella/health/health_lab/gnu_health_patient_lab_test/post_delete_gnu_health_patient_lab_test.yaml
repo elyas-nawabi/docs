@@ -1,16 +1,16 @@
 post:
       tags:
-        - gnu health lab test unit
-      summary: Create an gnu health lab test unit.
-      description: Create an gnu health lab test unit.
-      operationId: postGnuHealthLabUestUnitById
+        - gnu health patient lab test
+      summary: Create a gnu health patient lab test.
+      description: Create a gnu health patient lab test.
+      operationId: postGnuHealthPatientLabTestById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-gnu-health-lab-test-unit.yaml'
+              $ref: 'schemas/create-gnu-health-patient-lab-test.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - gnu health lab test unit
-      summary: Delete gnu health lab test units.
-      description: Delete gnu health lab test units.
-      operationId: deleteGnuHealthLabUestUnitsById
+        - gnu health patient lab test
+      summary: Delete gnu health patient lab tests.
+      description: Delete gnu health patient lab tests.
+      operationId: deleteGnuHealthPatientLabTestById
       requestBody:
         required: true
         content:

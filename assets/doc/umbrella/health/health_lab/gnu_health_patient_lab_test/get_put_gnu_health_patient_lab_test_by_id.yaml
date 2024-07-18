@@ -1,9 +1,9 @@
     get:
       tags:
-        - gnu health lab test unit
-      summary: Get one gnu health lab test unit.
-      description: Get one gnu health lab test unit.
-      operationId: getGnuHealthLabUestUnitById
+        - gnu health patient lab test
+      summary: Get one gnu health patient lab test.
+      description: Get one gnu health patient lab test.
+      operationId: getGnuHealthPatientLabTestById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - gnu health lab test unit
-      summary: Update a gnu health lab test unit.
-      description: Update a gnu health lab test unit.
-      operationId: updateGnuHealthLabUestUnitById
+        - gnu health patient lab test
+      summary: Update a gnu health patient lab test.
+      description: Update a gnu health patient lab test.
+      operationId: updateGnuHealthPatientLabTestById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-gnu-health-lab-test-unit.yaml'
+              $ref: 'schemas/create-gnu-health-patient-lab-test.yaml'
       responses:
         '200':
           description: OK

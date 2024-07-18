@@ -29,7 +29,7 @@ info:
 
     information on how to make API requests, 
 
-    authentication procedures, available endpoints, 
+    authentication treatments, available endpoints, 
 
     request/response examples, error handling, 
 
@@ -59,13 +59,19 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: dentistry procedure
-    description: dentistry procedure - dentistry procedure data management.
+  - name: dentistry treatment
+    description: dentistry treatment - dentistry treatment data management.
 paths:
-  '/health-dentistry/dentistry-procedures/search':
-    $ref: 'get_dentistry_procedure.yaml'
-  '/health-dentistry/dentistry-procedures':
-    $ref: 'post_delete_dentistry_procedure.yaml'
-  '/health-dentistry/dentistry-procedures/{obj_id}':
-    $ref: 'get_put_dentistry_procedure_by_id.yaml'
+  '/health-dentistry/dentistry-treatments/search':
+    $ref: 'get_dentistry_treatment.yaml'
+  '/health-dentistry/dentistry-treatments':
+    $ref: 'post_delete_dentistry_treatment.yaml'
+  '/health-dentistry/dentistry-treatments/{obj_id}':
+    $ref: 'get_put_dentistry_treatment_by_id.yaml'
+  '/health-dentistry/dentistry-treatments/{obj_id}/done':
+    $ref: 'get_dentistry_treatment_done.yaml'
+  '/health-dentistry/dentistry-treatments/{obj_id}/set-odontogram/get-defaults':
+    $ref: 'get_dentistry_treatment_odontogram_defaults.yaml'
+  '/health-dentistry/dentistry-treatments/{obj_id}/set-odontogram/set-values':
+    $ref: 'get_dentistry_treatment_odontogram_values.yaml'
   

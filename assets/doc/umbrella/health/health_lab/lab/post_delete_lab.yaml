@@ -1,16 +1,16 @@
 post:
       tags:
-        - test type
-      summary: Create a test type.
-      description: Create a test type.
-      operationId: postTestTypeById
+        - lab
+      summary: Create a lab.
+      description: Create a lab.
+      operationId: postLab
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-test-type.yaml'
+              $ref: 'schemas/create-lab.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - test type
-      summary: Delete test types.
-      description: Delete test types.
-      operationId: deleteTestTypesById
+        - lab
+      summary: Delete labs.
+      description: Delete labs.
+      operationId: deleteLab
       requestBody:
         required: true
         content:

@@ -59,13 +59,19 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: gnu health lab test unit
-    description: gnu health lab test unit - gnu health lab test unit data management.
+  - name: gnu health patient lab test
+    description: gnu health patient lab test - gnu health patient lab test data management.
 paths:
-  '/health-lab/lab-test-units/search':
-    $ref: 'get_gnu_health_lab_test_unit.yaml'
-  '/health-lab/lab-test-units':
-    $ref: 'post_delete_gnu_health_lab_test_unit.yaml'
-  '/health-lab/lab-test-units/{obj_id}':
-    $ref: 'get_put_gnu_health_lab_test_unit_by_id.yaml'
+  '/health-lab/lab-test-requests/search':
+    $ref: 'get_gnu_health_patient_lab_test.yaml'
+  '/health-lab/lab-test-requests':
+    $ref: 'post_delete_gnu_health_patient_lab_test.yaml'
+  '/health-lab/lab-test-requests/{obj_id}':
+    $ref: 'get_put_gnu_health_patient_lab_test_by_id.yaml'
+  '/health-lab/lab-test-requests/{obj_id}/update-service':
+    $ref: 'get_gnu_health_patient_update_service.yaml'
+  '/health-lab/lab-test-requests/{obj_id}/create-lab-test':
+    $ref: 'get_gnu_health_patient_create_lab_test.yaml'
+  '/health-lab/lab-test-requests/{obj_id}/new-order':
+    $ref: 'post_gnu_health_patient_new_order.yaml'
   
