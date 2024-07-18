@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: surgery protocols
-    description: surgery protocols - surgery protocols data management.
+  - name: pre operative assessment
+    description: pre operative assessment - pre operative assessment data management.
 paths:
-  '/health-surgery/surgery-protocols/search':
-    $ref: 'get_surgery_protocol.yaml'
-  '/health-surgery/surgery-protocols':
-    $ref: 'post_delete_surgery_protocol.yaml'
-  '/health-surgery/surgery-protocols/{obj_id}':
-    $ref: 'get_put_surgery_protocol_by_id.yaml'
+  '/health-surgery/preoperative-assessments/search':
+    $ref: 'get_pre_operative_assessment.yaml'
+  '/health-surgery/preoperative-assessments':
+    $ref: 'post_delete_pre_operative_assessment.yaml'
+  '/health-surgery/preoperative-assessments/{obj_id}':
+    $ref: 'get_put_pre_operative_assessment_by_id.yaml'
   

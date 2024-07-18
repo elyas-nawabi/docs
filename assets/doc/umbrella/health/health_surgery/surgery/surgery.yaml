@@ -59,13 +59,25 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: surgery protocols
-    description: surgery protocols - surgery protocols data management.
+  - name: surgery
+    description: surgery - surgery data management.
 paths:
-  '/health-surgery/surgery-protocols/search':
-    $ref: 'get_surgery_protocol.yaml'
-  '/health-surgery/surgery-protocols':
-    $ref: 'post_delete_surgery_protocol.yaml'
-  '/health-surgery/surgery-protocols/{obj_id}':
-    $ref: 'get_put_surgery_protocol_by_id.yaml'
+  '/health-surgery/surgeries/search':
+    $ref: 'get_surgery.yaml'
+  '/health-surgery/surgeries':
+    $ref: 'post_delete_surgery.yaml'
+  '/health-surgery/surgeries/{obj_id}':
+    $ref: 'get_put_surgery_by_id.yaml'
+  '/health-surgery/surgeries/{obj_id}/confirm':
+    $ref: 'get_confirm.yaml'
+  '/health-surgery/surgeries/{obj_id}/start':
+    $ref: 'get_start.yaml'
+  '/health-surgery/surgeries/{obj_id}/finish':
+    $ref: 'get_finish.yaml'
+  '/health-surgery/surgeries/{obj_id}/cancel':
+    $ref: 'get_cancel.yaml'
+  '/health-surgery/surgeries/{obj_id}/sign':
+    $ref: 'get_sign.yaml'
+  '/health-surgery/surgeries/{obj_id}/create-surgery-stock-moves':
+    $ref: 'get_stock_move.yaml'
   

@@ -1,9 +1,9 @@
     post:
       tags:
-        - orthanc server config
-      summary: Get orthanc server config details.
-      description: Get orthanc server config details.
-      operationId: getOrthancServerConfigs
+        - new born
+      summary: Get new born details.
+      description: Get new born details.
+      operationId: getNewBorn
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of orthanc server configs.
+          description: List of new borns.
           content:
             application/json:
               schema:

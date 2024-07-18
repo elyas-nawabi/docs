@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: orthanc server config
-    description: orthanc server config - orthanc server config data management.
+  - name: orthanc patient
+    description: orthanc patient - orthanc patient data management.
 paths:
-  '/health-orthanc/servers/search':
-    $ref: 'get_orthanc_server_config.yaml'
-  '/health-orthanc/servers':
-    $ref: 'post_delete_orthanc_server_config.yaml'
-  '/health-orthanc/servers/{obj_id}':
-    $ref: 'get_put_orthanc_server_config_by_id.yaml'
+  '/health-orthanc/patients/search':
+    $ref: 'get_orthanc_patient.yaml'
+  '/health-orthanc/patients':
+    $ref: 'post_delete_orthanc_patient.yaml'
+  '/health-orthanc/patients/{obj_id}':
+    $ref: 'get_put_orthanc_patient_by_id.yaml'
   

@@ -1,18 +1,18 @@
-post:
+    get:
       tags:
-        - new born
-      summary: Create an new born.
-      description: Create an new born.
-      operationId: postNewBorn
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: 'schemas/create-new-born.yaml'
+        - surgery protocols
+      summary: Get one surgery protocol.
+      description: Get one surgery protocol.
+      operationId: getSurgeryProtocolById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
       responses:
-        '201':
+        '200':
           description: OK
           content:
             application/json:
@@ -28,27 +28,39 @@ post:
             application/json:
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
-
-delete:
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
       tags:
-        - new born
-      summary: Delete new borns.
-      description: Delete new borns.
-      operationId: deleteNewBorns
+        - surgery protocols
+      summary: Update a surgery protocol.
+      description: Update a surgery protocol.
+      operationId: updateSurgeryProtocolById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+              $ref: 'schemas/create-surgery-protocol.yaml'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -59,4 +71,4 @@ delete:
             application/json:
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
-    
+  

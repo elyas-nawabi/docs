@@ -1,9 +1,9 @@
     post:
       tags:
-        - orthanc server config
-      summary: Get orthanc server config details.
-      description: Get orthanc server config details.
-      operationId: getOrthancServerConfigs
+        - pediatric symptoms checklist
+      summary: Get pediatric symptoms checklist details.
+      description: Get pediatric symptoms checklist details.
+      operationId: getPediatricSymptomsChecklist
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of orthanc server configs.
+          description: List of pediatric symptoms checklists.
           content:
             application/json:
               schema:

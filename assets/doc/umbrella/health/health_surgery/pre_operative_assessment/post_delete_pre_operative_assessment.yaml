@@ -1,16 +1,16 @@
 post:
       tags:
-        - surgery protocols
-      summary: Create a surgery protocol.
-      description: Create a surgery protocol.
-      operationId: postSurgeryProtocolById
+        - pre operative assessment
+      summary: Create a pre operative assessment.
+      description: Create a pre operative assessment.
+      operationId: postPOSById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-surgery-protocol.yaml'
+              $ref: 'schemas/create-pre-operative-assessment.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - surgery protocol
-      summary: Delete surgery protocols.
-      description: Delete surgery protocols.
-      operationId: deleteSurgeryProtocolById
+        - pre operative assessment
+      summary: Delete pre operative assessment.
+      description: Delete pre operative assessment.
+      operationId: deletePOSById
       requestBody:
         required: true
         content:

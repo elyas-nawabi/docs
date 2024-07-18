@@ -1,9 +1,9 @@
     get:
       tags:
-        - surgery protocols
-      summary: Get one surgery protocol.
-      description: Get one surgery protocol.
-      operationId: getSurgeryProtocolById
+        - or scheduler
+      summary: Get one or scheduler.
+      description: Get one or scheduler.
+      operationId: getOrSchedulerById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - surgery protocols
-      summary: Update a surgery protocol.
-      description: Update a surgery protocol.
-      operationId: updateSurgeryProtocolById
+        - or scheduler
+      summary: Update a or scheduler.
+      description: Update a or scheduler.
+      operationId: updateOrSchedulerById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-surgery-protocol.yaml'
+              $ref: 'schemas/create-or-scheduler.yaml'
       responses:
         '200':
           description: OK
