@@ -1,9 +1,9 @@
     get:
       tags:
-        - surgery protocols
-      summary: Get one surgery protocol.
-      description: Get one surgery protocol.
-      operationId: getSurgeryProtocolById
+        - patient data
+      summary: Sign a patient data.
+      description: Sign a patient data.
+      operationId: getPatientSign
       parameters:
         - name: obj_id
           in: path
@@ -34,4 +34,4 @@
             application/json:
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
-    
+   

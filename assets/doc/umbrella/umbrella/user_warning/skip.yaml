@@ -1,23 +1,44 @@
-    get:
+get:
       tags:
-        - surgery protocols
-      summary: Get one surgery protocol.
-      description: Get one surgery protocol.
-      operationId: getSurgeryProtocolById
+        - user warning
+      summary: Skip warning.
+      description: Skip warning.
+      operationId: skipWarning
       parameters:
         - name: obj_id
           in: path
           schema:
             type: integer
           rquired: true
-          example: 1
+          example: 2
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: 'schema.yaml'
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      nullable: true
+                    errors:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      nullable: true
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data: null 
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -34,4 +55,4 @@
             application/json:
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
-    
+                
