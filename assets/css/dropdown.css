@@ -55,6 +55,18 @@ body {margin:0;font-family:Arial}
     column-count: 5;
 
   }
+  .stock{
+    width: 100%;
+    left:0;
+    column-count: 1;
+
+  }
+  .accounting{
+    width: 100%;
+    left:0;
+    column-count: 4;
+
+  }
   .currency{
     column-count: 2;
   }

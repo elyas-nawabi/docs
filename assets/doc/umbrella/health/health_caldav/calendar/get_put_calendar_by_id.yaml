@@ -1,18 +1,18 @@
-post:
+    get:
       tags:
-        - patient ecg
-      summary: Create a patient ecg.
-      description: Create a patient ecg.
-      operationId: postPatientEcgById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: 'schemas/create-patient-ecg.yaml'
+        - calendar
+      summary: Get one calendar.
+      description: Get one calendar.
+      operationId: getCalendarById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
       responses:
-        '201':
+        '200':
           description: OK
           content:
             application/json:
@@ -28,27 +28,39 @@ post:
             application/json:
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
-
-delete:
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
       tags:
-        - patient ecg
-      summary: Delete patient ecgs.
-      description: Delete patient ecgs.
-      operationId: deletePatientEcgById
+        - calendar
+      summary: Update a calendar.
+      description: Update a calendar.
+      operationId: updateCalendarById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+              $ref: 'schemas/create-calendar.yaml'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -59,4 +71,4 @@ delete:
             application/json:
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
-    
+  
