@@ -59,8 +59,8 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: patient ecg
-    description: patient ecg - patient ecg data management.
+  - name: event
+    description: event - event data management.
 paths:
   '/health/ecgs/search':
     $ref: 'get_patient_ecg.yaml'

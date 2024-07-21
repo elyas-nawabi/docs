@@ -1,9 +1,9 @@
     post:
       tags:
-        - patient ecg
-      summary: Get patient ecg details.
-      description: Get patient ecg details.
-      operationId: getPatientEcg
+        - calendar
+      summary: Get calendar details.
+      description: Get calendar details.
+      operationId: getCalendar
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of patient ecgs.
+          description: List of calendars.
           content:
             application/json:
               schema:
