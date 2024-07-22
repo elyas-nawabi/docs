@@ -62,10 +62,10 @@ tags:
   - name: category
     description: category - category data management.
 paths:
-  '/health_caldav/calendar-categories/search':
+  '/health-caldav/calendar-categories/search':
     $ref: 'get_category.yaml'
-  '/health_caldav/calendar-categories':
+  '/health-caldav/calendar-categories':
     $ref: 'post_delete_category.yaml'
-  '/health_caldav/calendar-categories/{obj_id}':
+  '/health-caldav/calendar-categories/{obj_id}':
     $ref: 'get_put_category_by_id.yaml'
   

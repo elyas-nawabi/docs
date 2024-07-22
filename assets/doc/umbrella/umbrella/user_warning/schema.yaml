@@ -1,9 +1,12 @@
 schema:
   properties:
     data:
-      type: array
+      type: object
       properties:
-        
+        warning_name:
+          type: string
+        always: 
+          type: boolean
     errors:
       type: object
       nullable: true
@@ -15,10 +18,10 @@ schema:
     success_message:
       type: string
       nullable: true
-
 example:
     data:
-      
+      warning_name: overloaded_data
+      always: true
     errors: null
     pagination: null
     status: 201

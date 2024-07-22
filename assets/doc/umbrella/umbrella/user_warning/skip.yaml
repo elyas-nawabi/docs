@@ -1,16 +1,16 @@
-get:
+post:
       tags:
         - user warning
       summary: Skip warning.
       description: Skip warning.
       operationId: skipWarning
-      parameters:
-        - name: obj_id
-          in: path
-          schema:
-            type: integer
-          rquired: true
-          example: 2
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
           description: OK
@@ -20,8 +20,10 @@ get:
                   type: object
                   properties:
                     data:
-                      type: object
-                      nullable: true
+                      warning_name: 
+                        type: string
+                      always:
+                        type: boolean
                     errors:
                       type: object
                       nullable: true
@@ -34,7 +36,9 @@ get:
                       type: string
                       nullable: true
               example:
-                data: null 
+                data:
+                  warning_name: overloaded_data
+                  always: true
                 error: null
                 pagination: null
                 status: 200
