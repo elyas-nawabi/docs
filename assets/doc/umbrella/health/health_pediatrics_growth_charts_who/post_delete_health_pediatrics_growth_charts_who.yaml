@@ -10,7 +10,7 @@ post:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-pediatrics-growth-charts-who.yaml'
+              $ref: 'schemas/create-health-pediatrics-growth-charts-who.yaml'
       responses:
         '201':
           description: OK
@@ -27,7 +27,7 @@ post:
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
 
 delete:
       tags:
@@ -41,14 +41,14 @@ delete:
           application/json:
             schema:
               type: object
-              $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+              $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+                $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -58,5 +58,5 @@ delete:
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     
