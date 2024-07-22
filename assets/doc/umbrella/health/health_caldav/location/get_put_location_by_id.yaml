@@ -1,9 +1,9 @@
     get:
       tags:
-        - patient ecg
-      summary: Get one patient ecg.
-      description: Get one patient ecg.
-      operationId: getPatientEcgById
+        - location
+      summary: Get one location.
+      description: Get one location.
+      operationId: getLocationById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - patient ecg
-      summary: Update a patient ecg.
-      description: Update a patient ecg.
-      operationId: updatePatientEcgById
+        - location
+      summary: Update a location.
+      description: Update a location.
+      operationId: updateLocationById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-patient-ecg.yaml'
+              $ref: 'schemas/create-location.yaml'
       responses:
         '200':
           description: OK

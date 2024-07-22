@@ -62,10 +62,10 @@ tags:
   - name: event
     description: event - event data management.
 paths:
-  '/health/ecgs/search':
-    $ref: 'get_patient_ecg.yaml'
-  '/health/ecgs':
-    $ref: 'post_delete_patient_ecg.yaml'
-  '/health/ecgs/{obj_id}':
-    $ref: 'get_put_patient_ecg_by_id.yaml'
+  '/health_caldav/events/search':
+    $ref: 'get_event.yaml'
+  '/health_caldav/events':
+    $ref: 'post_delete_event.yaml'
+  '/health_caldav/events/{obj_id}':
+    $ref: 'get_put_event_by_id.yaml'
   

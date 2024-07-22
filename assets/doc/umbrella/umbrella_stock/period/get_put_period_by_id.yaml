@@ -3,7 +3,7 @@
         - period
       summary: Get one period.
       description: Get one period.
-      operationId: getPatientEcgById
+      operationId: getPeriodById
       parameters:
         - name: obj_id
           in: path
@@ -27,13 +27,13 @@
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
         '404':
           description: 404 Not Found.
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
         - period
@@ -70,5 +70,5 @@
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
   

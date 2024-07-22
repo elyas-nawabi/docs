@@ -1,16 +1,16 @@
 post:
       tags:
-        - patient ecg
-      summary: Create a patient ecg.
-      description: Create a patient ecg.
-      operationId: postPatientEcgById
+        - event
+      summary: Create a event.
+      description: Create a event.
+      operationId: postEventById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-patient-ecg.yaml'
+              $ref: 'schemas/create-event.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - patient ecg
-      summary: Delete patient ecgs.
-      description: Delete patient ecgs.
-      operationId: deletePatientEcgById
+        - event
+      summary: Delete events.
+      description: Delete events.
+      operationId: deleteEventById
       requestBody:
         required: true
         content:

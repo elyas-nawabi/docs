@@ -27,13 +27,13 @@
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
         '404':
           description: 404 Not Found.
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
         - configuration
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-patient-ecg.yaml'
+              $ref: 'schemas/create-configuration.yaml'
       responses:
         '200':
           description: OK
@@ -70,5 +70,5 @@
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
   

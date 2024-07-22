@@ -10,7 +10,7 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
           description: List of pediatrics growth charts who.
@@ -28,7 +28,7 @@
                         create_uid: 
                           type: integer
                         create_uid_:
-                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         id: 
                           type: integer
                         indicator:
@@ -52,7 +52,7 @@
                         write_uid:
                           type: integer
                         write_uid_:
-                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -106,6 +106,6 @@
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     
     
