@@ -3,6 +3,47 @@ schema:
     data:
       type: array
       properties:
+        address: 
+          type: string
+        ambulances:
+          type: array
+          properties:
+            ambulance: 
+              type: integer
+            ambulance_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            healthprofs: 
+              type: array
+            healthprofs_count: 
+              type: integer
+            id: 
+              type: integer
+            rec_name: 
+              type: string
+            sr:
+              type: integer
+            sr_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            state: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        code: 
+          type: string
+        complaint:
+          type: string
         create_date: 
           type: string 
           format: date 
@@ -10,7 +51,96 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        evaluation: 
+          type: integer
+        evaluation_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        event_specific: 
+          type: integer
+        event_specific_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        event_type: 
+          type: string
+        healthcenter: 
+          type: integer
+        healthcenter_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        latitude: 
+          type: number
+          format: decimal
+        longitude: 
+          type: number
+          format: decimal
+        multiple_casualties: 
+          type: boolean
+        operational_sector: 
+          type: integer
+        operational_sector_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        operator: 
+          type: integer
+        operator_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        patient: 
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        patient_age: 
+          type: string
+        patient_sex: 
+          type: string
+        place_occurrance: 
+          type: string
+        rec_name: 
+          type: string
+        request_actions:
+          type: array
+          properties:
+            action: 
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            rec_name: 
+              type: string
+            remarks: 
+              type: string
+            sr: 
+              type: integer
+            sr_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            timestamp: 
+              type: string
+              format: date
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        request_date: 
+          type: string
+          format: date
+        request_extra_info: 
+          type: string
+        requestor: 
+          type: integer
+        requestor_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        state: 
+          type: string
+        urgency: 
+          type: string
+        urladdr: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -32,15 +162,89 @@ schema:
 
 example:
     data:
-      create_date: '2024-05-27T12:50:05.039883'
-      create_uid: 0
+      address: ''
+      ambulances:
+      - ambulance: 50
+        ambulance_:
+          id: 50
+          name: '0004 : helicopter'
+        create_date: '2024-07-11T09:53:08.702266'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        healthprofs: []
+        healthprofs_count: 0
+        id: 32
+        rec_name: '32'
+        sr: 3
+        sr_:
+          id: 3
+          name: SRG-2024-00003
+        state: 
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      code: SRG-2024-00003
+      complaint: 
+      create_date: '2024-07-06T03:52:57.172985'
+      create_uid: 1
       create_uid_:
-        id: 0
-        name: Root
-      
-      write_date: 
-      write_uid: 
-      write_uid_: {}
+        id: 1
+        name: Administrator
+      evaluation: 
+      evaluation_: {}
+      event_specific: 
+      event_specific_: {}
+      event_type: event3
+      healthcenter: 
+      healthcenter_: {}
+      id: 3
+      latitude: 
+      longitude: 
+      multiple_casualties: false
+      operational_sector: 
+      operational_sector_: {}
+      operator: 1
+      operator_:
+        id: 1
+        name: Milestone
+      patient: 
+      patient_: {}
+      patient_age: 
+      patient_sex: 
+      place_occurrance: 
+      rec_name: SRG-2024-00003
+      request_actions:
+      - action: ambulance
+        create_date: '2024-07-06T04:33:35.371879'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        id: 1
+        rec_name: '1'
+        remarks: returning
+        sr: 3
+        sr_:
+          id: 3
+          name: SRG-2024-00003
+        timestamp: '2024-07-06T04:33:35'
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      request_date: '2024-07-06T03:52:53'
+      request_extra_info: ''
+      requestor: 
+      requestor_: {}
+      state: open
+      urgency: emergency
+      urladdr: ''
+      write_date: '2024-07-11T06:47:14.410944'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
     errors: null
     pagination: null
     status: 201
