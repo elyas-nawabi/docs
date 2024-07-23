@@ -20,9 +20,20 @@
                   type: object
                   properties:
                     data:
-                      type: array
+                      type: object
                       properties:
-                        
+                        appointment: 
+                          type: integer
+                        evaluation_type: 
+                          type: string
+                        patient: 
+                          type: integer
+                        specialty: 
+                          type: integer
+                        urgency: 
+                          type: string
+                        visit_type: 
+                          type: string
                     errors:
                       type: object
                     pagination:
@@ -42,7 +53,12 @@
                       nullable: true
               example:
                 data:
-                
+                  appointment: 1
+                  evaluation_type: outpatient
+                  patient: 17
+                  specialty: 1
+                  urgency: b
+                  visit_type: new
                 error: null
                 pagination:
                   page: 1

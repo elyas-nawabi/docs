@@ -1,7 +1,126 @@
       properties:
-        
+        appointment_date:
+            type: string
+            format: date
+        appointment_date_end: 
+            type: string
+            format: date
+        appointment_type: 
+            type: string
+        checked_in_date: 
+            type: string
+            format: date
+        comments: 
+            type: string
+        consultations: 
+            type: integer
+        consultations_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        create_date: 
+            type: string
+            format: date
+        create_uid: 
+            type: integer
+        create_uid_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        event: 
+            type: integer
+        event_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        healthprof:     
+            type: integer
+        healthprof_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+            type: integer
+        inpatient_registration_code: 
+            type: integer
+        inpatient_registration_code_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        institution: 
+            type: integer
+        institution_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+            type: string
+        patient:
+            type: integer
+        patient_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        qr: 
+            type: string
+            format: byte
+        rec_name: APP 2024/1
+        speciality: 
+            type: integer
+        speciality_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        state: 
+            type: string
+        urgency: 
+            type: string
+        visit_type: 
+            type: string
+        write_date:
+            type: string
+            format: date 
+        write_uid:
+            type: integer
+        write_uid_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
   
       required:
-          - 
+          - appointment_minutes
+          - date_end
+          - date_start
+          - healthprof
+          - institution
+          - specialty
+          - time_end
+          - time_start
+
       example:
-        
+        appointment_date: '2024-07-23T17:58:51'
+        appointment_date_end: '2024-07-23T18:02:00'
+        appointment_type: outpatient
+        checked_in_date: 
+        comments: test
+        consultations: 
+        consultations_: {}
+        create_date: '2024-07-23T18:01:36.152001'
+        create_uid: 1
+        create_uid_:
+            id: 1
+            name: Administrator
+        event: 
+        event_: {}
+        healthprof: 1
+        healthprof_:
+            id: 1
+            name: Milestone
+        id: 1
+        inpatient_registration_code: 2
+        inpatient_registration_code_:
+            id: 2
+            name: INPAC002:acetylsalicylic acid:Milestone
+        institution: 1
+        institution_:
+            id: 1
+            name: Milestone
+        name: APP 2024/1
+        patient: 17
+        patient_:
+            id: 17
+            name: Milestone
+        qr: iVBORw0KGgoAAAANSUhEUgAAAeoAAAHqAQAAAADjFjCXAAAEOUlEQVR4nO2dXYrrOBCFT40FeZRhFtBLsXfQSwp3SXcH8VKygAb5MaBQ81AqWUlzGbA9kw4+9WAcWx/VhqKk+pFaFBtk+msLDRAnTpw4ceLEiRPfF5ciAcAsIuMsAswBzWWqb0VEZNxPO/Gj4VBVVQyqqpo6BaIqEDP0Ev2F3aXOhjTE5a2/nfir8bm6L9wFwzXAHN7UAzLOAUDMkBFA8Yl7aidOHPqr7xSDZgCziGq6m/39L9qJHw5XvQaYwU1S7/pOAdzlv9ZO/Fh4VNULYBYmIiJlhYdO5ZwAvaCzjLKq5p21Ez8kPomISA/IOQEYUqcYrjWGBSDnawCAuxSb3FE78YPhZlNtWSzeBIgZFshihl9wEyA+VtDe+tuJvwr/ljkZUmdzrV6iqmrycfYM/laZOSG+VhpfJ4g30amHYEh/ZwHEXijmHkD8CjLo3d7uo534MfHi6xAziq/TkhH2CKNzhxc9X4yoSl9HfL24r5sDMH3exH/asyyDreO6DPuZAJ0+99JO/Ji4r+tSXbRVlzZohju17PmSWNd/9HXEV0uZYeF5OKtIxAygiRxyydcNyyRMqyO+Wnxdp25hCSiBbHRzLIs77w0Y3APS6oivk2I/qbq0WqUYUnVudoF7QjBzQnyTtCs3a2Nyu2rydTFbvu5bC9RbfzvxV+HV1/mUOqTW/5WQIi3jl2IsrY74WlnydTCTitUI65BLzLAZFnbHGJb4JmmszgypRg5DDTM0AUtDcRNS0OqIr5J2hkVZ1y1ZksbNWUpviTVodcRXS5M5qV6vLYGhZFM8VazKGZb4PnjZKBEAoFORj9q36eGDjPOpNBRPHzWk/RF/PPF3w7/7OgBNSFGcW+0gjrUsRl9HfBuumu4i4xy8NnENkDHeBHW3hIictOyqSICM+2knfjS86er0XiaPZpfFXamS1XqZ0tcR3yKl02mS2tp0teVbwPC7ywIAgpiDlt7PLrf4W3878RfjQwJKDBFvItJ3ajsoatIEtlHnw7cs7qmd+MFwL23Fx4yIl1s9wqiHTViWODNfR3yLPEeu7bbX2u7pNrms9Wh1xDfIYnVNqqQcseOXMsMCwENrJ62O+Dp5imHL01g62N3Cyt0yHTOGJb4dn4Nl6ay16bKcX4d6sE7M5Zy7c9pbO/Fj4bWr8zFyWGZd1WZT9rJlgjMs8Q3SRhNLqOq97O0higC80ymzq5P4drwpRuAuMqJTGe3oOgAlcwx4V+fO2okfFG/O6uxUf/Wlg9jPb/Kj6yYRwSQnLYN/xh9P/M3w8PxgGjuUff7XAAXuQae+y4L4FczjTZ9fortoJ07cxOdQW9dNcrLamF7mkwJzgJxTp3/EN2onfgT8+SSxh3i1FL68GOsJYksVM5ogvlqeYlh7dol+sEnZGaZtXNvki9/624m/Chf99zF/Fv73OuLEiRMnTpw48Z+C/wNnmSdlvJtA+AAAAABJRU5ErkJggg==
+        rec_name: APP 2024/1
+        speciality: 1
+        speciality_:
+            id: 1
+            name: Anatomy
+        state: confirmed
+        urgency: b
+        visit_type: new
+        write_date: 
+        write_uid: 
+        write_uid_: {}

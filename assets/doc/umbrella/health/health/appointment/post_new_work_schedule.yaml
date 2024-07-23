@@ -10,14 +10,14 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-appointment.yaml'
+              $ref: 'schemas/create-new-work-schedule.yaml'
       responses:
         '201':
           description: OK
           content:
             application/json:
               schema:
-                $ref: 'schema.yaml'
+                $ref: 'schema-work-schedule.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
