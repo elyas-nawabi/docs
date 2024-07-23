@@ -22,6 +22,8 @@
                     data:
                       type: array
                       properties:
+                        code: 
+                          type: string
                         create_date: 
                           type: string 
                           format: date 
@@ -29,7 +31,32 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        event_type: 
+                          type: string
+                        healthcenter: 
+                          type: integer
+                        healthcenter_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        id: 
+                          type: integer
+                        operational_sector: 
+                          type: integer
+                        operational_sector_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        patient: 
+                          type: integer
+                        patient_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        requestor: 
+                          type: integer
+                        requestor_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        state: 
+                          type: string
+                        urgency: 
+                          type: string
                         write_date:
                           type: string
                           format: date 
@@ -56,15 +83,30 @@
                       nullable: true
               example:
                 data:
-                    create_date: '2024-05-27T12:50:05.039883'
-                    create_uid: 0
+                  - code: SRG-2024-00003
+                    create_date: '2024-07-06T03:52:57.172985'
+                    create_uid: 1
                     create_uid_:
-                      id: 0
-                      name: Root
-                    
-                    write_date: 
-                    write_uid: 
-                    write_uid_: {}
+                      id: 1
+                      name: Administrator
+                    event_type: event3
+                    healthcenter: 
+                    healthcenter_: {}
+                    id: 3
+                    operational_sector: 
+                    operational_sector_: {}
+                    patient: 
+                    patient_: {}
+                    rec_name: SRG-2024-00003
+                    requestor: 
+                    requestor_: {}
+                    state: open
+                    urgency: emergency
+                    write_date: '2024-07-11T06:47:14.410944'
+                    write_uid: 1
+                    write_uid_:
+                      id: 1
+                      name: Administrator
                 error: null
                 pagination:
                   page: 1

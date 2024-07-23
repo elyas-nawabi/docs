@@ -1,17 +1,23 @@
       properties:
-        
-        create_date: 
+        ambulance: 
+          type: integer
+        healthprofs: 
+          type: array
+        healthprofs_count: 
+          type: integer
+        rec_name:
+          type: string
+        sr: 
+          type: integer
+        state:
           type: string 
-          format: date 
-        
-        write_date:
-            type: string
-            format: date 
         
       required:
-          - 
+          - sr
       example:
-        
-        create_date: '2024-05-27T12:50:05.039883'
-        
-        write_date: 
+        ambulance: 50
+        healthprofs: []
+        healthprofs_count: 0
+        rec_name: '32'
+        sr: 3
+        state: 

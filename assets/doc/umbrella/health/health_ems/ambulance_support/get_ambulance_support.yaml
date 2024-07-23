@@ -29,7 +29,22 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        ambulance: 
+                          type: integer
+                        ambulance_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        healthprofs_count: 
+                          type: integer
+                        id: 
+                          type: integer
+                        rec_name: 
+                          type: string
+                        sr: 
+                          type: integer
+                        sr_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        state: 
+                          type: string
                         write_date:
                           type: string
                           format: date 
@@ -61,7 +76,18 @@
                     create_uid_:
                       id: 0
                       name: Root
-                    
+                    ambulance: 50
+                    ambulance_:
+                      id: 50
+                      name: '0004 : helicopter'
+                    healthprofs_count: 0
+                    id: 32
+                    rec_name: '32'
+                    sr: 3
+                    sr_:
+                      id: 3
+                      name: SRG-2024-00003
+                    state: 
                     write_date: 
                     write_uid: 
                     write_uid_: {}
