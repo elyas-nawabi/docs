@@ -20,9 +20,8 @@
                   type: object
                   properties:
                     data:
-                      type: array
-                      properties:
-                        
+                      type: object
+                      nullable: true                        
                     errors:
                       type: object
                     pagination:
@@ -41,14 +40,9 @@
                       type: string
                       nullable: true
               example:
-                data:
-                
+                data: null
                 error: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 9
+                pagination: null
                 status: 200
                 success_message: null
         

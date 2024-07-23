@@ -22,7 +22,45 @@
                     data:
                       type: array
                       properties:
-                        
+                        appointment_date:
+                          type: string
+                          format: date
+                        create_date: 
+                          type: string
+                          format: date
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        healthprof: 
+                          type: integer
+                        healthprof_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        id: 
+                          type: integer
+                        patient: 
+                          type: integer
+                        patient_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        speciality: 
+                          type: integer
+                        speciality_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        state: 
+                          type: string
+                        urgency: 
+                          type: string
+                        visit_type: 
+                          type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -42,7 +80,32 @@
                       nullable: true
               example:
                 data:
-                
+                  - appointment_date: '2024-07-23T17:58:51'
+                    create_date: '2024-07-23T18:01:36.152001'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    healthprof: 1
+                    healthprof_:
+                      id: 1
+                      name: Milestone
+                    id: 1
+                    patient: 17
+                    patient_:
+                      id: 17
+                      name: Milestone
+                    rec_name: APP 2024/1
+                    speciality: 1
+                    speciality_:
+                      id: 1
+                      name: Anatomy
+                    state: confirmed
+                    urgency: b
+                    visit_type: new
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
                 error: null
                 pagination:
                   page: 1
