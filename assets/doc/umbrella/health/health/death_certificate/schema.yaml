@@ -3,7 +3,89 @@ schema:
     data:
       type: array
       properties:
-        
+        age: 
+          type: integer
+        autopsy: 
+          type: boolean
+        certification_date: 
+          type: string
+          format: date
+        cod: 
+          type: integer
+        cod_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        code: 
+          type: string
+        country: 
+          type: integer
+        country_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        country_subdivision: 
+          type: integer
+        country_subdivision_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        create_date: 
+          type: string
+          format: date
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        digest_current: 
+          type: string
+        digest_status: 
+          type: boolean
+        digital_signature: 
+          type: string
+        document_digest: 
+        dod: 
+          type: string
+          format: date
+        du: 
+          type: integer
+        du_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 1
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        observations: 
+          type: string
+        operational_sector: 
+          type: integer
+        operational_sector_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        place_details: 
+          type: string
+        place_of_death: 
+          type: string
+        rec_name: 
+          type: string
+        serializer: 
+        serializer_current: 
+          type: string
+        signed_by: 
+          type: string
+        signed_by_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        state: 
+          type: string
+        type_of_death:
+          type: string
+        underlying_conditions: 
+          type: array
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -18,7 +100,64 @@ schema:
 
 example:
     data:
-      
+      age: 
+      autopsy: true
+      certification_date: 
+      cod: 31109
+      cod_:
+        id: 31109
+        name: 'QC20.0 : Partner illness problem'
+      code: '988'
+      country: 1
+      country_:
+        id: 1
+        name: "\U0001F1D6\U0001F1D7 Afghanistan"
+      country_subdivision: 
+      country_subdivision_: {}
+      create_date: '2024-07-25T20:38:22.115152'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      digest_current: 44cc4bfb21088bedf08b6b316b6ae31057348d622a5fff17f273489846a2497775975e045796be413a8e66f0df0f98fd732bc5df163bafcf9b47daccef8b5124
+      digest_status: false
+      digital_signature: 
+      document_digest: 
+      dod: '2024-07-25T20:37:00'
+      du: 1
+      du_:
+        id: 1
+        name: '111'
+      id: 1
+      institution: 1
+      institution_:
+        id: 1
+        name: Milestone
+      name: 1
+      name_:
+        id: 1
+        name: Milestone
+      observations: test data ...
+      operational_sector: 
+      operational_sector_: {}
+      place_details: details herer...
+      place_of_death: home
+      rec_name: '1'
+      serializer: 
+      serializer_current: "{\"certificate\": \"988\", \"Date\": \"2024-07-25 20:37:00\",
+        \"HP\": \"\", \"Person\": \"Milestone\", \"Person_dob\": \"None\", \"Person_ID\":
+        \"None\", \"Cod\": \"QC20.0 : Partner illness problem\", \"Underlying_conditions\":
+        \"\", \"Autopsy\": true, \"Type_of_death\": \"natural\", \"Place_of_death\": \"home\",
+        \"Country\": \"\U0001F1D6\U0001F1D7 Afghanistan\", \"Country_subdivision\": \"\",
+        \"Observations\": \"test data ...\"}"
+      signed_by: 
+      signed_by_: {}
+      state: draft
+      type_of_death: natural
+      underlying_conditions: []
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201

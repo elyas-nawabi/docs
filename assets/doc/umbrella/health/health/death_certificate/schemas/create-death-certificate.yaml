@@ -1,7 +1,87 @@
       properties:
-        
+        age: 
+          type: integer
+        autopsy: 
+          type: boolean
+        certification_date: 
+          type: string
+          format: date
+        cod: 
+          type: integer
+        code: 
+          type: string
+        country: 
+          type: integer
+        country_subdivision: 
+          type: integer
+        digest_current: 
+          type: string
+        digest_status: 
+          type: boolean
+        digital_signature: 
+          type: string
+        document_digest: 
+        dod: 
+          type: string
+          format: date
+        du: 
+          type: integer
+        institution: 
+          type: integer
+        name: 1
+        observations: 
+          type: string
+        operational_sector: 
+          type: integer
+        place_details: 
+          type: string
+        place_of_death: 
+          type: string
+        rec_name: 
+          type: string
+        serializer: 
+        serializer_current: 
+          type: string
+        signed_by: 
+          type: string
+        state: 
+          type: string
+        type_of_death:
+          type: string
+        underlying_conditions: 
+          type: array
   
       required:
-          - 
+          - cause
       example:
-        
+        age: 
+        autopsy: true
+        certification_date: 
+        cod: 31109
+        code: '988'
+        country: 1
+        country_subdivision: 
+        digest_current: 44cc4bfb21088bedf08b6b316b6ae31057348d622a5fff17f273489846a2497775975e045796be413a8e66f0df0f98fd732bc5df163bafcf9b47daccef8b5124
+        digest_status: false
+        digital_signature: 
+        document_digest: 
+        dod: '2024-07-25T20:37:00'
+        du: 1
+        institution: 1
+        name: 1
+        observations: test data ...
+        operational_sector: 
+        place_details: details herer...
+        place_of_death: home
+        rec_name: '1'
+        serializer: 
+        serializer_current: "{\"certificate\": \"988\", \"Date\": \"2024-07-25 20:37:00\",
+            \"HP\": \"\", \"Person\": \"Milestone\", \"Person_dob\": \"None\", \"Person_ID\":
+            \"None\", \"Cod\": \"QC20.0 : Partner illness problem\", \"Underlying_conditions\":
+            \"\", \"Autopsy\": true, \"Type_of_death\": \"natural\", \"Place_of_death\": \"home\",
+            \"Country\": \"\U0001F1D6\U0001F1D7 Afghanistan\", \"Country_subdivision\": \"\",
+            \"Observations\": \"test data ...\"}"
+        signed_by: 
+        state: draft
+        type_of_death: natural
+        underlying_conditions: []
