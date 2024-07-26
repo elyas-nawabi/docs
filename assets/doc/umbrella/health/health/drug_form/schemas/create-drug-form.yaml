@@ -1,7 +1,14 @@
       properties:
-        
+        code: 
+            type: string
+        name: 
+            type: string
+        rec_name: 
+            type: string
   
       required:
           - 
       example:
-        
+        code: AEM
+        name: Aerosol metered-dose
+        rec_name: Aerosol metered-dose
