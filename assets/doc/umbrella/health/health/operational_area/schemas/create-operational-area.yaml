@@ -1,7 +1,32 @@
       properties:
-        
+        info: 
+          type: string
+        name: 
+          type: string
+        operational_sector:
+          type: array
+          properties:
+            info:
+              type: string
+            name: 
+              type: string
+            operational_area: 
+                type: integer
+            rec_name: 
+              type: string
+        rec_name: 
+          type: string
   
       required:
           - 
       example:
-        
+        create_date: '2024-07-27T07:45:38.015288'
+        info: ''
+        name: operational_area1
+        operational_sector:
+          - info: put extra info here...
+            name: op_sec_1
+            operational_area: 1
+            rec_name: op_sec_1
+        rec_name: operational_area1
+      
