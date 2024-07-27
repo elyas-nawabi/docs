@@ -3,7 +3,70 @@ schema:
     data:
       type: array
       properties:
-        
+        ac: 
+          type: boolean
+        bio_hazard: 
+          type: boolean
+        building: 
+          type: integer
+        building_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        extra_info:
+          type: string
+        floor: 
+          type: integer
+        gender: 
+          type: string
+        guest_sofa: 
+          type: boolean
+        id: 
+          type: integer
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+      
+        internet: 
+          type: boolean
+        microwave: 
+          type: boolean
+        name: 
+          type: string
+        number_of_beds: 
+          type: integer
+        private: 
+          type: boolean
+        private_bathroom: 
+          type: boolean
+        rec_name:   
+          type: string
+        refrigerator: 
+          type: boolean
+        state: 
+          type: string
+        telephone:  
+          type: boolean
+        tv:   
+          type: boolean
+        unit: 
+          type: integer
+        unit_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -18,7 +81,40 @@ schema:
 
 example:
     data:
-      
+      ac: true
+      bio_hazard: true
+      building: 
+      building_: {}
+      create_date: '2024-07-27T05:49:51.222845'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      extra_info: information here...
+      floor: 1
+      gender: men
+      guest_sofa: true
+      id: 1
+      institution: 1
+      institution_:
+        id: 1
+        name: Milestone
+      internet: true
+      microwave: true
+      name: opd
+      number_of_beds: 1
+      private: true
+      private_bathroom: true
+      rec_name: opd
+      refrigerator: true
+      state: beds_available
+      telephone: false
+      tv: false
+      unit: 
+      unit_: {}
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201
