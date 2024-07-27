@@ -1,7 +1,27 @@
       properties:
-        
+        description: 
+          type: string
+        domain: 
+          type: string
+        internal: 
+          type: boolean
+        label: 
+          type: string
+        model: 
+          type: string
+        name: 
+          type: string
+        rec_name: 
+          type: string
   
       required:
           - 
       example:
-        
+        description: Domiciliary Units
+        domain: 
+        id: 1
+        internal: true
+        label: Domiciliary Units
+        model: gnuhealth.du
+        name: du
+        rec_name: du

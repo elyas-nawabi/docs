@@ -3,7 +3,48 @@ schema:
     data:
       type: array
       properties:
-        
+        bed_type: 
+          type: string
+        calendar: 
+          type: integer
+        calendar_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        extra_info: 
+          type: string
+        id: 
+          type: integer
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        state: 
+          type: string
+        telephone_number: 
+          type: string
+        ward: 
+          type: integer
+        ward_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -18,7 +59,32 @@ schema:
 
 example:
     data:
-      
+      bed_type: gatch
+      calendar: 
+      calendar_: {}
+      create_date: '2024-07-16T06:12:43.982956'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      extra_info: ''
+      id: 1
+      institution: 1
+      institution_:
+        id: 1
+        name: Milestone
+      name: 394
+      name_:
+        id: 394
+        name: "[Bed 1] acetylsalicylic acid"
+      rec_name: acetylsalicylic acid
+      state: free
+      telephone_number: ''
+      ward: 
+      ward_: {}
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201

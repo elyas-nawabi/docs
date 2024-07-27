@@ -1,7 +1,32 @@
       properties:
-        
+        active:
+            type: boolean
+        code:
+            type: string
+        info: 
+          type: string
+        institution: 
+          type: integer
+        main_specialty: 
+          type: integer
+        name: 
+          type: integer
+        puid: 
+          type: string
+        rec_name: 
+          type: string
+        specialties:
+          type: array
   
       required:
           - 
       example:
-        
+        active: true
+        code: 
+        info: ''
+        institution: 
+        main_specialty: 
+        name: 1
+        puid: 
+        rec_name: Milestone
+        specialties: []

@@ -3,7 +3,46 @@ schema:
     data:
       type: array
       properties:
+        building:   
+          type: integer
+        building_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        extra_info: 
+          type: string
+        id: 
+          type: integer
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
         
+        name: 
+          type: string
+        rec_name: 
+          type: string
+        state:  
+          type: string
+        timeslot: 
+          type: integer
+        unit:   
+          type: integer
+        unit_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -18,7 +57,32 @@ schema:
 
 example:
     data:
-      
+      building: 1
+      building_:
+        id: 1
+        name: new_building
+      create_date: '2024-07-27T05:35:02.235436'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      extra_info: put your comments or extra information here.
+      id: 1
+      institution: 1
+      institution_:
+        id: 1
+        name: Milestone
+      name: operating_room_1
+      rec_name: operating_room_1
+      state: free
+      timeslot: 60
+      unit: 1
+      unit_:
+        id: 1
+        name: emergency
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201

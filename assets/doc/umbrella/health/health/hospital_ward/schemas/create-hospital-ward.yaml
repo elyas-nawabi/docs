@@ -1,7 +1,65 @@
       properties:
-        
+        ac: 
+          type: boolean
+        bio_hazard: 
+          type: boolean
+        building: 
+          type: integer
+        extra_info:
+          type: string
+        floor: 
+          type: integer
+        gender: 
+          type: string
+        guest_sofa: 
+          type: boolean
+        institution: 
+          type: integer
+        internet: 
+          type: boolean
+        microwave: 
+          type: boolean
+        name: 
+          type: string
+        number_of_beds: 
+          type: integer
+        private: 
+          type: boolean
+        private_bathroom: 
+          type: boolean
+        rec_name:   
+          type: string
+        refrigerator: 
+          type: boolean
+        state: 
+          type: string
+        telephone:  
+          type: boolean
+        tv:   
+          type: boolean
+        unit: 
+          type: integer
   
       required:
           - 
       example:
-        
+        ac: true
+        bio_hazard: true
+        building: 
+        extra_info: information here...
+        floor: 1
+        gender: men
+        guest_sofa: true
+        institution: 1
+        internet: true
+        microwave: true
+        name: opd
+        number_of_beds: 1
+        private: true
+        private_bathroom: true
+        rec_name: opd
+        refrigerator: true
+        state: beds_available
+        telephone: false
+        tv: false
+        unit: 

@@ -3,7 +3,61 @@ schema:
     data:
       type: array
       properties:
-        
+        beds: 
+          type: integer
+        code: 
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        extra_info: 
+          type: string
+        heliport: 
+          type: boolean
+        id:   
+          type: integer
+        institution_type: 
+          type: string
+        main_specialty: 
+          type: integer
+        main_specialty_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        operating_room: 
+          type: boolean
+        operational_sectors: 
+          type: array
+        or_number: 
+          type: integer
+        picture: 
+          type: string
+          format: bytes
+        public_level:   
+          type: string
+        rec_name: 
+          type: string
+        specialties:
+          type: array
+        teaching: 
+          type: boolean
+        trauma_center: 
+          type: boolean
+        trauma_level: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -18,7 +72,36 @@ schema:
 
 example:
     data:
-      
+      beds: 
+      code: dfsd
+      create_date: '2024-07-16T06:12:41.603115'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      extra_info: ''
+      heliport: false
+      id: 1
+      institution_type: clinic
+      main_specialty: 
+      main_specialty_: {}
+      name: 1
+      name_:
+        id: 1
+        name: Milestone
+      operating_room: false
+      operational_sectors: []
+      or_number: 
+      picture: 
+      public_level: public
+      rec_name: Milestone
+      specialties: []
+      teaching: false
+      trauma_center: false
+      trauma_level: 
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201

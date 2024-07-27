@@ -1,7 +1,38 @@
       properties:
-        
+        category: 
+          type: string
+        description: 
+          type: string
+        documentation: 
+          type: string
+        keywords: 
+          type: string
+        name: 
+          type: string
+        package: 
+          type: integer
+        package_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
   
       required:
           - 
       example:
-        
+        category: 
+        description: Verify and check for safety in pregnancy the prescribed drug
+        documentation: "\n\n<div align=\"left\"><b><font size=\"7\" face=\"normal\">Verify
+            and check for safety in pregnancy the prescribed drug</font></b></div>\n<div><br/><br/></div>\n<div
+            align=\"left\"><font face=\"normal\">During the prescription process, GNU Health
+            checks whether the patient is in <b>childbearing</b> age.</font></div>\n<div><br/><br/></div>\n<div
+            align=\"left\"><font face=\"normal\">In the case the person is a female, it will
+            check whether they might be in childbearing age.</font></div>\n<div><br/><br/></div>\n<div
+            align=\"left\"><font face=\"normal\">If that is the case, the health professional
+            must check the field <b>\"Prescription Verified\"</b> to be able to proceed.</font></div>\n<div><br/><br/></div>\n<div
+            align=\"left\"><font face=\"normal\">For each drug, GNU Health allows to enter
+            the current pregnancy safety category / fetal risk (A,B,<font color=\"#ed333b\">C,D,X</font>,N)</font></div>\n<div><br/><br/></div>\n<div
+            align=\"left\"><font face=\"normal\">Command: <b>RX</b></font></div>\n\n            "
+        keywords: 
+        name: SM-CORE-0006
+        package: 33
+        rec_name: SM-CORE-0006

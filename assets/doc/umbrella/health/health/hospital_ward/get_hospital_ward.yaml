@@ -22,7 +22,37 @@
                     data:
                       type: array
                       properties:
-                        
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        gender: 
+                          type: string
+                        id: 
+                          type: integer
+                        institution: 
+                          type: integer
+                        institution_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          
+                        name: 
+                          type: string
+                        number_of_beds: 
+                          type: integer
+                        rec_name: 
+                          type: string
+                        state:  
+                          type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -42,7 +72,24 @@
                       nullable: true
               example:
                 data:
-                
+                  - create_date: '2024-07-27T05:49:51.222845'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    gender: men
+                    id: 1
+                    institution: 1
+                    institution_:
+                      id: 1
+                      name: Milestone
+                    name: opd
+                    number_of_beds: 1
+                    rec_name: opd
+                    state: beds_available
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
                 error: null
                 pagination:
                   page: 1
