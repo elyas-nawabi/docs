@@ -1,7 +1,23 @@
       properties:
-        
+        company:
+            type: integer
+        is_default: 
+            type: boolean
+        name: 
+            type: integer
+        notes: 
+            type: string
+        product_policy: 
+            type: array
+        rec_name: 
+            type: string
   
       required:
           - 
       example:
-        
+        company: 12
+        is_default: true
+        name: 395
+        notes: ''
+        product_policy: []
+        rec_name: abacavir (ABC)

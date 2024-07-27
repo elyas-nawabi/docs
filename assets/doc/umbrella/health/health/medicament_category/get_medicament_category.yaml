@@ -30,7 +30,16 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        parent: 
+                          type: integer
+                        parent_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
                         write_date:
                           type: string
                           format: date 
@@ -57,15 +66,23 @@
                       nullable: true
               example:
                 data:
-                  create_date: '2024-05-27T12:26:56.434108'
-                  create_uid: 0
-                  create_uid_:
-                    id: 0
-                    name: Root
-                  
-                  write_date: 
-                  write_uid: 
-                  write_uid_: {}
+                  - create_date: '2024-05-27T12:49:44.432511'
+                    create_uid: 0
+                    create_uid_:
+                      id: 0
+                      name: Root
+                    id: 117
+                    name: Adrenal hormones and synthetic substitutes
+                    parent: 116
+                    parent_:
+                      id: 116
+                      name: Medicaments / WHO essential Medicines / HORMONES, OTHER ENDOCRINE MEDICINES
+                        AND CONTRACEPTIVES
+                    rec_name: Medicaments / WHO essential Medicines / HORMONES, OTHER ENDOCRINE MEDICINES
+                      AND CONTRACEPTIVES / Adrenal hormones and synthetic substitutes
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
                 error: null
                 pagination:
                   page: 1
