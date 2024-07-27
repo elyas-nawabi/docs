@@ -1,7 +1,14 @@
       properties:
+        name: 
+            type: string
+        parent: 
+            type: integer
+        rec_name: 
+            type: string
         
-  
       required:
           - 
       example:
-        
+        name: 1A00–1H0Z Certain infectious or parasitic diseases
+        parent: 286
+        rec_name: ICD-11 / 1A00–1H0Z Certain infectious or parasitic diseases

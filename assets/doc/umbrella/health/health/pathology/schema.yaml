@@ -3,7 +3,52 @@ schema:
     data:
       type: array
       properties:
-        
+        active: 
+          type: boolean
+        category: 
+          type: integer
+        category_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        chromosome: 
+          type: string
+        code: 
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        gene: 
+          type: string
+        groups:
+          type: array
+          properties:
+            disease_group: 
+              type: integer
+            disease_group_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        info: 
+          type: string
+        name: 
+          type: string
+        protein: 
+        rec_name: 
+          type: string
+        uri: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+
     errors:
       type: object
       nullable: true
@@ -18,7 +63,35 @@ schema:
 
 example:
     data:
-      
+      active: true
+      category: 24
+      category_:
+        id: 24
+        name: ICD-10 / I Certain infectious and parasitic diseases / (A00-A09) Intestinal
+          infectious diseases
+      chromosome: 
+      code: A00
+      create_date: '2024-05-27T12:41:25.886055'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      gene: 
+      groups:
+      - disease_group: 19
+        disease_group_:
+          id: 19
+          name: NOTIFIABLE
+      id: 1
+      info: 
+      name: Cholera
+      protein: 
+      rec_name: 'A00 : Cholera'
+      uri: 
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+
     errors: null
     pagination: null
     status: 201

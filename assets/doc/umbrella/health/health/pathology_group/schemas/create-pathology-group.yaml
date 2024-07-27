@@ -1,7 +1,27 @@
       properties:
-        
+        code: 
+          type: string
+        desc: 
+          type: string
+        info: 
+          type: string
+        members:
+          type: array
+          properties:
+            name: 
+              type: integer
+        name: 
+          type: string
+        rec_name: 
+          type: string
   
       required:
           - 
       example:
-        
+        code: INFECTIOUS
+        desc: Infectious diseases
+        info: "" 
+        members:
+           name: 1
+        name: INFECTIOUS
+        rec_name: INFECTIOUS
