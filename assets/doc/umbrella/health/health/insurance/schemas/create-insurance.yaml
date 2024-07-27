@@ -1,7 +1,34 @@
       properties:
-        
-  
+        category: 
+            type: string
+        company:  
+            type: integer
+        insurance_type:   
+            type: string
+        member_exp: 
+            type: string
+        member_since: 
+            type: integer
+        name:   
+            type: integer
+        notes: 
+            type: string
+        number: 
+            type: string
+        plan_id: 
+            type: integer
+        rec_name: 
+            type: string
       required:
           - 
       example:
-        
+        category: ''
+        company: 12
+        insurance_type: private
+        member_exp: 
+        member_since: 
+        name: 13
+        notes: ''
+        number: '3322'
+        plan_id: 
+        rec_name: 'New  : 3322'

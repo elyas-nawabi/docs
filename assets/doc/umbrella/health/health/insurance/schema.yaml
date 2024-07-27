@@ -3,7 +3,51 @@ schema:
     data:
       type: array
       properties:
-        
+        category: 
+          type: string
+        company:  
+          type: integer
+        company_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        insurance_type:   
+          type: string
+        member_exp: 
+          type: string
+        member_since: 
+          type: integer
+        name:   
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        notes: 
+          type: string
+        number: 
+          type: string
+        plan_id: 
+          type: integer
+        plan_id_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+
+        rec_name: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -18,7 +62,32 @@ schema:
 
 example:
     data:
-      
+      category: ''
+      company: 12
+      company_:
+        id: 12
+        name: 'New '
+      create_date: '2024-07-02T10:35:53.872368'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      id: 1
+      insurance_type: private
+      member_exp: 
+      member_since: 
+      name: 13
+      name_:
+        id: 13
+        name: ''
+      notes: ''
+      number: '3322'
+      plan_id: 
+      plan_id_: {}
+      rec_name: 'New  : 3322'
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201
