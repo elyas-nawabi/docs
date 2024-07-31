@@ -70,4 +70,6 @@ paths:
     $ref: 'get_put_account_move_by_id.yaml'
   '/financial-accounting/account-moves/{obj_id}/post':
     $ref: 'post_account_move_by_id.yaml'
+  '/financial-accounting/account-moves/cancel-moves':
+    $ref: 'post_cancel_moves.yaml'
   

@@ -84,3 +84,15 @@ paths:
     $ref: 'pay_by_id.yaml'
   '/financial-accounting/invoices/{obj_id}/party-invoices-count':
     $ref: 'party_invoices_count_by_id.yaml'
+
+
+  '/financial-accounting/invoices/{obj_id}/preview':
+    $ref: 'post_preview_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/credit':
+    $ref: 'post_credit_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/modify-payee':
+    $ref: 'post_modify_payee_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/reschedule/preview':
+    $ref: 'post_reschedule_preview_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/reschedule':
+    $ref: 'post_reschedule_by_id.yaml'

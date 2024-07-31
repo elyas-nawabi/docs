@@ -22,7 +22,37 @@
                     data:
                       type: array
                       properties:
-                        
+                          create_date: 
+                            type: string 
+                            format: date 
+                          create_uid: 
+                            type: integer
+                          create_uid_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          healthprof: 
+                            type: integer
+                          healthprof_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          id: 
+                            type: integer
+                          patient: 
+                            type: integer
+                          patient_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          prescription_date:
+                            type: string
+                            format: date
+                          prescription_id: 
+                            type: string
+                          rec_name:
+                            type: string
+                          write_date:
+                            type: string
+                            format: date 
+                          write_uid:
+                            type: integer
+                          write_uid_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -42,7 +72,26 @@
                       nullable: true
               example:
                 data:
-                
+                  - create_date: '2024-07-30T15:10:28.207702'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    healthprof: 1
+                    healthprof_:
+                      id: 1
+                      name: Milestone
+                    id: 1
+                    patient: 17
+                    patient_:
+                      id: 17
+                      name: Milestone
+                    prescription_date: '2024-07-30T15:09:24'
+                    prescription_id: PRES 2024/000001
+                    rec_name: PRES 2024/000001
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
                 error: null
                 pagination:
                   page: 1
