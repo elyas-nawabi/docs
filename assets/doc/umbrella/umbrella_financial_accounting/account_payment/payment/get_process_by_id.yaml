@@ -19,6 +19,8 @@ get:
               schema:
                   type: object
                   properties:
+                    payment_group_id:
+                      type: integer
                     data:
                       type: object
                       nullable: true
@@ -34,7 +36,8 @@ get:
                       type: string
                       nullable: true
               example:
-                data: null     
+                data: 
+                  payment_group_id: 12 
                 error: null
                 pagination: null
                 status: 200
