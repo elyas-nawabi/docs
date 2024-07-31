@@ -3,7 +3,80 @@ schema:
     data:
       type: array
       properties:
-        
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        digest_current: 
+          type: string
+        digest_status: 
+          type: boolean
+        digital_signature: 
+          type: integer
+        digital_signature_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        document_digest: 
+          type: string
+        healthprof: 
+          type: integer
+        healthprof_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        moves: 
+          type: array
+        notes: 
+          type: string
+        patient: 
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        pharmacy: 
+          type: integer
+        pharmacy_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        pregnancy_warning: 
+          type: boolean
+        prescription_date: 
+          type: string
+          format: date
+        prescription_id: 
+          type: string
+        prescription_line: 
+          type: arrary
+        prescription_warning_ack: 
+          type: boolean
+        rec_name: 
+          type: string
+        report_prescription_date: 
+          type: string
+          format: date
+        report_prescription_time:
+          type: string
+        serializer: 
+          type: integer
+        serializer_current: 
+          type: string
+        service: 
+          type: string
+        service_updated: 
+          type: string
+        state:
+          type: string
+        user_id: 
+          type: integer
+        user_id_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -18,7 +91,51 @@ schema:
 
 example:
     data:
-      
+      create_date: '2024-07-30T15:10:28.207702'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      digest_current: 26ca16315e6e07dc4b7af3fd2e3e23b27fcc3c01efbcfd67a9435943ddd34734c577c1cdcc300a87ca11a49a8bddb043aab9e5fcb9c2290356afe4e0307a1294
+      digest_status: false
+      digital_signature: 
+      digital_signature_: {}
+      document_digest: 
+      healthprof: 1
+      healthprof_:
+        id: 1
+        name: Milestone
+      id: 1
+      moves: []
+      notes: ''
+      patient: 17
+      patient_:
+        id: 17
+        name: Milestone
+      pharmacy: 
+      pharmacy_: {}
+      pregnancy_warning: false
+      prescription_date: '2024-07-30T15:09:24'
+      prescription_id: PRES 2024/000001
+      prescription_line: []
+      prescription_warning_ack: true
+      rec_name: PRES 2024/000001
+      report_prescription_date: '2024-07-30'
+      report_prescription_time: '15:09:24'
+      serializer: 
+      serializer_current: '{"Prescription": "PRES 2024/000001", "Date": "2024-07-30 15:09:24",
+        "HP": "Milestone", "Patient": "Milestone", "Patient_ID": "None", "Prescription_line":
+        "[]", "Notes": ""}'
+      service: 
+      service_updated: 'yes'
+      state: draft
+      user_id: 1
+      user_id_:
+        id: 1
+        name: Administrator
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201
