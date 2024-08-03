@@ -71,5 +71,5 @@ paths:
   '/financial-accounting/account-moves/{obj_id}/post':
     $ref: 'post_account_move_by_id.yaml'
   '/financial-accounting/account-moves/cancel-moves':
-    $ref: 'post_cancel_moves.yaml'
+    $ref: 'post_cancel_move.yaml'
   
