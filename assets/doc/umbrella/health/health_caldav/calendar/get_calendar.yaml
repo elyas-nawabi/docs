@@ -22,7 +22,30 @@
                     data:
                       type: array
                       properties:
-                        
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        owner: 
+                          type: integer
+                        owner_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -42,7 +65,21 @@
                       nullable: true
               example:
                 data:
-                
+                  - create_date: '2024-08-03T05:59:23.229667'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    id: 1
+                    name: '2025'
+                    owner: 1
+                    owner_:
+                      id: 1
+                      name: Administrator
+                    rec_name: '2025'
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
                 error: null
                 pagination:
                   page: 1

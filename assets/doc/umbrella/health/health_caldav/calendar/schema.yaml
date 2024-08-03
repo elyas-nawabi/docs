@@ -3,7 +3,86 @@ schema:
     data:
       type: array
       properties:
-        
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        description: 
+          type: string
+        id: 
+          type: integer
+        name: 
+          type: string
+        owner: 
+          type: integer
+        owner_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        read_users:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            login: 
+              type: string
+            name: 
+              type: string
+            rec_name: 
+              type: string
+            sessions: 
+              type: integer
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name:
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        write_users:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            login: 
+              type: string
+            name: 
+              type: string
+            rec_name: 
+              type: string
+            sessions: 
+              type: integer
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -18,7 +97,54 @@ schema:
 
 example:
     data:
-      
+      create_date: '2024-08-03T05:59:23.229667'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      description: description here...
+      id: 1
+      name: '2025'
+      owner: 1
+      owner_:
+        id: 1
+        name: Administrator
+      read_users:
+      - create_date: '2024-05-27T12:27:22.287113'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        id: 6
+        login: demo_dentist
+        name: Health Dentist
+        rec_name: Health Dentist
+        sessions: 0
+        write_date: '2024-06-23T08:25:45.562519'
+        write_uid: 0
+        write_uid_:
+          id: 0
+          name: Root
+      rec_name: '2025'
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+      write_users:
+      - create_date: '2024-05-27T12:22:30.848389'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        id: 1
+        login: admin
+        name: Administrator
+        rec_name: Administrator
+        sessions: 10
+        write_date: '2024-07-14T07:59:57.867242'
+        write_uid: 1
+        write_uid_:
+          id: 1
+          name: Administrator
     errors: null
     pagination: null
     status: 201

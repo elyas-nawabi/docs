@@ -3,7 +3,269 @@ schema:
     data:
       type: array
       properties:
-        
+        alarms: 
+          type: array
+        all_day: 
+          type: boolean
+        attendees:
+          type: array
+          properties:
+            attendee: 
+              type: string
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            email: 
+              type: string
+            event: 
+              type: integer
+            event_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            rec_name: 
+              type: string
+            status: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        calendar: 
+          type: integer
+        calendar_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        categories:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            name: 
+              type: string
+            rec_name: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        classification: 
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        description:  
+          type: string
+        dtend: 
+          type: string
+          format: date
+        dtstart: 
+          type: string
+          format: date
+        exdates: 
+          type: array
+        exrules:
+          type: array
+          properties:
+            byday: 
+              type: string
+            byhour: 
+              type: string
+            byminute: 
+              type: string
+            bymonth: 
+              type: string
+            bymonthday: 
+              type: string
+            bysecond: 
+              type: string
+            bysetpos: 
+              type: string
+            byweekno: 
+              type: string
+            byyearday: 
+              type: string
+            count: 
+              type: string
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            event: 
+              type: integer
+            event_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            freq: 
+              type: string
+            id: 
+              type: integer
+            interval: 
+              type: integer
+            rec_name: 
+              type: string
+            until: 
+              type: string
+              format: date
+            until_date: 
+              type: boolean
+            wkst: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        location: 
+          type: integer
+        location_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        occurences: 
+          type: array
+        organizer: 
+          type: string
+        parent: 
+          type: integer
+        parent_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rdates:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            date: 
+              type: boolean
+            datetime: 
+              type: string
+              format: date
+            event: 
+              type: integer
+            event_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            rec_name: 
+              type: string
+              format: date
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        recurrence:
+          type: string 
+        rrules:
+          type: array
+          properties:
+            byday: 
+              type: string
+            byhour: 
+              type: string
+            byminute: 
+              type: string
+            bymonth: 
+              type: string
+            bymonthday: 
+              type: string
+            bysecond: 
+              type: string
+            bysetpos: 
+              type: string
+            byweekno: 
+              type: string
+            byyearday: 
+              type: string
+            count: 
+              type: integer
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            event: 
+              type: integer
+            event_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            freq: 
+              type: string
+            id: 
+              type: integer
+            interval: 
+              type: integer
+            rec_name: 
+              type: string
+            until: 
+              type: string
+              format: date
+            until_date: 
+              type: boolean
+            wkst: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        sequence: 
+          type: integer
+        status: 
+          type: string
+        summary: 
+          type: string
+        timezone: 
+          type: string
+        transp: 
+          type: string
+        uuid:   
+          type: string
+        vevent: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -18,7 +280,154 @@ schema:
 
 example:
     data:
-      
+      alarms: []
+      all_day: true
+      attendees:
+      - attendee: 
+        create_date: '2024-08-03T06:21:04.042928'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        email: elyas.nawabi19@gmail.com
+        event: 3
+        event_:
+          id: 3
+          name: summary desc
+        id: 3
+        rec_name: '3'
+        status: accepted
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      calendar: 1
+      calendar_:
+        id: 1
+        name: '2025'
+      categories:
+      - create_date: '2024-08-03T06:17:47.895610'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        id: 1
+        name: health
+        rec_name: health
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      classification: public
+      create_date: '2024-08-03T06:21:04.042928'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      description: description here...
+      dtend: '2024-08-08T06:19:00'
+      dtstart: '2024-08-01T06:19:00'
+      exdates: []
+      exrules:
+      - byday: ''
+        byhour: '5'
+        byminute: '4'
+        bymonth: '10'
+        bymonthday: '7'
+        bysecond: '3'
+        bysetpos: '11'
+        byweekno: '9'
+        byyearday: '8'
+        count: 
+        create_date: '2024-08-03T06:21:04.042928'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        event: 3
+        event_:
+          id: 3
+          name: summary desc
+        freq: daily
+        id: 3
+        interval: 2
+        rec_name: daily
+        until: '2024-08-01T06:21:00'
+        until_date: true
+        wkst: 
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      id: 3
+      location: 1
+      location_:
+        id: 1
+        name: kabul
+      occurences: []
+      organizer: elyas
+      parent: 
+      parent_: {}
+      rdates:
+      - create_date: '2024-08-03T06:21:04.042928'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        date: true
+        datetime: 
+          type: string
+          format: date
+        event: 3
+        event_:
+          id: 3
+          name: summary desc
+        id: 1
+        rec_name: '2024-08-03 06:22:00'
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      rec_name: summary desc
+      recurrence: 
+      rrules:
+      - byday: ''
+        byhour: '8'
+        byminute: '9'
+        bymonth: '3'
+        bymonthday: '6'
+        bysecond: '1'
+        bysetpos: '4'
+        byweekno: '2'
+        byyearday: '5'
+        count: 1
+        create_date: '2024-08-03T06:21:04.042928'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        event: 3
+        event_:
+          id: 3
+          name: summary desc
+        freq: daily
+        id: 1
+        interval: 1
+        rec_name: daily
+        until: 
+        until_date: false
+        wkst: 
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      sequence: 4
+      status: confirmed
+      summary: summary desc
+      timezone: 
+      transp: opaque
+      uuid: 48e98d74-bc36-4c7e-95cd-05b695100862
+      vevent: 
+      write_date: '2024-08-03T06:21:04.042928'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
     errors: null
     pagination: null
     status: 201
