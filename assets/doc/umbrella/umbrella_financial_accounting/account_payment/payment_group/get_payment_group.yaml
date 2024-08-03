@@ -22,6 +22,13 @@
                     data:
                       type: array
                       properties:
+                          create_date: 
+                            type: string 
+                            format: date 
+                          create_uid: 
+                            type: integer
+                          create_uid_:
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                           id: 
                             type: integer
                           journal: 
@@ -40,6 +47,13 @@
                             type: integer
                           rec_name: 
                             type: string  
+                          write_date:
+                            type: string
+                            format: date 
+                          write_uid:
+                            type: integer
+                          write_uid_:
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -59,17 +73,25 @@
                       nullable: true
               example:
                 data:
-                  - id: 1
-                    journal: 10
-                    journal_:
-                      id: 10
-                      name: payment_journal_test
-                    kind: receivable
-                    number: '1'
-                    payment_amount: 6
-                    payment_amount_succeeded: 5
-                    payment_count: 6
-                    rec_name: '1'
+                - create_date: '2024-07-07T15:13:44.475590'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  id: 2
+                  journal: 2
+                  journal_:
+                    id: 2
+                    name: Receivable Journal
+                  kind: receivable
+                  number: '2'
+                  payment_amount: 8000
+                  payment_amount_succeeded: 
+                  payment_count: 1
+                  rec_name: '2'
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
                 errors: null
                 pagination:
                   page: 1

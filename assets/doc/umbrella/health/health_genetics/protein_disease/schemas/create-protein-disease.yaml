@@ -3,9 +3,6 @@
             type: string
         active: 
             type: boolean
-        create_date: 
-            type: string
-            format: date
         description: 
             type: string
         disease_name: 
@@ -15,20 +12,13 @@
         gene_variant:
             type: array 
             properties:
-                create_date: 
-                    type: string
-                    format: date
                 gene: 12212
-                id: 11551
                 name: 
                     type: string
                 phenotype: 1
                 rec_name:   
                     type: string
                 variant: 14967
-                write_date:
-                    type: string
-                    format: date 
         inheritance_pattern:
             type: string 
         keywords: 
@@ -39,9 +29,6 @@
             type: string
         rec_name: 
             type: string
-        write_date: 
-            type: string
-            format: date
         xrefs: 
             type: string
         
@@ -59,18 +46,14 @@
         disease_name: HDS10 mitochondrial disease
         disease_uri: http://www.uniprot.org/diseases/DI-00001
         gene_variant:
-          - create_date: '2024-05-27T12:29:51.795048'
-            gene: 12212
-            id: 11551
+          - gene: 12212
             name: VARPHEN11551
             phenotype: 1
             rec_name: DI-00001:HDS10 mitochondrial disease
             variant: 14967
-            write_date: 
         inheritance_pattern: 
         keywords: Neurodegeneration
         mim_reference: MIM:300438
         name: DI-00001
         rec_name: DI-00001:HDS10 mitochondrial disease
-        write_date: 
         xrefs: MIM:300438,MedGen:C1845517,MeSH:D020739

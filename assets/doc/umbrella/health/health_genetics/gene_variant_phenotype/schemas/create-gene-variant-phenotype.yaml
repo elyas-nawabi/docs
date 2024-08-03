@@ -1,7 +1,4 @@
       properties:
-        create_date: 
-            type: string 
-            format: date 
         gene: 
             type: integer
         name: 
@@ -12,17 +9,12 @@
             type: string
         variant: 
             type: integer
-        write_date:
-            type: string
-            format: date 
         
       required:
           - 
       example:
-        create_date: '2024-05-27T12:29:51.795048'
         gene: 12188
         name: VARPHEN1
         phenotype: 41
         rec_name: DI-00042:Adrenal hyperplasia 2
         variant: 2
-        write_date: 
