@@ -1,21 +1,13 @@
 properties:
     code:
         type: string
-    create_date: 
-        type: string 
-        format: date 
     name: 
         type: string
     rec_name: 
         type: string
-    write_date:
-        type: string
-        format: date 
 required:
 
 example:
     code: e1
-    create_date: '2024-05-27T12:29:24.061908'
     name: PRODUCTS AND TECHNOLOGY
     rec_name: PRODUCTS AND TECHNOLOGY
-    write_date: 

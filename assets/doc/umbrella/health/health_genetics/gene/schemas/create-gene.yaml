@@ -3,9 +3,6 @@
             type: string
         chromosome: 
             type: string
-        create_date: 
-            type: string
-            format: date 
         ensembl_id: 
             type: string
         gene_id: 
@@ -39,9 +36,6 @@
             properties:
                 aa_change: 
                     type: string
-                create_date: 
-                    type: string
-                    format: date
                 dbsnp: 
                     type: string
                 dbsnp_url: 
@@ -61,21 +55,14 @@
                     type: string
                 variant: 
                     type: string
-                write_date: 
-                    type: string
-                    format: date 
         variants_count: 
             type: integer
-        write_date:
-            type: string
-            format: date 
         
       required:
           - 
       example:
         aliases: ''
         chromosome: '19'
-        create_date: '2024-05-27T12:27:26.974045'
         ensembl_id: ENSG00000121410
         gene_id: '1'
         gene_type: protein_coding
@@ -92,7 +79,6 @@
         refseq_accession: NM_130786
         variants:
           - aa_change: p.His52Arg
-            create_date: '2024-05-27T12:29:51.795048'
             dbsnp: rs893184
             dbsnp_url: https://www.ncbi.nlm.nih.gov/snp/rs893184
             id: 16847
@@ -104,5 +90,4 @@
             variant: VAR_018369
             write_date: 
         variants_count: 2
-        write_date: 
       

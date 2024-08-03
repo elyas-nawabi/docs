@@ -1,7 +1,4 @@
       properties:
-        create_date: 
-            type: string 
-            format: date 
         indicator:
           type: string
         measure: 
@@ -17,14 +14,10 @@
         value: 
           type: number
           format: decimal    
-        write_date:
-            type: string
-            format: date 
         
       required:
           - 
       example:
-        create_date: '2024-05-27T12:26:56.434108'
         indicator: w-f-a
         measure: p
         month: 0
@@ -32,4 +25,3 @@
         sex: f
         type: P3
         value: 2.4
-        write_date: 

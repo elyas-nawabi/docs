@@ -22,15 +22,17 @@
                     data:
                       type: array
                       properties:
+                          create_date: 
+                            type: string 
+                            format: date 
+                          create_uid: 
+                            type: integer
+                          create_uid_:
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                           company: 
                             type: integer
                           company_:
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name:
-                                type: string
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                           date:
                             type: string
                             format: date
@@ -41,12 +43,7 @@
                           journal: 
                             type: integer
                           journal_:
-                            type: object
-                            properties:
-                              id:
-                                type: integer
-                              name:
-                                type: string
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                           number:
                             type: string
                           origin:
@@ -56,11 +53,7 @@
                           period:
                             type: integer
                           period_:
-                            properties:
-                              id:
-                                type: integer
-                              name:
-                                type: string
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                           post_date: 
                             type: string
                             format: date
@@ -70,6 +63,13 @@
                             type: string
                           state:
                             type: string
+                          write_date:
+                            type: string
+                            format: date 
+                          write_uid:
+                            type: integer
+                          write_uid_:
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                     pagination:
@@ -89,28 +89,41 @@
                       nullable: true
               example:
                 data:
-                  - company: 1
-                    company_:
-                      id: 1
-                      name: Party 1
-                    date: '2026-01-27'
-                    description: some description here
-                    id: 2
-                    journal: 13
-                    journal_:
-                      id: 13
-                      name: Statement
-                    number: '1'
-                    origin: account.move,-1
-                    origin_: {}
-                    period: 79
-                    period_:
-                      id: 79
-                      name: '1'
-                    post_date: 
-                    post_number: 
-                    rec_name: '1'
-                    state: draft 
+                - company: 1
+                  company_:
+                    id: 1
+                    name: Milestone
+                  create_date: '2024-08-03T07:11:30.385785'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  date: '2024-08-03'
+                  description: ''
+                  id: 49
+                  journal: 3
+                  journal_:
+                    id: 3
+                    name: Cash
+                  number: '48'
+                  origin: account.invoice,19
+                  origin_:
+                    entity: account.invoice
+                    id: 19
+                    name: '5'
+                  period: 20
+                  period_:
+                    id: 20
+                    name: 2024-08
+                  post_date: '2024-08-03'
+                  post_number: '25'
+                  rec_name: '48'
+                  state: posted
+                  write_date: '2024-08-03T07:11:30.385785'
+                  write_uid: 1
+                  write_uid_:
+                    id: 1
+                    name: Administrator
                 errors: null
                 pagination:
                   page: 1

@@ -1,21 +1,17 @@
       properties:
+        category:
+            type: integer
         code:
             type: string
-        create_date: 
-            type: string 
-            format: date 
-        create_uid: 
-            type: integer
-        
+        name:
+            type: string
         rec_name: 
             type: string
-        write_date:
-            type: string
-            format: date 
-        write_uid:
-            type: integer
         
       required:
           - 
       example:
-        
+        category: 1
+        code: d110
+        name: Consciousness
+        rec_name: Consciousness
