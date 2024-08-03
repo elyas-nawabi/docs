@@ -10,8 +10,29 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
-        
+        discount: 
+          typ: integer
+        id: 
+          typ: integer
+        plan: 
+          typ: integer
+        plan_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        price: 
+          type: integer
+        product: 
+          type: integer
+        product_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        product_category: 
+          typ: integer
+        product_category_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        rec_name: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -33,7 +54,30 @@ schema:
 
 example:
     data:
-      
+      create_date: '2024-08-03T08:03:02.360202'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      discount: 1
+      id: 1
+      plan: 2
+      plan_:
+        id: 2
+        name: abacavir (ABC)
+      price: 111
+      product: 395
+      product_:
+        id: 395
+        name: "[03] abacavir (ABC)"
+      product_category: 3
+      product_category_:
+        id: 3
+        name: Imaging Services
+      rec_name: '1'
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201

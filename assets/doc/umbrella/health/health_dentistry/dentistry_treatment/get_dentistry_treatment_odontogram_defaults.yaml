@@ -17,7 +17,42 @@
           content:
             application/json:
               schema:
-                $ref: 'schema.yaml'
+                type: object
+                properties:
+                  defaults:
+                    type: object
+                    properties:
+                      d11: 
+                        type: boolean
+                      i11: 
+                        type: boolean
+                      include_primary: 
+                        type: boolean
+                      l31: 
+                        type: boolean
+                      m11: 
+                        type: boolean
+                      o14: 
+                        type: boolean
+                      p11: 
+                        type: boolean
+                      t11: 
+                        type: string
+                      v11: 
+                        type: boolean
+              example:
+                defaults:
+                  d11: false
+                  i11: false
+                  include_primary: false
+                  l31: false
+                  m11: false
+                  o14: false
+                  p11: false
+                  t11: ''
+                  v11: false
+                  
+
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

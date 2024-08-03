@@ -10,7 +10,61 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        healthprof: 
+          type: integer
+        healthprof_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        notes: 
+          type: string
+        patient:
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        procedures:
+          type: array
+          properties:
+            distal: 
+              type: boolean
+            id: 
+              type: integer
+            lingual: 
+              type: boolean
+            mesial: 
+              type: boolean
+            occlusal: 
+              type: boolean
+            procedure: 
+              type: integer
+            procedure_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            root: 
+              type: boolean
+            tooth: 
+              type: string
+            treatment:  
+              type: integer 
+            treatment_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            vestibular: 
+              type: boolean
+          
+        procedures_info: 
+          type: string
+        rec_name: 
+          type: string
+        signed_by: 
+          type: integer
+        signed_by_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        state: 
+          type: string
+        treatment_date: 
+          type: string
+          format: date 
         write_date:
           type: string
           format: date 
@@ -32,15 +86,58 @@ schema:
 
 example:
     data:
-      create_date: '2024-05-27T12:50:05.039883'
-      create_uid: 0
+      create_date: '2024-08-03T07:25:04.254445'
+      create_uid: 1
       create_uid_:
-        id: 0
-        name: Root
-      
-      write_date: 
-      write_uid: 
-      write_uid_: {}
+        id: 1
+        name: Administrator
+      healthprof: 1
+      healthprof_:
+        id: 1
+        name: Milestone
+      id: 1
+      notes: information here...
+      patient: 17
+      patient_:
+        id: 17
+        name: Milestone
+      procedures:
+      - create_date: '2024-08-03T07:25:04.254445'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        distal: true
+        id: 1
+        lingual: true
+        mesial: true
+        occlusal: true
+        procedure: 2
+        procedure_:
+          id: 2
+          name: Braces
+        rec_name: '1'
+        root: true
+        tooth: '13'
+        treatment: 1
+        treatment_:
+          id: 1
+          name: '1'
+        vestibular: true
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      procedures_info: BRAC (13)
+      rec_name: '1'
+      signed_by: 
+      signed_by_: {}
+      state: pending
+      treatment_date: '2024-08-03'
+      write_date: '2024-08-03T07:25:25.156415'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
     errors: null
     pagination: null
     status: 201

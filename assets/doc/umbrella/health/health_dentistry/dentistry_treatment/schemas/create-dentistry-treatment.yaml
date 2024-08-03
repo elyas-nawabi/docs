@@ -1,17 +1,65 @@
       properties:
-        
-        create_date: 
-          type: string 
+        healthprof: 
+          type: integer
+        notes: 
+          type: string
+        patient:
+          type: integer
+        procedures:
+          type: array
+          properties:
+            distal: 
+              type: boolean
+            lingual: 
+              type: boolean
+            mesial: 
+              type: boolean
+            occlusal: 
+              type: boolean
+            procedure: 
+              type: integer
+            rec_name: 
+              type: string
+            root: 
+              type: boolean
+            tooth: 
+              type: string
+            treatment:  
+              type: integer 
+            vestibular: 
+              type: boolean
+          
+        procedures_info: 
+          type: string
+        rec_name: 
+          type: string
+        signed_by: 
+          type: integer
+        state: 
+          type: string
+        treatment_date: 
+          type: string
           format: date 
-        
-        write_date:
-            type: string
-            format: date 
         
       required:
           - 
       example:
-        
-        create_date: '2024-05-27T12:50:05.039883'
-        
-        write_date: 
+        healthprof: 1
+        notes: information here...
+        patient: 17
+        procedures:
+        - distal: true
+          lingual: true
+          mesial: true
+          occlusal: true
+          procedure: 2
+          rec_name: '1'
+          root: true
+          tooth: '13'
+          treatment: 1
+          vestibular: true
+        procedures_info: BRAC (13)
+        rec_name: '1'
+        signed_by: 
+        state: pending
+        treatment_date: '2024-08-03'
