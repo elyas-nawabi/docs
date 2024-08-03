@@ -1,15 +1,23 @@
       properties:
-        create_date: 
-            type: string 
-            format: date 
-       
-        write_date:
-            type: string
-            format: date 
+        discount: 
+          typ: integer
+        plan: 
+          typ: integer
+        price: 
+          type: integer
+        product: 
+          type: integer
+        product_category: 
+          typ: integer
+        rec_name: 
+          type: string
         
       required:
           - 
       example:
-        create_date: '2024-05-27T12:26:56.434108'
-        
-        write_date: 
+        discount: 1
+        plan: 2
+        price: 111
+        product: 395
+        product_category: 3
+        rec_name: '1'

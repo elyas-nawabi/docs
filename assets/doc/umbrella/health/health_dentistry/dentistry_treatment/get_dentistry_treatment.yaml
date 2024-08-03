@@ -30,6 +30,27 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        healthprof: 
+                          type: integer
+                        healthprof_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          
+                        id: 
+                          type: integer
+                        patient: 
+                          type: integer
+                        patient_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          
+                        procedures_info: 
+                          type: string
+                        rec_name: 
+                          type: string
+                        state: 
+                          type: string
+                        treatment_date: 
+                          type: string
+                          format: date
                         
                         write_date:
                           type: string
@@ -57,15 +78,29 @@
                       nullable: true
               example:
                 data:
-                    create_date: '2024-05-27T12:50:05.039883'
-                    create_uid: 0
-                    create_uid_:
-                      id: 0
-                      name: Root
-                    
-                    write_date: 
-                    write_uid: 
-                    write_uid_: {}
+                - create_date: '2024-08-03T07:25:04.254445'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  healthprof: 1
+                  healthprof_:
+                    id: 1
+                    name: Milestone
+                  id: 1
+                  patient: 17
+                  patient_:
+                    id: 17
+                    name: Milestone
+                  procedures_info: BRAC (13)
+                  rec_name: '1'
+                  state: pending
+                  treatment_date: '2024-08-03'
+                  write_date: '2024-08-03T07:25:25.156415'
+                  write_uid: 1
+                  write_uid_:
+                    id: 1
+                    name: Administrator
                 error: null
                 pagination:
                   page: 1

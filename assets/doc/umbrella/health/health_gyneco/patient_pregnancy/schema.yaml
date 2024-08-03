@@ -10,7 +10,81 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        abortions: 
+          type: integer
+        bba: 
+          type: boolean
+        blood_type: 
+          type: string
+        computed_age: 
+          type: string
+        current_pregnancy: 
+          type: boolean
+        fetuses: 
+          type: integer
+        gravida: 
+          type: integer
+        gravidae: 
+          type: integer
+        hb: 
+          type: string
+        healthprof: 
+          type: integer
+        healthprof_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        home_birth: 
+          type: boolean
+        id: 
+          type: integer
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        iugr: 
+          type: string
+        lmp: 
+          type: string
+          format: date
+        monozygotic: true
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+         
+        pdd: 
+          type: string
+          format: date
+        perinatal: 
+          type: array
+        pregnancy_end_age: 
+          type: integer
+        pregnancy_end_date: 
+          type: string
+          format: date
+        pregnancy_end_result: 
+          type: string
+          format: date
+        premature: 
+          type: integer
+        prenatal_evaluations: 
+          type: array
+        puerperium_monitor: 
+          type: array
+        rec_name:
+          type: string
+        reverse: 
+          type: boolean
+        reverse_weeks: 
+        rh: 
+          type: string
+        stillbirths: 
+          type: integer
+        warning: 
+          type: boolean
+        warning_icon: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -32,12 +106,52 @@ schema:
 
 example:
     data:
-      create_date: '2024-05-27T12:50:05.039883'
-      create_uid: 0
+      abortions: 0
+      bba: false
+      blood_type: 
+      computed_age: '19'
+      create_date: '2024-08-03T07:54:51.681486'
+      create_uid: 1
       create_uid_:
-        id: 0
-        name: Root
-      
+        id: 1
+        name: Administrator
+      current_pregnancy: true
+      fetuses: 1
+      gravida: 1
+      gravidae: 1
+      hb: 
+      healthprof: 1
+      healthprof_:
+        id: 1
+        name: Milestone
+      home_birth: false
+      id: 1
+      institution: 1
+      institution_:
+        id: 1
+        name: Milestone
+      iugr: symmetric
+      lmp: '2024-08-03'
+      monozygotic: true
+      name: 26
+      name_:
+        id: 26
+        name: Khan
+      pdd: '2025-05-10'
+      perinatal: []
+      pregnancy_end_age: 0
+      pregnancy_end_date: 
+      pregnancy_end_result: 
+      premature: 0
+      prenatal_evaluations: []
+      puerperium_monitor: []
+      rec_name: '1'
+      reverse: false
+      reverse_weeks: 
+      rh: 
+      stillbirths: 0
+      warning: false
+      warning_icon: 
       write_date: 
       write_uid: 
       write_uid_: {}

@@ -10,7 +10,43 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        comments: 
+          type: string
+        contact: 
+          type: integer
+        contact_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        contact_date: 
+          type: string 
+          format: date 
+        context: 
+          type: string
+        du: 
+          type: integer
+        du_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        exposure_risk: 
+          type: string
+        exposure_time: 
+          type: integer
+        id: 
+          type: integer
+        operational_sector: 
+          type: integer
+        operational_sector_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        pathology: 
+          type: integer
+        pathology_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        patient: 
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        status: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -32,15 +68,43 @@ schema:
 
 example:
     data:
-      create_date: '2024-05-27T12:50:05.039883'
-      create_uid: 0
-      create_uid_:
-        id: 0
-        name: Root
-      
-      write_date: 
-      write_uid: 
-      write_uid_: {}
+        comments: extra info ...
+        contact: 1
+        contact_:
+          id: 1
+          name: Milestone
+        contact_date: '2024-08-03T07:16:00'
+        context: context name
+        create_date: '2024-08-03T07:14:56.062096'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        du: 1
+        du_:
+          id: 1
+          name: '111'
+        exposure_risk: high
+        exposure_time: 1
+        id: 1
+        operational_sector: 1
+        operational_sector_:
+          id: 1
+          name: op_sec_1
+        pathology: 1
+        pathology_:
+          id: 1
+          name: 'A00 : Cholera'
+        patient: 17
+        patient_:
+          id: 17
+          name: Milestone
+        rec_name: '1'
+        status: followingup
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+
     errors: null
     pagination: null
     status: 201

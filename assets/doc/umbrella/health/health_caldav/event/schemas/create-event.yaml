@@ -1,7 +1,233 @@
       properties:
-        
+        alarms: 
+          type: array
+        all_day: 
+          type: boolean
+        attendees:
+          type: array
+          properties:
+            attendee: 
+              type: string
+            email: 
+              type: string
+            event: 
+              type: integer
+            rec_name: 
+              type: string
+            status: 
+              type: string
+        calendar: 
+          type: integer
+        categories:
+          type: array
+          properties:
+            name: 
+              type: string
+            rec_name: 
+              type: string
+        classification: 
+          type: string
+        description:  
+          type: string
+        dtend: 
+          type: string
+          format: date
+        dtstart: 
+          type: string
+          format: date
+        exdates: 
+          type: array
+        exrules:
+          type: array
+          properties:
+            byday: 
+              type: string
+            byhour: 
+              type: string
+            byminute: 
+              type: string
+            bymonth: 
+              type: string
+            bymonthday: 
+              type: string
+            bysecond: 
+              type: string
+            bysetpos: 
+              type: string
+            byweekno: 
+              type: string
+            byyearday: 
+              type: string
+            count: 
+              type: string
+            event: 
+              type: integer
+            freq: 
+              type: string
+            interval: 
+              type: integer
+            rec_name: 
+              type: string
+            until: 
+              type: string
+              format: date
+            until_date: 
+              type: boolean
+            wkst: 
+              type: string
+        location: 
+          type: integer
+        occurences: 
+          type: array
+        organizer: 
+          type: string
+        parent: 
+          type: integer
+        rdates:
+          type: array
+          properties:
+            date: 
+              type: boolean
+            datetime: 
+              type: string
+              format: date
+            event: 
+              type: integer
+            rec_name: 
+              type: string
+              format: date
+        rec_name: 
+          type: string
+        recurrence:
+          type: string 
+        rrules:
+          type: array
+          properties:
+            byday: 
+              type: string
+            byhour: 
+              type: string
+            byminute: 
+              type: string
+            bymonth: 
+              type: string
+            bymonthday: 
+              type: string
+            bysecond: 
+              type: string
+            bysetpos: 
+              type: string
+            byweekno: 
+              type: string
+            byyearday: 
+              type: string
+            count: 
+              type: integer
+            event: 
+              type: integer
+            freq: 
+              type: string
+            interval: 
+              type: integer
+            rec_name: 
+              type: string
+            until: 
+              type: string
+              format: date
+            until_date: 
+              type: boolean
+            wkst: 
+              type: string
+        sequence: 
+          type: integer
+        status: 
+          type: string
+        summary: 
+          type: string
+        timezone: 
+          type: string
+        transp: 
+          type: string
+        uuid:   
+          type: string
+        vevent: 
+          type: string
   
       required:
           - 
       example:
-        
+        alarms: []
+        all_day: true
+        attendees:
+          - attendee: 
+            name: Administrator
+            email: elyas.nawabi19@gmail.com
+            event: 3
+            rec_name: '3'
+            status: accepted
+        calendar: 1
+        categories:
+          - name: health
+            rec_name: health
+        classification: public
+        description: description here...
+        dtend: '2024-08-08T06:19:00'
+        dtstart: '2024-08-01T06:19:00'
+        exdates: []
+        exrules:
+          - byday: ''
+            byhour: '5'
+            byminute: '4'
+            bymonth: '10'
+            bymonthday: '7'
+            bysecond: '3'
+            bysetpos: '11'
+            byweekno: '9'
+            byyearday: '8'
+            count: 
+            event: 3
+            freq: daily
+            interval: 2
+            rec_name: daily
+            until: '2024-08-01T06:21:00'
+            until_date: true
+            wkst: 
+            
+        location: 1
+        occurences: []
+        organizer: elyas
+        parent: 
+        rdates:
+          - date: true
+            datetime: 
+            type: string
+            format: date
+            event: 3
+            rec_name: '2024-08-03 06:22:00'
+        rec_name: summary desc
+        recurrence: 
+        rrules:
+          - byday: ''
+            byhour: '8'
+            byminute: '9'
+            bymonth: '3'
+            bymonthday: '6'
+            bysecond: '1'
+            bysetpos: '4'
+            byweekno: '2'
+            byyearday: '5'
+            count: 1
+            event: 3
+            freq: daily
+            interval: 1
+            rec_name: daily
+            until: 
+            until_date: false
+            wkst: 
+        sequence: 4
+        status: confirmed
+        summary: summary desc
+        timezone: 
+        transp: opaque
+        uuid: 48e98d74-bc36-4c7e-95cd-05b695100862
+        vevent: 
