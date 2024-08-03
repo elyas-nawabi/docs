@@ -1,17 +1,33 @@
       properties:
-        
-        create_date: 
+        admitted: 
+          type: boolean
+        discharged_from_icu: 
+          type: boolean
+        icu_admission_date: 
           type: string 
           format: date 
-        
-        write_date:
-            type: string
-            format: date 
+        icu_discharge_date: 
+          type: string 
+          format: date 
+        icu_stay: 
+          type: string
+        mv_history: 
+          type: array
+        id: 
+          type: integer
+        name: 
+          type: integer
+        rec_name: 
+          type: string
         
       required:
           - 
       example:
-        
-        create_date: '2024-05-27T12:50:05.039883'
-        
-        write_date: 
+        admitted: true
+        discharged_from_icu: true
+        icu_admission_date: '2024-07-30T04:14:00'
+        icu_discharge_date: '2024-08-06T04:15:00'
+        icu_stay: 7 days, 0:00:00
+        mv_history: []
+        name: 3
+        rec_name: '3'
