@@ -1,22 +1,14 @@
       properties:
-        create_date: 
-            type: string 
-            format: date 
         enabled: 
             type: boolean
         host: 
             type: string
         rec_name: 
             type: string
-        write_date:
-            type: string
-            format: date 
         
       required:
           - 
       example:
-        create_date: '2024-06-22T11:59:32.553227'
         enabled: true
         host: localhost
         rec_name: 
-        write_date: 

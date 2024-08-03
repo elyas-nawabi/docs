@@ -1,7 +1,4 @@
       properties:
-        create_date: 
-            type: string 
-            format: date 
         enabled: true
         fields: "\nname:people:name,\nlastname:people:lastname,\ndob:people:dob,\ngender:people:gender,\nfederation_account:people:id\n
             \           "
@@ -9,17 +6,12 @@
             type: string 
         rec_name: 
             type: string 
-        write_date:
-            type: string
-            format: date 
         
       required:
           - 
       example:
-        create_date: '2024-05-27T12:27:25.832965'
         enabled: true
         fields: "\nname:people:name,\nlastname:people:lastname,\ndob:people:dob,\ngender:people:gender,\nfederation_account:people:id\n
             \           "
         model: party.party
         rec_name: '1'
-        write_date: 
