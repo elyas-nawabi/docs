@@ -3,24 +3,16 @@
             type: integer
         code: 
             type: string
-        create_date: 
-            type: string 
-            format: date 
         name: 
             type: string
         rec_name: 
             type: string
-        write_date:
-            type: string
-            format: date 
         
       required:
           - 
       example:
         category: 1
         code: d110
-        create_date: '2024-05-27T12:29:24.061908'
         create_uid: 0
         name: Watching
         rec_name: Watching
-        write_date: 
