@@ -10,7 +10,40 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        comments:
+          type: string
+        current_location: 
+          type: integer
+        current_location_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        hc_status: 
+          type: string
+        id:   
+          type: integer
+        identification_code: 
+          type: string
+        legacy: 
+          type: string
+        location:
+          type: integer
+        location_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        patient: 
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        request_date: 
+          type: string
+          format: date
+        requested_by: 
+          type: integer
+        requested_by_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        return_date: 
+          type: string
+          format: date
         write_date:
           type: string
           format: date 
@@ -32,12 +65,33 @@ schema:
 
 example:
     data:
-      create_date: '2024-05-27T12:50:05.039883'
-      create_uid: 0
+      comments: comments here...
+      create_date: '2024-08-03T05:45:19.603741'
+      create_uid: 1
       create_uid_:
-        id: 0
-        name: Root
-      
+        id: 1
+        name: Administrator
+      current_location: 
+      current_location_: {}
+      hc_status: archived
+      id: 1
+      identification_code: 
+      legacy: '001'
+      location: 1
+      location_:
+        id: 1
+        name: emergency
+      patient: 17
+      patient_:
+        id: 17
+        name: Milestone
+      rec_name: '1'
+      request_date: '2024-08-02T05:47:00'
+      requested_by: 40
+      requested_by_:
+        id: 40
+        name: ayesha
+      return_date: '2024-08-03T05:48:00'
       write_date: 
       write_uid: 
       write_uid_: {}
