@@ -1,16 +1,16 @@
 post:
       tags:
-        - period
-      summary: Create a period.
-      description: Create a period.
-      operationId: postPeriodById
+        - shipment internal
+      summary: Create a shipment internal.
+      description: Create a shipment internal.
+      operationId: postShipmentInternalById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-period.yaml'
+              $ref: 'schemas/create-shipment-internal.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - period
-      summary: Delete periods.
-      description: Delete periods.
-      operationId: deletePeriodById
+        - shipment internal
+      summary: Delete shipment internals.
+      description: Delete shipment internals.
+      operationId: deleteShipmentInternalById
       requestBody:
         required: true
         content:
