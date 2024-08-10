@@ -17,7 +17,25 @@
           content:
             application/json:
               schema:
-                $ref: 'schema.yaml'
+                data:
+                  type: object
+                  nullable: true
+                errors:
+                  type: object
+                  nullable: true
+                pagination:
+                  type: object
+                  nullable: true
+                status:
+                  type: integer
+                success_message:
+                  type: string
+                  nullable: true
+              example:
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
