@@ -1,9 +1,9 @@
     get:
       tags:
-        - shipment in return
-      summary: Done shipment in return.
-      description: Done shipment in return.
-      operationId: doneShipmentInReturnById
+        - shipment internal
+      summary: Assign shipment internal.
+      description: Assign shipment internal.
+      operationId: assignShipmentInternalById
       parameters:
         - name: obj_id
           in: path
@@ -17,26 +17,17 @@
           content:
             application/json:
               schema:
-                data:
+                defaults:
                   type: object
-                  nullable: true
-                errors:
-                  type: object
-                  nullable: true
-                pagination:
-                  type: object
-                  nullable: true
-                status:
+                  moves:
+                    type: array
+                session_id:
                   type: integer
-                success_message:
-                  type: string
-                  nullable: true
               example:
-                errors: null
-                pagination: null
-                status: 201
-                success_message: null
-
+                defaults:
+                  moves:
+                  - 2
+                session_id: 21
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

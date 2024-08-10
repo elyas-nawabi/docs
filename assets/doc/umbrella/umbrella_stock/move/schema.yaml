@@ -1,0 +1,139 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        address: 
+          type: integer
+        address_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        allow_pickup: 
+          type: boolean
+        code: 
+          type: string
+        cost_value: 
+          type: number
+          format: decimal
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        flat_childs: 
+          type: boolean
+        forecast_quantity: 
+          type: number
+          format: decimal
+        id: 
+          type: integer
+        input_location: 
+          type: integer
+        input_location_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        left: 
+          type: integer
+        lost_found_location: 
+          type: integer
+        lost_found_location_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+          type: string 
+        output_location: 
+          type: integer
+        output_location_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        parent: 
+          type: integer
+        parent_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        picking_location: 
+          type: integer
+        picking_location_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        quantity: 
+          type: number
+          format: decimal
+        quantity_uom: 
+          type: number
+          format: decimal
+        quantity_uom_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        right: 
+          type: integer
+        storage_location: 
+          type: integer
+        storage_location_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        type: 
+          type: string
+        warehouse: 
+          type: integer
+        waste_locations: 
+          type: array
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      address: 
+      address_: {}
+      allow_pickup: false
+      code: CUS
+      cost_value: 
+      create_date: '2024-05-27T12:48:57.022835'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      flat_childs: false
+      forecast_quantity: 
+      id: 7
+      input_location: 
+      input_location_: {}
+      left: 33
+      lost_found_location: 
+      lost_found_location_: {}
+      name: Customer
+      output_location: 
+      output_location_: {}
+      parent: 
+      parent_: {}
+      picking_location: 
+      picking_location_: {}
+      quantity: 
+      quantity_uom: 
+      quantity_uom_: {}
+      rec_name: Customer
+      right: 34
+      storage_location: 
+      storage_location_: {}
+      type: customer
+      warehouse: 
+      waste_locations: []
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

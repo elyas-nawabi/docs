@@ -1,9 +1,9 @@
     get:
       tags:
-        - shipment in return
-      summary: Done shipment in return.
-      description: Done shipment in return.
-      operationId: doneShipmentInReturnById
+        - shipment internal
+      summary: Wait shipment internal.
+      description: Wait shipment internal.
+      operationId: waitShipmentInternalById
       parameters:
         - name: obj_id
           in: path
@@ -36,7 +36,6 @@
                 pagination: null
                 status: 201
                 success_message: null
-
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

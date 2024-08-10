@@ -1,16 +1,16 @@
 post:
       tags:
-        - shipment internal
-      summary: Create a shipment internal.
-      description: Create a shipment internal.
-      operationId: postShipmentInternalById
+        - location
+      summary: Create a location.
+      description: Create a location.
+      operationId: postLocationById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-shipment-internal.yaml'
+              $ref: 'schemas/create-location.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - shipment internal
-      summary: Delete shipment internals.
-      description: Delete shipment internals.
-      operationId: deleteShipmentInternalById
+        - location
+      summary: Delete locations.
+      description: Delete locations.
+      operationId: deleteLocationById
       requestBody:
         required: true
         content:

@@ -59,17 +59,19 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: period
-    description: period - period data management.
+  - name: shipment out return
+    description: shipment out return - shipment out return data management.
 paths:
-  '/stock/periods/search':
-    $ref: 'get_period.yaml'
-  '/stock/periods':
-    $ref: 'post_delete_period.yaml'
-  '/stock/periods/{obj_id}':
-    $ref: 'get_put_period_by_id.yaml'
-  '/stock/periods/{obj_id}/draft':
+  '/stock/customer-returns/search':
+    $ref: 'get_shipment_out.yaml'
+  '/stock/customer-returns':
+    $ref: 'post_delete_shipment_out.yaml'
+  '/stock/customer-returns/{obj_id}':
+    $ref: 'get_put_shipment_out_by_id.yaml'
+  '/stock/customer-returns/{obj_id}/draft':
     $ref: 'get_draft.yaml'
-  '/stock/periods/{obj_id}/close':
-    $ref: 'get_close.yaml'
+  '/stock/customer-returns/{obj_id}/cancel':
+    $ref: 'get_cancel.yaml'
+  '/stock/customer-returns/{obj_id}/recieve':
+    $ref: 'get_recieve.yaml'
   

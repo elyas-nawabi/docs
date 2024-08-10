@@ -1,0 +1,86 @@
+      properties:
+        address: 
+          type: integer
+        allow_pickup: 
+          type: boolean
+        code: 
+          type: string
+        cost_value: 
+          type: number
+          format: decimal
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        flat_childs: 
+          type: boolean
+        forecast_quantity: 
+          type: number
+          format: decimal
+        input_location: 
+          type: integer
+        left: 
+          type: integer
+        lost_found_location: 
+          type: integer
+        name: 
+          type: string 
+        output_location: 
+          type: integer
+        parent: 
+          type: integer
+        picking_location: 
+          type: integer
+        quantity: 
+          type: number
+          format: decimal
+        quantity_uom: 
+          type: number
+          format: decimal
+        rec_name: 
+          type: string
+        right: 
+          type: integer
+        storage_location: 
+          type: integer
+        type: 
+          type: string
+        warehouse: 
+          type: integer
+        waste_locations: 
+          type: array
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+  
+      required:
+          - 
+      example:
+        address: 
+        allow_pickup: false
+        code: CUS
+        cost_value: 
+        create_date: '2024-05-27T12:48:57.022835'
+        create_uid: 0
+        flat_childs: false
+        forecast_quantity: 
+        input_location: 
+        left: 33
+        lost_found_location: 
+        name: Customer
+        output_location: 
+        parent: 
+        picking_location: 
+        quantity: 
+        quantity_uom: 
+        rec_name: Customer
+        right: 34
+        storage_location: 
+        type: customer
+        warehouse: 
+        waste_locations: []
+        write_date: 
+        write_uid: 

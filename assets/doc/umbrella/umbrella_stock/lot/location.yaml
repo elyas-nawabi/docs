@@ -59,29 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: shipment internal
-    description: shipment internal - shipment internal data management.
+  - name: location
+    description: location - location data management.
 paths:
-  '/stock/internal-shipments/search':
-    $ref: 'get_shipment_internal.yaml'
-  '/stock/internal-shipments':
-    $ref: 'post_delete_shipment_internal.yaml'
-  '/stock/internal-shipments/{obj_id}':
-    $ref: 'get_put_shipment_internal_by_id.yaml'
-  '/stock/internal-shipments/{obj_id}/cancel':
-    $ref: 'get_shipment_internal_cancel.yaml'
-  '/stock/internal-shipments/{obj_id}/draft':
-    $ref: 'get_shipment_internal_draft.yaml'
-  '/stock/internal-shipments/{obj_id}/wait':
-    $ref: 'get_shipment_internal_wait.yaml'
-  '/stock/internal-shipments/{obj_id}/assign':
-    $ref: 'get_shipment_internal_assign.yaml'
-  '/stock/internal-shipments/{obj_id}/assign/cancel':
-    $ref: 'get_shipment_internal_assign_cancel.yaml'
-  '/stock/internal-shipments/{obj_id}/assign/ignore':
-    $ref: 'get_shipment_internal_ignore.yaml'
-  '/stock/internal-shipments/{obj_id}/assign/force':
-    $ref: 'get_shipment_internal_force.yaml'
-  '/stock/internal-shipments/{obj_id}/done':
-    $ref: 'get_shipment_internal_done.yaml'
+  '/stock/locations/search':
+    $ref: 'get_location.yaml'
+  '/stock/locations':
+    $ref: 'post_delete_location.yaml'
+  '/stock/locations/{obj_id}':
+    $ref: 'get_put_location_by_id.yaml'
   

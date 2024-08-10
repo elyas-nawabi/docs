@@ -10,7 +10,166 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        assigned_by: 
+          type: integer
+        assigned_by_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        delay: 
+          type: string
+          format: duration
+        done_by: 
+          type: integer
+        done_by_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        effective_date: 
+          type: string
+          format: date
+        effective_start_date: 
+          type: string
+          format: date
+        from_location: 
+          type: integer
+        from_location_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        moves:
+          type: array
+          properties:
+            assignation_required: 
+              type: boolean
+            company: 
+              type: integer
+            company_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType' 
+            cost_price: 
+              type: number
+              format: decimal
+            cost_price_required: 
+              type: boolean
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            currency: 
+              type: integer
+            currency_: 
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            delay: 
+              type: string
+              format: duration
+            effective_date: 
+              type: string
+              format: date
+            from_location: 
+              type: integer
+            from_location_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            internal_quantity: 
+              type: integer
+            lot: 
+              type: integer
+            lot_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            origin: 
+              type: string
+            origin_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            origin_planned_date: 
+              type: string
+              format: date
+            planned_date: 
+              type: string
+              format: date
+            product: 
+              type: integer
+            product_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            product_cost_price: 
+              type: number
+              format: decimal
+            product_uom_category: 
+              type: integer
+            product_uom_category_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            quantity: 
+              type: integer
+            rec_name: 
+              type: string
+            shipment: 
+              type: string
+            state: 
+              type: string
+            to_location: 
+              type: integer
+            to_location_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            unit: 
+              type: integer
+            unit_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            unit_price: 
+              type: number
+              format: decimal
+            unit_price_company: 
+              type: number
+              format: decimal
+            unit_price_required: 
+              type: boolean
+            unit_price_updated: 
+              type: boolean
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            
+        number: 
+          type: string
+        origin_planned_date: 
+          type: string
+          format: date
+        partially_assigned: 
+          type: boolean
+        planned_date: 
+          type: string
+          format: date
+        planned_start_date: 
+          type: string
+          format: date
+        rec_name: 
+          type: string
+        reference: 
+          type: string
+        shipped_by: 
+          type: integer
+        shipped_by_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        state: 
+          type: string
+        to_location: 
+          type: integer
+        to_location_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        transit_location: 
+          type: integer
+        transit_location_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        warehouse: 
+          type: integer
+        warehouse_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
         write_date:
           type: string
           format: date 
@@ -32,15 +191,111 @@ schema:
 
 example:
     data:
-      - create_date: '2024-05-27T12:48:57.022835'
-        create_uid: 0
+      assigned_by: 
+      assigned_by_: {}
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      create_date: '2024-08-10T06:59:59.881107'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      delay: -172800
+      done_by: 
+      done_by_: {}
+      effective_date: '2024-08-06'
+      effective_start_date: '2024-08-06'
+      from_location: 1
+      from_location_:
+        id: 1
+        name: Input Zone
+      id: 1
+      moves:
+      - assignation_required: true
+        company: 1
+        company_:
+          id: 1
+          name: Milestone
+        cost_price: 
+        cost_price_required: true
+        create_date: '2024-08-10T06:59:59.881107'
+        create_uid: 1
         create_uid_:
-          id: 0
-          name: Root
-        
-        write_date: 
-        write_uid: 
-        write_uid_: {}
+          id: 1
+          name: Administrator
+        currency: 
+        currency_: {}
+        delay: '0:00:00'
+        effective_date: 
+        from_location: 1
+        from_location_:
+          id: 1
+          name: Input Zone
+        id: 3
+        internal_quantity: 3
+        lot: 
+        lot_: {}
+        origin: stock.move,-1
+        origin_: {}
+        origin_planned_date: 
+        planned_date: '2024-08-08'
+        product: 147
+        product_:
+          id: 147
+          name: abacavir (ABC)
+        product_cost_price: 
+        product_uom_category: 1
+        product_uom_category_:
+          id: 1
+          name: Units
+        quantity: 3
+        rec_name: 3 u abacavir (ABC)
+        shipment: stock.shipment.internal,1
+        state: draft
+        to_location: 4
+        to_location_:
+          id: 4
+          name: Lost and Found
+        unit: 1
+        unit_:
+          id: 1
+          name: Unit
+        unit_price: 
+        unit_price_company: 
+        unit_price_required: false
+        unit_price_updated: true
+        write_date: '2024-08-10T08:20:51.399264'
+        write_uid: 1
+        write_uid_:
+          id: 1
+          name: Administrator
+      number: '1'
+      origin_planned_date: 
+      partially_assigned: false
+      planned_date: '2024-08-08'
+      planned_start_date: '2024-08-08'
+      rec_name: '1'
+      reference: ''
+      shipped_by: 
+      shipped_by_: {}
+      state: waiting
+      to_location: 4
+      to_location_:
+        id: 4
+        name: Lost and Found
+      transit_location: 
+      transit_location_: {}
+      warehouse: 5
+      warehouse_:
+        id: 5
+        name: Warehouse
+      write_date: '2024-08-10T08:20:43.486202'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
     errors: null
     pagination: null
     status: 201

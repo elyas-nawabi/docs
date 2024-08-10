@@ -1,18 +1,18 @@
-post:
+    get:
       tags:
-        - shipment internal
-      summary: Create a shipment internal.
-      description: Create a shipment internal.
-      operationId: postShipmentInternalById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: 'schemas/create-shipment-internal.yaml'
+        - location
+      summary: Get one location.
+      description: Get one location.
+      operationId: getLocationById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
       responses:
-        '201':
+        '200':
           description: OK
           content:
             application/json:
@@ -28,27 +28,39 @@ post:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-
-delete:
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
       tags:
-        - shipment internal
-      summary: Delete shipment internals.
-      description: Delete shipment internals.
-      operationId: deleteShipmentInternalById
+        - location
+      summary: Update a location.
+      description: Update a location.
+      operationId: updateLocationById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+              $ref: 'schemas/create-location.yaml'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -59,4 +71,4 @@ delete:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    
+  
