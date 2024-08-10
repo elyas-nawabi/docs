@@ -1,0 +1,294 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        company: 1
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        contact_address: 1
+        contact_address_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        delay: 0
+        done_by: 
+        done_by_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        effective_date: '2024-08-09'
+        id: 1
+        incoming_moves:
+          type: array
+          properties:
+            assignation_required: 
+              type: boolean
+            company: 
+              type: integer
+            company_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            cost_price: 
+            cost_price_required: 
+              type: boolean
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            currency: 
+              type: integer
+            currency_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            delay: 
+              type: string 
+              format: duration
+            effective_date:
+              type: string 
+              format: date  
+            from_location: 
+              type: integer
+            from_location_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            internal_quantity: 
+              type: integer
+            lot: 
+              type: integer
+            lot_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            origin: 
+              type: string
+            origin_planned_date: 
+              type: string 
+              format: date
+            planned_date: 
+              type: string 
+              format: date
+            product: 
+              type: integer
+            product_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            product_cost_price: 
+              type: number
+              format: decimal
+            product_uom_category: 
+              type: integer
+            product_uom_category_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            quantity: 
+              type: integer
+            rec_name: 
+              type: string
+            shipment: 
+              type: string
+            state: 
+              type: string
+            to_location: 
+              type: integer
+            to_location_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            unit: 
+              type: integer
+            unit_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            unit_price: 
+              type: number
+              format: decimal
+            unit_price_company: 
+              type: number
+              format: decimal
+            unit_price_required: 
+              type: boolean
+            unit_price_updated: 
+              type: boolean
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        inventory_moves: 
+          type: array
+        number:
+          type: string
+        origin_planned_date: 
+          type: string
+          format: date 
+        planned_date: 
+          type: string
+          format: date 
+        rec_name: 
+          type: string
+        received_by: 
+          type: integer
+        received_by_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        reference: 
+          type: string
+        state: 
+          type: string
+        supplier: 
+          type: integer
+        supplier_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        supplier_location: 
+          type: integer
+        supplier_location_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        warehouse: 
+          type: integer
+        warehouse_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        warehouse_input: 
+          type: integer
+        warehouse_input_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        warehouse_storage: 
+          type: integer
+        warehouse_storage_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      contact_address: 1
+      contact_address_:
+        id: 1
+        name: Milestone
+      create_date: '2024-08-09T15:08:01.648807'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      delay: 0
+      done_by: 
+      done_by_: {}
+      effective_date: '2024-08-09'
+      id: 1
+      incoming_moves:
+      - assignation_required: false
+        company: 1
+        company_:
+          id: 1
+          name: Milestone
+        cost_price: 
+        cost_price_required: true
+        create_date: '2024-08-09T15:08:01.648807'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        currency: 1
+        currency_:
+          id: 1
+          name: Afghani
+        delay: 
+        effective_date: 
+        from_location: 6
+        from_location_:
+          id: 6
+          name: Supplier
+        id: 1
+        internal_quantity: 1
+        lot: 1
+        lot_:
+          id: 1
+          name: '1'
+        origin: gnuhealth.surgery,-1
+        origin_planned_date: 
+        planned_date: 
+        product: 146
+        product_:
+          id: 146
+          name: aciclovir
+        product_cost_price: 
+        product_uom_category: 1
+        product_uom_category_:
+          id: 1
+          name: Units
+        quantity: 1
+        rec_name: 1 u aciclovir
+        shipment: stock.shipment.in,1
+        state: draft
+        to_location: 1
+        to_location_:
+          id: 1
+          name: Input Zone
+        unit: 1
+        unit_:
+          id: 1
+          name: Unit
+        unit_price: 2000
+        unit_price_company: 2000
+        unit_price_required: true
+        unit_price_updated: true
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      inventory_moves: []
+      number: '1'
+      origin_planned_date: 
+      planned_date: '2024-08-09'
+      rec_name: '1'
+      received_by: 
+      received_by_: {}
+      reference: '1'
+      state: draft
+      supplier: 1
+      supplier_:
+        id: 1
+        name: Milestone
+      supplier_location: 6
+      supplier_location_:
+        id: 6
+        name: Supplier
+      warehouse: 5
+      warehouse_:
+        id: 5
+        name: Warehouse
+      warehouse_input: 1
+      warehouse_input_:
+        id: 1
+        name: Input Zone
+      warehouse_storage: 3
+      warehouse_storage_:
+        id: 3
+        name: Storage Zone
+      write_date: '2024-08-09T15:08:01.648807'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

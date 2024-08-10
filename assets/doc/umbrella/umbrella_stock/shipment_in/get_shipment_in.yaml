@@ -1,0 +1,150 @@
+    post:
+      tags:
+        - shipment in
+      summary: Get shipment in details.
+      description: Get shipment in details.
+      operationId: getShipmentIn
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of shipment in.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        company: 
+                          type: integer
+                        company_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        contact_address: 
+                          type: integer
+                        contact_address_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        delay: 
+                          type: integer
+                        effective_date: 
+                          type: string 
+                          format: date
+                        id: 
+                          type: integer
+                        number: 
+                          type: string
+                        origin_planned_date: 
+                          type: string 
+                          format: date
+                        planned_date: 
+                          type: string 
+                          format: date
+                        rec_name: 
+                          type: string
+                        reference: 
+                          type: string
+                        state: 
+                          type: string
+                        supplier: 
+                          type: integer
+                        supplier_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        warehouse: 
+                          type: integer
+                        warehouse_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - company: 1
+                    company_:
+                      id: 1
+                      name: Milestone
+                    contact_address: 1
+                    contact_address_:
+                      id: 1
+                      name: Milestone
+                    create_date: '2024-08-09T15:08:01.648807'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    delay: 0
+                    effective_date: '2024-08-09'
+                    id: 1
+                    number: '1'
+                    origin_planned_date: 
+                    planned_date: '2024-08-09'
+                    rec_name: '1'
+                    reference: '1'
+                    state: draft
+                    supplier: 1
+                    supplier_:
+                      id: 1
+                      name: Milestone
+                    warehouse: 5
+                    warehouse_:
+                      id: 5
+                      name: Warehouse
+                    write_date: '2024-08-09T15:08:01.648807'
+                    write_uid: 1
+                    write_uid_:
+                      id: 1
+                      name: Administrator
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    
