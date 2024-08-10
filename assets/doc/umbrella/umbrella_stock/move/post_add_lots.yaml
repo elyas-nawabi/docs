@@ -1,16 +1,16 @@
 post:
       tags:
-        - shipment out
-      summary: Create a shipment out.
-      description: Create a shipment out.
-      operationId: postShipmentOutById
+        - move
+      summary: Add lots.
+      description: Add lots.
+      operationId: postAddLotsById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-shipment-out.yaml'
+              $ref: 'schemas/create-move.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - shipment out
-      summary: Delete shipment outs.
-      description: Delete shipment outs.
-      operationId: deleteShipmentOutById
+        - move
+      summary: Delete moves.
+      description: Delete moves.
+      operationId: deleteMoveById
       requestBody:
         required: true
         content:

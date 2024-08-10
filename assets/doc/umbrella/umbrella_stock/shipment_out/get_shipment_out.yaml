@@ -1,9 +1,9 @@
     post:
       tags:
-        - period
-      summary: Get period details.
-      description: Get period details.
-      operationId: getPeriod
+        - shipment out
+      summary: Get shipment out details.
+      description: Get shipment out details.
+      operationId: getShipmentOut
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of periods.
+          description: List of shipment outs.
           content:
             application/json:
               schema:
@@ -22,7 +22,61 @@
                     data:
                       type: array
                       properties:
-                        
+                        company: 
+                          type: integer
+                        company_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        customer: 
+                          type: integer
+                        customer_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        delay: 
+                          type: string
+                          format: duration
+                        delivery_address: 
+                          type: integer
+                        delivery_address_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        effective_date: 
+                          type: string
+                          format: date
+                        id: 
+                          type: integer
+                        number: 
+                          type: string
+                        origin_planned_date: 
+                          type: string
+                          format: date
+                        partially_assigned: 
+                          type: boolean
+                        planned_date: 
+                          type: string
+                          format: date
+                        rec_name: 
+                          type: string
+                        reference: 
+                          type: string
+                        state: 
+                          type: string
+                        warehouse: 
+                          type: integer
+                        warehouse_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+
                     errors:
                       type: object
                     pagination:
@@ -42,7 +96,41 @@
                       nullable: true
               example:
                 data:
-                
+                  - company: 1
+                    company_:
+                      id: 1
+                      name: Milestone
+                    create_date: '2024-08-10T12:04:52.243276'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    customer: 1
+                    customer_:
+                      id: 1
+                      name: Milestone
+                    delay: 1728000
+                    delivery_address: 1
+                    delivery_address_:
+                      id: 1
+                      name: Milestone
+                    effective_date: '2024-08-26'
+                    id: 1
+                    number: '1'
+                    origin_planned_date: 
+                    partially_assigned: false
+                    planned_date: '2024-08-06'
+                    rec_name: '1'
+                    reference: ''
+                    state: draft
+                    warehouse: 5
+                    warehouse_:
+                      id: 5
+                      name: Warehouse
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+
                 error: null
                 pagination:
                   page: 1

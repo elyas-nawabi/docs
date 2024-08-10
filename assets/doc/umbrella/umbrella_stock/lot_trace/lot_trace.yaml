@@ -59,13 +59,14 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: location
-    description: location - location data management.
+  - name: lot trace
+    description: lot trace - lot trace data management.
 paths:
-  '/stock/locations/search':
-    $ref: 'get_location.yaml'
-  '/stock/locations':
-    $ref: 'post_delete_location.yaml'
-  '/stock/locations/{obj_id}':
-    $ref: 'get_put_location_by_id.yaml'
+  '/stock/lot-traces/search':
+    $ref: 'get_lot_trace.yaml'
+  '/stock/lot-traces':
+    $ref: 'post_delete_lot_trace.yaml'
+  '/stock/lot-traces/{obj_id}':
+    $ref: 'get_put_lot_trace_by_id.yaml'
+
   

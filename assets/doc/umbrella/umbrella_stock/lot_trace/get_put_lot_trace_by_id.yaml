@@ -1,18 +1,18 @@
-post:
+    get:
       tags:
-        - location
-      summary: Create a location.
-      description: Create a location.
-      operationId: postLocationById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: 'schemas/create-location.yaml'
+        - lot trace
+      summary: Get one lot trace.
+      description: Get one lot trace.
+      operationId: getLotTraceById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
       responses:
-        '201':
+        '200':
           description: OK
           content:
             application/json:
@@ -28,27 +28,39 @@ post:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-
-delete:
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
       tags:
-        - location
-      summary: Delete locations.
-      description: Delete locations.
-      operationId: deleteLocationById
+        - lot trace
+      summary: Update a lot trace.
+      description: Update a lot trace.
+      operationId: updateLotTraceById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+              $ref: 'schemas/create-lot-trace.yaml'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -59,4 +71,4 @@ delete:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    
+  

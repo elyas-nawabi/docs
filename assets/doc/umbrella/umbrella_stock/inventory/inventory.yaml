@@ -59,13 +59,23 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: location
-    description: location - location data management.
+  - name: inventory
+    description: inventory - inventory data management.
 paths:
-  '/stock/locations/search':
-    $ref: 'get_location.yaml'
-  '/stock/locations':
-    $ref: 'post_delete_location.yaml'
-  '/stock/locations/{obj_id}':
-    $ref: 'get_put_location_by_id.yaml'
+  '/stock/inventories/search':
+    $ref: 'get_inventory.yaml'
+  '/stock/inventories':
+    $ref: 'post_delete_inventory.yaml'
+  '/stock/inventories/{obj_id}':
+    $ref: 'get_put_inventory_by_id.yaml'
+  '/stock/inventories/{obj_id}/cancel':
+    $ref: 'get_cancel.yaml'
+  '/stock/inventories/{obj_id}/confirm':
+    $ref: 'get_confirm.yaml'
+  '/stock/inventories/{obj_id}/complete':
+    $ref: 'get_complete.yaml'
+  '/stock/inventories/{obj_id}/count-select':
+    $ref: 'post_count_select.yaml'
+  '/stock/inventories/{obj_id}/count-load':
+    $ref: 'post_count_load.yaml'
   
