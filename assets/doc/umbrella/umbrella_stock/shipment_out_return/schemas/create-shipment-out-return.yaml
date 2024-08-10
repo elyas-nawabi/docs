@@ -1,7 +1,241 @@
       properties:
-        
+        company: 
+          type: integer
+        contact_address: 
+          type: integer
+        customer: 
+          type: integer
+        customer_location: 
+          type: integer
+        delay: 
+          type: string
+          format: duration
+        done_by: 
+          type: integer
+        effective_date:
+          type: string
+          format: date
+        incoming_moves:
+          type: array
+          properties:
+            assignation_required: 
+              type: boolean
+            company:  
+              type: integer
+            cost_price: 
+              type: number
+              format: decimal
+            cost_price_required: 
+              type: boolean
+            currency: 
+              type: integer
+            delay: 
+              type: string
+              format: duration
+            effective_date: 
+              type: string
+              format: date
+            from_location: 
+              type: integer
+            internal_quantity: 
+              type: integer
+            lot: 
+              type: integer
+            origin: 
+              type: string
+            origin_planned_date: 
+              type: string
+              format: date
+            planned_date: 
+              type: string
+              format: date
+            product: 
+              type: integer
+            product_cost_price: 
+              type: number
+              format: decimal
+            product_uom_category: 
+              type: integer
+            quantity: 
+              type: integer
+            rec_name: 
+              type: string
+            shipment: 
+              type: string
+            state: 
+              type: string
+            to_location: 
+              type: integer
+            unit: 
+              type: integer
+            unit_price: 
+              type: number
+              format: decimal
+            unit_price_company: 
+              type: number
+              format: decimal
+            unit_price_required: 
+              type: boolean
+            unit_price_updated: 
+              type: boolean
+        inventory_moves: 
+          type: array
+        moves:
+          type: array
+          properties:
+            assignation_required: 
+              type: boolean
+            company: 
+              type: integer
+            cost_price: 
+              type: number
+              format: decimal
+            cost_price_required: 
+              type: boolean
+            currency: 
+              type: integer
+            delay:  
+              type: string
+              format: duration
+            effective_date: 
+              type: string
+              format: date
+            from_location: 
+              type: integer
+            internal_quantity: 
+              type: integer
+            lot:
+              type: integer
+            origin: 
+              type: string
+            origin_planned_date: 
+              type: string
+              format: date
+            planned_date: 
+              type: string
+              format: date
+            product:  
+              type: integer
+            product_cost_price: 
+              type: number
+              format: decimal
+            product_uom_category: 
+              type: integer
+            quantity: 
+              type: integer
+            rec_name: 
+              type: string
+            shipment: 
+              type: string
+            state: 
+              type: string
+            to_location: 
+              type: integer
+            unit: 
+              type: integer
+            unit_price: 
+              type: number
+              format: decimal
+            unit_price_company: 
+              type: number
+              format: decimal
+            unit_price_required: 
+              type: boolean
+            unit_price_updated: 
+              type: boolean
+        number:
+          type: string
+        origin_planned_date: 
+        origins: 
+          type: string
+        planned_date: 
+          type: string
+        rec_name: 
+          type: string
+        received_by: 
+          type: integer
+        reference: 
+          type: string
+        state: 
+          type: string
+        warehouse:  
+          type: integer
+        warehouse_input: 
+          type: integer
   
       required:
           - 
       example:
-        
+        company: 1
+        contact_address: 1
+        customer: 1
+        customer_location: 7
+        delay: 2764800
+        done_by: 
+        effective_date: '2024-08-29'
+        incoming_moves:
+          - assignation_required: false
+            company: 1
+            cost_price: 
+            cost_price_required: true
+            currency: 1
+            delay: '0:00:00'
+            effective_date: 
+            from_location: 7
+            internal_quantity: 1
+            lot: 
+            origin: stock.move,1
+            origin_planned_date: 
+            planned_date: '2024-07-28'
+            product: 388
+            product_cost_price: 
+            product_uom_category: 1
+            quantity: 1
+            rec_name: 1 u acetic acid
+            shipment: stock.shipment.out.return,1
+            state: draft
+            to_location: 1
+            unit: 1
+            unit_price: 2000
+            unit_price_company: 2000
+            unit_price_required: true
+            unit_price_updated: true
+        inventory_moves: []
+        moves:
+          - assignation_required: false
+            company: 1
+            cost_price: 
+            cost_price_required: true
+            currency: 1
+            delay: '0:00:00'
+            effective_date: 
+            from_location: 7
+            internal_quantity: 1
+            lot: 
+            origin: stock.move,1
+            origin_planned_date: 
+            planned_date: '2024-07-28'
+            product: 388
+            product_cost_price: 
+            product_uom_category: 1
+            quantity: 1
+            rec_name: 1 u acetic acid
+            shipment: stock.shipment.out.return,1
+            state: draft
+            to_location: 1
+            unit: 1
+            unit_price: 2000
+            unit_price_company: 2000
+            unit_price_required: true
+            unit_price_updated: true
+        number: '1'
+        origin_planned_date: 
+        origins: 1 u aciclovir
+        planned_date: '2024-07-28'
+        rec_name: '1'
+        received_by: 2
+        reference: '123'
+        state: draft
+        warehouse: 5
+        warehouse_input: 1
+        warehouse_storage: 3

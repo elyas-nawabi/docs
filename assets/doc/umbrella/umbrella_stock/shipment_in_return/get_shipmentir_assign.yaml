@@ -26,8 +26,8 @@
               example:
                 defaults:
                   moves:
-                  - 2
-                session_id: 21
+                  - 3
+                session_id: 27
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

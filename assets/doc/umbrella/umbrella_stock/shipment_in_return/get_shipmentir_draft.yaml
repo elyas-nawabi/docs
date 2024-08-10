@@ -34,7 +34,7 @@
               example:
                 errors: null
                 pagination: null
-                status: 201
+                status: 200
                 success_message: null
         '401':
           description: >-
