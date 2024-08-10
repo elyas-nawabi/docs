@@ -3,7 +3,7 @@ post:
         - shipment out return
       summary: Create a shipment out return.
       description: Create a shipment out return.
-      operationId: postShipmentOutReturnById
+      operationId: shipmentOutReturnById
       requestBody:
         required: true
         content:
