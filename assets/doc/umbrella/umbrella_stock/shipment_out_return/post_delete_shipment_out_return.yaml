@@ -27,12 +27,12 @@ post:
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../.yaml#/components/schemas/HTTP401'
 
 delete:
       tags:
         - shipment out return
-      summary: Delete shipment out returns.
+      summary: Delete shipment out reapi_docturns.
       description: Delete shipment out returns.
       operationId: deleteShipmentOutReturnById
       requestBody:
