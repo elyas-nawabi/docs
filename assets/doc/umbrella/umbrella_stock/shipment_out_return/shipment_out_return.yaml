@@ -63,11 +63,11 @@ tags:
     description: shipment out return - shipment out return data management.
 paths:
   '/stock/customer-returns/search':
-    $ref: 'get_shipment_out.yaml'
+    $ref: 'get_shipment_out_return.yaml'
   '/stock/customer-returns':
-    $ref: 'post_delete_shipment_out.yaml'
+    $ref: 'post_delete_shipment_out_return.yaml'
   '/stock/customer-returns/{obj_id}':
-    $ref: 'get_put_shipment_out_by_id.yaml'
+    $ref: 'get_put_shipment_out_return_by_id.yaml'
   '/stock/customer-returns/{obj_id}/draft':
     $ref: 'get_draft.yaml'
   '/stock/customer-returns/{obj_id}/cancel':

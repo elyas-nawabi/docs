@@ -10,14 +10,14 @@ post:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-inventory.yaml'
+              # $ref: 'schemas/create-inventory.yaml'
       responses:
         '201':
           description: OK
           content:
             application/json:
               schema:
-                $ref: 'schema.yaml'
+                # $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are

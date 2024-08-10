@@ -29,7 +29,21 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        expiration_date: 
+                          type: string 
+                          format: date
+                        id: 
+                          type: integer
+                        number: 
+                          type: string
+                        product: 
+                          type: integer
+                        product_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        quantity: 
+                          type: integer
+                        rec_name: 
+                          type: string
                         write_date:
                           type: string
                           format: date 
@@ -56,7 +70,23 @@
                       nullable: true
               example:
                 data:
-                  
+                  create_date: '2024-08-09T15:06:39.383193'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  expiration_date: 
+                  id: 1
+                  number: '1'
+                  product: 146
+                  product_:
+                    id: 146
+                    name: aciclovir
+                  quantity: 0
+                  rec_name: '1'
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
                 error: null
                 pagination:
                   page: 1

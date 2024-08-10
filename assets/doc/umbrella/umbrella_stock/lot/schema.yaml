@@ -3,17 +3,6 @@ schema:
     data:
       type: array
       properties:
-        address: 
-          type: integer
-        address_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        allow_pickup: 
-          type: boolean
-        code: 
-          type: string
-        cost_value: 
-          type: number
-          format: decimal
         create_date: 
           type: string 
           format: date 
@@ -21,59 +10,31 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        flat_childs: 
+        active: 
           type: boolean
+        default_uom: 
+          type: integer
+        default_uom_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        expiration_date: 
+          type: string 
+          format: date
         forecast_quantity: 
-          type: number
-          format: decimal
+          type: integer
+        has_sequence: 
+          type: boolean
         id: 
           type: integer
-        input_location: 
+        number: 
+          type: string
+        product: 
           type: integer
-        input_location_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        left: 
-          type: integer
-        lost_found_location: 
-          type: integer
-        lost_found_location_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        name: 
-          type: string 
-        output_location: 
-          type: integer
-        output_location_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        parent: 
-          type: integer
-        parent_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        picking_location: 
-          type: integer
-        picking_location_: 
+        product_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
         quantity: 
-          type: number
-          format: decimal
-        quantity_uom: 
-          type: number
-          format: decimal
-        quantity_uom_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          type: integer
         rec_name: 
           type: string
-        right: 
-          type: integer
-        storage_location: 
-          type: integer
-        storage_location_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        type: 
-          type: string
-        warehouse: 
-          type: integer
-        waste_locations: 
-          type: array
         write_date:
           type: string
           format: date 
@@ -95,41 +56,27 @@ schema:
 
 example:
     data:
-      address: 
-      address_: {}
-      allow_pickup: false
-      code: CUS
-      cost_value: 
-      create_date: '2024-05-27T12:48:57.022835'
-      create_uid: 0
+      active: true
+      create_date: '2024-08-09T15:06:39.383193'
+      create_uid: 1
       create_uid_:
-        id: 0
-        name: Root
-      flat_childs: false
-      forecast_quantity: 
-      id: 7
-      input_location: 
-      input_location_: {}
-      left: 33
-      lost_found_location: 
-      lost_found_location_: {}
-      name: Customer
-      output_location: 
-      output_location_: {}
-      parent: 
-      parent_: {}
-      picking_location: 
-      picking_location_: {}
-      quantity: 
-      quantity_uom: 
-      quantity_uom_: {}
-      rec_name: Customer
-      right: 34
-      storage_location: 
-      storage_location_: {}
-      type: customer
-      warehouse: 
-      waste_locations: []
+        id: 1
+        name: Administrator
+      default_uom: 1
+      default_uom_:
+        id: 1
+        name: Unit
+      expiration_date: 
+      forecast_quantity: 0
+      has_sequence: false
+      id: 1
+      number: '1'
+      product: 146
+      product_:
+        id: 146
+        name: aciclovir
+      quantity: 0
+      rec_name: '1'
       write_date: 
       write_uid: 
       write_uid_: {}
