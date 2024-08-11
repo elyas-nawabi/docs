@@ -29,14 +29,47 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        company: 
+                          type: integer
+                        company_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        delay: 
+                          type: string 
+                          format: duration
+                        effective_date: 
+                          type: string 
+                          format: date
+                        from_location: 
+                          type: integer
+                        from_location_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         id: 
                           type: integer
-                        name: 
+                        lot: 
+                          type: integer
+                        lot_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        origin: 
                           type: string
-                        rec_name: 
+                        origin_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        planned_date: 
+                          type: string 
+                          format: date
+                        product: 
+                          type: integer
+                        product_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        quantity: 
+                          type: integer
+                        rec_name:
                           type: string
-                        type: 
+                        state: 
                           type: string
+                        to_location: 
+                          type: integer
+                        to_location_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                         write_date:
                           type: string
                           format: date 
@@ -63,18 +96,47 @@
                       nullable: true
               example:
                 data:
-                  - create_date: '2024-05-27T12:48:57.022835'
-                    create_uid: 0
+                  - company: 1
+                    company_:
+                      id: 1
+                      name: Milestone
+                    create_date: '2024-08-10T17:06:31.344034'
+                    create_uid: 1
                     create_uid_:
+                      id: 1
+                      name: Administrator
+                    delay: 
+                    effective_date: '2024-08-10'
+                    from_location: 4
+                    from_location_:
+                      id: 4
+                      name: Lost and Found
+                    id: 5
+                    lot: 3
+                    lot_:
+                      id: 3
+                      name: '1'
+                    origin: stock.inventory.line,1
+                    origin_:
+                      id: 1
+                      name: acetazolamide - 1
+                    planned_date: 
+                    product: 384
+                    product_:
+                      id: 384
+                      name: acetazolamide
+                    quantity: 1
+                    rec_name: 1 u acetazolamide
+                    state: done
+                    to_location: 2
+                    to_location_:
+                      id: 2
+                      name: Output Zone
+                    write_date: '2024-08-10T17:06:31.344034'
+                    write_uid: 0
+                    write_uid_:
                       id: 0
                       name: Root
-                    id: 7
-                    name: Customer
-                    rec_name: Customer
-                    type: customer
-                    write_date: 
-                    write_uid: 
-                    write_uid_: {}
                 error: null
                 pagination:
                   page: 1

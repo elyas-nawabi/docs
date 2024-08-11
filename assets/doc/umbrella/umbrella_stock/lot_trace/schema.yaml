@@ -3,17 +3,6 @@ schema:
     data:
       type: array
       properties:
-        address: 
-          type: integer
-        address_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        allow_pickup: 
-          type: boolean
-        code: 
-          type: string
-        cost_value: 
-          type: number
-          format: decimal
         create_date: 
           type: string 
           format: date 
@@ -21,58 +10,42 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        flat_childs: 
-          type: boolean
-        forecast_quantity: 
-          type: number
-          format: decimal
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        date:
+          type: string 
+          format: date
+        document:
+          type: integer 
+        document_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        downward_traces: 
+          type: array
         id: 
           type: integer
-        input_location: 
+        lot: 
           type: integer
-        input_location_: 
+        lot_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        left: 
+        product: 
           type: integer
-        lost_found_location: 
-          type: integer
-        lost_found_location_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        name: 
-          type: string 
-        output_location: 
-          type: integer
-        output_location_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        parent: 
-          type: integer
-        parent_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        picking_location: 
-          type: integer
-        picking_location_: 
+        product_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
         quantity: 
-          type: number
-          format: decimal
-        quantity_uom: 
-          type: number
-          format: decimal
-        quantity_uom_: 
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          type: integer
         rec_name: 
           type: string
-        right: 
+        shipment: 
           type: integer
-        storage_location: 
-          type: integer
-        storage_location_: 
+        shipment_: 
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        type: 
-          type: string
-        warehouse: 
+        unit: 
           type: integer
-        waste_locations: 
+        unit_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        upward_traces: 
           type: array
         write_date:
           type: string
@@ -95,44 +68,43 @@ schema:
 
 example:
     data:
-      address: 
-      address_: {}
-      allow_pickup: false
-      code: CUS
-      cost_value: 
-      create_date: '2024-05-27T12:48:57.022835'
-      create_uid: 0
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      create_date: '2024-08-10T17:06:31.344034'
+      create_uid: 1
       create_uid_:
+        id: 1
+        name: Administrator
+      date: '2024-08-10'
+      document: 
+      document_: {}
+      downward_traces: []
+      id: 5
+      lot: 3
+      lot_:
+        id: 3
+        name: '1'
+      product: 384
+      product_:
+        id: 384
+        name: acetazolamide
+      quantity: 1
+      rec_name: '5'
+      shipment: 
+      shipment_: {}
+      unit: 1
+      unit_:
+        id: 1
+        name: Unit
+      upward_traces: []
+      write_date: '2024-08-10T17:06:31.344034'
+      write_uid: 0
+      write_uid_:
         id: 0
         name: Root
-      flat_childs: false
-      forecast_quantity: 
-      id: 7
-      input_location: 
-      input_location_: {}
-      left: 33
-      lost_found_location: 
-      lost_found_location_: {}
-      name: Customer
-      output_location: 
-      output_location_: {}
-      parent: 
-      parent_: {}
-      picking_location: 
-      picking_location_: {}
-      quantity: 
-      quantity_uom: 
-      quantity_uom_: {}
-      rec_name: Customer
-      right: 34
-      storage_location: 
-      storage_location_: {}
-      type: customer
-      warehouse: 
-      waste_locations: []
-      write_date: 
-      write_uid: 
-      write_uid_: {}
+
     errors: null
     pagination: null
     status: 201

@@ -29,7 +29,47 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        classification: 
+                          type: string
+                        computed_age:
+                          type: string 
+                        description: 
+                          type: string
+                        id: 
+                          type: integer
+                        institution: 
+                          type: integer
+                        institution_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        operating_room: 
+                          type: integer
+                        operating_room_: 
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        pathology: 
+                          type: integer
+                        pathology_: 
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        patient: 
+                          type: integer
+                        patient_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        postoperative_dx: 
+                          type: integer
+                        postoperative_dx_: 
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        state: 
+                          type: string
+                        surgery_date: 
+                          type: string
+                          format: date
+                        surgery_length: 
+                          type: integer
+                        surgical_intervention: 
+                          type: integer
+                        surgical_intervention_: 
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         write_date:
                           type: string
                           format: date 
@@ -56,15 +96,39 @@
                       nullable: true
               example:
                 data:
-                    create_date: '2024-05-27T12:50:05.039883'
-                    create_uid: 0
+                  - classification: o
+                    computed_age: 
+                    create_date: '2024-08-11T17:47:03.635988'
+                    create_uid: 1
                     create_uid_:
-                      id: 0
-                      name: Root
-                    
+                      id: 1
+                      name: Administrator
+                    description: this is some description
+                    id: 1
+                    institution: 1
+                    institution_:
+                      id: 1
+                      name: Milestone
+                    operating_room: 
+                    operating_room_: {}
+                    pathology: 
+                    pathology_: {}
+                    patient: 1
+                    patient_:
+                      id: 1
+                      name: Milestone
+                    postoperative_dx: 
+                    postoperative_dx_: {}
+                    rec_name: SRG-2024-00001  (this is some description)
+                    state: draft
+                    surgery_date: '2024-08-11T17:43:01'
+                    surgery_length: 
+                    surgical_intervention: 
+                    surgical_intervention_: {}
                     write_date: 
                     write_uid: 
                     write_uid_: {}
+
                 error: null
                 pagination:
                   page: 1

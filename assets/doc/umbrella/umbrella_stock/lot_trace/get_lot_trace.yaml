@@ -29,19 +29,27 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        date: '2024-08-10'
+                        date:
+                          type: string 
+                          format: date 
                         document: 
+                          type: integer
                         document_: 
                           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        id: 5
-                        lot: 3
+                        id: 
+                          type: integer
+                        lot: 
+                          type: integer
                         lot_:
                           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        product: 384
+                        product: 
+                          type: integer
                         product_:
                           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        quantity: 1
-                        rec_name: '5'
+                        quantity: 
+                          type: integer
+                        rec_name: 
+                          type: string
                         write_date:
                           type: string
                           format: date 

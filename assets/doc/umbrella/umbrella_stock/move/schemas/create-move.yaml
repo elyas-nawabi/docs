@@ -59,28 +59,29 @@
       required:
           - 
       example:
-        address: 
-        allow_pickup: false
-        code: CUS
-        cost_value: 
-        create_date: '2024-05-27T12:48:57.022835'
-        create_uid: 0
-        flat_childs: false
-        forecast_quantity: 
-        input_location: 
-        left: 33
-        lost_found_location: 
-        name: Customer
-        output_location: 
-        parent: 
-        picking_location: 
-        quantity: 
-        quantity_uom: 
-        rec_name: Customer
-        right: 34
-        storage_location: 
-        type: customer
-        warehouse: 
-        waste_locations: []
-        write_date: 
-        write_uid: 
+        assignation_required: false
+        company: 1
+        cost_price: 0
+        cost_price_required: true
+        currency: 
+        delay: 
+        effective_date: '2024-08-10'
+        from_location: 4
+        internal_quantity: 1
+        lot: 3
+        origin: stock.inventory.line,1
+        origin_planned_date: 
+        planned_date: 
+        product: 384
+        product_cost_price: 
+        product_uom_category: 1
+        quantity: 1
+        rec_name: 1 u acetazolamide
+        shipment: 
+        state: done
+        to_location: 2
+        unit: 1
+        unit_price: 
+        unit_price_company: 
+        unit_price_required: false
+        unit_price_updated: true
