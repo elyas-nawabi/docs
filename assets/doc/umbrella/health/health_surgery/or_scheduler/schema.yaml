@@ -11,7 +11,50 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        comments: 
+          type: string
+        health_condition: 
+          type: integer
+        health_condition_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        healthprof: 
+          type: integer
+        healthprof_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        patient: 
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        reserve_from: 
+          type: string
+          format: date
+        reserve_to: 
+          type: string
+          format: date
+        specialty: 
+          type: integer
+        specialty_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        state: 
+          type: string
+        surgery: 
+          type: integer
+        surgery_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        urgency: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -33,12 +76,46 @@ schema:
 
 example:
     data:
-      create_date: '2024-05-27T12:50:05.039883'
-      create_uid: 0
+      comments: remarks here...
+      create_date: '2024-08-11T17:48:59.673444'
+      create_uid: 1
       create_uid_:
-        id: 0
-        name: Root
-      
+        id: 1
+        name: Administrator
+      health_condition: 47527
+      health_condition_:
+        id: 47527
+        name: 's001 : serious'
+      healthprof: 1
+      healthprof_:
+        id: 1
+        name: Milestone
+      id: 1
+      institution: 1
+      institution_:
+        id: 1
+        name: Milestone
+      name: 1
+      name_:
+        id: 1
+        name: op_room
+      patient: 1
+      patient_:
+        id: 1
+        name: Milestone
+      rec_name: '1'
+      reserve_from: '2024-08-11T17:37:18'
+      reserve_to: '2024-08-11T18:37:18'
+      specialty: 1
+      specialty_:
+        id: 1
+        name: Anatomy
+      state: free
+      surgery: 1
+      surgery_:
+        id: 1
+        name: SRG-2024-00001  (this is some description)
+      urgency: r
       write_date: 
       write_uid: 
       write_uid_: {}

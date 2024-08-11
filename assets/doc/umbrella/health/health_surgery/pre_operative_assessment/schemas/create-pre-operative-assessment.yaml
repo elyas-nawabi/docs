@@ -1,61 +1,100 @@
       properties:
-        approach: 
-          type: string
-        classification: 
-          type: string
-        code: 
-          type: string
-        create_date: 
+        assessment_date: 
           type: string 
           format: date 
-        anesthesia_type: 
+        critical_info: 
           type: string
-        description: 
-          type: string
-        discharge_instructions: 
-          type: string
-        general_info: 
-          type: string
-        laterality: 
-          type: string
-        name: 
-          type: string
-        pathology: 
+        ecg: 
           type: integer
-        patient_positioning: 
+        ecg_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        evaluation: 
+          type: integer
+        evaluation_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        health_professional: 
+          type: integer
+        health_professional_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        imaging_test: 
+          type: integer
+        imaging_test_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        lab_test: 
+          type: integer
+        lab_test_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        needs_blood_reserve: 
+          type: boolean
+        no_anesthesia: 
+          type: boolean
+        operating_room:
+          type: integer 
+        operating_room_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        patient: 
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        preop_asa: 
           type: string
-        postoperative_guidelines: 
+        preop_bleeding_risk: 
+          type: boolean
+        preop_mallampati: 
           type: string
+        preop_rcri: 
+          type: integer
+        preop_rcri_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
         rec_name: 
           type: string
-        surgical_intervention: 
+        short_notes: 
           type: string
-        write_date:
-            type: string
-            format: date 
+        specialty: 
+          type: integer
+        specialty_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        surgery: 
+          type: integer
+        surgery_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        surgery_date: 
+          type: string
+          format: date
+        surgical_decision: 
+          type: string
+        surgical_wound: 
+          type: integer
         
       required:
           - 
       example:
-        anesthesia_type: local
-        approach: open
-        classification: o
-        code: RESKELOID
-        create_date: '2024-05-27T12:50:05.039883'
-        description: KELOID SCAR
-        discharge_instructions: |-
-            - YOUR USUAL TREATMENT, AS ABOVE
-            - IF PAIN, PARACTEAMOL 650MG 1 TABLET/8H. IF PAIN INCREASES, ALTERNATE WITH NOLOTIL 575MG 1 TABLET/8H.
-            - KEEP THE WOUND CLEAN AND DRY
-            - DRESS THE WOUND DAILY WITH ANTISEPTIC AND REMOVE STITCHES/SHRINKAGE WITHIN 10 DAYS AT THE HEALTH CENTER
-        general_info: |-
-            UNDER LOCAL ANESTHESIA, TRIAMCIANOLONE IS INFILTRATED AND THE KELOID IS RESECTED LEAVING ITS BORDERS,
-            CLOSURE WITH NON-ABSORBABLE MONOFILAMENT. REMOVAL OF ALTERNATE STITCHES FROM THE 10TH DAY.
-        laterality: ''
-        name: KELOID SCAR
-        pathology: 5336
-        patient_positioning: supine_decubitus
-        postoperative_guidelines: ''
-        rec_name: KELOID SCAR
-        surgical_intervention: 
-        write_date: 
+        assessment_date: '2024-08-11'
+        critical_info: " \ncritical info here..."
+        ecg: 
+        evaluation: 1
+        health_professional: 1
+        imaging_test: 
+        institution: 1
+        lab_test: 1
+        needs_blood_reserve: true
+        no_anesthesia: false
+        operating_room: 
+        patient: 1
+        preop_asa: ps1
+        preop_bleeding_risk: false
+        preop_mallampati: Class 2
+        preop_rcri: 
+        rec_name: '2024-08-11 ASA: ps1'
+        short_notes: ''
+        specialty: 2
+        surgery: 
+        surgery_date: '2024-08-11T18:06:36'
+        surgical_decision: watchful_waiting
+        surgical_wound: II

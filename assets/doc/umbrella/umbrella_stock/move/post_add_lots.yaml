@@ -15,6 +15,10 @@ post:
                 type: integer
               unit: 
                 type: integer
+            required:
+              - product 
+              - quantity
+              - unit
             example:
               product: 2
               quantity: 4

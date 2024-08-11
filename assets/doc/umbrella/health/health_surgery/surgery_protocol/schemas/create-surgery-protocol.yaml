@@ -5,9 +5,6 @@
           type: string
         code: 
           type: string
-        create_date: 
-          type: string 
-          format: date 
         anesthesia_type: 
           type: string
         description: 
@@ -30,9 +27,6 @@
           type: string
         surgical_intervention: 
           type: string
-        write_date:
-            type: string
-            format: date 
         
       required:
           - 
@@ -41,7 +35,6 @@
         approach: open
         classification: o
         code: RESKELOID
-        create_date: '2024-05-27T12:50:05.039883'
         description: KELOID SCAR
         discharge_instructions: |-
             - YOUR USUAL TREATMENT, AS ABOVE
@@ -58,4 +51,3 @@
         postoperative_guidelines: ''
         rec_name: KELOID SCAR
         surgical_intervention: 
-        write_date: 
