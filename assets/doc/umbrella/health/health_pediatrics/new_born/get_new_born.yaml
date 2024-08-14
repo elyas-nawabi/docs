@@ -29,7 +29,29 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        birth_date: 
+                          type: string 
+                          format: date
+                        cephalic_perimeter: 
+                          type: integer
+                        id: 
+                          type: integer
+                        length: 
+                          type: integer
+                        mother: 
+                          type: integer
+                        mother_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        patient: 
+                          type: integer
+                        patient_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string 
+                        sex: 
+                          type: string
+                        weight: 
+                          type: integer
                         write_date:
                           type: string
                           format: date 
@@ -56,15 +78,30 @@
                       nullable: true
               example:
                 data:
-                    create_date: '2024-05-27T12:26:56.434108'
-                    create_uid: 0
+                  - birth_date: '1990-01-13T21:45:00'
+                    cephalic_perimeter: 1
+                    create_date: '2024-08-14T06:43:18.496098'
+                    create_uid: 1
                     create_uid_:
-                      id: 0
-                      name: Root
-                    
+                      id: 1
+                      name: Administrator
+                    id: 1
+                    length: 2
+                    mother: 1
+                    mother_:
+                      id: 1
+                      name: ''
+                    patient: 3
+                    patient_:
+                      id: 3
+                      name: Adel
+                    rec_name: None
+                    sex: m
+                    weight: 1
                     write_date: 
                     write_uid: 
                     write_uid_: {}
+
                 error: null
                 pagination:
                   page: 1
