@@ -29,7 +29,19 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        evaluation_start: 
+                          type: string 
+                          format: date
+                        id: 
+                          type: integer
+                        patient: 
+                          type: integer
+                        patient_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        psc_total: 
+                          type: integer
+                        rec_name: 
+                          type: string
                         write_date:
                           type: string
                           format: date 
@@ -56,12 +68,19 @@
                       nullable: true
               example:
                 data:
-                    create_date: '2024-05-27T12:26:56.434108'
-                    create_uid: 0
+                  - create_date: '2024-08-14T07:17:56.499797'
+                    create_uid: 1
                     create_uid_:
-                      id: 0
-                      name: Root
-                    
+                      id: 1
+                      name: Administrator
+                    evaluation_start: '2024-08-11T18:08:30'
+                    id: 1
+                    patient: 3
+                    patient_:
+                      id: 3
+                      name: Adel
+                    psc_total: 13
+                    rec_name: '1'
                     write_date: 
                     write_uid: 
                     write_uid_: {}
