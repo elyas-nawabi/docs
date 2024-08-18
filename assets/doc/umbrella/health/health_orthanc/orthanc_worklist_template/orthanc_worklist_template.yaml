@@ -68,4 +68,6 @@ paths:
     $ref: 'post_delete_orthanc_worklist_template.yaml'
   '/health-orthanc/worklist-templates/{obj_id}':
     $ref: 'get_put_orthanc_worklist_template_by_id.yaml'
+  '/health-orthanc/get-default-template':
+    $ref: 'get_default_template.yaml'
   
