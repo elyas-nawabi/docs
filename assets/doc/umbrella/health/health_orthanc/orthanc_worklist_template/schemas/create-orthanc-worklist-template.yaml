@@ -1,16 +1,43 @@
       properties:
-        create_date: 
-            type: string 
-            format: date 
-        
-        write_date:
-            type: string
-            format: date 
-        
+        comment: 
+          type: string
+        dump_file_encoding:
+          type: string
+        name: 
+          type: string
+        rec_name: 
+          type: string
+        template: 
+          type: string
         
       required:
           - 
       example:
-        create_date: '2024-05-27T12:26:56.434108'
-        
-        write_date: 
+        comment: comment here...
+        dump_file_encoding: utf-8
+        name: worklist_template_test
+        rec_name: worklist_template_test
+        template: |
+            (0008,0005) SH [ISO_IR 192]
+            (0008,0201) SH [$TimezoneOffsetFromUTC]
+            (0008,0050) SH [$AccessionNumber]
+            (0040,1001) SH [$RequestedProcedureID]
+            (0020,000d) UI [$StudyInstanceUID]
+            (0010,0010) PN [$PatientName]
+            (0010,0020) LO [$PatientID]
+            (0010,1010) AS [$PatientAge]
+            (0010,0030) DA [$PatientBirthDate]
+            (0010,0040) CS [$PatientSex]
+            (0032,1032) PN [$RequestingPhysician]
+            (0032,1033) LO [$RequestingService]
+            (0008,0090) PN [$ReferringPhysicianName]
+            (0008,0080) LO [$InstitutionName]
+            (0032,1060) LO [$RequestedProcedureDescription]
+            (0040,0100) SQ (Sequence with undefined length)
+            (fffe,e000) na (Item with undefined length)
+                (0008,0060) CS [$Modality]
+                (0040,0001) AE [$ScheduledStationAETitle]
+                (0040,0002) DA [$ScheduledProcedureStepStartDate]
+                (0040,0003) TM [$ScheduledProcedureStepStartTime]
+            (fffe,e00d) na (ItemDelimitationItem)
+            (fffe,e0dd) na (SequenceDelimitationItem)
