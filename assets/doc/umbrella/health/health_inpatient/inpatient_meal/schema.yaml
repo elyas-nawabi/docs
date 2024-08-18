@@ -10,8 +10,30 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
-        
+        diet_belief: 
+          type: integer
+        diet_belief_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        diet_therapeutic: 
+          type: integer
+        diet_therapeutic_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        diet_vegetarian: 
+          type: integer
+        diet_vegetarian_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -33,7 +55,36 @@ schema:
 
 example:
     data:
-      
+      create_date: '2024-08-18T13:36:38.851474'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      diet_belief: 1
+      diet_belief_:
+        id: 1
+        name: Buddhist
+      diet_therapeutic: 1
+      diet_therapeutic_:
+        id: 1
+        name: Nothing by Mouth / NPO
+      diet_vegetarian: 1
+      diet_vegetarian_:
+        id: 1
+        name: Ovo vegetarian
+      id: 1
+      institution: 1
+      institution_:
+        id: 1
+        name: Milestone
+      name: 147
+      name_:
+        id: 147
+        name: abacavir (ABC)
+      rec_name: abacavir (ABC)
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201

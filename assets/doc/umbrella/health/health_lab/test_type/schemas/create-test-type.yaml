@@ -3,20 +3,12 @@ properties:
     type: boolean
   code: 
     type: string 
-  create_date:
-    type: string 
-    format: date 
   critearea:
     code: 
       type: string
-    create_date: 
-      type: string 
-      format: date 
     excluded: 
       type: boolean
     gnuhealth_lab_id: 
-      type: integer
-    id: 
       type: integer
     lab_warning_icon: 
       type: string
@@ -44,9 +36,6 @@ properties:
       type: integer
     warning:  
       type: boolean
-    write_date: 
-      type: string 
-      format: date 
   info: 
     type: string
   name: 
@@ -55,20 +44,13 @@ properties:
     type: integer
   rec_name: 
     type: string
-  write_date: 
-    type: string 
-    format: date 
 required:
 
 example:
   active: true
   code: CBC
-  create_date: '2024-05-27T12:29:16.990700'
   critearea:
     code: HGB
-    create_date: 
-      type: string 
-      format: date 
     excluded: false
     gnuhealth_lab_id: 
     id: 8
@@ -85,9 +67,7 @@ example:
     units: 4
     upper_limit: 16
     warning: false
-    write_date: 
   info: 
   name: COMPLETE BLOOD COUNT
   product_id: 2
   rec_name: COMPLETE BLOOD COUNT
-  write_date: 
