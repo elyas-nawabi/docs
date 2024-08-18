@@ -1,29 +1,17 @@
       properties:
         code:
             type: string
-        create_date: 
-            type: string 
-            format: date 
         name: 
             type: string
         rec_name: 
             type: string
-        write_date:
-            type: string
-            format: date 
         
       required:
           - 
       example:
         code:
           type: string
-        create_date: 
-          type: string 
-          format: date 
         name: 
           type: string
         rec_name:
           type: string
-        write_date:
-          type: string
-          format: date 

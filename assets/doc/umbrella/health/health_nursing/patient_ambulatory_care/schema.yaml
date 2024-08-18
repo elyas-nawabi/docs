@@ -10,6 +10,183 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        base_condition: 
+          type: integer
+        base_condition_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        bpm: 
+          type: integer
+        care_location: 
+          type: integer
+        care_location_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        diastolic: 
+          type: integer
+        evaluation: 
+          type: integer
+        evaluation_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        evolution: 
+          type: string
+        glycemia: 
+          type: integer
+        health_professional: 
+          type: integer
+        health_professional_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        medical_supplies: 
+          type: array
+        medicaments: 
+          type: array
+        moves:
+          type: array
+          properties:
+            assignation_required: 
+              type: boolean
+            company: 
+              type: integer
+            company_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            cost_price: 
+              type: number
+              format: decimal
+            cost_price_required: 
+              type: boolean
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            currency: 
+              type: integer
+            currency_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            delay: 
+              type: string 
+              format: date 
+            effective_date: 
+              type: string 
+              format: duration 
+            from_location: 
+              type: integer
+            from_location_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            internal_quantity: 
+              type: integer
+            lot: 
+              type: integer
+            lot_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            origin:
+              type: string
+            origin_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            origin_planned_date: 
+              type: string
+              format: date
+            planned_date: 
+              type: string
+              format: date
+            product: 
+              type: integer
+            product_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            product_cost_price: 
+              type: number 
+              format: decimal
+            product_uom_category: 
+              type: integer
+            product_uom_category_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            quantity: 
+              type: integer
+            rec_name: 
+              type: string
+            shipment: 
+              type: string
+            state: 
+              type: string
+            to_location: 
+              type: integer
+            to_location_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            unit: 
+              type: integer
+            unit_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            unit_price: 
+              type: integer
+            unit_price_company: 
+              type: integer
+            unit_price_required: 
+              type: boolean
+            unit_price_updated: 
+              type: boolean
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+          type: string
+        next_session: 
+          type: string
+          format: date 
+        ordering_professional: 
+          type: integer
+        ordering_professional_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        osat: 
+          type: integer
+        pain: 
+          type: boolean
+        pain_level: 
+          type: integer
+        patient: 
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        procedures: 
+          type: array
+        rec_name:
+          type: string
+        respiratory_rate: 
+          type: integer
+        session_end: 
+          type: string 
+          format: date
+        session_notes:
+          type: string
+        session_number: 
+          type: integer
+        session_start: 
+          type: string 
+          format: date
+        signed_by: 
+          type: integer
+        signed_by_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        state: 
+          type: string
+        systolic: 
+          type: integer
+        temperature:
+          type: number
+          format: decimal  
+        warning: 
+          type: boolean
+        warning_icon: 
+          type: string
+        weight: 
+          type: integer
         write_date:
           type: string
           format: date 
@@ -31,12 +208,121 @@ schema:
 
 example:
     data:
-      create_date: '2024-05-27T12:50:05.039883'
-      create_uid: 0
+      base_condition: 
+      base_condition_: {}
+      bpm: 
+      care_location: 
+      care_location_: {}
+      create_date: '2024-08-10T05:47:35.497684'
+      create_uid: 1
       create_uid_:
-        id: 0
-        name: Root
-      
+        id: 1
+        name: Administrator
+      diastolic: 
+      evaluation: 
+      evaluation_: {}
+      evolution: 
+      glycemia: 
+      health_professional: 1
+      health_professional_:
+        id: 1
+        name: ''
+      id: 1
+      medical_supplies: []
+      medicaments: []
+      moves:
+      - assignation_required: true
+        company: 1
+        company_:
+          id: 1
+          name: ''
+        cost_price: 
+        cost_price_required: true
+        create_date: '2024-08-10T05:47:59.770699'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        currency: 1
+        currency_:
+          id: 1
+          name: Afghani
+        delay: '0:00:00'
+        effective_date: 
+        from_location: 8
+        from_location_:
+          id: 8
+          name: Transit
+        id: 2
+        internal_quantity: 2
+        lot: 2
+        lot_:
+          id: 2
+          name: '1'
+        origin: gnuhealth.patient.ambulatory_care,1
+        origin_:
+          id: 1
+          name: AC 2024/001
+        origin_planned_date: 
+        planned_date: '2024-08-10'
+        product: 147
+        product_:
+          id: 147
+          name: abacavir (ABC)
+        product_cost_price: 
+        product_uom_category: 1
+        product_uom_category_:
+          id: 1
+          name: Units
+        quantity: 2
+        rec_name: 2 u abacavir (ABC)
+        shipment: stock.shipment.in.return,1
+        state: cancelled
+        to_location: 6
+        to_location_:
+          id: 6
+          name: Supplier
+        unit: 1
+        unit_:
+          id: 1
+          name: Unit
+        unit_price: 3000
+        unit_price_company: 3000
+        unit_price_required: true
+        unit_price_updated: true
+        write_date: '2024-08-10T06:23:46.784868'
+        write_uid: 1
+        write_uid_:
+          id: 1
+          name: Administrator
+      name: AC 2024/001
+      next_session: 
+      ordering_professional: 1
+      ordering_professional_:
+        id: 1
+        name: ''
+      osat: 
+      pain: true
+      pain_level: 
+      patient: 1
+      patient_:
+        id: 1
+        name: ''
+      procedures: []
+      rec_name: AC 2024/001
+      respiratory_rate: 
+      session_end: 
+      session_notes: ''
+      session_number: 
+      session_start: '2024-08-10T05:45:42'
+      signed_by: 
+      signed_by_: {}
+      state: draft
+      systolic: 
+      temperature: 
+      warning: false
+      warning_icon: 
+      weight: 
       write_date: 
       write_uid: 
       write_uid_: {}
