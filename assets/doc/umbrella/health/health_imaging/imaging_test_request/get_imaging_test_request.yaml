@@ -29,7 +29,33 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        context: 
+                          type: integer
+                        context_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        date: 
+                          type: string
+                          format: date
+                        doctor: 
+                          type: integer
+                        doctor_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        id: 
+                          type: integer
+                        patient: 
+                          type: integer
+                        patient_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        request: 
+                          type: string
+                        requested_test: 
+                          type: integer
+                        requested_test_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        urgent: 
+                          type: boolean
                         write_date:
                           type: string
                           format: date 
@@ -56,15 +82,36 @@
                       nullable: true
               example:
                 data:
-                    create_date: '2024-05-27T12:26:56.434108'
-                    create_uid: 0
+                  - context: 1
+                    context_:
+                      id: 1
+                      name: 'A00 : Cholera'
+                    create_date: '2024-08-19T15:40:28.008668'
+                    create_uid: 1
                     create_uid_:
-                      id: 0
-                      name: Root
-                    
+                      id: 1
+                      name: Administrator
+                    date: '2024-08-19T15:39:10'
+                    doctor: 1
+                    doctor_:
+                      id: 1
+                      name: 'A00 : Cholera'
+                    id: 1
+                    patient: 1
+                    patient_:
+                      id: 1
+                      name: Milestone
+                    rec_name: "**Urgent** (Milestone) // CONTEXT: A00 : Cholera"
+                    request: '001'
+                    requested_test: 1
+                    requested_test_:
+                      id: 1
+                      name: new_study
+                    urgent: true
                     write_date: 
                     write_uid: 
                     write_uid_: {}
+
                 error: null
                 pagination:
                   page: 1

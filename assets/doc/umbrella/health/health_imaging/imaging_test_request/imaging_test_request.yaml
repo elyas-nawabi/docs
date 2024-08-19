@@ -68,7 +68,7 @@ paths:
     $ref: 'post_delete_imaging_test_request.yaml'
   '/health-imaging/medical-imaging-requests/{obj_id}':
     $ref: 'get_put_imaging_test_request_by_id.yaml'
-  '/health-imaging/medical-imaging-requests/{obj_id}/requests':
+  '/health-imaging/medical-imaging-requests/{obj_id}/request':
     $ref: 'get_imaging_test_request_id.yaml'
   '/health-imaging/medical-imaging-requests/{obj_id}/generate-results':
     $ref: 'get_imaging_test_request_generate_result.yaml'
