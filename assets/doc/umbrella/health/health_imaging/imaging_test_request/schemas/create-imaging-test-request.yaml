@@ -1,8 +1,81 @@
       properties:
-       
+        comment: 
+          type: string
+        computed_age: 
+          type: string
+        context: 
+          type: integer
+        date: 
+          type: string 
+          format: date
+        doctor: 
+          type: integer
+        merge_id: 
+          type: string
+        patient: 
+          type: integer
+        rec_name:
+          type: string
+        request: 
+          type: string
+        request_line: 
+          type: string
+        requested_test: 
+          type: integer
+        service: 
+          type: integer
+        service_updated: 
+          type: string
+        show_worklist_text: 
+          type: boolean
+        state: 
+          type: string
+        urgent: 
+          type: boolean
+        worklist_text: 
+          type: string
        
         
       required:
           - 
       example:
-        
+        comment: 
+        computed_age: 
+        context: 1
+        date: '2024-08-19T15:39:10'
+        doctor: 1
+        merge_id: 1.2.836.0.1.3240043.7.198.99293174957540775760679610770776780505
+        patient: 1
+        rec_name: "**Urgent** (Milestone) // CONTEXT: A00 : Cholera"
+        request: '001'
+        request_line: 001-01-01
+        requested_test: 1
+        service: 
+        service_updated: unknown
+        show_worklist_text: false
+        state: draft
+        urgent: true
+        worklist_text: |
+          (0008,0005) SH [ISO_IR 192]
+          (0008,0201) SH [+0000]
+          (0008,0050) SH [001]
+          (0040,1001) SH [001-01-01]
+          (0020,000d) UI [1.2.836.0.1.3240043.7.198.99293174957540775760679610770776780505]
+          (0010,0010) PN [Milestone]
+          (0010,0020) LO [001]
+          (0010,1010) AS []
+          (0010,0030) DA []
+          (0010,0040) CS [M]
+          (0032,1032) PN [Milestone]
+          (0032,1033) LO []
+          (0008,0090) PN [Milestone]
+          (0008,0080) LO []
+          (0032,1060) LO [new_study]
+          (0040,0100) SQ (Sequence with undefined length)
+            (fffe,e000) na (Item with undefined length)
+              (0008,0060) CS [DX]
+              (0040,0001) AE [study_test]
+              (0040,0002) DA [20240819]
+              (0040,0003) TM [153910]
+            (fffe,e00d) na (ItemDelimitationItem)
+          (fffe,e0dd) na (SequenceDelimitationItem)
