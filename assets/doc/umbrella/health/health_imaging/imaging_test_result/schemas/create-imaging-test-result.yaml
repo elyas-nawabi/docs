@@ -1,8 +1,69 @@
       properties:
-       
+        comment: 
+          type: string
+        computed_age: 
+          type: integer
+        date: 
+          type: string
+          format: date
+        doctor: 
+          type: integer
+        images: 
+          type: array
+        merge_id: 1.2.836.0.1.3240043.7.198.99293174957540775760679610770776780505
+        number: 
+          type: string
+        order: 
+          type: string
+        patient:  
+          type: integer
+        rec_name:   
+          type: string
+        request: 
+          type: integer
+        request_date:
+          type: string
+          format: date
+        requested_test: 
+          type: integer
+        requested_test_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        studies: 
+          type: array
        
         
       required:
           - 
       example:
-        
+        comment: 
+        computed_age: 
+        create_date: '2024-08-19T17:40:26.847911'
+        create_uid: 1
+        create_uid_:
+            id: 1
+            name: Administrator
+        date: '2024-08-19T17:40:26'
+        doctor: 1
+        doctor_:
+            id: 1
+            name: Milestone
+        id: 1
+        images: []
+        merge_id: 1.2.836.0.1.3240043.7.198.99293174957540775760679610770776780505
+        number: TEST001
+        order: '001'
+        patient: 1
+        patient_:
+            id: 1
+            name: Milestone
+        rec_name: TEST001 (new_study)
+        request: 1
+        request_:
+            id: 1
+            name: "**Urgent** (Milestone) // CONTEXT: A00 : Cholera"
+        request_date: '2024-08-19T15:39:10'
+        requested_test: 1
+        requested_test_:
+            id: 1
+            name: new_study
+        studies: []
