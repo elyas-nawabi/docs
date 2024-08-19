@@ -71,11 +71,6 @@
         bba: false
         blood_type: 
         computed_age: '19'
-        create_date: '2024-08-03T07:54:51.681486'
-        create_uid: 1
-        create_uid_:
-          id: 1
-          name: Administrator
         current_pregnancy: true
         fetuses: 1
         gravida: 1
@@ -113,6 +108,3 @@
         stillbirths: 0
         warning: false
         warning_icon: 
-        write_date: 
-        write_uid: 
-        write_uid_: {}
