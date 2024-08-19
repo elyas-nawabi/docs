@@ -29,7 +29,32 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        
+                        date: 
+                          type: string 
+                          format: date
+                        doctor: 
+                          type: integer
+                        doctor_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        id: 
+                          type: integer
+                        number: 
+                          type: string
+                        order: 
+                          type: string
+                        patient: 
+                          type: integer
+                        patient_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        request_date: 
+                          type: string 
+                          format: date
+                        requested_test: 
+                          type: integer
+                        requested_test_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         write_date:
                           type: string
                           format: date 
@@ -56,15 +81,33 @@
                       nullable: true
               example:
                 data:
-                    create_date: '2024-05-27T12:26:56.434108'
-                    create_uid: 0
+                  - create_date: '2024-08-19T17:40:26.847911'
+                    create_uid: 1
                     create_uid_:
-                      id: 0
-                      name: Root
-                    
+                      id: 1
+                      name: Administrator
+                    date: '2024-08-19T17:40:26'
+                    doctor: 1
+                    doctor_:
+                      id: 1
+                      name: Milestone
+                    id: 1
+                    number: TEST001
+                    order: '001'
+                    patient: 1
+                    patient_:
+                      id: 1
+                      name: Milestone
+                    rec_name: TEST001 (new_study)
+                    request_date: '2024-08-19T15:39:10'
+                    requested_test: 1
+                    requested_test_:
+                      id: 1
+                      name: new_study
                     write_date: 
                     write_uid: 
                     write_uid_: {}
+
                 error: null
                 pagination:
                   page: 1
