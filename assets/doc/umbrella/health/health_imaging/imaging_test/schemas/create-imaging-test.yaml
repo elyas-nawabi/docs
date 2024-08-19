@@ -1,8 +1,29 @@
       properties:
-        
+        code:
+          type: string
+        active: 
+          type: boolean
+        aetitle: 
+          type: string
+        name: 
+          type: string
+        product:
+          type: integer
+        rec_name: 
+          type: string
+        test_type: 
+          type: integer
+        worklist_template: 
+          type: integer
        
-        
       required:
           - 
       example:
-       
+        active: true
+        aetitle: study_test
+        code: '009'
+        name: new_study
+        product: 62
+        rec_name: new_study
+        test_type: 5
+        worklist_template: 1
