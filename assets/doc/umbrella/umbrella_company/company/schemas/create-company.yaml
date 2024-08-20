@@ -1,11 +1,6 @@
       properties:
         cancel_invoice_out:
           type: boolean
-        create_date: 
-          type: string 
-          format: date 
-        create_uid: 
-          type: integer
         currency:
           type: integer
         employees:
@@ -45,18 +40,11 @@
           type: integer
         timezone:
           type: string
-        write_date:
-          type: string
-          format: date 
-        write_uid:
-          type: integer
   
       required:
           - 
       example:
         cancel_invoice_out: true
-        create_date: '2024-04-18T04:45:21.629821'
-        create_uid: 1
         currency: 1
         employees:
         - company: 1
@@ -75,5 +63,3 @@
         receivable: 0
         receivable_today: 0
         timezone: 'Asia/Kabul'
-        write_date: 
-        write_uid: 
