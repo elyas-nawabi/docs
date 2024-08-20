@@ -148,8 +148,6 @@
               type: string
             gender: 
               type: string
-            id:   
-              type: integer
             insurance: 
               type: array
             insurance_company_type: 
@@ -272,7 +270,6 @@
         electricity: true
         gas: false
         housing: '0'
-        id: 1
         internet: false
         latitude: 111.111
         longitude: 111.111
@@ -352,7 +349,6 @@
                 date_to: 
                 family: test
                 given: ahmad
-                id: 33
                 party: 39
                 prefix: 
                 rec_name: '33'

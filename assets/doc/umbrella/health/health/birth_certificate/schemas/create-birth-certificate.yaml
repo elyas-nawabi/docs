@@ -21,8 +21,6 @@
           type: string
         father: 
           type: integer
-        id: 
-          type: integer
         institution: 
           type: integer
         mother: 
@@ -55,7 +53,6 @@
         dob: '2001-07-25'
         document_digest: 
         father: 41
-        id: 1
         institution: 1
         mother: 40
         name: 39

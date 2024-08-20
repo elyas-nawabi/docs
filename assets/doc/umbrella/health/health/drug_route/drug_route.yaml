@@ -62,10 +62,10 @@ tags:
   - name: drug route
     description: drug route - drug route data management.
 paths:
-  '/health/drug-routes/search':
+  '/health/drug-administration-routes/search':
     $ref: 'get_drug_route.yaml'
-  '/health/drug-routes':
+  '/health/drug-administration-routes':
     $ref: 'post_delete_drug_route.yaml'
-  '/health/drug-routes/{obj_id}':
+  '/health/drug-administration-routes/{obj_id}':
     $ref: 'get_put_drug_route_by_id.yaml'
   

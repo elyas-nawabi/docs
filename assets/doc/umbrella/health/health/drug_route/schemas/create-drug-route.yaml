@@ -1,7 +1,15 @@
       properties:
-        
+        code: 
+            type: string
+        name: 
+            type: string
+        rec_name: 
+            type: string
   
       required:
           - 
       example:
+        code: AP
+        name: Apply Externally
+        rec_name: Apply Externally
         

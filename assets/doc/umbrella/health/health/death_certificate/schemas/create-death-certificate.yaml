@@ -52,7 +52,7 @@
           type: array
   
       required:
-          - cause
+        - cause
       example:
         age: 
         autopsy: true
