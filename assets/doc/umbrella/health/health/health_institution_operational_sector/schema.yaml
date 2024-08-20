@@ -3,7 +3,32 @@ schema:
     data:
       type: array
       properties:
-        
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        operational_sector: 
+          type: integer
+        operational_sector_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -18,7 +43,24 @@ schema:
 
 example:
     data:
-      
+      - create_date: '2024-08-20T15:35:17.605603'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        id: 1
+        name: 1
+        name_:
+          id: 1
+          name: Milestone
+        operational_sector: 1
+        operational_sector_:
+          id: 1
+          name: Cardiography
+        rec_name: '1'
+        write_date: 
+        write_uid: 
+        write_uid_: {}
     errors: null
     pagination: null
     status: 201

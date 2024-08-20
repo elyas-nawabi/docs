@@ -1,7 +1,14 @@
       properties:
-        
+        name: 
+          type: integer
+        operational_sector: 
+          type: integer
+        rec_name: 
+          type: string
   
       required:
           - 
       example:
-        
+        name: 1
+        operational_sector: 1
+        rec_name: '1'
