@@ -1,16 +1,16 @@
 post:
       tags:
-        - health institution
-      summary: Create a health institution.
-      description: Create a health institution.
-      operationId: postHealthInstitutionById
+        - health institution specialties
+      summary: Create a health institution specialty.
+      description: Create a health institution specialty.
+      operationId: postHealthInstitutionSpecialtyById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-health-institution.yaml'
+              $ref: 'schemas/create-health-institution-specialty.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - health institution
-      summary: Delete health institutions.
-      description: Delete health institutions.
-      operationId: deleteHealthInstitutionsById
+        - health institution specialties
+      summary: Delete health institution specialties.
+      description: Delete health institution specialties.
+      operationId: deleteHealthInstitutionsSpecialtyById
       requestBody:
         required: true
         content:

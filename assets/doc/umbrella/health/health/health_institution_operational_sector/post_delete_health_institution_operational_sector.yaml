@@ -1,8 +1,8 @@
 post:
       tags:
-        - health institution
-      summary: Create a health institution.
-      description: Create a health institution.
+        - health institution operational sector
+      summary: Create an Operational Sectors covered by Institution.
+      description: Create an Operational Sectors covered by Institution.
       operationId: postHealthInstitutionById
       requestBody:
         required: true
@@ -10,7 +10,7 @@ post:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-health-institution.yaml'
+              $ref: 'schemas/create-health-institution-operational-sector.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - health institution
-      summary: Delete health institutions.
-      description: Delete health institutions.
-      operationId: deleteHealthInstitutionsById
+        - health institution operational sector
+      summary: Delete Operational Sectors covered by Institution.
+      description: Delete Operational Sectors covered by Institution.
+      operationId: deleteHealthInstitutionsOSById
       requestBody:
         required: true
         content:

@@ -39,19 +39,19 @@
           - 
       example:
         beds: 
-      code: dfsd
-      extra_info: ''
-      heliport: false
-      institution_type: clinic
-      main_specialty: 
-      name: 1
-      operating_room: false
-      operational_sectors: []
-      or_number: 
-      picture: 
-      public_level: public
-      rec_name: Milestone
-      specialties: []
-      teaching: false
-      trauma_center: false
-      trauma_level: 
+        code: dfsd
+        extra_info: ''
+        heliport: false
+        institution_type: clinic
+        main_specialty: 
+        name: 1
+        operating_room: false
+        operational_sectors: []
+        or_number: 
+        picture: 
+        public_level: public
+        rec_name: Milestone
+        specialties: []
+        teaching: false
+        trauma_center: false
+        trauma_level: 
