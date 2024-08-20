@@ -1,18 +1,18 @@
-post:
+    get:
       tags:
-        - health institution
-      summary: Create a health institution.
-      description: Create a health institution.
-      operationId: postHealthInstitutionById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: 'schemas/create-health-institution.yaml'
+        - health institution operational sector
+      summary: Get one Operational Sectors covered by Institution.
+      description: Get one Operational Sectors covered by Institution.
+      operationId: getHealthInstitutionOSById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
       responses:
-        '201':
+        '200':
           description: OK
           content:
             application/json:
@@ -28,27 +28,39 @@ post:
             application/json:
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
-
-delete:
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
       tags:
-        - health institution
-      summary: Delete health institutions.
-      description: Delete health institutions.
-      operationId: deleteHealthInstitutionsById
+        - health institution operational sector
+      summary: Update an Operational Sectors covered by Institution.
+      description: Update an Operational Sectors covered by Institution.
+      operationId: updateHealthInstitutionOSById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+              $ref: 'schemas/create-health-institution-operational-sector.yaml'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -59,4 +71,4 @@ delete:
             application/json:
               schema:
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
-    
+  

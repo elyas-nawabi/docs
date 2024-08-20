@@ -1,6 +1,4 @@
       properties:
-        id: 
-          type: integer
         info: 
           type: string
         members:
@@ -13,7 +11,6 @@
       required:
           - 
       example:
-        id: 1
         info: ''
         name: Khanzada
         rec_name: Khanzada

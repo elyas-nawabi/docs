@@ -11,8 +11,6 @@
           type: string
         package: 
           type: integer
-        package_:
-          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
         rec_name: 
           type: string
   

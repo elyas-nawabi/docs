@@ -1,9 +1,9 @@
     post:
       tags:
-        - drug route
-      summary: Get drug route details.
-      description: Get drug route details.
-      operationId: getDrugRoutes
+        - health institution specialties
+      summary: Get health institution specialties details.
+      description: Get health institution specialties details.
+      operationId: getHealthInstitutionsSpecialties
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of drug routes.
+          description: List of health institution specialties.
           content:
             application/json:
               schema:
@@ -22,11 +22,9 @@
                     data:
                       type: array
                       properties:
-                        code: 
-                          type: string
                         create_date: 
-                          type: string
-                          format: date
+                          type: string 
+                          format: date 
                         create_uid: 
                           type: integer
                         create_uid_:
@@ -34,9 +32,15 @@
                         id: 
                           type: integer
                         name: 
-                          type: string
+                          type: integer
+                        name_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         rec_name: 
                           type: string
+                        specialty: 
+                          type: integer
+                        specialty_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                         write_date:
                           type: string
                           format: date 
@@ -44,6 +48,7 @@
                           type: integer
                         write_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+
                     errors:
                       type: object
                     pagination:
@@ -63,18 +68,25 @@
                       nullable: true
               example:
                 data:
-                  - code: AP
-                    create_date: '2024-06-25T04:29:29.607644'
-                    create_uid: 0
+                  - create_date: '2024-08-20T15:26:43.928439'
+                    create_uid: 1
                     create_uid_:
-                      id: 0
-                      name: Root
+                      id: 1
+                      name: Administrator
                     id: 1
-                    name: Apply Externally
-                    rec_name: Apply Externally
+                    name: 1
+                    name_:
+                      id: 1
+                      name: Milestone
+                    rec_name: Cardiology
+                    specialty: 6
+                    specialty_:
+                      id: 6
+                      name: Cardiology
                     write_date: 
                     write_uid: 
                     write_uid_: {}
+
                 error: null
                 pagination:
                   page: 1

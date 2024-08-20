@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: drug route
-    description: drug route - drug route data management.
+  - name: health institution specialties
+    description: health institution specialties - health institution specialties data management.
 paths:
-  '/health/drug-administration-routes/search':
-    $ref: 'get_drug_route.yaml'
-  '/health/drug-administration-routes':
-    $ref: 'post_delete_drug_route.yaml'
-  '/health/drug-administration-routes/{obj_id}':
-    $ref: 'get_put_drug_route_by_id.yaml'
+  '/health/specialties-by-institution/search':
+    $ref: 'get_health_institution_specialties.yaml'
+  '/health/specialties-by-institution':
+    $ref: 'post_delete_health_institution_specialties.yaml'
+  '/health/specialties-by-institution/{obj_id}':
+    $ref: 'get_put_health_institution_specialties_by_id.yaml'
   

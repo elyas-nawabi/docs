@@ -1,8 +1,6 @@
       properties:
         desc: 
             type: string
-        id:   
-            type: integer
         name: 
             type: string
         rec_name: 
@@ -12,6 +10,5 @@
           - 
       example:
         desc: milliliter
-        id: 1
         name: mL
         rec_name: mL

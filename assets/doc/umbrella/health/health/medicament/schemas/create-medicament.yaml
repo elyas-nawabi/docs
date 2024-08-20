@@ -62,26 +62,12 @@
         active_component: halothane
         adverse_reaction: 
         category: 5
-        category_:
-            id: 5
-            name: Medicaments / WHO essential Medicines / ANAESTHETICS / General anaesthetics
-            and oxygen / Inhalational medicines
         composition: 
-        create_date: '2024-05-27T12:49:44.432511'
-        create_uid: 0
-        create_uid_:
-            id: 0
-            name: Root
         dosage: 
         form: 
-        form_: {}
-        id: 1
         indications: 
         is_vaccine: false
         name: 16
-        name_:
-            id: 16
-            name: halothane
         notes: Inhalation
         overdosage: 
         pregnancy: 
@@ -90,13 +76,10 @@
         presentation: 
         rec_name: halothane
         route: 
-        route_: {}
         sol_conc: 
         sol_conc_unit: 
-        sol_conc_unit_: {}
         sol_vol: 
         sol_vol_unit: 
-        sol_vol_unit_: {}
         storage: 
         strength: 
         therapeutic_action: 
