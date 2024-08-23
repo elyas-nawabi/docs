@@ -1,18 +1,18 @@
     post:
       tags:
-        - reports 
-      summary: Generate  summary report.
-      description: Generate  summary report.
-      operationId: generateSR
+        - evaluations report 
+      summary: List of evaluations per doctor.
+      description: List of evaluations per doctor.
+      operationId: generatePerDoctor
       requestBody:
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-reports.yaml'
+              $ref: 'schemas/create-per-doctor.yaml'
       responses:
         '200':
-          description: Generate  summary report.
+          description: List of evaluations per doctor.
           content:
             application/json:
               schema:
@@ -21,12 +21,7 @@
                     data:
                       type: object
                       properties:
-                          file: 
-                            type: string
-                          format: 
-                            type: string
-                          name: 
-                            type; string
+                          
                     errors:
                       type: object
                     pagination:
@@ -46,15 +41,7 @@
                       nullable: true
               example:
                 data:
-                  file: JVBERi0xLjYKJcOkw7zDtsOfCjIgMCBvYmoKPDwvTGVuZ3RoIDMgMCBSL0ZpbHRlci9
-                        GbGF0ZURlY29kZT4+CnN0cmVhbQp4nO1aS4/bNhC++1foHMAKhxy+AMPAerMpmlvaBXoIemqbBsFui+SSv98Zkr
-                        L4EGU7EIoCXSzgtT7xG34i5yVZYoTh2+7LIAYxCukG7fUorR4cwugMDF//2P3yavgrjqC/r3/uTo875
-                        f2oBqv1CM4Pj78Pr9/C4IbHjx8OAo76IOQRDkId93gQeDQHoY97AsxRHoQ9qoNwxz
-                        199ce9PYi7cC4bcTr++vhu9/C4e19NixpH3Zn2Plh8cwRxEA/h+1v+BBG+PwQ8IGl
-                        kPAuMgzzuzaTpPiAqfD+x9DA8ByITeyJBGlpTY+1oJ5FykDgtDsyLI3lxJF+65Cvn
-                        67d8ytHCEHJHZ8Ok4p6viy9uL9OQB/54yx8YrzKsHF9OuBqZRvhZZJT40w+slhb
-                  format: pdf
-                  name: Summary Report
+                  
                 error: null
                 pagination:
                   page: 1

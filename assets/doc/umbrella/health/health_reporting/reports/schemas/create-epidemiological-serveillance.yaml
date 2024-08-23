@@ -1,5 +1,5 @@
       properties:
-        institution: 
+        health_condition: 
           type: integer
         start_date: 
           type: string
@@ -15,7 +15,7 @@
       required:
           - 
       example:
-        institution: 1
+        health_condition: 1
         start_date: '2024-01-08'
         end_date: '2024-01-23'
         demographics: true
