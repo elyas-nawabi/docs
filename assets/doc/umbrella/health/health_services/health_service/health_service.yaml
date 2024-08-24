@@ -68,4 +68,8 @@ paths:
     $ref: 'post_delete_health_service.yaml'
   '/health-services/health-services/{obj_id}':
     $ref: 'get_put_health_service_by_id.yaml'
+  '/health-services/health-services/{obj_id}/set-to-draft':
+    $ref: 'get_set_to_draft.yaml'
+  '/health-services/health-services/{obj_id}/create-health-service-invoice':
+    $ref: 'get_create_health_service_invoice.yaml'
   
