@@ -22,26 +22,61 @@
                     data:
                       type: array
                       properties:
-                        code:
+                        code: 
                           type: string
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        deceased: 
+                          type: boolean
                         deposit: 
                           type: integer
-                        id:
+                        federation_account: 
+                          type: string
+                        id: 
                           type: integer
-                        lang:
+                        internal_user: 
                           type: integer
-                        name:
+                        internal_user_: 
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        is_healthprof: 
+                          type: boolean
+                        is_institution: 
+                          type: boolean
+                        is_insurance_company: 
+                          type: boolean
+                        is_patient: 
+                          type: boolean
+                        is_person: 
+                          type: boolean
+                        is_pharmacy: 
+                          type: boolean
+                        lang: 
+                          type: integer
+                        lastname: 
                           type: string
-                        payable_today:
-                          type: number
-                          format: float
-                        rec_name:
+                        name: 
                           type: string
-                        receivable_today:
-                          type: number
-                          format: float
-                        tax_identifier:
+                        payable_today:  
+                          type: integer
+                        rec_name: 
                           type: string
+                        receivable_today:   
+                          type: integer
+                        tax_identifier: 
+                          type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+
                     errors:
                       type: object
                     pagination:
@@ -60,15 +95,37 @@
                       type: string
               example:
                 data:
-                  - code: "1"
+                  - code: 71c847ef-3c72-498e-a7c2-0bc427bd8fbc-Milestone
+                    create_date: '2024-08-23T05:04:14.073168'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    deceased: false
                     deposit: 0
-                    id: 1
-                    lang: 1
-                    name: "Party 1"
-                    payable_today: 0.0
-                    rec_name: Party 1
-                    receivable_today: 0.0
-                    tax_identifier: null
+                    federation_account: XXXYSQ260VIV
+                    id: 2
+                    internal_user: 
+                    internal_user_: {}
+                    is_healthprof: false
+                    is_institution: false
+                    is_insurance_company: false
+                    is_patient: true
+                    is_person: true
+                    is_pharmacy: false
+                    lang: 
+                    lastname: ''
+                    name: elyas
+                    payable_today: 0
+                    rec_name: elyas
+                    receivable_today: 0
+                    tax_identifier: 
+                    write_date: '2024-08-23T05:04:14.073168'
+                    write_uid: 1
+                    write_uid_:
+                      id: 1
+                      name: Administrator
+
                 errors: null
                 pagination:
                   page: 1
