@@ -1,0 +1,17 @@
+      properties:
+        category:
+            type: integer
+        code:
+            type: string
+        name:
+            type: string
+        rec_name: 
+            type: string
+        
+      required:
+          - 
+      example:
+        category: 1
+        code: d110
+        name: Consciousness
+        rec_name: Consciousness

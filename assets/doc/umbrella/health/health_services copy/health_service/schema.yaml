@@ -1,0 +1,114 @@
+schema:
+    properties:
+      assessment_date: '2024-08-25T19:10:24'
+      computed_age: 32​y ​0​m ​2​d​
+      create_date: '2024-08-25T19:11:38.923772'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      du: 1
+      du_:
+        id: 1
+        name: d01
+      education: '2'
+      fam_apgar_affection: '1'
+      fam_apgar_decisions: '1'
+      fam_apgar_discussion: '1'
+      fam_apgar_help: '2'
+      fam_apgar_score: 5
+      fam_apgar_timesharing: '0'
+      gender: m
+      health_professional: 1
+      health_professional_:
+        id: 1
+        name: elyas
+      housing: '1'
+      id: 1
+      income: m
+      notes: ''
+      occupation: 8
+      occupation_:
+        id: 8
+        name: Author
+      patient: 1
+      patient_:
+        id: 1
+        name: elyas
+      rec_name: '1'
+      ses: '1'
+      signed_by: 1
+      signed_by_:
+        id: 1
+        name: elyas
+      state: done
+      write_date: '2024-08-25T19:11:44.288827'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      assessment_date: '2024-08-25T19:10:24'
+      computed_age: 32​y ​0​m ​2​d​
+      create_date: '2024-08-25T19:11:38.923772'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      du: 1
+      du_:
+        id: 1
+        name: d01
+      education: '2'
+      fam_apgar_affection: '1'
+      fam_apgar_decisions: '1'
+      fam_apgar_discussion: '1'
+      fam_apgar_help: '2'
+      fam_apgar_score: 5
+      fam_apgar_timesharing: '0'
+      gender: m
+      health_professional: 1
+      health_professional_:
+        id: 1
+        name: elyas
+      housing: '1'
+      id: 1
+      income: m
+      notes: ''
+      occupation: 8
+      occupation_:
+        id: 8
+        name: Author
+      patient: 1
+      patient_:
+        id: 1
+        name: elyas
+      rec_name: '1'
+      ses: '1'
+      signed_by: 1
+      signed_by_:
+        id: 1
+        name: elyas
+      state: done
+      write_date: '2024-08-25T19:11:44.288827'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

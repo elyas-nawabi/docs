@@ -1,0 +1,74 @@
+      properties:
+        company: 
+          type: integer
+        desc: 
+          type: string
+        institution: 
+          type: integer
+        insurance_holder: 
+          type: integer
+        insurance_plan: 
+          type: integer
+        invoice_to: 
+          type: integer
+        name: 
+          type: string
+        patient: 
+          type: integer
+        rec_name:
+          type: string
+        service_date: 
+          type: string
+          format: date
+        service_line:
+          type: array
+          properties:
+            action_required: 
+              type: boolean
+            appointment: 
+              type: integer
+            desc: acetylsalicylic acid
+            from_date: '2024-02-15'
+            name: 
+              type: integer
+            product: 
+              type: integer
+            qty: 
+              type: integer
+            rec_name: 
+              type: string
+            remarks: 
+              type: string
+            to_date:
+              type: string
+              format: date
+            to_invoice: 
+              type: boolean
+        state: draft
+        
+      required:
+          - 
+      example:
+        company: 1
+        desc: test data
+        institution: 1
+        insurance_holder: 1
+        insurance_plan: 12
+        invoice_to: 3
+        name: SERV 2024/001
+        patient: 17
+        rec_name: SERV 2024/001
+        service_date: '2024-08-03'
+        service_line:
+        - action_required: true
+          appointment: 
+          desc: acetylsalicylic acid
+          from_date: '2024-02-15'
+          name: 1
+          product: 394
+          qty: 1
+          rec_name: acetylsalicylic acid (SERV 2024/001)
+          remarks: ''
+          to_date: '2024-02-20'
+          to_invoice: true
+        state: draft
