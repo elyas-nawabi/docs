@@ -1,17 +1,24 @@
       properties:
-        category:
+        comments: 
+            type: string
+        healthprof: 
             type: integer
-        code:
+        issue_date: 
             type: string
-        name:
-            type: string
+            format: date
+        patient: 
+            type: integer
+        prothesis: 
+            type: integer
         rec_name: 
             type: string
-        
       required:
           - 
       example:
-        category: 1
-        code: d110
-        name: Consciousness
-        rec_name: Consciousness
+      - comments: comments here...
+        name: Administrator
+        healthprof: 1
+        issue_date: '2024-08-04'
+        patient: 4
+        prothesis: 402
+        rec_name: '1'
