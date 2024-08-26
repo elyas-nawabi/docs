@@ -1,17 +1,36 @@
       properties:
-        category:
+        amputation_date: 
+            type: string 
+            format: date
+        amputation_level: 
+            type: string
+        body_structure: 
             type: integer
-        code:
+        comments: 
             type: string
-        name:
+        etiology: 
             type: string
+        healthprof: 
+            type: integer
+        limb: 
+            type: string
+        patient: 
+            type: integer
         rec_name: 
+            type: string
+        side: 
             type: string
         
       required:
           - 
       example:
-        category: 1
-        code: d110
-        name: Consciousness
-        rec_name: Consciousness
+      - amputation_date: '2024-08-04'
+        amputation_level: tr
+        body_structure: 1
+        comments: comments here...
+        etiology: trauma
+        healthprof: 1
+        limb: lower
+        patient: 4
+        rec_name: '1'
+        side: right
