@@ -303,7 +303,7 @@
     - code
     - name    
   example:
-    account_payable: 
+      account_payable: 
       account_receivable: 
       activation_date: '2024-08-23'
       active: true

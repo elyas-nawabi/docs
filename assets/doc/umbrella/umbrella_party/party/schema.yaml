@@ -450,59 +450,142 @@ schema:
 example:
     data:
       account_payable: 
-      account_receivable: 
-      activation_date: '2024-08-23'
+      account_receivable: 6
+      account_receivable_:
+        id: 6
+        name: Main Receivable
+      activation_date: '2024-06-25'
       active: true
       addresses:
       - active: true
-        city: ''
+        city: kabul
         contact_mechanisms: []
-        country: 
-        country_: {}
-        create_date: '2024-08-23T05:04:14.073168'
+        country: 1
+        country_:
+          id: 1
+          name: "\U0001F1E6\U0001F1D5 Afghanistan"
+        create_date: '2024-06-25T04:25:06.261382'
         create_uid: 1
         create_uid_:
           id: 1
           name: Administrator
         delivery: false
-        full_address: ''
-        id: 3
+        full_address: |-
+          afghanbuilding
+          taimani
+          1001 kabul
+          AFGHANISTAN
+        id: 1
         identifiers: []
-        invoice: false
-        is_school: false
-        is_work: false
-        name: ''
-        party: 2
+        invoice: 
+        is_school: 
+        is_work: 
+        name: afghanbuilding
+        party: 1
         party_:
-          id: 2
+          id: 1
           name: elyas
-        party_name: ''
-        postal_code: ''
-        rec_name: elyas
+        party_name: abcParty
+        postal_code: '1001'
+        rec_name: abcParty, afghanbuilding, taimani, 1001, kabul, A0
         relationship: 
         relative_id: 
         relative_id_: {}
         sequence: 
-        street: ''
-        street_single_line: 
+        street: taimani
+        street_single_line: taimani
         subdivision: 
         subdivision_: {}
         subdivision_types: "[]"
-        write_date: 
-        write_uid: 
-        write_uid_: {}
-      age: 
-      alternative_identification: false
+        write_date: '2024-08-23T05:17:01.987740'
+        write_uid: 1
+        write_uid_:
+          id: 1
+          name: Administrator
+      age: 32​y ​0​m ​4​d​
+      alternative_identification: 
       alternative_ids: []
-      bank_accounts: []
+      bank_accounts:
+      - active: true
+        bank: 5
+        bank_:
+          id: 5
+          name: elyas
+        create_date: '2024-08-20T17:09:24.185395'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        currency: 1
+        currency_:
+          id: 1
+          name: Afghani
+        id: 1
+        numbers: []
+        owners:
+        - code: '1'
+          create_date: '2024-06-25T04:25:06.261382'
+          create_uid: 1
+          create_uid_:
+            id: 1
+            name: Administrator
+          deposit: 0
+          id: 1
+          lang: 
+          name: elyas
+          payable_today: 0
+          rec_name: elyas
+          receivable_today: 0
+          tax_identifier: 
+          write_date: '2024-08-26T11:58:13.564413'
+          write_uid: 1
+          write_uid_:
+            id: 1
+            name: Administrator
+        rec_name: "(1) @ elyas [AFN]"
+        write_date: '2024-08-20T17:13:57.121972'
+        write_uid: 1
+        write_uid_:
+          id: 1
+          name: Administrator
       birth_certificate: 
       birth_certificate_: {}
       categories: []
       citizenship: 
       citizenship_: {}
-      code: 71c847ef-3c72-498e-a7c2-0bc427bd8fbc-Milestone
-      contact_mechanisms: []
-      create_date: '2024-08-23T05:04:14.073168'
+      code: '1'
+      contact_mechanisms:
+      - active: true
+        address: 2
+        address_:
+          id: 2
+          name: Milestone, 12, 2, 10001, Kabul
+        comment: 
+        create_date: '2024-08-26T11:44:21.185280'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        emergency: false
+        id: 4
+        invoice: false
+        language: 9
+        name: Test
+        party: 1
+        party_:
+          id: 1
+          name: elyas
+        rec_name: Test <77777777>
+        remarks: 
+        sequence: 
+        type: phone
+        value: '77777777'
+        write_date: '2024-08-26T11:44:21.185280'
+        write_uid: 1
+        write_uid_:
+          id: 1
+          name: Administrator
+      create_date: '2024-06-25T04:25:06.261382'
       create_target: true
       create_uid: 1
       create_uid_:
@@ -512,69 +595,49 @@ example:
       customer_location_:
         id: 7
         name: Customer
-      customer_payment_term: 
-      customer_payment_term_: {}
+      customer_payment_term: 1
+      customer_payment_term_:
+        id: 1
+        name: payment001
       customer_tax_rule: 
       death_certificate: 
       death_certificate_: {}
-      deceased: false
+      deceased: 
       delivered_to_warehouses: []
       deposit: 0
-      dob: 
+      dob: '1992-08-23'
       dod: 
-      du: 
-      du_: {}
-      du_address: 
-      est_dob: false
+      du: 1
+      du_:
+        id: 1
+        name: d01
+      du_address: "kabul01 1, 123, \nKabul, Afghanistan,  - 1007, "
+      est_dob: true
       est_years: 
       ethnic_group: 
       ethnic_group_: {}
       father: 
       father_: {}
-      fed_country: ''
-      federation_account: XXXYSQ260VIV
+      fed_country: 
+      federation_account: 
       gender: m
-      id: 2
+      id: 1
       identifiers: []
-      insurance:
-      - category: yearly
-        company: 3
-        company_:
-          id: 3
-          name: milestone
-        create_date: '2024-08-23T05:10:33.258277'
-        create_uid: 1
-        create_uid_:
-          id: 1
-          name: Administrator
-        id: 1
-        insurance_type: private
-        member_exp: '2027-10-23'
-        member_since: '2024-08-04'
-        name: 2
-        name_:
-          id: 2
-          name: elyas
-        notes: ''
-        number: i002
-        plan_id: 
-        plan_id_: {}
-        rec_name: 'milestone : i002'
-        write_date: 
-        write_uid: 
-        write_uid_: {}
+      insurance: []
       insurance_company_type: 
-      internal_user: 
-      internal_user_: {}
-      is_healthprof: false
-      is_institution: false
-      is_insurance_company: false
+      internal_user: 1
+      internal_user_:
+        id: 1
+        name: Administrator
+      is_healthprof: true
+      is_institution: true
+      is_insurance_company: 
       is_patient: true
       is_person: true
-      is_pharmacy: false
+      is_pharmacy: 
       lang: 
-      lastname: ''
-      marital_status: 
+      lastname: 
+      marital_status: m
       mother: 
       mother_: {}
       name: elyas
@@ -582,19 +645,19 @@ example:
       payable: 0
       payable_today: 0
       person_names:
-      - create_date: '2024-08-23T05:04:14.073168'
+      - create_date: '2024-08-23T05:13:11.325854'
         create_uid: 1
         create_uid_:
           id: 1
           name: Administrator
         date_from: 
         date_to: 
-        family: ''
+        family: 
         given: elyas
-        id: 1
-        party: 2
+        id: 2
+        party: 1
         prefix: 
-        rec_name: '1'
+        rec_name: '2'
         suffix: 
         use: official
         write_date: 
@@ -604,19 +667,21 @@ example:
       rec_name: elyas
       receivable: 0
       receivable_today: 0
-      ref: YSQ260VIV
+      ref: '001'
       residence: 
       residence_: {}
       supplier_location: 6
       supplier_location_:
         id: 6
         name: Supplier
-      supplier_payment_term: 
-      supplier_payment_term_: {}
+      supplier_payment_term: 1
+      supplier_payment_term_:
+        id: 1
+        name: payment001
       supplier_tax_rule: 
       tax_identifier: 
-      unidentified: false
-      write_date: '2024-08-23T05:04:14.073168'
+      unidentified: true
+      write_date: '2024-08-26T11:58:13.564413'
       write_uid: 1
       write_uid_:
         id: 1
