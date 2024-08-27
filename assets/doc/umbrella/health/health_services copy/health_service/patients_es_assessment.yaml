@@ -59,13 +59,16 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: iss
-    description: iss - iss data management.
+  - name: patients es assessment
+    description: patients es assessment - patient _es assessment data management.
 paths:
-  '/health-iss/injury-surveillance-system-registration/search':
-    $ref: 'get_iss.yaml'
-  '/health-iss/injury-surveillance-system-registration':
-    $ref: 'post_delete_iss.yaml'
-  '/health-iss/injury-surveillance-system-registration/{obj_id}':
-    $ref: 'get_put_iss_by_id.yaml'
+  '/health-socioeconomics/socioeconomics-assessments/search':
+    $ref: 'get_patients_es_assessment.yaml'
+  '/health-socioeconomics/socioeconomics-assessments':
+    $ref: 'post_delete_patients_es_assessment.yaml'
+  '/health-socioeconomics/socioeconomics-assessments/{obj_id}':
+    $ref: 'get_put_patients_es_assessment_by_id.yaml'
+  '/health-socioeconomics/socioeconomics-assessments/{obj_id}/done':
+    $ref: 'get_done.yaml'
+
   

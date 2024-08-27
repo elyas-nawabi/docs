@@ -1,9 +1,9 @@
     post:
       tags:
-        - paper archive
-      summary: Get paper archive details.
-      description: Get paper archive details.
-      operationId: getPaperArchives
+        - iss
+      summary: Get iss details.
+      description: Get iss details.
+      operationId: getISS
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of paper archives.
+          description: List of isss.
           content:
             application/json:
               schema:
@@ -30,30 +30,7 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        comments: 
-                          type: string
-                        current_location: 
-                          type: integer
-                        current_location_:  
-                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        hc_status: 
-                          type: string
-                        id: 
-                          type: integer
-                        identification_code: 
-                          type: string
-                        legacy: 
-                          type: string
-                        location: 
-                          type: integer
-                        location_:
-                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        patient: 
-                          type: integer
-                        patient_:
-                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                        rec_name: 
-                          type: string
+                        
                         write_date:
                           type: string
                           format: date 
@@ -80,30 +57,7 @@
                       nullable: true
               example:
                 data:
-                  - comments: comments here...
-                    create_date: '2024-08-03T05:45:19.603741'
-                    create_uid: 1
-                    create_uid_:
-                      id: 1
-                      name: Administrator
-                    current_location: 
-                    current_location_: {}
-                    hc_status: archived
-                    id: 1
-                    identification_code: 
-                    legacy: '001'
-                    location: 1
-                    location_:
-                      id: 1
-                      name: emergency
-                    patient: 17
-                    patient_:
-                      id: 17
-                      name: Milestone
-                    rec_name: '1'
-                    write_date: 
-                    write_uid: 
-                    write_uid_: {}
+                 
                 error: null
                 pagination:
                   page: 1

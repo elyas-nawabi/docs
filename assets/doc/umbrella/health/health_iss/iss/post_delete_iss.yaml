@@ -1,16 +1,16 @@
 post:
       tags:
-        - paper archive
-      summary: Create a paper archive.
-      description: Create a paper archive.
-      operationId: postPaperArchiveById
+        - iss
+      summary: Create a iss.
+      description: Create a iss.
+      operationId: postISSById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-paper-archive.yaml'
+              $ref: 'schemas/create-iss.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - paper archive
-      summary: Delete paper archive.
-      description: Delete paper archive.
-      operationId: deletePaperArchiveById
+        - iss
+      summary: Delete iss.
+      description: Delete iss.
+      operationId: deleteISSById
       requestBody:
         required: true
         content:

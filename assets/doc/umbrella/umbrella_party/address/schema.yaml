@@ -43,6 +43,8 @@ schema:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
         delivery:
           type: integer 
+        full_address:
+          type: string
         id: 
           type: integer
         invoice:
@@ -73,6 +75,8 @@ schema:
           type: integer
         street: 
           type: string 
+        street_single_line:
+          type: string
         subdivision: 
           type: integer
         subdivision_: 
@@ -136,12 +140,14 @@ example:
         name: Party 1
       party_name: ptupdate
       postal_code: '1004'
+      full_address: afghanbuilding\ntaimani\n1001 kabul\nAFGHANISTAN
       rec_name: patient 1
       relationship: null
       relative_id: null
       relative_id_: {}
       sequence: 1
       street: street 3
+      street_single_line: taimani
       subdivision: 3
       subdivision_:
         id: 3

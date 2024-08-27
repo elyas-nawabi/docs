@@ -1,16 +1,16 @@
 post:
       tags:
-        - body function
-      summary: Create a body function.
-      description: Create a body function.
-      operationId: postBodyFunctionById
+        - patient prothesis
+      summary: Create a patient prothesis.
+      description: Create a patient prothesis.
+      operationId: postPatientProthesisById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-body-function.yaml'
+              $ref: 'schemas/create-patient-prothesis.yaml'
       responses:
         '201':
           description: OK
@@ -31,10 +31,10 @@ post:
 
 delete:
       tags:
-        - body function
-      summary: Delete body functions.
-      description: Delete body functions.
-      operationId: deletebody functionsById
+        - patient prothesis
+      summary: Delete patient prothesis.
+      description: Delete patient prothesis.
+      operationId: deletePatientProthesisById
       requestBody:
         required: true
         content:

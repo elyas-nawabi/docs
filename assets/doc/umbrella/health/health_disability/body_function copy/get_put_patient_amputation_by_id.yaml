@@ -1,9 +1,9 @@
     get:
       tags:
-        - patient prothesis
-      summary: Get one patient prothesis.
-      description: Get one patient prothesis.
-      operationId: getPatientProthesisById
+        - patient amputation
+      summary: Get one patient amputation.
+      description: Get one patient amputation.
+      operationId: getPatientAmputationById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - patient prothesis
-      summary: Update a patient prothesis.
-      description: Update a patient prothesis.
-      operationId: updatePatientProthesisById
+        - patient amputation
+      summary: Update an patient amputation.
+      description: Update an patient amputation.
+      operationId: updatePatientAmputationById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-patient-prothesis.yaml'
+              $ref: 'schemas/create-patient-amputation.yaml'
       responses:
         '200':
           description: OK
