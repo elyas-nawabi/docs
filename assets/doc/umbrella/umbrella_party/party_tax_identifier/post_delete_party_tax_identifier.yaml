@@ -1,16 +1,16 @@
  post:
       tags:
-        - party
-      summary: Create a party.
-      description: Create a party.
-      operationId: postPartyById
+        - party tax identifier
+      summary: Create a party tax identifier.
+      description: Create a party tax identifier.
+      operationId: postPartyTaxIdentifierById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-party.yaml'
+              $ref: 'schemas/create-party-tax-identifier.yaml'
       responses:
         '201':
           description: OK
@@ -32,10 +32,10 @@
 
  delete:
       tags:
-        - party
+        - party tax identifier
       summary: Delete parties.
       description: Delete parties.
-      operationId: deletePartiesById
+      operationId: deletePartyTaxIdentifierById
       requestBody:
         required: true
         content:

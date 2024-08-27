@@ -1,9 +1,9 @@
     post:
       tags:
-        - party tax identifier
-      summary: Get party tax identifier details.
-      description: Get party tax identifier details.
-      operationId: getPartyTaxIdentifier
+        - party
+      summary: Get party details.
+      description: Get party details.
+      operationId: getParties
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of party tax identifiers.
+          description: List of parties.
           content:
             application/json:
               schema:

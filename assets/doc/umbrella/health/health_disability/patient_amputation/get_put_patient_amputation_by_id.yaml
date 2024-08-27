@@ -1,9 +1,9 @@
     get:
       tags:
-        - body function
-      summary: Get one body function.
-      description: Get one body function.
-      operationId: getBodyFunctionById
+        - patient amputation
+      summary: Get one patient amputation.
+      description: Get one patient amputation.
+      operationId: getPatientAmputationById
       parameters:
         - name: obj_id
           in: path
@@ -36,10 +36,10 @@
                 $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - body function
-      summary: Update an body function.
-      description: Update an body function.
-      operationId: updatebodyFunctionById
+        - patient amputation
+      summary: Update an patient amputation.
+      description: Update a patient amputation.
+      operationId: updatePatientAmputationById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-body-function.yaml'
+              $ref: 'schemas/create-patient-amputation.yaml'
       responses:
         '200':
           description: OK

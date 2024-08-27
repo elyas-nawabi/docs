@@ -59,13 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: body function
-    description: body function - body function data management.
+  - name: patient prothesis
+    description: patient prothesis - patient prothesis data management.
 paths:
-  '/health-disability/body-functions/search':
-    $ref: 'get_body_function.yaml'
-  '/health-disability/body-functions':
-    $ref: 'post_delete_body_function.yaml'
-  '/health-disability/body-functions/{obj_id}':
-    $ref: 'get_put_body_function_by_id.yaml'
+  '/health-disability/protheses/search':
+    $ref: 'get_patient_prothesis.yaml'
+  '/health-disability/protheses':
+    $ref: 'post_delete_patient_prothesis.yaml'
+  '/health-disability/protheses/{obj_id}':
+    $ref: 'get_put_patient_prothesis_by_id.yaml'
   

@@ -59,13 +59,15 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: paper archive
-    description: paper archive - paper archive data management.
+  - name: health ophthalmology
+    description: health ophthalmology - health ophthalmology data management.
 paths:
-  '/health-archives/archives/search':
-    $ref: 'get_paper_archive.yaml'
-  '/health-archives/archives':
-    $ref: 'post_delete_paper_archive.yaml'
-  '/health-archives/archives/{obj_id}':
-    $ref: 'get_put_paper_archive_by_id.yaml'
+  '/health-ophthalmology/ophthalmology-evaluations/search':
+    $ref: 'get_ophthalmology_evaluation.yaml'
+  '/health-ophthalmology/ophthalmology-evaluations':
+    $ref: 'post_delete_ophthalmology_evaluation.yaml'
+  '/health-ophthalmology/ophthalmology-evaluations/{obj_id}':
+    $ref: 'get_put_ophthalmology_evaluation_by_id.yaml'
+  '/health-ophthalmology/ophthalmology-evaluations/{obj_id}/done':
+    $ref: 'get_done.yaml'
   

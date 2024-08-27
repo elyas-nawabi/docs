@@ -1,9 +1,9 @@
     get:
       tags:
-        - health service
-      summary: Create Health Service Invoice.
-      description: Create Health Service Invoice.
-      operationId: getCreateHealthServiceInvoice
+        - patients es assessment
+      summary: Set patients es assessment to draft state.
+      description: Set patients es assessment to draft state.
+      operationId: getHealthServiceDraft
       parameters:
         - name: obj_id
           in: path
@@ -36,7 +36,6 @@
                    pagination: null
                    status: 200
                    success_message: null
-                
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
