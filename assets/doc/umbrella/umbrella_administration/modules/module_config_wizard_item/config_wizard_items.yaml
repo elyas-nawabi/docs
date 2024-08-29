@@ -59,14 +59,13 @@ info:
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: sequence
-    description: sequence - sequence data management.
+  - name: config wizard items
+    description: config wizard items - config wizard items data management.
 paths:
-  '/administration/sequences/search':
-    $ref: 'get_sequence.yaml'
-  '/administration/sequences':
-    $ref: 'post_delete_sequence.yaml'
-  '/administration/sequences/{obj_id}':
-    $ref: 'get_put_sequence_by_id.yaml'
-    
+  '/administration/config-wizard-items/search':
+    $ref: 'get_config_wizard_items.yaml'
+  '/administration/config-wizard-items':
+    $ref: 'post_delete_config_wizard_items.yaml'
+  '/administration/config-wizard-items/{obj_id}':
+    $ref: 'get_put_config_wizard_items_by_id.yaml'
   

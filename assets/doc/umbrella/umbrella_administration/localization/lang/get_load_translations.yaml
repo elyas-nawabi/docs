@@ -17,7 +17,24 @@
           content:
             application/json:
               schema:
-                $ref: 'schema.yaml'
+                type: object
+                properties:
+                  data: 
+                    type: object
+                  error: 
+                    type: object
+                  pagination:
+                    type: object
+                  status: 
+                    type: integer
+                  success_message:
+                    type: object
+              example:
+                data: null
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -27,10 +44,10 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
         '404':
           description: 404 Not Found.
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'

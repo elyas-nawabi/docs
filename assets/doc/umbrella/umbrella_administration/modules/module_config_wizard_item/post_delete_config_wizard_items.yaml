@@ -1,61 +1,18 @@
-    get:
+post:
       tags:
-        - sequence
-      summary: Get one sequence.
-      description: Get one sequence.
-      operationId: getSequenceById
-      parameters:
-        - name: obj_id
-          in: path
-          schema:
-            type: integer
-          rquired: true
-          example: 1
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: 'schema.yaml'
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-        '404':
-          description: 404 Not Found.
-          content:
-            application/json:
-              schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
-    put:
-      tags:
-        - sequence
-      summary: Update a sequence.
-      description: Update a sequence.
-      operationId: updateSequenceById
-      parameters:
-        - name: obj_id
-          rquired: true
-          in: path
-          schema:
-            type: integer
-          example: 19
+        - config wizard items
+      summary: Create a config wizard items.
+      description: Create a config wizard items.
+      operationId: postConfigWizardItemsById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-sequence.yaml'
+              $ref: 'schemas/create-config-wizard-items.yaml'
       responses:
-        '200':
+        '201':
           description: OK
           content:
             application/json:
@@ -70,5 +27,36 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+      tags:
+        - config wizard items
+      summary: Delete config wizard items.
+      description: Delete config wizard items.
+      operationId: deleteConfigWizardItemsById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
   

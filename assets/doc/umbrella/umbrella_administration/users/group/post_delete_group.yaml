@@ -1,16 +1,16 @@
 post:
       tags:
-        - sequence
-      summary: Create a sequence.
-      description: Create a sequence.
-      operationId: postSequenceById
+        - group
+      summary: Create a group.
+      description: Create a group.
+      operationId: postGroupById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-sequence.yaml'
+              $ref: 'schemas/create-group.yaml'
       responses:
         '201':
           description: OK
@@ -27,28 +27,28 @@ post:
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
 
 delete:
   tags:
-    - sequence
-  summary: Delete sequences.
-  description: Delete sequences.
-  operationId: deleteSequencesById
+    - group
+  summary: Delete groups.
+  description: Delete groups.
+  operationId: deleteGroupsById
   requestBody:
     required: true
     content:
       application/json:
         schema:
           type: object
-          $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+          $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+            $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
     '401':
       description: >-
         401 Unauthorized: The server could not verify that you are
@@ -58,4 +58,4 @@ delete:
       content:
         application/json:
           schema:
-            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'

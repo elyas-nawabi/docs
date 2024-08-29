@@ -1,6 +1,6 @@
     get:
       tags:
-        - Lang
+        - lang
       summary: Get Lang details.
       description: Get Lang details.
       operationId: getLangs
@@ -11,14 +11,13 @@
             type: integer
           rquired: true
           example: 1
-      
       responses:
         '200':
           description: List of Langs.
           content:
             application/json:
               schema:
-                type: object
+                type: array
                 properties:
                   code: 
                     type: string
@@ -47,7 +46,7 @@
                   write_uid_:
                     $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
               example:
-                code: en
+              - code: en
                 create_date: '2024-06-24T12:35:58.699428'
                 create_uid: 0
                 create_uid_:
@@ -72,5 +71,5 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
     

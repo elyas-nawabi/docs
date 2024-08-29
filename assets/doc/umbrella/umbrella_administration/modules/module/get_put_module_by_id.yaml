@@ -1,9 +1,9 @@
     get:
       tags:
-        - sequence restrict
-      summary: Get one sequence restrict.
-      description: Get one sequence restrict.
-      operationId: getSequenceRestrictById
+        - module
+      summary: Get one module.
+      description: Get one module.
+      operationId: getModuleById
       parameters:
         - name: obj_id
           in: path
@@ -27,19 +27,19 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
         '404':
           description: 404 Not Found.
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - sequence restrict
-      summary: Update a sequence restrict.
-      description: Update a sequence restrict.
-      operationId: updateSequenceRestrictById
+        - module
+      summary: Update a module.
+      description: Update a module.
+      operationId: updateModuleById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-sequence-strict.yaml'
+              $ref: 'schemas/create-module.yaml'
       responses:
         '200':
           description: OK
@@ -70,5 +70,5 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
   

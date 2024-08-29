@@ -1,23 +1,23 @@
     post:
       tags:
-        - sequence
-      summary: Get sequence details.
-      description: Get sequence details.
-      operationId: getSequences
+        - group
+      summary: Get group details.
+      description: Get group details.
+      operationId: getGroups
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of sequences.
+          description: List of groups.
           content:
             application/json:
               schema:
-                $ref: 'schema_all.yaml'
+
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -27,5 +27,5 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
     

@@ -10,7 +10,7 @@
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
           description: List of sequence type.
@@ -27,6 +27,6 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
     
    

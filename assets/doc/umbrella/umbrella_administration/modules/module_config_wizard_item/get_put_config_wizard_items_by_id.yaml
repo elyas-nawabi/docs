@@ -1,9 +1,9 @@
     get:
       tags:
-        - sequence
-      summary: Get one sequence.
-      description: Get one sequence.
-      operationId: getSequenceById
+        - config wizard items
+      summary: Get one config wizard items.
+      description: Get one config wizard items.
+      operationId: getConfigWizardItemsById
       parameters:
         - name: obj_id
           in: path
@@ -27,19 +27,19 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
         '404':
           description: 404 Not Found.
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
     put:
       tags:
-        - sequence
-      summary: Update a sequence.
-      description: Update a sequence.
-      operationId: updateSequenceById
+        - config wizard items
+      summary: Update a config wizard items.
+      description: Update a config wizard items.
+      operationId: updateConfigWizardItemsById
       parameters:
         - name: obj_id
           rquired: true
@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-sequence.yaml'
+              $ref: 'schemas/create-config-wizard-items.yaml'
       responses:
         '200':
           description: OK
@@ -70,5 +70,5 @@
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
   

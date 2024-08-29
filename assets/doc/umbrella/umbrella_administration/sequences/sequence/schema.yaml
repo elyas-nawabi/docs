@@ -13,7 +13,7 @@ schema:
         create_uid: 
           type: integer
         create_uid_:
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
         digits:
           type: integer
         id:
@@ -49,7 +49,7 @@ schema:
         write_uid:
           type: integer
         write_uid_:
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
