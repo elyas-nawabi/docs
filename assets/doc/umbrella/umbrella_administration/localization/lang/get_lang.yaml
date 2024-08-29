@@ -1,0 +1,75 @@
+    get:
+      tags:
+        - lang
+      summary: Get Lang details.
+      description: Get Lang details.
+      operationId: getLangs
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: List of Langs.
+          content:
+            application/json:
+              schema:
+                type: array
+                properties:
+                  code: 
+                    type: string
+                  create_date: 
+                    type: string 
+                    format: date 
+                  create_uid: 
+                    type: integer
+                  create_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  direction: 
+                    type: string
+                  id: 
+                    type: integer
+                  name: 
+                    type: string
+                  rec_name: 
+                    type: string
+                  translatable: 
+                    type: boolean
+                  write_date:
+                    type: string
+                    format: date 
+                  write_uid:
+                    type: integer
+                  write_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              example:
+              - code: en
+                create_date: '2024-06-24T12:35:58.699428'
+                create_uid: 0
+                create_uid_:
+                  id: 0
+                  name: Root
+                direction: ltr
+                id: 1
+                name: English
+                rec_name: English
+                translatable: true
+                write_date: '2024-08-28T13:10:20.298072'
+                write_uid: 0
+                write_uid_:
+                  id: 0
+                  name: Root
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    

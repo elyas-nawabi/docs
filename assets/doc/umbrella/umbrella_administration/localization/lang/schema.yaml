@@ -1,0 +1,125 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        active:
+          type: boolean
+        code:
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        am: 
+          type: string
+        date: 
+          type: string
+          format: date
+        decimal_point: 
+          type: string
+        direction: 
+          type: string
+        grouping: 
+          type: string
+        id: 
+          type: integer
+        mon_decimal_point:
+          type: string
+        mon_grouping: 
+          type: string
+        mon_thousands_sep:
+          type: string
+        n_cs_precedes: 
+          type: boolean
+        n_sep_by_space: 
+          type: boolean
+        n_sign_posn: 
+          type: integer
+        name: English
+        negative_sign: 
+          type: string
+        p_cs_precedes: 
+          type: boolean
+        p_sep_by_space: 
+          type: boolean
+        p_sign_posn: 
+          type: integer
+        parent: 
+          type: string
+        pg_text_search: 
+          type: string
+        pm: 
+          type: string
+        positive_sign: 
+          type: string
+        rec_name: 
+          type: string
+        thousands_sep: 
+          type: string
+        translatable: 
+          type: boolean
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      active: true
+      am: AM
+      code: en
+      create_date: '2024-06-24T12:35:58.699428'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      date: "%m/%d/%Y"
+      decimal_point: "."
+      direction: ltr
+      grouping: "[3, 3, 0]"
+      id: 1
+      mon_decimal_point: "."
+      mon_grouping: "[3, 3, 0]"
+      mon_thousands_sep: ","
+      n_cs_precedes: true
+      n_sep_by_space: false
+      n_sign_posn: 1
+      name: English
+      negative_sign: "-"
+      p_cs_precedes: true
+      p_sep_by_space: false
+      p_sign_posn: 1
+      parent: 
+      pg_text_search: 
+      pm: PM
+      positive_sign: ''
+      rec_name: English
+      thousands_sep: ","
+      translatable: true
+      write_date: '2024-08-28T13:10:20.298072'
+      write_uid: 0
+      write_uid_:
+        id: 0
+        name: Root
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null
