@@ -1,0 +1,97 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        active:
+          type: boolean
+        code:
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        digits:
+          type: integer
+        id:
+          type: integer
+        name:
+          type: string
+        numeric_code:
+          type: string
+        rate:
+          type: number
+          format: decimal
+        rates:
+          type: array
+          properties:
+            date: 
+              type: string
+              format: date
+            id: 
+              type: integer
+            rate: 
+              type: number
+              format: decimal
+        rec_name:
+          type: string
+        rounding:
+          type: number
+          format: float
+        symbol:
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      active: true
+      company: 
+      company_: {}
+      create_date: '2024-04-18T04:43:03.267809'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      id: 1
+      name: Party
+      number_increment: 1
+      number_next: 2
+      padding: 0
+      prefix: 
+      preview: '2'
+      rec_name: Party
+      sequence_type: 1
+      sequence_type_:
+        id: 1
+        name: Party
+      suffix: 
+      type: incremental
+      write_date: '2024-04-18T04:43:03.267809'
+      write_uid: 0
+      write_uid_:
+        id: 0
+        name: Root
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null
