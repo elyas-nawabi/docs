@@ -1,8 +1,127 @@
 properties:
-  
+  active: 
+    type: boolean
+  buttons:
+    type: array
+    properties:
+      model: 
+        type: integer
+      name: 
+        type: string
+      rec_name: 
+        type: string
+  field_access:
+    type: array
+    properties:
+      active: 
+        type: boolean
+      description: 
+        type: string
+      field: 
+        type: integer
+      group: 
+        type: integer
+      perm_create: 
+        type: boolean
+      perm_delete: 
+        type: boolean
+      perm_read: 
+        type: boolean
+      perm_write: 
+        type: boolean
+      rec_name: 
+        type: string
+  menu_access:
+    type: array
+    properties:
+      complete_name: 
+        type: string
+      rec_name: 
+        type: string
+  model_access:
+    type: array
+    properties:
+      active: 
+        type: boolean
+      description: 
+        type: string
+      group: 
+        type: integer
+      model: 
+        type: integer
+      perm_create: 
+        type: boolean
+      perm_delete: 
+        type: boolean
+      perm_read: 
+        type: boolean
+      perm_write: 
+        type: boolean
+      rec_name: 
+        type: string
+  name: 
+    type: string
+  parent: 
+    type: integer
+  rec_name: 
+    type: string
+  rule_groups: 
+    type: array
+  users:
+    type: array
+    properties:
+      login: 
+        type: string
+      name: 
+        type: string
+      rec_name: 
+        type: string
+      sessions: 
+        type: integer
 
 required:
     -
         
 example:
-  
+  active: true
+  buttons:
+  - model: 282
+    name: draft
+    rec_name: draft
+  field_access:
+  - active: true
+    description: 
+    field: 2046
+    group: 11
+    perm_create: true
+    perm_delete: true
+    perm_read: true
+    perm_write: false
+    rec_name: Amount (amount)
+  menu_access:
+  - complete_name: Financial
+    rec_name: Financial
+    write_date: '2024-08-30T06:49:28.836358'
+    write_uid: 0
+    write_uid_:
+      id: 0
+      name: Root
+  model_access:
+  - active: true
+    description: 
+    group: 11
+    model: 191
+    perm_create: false
+    perm_delete: false
+    perm_read: true
+    perm_write: false
+    rec_name: General Ledger Account
+  name: Account
+  parent: 
+  rec_name: Account
+  rule_groups: []
+  users:
+  - login: admin
+    name: Administrator
+    rec_name: Administrator
+    sessions: 8
