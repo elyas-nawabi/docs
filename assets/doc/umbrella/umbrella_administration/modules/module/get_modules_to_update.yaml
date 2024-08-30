@@ -1,0 +1,143 @@
+    get:
+      tags:
+        - module
+      summary: Get modules to update.
+      description: Get modules to update.
+      operationId: getModulesToUpdateById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data: 
+                    type: object
+                    properties:
+                      modules: 
+                        type: string
+                      session_id:
+                        type: integer
+                  error: 
+                    type: object
+                  pagination:
+                    type: object
+                  status: 
+                    type: integer
+                  success_message:
+                    type: object
+              example:
+                data: 
+                  modules: |-
+                    account: to upgrade
+                    account_deposit: to upgrade
+                    account_invoice: to upgrade
+                    account_invoice_stock: to upgrade
+                    account_payment: to upgrade
+                    account_payment_clearing: to upgrade
+                    account_product: to upgrade
+                    account_statement: to upgrade
+                    bank: to upgrade
+                    company: to upgrade
+                    country: to upgrade
+                    currency: to upgrade
+                    health: to upgrade
+                    health_archives: to upgrade
+                    health_caldav: to upgrade
+                    health_calendar: to upgrade
+                    health_contact_tracing: to upgrade
+                    health_crypto: to upgrade
+                    health_crypto_lab: to upgrade
+                    health_dentistry: to upgrade
+                    health_disability: to upgrade
+                    health_ems: to upgrade
+                    health_federation: to upgrade
+                    health_genetics: to upgrade
+                    health_genetics_uniprot: to upgrade
+                    health_gyneco: to upgrade
+                    health_history: to upgrade
+                    health_icd10: to upgrade
+                    health_icd10pcs: to upgrade
+                    health_icd11: to upgrade
+                    health_icd9procs: to upgrade
+                    health_icpm: to upgrade
+                    health_icu: to upgrade
+                    health_imaging: to upgrade
+                    health_inpatient: to upgrade
+                    health_inpatient_calendar: to upgrade
+                    health_insurance: to upgrade
+                    health_iss: to upgrade
+                    health_lab: to upgrade
+                    health_lifestyle: to upgrade
+                    health_mdg6: to upgrade
+                    health_ntd: to upgrade
+                    health_ntd_chagas: to upgrade
+                    health_ntd_dengue: to upgrade
+                    health_nursing: to upgrade
+                    health_ophthalmology: to upgrade
+                    health_orthanc: to upgrade
+                    health_pediatrics: to upgrade
+                    health_pediatrics_growth_charts: to upgrade
+                    health_pediatrics_growth_charts_who: to upgrade
+                    health_profile: to upgrade
+                    health_qrcodes: to upgrade
+                    health_reporting: to upgrade
+                    health_services: to upgrade
+                    health_services_imaging: to upgrade
+                    health_services_lab: to upgrade
+                    health_socioeconomics: to upgrade
+                    health_stock: to upgrade
+                    health_stock_surgery: to upgrade
+                    health_surgery: to upgrade
+                    health_surgery_protocols: to upgrade
+                    health_webdav3_server: to upgrade
+                    health_who_essential_medicines: to upgrade
+                    ir: to upgrade
+                    party: to upgrade
+                    product: to upgrade
+                    purchase: to upgrade
+                    res: to upgrade
+                    sale: to upgrade
+                    stock: to upgrade
+                    stock_lot: to upgrade
+                    umbrella: to upgrade
+                    umbrella_administration: to upgrade
+                    umbrella_banking: to upgrade
+                    umbrella_company: to upgrade
+                    umbrella_country: to upgrade
+                    umbrella_currency: to upgrade
+                    umbrella_financial_accounting: to upgrade
+                    umbrella_party: to upgrade
+                    umbrella_product: to upgrade
+                    umbrella_purchase: to upgrade
+                    umbrella_sale: to upgrade
+                    umbrella_stock: to upgrade
+                  session_id: 74
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
