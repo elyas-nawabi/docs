@@ -1,0 +1,28 @@
+      properties:
+        active: 
+          type: boolean
+        code: 
+          type: string
+        country: 
+          type: integer
+        flag: 
+          type: string
+        name: 
+          type: string
+        parent: 
+          type: integer
+        rec_name: 
+          type: string
+        type: 
+          type: string
+      required:
+        - 
+      example:
+        active: true
+        code: S0012
+        country: 2
+        flag: "\U0001F3F4\U000E0073\U000E0030\U000E0030\U000E0031\U000E0032\U000E007F"
+        name: subdivision_name
+        parent: 
+        rec_name: subdivision_name
+        type: arctic region
