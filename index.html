@@ -101,6 +101,81 @@
         display: none;
       }
     </style>
+    <!-- menu style -->
+    <style>
+      .menu-container {
+    width: auto;
+    /* position: relative; */
+}
+
+#menu-filter {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.submenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Make submenu appear to the right of the parent */
+    min-width: 150px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.submenu .menu-item {
+    padding: 10px;
+    white-space: nowrap;
+    border-bottom: 1px solid #ddd;
+}
+
+.has-submenu .arrow {
+    font-size: 10px;
+    transition: transform 0.3s;
+}
+
+.has-submenu.open .arrow {
+    transform: rotate(90deg);
+}
+
+/* Show submenu on hover or if clicked */
+.has-submenu:hover .submenu,
+.has-submenu.open .submenu {
+    display: block;
+}
+
+/* Optional hover styles for better UX */
+.has-submenu:hover > .menu-item {
+    background-color: #f0f0f0;
+}
+    </style>
+    
   </head>
 
   <body>
@@ -138,7 +213,7 @@
       <div class="topnav" id="myTopnav">
         <div class="dropdown">
           <button class="dropbtn">
-            Currency - Auth - Admin - Product
+            Umbrella -
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1em"
@@ -159,7 +234,211 @@
               </g>
             </svg>
           </button>
-          <div class="dropdown-content currency">
+          <div class="dropdown-content menu-container">
+            <input type="text" id="menu-filter" placeholder="Search menu...">
+            <ul class="menu">
+               
+                <li class="menu-item has-submenu">
+                    <span class="icon">📄</span>
+                    Currency
+                    <span class="arrow">▶</span>
+                    <ul class="submenu">
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/currency/currency.yaml')"
+                            >Currency</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/scheduled_rate_update/scheduled_rate_update.yaml')"
+                          >
+                            Scheduled Rate Update</a
+                          >
+
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item has-submenu">
+                    <span class="icon">⚙️</span>
+                    Auth
+                    <span class="arrow">▶</span>
+                    <ul class="submenu">
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella/auth/auth.yaml')"
+                            >Auth</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella/smart_enum/smart_enum.yaml')"
+                            >Smart Enum</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella/wizard/wizard.yaml')"
+                            >Wizard</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella/user_warning/user_warning.yaml')"
+                            >User Warning</a
+                          >
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item has-submenu">
+                    <span class="icon">⚙️</span>
+                    Administration (Sequences)
+                    <span class="arrow">▶</span>
+                    <ul class="submenu">
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml')"
+                            >Sequence Type</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml')"
+                            >Sequence Type</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_strict/sequence_strict.yaml')"
+                            >Sequence Strict</a
+                          >
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item has-submenu">
+                    <span class="icon">⚙️</span>
+                    Administration (Localization & Modules)
+                    <span class="arrow">▶</span>
+                    <ul class="submenu">
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml')"
+                            >Sequence Type</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml')"
+                            >Sequence Type</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_strict/sequence_strict.yaml')"
+                            >Sequence Strict</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/localization/lang/lang.yaml')"
+                            >Lang</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/modules/module/module.yaml')"
+                            >Module</a
+                          >
+                          
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/modules/module_config_wizard_item/config_wizard_items.yaml')"
+                            >Module Config Wizard Items</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/users/group/group.yaml')"
+                            >Users-> Group</a
+                          >
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item has-submenu">
+                    <span class="icon">🌐</span>
+                    Product
+                    <span class="arrow">▶</span>
+                    <ul class="submenu">
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product/product.yaml')"
+                            >Product</a
+                          >
+                          
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product_category/product_category.yaml')"
+                            >Product Category</a
+                          >
+                          
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_product/configuration/configuration.yaml')"
+                            >Configuration</a
+                          >
+                          
+                        </li>
+                        <li class="menu-item">
+                          <a
+                            href="#"
+                            onclick="pageNavigator('assets/doc/umbrella/umbrella_product/variant/variant.yaml')"
+                            >Variant</a
+                          >
+                         
+                        </li>
+                        <li class="menu-item">
+                          <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_product/unit_of_measure/unit_of_measure.yaml')"
+                          >Unit Of Measure</a
+                        >
+                        </li>
+                        <li class="menu-item">
+                          <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_product/uom_category/uom_category.yaml')"
+                          >UOM Category</a
+                        >
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+          <!-- <div class="dropdown-content currency">
             <div class="group">
               <h3>Currency</h3>
               <a
@@ -266,7 +545,7 @@
                 >UOM Category</a
               >
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="dropdown">
           <button class="dropbtn">
@@ -1345,7 +1624,6 @@
             </div>
           </div>
         </div>
-
         <a
           href="javascript:void(0);"
           style="font-size: 15px"
@@ -1463,6 +1741,53 @@
           x.className = "topnav";
         }
       }
+    </script>
+    <!-- menu script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const filterInput = document.getElementById('menu-filter');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const submenuItems = document.querySelectorAll('.has-submenu');
+
+    // Filter menu items based on input
+    filterInput.addEventListener('input', () => {
+        const filterValue = filterInput.value.toLowerCase();
+        menuItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            if (text.includes(filterValue)) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+
+    // Handle submenu toggle for click, ensuring only one submenu is open at a time
+    submenuItems.forEach(item => {
+        item.addEventListener('click', (event) => {
+            // Prevent event from firing on hover if user clicks
+            event.stopPropagation();
+
+            // Close any other open submenus
+            submenuItems.forEach(submenu => {
+                if (submenu !== item) {
+                    submenu.classList.remove('open');
+                }
+            });
+
+            // Toggle the clicked submenu
+            item.classList.toggle('open');
+        });
+    });
+
+    // Close all submenus when clicking outside the menu
+    document.addEventListener('click', (event) => {
+        submenuItems.forEach(submenu => {
+            submenu.classList.remove('open');
+        });
+    });
+});
+
     </script>
   </body>
 </html>
