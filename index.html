@@ -119,6 +119,8 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+    /* max-height: 300px; Set a max height for scrollable menu */
+    /* overflow-y: auto; Enable scrolling */
 }
 
 .menu-item {
@@ -147,6 +149,7 @@
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure submenu appears above other elements */
 }
 
 .submenu .menu-item {
@@ -173,6 +176,24 @@
 /* Optional hover styles for better UX */
 .has-submenu:hover > .menu-item {
     background-color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .submenu {
+        left: 0; 
+        top: auto;
+        width: 100%; 
+    }
+
+    .submenu .menu-item {
+        white-space: normal; 
+        padding: 10px; 
+    }
+    .menu{
+      max-height: 300px; 
+    overflow-y: auto; 
+    }
 }
     </style>
     
@@ -437,7 +458,7 @@
                 </li>
                 
             </ul>
-        </div>
+          </div>
           <!-- <div class="dropdown-content currency">
             <div class="group">
               <h3>Currency</h3>
