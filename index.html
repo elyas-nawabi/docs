@@ -17,6 +17,113 @@
         .wrapper .float-right{
           display: none !important;
         }
+       
+
+.api-header {
+    /* background-color: #e9f6f5; */
+    /* padding: 10px; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; */
+    /* margin-bottom: 20px; */
+}
+
+.api-version {
+    background-color: #7aaf97;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.api-type {
+    background-color: #82c983;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+.api-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #0a7bce;
+    text-decoration: none;
+} 
+.api-link:hover {
+    text-decoration: underline;
+}
+.api-content {
+    padding: 20px 20px 0 20px;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; */
+    margin-bottom: -100px;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+
+.api-content h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.api-content p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.api-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.api-content h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.api-content pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+/* 
+code {
+    font-family: Consolas, "Courier New", Courier, monospace;
+    background-color: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+} */
+
+.support-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #0a7bce;
+    text-decoration: none;
+}
+
+.support-link:hover {
+    text-decoration: underline;
+}
+hgroup .title{
+  display: none;
+}
     </style>
     </head>
    
@@ -370,11 +477,48 @@
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
     </header>
-    <div id="tokenBox">
-      <input type="text" id="tokenInput" placeholder="Enter token">
-      <button onclick="setAuthorizationToken()" id="btnToken">
-      </button>
-    </div>
+     
+      <!-- Main Content -->
+      <div class="api-content">
+        <div style="display: flex; align-items: center; flex-direction: row-reverse; justify-content: space-between;">
+
+          <div id="tokenBox">
+            <input type="text" id="tokenInput" placeholder="Enter token">
+            <button onclick="setAuthorizationToken()" id="btnToken">
+            </button>
+          </div>
+            <h1>UMBRELLA API Documentation Description:</h1>
+        </div>
+          <p>
+              Welcome to the official documentation for the UMBRELLA RESTful API. This comprehensive guide is designed to assist developers and integrators in effectively utilizing the power of our API. 
+              Our RESTful API provides a simple and efficient way to access and interact with currencies, finances, and more. Whether you're building a web application, mobile app, or integrating with other services, 
+              our API offers the tools you need to streamline your development process and unlock the full potential of your project.
+          </p>
+          <p>In this documentation, you'll find detailed information on how to make API requests, authentication procedures, available endpoints, request/response examples, error handling, and best practices for integrating UMBRELLA into your projects.</p>
+          <div style="display: flex; align-items: center;">
+            <h2>API Version:</h2>
+            <span class="api-version" style="margin-left: 10px; margin-top: 10px;">1.0.0</span>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <h2>OpenApi Version:</h2>
+            <span class="api-type" style="margin-left: 10px; margin-top: 10px;">OAS 3.1</span>
+          </div>
+          <h2>Authorization:</h2>
+          <p>You can authorize your requests using this authorization method:</p>
+          <ul>
+              <li><strong>TOKEN</strong></li>
+          </ul>
+
+          <h3>TOKEN</h3>
+          <ul>
+              <li>The endpoints are authorized using a <strong>TOKEN</strong>.</li>
+              <li>To authorize requests, please add a Token using the 'Authorize' button with the following format:</li>
+              <pre><code>"Bearer user-token"</code></pre>
+          </ul>
+
+          <a href="mailto:shadab@gmail.com" class="support-link">Contact API Support</a>
+      </div>
+    
     <div id="swagger-ui"></div>
     <script src="assets/js/swagger-ui-bundle.js"  charset="UTF-8" crossorigin> </script>
     <script src="assets/js/swagger-ui-standalone-preset.js"  charset="UTF-8" crossorigin> </script>

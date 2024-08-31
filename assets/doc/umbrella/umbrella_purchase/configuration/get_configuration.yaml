@@ -1,9 +1,9 @@
     post:
       tags:
-        - patient amputation
-      summary: Get patient amputation details.
-      description: Get patient amputation details.
-      operationId: getPatientAmputation
+        - configuration
+      summary: Get configuration details.
+      description: Get configuration details.
+      operationId: getConfiguration
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
@@ -13,7 +13,7 @@
               $ref: '../../../api_doc.yaml#/components/schemas/Filter'
       responses:
         '200':
-          description: List of patient amputations.
+          description: List of configurations.
           content:
             application/json:
               schema:
@@ -22,34 +22,35 @@
                     data:
                       type: array
                       properties:
-                       
                         create_date: 
                           type: string 
                           format: date 
                         create_uid: 
                           type: integer
                         create_uid_:
-                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                       
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        
                         write_date:
                           type: string
                           format: date 
                         write_uid:
                           type: integer
                         write_uid_:
-                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
+                      nullable: true
                     pagination:
                       type: object
-                      page:
-                        type: integer
-                      per_page:
-                        type: integer
-                      total_pages:
-                        type: integer
-                      total_records:
-                        type: integer
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
                     status:
                       type: integer
                     success_message:
@@ -57,7 +58,7 @@
                       nullable: true
               example:
                 data:
-                  
+                
                 error: null
                 pagination:
                   page: 1
@@ -66,7 +67,6 @@
                   total_records: 9
                 status: 200
                 success_message: null
-        
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -76,6 +76,6 @@
           content:
             application/json:
               schema:
-                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     
     
