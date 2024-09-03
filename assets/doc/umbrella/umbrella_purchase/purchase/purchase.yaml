@@ -1,0 +1,28 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: purchase
+    description: purchase - purchase data management.
+paths:
+  '/purchase/purchases/search':
+    $ref: 'get_configuration.yaml'
+  '/purchase/purchases':
+    $ref: 'post_delete_configuration.yaml'
+  '/purchase/purchases/{obj_id}':
+    $ref: 'get_put_configuration_by_id.yaml'
+  '/purchase/purchases/{obj_id}/cancel':
+    $ref: 'get_cancel.yaml'
+  '/purchase/purchases/{obj_id}/draft':
+    $ref: 'get_draft.yaml'
+  '/purchase/purchases/{obj_id}/modify-header':
+    $ref: 'post_modify_header.yaml'
+  '/purchase/purchases/{obj_id}/quote':
+    $ref: 'get_quote.yaml'
+  '/purchase/purchases/{obj_id}/confirm':
+    $ref: 'get_confirm.yaml'
+  '/purchase/purchases/{obj_id}/process':
+    $ref: 'get_process.yaml'
+  '/purchase/purchases/{obj_id}/return-purchase':
+    $ref: 'get_return_purchase.yaml'
+  

@@ -1,0 +1,12 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: reporting purchase per supplier
+    description: reporting purchase per supplier - reporting purchase per supplier data management.
+paths:
+  '/purchase/reporting/purchases-per-supplier/search':
+    $ref: 'post_purchase_per_supplier.yaml'
+  '/purchase/reporting/purchases-per-supplier-timeseries/search':
+    $ref: 'post_purchase_per_supplier_timeseries.yaml'
+  
