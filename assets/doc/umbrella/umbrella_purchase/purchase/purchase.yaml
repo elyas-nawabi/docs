@@ -6,11 +6,11 @@ tags:
     description: purchase - purchase data management.
 paths:
   '/purchase/purchases/search':
-    $ref: 'get_configuration.yaml'
+    $ref: 'get_purchase.yaml'
   '/purchase/purchases':
-    $ref: 'post_delete_configuration.yaml'
+    $ref: 'post_delete_purchase.yaml'
   '/purchase/purchases/{obj_id}':
-    $ref: 'get_put_configuration_by_id.yaml'
+    $ref: 'get_put_purchase_by_id.yaml'
   '/purchase/purchases/{obj_id}/cancel':
     $ref: 'get_cancel.yaml'
   '/purchase/purchases/{obj_id}/draft':
