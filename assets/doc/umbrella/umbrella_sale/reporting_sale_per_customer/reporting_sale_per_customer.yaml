@@ -1,0 +1,12 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: reporting sale per customer
+    description: reporting sale per customer - reporting sale per customer data management.
+paths:
+  '/sale/reporting/sales-per-customer/search':
+    $ref: 'post_reporting_sale_per_customer.yaml'
+  '/sale/reporting/sales-per-customer-timeseries/search':
+    $ref: 'post_reporting_sale_per_customer_timeseries.yaml'
+  

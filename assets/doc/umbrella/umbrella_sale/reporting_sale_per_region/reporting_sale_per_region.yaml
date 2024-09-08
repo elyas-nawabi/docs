@@ -1,0 +1,12 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: reporting sale per region
+    description: reporting sale per region - reporting sale per region data management.
+paths:
+  '/sale/reporting/sales-per-region/search':
+    $ref: 'post_reporting_sale_per_region.yaml'
+  '/sale/reporting/sales-per-region-timeseries/search':
+    $ref: 'post_reporting_sale_per_region_timeseries.yaml'
+  
