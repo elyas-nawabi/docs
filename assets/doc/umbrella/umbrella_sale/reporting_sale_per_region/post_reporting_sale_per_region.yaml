@@ -37,21 +37,24 @@
                           type: integer
                         create_uid_:
                           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        currency: 1
+                        currency: 
+                          type: integer
                         currency_:
-                          id: 1
-                          name: Afghani
-                        id: 2
-                        name: Africa
-                        parent: 1
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        parent: 
+                          type: integer
                         parent_:
-                          id: 1
-                          name: World
-                        rec_name: Africa
-                        revenue: 0
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        revenue: 
+                          type: integer
                         subregions:
-                        - 8
-                        - 9
+                          type: array
                         write_date:
                           type: string
                           format: date 
