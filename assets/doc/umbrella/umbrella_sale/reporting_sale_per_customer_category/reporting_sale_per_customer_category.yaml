@@ -6,7 +6,7 @@ tags:
     description: reporting sale per customer category - reporting sale per customer category data management.
 paths:
   '/sale/reporting/sales-per-customer/search':
-    $ref: 'post_reporting_sale_per_customer.yaml'
+    $ref: 'post_reporting_sale_per_customer_category.yaml'
   '/sale/reporting/sales-per-customer-timeseries/search':
-    $ref: 'post_reporting_sale_per_customer_timeseries.yaml'
+    $ref: 'post_reporting_sale_per_customer_category_timeseries.yaml'
   
