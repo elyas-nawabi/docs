@@ -3,6 +3,8 @@ schema:
     data:
       type: array
       properties:
+        arch: 
+          type: string
         create_date: 
           type: string 
           format: date 
@@ -10,29 +12,29 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        fuzzy: 
-          type: boolean
+        data: 
+          type: string
+        domain: 
+          type: string
+        field_childs: 
+          type: string
         id: 
           type: integer
-        lang: 
-          type: string
+        inherit: 
+          type: integer
+        inherit_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
         model: 
           type: string
         module: 
           type: string
         name: 
           type: string
-        overriding_module: 
-          type: string
+        priority: 
+          type: integer
         rec_name: 
           type: string
-        res_id:   
-          type: integer
-        src: 
-          type: string
         type: 
-          type: string
-        value: 
           type: string
         write_date:
           type: string
@@ -55,23 +57,30 @@ schema:
 
 example:
     data:
-      create_date: '2024-06-24T12:35:58.998149'
+      arch: |
+        <?xml version="1.0"?>
+        <!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+        this repository contains the full copyright notices and license terms. -->
+        <tree>
+            <field name="complete_name" icon="icon" expand="1"/>
+        </tree>
+      create_date: '2024-06-24T12:35:58.699428'
       create_uid: 0
       create_uid_:
         id: 0
         name: Root
-      fuzzy: false
-      id: 1
-      lang: en
-      model: ir.configuration
+      data: 
+      domain: 
+      field_childs: 
+      id: 4
+      inherit: 
+      inherit_: {}
+      model: ir.ui.menu
       module: ir
-      name: ir.configuration,name
-      overriding_module: 
-      rec_name: ir.configuration,name
-      res_id: -1
-      src: Configuration
-      type: model
-      value: ''
+      name: ui_menu_list
+      priority: 10
+      rec_name: ir.ui.menu (Tree)
+      type: tree
       write_date: 
       write_uid: 
       write_uid_: {}

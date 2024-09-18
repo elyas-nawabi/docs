@@ -1,9 +1,9 @@
     get:
       tags:
-        - translation
-      summary: Get translation details.
-      description: Get translation details.
-      operationId: getTranslations
+        - icon
+      summary: Get icon details.
+      description: Get icon details.
+      operationId: geticons
       parameters:
         - name: obj_id
           in: path
@@ -13,7 +13,7 @@
           example: 1
       responses:
         '200':
-          description: List of translations.
+          description: List of icons.
           content:
             application/json:
               schema:
@@ -26,29 +26,15 @@
                     type: integer
                   create_uid_:
                     $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                  fuzzy: 
-                    type: boolean
                   id: 
                     type: integer
-                  lang: 
-                    type: string
-                  model: 
-                    type: string
-                  module: 
+                  module:
                     type: string
                   name: 
                     type: string
-                  overriding_module: 
+                  path: 
                     type: string
                   rec_name: 
-                    type: string
-                  res_id:   
-                    type: integer
-                  src: 
-                    type: string
-                  type: 
-                    type: string
-                  value: 
                     type: string
                   write_date:
                     type: string
@@ -58,23 +44,16 @@
                   write_uid_:
                     $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
               example:
-                create_date: '2024-06-24T12:35:58.998149'
+              - create_date: '2024-06-24T12:35:58.699428'
                 create_uid: 0
                 create_uid_:
                   id: 0
                   name: Root
-                fuzzy: false
                 id: 1
-                lang: en
-                model: ir.configuration
                 module: ir
-                name: ir.configuration,name
-                overriding_module: 
-                rec_name: ir.configuration,name
-                res_id: -1
-                src: Configuration
-                type: model
-                value: ''
+                name: tryton-board
+                path: ui/icons/tryton-board.svg
+                rec_name: tryton-board
                 write_date: 
                 write_uid: 
                 write_uid_: {}

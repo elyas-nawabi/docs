@@ -1,7 +1,12 @@
 properties:
-  
+   rec_name:
+      type: string
+   text:
+      type: string
 
 required:
    -     
 example:
-  
+   rec_name: '1'
+   text: ID
+   
