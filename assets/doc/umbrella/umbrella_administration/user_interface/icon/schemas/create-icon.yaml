@@ -1,0 +1,17 @@
+properties:
+  module:
+    type: string
+  name: 
+    type: string
+  path: 
+    type: string
+  rec_name: 
+    type: string
+
+required:
+   - 
+example:
+  module: ir
+  name: tryton-board
+  path: ui/icons/tryton-board.svg
+  rec_name: tryton-board

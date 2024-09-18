@@ -1,0 +1,34 @@
+properties:
+   arch: 
+      type: string
+   data: 
+      type: string
+   domain: 
+      type: string
+   field_childs: 
+      type: string
+   inherit: 
+      type: integer
+   model: 
+      type: string
+   module: 
+      type: string
+   name: 
+      type: string
+   priority: 
+      type: integer
+   rec_name: 
+      type: string
+   type: 
+      type: string
+
+required:
+   -     
+example:
+   domain: 
+   field_childs: 
+   inherit: 
+   model: ir.ui.menu
+   priority: 10
+   rec_name: ir.ui.menu (Tree)
+   type: tree
