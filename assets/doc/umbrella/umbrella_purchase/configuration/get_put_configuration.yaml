@@ -3,14 +3,7 @@
         - configuration
       summary: Get one configuration.
       description: Get one configuration.
-      operationId: getConfigurationById
-      parameters:
-        - name: obj_id
-          in: path
-          schema:
-            type: integer
-          rquired: true
-          example: 1
+      operationId: getConfiguration
       responses:
         '200':
           description: OK
@@ -39,14 +32,7 @@
         - configuration
       summary: Update a configuration.
       description: Update a configuration.
-      operationId: updateConfigurationById
-      parameters:
-        - name: obj_id
-          rquired: true
-          in: path
-          schema:
-            type: integer
-          example: 19
+      operationId: updateConfiguration
       requestBody:
         required: true
         content:

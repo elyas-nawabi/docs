@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: view tree optional
+    description: view tree optional - view tree optional data management.
+paths:
+  '/administration/view-tree-optional/search':
+    $ref: 'get_view_tree_optional.yaml'
+  '/administration/view-tree-optional':
+    $ref: 'post_delete_view_tree_optional.yaml'
+  '/administration/view-tree-optional/{obj_id}':
+    $ref: 'get_put_view_tree_optional_by_id.yaml'
+
+    
+  

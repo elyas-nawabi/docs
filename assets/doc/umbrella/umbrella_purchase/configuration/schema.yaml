@@ -10,7 +10,19 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        id: 
+          type: integer
+        purchase_invoice_method: 
+          type: string
+        purchase_process_after: 
+          type: string
+          format: date
+        purchase_sequence: 
+          type: integer
+        purchase_sequence_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -32,12 +44,19 @@ schema:
 
 example:
     data:
-      create_date: '2024-04-18T04:45:21.629821'
+      create_date: '2024-09-20T15:57:49.369402'
       create_uid: 1
       create_uid_:
         id: 1
         name: Administrator
-      
+      id: 1
+      purchase_invoice_method: order
+      purchase_process_after: 
+      purchase_sequence: 29
+      purchase_sequence_:
+        id: 29
+        name: Purchase
+      rec_name: 
       write_date: 
       write_uid: 
       write_uid_: {}
