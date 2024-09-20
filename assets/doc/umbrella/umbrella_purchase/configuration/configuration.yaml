@@ -5,10 +5,6 @@ tags:
   - name: configuration
     description: configuration - configuration data management.
 paths:
-  '/purchase/configurations/search':
-    $ref: 'get_configuration.yaml'
   '/purchase/configurations':
-    $ref: 'post_delete_configuration.yaml'
-  '/purchase/configurations/{obj_id}':
-    $ref: 'get_put_configuration_by_id.yaml'
+    $ref: 'get_put_configuration.yaml'
   

@@ -1,18 +1,18 @@
-post:
+    get:
       tags:
-        - configuration
-      summary: Create a configuration.
-      description: Create a configuration.
-      operationId: postConfigurationById
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: 'schemas/create-configuration.yaml'
+        - view search
+      summary: Get one view search.
+      description: Get one view search.
+      operationId: getViewSearchById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
       responses:
-        '201':
+        '200':
           description: OK
           content:
             application/json:
@@ -27,28 +27,40 @@ post:
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    
-delete:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
       tags:
-        - configuration
-      summary: Delete countries.
-      description: Delete countries.
-      operationId: deleteCountriesById
+        - view search
+      summary: Update a view search.
+      description: Update a view search.
+      operationId: updateViewSearchById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+              $ref: 'schemas/create-view-search.yaml'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+                $ref: 'schema.yaml'
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
@@ -58,5 +70,5 @@ delete:
           content:
             application/json:
               schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
   
