@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: action report
+    description: action report - action report data management.
+paths:
+  '/administration/action-report/search':
+    $ref: 'get_action_report.yaml'
+  '/administration/action-report':
+    $ref: 'post_delete_action_report.yaml'
+  '/administration/action-report/{obj_id}':
+    $ref: 'get_put_action_report_by_id.yaml'
+
+    
+  
