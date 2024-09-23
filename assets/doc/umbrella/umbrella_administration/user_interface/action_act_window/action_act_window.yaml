@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: action act window
+    description: action act window - action act window data management.
+paths:
+  '/administration/window-actions/search':
+    $ref: 'get_action_act_window.yaml'
+  '/administration/window-actions':
+    $ref: 'post_delete_action_act_window.yaml'
+  '/administration/window-actions/{obj_id}':
+    $ref: 'get_put_action_act_window_by_id.yaml'
+
+    
+  

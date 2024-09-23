@@ -1,9 +1,9 @@
     get:
       tags:
-        - view tree state
-      summary: Get view tree state details.
-      description: Get view tree state details.
-      operationId: getViewTreeStates
+        - action act window
+      summary: Get action act window details.
+      description: Get action act window details.
+      operationId: getActionActWindows
       parameters:
         - name: obj_id
           in: path
@@ -13,7 +13,7 @@
           example: 1
       responses:
         '200':
-          description: List of view tree states.
+          description: List of action act windows.
           content:
             application/json:
               schema:
@@ -26,20 +26,7 @@
                     type: integer
                   create_uid_:
                     $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                  child_name: 
-                    type: string
-                  domain:
-                    type: string
-                  id: 
-                    type: integer
-                  model: 
-                    type: string
-                  rec_name: 
-                    type: string
-                  user: 
-                    type: integer
-                  user_:
-                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  
                   write_date:
                     type: string
                     format: date 
@@ -48,23 +35,6 @@
                   write_uid_:
                     $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
               example:
-                - child_name: childs
-                  create_date: '2024-09-23T09:36:39.881494'
-                  create_uid: 1
-                  create_uid_:
-                    id: 1
-                    name: Administrator
-                  domain: '[["parent","=",null]]'
-                  id: 147
-                  model: ir.ui.menu
-                  rec_name: ir.ui.menu
-                  user: 1
-                  user_:
-                    id: 1
-                    name: Administrator
-                  write_date: 
-                  write_uid: 
-                  write_uid_: {}
                 
         '401':
           description: >-

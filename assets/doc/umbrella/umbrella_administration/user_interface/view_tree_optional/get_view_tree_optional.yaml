@@ -26,7 +26,22 @@
                     type: integer
                   create_uid_:
                     $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                  
+                  field: 
+                    type: string
+                  id: 
+                    type: integer
+                  rec_name: 
+                    type: string
+                  user: 
+                    type: integer
+                  user_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  value: 
+                    type: boolean
+                  view_id:  
+                    type: integer
+                  view_id_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
                   write_date:
                     type: string
                     format: date 
@@ -35,7 +50,26 @@
                   write_uid_:
                     $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
               example:
-                
+              - create_date: '2024-08-20T19:15:50.636980'
+                create_uid: 1
+                create_uid_:
+                  id: 1
+                  name: Administrator
+                field: name
+                id: 55
+                rec_name: '55'
+                user: 1
+                user_:
+                  id: 1
+                  name: Administrator
+                value: false
+                view_id: 161
+                view_id_:
+                  id: 161
+                  name: party.contact_mechanism (Tree)
+                write_date: 
+                write_uid: 
+                write_uid_: {}
                 
         '401':
           description: >-
