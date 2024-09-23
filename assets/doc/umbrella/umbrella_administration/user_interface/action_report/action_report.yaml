@@ -5,11 +5,11 @@ tags:
   - name: action report
     description: action report - action report data management.
 paths:
-  '/administration/action-report/search':
+  '/administration/reports/search':
     $ref: 'get_action_report.yaml'
-  '/administration/action-report':
+  '/administration/reports':
     $ref: 'post_delete_action_report.yaml'
-  '/administration/action-report/{obj_id}':
+  '/administration/reports/{obj_id}':
     $ref: 'get_put_action_report_by_id.yaml'
 
     

@@ -1,7 +1,49 @@
 properties:
-   
+   action: 
+      type: string
+   active: 
+      type: boolean
+   groups: 
+      type: array
+   icon: 
+      type: integer
+   keywords:
+      type: array
+      properties:
+      action: 
+         type: integer
+      keyword: 
+         type: string
+      model: 
+         type: string
+      rec_name: 
+         type: string
+   name: 
+      type: string
+   rec_name: 
+      type: string
+   records: 
+      type: string
+   type: 
+      type: string
+   usage: 
+      type: string
 
 required:
    -     
 example:
-   
+   action: ir.action.act_window,1
+   active: true
+   groups: []
+   icon: 
+   id: 1
+   keywords:
+    - action: 1
+      keyword: tree_open
+      model: ir.ui.menu,3
+      rec_name: '1'
+   name: Icons
+   rec_name: Icons
+   records: selected
+   type: ir.action.act_window
+   usage: 
