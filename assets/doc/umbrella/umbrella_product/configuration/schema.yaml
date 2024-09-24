@@ -14,6 +14,13 @@ schema:
           type: string
         id: 
           type: integer
+        default_lead_time: 
+          type: string
+          format: date
+        default_lot_sequence: 
+          type: integer
+        default_lot_sequence_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
         product_sequence: 
           type: integer
         product_sequence_: 
@@ -45,17 +52,26 @@ schema:
 
 example:
     data:
-      create_date: '2024-04-18T04:45:21.629821'
+      create_date: '2024-09-24T17:36:30.350700'
       create_uid: 1
       create_uid_:
         id: 1
         name: Administrator
-      default_cost_price_method: 'cash'
-      product_sequence: 1
-      template_sequence: 2
-      write_date: 
-      write_uid: 
-      write_uid_: {}
+      default_cost_price_method: 
+      default_lead_time: 
+      default_lot_sequence: 
+      default_lot_sequence_: {}
+      id: 1
+      product_sequence: 
+      product_sequence_: {}
+      rec_name: '1'
+      template_sequence: 
+      template_sequence_: {}
+      write_date: '2024-09-24T17:36:30.350700'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
     errors: null
     pagination: null
     status: 201

@@ -1,19 +1,22 @@
 properties:
   default_cost_price_method:
     type: string
-  product_sequence:
-    type: integer
-  template_sequence:
-    type: integer
-  default_lot_sequence:
-    type: integer
-  default_lead_time:
+  default_lead_time: 
     type: string
     format: date
+  default_lot_sequence: 
+    type: integer
+  product_sequence: 
+    type: integer
+  rec_name: 
+    type: string
+  template_sequence: 
+    type: integer
 example:
-  default_cost_price_method: 'cash'
-  product_sequence: 1
-  template_sequence: 2
-  default_lot_sequence: 1
+  default_cost_price_method: 
   default_lead_time: 
+  default_lot_sequence: 
+  product_sequence: 
+  rec_name: '1'
+  template_sequence: 
     
