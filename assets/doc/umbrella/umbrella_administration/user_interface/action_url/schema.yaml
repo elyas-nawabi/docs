@@ -10,7 +10,88 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        action: 
+          type: integer
+        action_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        active: 
+          type: boolean
+        groups:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            name: 
+              type: string
+            parent: 
+              type: integer
+            parent_: 
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        icon: 
+          type: integer
+        icon_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        keywords:
+          type: array
+          properties:
+            action: 
+              type: integer
+            action_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            keyword: 
+              type: string
+            model: 
+              type: integer
+            model_: 
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+          type: string
+        rec_name: 
+          type: string
+        records: 
+          type: string
+        type: 
+          type: string
+        url:
+          type: string
+        usage: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -32,7 +113,64 @@ schema:
 
 example:
     data:
-      
+      action: 537
+      action_:
+        id: 537
+        name: url1
+      active: true
+      create_date: '2024-09-24T17:05:50.274572'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      groups:
+      - create_date: '2024-06-25T04:23:57.343052'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        id: 4
+        name: Bank Administration
+        parent: 
+        parent_: {}
+        rec_name: Bank Administration
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      icon: 9
+      icon_:
+        id: 9
+        name: tryton-country
+      id: 537
+      keywords:
+      - action: 537
+        action_:
+          id: 537
+          name: url1
+        create_date: '2024-09-24T17:05:50.274572'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        id: 520
+        keyword: form_relate
+        model: 
+        model_: {}
+        rec_name: '520'
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      name: url1
+      rec_name: url1
+      records: selected
+      type: ir.action.url
+      url: https://www.youtube.com
+      usage: usage text here...
+      write_date: '2024-09-24T17:06:26.443088'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
     errors: null
     pagination: null
     status: 201

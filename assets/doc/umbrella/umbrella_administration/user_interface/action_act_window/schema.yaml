@@ -3,6 +3,51 @@ schema:
     data:
       type: array
       properties:
+        act_window_domains: 
+          type: array
+        act_window_views:
+          type: array
+          properties:
+            act_window: 
+              type: integer
+            act_window_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            model: 
+              type: string
+            rec_name: 
+              type: string
+            view: 
+              type: integer
+            view_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        action: 
+          type: integer
+        action_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        active: 
+          type: boolean
+        context: 
+          type: string
+        context_domain: 
+          type: string
+        context_model: 
+          type: string
         create_date: 
           type: string 
           format: date 
@@ -10,7 +55,75 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        domain: 
+          type: string
+        groups: 
+          type: array
+        icon: 
+          type: integer
+        icon_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        keywords:
+          type: array
+          properties:
+            action: 
+              type: integer
+            action_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            keyword: 
+              type: string
+            model: 
+              type: string
+            model_:
+              entity: 
+                type: string
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        limit: 
+          type: integer
+        name: 
+          type: string
+        order: 
+          type: string
+        pyson_context: 
+          type: string
+        pyson_domain: 
+          type: string
+        pyson_order: 
+          type: string
+        pyson_search_value: 
+          type: string
+        rec_name: 
+          type: string
+        records: 
+          type: string
+        res_model: 
+          type: string
+        search_value:
+          type: string
+        type: 
+          type: string
+        usage: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -32,7 +145,84 @@ schema:
 
 example:
     data:
-      
+      act_window_domains: []
+      act_window_views:
+      - act_window: 1
+        act_window_:
+          id: 1
+          name: Icons
+        create_date: '2024-06-24T12:35:58.699428'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        id: 1
+        model: ir.ui.icon
+        rec_name: '1'
+        view: 1
+        view_:
+          id: 1
+          name: ir.ui.icon (Tree)
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      action: 1
+      action_:
+        id: 1
+        name: Icons
+      active: true
+      context: "{}"
+      context_domain: 
+      context_model: 
+      create_date: '2024-06-24T12:35:58.699428'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      domain: 
+      groups: []
+      icon: 
+      icon_: {}
+      id: 1
+      keywords:
+      - action: 1
+        action_:
+          id: 1
+          name: Icons
+        create_date: '2024-06-24T12:35:58.699428'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        id: 1
+        keyword: tree_open
+        model: ir.ui.menu,3
+        model_:
+          entity: ir.ui.menu
+          id: 3
+          name: Administration / User Interface / Icons
+        rec_name: '1'
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      limit: 
+      name: Icons
+      order: 
+      pyson_context: "{}"
+      pyson_domain: "[]"
+      pyson_order: '[["sequence", "ASC NULLS FIRST"], ["id", null]]'
+      pyson_search_value: "[]"
+      rec_name: Icons
+      records: selected
+      res_model: ir.ui.icon
+      search_value: "[]"
+      type: ir.action.act_window
+      usage: 
+      write_date: '2024-06-24T12:35:58.699428'
+      write_uid: 0
+      write_uid_:
+        id: 0
+        name: Root
     errors: null
     pagination: null
     status: 201
