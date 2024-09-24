@@ -50,7 +50,9 @@ example:
       create_uid_:
         id: 1
         name: Administrator
-      
+      default_cost_price_method: 'cash'
+      product_sequence: 1
+      template_sequence: 2
       write_date: 
       write_uid: 
       write_uid_: {}
