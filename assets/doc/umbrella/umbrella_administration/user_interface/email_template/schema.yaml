@@ -10,7 +10,42 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        body: 
+          type: string
+        id: 
+          type: integer
+        model: 
+          type: integer
+        model_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        model_name: 
+          type: string
+        name: 
+          type: string
+        rec_name: 
+          type: string
+        recipients: 
+          type: integer
+        recipients_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        recipients_hidden: 
+          type: integer
+        recipients_hidden_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        recipients_hidden_pyson: 
+          type: string
+        recipients_pyson: 
+          type: string
+        recipients_secondary: 
+          type: integer
+        recipients_secondary_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        recipients_secondary_pyson: 
+          type: string
+        reports: 
+          type: array
+        subject: 
+          type: string
         write_date:
           type: string
           format: date 
@@ -32,7 +67,40 @@ schema:
 
 example:
     data:
-      
+      body: body text here...
+      create_date: '2024-09-24T17:09:32.353542'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      id: 1
+      model: 186
+      model_:
+        id: 186
+        name: Account
+      model_name: account.account
+      name: email_template
+      rec_name: email_template
+      recipients: 2109
+      recipients_:
+        id: 2109
+        name: Created by (create_uid)
+      recipients_hidden: 2109
+      recipients_hidden_:
+        id: 2109
+        name: Created by (create_uid)
+      recipients_hidden_pyson: ''
+      recipients_pyson: ''
+      recipients_secondary: 2137
+      recipients_secondary_:
+        id: 2137
+        name: Edited by (write_uid)
+      recipients_secondary_pyson: ''
+      reports: []
+      subject: ''
+      write_date: 
+      write_uid: 
+      write_uid_: {}
     errors: null
     pagination: null
     status: 201

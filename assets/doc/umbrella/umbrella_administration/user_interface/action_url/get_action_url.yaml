@@ -26,7 +26,18 @@
                     type: integer
                   create_uid_:
                     $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-                  
+                  active:   
+                    type: boolean
+                  id: 
+                    type: integer
+                  name: 
+                    type: string
+                  rec_name: 
+                    type: string
+                  type: 
+                    type: string
+                  url: 
+                    type: string
                   write_date:
                     type: string
                     format: date 
@@ -35,7 +46,22 @@
                   write_uid_:
                     $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
               example:
-                
+                - active: true
+                  create_date: '2024-09-24T17:05:50.274572'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  id: 537
+                  name: url1
+                  rec_name: url1
+                  type: ir.action.url
+                  url: https://www.youtube.com
+                  write_date: '2024-09-24T17:06:26.443088'
+                  write_uid: 1
+                  write_uid_:
+                    id: 1
+                    name: Administrator
         '401':
           description: >-
             401 Unauthorized: The server could not verify that you are
