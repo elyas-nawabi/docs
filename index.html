@@ -134,7 +134,7 @@
 }
 
 .icon {
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 .submenu {
@@ -144,18 +144,27 @@
     display: none;
     position: absolute;
     top: 0;
-    left: 100%; /* Make submenu appear to the right of the parent */
-    min-width: 150px;
+    left: 100%; 
+    /* min-width: 150px; */
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensure submenu appears above other elements */
+    z-index: 1000; 
+    
 }
 
 .submenu .menu-item {
-    padding: 10px;
+    /* padding: 10px; */
     white-space: nowrap;
     border-bottom: 1px solid #ddd;
+}
+.submenu .menu-item{
+  margin:0;
+  padding: 0;
+}
+.menu-item li a{
+    display: inline-block;
+    width: 100%;
 }
 
 .has-submenu .arrow {
@@ -167,18 +176,15 @@
     transform: rotate(90deg);
 }
 
-/* Show submenu on hover or if clicked */
 .has-submenu:hover .submenu,
 .has-submenu.open .submenu {
-    display: block;
+    display: inline-block;
 }
 
-/* Optional hover styles for better UX */
 .has-submenu:hover > .menu-item {
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
     .submenu {
         left: 0; 
@@ -258,6 +264,130 @@
           <div class="dropdown-content menu-container">
             <input type="text" id="menu-filter" placeholder="Search menu...">
             <ul class="menu">
+
+                <li class="menu-item has-submenu">
+                  <span class="icon">📄</span>
+                  Administration -> User Interface
+                  <span class="arrow">▶</span>
+                  <ul class="submenu">
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/icon/icon.yaml')"
+                          >Icon</a
+                        >
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/ui_menu/ui_menu.yaml')"
+                        >
+                          UI Menu</a
+                        >
+
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view/view.yaml')"
+                        >
+                          View</a
+                        >
+
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_search/view_search.yaml')"
+                        >
+                          View Search</a
+                        >
+
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_tree_optional/view_tree_optional.yaml')"
+                        >
+                          View Tree Optional</a
+                        >
+
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_tree_state/view_tree_state.yaml')"
+                        >
+                          View Tree State</a
+                        >
+
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_tree_width/view_tree_width.yaml')"
+                        >
+                          View Tree Width</a
+                        >
+
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action/action1.yaml')"
+                        >
+                          Action</a
+                        >
+
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_wizard/action_wizard.yaml')"
+                        >
+                          Action Wizard</a
+                        >
+
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_act_window/action_act_window.yaml')"
+                        >
+                          Action Act Window</a
+                        >
+
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_url/action_url.yaml')"
+                        >
+                          Action URL</a
+                        >
+
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/email_template/email_template.yaml')"
+                        >
+                          Email Template</a
+                        >
+
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_report/action_report.yaml')"
+                        >
+                          Action Report</a
+                        >
+
+                      </li>
+                  </ul>
+                </li>
+
                 <li class="menu-item has-submenu">
                   <span class="icon">⚙️</span>
                   Administration
@@ -316,126 +446,32 @@
                   </ul>
                 </li>
                 <li class="menu-item has-submenu">
-                    <span class="icon">📄</span>
-                    Administration -> User Interface
-                    <span class="arrow">▶</span>
-                    <ul class="submenu">
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/icon/icon.yaml')"
-                            >Icon</a
-                          >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/ui_menu/ui_menu.yaml')"
-                          >
-                            UI Menu</a
-                          >
-
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view/view.yaml')"
-                          >
-                            View</a
-                          >
-
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_search/view_search.yaml')"
-                          >
-                            View Search</a
-                          >
-
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_tree_optional/view_tree_optional.yaml')"
-                          >
-                            View Tree Optional</a
-                          >
-
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_tree_state/view_tree_state.yaml')"
-                          >
-                            View Tree State</a
-                          >
-
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_tree_width/view_tree_width.yaml')"
-                          >
-                            View Tree Width</a
-                          >
-
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action/action1.yaml')"
-                          >
-                            Action</a
-                          >
-
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_wizard/action_wizard.yaml')"
-                          >
-                            Action Wizard</a
-                          >
-
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_act_window/action_act_window.yaml')"
-                          >
-                            Action Act Window</a
-                          >
-
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_url/action_url.yaml')"
-                          >
-                            Action URL</a
-                          >
-
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/email_template/email_template.yaml')"
-                          >
-                            Email Template</a
-                          >
-
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_report/action_report.yaml')"
-                          >
-                            Action Report</a
-                          >
-
-                        </li>
-                    </ul>
+                  <span class="icon">⚙️</span>
+                  Administration (Sequences)
+                  <span class="arrow">▶</span>
+                  <ul class="submenu">
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml')"
+                          >Sequence Type</a
+                        >
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml')"
+                          >Sequence Type</a
+                        >
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="#"
+                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_strict/sequence_strict.yaml')"
+                          >Sequence Strict</a
+                        >
+                      </li>
+                  </ul>
                 </li>
                 <li class="menu-item has-submenu">
                     <span class="icon">📄</span>
@@ -495,36 +531,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="menu-item has-submenu">
-                    <span class="icon">⚙️</span>
-                    Administration (Sequences)
-                    <span class="arrow">▶</span>
-                    <ul class="submenu">
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml')"
-                            >Sequence Type</a
-                          >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml')"
-                            >Sequence Type</a
-                          >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_strict/sequence_strict.yaml')"
-                            >Sequence Strict</a
-                          >
-                        </li>
-                    </ul>
-                </li>
                 
-                <li class="menu-item has-submenu">
+                
+                <!-- <li class="menu-item has-submenu">
                     <span class="icon">🌐</span>
                     Product
                     <span class="arrow">▶</span>
@@ -577,7 +586,7 @@
                         </li>
                         
                     </ul>
-                </li>
+                </li> -->
                 
             </ul>
           </div>
@@ -1805,7 +1814,7 @@
               </g>
             </svg>
           </button>
-          <div class="dropdown-content">
+          <div class="dropdown-content health">
             <div class="group">
               <h3>Umbrella Sale</h3>
               <a
@@ -1848,8 +1857,40 @@
                 href="#"
                 onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/reporting_sale_per_subdivision/reporting_sale_per_subdivision.yaml')"
                 >Reporting Sale Per Sub Division</a>
+
+                <h3>Product</h3>
+              <a
+                href="#"
+                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product/product.yaml')"
+                >Product</a
+              >
+              <a
+                href="#"
+                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product_category/product_category.yaml')"
+                >Product Category</a
+              >
+              <a
+                href="#"
+                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/configuration/configuration.yaml')"
+                >Configuration</a
+              >
+              <a
+                href="#"
+                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/variant/variant.yaml')"
+                >Variant</a
+              >
+              <a
+                href="#"
+                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/unit_of_measure/unit_of_measure.yaml')"
+                >Unit Of Measure</a
+              >
+              <a
+                href="#"
+                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/uom_category/uom_category.yaml')"
+                >UOM Category</a
+              >
             </div>
-          </div>
+            </div>
         </div>
         <a
           href="javascript:void(0);"

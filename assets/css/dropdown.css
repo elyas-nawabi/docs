@@ -33,7 +33,7 @@ body {margin:0;font-family:Arial}
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 10px 10px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -47,7 +47,7 @@ body {margin:0;font-family:Arial}
     /* min-width: 160px; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    padding: 10px; /* Add padding to each column */
+    /* padding: 5px; Add padding to each column */
   }
   .health{
     width: 100%;

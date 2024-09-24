@@ -1,0 +1,19 @@
+properties:
+  default_cost_price_method:
+    type: string
+  product_sequence:
+    type: integer
+  template_sequence:
+    type: integer
+  default_lot_sequence:
+    type: integer
+  default_lead_time:
+    type: string
+    format: date
+example:
+  default_cost_price_method: 'cash'
+  product_sequence: 1
+  template_sequence: 2
+  default_lot_sequence: 1
+  default_lead_time: 
+    
