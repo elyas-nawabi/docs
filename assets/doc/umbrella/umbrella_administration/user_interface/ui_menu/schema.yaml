@@ -1,0 +1,121 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        action: 
+          type: string
+        action_keywords: 
+          type: array
+        active: 
+          type: boolean
+        complete_name: 
+          type: string
+        groups:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            name: 
+              type: string
+            parent: 
+              type: integer
+            parent_: 
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        icon: 
+          type: string
+        id: 
+          type: integer
+        name: 
+          type: string
+        parent: 
+          type: integer
+        parent_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        sequence: 
+          type: integer
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      action: 
+      action_keywords: []
+      active: true
+      complete_name: Party
+      create_date: '2024-06-25T04:23:54.754200'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      groups:
+      - create_date: '2024-06-25T04:29:29.607644'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        id: 19
+        name: Health Administration
+        parent: 
+        parent_: {}
+        rec_name: Health Administration
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      icon: gnuhealth-party
+      id: 61
+      name: Party
+      parent: 
+      parent_: {}
+      rec_name: Party
+      sequence: 0
+      write_date: '2024-08-30T06:27:57.936499'
+      write_uid: 0
+      write_uid_:
+        id: 0
+        name: Root
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

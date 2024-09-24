@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: model
+    description: model - model data management.
+paths:
+  '/administration/models/search':
+    $ref: 'get_model.yaml'
+  '/administration/models':
+    $ref: 'post_delete_model.yaml'
+  '/administration/models/{obj_id}':
+    $ref: 'get_put_model_by_id.yaml'
+  

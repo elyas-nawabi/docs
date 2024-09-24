@@ -1,0 +1,45 @@
+properties:
+   action: 
+      type: string
+   action_keywords: 
+      type: array
+   active: 
+      type: boolean
+   complete_name: 
+      type: string
+   groups:
+      type: array
+      properties:
+      name: 
+         type: string
+      parent: 
+         type: integer
+      rec_name: 
+         type: string
+   icon: 
+      type: string
+   name: 
+      type: string
+   parent: 
+      type: integer
+   rec_name: 
+      type: string
+   sequence: 
+      type: integer
+
+required:
+   -     
+example:
+   action: 
+   action_keywords: []
+   active: true
+   complete_name: Party
+   groups:
+    - name: Health Administration
+      parent: 
+      rec_name: Health Administration
+   icon: gnuhealth-party
+   name: Party
+   parent: 
+   rec_name: Party
+   sequence: 0

@@ -1,19 +1,30 @@
     post:
       tags:
-        - configuration
-      summary: Get configuration details.
-      description: Get configuration details.
-      operationId: getConfiguration
+        - reporting purchase
+      summary: Get reporting purchase details.
+      description: Get reporting purchase details.
+      operationId: getReportingPurchase
       requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
         content:
           application/json:
             schema:
               type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+              properties:
+                context:
+                  type: object
+                  properties:
+                    company: 
+                      type: integer
+                    period:
+                      type: string
+            example:
+              context:
+                company: 1
+                period: Day
+
       responses:
         '200':
-          description: List of configurations.
+          description: List of reporting purchases.
           content:
             application/json:
               schema:
@@ -21,22 +32,6 @@
                   properties:
                     data:
                       type: array
-                      properties:
-                        create_date: 
-                          type: string 
-                          format: date 
-                        create_uid: 
-                          type: integer
-                        create_uid_:
-                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                        
-                        write_date:
-                          type: string
-                          format: date 
-                        write_uid:
-                          type: integer
-                        write_uid_:
-                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                     errors:
                       type: object
                       nullable: true
@@ -57,8 +52,7 @@
                       type: string
                       nullable: true
               example:
-                data:
-                
+                data: []
                 error: null
                 pagination:
                   page: 1

@@ -1,0 +1,71 @@
+properties:
+   action: 
+      type: integer
+   active: 
+      type: boolean
+   direct_print: 
+      type: boolean
+   extension: 
+      type: string
+   groups: 
+      type: array
+   is_custom: 
+      type: boolean
+   keywords: 
+      type: array
+   model: 
+      type: string
+   module: 
+      type: string
+   name: 
+      type: string
+   rec_name: 
+      type: string
+   record_name: 
+      type: string
+   report: 
+      type: string
+   report_content: 
+      type: string
+   report_content_custom: 
+      type: string
+   report_content_html: 
+      type: string
+   report_content_name: 
+      type: string
+   report_name: 
+      type: string
+   single: 
+      type: boolean
+   template_extension: 
+      type: string
+   translatable: 
+      type: boolean
+   type: 
+      type: string
+
+required:
+   -     
+example:
+   action: 21
+   active: true
+   direct_print: false
+   extension: ''
+   groups: []
+   is_custom: false
+   keywords: []
+   model: ir.model
+   module: ir
+   name: Graph
+   rec_name: Graph
+   record_name: 
+   report: 
+   report_content: 
+   report_content_custom: 
+   report_content_html: 
+   report_content_name: Graph.odt
+   report_name: ir.model.graph
+   single: false
+   template_extension: odt
+   translatable: true
+   type: ir.action.report

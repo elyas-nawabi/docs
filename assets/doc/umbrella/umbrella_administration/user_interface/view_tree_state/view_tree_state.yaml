@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: view tree state
+    description: view tree state - view tree state data management.
+paths:
+  '/administration/tree-state/search':
+    $ref: 'get_view_tree_state.yaml'
+  '/administration/tree-state':
+    $ref: 'post_delete_view_tree_state.yaml'
+  '/administration/tree-state/{obj_id}':
+    $ref: 'get_put_view_tree_state_by_id.yaml'
+
+    
+  

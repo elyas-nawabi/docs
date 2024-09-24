@@ -1,0 +1,128 @@
+    post:
+      tags:
+        - reporting sale per region
+      summary: Get reporting sale per region details.
+      description: Get reporting sale per region details.
+      operationId: getReportingSalePerRegion
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context:
+                  type: object
+                  properties:
+                    company: 
+                      type: integer
+                    period:
+                      type: string
+            example:
+              context:
+                company: 1
+                period: Day
+      responses:
+        '200':
+          description: List of reporting sale per regions.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        currency: 
+                          type: integer
+                        currency_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        parent: 
+                          type: integer
+                        parent_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        revenue: 
+                          type: integer
+                        subregions:
+                          type: array
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data: 
+                  - create_date: '2024-06-25T04:23:52.665666'
+                    create_uid: 0
+                    create_uid_:
+                      id: 0
+                      name: Root
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    id: 2
+                    name: Africa
+                    parent: 1
+                    parent_:
+                      id: 1
+                      name: World
+                    rec_name: Africa
+                    revenue: 0
+                    subregions:
+                    - 8
+                    - 9
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

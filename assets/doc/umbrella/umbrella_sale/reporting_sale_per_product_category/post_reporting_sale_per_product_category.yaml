@@ -1,0 +1,131 @@
+    post:
+      tags:
+        - reporting sale per product category
+      summary: Get reporting sale per product category details.
+      description: Get reporting sale per product category details.
+      operationId: getReportingSalePerProductCategory
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context:
+                  type: object
+                  properties:
+                    company: 
+                      type: integer
+                    period:
+                      type: string
+                    
+            example:
+              context:
+                company: 1
+                period: Day
+              
+      responses:
+        '200':
+          description: List of reporting sale per product category.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        children:
+                          type: array
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        currency: 
+                          type: integer
+                        currency_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        parent: 
+                          type: integer
+                        parent_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        revenue: 
+                          type: integer
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data: 
+                  - children:
+                    - 13
+                    create_date: '2024-08-22T07:20:18.313007'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    id: 11
+                    name: aa
+                    parent: 10
+                    parent_:
+                      id: 10
+                      name: demoqqq111
+                    rec_name: aa
+                    revenue: 0
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

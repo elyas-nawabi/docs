@@ -1,16 +1,16 @@
 post:
       tags:
-        - configuration
-      summary: Create a configuration.
-      description: Create a configuration.
-      operationId: postConfigurationById
+        - sale
+      summary: Create an sale.
+      description: Create an sale.
+      operationId: postSaleById
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-configuration.yaml'
+              $ref: 'schemas/create-sale.yaml'
       responses:
         '201':
           description: OK
@@ -28,13 +28,13 @@ post:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    
+
 delete:
       tags:
-        - configuration
-      summary: Delete countries.
-      description: Delete countries.
-      operationId: deleteCountriesById
+        - sale
+      summary: Delete inventories.
+      description: Delete inventories.
+      operationId: deleteSaleById
       requestBody:
         required: true
         content:
@@ -59,4 +59,4 @@ delete:
             application/json:
               schema:
                 $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-  
+    

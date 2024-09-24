@@ -1,0 +1,121 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        action: 
+          type: integer
+        action_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        active: 
+          type: boolean
+        direct_print: 
+          type: boolean
+        extension: 
+          type: string
+        groups: 
+          type: array
+        id: 
+          type: integer
+        is_custom: 
+          type: boolean
+        keywords: 
+          type: array
+        model: 
+          type: string
+        module: 
+          type: string
+        name: 
+          type: string
+        rec_name: 
+          type: string
+        record_name: 
+          type: string
+        report: 
+          type: string
+        report_content: 
+          type: string
+        report_content_custom: 
+          type: string
+        report_content_html: 
+          type: string
+        report_content_name: 
+          type: string
+        report_name: 
+          type: string
+        single: 
+          type: boolean
+        template_extension: 
+          type: string
+        translatable: 
+          type: boolean
+        type: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      action: 21
+      action_:
+        id: 21
+        name: Graph
+      active: true
+      create_date: '2024-06-24T12:35:58.699428'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      direct_print: false
+      extension: ''
+      groups: []
+      id: 21
+      is_custom: false
+      keywords: []
+      model: ir.model
+      module: ir
+      name: Graph
+      rec_name: Graph
+      record_name: 
+      report: 
+      report_content: 
+      report_content_custom: 
+      report_content_html: 
+      report_content_name: Graph.odt
+      report_name: ir.model.graph
+      single: false
+      template_extension: odt
+      translatable: true
+      type: ir.action.report
+      write_date: '2024-06-24T12:35:58.699428'
+      write_uid: 0
+      write_uid_:
+        id: 0
+        name: Root
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

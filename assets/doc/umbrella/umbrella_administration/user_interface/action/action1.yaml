@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: action
+    description: action - action data management.
+paths:
+  '/administration/actions/search':
+    $ref: 'get_action.yaml'
+  '/administration/actions':
+    $ref: 'post_delete_action.yaml'
+  '/administration/actions/{obj_id}':
+    $ref: 'get_put_action_by_id.yaml'
+
+    
+  
