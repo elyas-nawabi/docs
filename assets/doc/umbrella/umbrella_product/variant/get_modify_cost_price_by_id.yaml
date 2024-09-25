@@ -1,0 +1,69 @@
+    post:
+      tags:
+        - variant
+      summary: Modify cost price.
+      description: Modify cost price.
+      operationId: postModifyCostPrice
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                date: 
+                  type: string
+                  format: date 
+                cost_price:
+                  type: string 
+            required:
+              - date 
+              - cost_price
+
+            example:
+              date: "2024-02-03"
+              cost_price: "2.2"
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data: 
+                      type: object
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data: null
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    
