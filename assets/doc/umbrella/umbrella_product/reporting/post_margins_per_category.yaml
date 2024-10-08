@@ -48,6 +48,8 @@
                   type: object
                   properties:
                     data:
+                      children:
+                        type: array
                       cost: 
                         type: integer
                       create_date: 
@@ -106,6 +108,7 @@
                       nullable: true
               example:
                 data: 
+                  children: [13]
                   cost: 0
                   create_date: '2024-08-22T07:20:18.313007'
                   create_uid: 1

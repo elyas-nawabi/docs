@@ -7,7 +7,14 @@ tags:
 paths:
   '/product/reporting/margins/search':
     $ref: 'post_reporting_margins.yaml'
+  '/product/reporting/margins-timeseries/search':
+    $ref: 'post_reporting_margins_timeseries.yaml'
   '/product/reporting/margins-per-category/search':
     $ref: 'post_margins_per_category.yaml'
+  '/product/reporting/margins-per-category-timeseries/search':
+    $ref: 'post_margins_per_category_timeseries.yaml'
   '/product/reporting/margins-per-product/search':
     $ref: 'post_margins_per_product.yaml'
+  '/product/reporting/margins-per-product-timeseries/search':
+    $ref: 'post_margins_per_product_timeseries.yaml'
+  
