@@ -13,3 +13,9 @@ paths:
     $ref: 'get_put_user_by_id.yaml'
   '/administration/users/{obj_id}/reset-password':
     $ref: 'put_user_reset_password.yaml'
+  '/administration/users/get-user-application-key':
+    $ref: 'get_user_application_key.yaml'
+  '/administration/users/user-application/{obj_id}/validate':
+    $ref: 'get_user_validate.yaml'
+  '/administration/users/user-application/{obj_id}/cancel':
+    $ref: 'get_user_cancel.yaml'
