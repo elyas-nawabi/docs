@@ -1,6 +1,7 @@
       properties:
-       
+        models:
+          type: array
       required:
-        
+        - models
       example:
-        
+        models: ["currency.currency"]

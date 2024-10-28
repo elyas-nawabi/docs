@@ -8,171 +8,312 @@ schema:
         field_childs: 
         fields:
           active:
-            context: "{}"
-            create: true
-            delete: true
-            domain: "[]"
-            help: Uncheck to exclude from future use.
-            loading: eager
-            name: active
-            on_change: []
-            on_change_with: []
-            readonly: false
-            required: false
-            searchable: true
-            sortable: true
-            states: "{}"
-            string: Active
-            type: boolean
+            properties:
+              context: 
+                type: string
+              create: 
+                type: boolean
+              delete: 
+                type: boolean
+              domain: 
+                type: string
+              help: 
+                type: string
+              loading: 
+                type: string
+              name: 
+                type: string
+              on_change: 
+                type: array
+              on_change_with: 
+                type: array
+              readonly: 
+                type: boolean
+              required: 
+                type: boolean
+              searchable: 
+                type: boolean
+              sortable: 
+                type: boolean
+              states: 
+                type: string
+              string: 
+                type: string
+              type: 
+                type: string
           default_uom:
-            context: "{}"
-            create: true
-            datetime_field: 
-            delete: true
-            domain: "[]"
-            help: The default Unit of Measure.
-            loading: lazy
-            name: default_uom
-            on_change: []
-            on_change_with:
-            - product
-            - id
-            readonly: true
-            relation: product.uom
-            required: false
-            search_context: "{}"
-            search_order: 'null'
-            searchable: true
-            sortable: false
-            states: '{"readonly": {"__class__": "Not", "v": {"__class__": "Eval", "v": "active",
-              "d": true}}}'
-            string: Default UoM
-            type: many2one
+            properties:
+              context: 
+                type: string
+              create: 
+                type: boolean
+              datetime_field: 
+              delete: 
+                type: boolean
+              domain: 
+                type: string
+              help: 
+                type: string
+              loading: 
+                type: string
+              name: 
+                type: string
+              on_change: 
+                type: array
+              on_change_with:
+                type: array
+                properties:
+                  - product
+                  - id
+              readonly: 
+                type: boolean
+              relation: 
+                type: string
+              required: 
+                type: boolean
+              search_context: 
+                type: string
+              search_order: 
+                type: string
+              searchable: 
+                type: boolean
+              sortable: 
+                type: boolean
+              states: 
+                type: string
+              string: 
+                type: string
+              type: 
+                type: string
           expiration_date:
-            context: "{}"
-            create: true
-            delete: true
-            domain: "[]"
-            help: ''
-            loading: eager
-            name: expiration_date
-            on_change: []
-            on_change_with: []
-            readonly: false
-            required: false
-            searchable: true
-            sortable: true
-            states: '{"readonly": {"__class__": "Not", "v": {"__class__": "Eval", "v": "active",
-              "d": true}}}'
-            string: Expiration Date
-            type: date
+            properties:
+              context:
+                type: string
+              create: 
+                type: boolean
+              delete: 
+                type: boolean
+              domain: 
+                type: string
+              help: 
+                type: string
+              loading: 
+                type: string
+              name: 
+                type: string
+              on_change: 
+                type: array
+              on_change_with: 
+                type: array
+              readonly: 
+                type: boolean
+              required: 
+                type: boolean
+              searchable: 
+                type: boolean
+              sortable: 
+                type: boolean
+              states: 
+                type: string
+              string: 
+                type: string
+              type: 
+                type: string
           has_sequence:
-            context: "{}"
-            create: true
-            delete: true
-            domain: "[]"
-            help: ''
-            loading: lazy
-            name: has_sequence
-            on_change: []
-            on_change_with:
-            - product
-            - id
-            readonly: true
-            required: false
-            searchable: false
-            sortable: false
-            states: '{"readonly": {"__class__": "Not", "v": {"__class__": "Eval", "v": "active",
-              "d": true}}}'
-            string: Has Sequence
-            type: boolean
+            properties:
+              context: 
+                type: string
+              create: 
+                type: boolean
+              delete: 
+                type: boolean
+              domain: 
+                type: string
+              help: 
+                type: string
+              loading: 
+                type: string
+              name: 
+                type: string
+              on_change:  
+                type: array
+              on_change_with:
+                properties:
+                  - product
+                  - id
+              readonly: 
+                type: boolean
+              required: 
+                type: boolean
+              searchable: 
+                type: boolean
+              sortable: 
+                type: boolean
+              states: 
+                type: string
+              string:
+                type: string
+              type: 
+                type: string
           id:
-            context: "{}"
-            create: true
-            delete: true
-            domain: "[]"
-            help: ''
-            loading: eager
-            name: id
-            on_change: []
-            on_change_with: []
-            readonly: true
-            required: false
-            searchable: true
-            sortable: true
-            states: '{"readonly": {"__class__": "Not", "v": {"__class__": "Eval", "v": "active",
-              "d": true}}}'
-            string: ID
-            type: integer
+            properties:
+              context: 
+                type: string
+              create: 
+                type: boolean
+              delete: 
+                type: boolean
+              domain: 
+                type: string
+              help: 
+                type: string
+              loading: 
+                type: string
+              name: 
+                type: string
+              on_change: 
+                type: array
+              on_change_with: 
+                type: array
+              readonly: 
+                type: boolean
+              required: 
+                type: boolean
+              searchable: 
+                type: boolean
+              sortable: 
+                type: boolean
+              states: 
+                type: string
+              string: 
+                type: string
+              type: 
+                type: string
           number:
-            autocomplete: []
-            context: "{}"
-            create: true
-            delete: true
-            domain: "[]"
-            help: ''
-            loading: eager
-            name: number
-            on_change: []
-            on_change_with: []
-            readonly: false
-            required: true
-            searchable: true
-            sortable: true
-            states: '{"required": {"__class__": "Or", "s": [{"__class__": "Not", "v": {"__class__":
-              "Bool", "v": {"__class__": "Eval", "v": "has_sequence", "d": ""}}}, {"__class__":
-              "Greater", "s1": {"__class__": "Eval", "v": "id", "d": -1}, "s2": 0, "e":
-              true}]}, "readonly": {"__class__": "Not", "v": {"__class__": "Eval", "v":
-              "active", "d": true}}}'
-            string: Number
-            strip: true
-            translate: false
-            type: char
+            properties:
+              autocomplete: 
+                type: array
+              context: 
+                type: string
+              create: 
+                type: boolean
+              delete: 
+                type: boolean
+              domain: 
+                type: string
+              help: 
+                type: string
+              loading: 
+                type: string
+              name: 
+                type: string
+              on_change: 
+                type: array
+              on_change_with: 
+                type: array
+              readonly: 
+                type: boolean
+              required: 
+                type: boolean
+              searchable: 
+                type: boolean
+              sortable: 
+                type: boolean
+              states: 
+                type: boolean
+              string: 
+                type: string
+              strip: 
+                type: boolean
+              translate: 
+                type: boolean
+              type: 
+                type: string
           product:
-            context: "{}"
-            create: true
-            datetime_field: 
-            delete: true
-            domain: "[]"
-            help: ''
-            loading: eager
-            name: product
-            on_change: []
-            on_change_with: []
-            readonly: false
-            relation: product.product
-            required: true
-            search_context: "{}"
-            search_order: 'null'
-            searchable: true
-            sortable: true
-            states: '{"readonly": {"__class__": "Not", "v": {"__class__": "Eval", "v": "active",
-              "d": true}}}'
-            string: Product
-            type: many2one
-            views: {}
+            properties:
+              context: 
+                type: string
+              create: 
+                type: boolean
+              datetime_field: 
+                type: date
+              delete: 
+                type: boolean
+              domain: 
+                type: string
+              help: 
+                type: string
+              loading: 
+                type: string
+              name: 
+                type: string
+              on_change: 
+                type: array
+              on_change_with: 
+                type: array
+              readonly: 
+                type: boolean
+              relation: 
+                type: string
+              required: 
+                type: boolean
+              search_context: 
+                type: string
+              search_order: 
+                type: string
+              searchable: 
+                type: boolean
+              sortable: 
+                type: boolean
+              states: 
+                type: string
+              string: 
+                type: string
+              type: 
+                type: string
+              views: 
+                type: object
           quantity:
-            context: "{}"
-            create: true
-            delete: true
-            digits: '"default_uom"'
-            domain: "[]"
-            help: ''
-            loading: lazy
-            name: quantity
-            on_change: []
-            on_change_with: []
-            readonly: true
-            required: false
-            searchable: true
-            sortable: false
-            states: '{"readonly": {"__class__": "Not", "v": {"__class__": "Eval", "v": "active",
-              "d": true}}}'
-            string: Quantity
-            type: float
-        model: stock.lot
-        type: form
-        view_id: 903
+            context: 
+              type: string
+            create: 
+              type: boolean
+            delete: 
+              type: boolean
+            digits: 
+              type: string
+            domain: 
+              type: string
+            help: 
+              type: string
+            loading: 
+              type: string
+            name: 
+              type: string
+            on_change: 
+              type: array
+            on_change_with: 
+              type: array
+            readonly: 
+              type: boolean
+            required: 
+              type: boolean
+            searchable: 
+              type: boolean
+            sortable: 
+              type: boolean
+            states: 
+              type: string
+            string: 
+              type: string
+            type: 
+              type: string
+        model: 
+          type: string
+        type: 
+          type: string
+        view_id: 
+          type: integer
     errors:
       type: object
       nullable: true

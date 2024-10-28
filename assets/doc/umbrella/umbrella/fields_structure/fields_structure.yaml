@@ -7,7 +7,7 @@ tags:
     description: fields structure - fields structure data management.
 paths:
   '/fields-structure/{model}':
-    $ref: 'post_fields_structre.yaml'
+    $ref: 'post_fields_structure.yaml'
   
  
   
