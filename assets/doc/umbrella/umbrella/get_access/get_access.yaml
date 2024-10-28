@@ -1,0 +1,13 @@
+openapi: 3.1.0
+version: 1.0.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: get access
+    description: get access - get access data management.
+paths:
+  '/get-access-by-models':
+    $ref: 'post_get_access.yaml'
+  
+ 
+  
