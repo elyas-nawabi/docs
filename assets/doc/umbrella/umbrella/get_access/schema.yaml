@@ -1,0 +1,39 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        currency.currency:
+          type: object
+          properties:
+            create: 
+              type: integer
+            delete: 
+              type: integer
+            read: 
+              type: integer
+            write: 
+              type: integer
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      currency.currency:
+        create: 1
+        delete: 1
+        read: 1
+        write: 1
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null
