@@ -53,7 +53,7 @@
           application/json:
             schema:
               type: object
-              $ref: 'schemas/create-operating-room.yaml'
+              $ref: 'schemas/create-hospital-or.yaml'
       responses:
         '200':
           description: OK
