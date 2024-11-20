@@ -2,13 +2,13 @@ openapi: 3.1.0
 servers:
   - url: 'http://api-alpha.umbrellaerp.com'
 tags:
-  - name: operating room
-    description: operating room - operating room data management.
+  - name: hospital or
+    description: hospital or - hospital or data management.
 paths:
   '/health/operating-rooms/search':
-    $ref: 'get_operating_room.yaml'
+    $ref: 'get_hospital_or.yaml'
   '/health/operating-rooms':
-    $ref: 'post_delete_operating_room.yaml'
+    $ref: 'post_delete_hospital_or.yaml'
   '/health/operating-rooms/{obj_id}':
-    $ref: 'get_put_operating_room_by_id.yaml'
+    $ref: 'get_put_hospital_or_by_id.yaml'
   
