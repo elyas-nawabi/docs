@@ -10,15 +10,40 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
-        
-        
+        health_professional: 
+          type: integer
+        health_professional_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        meal_item: 
+          type: array
+        meal_order: 
+          type: string
+        meal_warning: 
+          type: boolean
+        meal_warning_ack: 
+          type: boolean
+        mealtime: 
+          type: string
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        order_date: 
+          type: string
+          format: datetime
+        rec_name: 
+          type: string
+        remarks: 
+          type: string
+        state:
+          type: string
         write_date:
           type: string
           format: date 
         write_uid:
           type: integer
-        write_uid_:
-          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
       nullable: true
@@ -33,7 +58,31 @@ schema:
 
 example:
     data:
-      
+      create_date: '2024-12-06T07:47:30.421364'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      health_professional: 1
+      health_professional_:
+        id: 1
+        name: Milestone
+      id: 31
+      meal_item: []
+      meal_order: MEAL030
+      meal_warning: 
+      meal_warning_ack: 
+      mealtime: lunch
+      name: 1
+      name_:
+        id: 1
+        name: INPAC001:abacavir (ABC):Milestone
+      order_date: '2024-12-04T04:56:54'
+      rec_name: '31'
+      remarks: 
+      state:
+      write_date: 
+      write_uid:
     errors: null
     pagination: null
     status: 201
