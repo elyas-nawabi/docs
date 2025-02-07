@@ -5,6 +5,6 @@ tags:
   - name: configuration
     description: configuration - configuration data management.
 paths:
-  '/sale/configurations/{obj_id}':
+  '/sale/configurations':
     $ref: 'get_put_configuration_by_id.yaml'
   
