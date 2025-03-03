@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: departure reasons
+    description: departure reasons - departure reasons data management.
+paths:
+  '/hr/departure-reasons/search':
+    $ref: 'get_departure_reasons.yaml'
+  '/hr/departure-reasons':
+    $ref: 'post_delete_departure_reasons.yaml'
+  '/hr/departure-reasons/{obj_id}':
+    $ref: 'get_put_departure_reasons_by_id.yaml'
+  
