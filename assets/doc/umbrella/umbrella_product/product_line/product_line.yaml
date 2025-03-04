@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: product
+    description: product - product data management.
+paths:
+  '/product/product-lines/search':
+    $ref: 'get_product.yaml'
+  '/product/product-lines':
+    $ref: 'post_delete_product.yaml'
+  '/product/product-lines/{obj_id}':
+    $ref: 'get_put_product_by_id.yaml'
+  
