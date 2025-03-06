@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: sale
+    description: sale - sale data management.
+paths:
+  '/sale/sale-lines/search':
+    $ref: 'get_sale_line.yaml'
+  '/sale/sale-lines':
+    $ref: 'post_delete_sale_line.yaml'
+  '/sale/sale-lines/{obj_id}':
+    $ref: 'get_put_sale_line_by_id.yaml'  
