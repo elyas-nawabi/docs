@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: purchase line
+    description: purchase line - purchase line data management.
+paths:
+  '/purchase/purchase_lines/search':
+    $ref: 'get_purchase_line.yaml'
+  '/purchase/purchase_lines':
+    $ref: 'post_delete_purchase_line.yaml'
+  '/purchase/purchase_lines/{obj_id}':
+    $ref: 'get_put_purchase_line_by_id.yaml'
+  
