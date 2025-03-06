@@ -1,8 +1,8 @@
 post:
       tags:
         - sale
-      summary: Create an sale.
-      description: Create an sale.
+      summary: Create a sale.
+      description: Create a sale.
       operationId: postSaleById
       requestBody:
         required: true
@@ -32,8 +32,8 @@ post:
 delete:
       tags:
         - sale
-      summary: Delete inventories.
-      description: Delete inventories.
+      summary: Delete sales.
+      description: Delete sales.
       operationId: deleteSaleById
       requestBody:
         required: true
