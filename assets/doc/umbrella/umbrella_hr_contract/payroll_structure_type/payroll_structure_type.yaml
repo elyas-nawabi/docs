@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: payroll structure type
+    description: payroll structure type - payroll structure type data management.
+paths:
+  '/hr-contract/salary-structure-types/search':
+    $ref: 'get_payroll_structure_type.yaml'
+  '/hr-contract/salary-structure-types':
+    $ref: 'post_delete_payroll_structure_type.yaml'
+  '/hr-contract/salary-structure-types/{obj_id}':
+    $ref: 'get_put_payroll_structure_type_by_id.yaml'
+  
