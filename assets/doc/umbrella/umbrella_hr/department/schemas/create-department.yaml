@@ -4,7 +4,30 @@
       format: date 
     create_uid: 
       type: integer
-    
+    active: 
+      type: boolean
+    children:
+      type: array
+    company: 
+      type: integer
+    complete_name: 
+      type: string
+    manager: 
+      type: integer
+    master_department: 
+      type: integer
+    members: 
+      type: array
+    name: 
+      type: string
+    note: 
+      type: string
+    parent: 
+      type: integer
+    rec_name: 
+      type: string
+    total_employee: 
+      type: integer
     write_date:
       type: string
       format: date 
@@ -13,8 +36,20 @@
   required:
     
   example:
-    create_date: '2024-04-18T04:45:21.629821'
-    create_uid: 1
-    
-    write_date: 
-    write_uid: 
+      active: true
+      children:
+       - 2
+      company: 1
+      complete_name: Technical
+      create_date: '2025-03-16T09:58:27.122989'
+      create_uid: 1
+      manager: 
+      master_department: 1
+      members: []
+      name: Technical
+      note: ''
+      parent: 
+      rec_name: Technical
+      total_employee: 0
+      write_date: 
+      write_uid:
