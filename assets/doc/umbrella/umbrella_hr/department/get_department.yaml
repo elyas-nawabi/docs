@@ -29,15 +29,28 @@ post:
                       type: integer
                     create_uid_:
                       $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                    
-
+                    active: true
+                    company: 
+                      type: integer
+                    company_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    id: 
+                      type: integer
+                    manager: 
+                      type: integer
+                    manager_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    name: 
+                      type: string
+                    rec_name: 
+                      type: string
+                    total_employee: 
+                      type: integer
                     write_date:
                       type: string
                       format: date 
                     write_uid:
                       type: integer
-                    write_uid_:
-                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                 error:
                   type: object
                   nullable: true
@@ -59,24 +72,35 @@ post:
                   nullable: true
           example:
             data:
-              - create_date: '2024-09-02T16:38:18.843651'
+              - active: true
+                company: 1
+                company_:
+                  id: 1
+                  name: Milestone
+                create_date: '2025-03-16T09:58:38.811536'
                 create_uid: 1
                 create_uid_:
                   id: 1
                   name: Administrator
-                
+                id: 2
+                manager: 8
+                manager_:
+                  id: 8
+                  name: Milestone
+                name: IT
+                rec_name: Technical / IT
+                total_employee: 0
                 write_date: 
                 write_uid: 
-                write_uid_: {}
-
-            error: null
+            error: 
             pagination:
               page: 1
               per_page: 100
               total_pages: 1
-              total_records: 9
+              total_records: 2
             status: 200
-            success_message: null
+            success_message: 
+
     
     '401':
       description: >-
