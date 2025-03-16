@@ -45,8 +45,6 @@ schema:
           format: date 
         write_uid:
           type: integer
-        write_uid_:
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
     error:
       type: object
       nullable: true
