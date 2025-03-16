@@ -10,14 +10,43 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        active: 
+          type: boolean
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        contract_type: 
+          type: integer
+        contract_type_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        department: 
+          type: integer
+        department_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        description: 
+          type: string
+        expected_employees: 
+          type: integer
+        id: 
+          type: integer
+        name: 
+          type: string
+        no_of_employee: 
+          type: integer
+        no_of_recruitment: 
+          type: integer
+        rec_name: 
+          type: string
+        requirements: 
+          type: string
+        sequence: 
+          type: integer
         write_date:
           type: string
           format: date 
         write_uid:
           type: integer
-        write_uid_:
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
     error:
       type: object
       nullable: true
@@ -32,15 +61,35 @@ schema:
 
 example:
     data:
-      create_date: '2024-04-18T04:45:21.629821'
+      active: true
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      contract_type: 1
+      contract_type_:
+        id: 1
+        name: Full Time
+      create_date: '2025-03-16T10:29:23.307830'
       create_uid: 1
       create_uid_:
         id: 1
         name: Administrator
-      
+      department: 2
+      department_:
+        id: 2
+        name: Technical / IT
+      description: 
+      expected_employees: 0
+      id: 1
+      name: Manager
+      no_of_employee: 1
+      no_of_recruitment: 1
+      rec_name: Manager
+      requirements: 
+      sequence: 10
       write_date: 
       write_uid: 
-      write_uid_: {}
     error: null
     pagination: null
     status: 201
