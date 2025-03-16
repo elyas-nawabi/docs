@@ -4,7 +4,20 @@
       format: date 
     create_uid: 
       type: integer
-    
+    active: 
+      type: boolean
+    address: 
+      type: integer
+    company: 
+      type: integer
+    location_number: 
+      type: string
+    location_type: 
+      type: string
+    name: 
+      type: string
+    rec_name: 
+      type: string
     write_date:
       type: string
       format: date 
@@ -13,8 +26,14 @@
   required:
     
   example:
-    create_date: '2024-04-18T04:45:21.629821'
-    create_uid: 1
-    
-    write_date: 
-    write_uid: 
+      active: true
+      address: 20
+      company: 1
+      create_date: '2025-03-16T10:27:06.234122'
+      create_uid: 1
+      location_number: '123'
+      location_type: home
+      name: kabul
+      rec_name: kabul
+      write_date: 
+      write_uid:
