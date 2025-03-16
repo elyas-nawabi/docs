@@ -29,8 +29,18 @@ post:
                       type: integer
                     create_uid_:
                       $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                    
-
+                    country: 
+                      type: integer
+                    country_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    country_code: 
+                      type: string
+                    id: 
+                      type: integer
+                    name:
+                      type: string
+                    rec_name:
+                      type: string
                     write_date:
                       type: string
                       format: date 
@@ -59,15 +69,21 @@ post:
                   nullable: true
           example:
             data:
-              - create_date: '2024-09-02T16:38:18.843651'
+              - country: 1
+                country_:
+                  id: 1
+                  name: Oman
+                country_code: ''
+                create_date: '2025-03-16T10:30:12.020342'
                 create_uid: 1
                 create_uid_:
                   id: 1
                   name: Administrator
-                
+                id: 1
+                name: NTA Grade A
+                rec_name: NTA Grade A
                 write_date: 
                 write_uid: 
-                write_uid_: {}
 
             error: null
             pagination:
