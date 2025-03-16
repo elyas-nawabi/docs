@@ -1,38 +1,17 @@
   properties:
-    active:
-      type: boolean
-    code:
-      type: string
     create_date: 
       type: string 
       format: date 
     create_uid: 
       type: integer
-    digits:
+    name: 
+      type: string
+    reason_code: 
       type: integer
-    name:
+    rec_name: 
       type: string
-    numeric_code:
-      type: string
-    rate:
-      type: number
-      format: decimal
-    rates:
-      type: array
-      properties:
-        date: 
-          type: string
-          format: date
-        rate: 
-          type: number
-          format: decimal
-    rec_name:
-      type: string
-    rounding:
-      type: number
-      format: float
-    symbol:
-      type: string
+    sequence: 
+      type: integer
     write_date:
       type: string
       format: date 
@@ -41,17 +20,11 @@
   required:
     
   example:
-    active: true
-    code: AFN
-    create_date: '2024-04-18T04:45:21.629821'
-    create_uid: 1
-    digits: 2
-    name: Afghani
-    numeric_code: ''
-    rate: 0
-    rates: []
-    rec_name: Afghani
-    rounding: 0.01
-    symbol: AFN
+    create_date: '2025-02-26T10:36:30.627365'
+    create_uid: 0
+    name: Retired
+    reason_code: 340
+    rec_name: Retired
+    sequence: 10
     write_date: 
     write_uid: 
