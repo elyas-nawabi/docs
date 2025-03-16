@@ -29,15 +29,15 @@ post:
                       type: integer
                     create_uid_:
                       $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-                    
-
+                    id: 
+                      type: integer
+                    name: 
+                      type: string
+                    rec_name: 
+                      type: string
                     write_date:
                       type: string
                       format: date 
-                    write_uid:
-                      type: integer
-                    write_uid_:
-                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
                 error:
                   type: object
                   nullable: true
@@ -64,11 +64,11 @@ post:
                 create_uid_:
                   id: 1
                   name: Administrator
-                
+                id: 1
+                name: "Tag Name"
+                rec_name: "Tag Name"
                 write_date: 
                 write_uid: 
-                write_uid_: {}
-
             error: null
             pagination:
               page: 1
