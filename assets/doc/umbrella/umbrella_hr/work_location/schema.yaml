@@ -10,14 +10,31 @@ schema:
           type: integer
         create_uid_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
+        active: 
+          type: boolean
+        address: 
+          type: integer
+        address_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        location_number: 
+          type: string
+        location_type: 
+          type: string
+        name: 
+          type: string
+        rec_name: 
+          type: string
         write_date:
           type: string
           format: date 
         write_uid:
           type: integer
-        write_uid_:
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
     error:
       type: object
       nullable: true
@@ -32,15 +49,27 @@ schema:
 
 example:
     data:
-      create_date: '2024-04-18T04:45:21.629821'
-      create_uid: 1
-      create_uid_:
+      - active: true
+        address: 20
+        address_:
+          id: 20
+          name: kabul
+        company: 1
+        company_:
+          id: 1
+          name: Milestone
+        create_date: '2025-03-16T10:27:06.234122'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
         id: 1
-        name: Administrator
-      
-      write_date: 
-      write_uid: 
-      write_uid_: {}
+        location_number: '123'
+        location_type: home
+        name: kabul
+        rec_name: kabul
+        write_date: 
+        write_uid:
     error: null
     pagination: null
     status: 201
