@@ -5,10 +5,10 @@ tags:
   - name: job position
     description: job position - job position data management.
 paths:
-  '/hr/job_positions/search':
+  '/hr/job-positions/search':
     $ref: 'get_job.yaml'
-  '/hr/job_positions':
+  '/hr/job-positions':
     $ref: 'post_delete_job.yaml'
-  '/hr/job_positions/{obj_id}':
+  '/hr/job-positions/{obj_id}':
     $ref: 'get_put_job_by_id.yaml'
   
