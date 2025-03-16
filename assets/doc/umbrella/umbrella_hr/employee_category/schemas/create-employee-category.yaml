@@ -4,7 +4,10 @@
       format: date 
     create_uid: 
       type: integer
-    
+    name: 
+      type: string
+    rec_name: 
+      type: string
     write_date:
       type: string
       format: date 
@@ -15,6 +18,7 @@
   example:
     create_date: '2024-04-18T04:45:21.629821'
     create_uid: 1
-    
+    name: "Tag Name"
+    rec_name: "Tag Name"
     write_date: 
     write_uid: 
