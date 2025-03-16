@@ -4,7 +4,30 @@
       format: date 
     create_uid: 
       type: integer
-    
+    active: 
+      type: boolean
+    company: 
+      type: integer
+    contract_type: 
+      type: integer
+    department: 
+      type: integer
+    description: 
+      type: string
+    expected_employees: 
+      type: integer
+    name: 
+      type: string
+    no_of_employee: 
+      type: integer
+    no_of_recruitment: 
+      type: integer
+    rec_name: 
+      type: string
+    requirements: 
+      type: string
+    sequence: 
+      type: integer
     write_date:
       type: string
       format: date 
@@ -13,8 +36,19 @@
   required:
     
   example:
-    create_date: '2024-04-18T04:45:21.629821'
+    active: true
+    company: 1
+    contract_type: 1
+    create_date: '2025-03-16T10:29:23.307830'
     create_uid: 1
-    
+    department: 2
+    description: 
+    expected_employees: 0
+    name: Manager
+    no_of_employee: 1
+    no_of_recruitment: 1
+    rec_name: Manager
+    requirements: 
+    sequence: 10
     write_date: 
     write_uid: 
