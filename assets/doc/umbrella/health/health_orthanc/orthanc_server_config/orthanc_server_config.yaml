@@ -13,6 +13,6 @@ paths:
     $ref: 'get_put_orthanc_server_config_by_id.yaml'
   '/health-orthanc/servers/{obj_id}/sync':
     $ref: 'get_sync.yaml'
-  '/health-orthanc/servers/{obj_id}/add-orthanc-server':
+  '/health-orthanc/servers/add-orthanc-server':
     $ref: 'post_add_orthanc_server.yaml'
   
