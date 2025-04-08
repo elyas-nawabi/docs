@@ -6,9 +6,9 @@ tags:
     description: departure reasons - departure reasons data management.
 paths:
   '/hr/departure-reasons/search':
-    $ref: 'get_departure_reasons.yaml'
+    $ref: 'get_departure_reason.yaml'
   '/hr/departure-reasons':
-    $ref: 'post_delete_departure_reasons.yaml'
+    $ref: 'post_delete_departure_reason.yaml'
   '/hr/departure-reasons/{obj_id}':
-    $ref: 'get_put_departure_reasons_by_id.yaml'
+    $ref: 'get_put_departure_reason_by_id.yaml'
   
