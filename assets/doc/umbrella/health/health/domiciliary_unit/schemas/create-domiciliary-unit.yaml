@@ -115,8 +115,6 @@
               type: boolean
             customer_payment_term: 
               type: integer
-            customer_payment_term_:
-              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
             customer_tax_rule: 
               type: integer
             death_certificate: 
