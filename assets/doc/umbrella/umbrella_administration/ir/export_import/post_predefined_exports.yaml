@@ -1,0 +1,57 @@
+post:
+  tags:
+    - export import
+  summary: Create a predefined export configuration
+  description: Set/create a predefined export configuration for a model
+  operationId: setPredefinedExports
+  requestBody:
+    required: true
+    description: Export configuration data
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/export-schema.yaml'
+  responses:
+    '201':
+      description: Export configuration created successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: ID of the created export configuration
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              id: 123
+            errors: null
+            status: 201
+            success_message: "Export configuration created successfully"
+    '400':
+      description: Bad Request - Invalid input data
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP400'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401' 
