@@ -1,0 +1,29 @@
+type: object
+properties:
+  fields_names:
+    type: array
+    description: List of field names corresponding to the data columns
+    items:
+      type: string
+    example: ["number", "party.name", "invoice_date", "total_amount"]
+  data:
+    type: array
+    description: Array of data rows to import, each row is an array of values
+    items:
+      type: array
+      items:
+        type: string
+    example: 
+      - ["INV001", "Customer A", "2024-01-15", "1000.00"]
+      - ["INV002", "Customer B", "2024-01-16", "1500.00"]
+
+required:
+  - fields
+  - data
+
+example:
+  fields: ["number", "party.name", "invoice_date", "total_amount"]
+  data:
+    - ["INV001", "Customer A", "2024-01-15", "1000.00"]
+    - ["INV002", "Customer B", "2024-01-16", "1500.00"]
+    - ["INV003", "Customer C", "2024-01-17", "750.00"]
