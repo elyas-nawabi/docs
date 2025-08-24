@@ -1,0 +1,91 @@
+get:
+  tags:
+    - employee
+  summary: Get planned activities for an employee
+  description: Retrieve all planned activities for a specific employee
+  operationId: getEmployeePlannedActivities
+  parameters:
+    - name: obj_id
+      required: true
+      in: path
+      description: The ID of the employee to get planned activities for
+      schema:
+        type: integer
+      example: 123
+  responses:
+    '200':
+      description: List of planned activities for the employee
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '../activity/schema.yaml#/schema'
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 1
+                res_name: "Employee Onboarding"
+                activity_type: 1
+                user: 123
+                summary: "Initial orientation call"
+                date_deadline: "2024-01-25"
+                date_done: null
+                state: "planned"
+                res_model: "company.employee"
+                res: 123
+                activity_category: "phone"
+                activity_decoration: "info"
+                icon: "phone"
+                note: "Make initial orientation call with new employee"
+                automated: false
+                user_tz: "UTC"
+                request_partner: null
+                recommended_activity_type: null
+                previous_activity_type: null
+                has_recommended_activities: false
+                chaining_type: "suggest"
+              - id: 2
+                res_name: "Employee Training"
+                activity_type: 2
+                user: 123
+                summary: "Schedule training session"
+                date_deadline: "2024-01-26"
+                date_done: null
+                state: "planned"
+                res_model: "company.employee"
+                res: 123
+                activity_category: "meeting"
+                activity_decoration: "info"
+                icon: "calendar"
+                note: "Schedule and conduct training session"
+                automated: false
+                user_tz: "UTC"
+                request_partner: null
+                recommended_activity_type: null
+                previous_activity_type: null
+                has_recommended_activities: false
+                chaining_type: "suggest"
+            errors: null
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401' 
