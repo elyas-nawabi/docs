@@ -1,0 +1,88 @@
+post:
+  tags:
+    - mail activity type
+  summary: Create a mail activity type
+  description: Create a new mail activity type
+  operationId: createMailActivityType
+  requestBody:
+    required: true
+    description: Mail activity type data
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/mail-activity-type-upsert-schema.yaml'
+  responses:
+    '201':
+      description: Mail activity type created successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: ID of the created mail activity type
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              id: 123
+            errors: null
+            status: 201
+            success_message: "Mail activity type created successfully"
+    '400':
+      description: Bad Request - Invalid input data
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP400'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+  tags:
+    - mail activity type
+  summary: Delete mail activity types
+  description: Delete multiple mail activity types by IDs
+  operationId: deleteMailActivityTypes
+  requestBody:
+    required: true
+    description: IDs of mail activity types to delete
+    content:
+      application/json:
+        schema:
+          $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+  responses:
+    '200':
+      description: Mail activity types deleted successfully
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401' 
