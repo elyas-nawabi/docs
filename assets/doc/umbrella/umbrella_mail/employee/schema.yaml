@@ -1,0 +1,454 @@
+schema:
+  properties:
+    id:
+      type: integer
+      description: Unique identifier for the employee
+    party:
+      type: integer
+      description: ID of the party record
+    company:
+      type: integer
+      description: ID of the company the employee belongs to
+    start_date:
+      type: string
+      format: date
+      description: Employee start date
+    end_date:
+      type: string
+      format: date
+      nullable: true
+      description: Employee end date
+    supervisor:
+      type: integer
+      nullable: true
+      description: ID of the supervisor
+    categories:
+      type: array
+      description: List of employee categories
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+    user:
+      type: integer
+      nullable: true
+      description: ID of the user account
+    job_title:
+      type: string
+      description: Job title of the employee
+    mobile_phone:
+      type: string
+      description: Mobile phone number
+    work_email:
+      type: string
+      description: Work email address
+    first_contract_date:
+      type: string
+      format: date
+      nullable: true
+      description: Date of first contract
+    party_name:
+      type: string
+      description: Name of the employee
+    active:
+      type: boolean
+      description: Whether the employee is active
+    department:
+      type: integer
+      nullable: true
+      description: ID of the department
+    private_street:
+      type: string
+      description: Private street address
+    private_street2:
+      type: string
+      description: Private street address line 2
+    private_city:
+      type: string
+      description: Private city
+    private_zip:
+      type: string
+      description: Private zip code
+    private_country:
+      type: integer
+      nullable: true
+      description: ID of private country
+    private_phone:
+      type: string
+      description: Private phone number
+    private_email:
+      type: string
+      description: Private email address
+    country:
+      type: integer
+      nullable: true
+      description: ID of the country
+    gender:
+      type: string
+      description: Gender of the employee
+    marital:
+      type: string
+      description: Marital status
+    spouse_complete_name:
+      type: string
+      description: Spouse's complete name
+    spouse_birthdate:
+      type: string
+      format: date
+      nullable: true
+      description: Spouse's birth date
+    children:
+      type: integer
+      nullable: true
+      description: Number of children
+    place_of_birth:
+      type: string
+      description: Place of birth
+    country_of_birth:
+      type: integer
+      nullable: true
+      description: ID of country of birth
+    birthday:
+      type: string
+      format: date
+      nullable: true
+      description: Employee's birth date
+    ssnid:
+      type: string
+      description: Social Security Number ID
+    sinid:
+      type: string
+      description: Social Insurance Number ID
+    identification_id:
+      type: string
+      description: Identification ID
+    passport_id:
+      type: string
+      description: Passport ID
+    permit_no:
+      type: string
+      description: Permit number
+    visa_no:
+      type: string
+      description: Visa number
+    visa_expire:
+      type: string
+      format: date
+      nullable: true
+      description: Visa expiration date
+    work_permit_expiration_date:
+      type: string
+      format: date
+      nullable: true
+      description: Work permit expiration date
+    has_work_permit:
+      type: string
+      description: Work permit status
+    work_permit_scheduled_activity:
+      type: boolean
+      description: Whether work permit has scheduled activity
+    work_permit_name:
+      type: string
+      description: Work permit name
+    additional_note:
+      type: string
+      description: Additional notes
+    certificate:
+      type: string
+      description: Certificate information
+    study_field:
+      type: string
+      description: Field of study
+    study_school:
+      type: string
+      description: School of study
+    emergency_contact:
+      type: string
+      description: Emergency contact name
+    emergency_phone:
+      type: string
+      description: Emergency contact phone
+    distance_home_work:
+      type: integer
+      nullable: true
+      description: Distance from home to work
+    km_home_work:
+      type: integer
+      nullable: true
+      description: Distance in kilometers from home to work
+    distance_home_work_unit:
+      type: string
+      description: Unit for distance measurement
+    employee_type:
+      type: string
+      description: Type of employee
+    notes:
+      type: string
+      description: General notes
+    barcode:
+      type: string
+      description: Employee barcode
+    pin:
+      type: string
+      description: Employee PIN
+    departure_reason:
+      type: integer
+      nullable: true
+      description: ID of departure reason
+    departure_description:
+      type: string
+      description: Description of departure
+    departure_date:
+      type: string
+      format: date
+      nullable: true
+      description: Date of departure
+    id_card:
+      type: string
+      description: ID card data
+    driving_license:
+      type: string
+      description: Driving license data
+    private_car_plate:
+      type: string
+      description: Private car license plate
+    job:
+      type: integer
+      nullable: true
+      description: ID of the job position
+    address:
+      type: integer
+      nullable: true
+      description: ID of the address record
+    address_description:
+      type: string
+      description: Description of the address
+    work_phone:
+      type: string
+      description: Work phone number
+    work_location:
+      type: integer
+      nullable: true
+      description: ID of the work location
+    work_location_name:
+      type: string
+      description: Name of the work location
+    work_location_type:
+      type: string
+      description: Type of work location
+    parent:
+      type: integer
+      nullable: true
+      description: ID of the parent employee
+    coach:
+      type: integer
+      nullable: true
+      description: ID of the coach
+    tz:
+      type: string
+      description: Timezone
+    newly_hired:
+      type: boolean
+      description: Whether the employee is newly hired
+    vehicle:
+      type: string
+      description: Vehicle information
+    contracts:
+      type: array
+      description: List of contract IDs
+      items:
+        type: integer
+    contract:
+      type: integer
+      nullable: true
+      description: Current contract ID
+    contracts_count:
+      type: integer
+      nullable: true
+      description: Total number of contracts
+    contract_warning:
+      type: boolean
+      description: Whether there's a contract warning
+    attendance_manager:
+      type: integer
+      nullable: true
+      description: ID of the attendance manager
+    attendances:
+      type: array
+      description: List of attendance IDs
+      items:
+        type: integer
+    last_attendance:
+      type: integer
+      nullable: true
+      description: ID of the last attendance
+    last_check_in:
+      type: string
+      format: date-time
+      nullable: true
+      description: Last check-in time
+    last_check_out:
+      type: string
+      format: date-time
+      nullable: true
+      description: Last check-out time
+    attendance_state:
+      type: string
+      description: Current attendance state
+    hours_last_month:
+      type: number
+      format: decimal
+      nullable: true
+      description: Hours worked last month
+    hours_today:
+      type: number
+      format: decimal
+      nullable: true
+      description: Hours worked today
+    hours_previously_today:
+      type: number
+      format: decimal
+      nullable: true
+      description: Hours worked previously today
+    last_attendance_worked_hours:
+      type: number
+      format: decimal
+      nullable: true
+      description: Hours worked in last attendance
+    overtimes:
+      type: array
+      description: List of overtime IDs
+      items:
+        type: integer
+    total_overtime:
+      type: number
+      format: decimal
+      nullable: true
+      description: Total overtime hours
+    candidates:
+      type: array
+      description: List of candidate records
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+    resume_lines:
+      type: array
+      description: List of resume line records
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+    employee_skills:
+      type: array
+      description: List of employee skill records
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+
+example:
+  id: 123
+  party: 456
+  company: 1
+  start_date: "2024-01-01"
+  end_date: null
+  supervisor: 789
+  categories: []
+  user: 101
+  job_title: "Software Developer"
+  mobile_phone: "+1234567890"
+  work_email: "john.doe@company.com"
+  first_contract_date: "2024-01-01"
+  party_name: "John Doe"
+  active: true
+  department: 1
+  private_street: "123 Main St"
+  private_street2: "Apt 4B"
+  private_city: "New York"
+  private_zip: "10001"
+  private_country: 1
+  private_phone: "+1234567890"
+  private_email: "john.doe@email.com"
+  country: 1
+  gender: "Male"
+  marital: "Single"
+  spouse_complete_name: null
+  spouse_birthdate: null
+  children: 0
+  place_of_birth: "New York"
+  country_of_birth: 1
+  birthday: "1990-01-01"
+  ssnid: "123-45-6789"
+  sinid: null
+  identification_id: "ID123456"
+  passport_id: null
+  permit_no: null
+  visa_no: null
+  visa_expire: null
+  work_permit_expiration_date: null
+  has_work_permit: "No"
+  work_permit_scheduled_activity: false
+  work_permit_name: null
+  additional_note: null
+  certificate: "Bachelor's Degree"
+  study_field: "Computer Science"
+  study_school: "University of Technology"
+  emergency_contact: "Jane Doe"
+  emergency_phone: "+1234567890"
+  distance_home_work: 10
+  km_home_work: 10
+  distance_home_work_unit: "km"
+  employee_type: "Full-time"
+  notes: "Experienced developer"
+  barcode: "EMP123456"
+  pin: "1234"
+  departure_reason: null
+  departure_description: null
+  departure_date: null
+  id_card: null
+  driving_license: null
+  private_car_plate: null
+  job: 1
+  address: 789
+  address_description: "Main office"
+  work_phone: "+1234567890"
+  work_location: 1
+  work_location_name: "Headquarters"
+  work_location_type: "Office"
+  parent: null
+  coach: null
+  tz: "America/New_York"
+  newly_hired: true
+  vehicle: null
+  contracts: [1]
+  contract: 1
+  contracts_count: 1
+  contract_warning: false
+  attendance_manager: 1
+  attendances: []
+  last_attendance: null
+  last_check_in: null
+  last_check_out: null
+  attendance_state: "present"
+  hours_last_month: 160.0
+  hours_today: 8.0
+  hours_previously_today: 0.0
+  last_attendance_worked_hours: 8.0
+  overtimes: []
+  total_overtime: 0.0
+  candidates: []
+  resume_lines: []
+  employee_skills: []
