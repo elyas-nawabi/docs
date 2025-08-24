@@ -1,0 +1,107 @@
+schema:
+  properties:
+    id:
+      type: integer
+      description: Unique identifier for the mail activity type
+    name:
+      type: string
+      description: Name of the activity type
+    summary:
+      type: string
+      description: Summary/description of the activity type
+    delay_label:
+      type: string
+      description: Human-readable delay label
+    delay_from:
+      type: string
+      description: Reference point for delay calculation
+    res_model:
+      type: string
+      description: Model name this activity type applies to
+    icon:
+      type: string
+      description: Icon to display for this activity type
+    sequence:
+      type: integer
+      description: Sequence number for ordering
+    delay_count:
+      type: integer
+      description: Number of delay units
+    delay_unit:
+      type: string
+      description: Unit for delay (days, hours, etc.)
+    decoration_type:
+      type: string
+      description: Type of decoration for the activity
+    triggered_next_type:
+      type: integer
+      nullable: true
+      description: ID of the next activity type to trigger
+    chaining_type:
+      type: string
+      description: Type of activity chaining
+    suggested_next_types:
+      type: array
+      description: List of suggested next activity types
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          summary:
+            type: string
+    previous_types:
+      type: array
+      description: List of previous activity types
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          summary:
+            type: string
+    category:
+      type: string
+      description: Category of the activity type
+    default_user:
+      type: integer
+      description: Default user assigned to this activity type
+    default_note:
+      type: string
+      description: Default note for this activity type
+    keep_done:
+      type: boolean
+      description: Whether to keep completed activities
+    initial_res_model:
+      type: string
+      description: Initial model this activity type applies to
+    res_model_change:
+      type: boolean
+      description: Whether the model can be changed
+
+example:
+  id: 123
+  name: "Phone Call"
+  summary: "Make a phone call"
+  delay_label: "2 days"
+  delay_from: "previous_activity"
+  res_model: "res.partner"
+  icon: "phone"
+  sequence: 1
+  delay_count: 2
+  delay_unit: "days"
+  decoration_type: "info"
+  triggered_next_type: null
+  chaining_type: "suggest"
+  suggested_next_types: []
+  previous_types: []
+  category: "phone"
+  default_user: 1
+  default_note: "Call the customer"
+  keep_done: true
+  initial_res_model: "res.partner"
+  res_model_change: false
