@@ -1,0 +1,63 @@
+post:
+  tags:
+    - mail activity
+  summary: Search mail activities
+  description: List of Mail Activities with filtering and pagination
+  operationId: searchMailActivities
+  requestBody:
+    required: true
+    description: Search criteria and pagination
+    content:
+      application/json:
+        schema:
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of mail activities
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: 'schema.yaml#/schema'
+              errors:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 1
+                res_name: "Customer A"
+                activity_type: 1
+                user: 1
+                summary: "Follow up call"
+                date_deadline: "2024-01-20"
+                date_done: null
+                state: "planned"
+            errors: null
+            pagination:
+              page: 1
+              per_page: 20
+              total: 1
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401' 
