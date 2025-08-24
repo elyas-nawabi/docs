@@ -1,0 +1,88 @@
+post:
+  tags:
+    - mail activity
+  summary: Create a mail activity
+  description: Create a new mail activity
+  operationId: createMailActivity
+  requestBody:
+    required: true
+    description: Mail activity data
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/mail-activity-schema.yaml'
+  responses:
+    '201':
+      description: Mail activity created successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: ID of the created mail activity
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              id: 123
+            errors: null
+            status: 201
+            success_message: "Mail activity created successfully"
+    '400':
+      description: Bad Request - Invalid input data
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP400'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+  tags:
+    - mail activity
+  summary: Delete mail activities
+  description: Delete multiple mail activities by IDs
+  operationId: deleteMailActivities
+  requestBody:
+    required: true
+    description: IDs of mail activities to delete
+    content:
+      application/json:
+        schema:
+          $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+  responses:
+    '200':
+      description: Mail activities deleted successfully
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401' 
