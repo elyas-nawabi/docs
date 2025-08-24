@@ -1,0 +1,89 @@
+post:
+  tags:
+    - mail activity
+  summary: Launch a plan for the employee
+  description: Launch an activity plan for a specific employee
+  operationId: launchActivityPlan
+  requestBody:
+    required: true
+    description: Plan launch data
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            plan:
+              type: integer
+              description: ID of the activity plan to launch
+              example: 1
+            employee:
+              type: integer
+              description: ID of the employee to launch the plan for
+              example: 123
+          required:
+            - plan
+            - employee
+        example:
+          plan: 1
+          employee: 123
+  responses:
+    '200':
+      description: Plan launched successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                nullable: true
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data: null
+            errors: null
+            status: 200
+            success_message: "Activity plan launched successfully"
+    '400':
+      description: Bad Request - Invalid input data or no activity plan found for employee
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                nullable: true
+              errors:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+            example:
+              data: null
+              errors:
+                message: "No activity plan found for employee"
+              status: 400
+              success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401' 
