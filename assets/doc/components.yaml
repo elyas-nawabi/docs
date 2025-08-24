@@ -195,6 +195,20 @@ components:
       $ref: 'umbrella/umbrella_administration/ir/export_import/schemas/import-data-schema.yaml'
     CreateExportImport:
       $ref: 'umbrella/umbrella_administration/ir/export_import/schemas/create-export-import.yaml'
+    MailActivitySchema:
+      $ref: 'umbrella/umbrella_mail/activity/schemas/mail-activity-schema.yaml'
+    MailActivityListSchema:
+      $ref: 'umbrella/umbrella_mail/activity/schema.yaml#/schema'
+    MailActivityTypeSchema:
+      $ref: 'umbrella/umbrella_mail/activity_type/schema.yaml#/schema'
+    MailActivityTypeUpsertSchema:
+      $ref: 'umbrella/umbrella_mail/activity_type/schemas/mail-activity-type-upsert-schema.yaml'
+    MailActivityPlanSchema:
+      $ref: 'umbrella/umbrella_mail/activity_plan/schema.yaml#/schema'
+    EmployeeSchema:
+      $ref: 'umbrella/umbrella_mail/employee/schema.yaml#/schema'
+    LaunchPlanSchema:
+      $ref: 'umbrella/umbrella_mail/employee/schemas/launch-plan-schema.yaml'
     CreateCompany:
       $ref: 'umbrella/schemas/umbrella_company/create-company.yaml'
     UpdateCompany:
