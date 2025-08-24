@@ -1,0 +1,54 @@
+get:
+  tags:
+    - mail activity
+  summary: Mark mail activity as done
+  description: Mark a mail activity as completed
+  operationId: markMailActivityDone
+  parameters:
+    - name: obj_id
+      required: true
+      in: path
+      description: The ID of the mail activity to mark as done
+      schema:
+        type: integer
+      example: 123
+  responses:
+    '200':
+      description: Mail activity marked as done successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                nullable: true
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data: null
+            errors: null
+            status: 200
+            success_message: "Mail activity marked as done"
+    '404':
+      description: Mail activity not found
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401' 
