@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: mail activity plan
+    description: mail activity plan - mail activity plan management.
+paths:
+  '/mail/activity-plans/search':
+    $ref: 'post_search.yaml'
+  '/mail/activity-plans':
+    $ref: 'post_delete.yaml'
+  '/mail/activity-plans/{obj_id}':
+    $ref: 'get_put.yaml' 
