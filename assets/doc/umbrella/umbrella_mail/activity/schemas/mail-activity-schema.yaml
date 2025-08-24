@@ -1,0 +1,100 @@
+type: object
+properties:
+  res_name:
+    type: string
+    description: Name of the related resource
+    example: "Customer A"
+  activity_type:
+    type: integer
+    description: ID of the activity type
+    example: 1
+  user:
+    type: integer
+    description: ID of the user assigned to the activity
+    example: 1
+  summary:
+    type: string
+    description: Summary/description of the activity
+    example: "Follow up call"
+  date_deadline:
+    type: string
+    format: date
+    description: Deadline date for the activity
+    example: "2024-01-20"
+  res_model:
+    type: string
+    description: Model name of the related resource
+    example: "res.partner"
+  res:
+    type: integer
+    description: ID of the related resource
+    example: 456
+  activity_category:
+    type: string
+    description: Category of the activity
+    example: "phone"
+  activity_decoration:
+    type: string
+    description: Decoration type for the activity
+    example: "info"
+  icon:
+    type: string
+    description: Icon to display for the activity
+    example: "phone"
+  note:
+    type: string
+    description: Additional notes for the activity
+    example: "Call customer to follow up on quote"
+  automated:
+    type: boolean
+    description: Whether the activity is automated
+    example: false
+  user_tz:
+    type: string
+    description: User's timezone
+    example: "UTC"
+  request_partner:
+    type: integer
+    nullable: true
+    description: ID of the request partner
+    example: null
+  recommended_activity_type:
+    type: integer
+    nullable: true
+    description: ID of the recommended next activity type
+    example: null
+  previous_activity_type:
+    type: integer
+    nullable: true
+    description: ID of the previous activity type
+    example: null
+  chaining_type:
+    type: string
+    description: Type of activity chaining
+    example: "suggest"
+
+required:
+  - activity_type
+  - user
+  - summary
+  - res_model
+  - res
+
+example:
+  res_name: "Customer A"
+  activity_type: 1
+  user: 1
+  summary: "Follow up call"
+  date_deadline: "2024-01-20"
+  res_model: "res.partner"
+  res: 456
+  activity_category: "phone"
+  activity_decoration: "info"
+  icon: "phone"
+  note: "Call customer to follow up on quote"
+  automated: false
+  user_tz: "UTC"
+  request_partner: null
+  recommended_activity_type: null
+  previous_activity_type: null
+  chaining_type: "suggest" 
