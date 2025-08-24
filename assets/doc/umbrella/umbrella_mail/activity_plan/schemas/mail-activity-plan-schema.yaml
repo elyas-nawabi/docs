@@ -1,0 +1,34 @@
+type: object
+properties:
+  name:
+    type: string
+    description: Name of the activity plan
+    example: "Customer Onboarding Plan"
+  res_model:
+    type: integer
+    description: ID of the model this plan applies to
+    example: 1
+  company:
+    type: integer
+    description: ID of the company this plan belongs to
+    example: 1
+  res_model_string:
+    type: string
+    description: Model string this plan applies to
+    example: "res.partner"
+  has_user_on_demand:
+    type: boolean
+    description: Whether the plan has user on demand functionality
+    example: true
+
+required:
+  - name
+  - res_model
+  - company
+
+example:
+  name: "Customer Onboarding Plan"
+  res_model: 1
+  company: 1
+  res_model_string: "res.partner"
+  has_user_on_demand: true 
