@@ -1,0 +1,34 @@
+properties:
+  id:
+    type: integer
+    description: The ID of the record to execute the report for
+  action_id:
+    type: integer
+    description: The action ID for the report
+  model:
+    type: string
+    description: The model name for the report
+  model_context:
+    type: object
+    description: The model context data
+  ids:
+    type: array
+    items:
+      type: integer
+    description: List of IDs to process
+  paths:
+    type: array
+    items:
+      type: object
+    description: List of paths for the report execution
+
+required:
+  - id
+
+example:
+  id: 123
+  action_id: 21
+  model: "ir.model"
+  model_context: null
+  ids: [123]
+  paths: [[123]] 
