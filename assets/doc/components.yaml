@@ -239,6 +239,10 @@ components:
       $ref: 'umbrella/schemas/http-responses/http400.yaml'
     HTTP403:
       $ref: 'umbrella/schemas/http-responses/http403.yaml'
+    HTTP500:
+      $ref: 'umbrella/schemas/http-responses/http500.yaml'
+    ViewToolbar:
+      $ref: 'umbrella/umbrella/toolbar/schema.yaml#/schema'
   
   securitySchemes:
     bearerAuth:
