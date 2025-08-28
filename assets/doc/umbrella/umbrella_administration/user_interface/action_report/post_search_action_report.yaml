@@ -1,0 +1,120 @@
+post:
+  tags:
+    - action report
+  summary: Search action reports.
+  description: Search action reports with filters and pagination.
+  operationId: searchActionReports
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            domain:
+              type: array
+              description: Search domain filters
+              items:
+                type: array
+              example: [["active", "=", true]]
+            offset:
+              type: integer
+              description: Number of records to skip
+              example: 0
+            limit:
+              type: integer
+              description: Maximum number of records to return
+              example: 100
+            order:
+              type: array
+              description: Order by fields
+              items:
+                type: array
+              example: [["name", "ASC"]]
+          example:
+            domain: [["active", "=", true]]
+            offset: 0
+            limit: 100
+            order: [["name", "ASC"]]
+  responses:
+    '200':
+      description: List of action reports.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    create_date: 
+                      type: string 
+                      format: date 
+                    create_uid: 
+                      type: integer
+                    create_uid_:
+                      $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                    active: 
+                      type: boolean
+                    id: 
+                      type: integer
+                    model: 
+                      type: string
+                    name: 
+                      type: string
+                    rec_name: 
+                      type: string
+                    report_name: 
+                      type: string
+                    type: 
+                      type: string
+                    write_date:
+                      type: string
+                      format: date 
+                    write_uid:
+                      type: integer
+                    write_uid_:
+                      $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              count:
+                type: integer
+                description: Total number of records matching the search criteria
+            example:
+              data:
+                - active: true
+                  create_date: '2024-06-24T12:35:58.699428'
+                  create_uid: 0
+                  create_uid_:
+                    id: 0
+                    name: Root
+                  id: 21
+                  model: ir.model
+                  name: Graph
+                  rec_name: Graph
+                  report_name: ir.model.graph
+                  type: ir.action.report
+                  write_date: '2024-06-24T12:35:58.699428'
+                  write_uid: 0
+                  write_uid_:
+                    id: 0
+                    name: Root
+              count: 1
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    '500':
+      description: >-
+        500 Internal Server Error: The server encountered an unexpected condition
+        that prevented it from fulfilling the request.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP500' 
