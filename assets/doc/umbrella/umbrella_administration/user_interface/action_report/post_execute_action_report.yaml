@@ -1,0 +1,75 @@
+post:
+  tags:
+    - action report
+  summary: Execute an action report.
+  description: Execute an action report by report name.
+  operationId: executeActionReport
+  parameters:
+    - name: report_name
+      in: path
+      schema:
+        type: string
+      required: true
+      example: "ir.model.graph"
+      description: The name of the report to execute
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: 'schemas/execute-report.yaml'
+  responses:
+    '200':
+      description: Report executed successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  content:
+                    type: string
+                    description: The report content (base64 encoded if binary)
+                  content_type:
+                    type: string
+                    description: The MIME type of the report
+                  filename:
+                    type: string
+                    description: The filename for the report
+                  format:
+                    type: string
+                    description: The format of the report (pdf, odt, etc.)
+            example:
+              data:
+                content: "JVBERi0xLjQKJcfsj6IKNSAwIG9iago8PAovTGVuZ3RoIDYgMCBSCi9GaWx0ZXIgL0ZsYXRlRGVjb2RlCj4+"
+                content_type: "application/pdf"
+                filename: "report.pdf"
+                format: "pdf"
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    '404':
+      description: >-
+        404 Not Found: The requested report or record was not found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+    '500':
+      description: >-
+        500 Internal Server Error: The server encountered an unexpected condition
+        that prevented it from fulfilling the request.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP500' 
