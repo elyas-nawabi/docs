@@ -1,0 +1,81 @@
+schema:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        print:
+          type: array
+          description: List of print actions available for the model
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                description: Action ID
+              name:
+                type: string
+                description: Action name
+              type:
+                type: string
+                description: Action type
+              model:
+                type: string
+                description: Target model
+              report_name:
+                type: string
+                description: Report name for print actions
+        action:
+          type: array
+          description: List of actions available for the model
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                description: Action ID
+              name:
+                type: string
+                description: Action name
+              type:
+                type: string
+                description: Action type
+              model:
+                type: string
+                description: Target model
+        relate:
+          type: array
+          description: List of related actions available for the model
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                description: Action ID
+              name:
+                type: string
+                description: Action name
+              type:
+                type: string
+                description: Action type
+              model:
+                type: string
+                description: Target model
+  example:
+    data:
+      print:
+        - id: 21
+          name: "Graph Report"
+          type: "ir.action.report"
+          model: "ir.model"
+          report_name: "ir.model.graph"
+      action:
+        - id: 15
+          name: "Create Model"
+          type: "ir.action.act_window"
+          model: "ir.model"
+      relate:
+        - id: 25
+          name: "Related Fields"
+          type: "ir.action.act_window"
+          model: "ir.model.field" 
