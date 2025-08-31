@@ -18,11 +18,11 @@ properties:
       - ["INV002", "Customer B", "2024-01-16", "1500.00"]
 
 required:
-  - fields
+  - fields_names:
   - data
 
 example:
-  fields: ["number", "party.name", "invoice_date", "total_amount"]
+  fields_names: ["number", "party.name", "invoice_date", "total_amount"]
   data:
     - ["INV001", "Customer A", "2024-01-15", "1000.00"]
     - ["INV002", "Customer B", "2024-01-16", "1500.00"]
