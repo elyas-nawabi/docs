@@ -1,0 +1,155 @@
+post:
+  tags:
+    - account-tags
+  summary: Create a new account tag.
+  description: Create a new account tag.
+  operationId: createAccountTag
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/account_tag.yaml#/AccountTagInput'
+        example:
+          name: Depreciation Expense
+          sequence: 5
+          is_non_cash_expense: true
+          is_operating_asset: false
+          is_operating_liability: false
+          is_investing: false
+          is_financing: false
+          is_revenue: false
+          is_expense: true
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+              type: object
+              properties:
+                data:
+                  $ref: 'schemas/account_tag.yaml#/AccountTag'
+                errors:
+                  type: object
+                  nullable: true
+                pagination:
+                  type: object
+                  nullable: true
+                status:
+                  type: integer
+                success_message:
+                  type: string
+                  nullable: true
+          example:
+            data:
+              id: 5
+              name: Depreciation Expense
+              sequence: 5
+              is_non_cash_expense: true
+              is_operating_asset: false
+              is_operating_liability: false
+              is_investing: false
+              is_financing: false
+              is_revenue: false
+              is_expense: true
+              create_date: '2024-01-20T14:30:00'
+              create_uid: 1
+              create_uid_:
+                id: 1
+                name: Administrator
+              write_date: null
+              write_uid: null
+              write_uid_: {}
+            errors: null
+            pagination: null
+            status: 201
+            success_message: Account tag created successfully
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP400'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+  tags:
+    - account-tags
+  summary: Delete account tag(s).
+  description: Delete one or multiple account tags by ID.
+  operationId: deleteAccountTag
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            ids:
+              type: array
+              items:
+                type: integer
+              minItems: 1
+        example:
+          ids: [5, 6]
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  nullable: true
+                errors:
+                  type: object
+                  nullable: true
+                pagination:
+                  type: object
+                  nullable: true
+                status:
+                  type: integer
+                success_message:
+                  type: string
+                  nullable: true
+          example:
+            data: null
+            errors: null
+            pagination: null
+            status: 200
+            success_message: Account tag(s) deleted successfully
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP400'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    '404':
+      description: 404 Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+
