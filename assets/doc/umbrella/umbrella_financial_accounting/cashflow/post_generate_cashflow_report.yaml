@@ -1,0 +1,109 @@
+post:
+  tags:
+    - cashflow-report
+  summary: Generate cash flow report.
+  description: Generate cash flow statement using the indirect method for a specified company and date range.
+  operationId: generateCashflowReport
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/cashflow_report.yaml#/CashFlowReportRequest'
+        example:
+          company_id: 1
+          start_date: "2024-01-01"
+          end_date: "2024-12-31"
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+              type: object
+              properties:
+                data:
+                  $ref: 'schemas/cashflow_report.yaml#/CashFlowReportResponse'
+                errors:
+                  type: object
+                  nullable: true
+                pagination:
+                  type: object
+                  nullable: true
+                status:
+                  type: integer
+                success_message:
+                  type: string
+                  nullable: true
+          example:
+            data:
+              company:
+                id: 1
+                name: Milestone Inc.
+              start_date: "2024-01-01"
+              end_date: "2024-12-31"
+              generated_at: "2024-11-17T10:30:00.123456"
+              cash_flow_data:
+                operating_activities:
+                  net_income: 150000.00
+                  adjustments:
+                    depreciation: 25000.00
+                    amortization: 5000.00
+                    changes_in_working_capital:
+                      accounts_receivable: -10000.00
+                      inventory: -5000.00
+                      accounts_payable: 8000.00
+                  net_cash_from_operating: 173000.00
+                investing_activities:
+                  purchase_of_equipment: -50000.00
+                  sale_of_investments: 20000.00
+                  net_cash_from_investing: -30000.00
+                financing_activities:
+                  proceeds_from_loans: 100000.00
+                  repayment_of_debt: -25000.00
+                  dividends_paid: -30000.00
+                  net_cash_from_financing: 45000.00
+                net_increase_in_cash: 188000.00
+                cash_beginning: 50000.00
+                cash_ending: 238000.00
+            errors: null
+            pagination: null
+            status: 200
+            success_message: Cash flow report generated successfully
+    '400':
+      description: Bad Request - Invalid date format or missing required fields
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP400'
+          example:
+            data: null
+            errors:
+              start_date: ["Date must be in YYYY-MM-DD format (e.g., 2016-01-01)"]
+            pagination: null
+            status: 400
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    '404':
+      description: 404 Not Found - Company not found
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+          example:
+            data: null
+            errors:
+              message: "Company with id 999 not found"
+            pagination: null
+            status: 404
+            success_message: null
+
