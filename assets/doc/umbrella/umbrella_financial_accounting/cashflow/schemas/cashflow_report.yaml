@@ -1,0 +1,160 @@
+CashFlowReportRequest:
+  type: object
+  required:
+    - company_id
+    - start_date
+    - end_date
+  properties:
+    company_id:
+      type: integer
+      description: ID of the company for which to generate the cash flow report
+      example: 1
+    start_date:
+      type: string
+      pattern: '^\d{4}-\d{2}-\d{2}$'
+      description: Start date for the report period in YYYY-MM-DD format
+      example: "2024-01-01"
+    end_date:
+      type: string
+      pattern: '^\d{4}-\d{2}-\d{2}$'
+      description: End date for the report period in YYYY-MM-DD format
+      example: "2024-12-31"
+
+CashFlowReportResponse:
+  type: object
+  properties:
+    company:
+      type: object
+      description: Company information
+      properties:
+        id:
+          type: integer
+          description: Company ID
+          example: 1
+        name:
+          type: string
+          description: Company name
+          example: Milestone Inc.
+    start_date:
+      type: string
+      description: Start date of the report period
+      example: "2024-01-01"
+    end_date:
+      type: string
+      description: End date of the report period
+      example: "2024-12-31"
+    generated_at:
+      type: string
+      format: date-time
+      description: Timestamp when the report was generated
+      example: "2024-11-17T10:30:00.123456"
+    cash_flow_data:
+      type: object
+      description: Cash flow statement data using the indirect method
+      properties:
+        operating_activities:
+          type: object
+          description: Cash flows from operating activities
+          properties:
+            net_income:
+              type: number
+              format: float
+              description: Net income for the period
+              example: 150000.00
+            adjustments:
+              type: object
+              description: Adjustments to reconcile net income to cash from operations
+              properties:
+                depreciation:
+                  type: number
+                  format: float
+                  description: Depreciation expense
+                  example: 25000.00
+                amortization:
+                  type: number
+                  format: float
+                  description: Amortization expense
+                  example: 5000.00
+                changes_in_working_capital:
+                  type: object
+                  description: Changes in working capital accounts
+                  properties:
+                    accounts_receivable:
+                      type: number
+                      format: float
+                      description: Change in accounts receivable (increase shown as negative)
+                      example: -10000.00
+                    inventory:
+                      type: number
+                      format: float
+                      description: Change in inventory (increase shown as negative)
+                      example: -5000.00
+                    accounts_payable:
+                      type: number
+                      format: float
+                      description: Change in accounts payable (increase shown as positive)
+                      example: 8000.00
+            net_cash_from_operating:
+              type: number
+              format: float
+              description: Net cash provided by (used in) operating activities
+              example: 173000.00
+        investing_activities:
+          type: object
+          description: Cash flows from investing activities
+          properties:
+            purchase_of_equipment:
+              type: number
+              format: float
+              description: Cash paid for equipment purchases (shown as negative)
+              example: -50000.00
+            sale_of_investments:
+              type: number
+              format: float
+              description: Cash received from sale of investments
+              example: 20000.00
+            net_cash_from_investing:
+              type: number
+              format: float
+              description: Net cash provided by (used in) investing activities
+              example: -30000.00
+        financing_activities:
+          type: object
+          description: Cash flows from financing activities
+          properties:
+            proceeds_from_loans:
+              type: number
+              format: float
+              description: Cash received from borrowing
+              example: 100000.00
+            repayment_of_debt:
+              type: number
+              format: float
+              description: Cash paid to repay debt (shown as negative)
+              example: -25000.00
+            dividends_paid:
+              type: number
+              format: float
+              description: Cash paid for dividends (shown as negative)
+              example: -30000.00
+            net_cash_from_financing:
+              type: number
+              format: float
+              description: Net cash provided by (used in) financing activities
+              example: 45000.00
+        net_increase_in_cash:
+          type: number
+          format: float
+          description: Net increase (decrease) in cash for the period
+          example: 188000.00
+        cash_beginning:
+          type: number
+          format: float
+          description: Cash and cash equivalents at beginning of period
+          example: 50000.00
+        cash_ending:
+          type: number
+          format: float
+          description: Cash and cash equivalents at end of period
+          example: 238000.00
+
