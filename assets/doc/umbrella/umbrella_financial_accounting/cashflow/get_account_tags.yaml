@@ -1,0 +1,101 @@
+    post:
+      tags:
+        - account-tags
+      summary: Get list of account tags.
+      description: Get list of account tags.
+      operationId: getAccountTags
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      items:
+                        $ref: 'schemas/account_tag.yaml#/AccountTag'
+                    errors:
+                      type: object
+                      nullable: true
+                    pagination:
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                - id: 1
+                  name: Non-Cash Expense
+                  sequence: 1
+                  is_non_cash_expense: true
+                  is_operating_asset: false
+                  is_operating_liability: false
+                  is_investing: false
+                  is_financing: false
+                  is_revenue: false
+                  is_expense: false
+                  create_date: '2024-01-15T10:30:00'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  write_date: null
+                  write_uid: null
+                  write_uid_: {}
+                - id: 2
+                  name: Operating Asset
+                  sequence: 2
+                  is_non_cash_expense: false
+                  is_operating_asset: true
+                  is_operating_liability: false
+                  is_investing: false
+                  is_financing: false
+                  is_revenue: false
+                  is_expense: false
+                  create_date: '2024-01-15T10:31:00'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  write_date: null
+                  write_uid: null
+                  write_uid_: {}
+                errors: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 2
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    
