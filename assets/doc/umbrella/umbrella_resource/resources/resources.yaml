@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: Resources
+    description: resources - resource data management.
+paths:
+  '/resource/resources/search':
+    $ref: 'post_search.yaml'
+  '/resource/resources':
+    $ref: 'post_delete.yaml'
+  '/resource/resources/{obj_id}':
+    $ref: 'get_put.yaml'
