@@ -1,0 +1,55 @@
+type: object
+properties:
+  name:
+    type: string
+    description: Name of the resource
+    example: "Default Resource"
+  company:
+    type: integer
+    description: ID of the company this resource belongs to
+    example: 1
+  resource_type:
+    type: string
+    description: Type/category of the resource
+    example: "human"
+  user:
+    type: integer
+    description: ID of the user assigned to the resource
+    example: 42
+  time_efficiency:
+    type: number
+    format: float
+    description: Time efficiency metric for the resource
+    example: 0.85
+  calendar:
+    type: integer
+    description: ID of the calendar associated with the resource
+    example: 7
+  tz:
+    type: string
+    description: Timezone of the resource
+    example: "UTC"
+  email:
+    type: string
+    format: email
+    description: Contact email for the resource
+    example: "user@example.com"
+  phone:
+    type: string
+    description: Contact phone for the resource
+    example: "+1-555-555-5555"
+
+required:
+  - name
+  - company
+
+example:
+  name: "Default Resource"
+  company: 1
+  resource_type: "human"
+  user: 42
+  time_efficiency: 0.85
+  calendar: 7
+  tz: "UTC"
+  email: "user@example.com"
+  phone: "+1-555-555-5555"
