@@ -1,0 +1,145 @@
+post:
+  tags:
+    - expense sheet
+  summary: Search expense sheets.
+  description: Search expense sheets.
+  operationId: searchExpenseSheets
+  requestBody:
+    description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of expense sheets.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    state:
+                      type: string
+                    company:
+                      type: integer
+                    company_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    employee:
+                      type: integer
+                    employee_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    department:
+                      type: integer
+                    department_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    user:
+                      type: integer
+                    user_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    total_amount:
+                      type: number
+                    currency:
+                      type: integer
+                    currency_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    payment_state:
+                      type: string
+                    accounting_date:
+                      type: string
+                      format: date
+                    journal:
+                      type: integer
+                    journal_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    is_editable:
+                      type: boolean
+                    create_date:
+                      type: string
+                      format: date-time
+                    create_uid:
+                      type: integer
+                    create_uid_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    write_date:
+                      type: string
+                      format: date-time
+                    write_uid:
+                      type: integer
+                    write_uid_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+              errors:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 1
+                name: EXP/2026/0001
+                state: draft
+                company: 1
+                company_:
+                  id: 1
+                  name: Milestone
+                employee: 10
+                employee_:
+                  id: 10
+                  name: John Doe
+                department: 3
+                department_:
+                  id: 3
+                  name: Finance
+                user: 1
+                user_:
+                  id: 1
+                  name: Administrator
+                total_amount: 125.5
+                currency: 1
+                currency_:
+                  id: 1
+                  name: USD
+                payment_state: pending
+                accounting_date: '2026-01-10'
+                journal: 2
+                journal_:
+                  id: 2
+                  name: Expenses Journal
+                is_editable: true
+                create_date: '2026-01-10T09:58:38.811536'
+                create_uid: 1
+                create_uid_:
+                  id: 1
+                  name: Administrator
+                write_date: null
+                write_uid: null
+                write_uid_: null
+            errors: null
+            pagination: null
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
