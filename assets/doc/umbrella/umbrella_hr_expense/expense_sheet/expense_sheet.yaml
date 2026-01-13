@@ -1,0 +1,22 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: expense sheet
+    description: hr expense sheet - employee expense sheets management.
+paths:
+  '/hr-expense/employee-expenses/search':
+    $ref: 'get_expense_sheet.yaml'
+  '/hr-expense/employee-expenses':
+    $ref: 'post_delete_expense_sheet.yaml'
+  '/hr-expense/employee-expenses/{obj_id}':
+    $ref: 'get_put_expense_sheet_by_id.yaml'
+  '/hr-expense/employee-expenses/{obj_id}/reset-to-draft':
+    $ref: 'get_reset_to_draft_by_id.yaml'
+  '/hr-expense/employee-expenses/{obj_id}/submit-to-manager':
+    $ref: 'get_submit_to_manager_by_id.yaml'
+  '/hr-expense/employee-expenses/{obj_id}/refuse':
+    $ref: 'post_refuse_by_id.yaml'
+  '/hr-expense/employee-expenses/{obj_id}/approve':
+    $ref: 'get_approve_by_id.yaml'
+  
