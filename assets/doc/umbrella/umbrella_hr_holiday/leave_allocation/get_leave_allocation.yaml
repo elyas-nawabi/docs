@@ -1,0 +1,110 @@
+post:
+  tags:
+    - leave allocation
+  summary: Get leave allocation list.
+  description: Get leave allocation list.
+  operationId: getLeaveAllocations
+  requestBody:
+    description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of leave allocations.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    employee:
+                      type: integer
+                    employee_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    leave_type:
+                      type: integer
+                    leave_type_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    start_date:
+                      type: string
+                      format: date
+                    end_date:
+                      type: string
+                      format: date
+                    quantity:
+                      type: number
+                    auto_calculate:
+                      type: boolean
+                    state:
+                      type: string
+                    create_date:
+                      type: string
+                      format: date-time
+                    create_uid:
+                      type: integer
+                    create_uid_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    write_date:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    write_uid:
+                      type: integer
+                      nullable: true
+              error:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 1
+                employee: 5
+                employee_:
+                  id: 5
+                  name: John Doe
+                leave_type: 2
+                leave_type_:
+                  id: 2
+                  name: Annual Leave
+                start_date: '2026-01-01'
+                end_date: '2026-12-31'
+                quantity: 15.0
+                auto_calculate: false
+                state: draft
+                create_date: '2026-01-01T10:00:00'
+                create_uid: 1
+                create_uid_:
+                  id: 1
+                  name: Administrator
+                write_date: null
+                write_uid: null
+            error: null
+            pagination: null
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

@@ -1,0 +1,62 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        company:
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        start_date:
+          type: string
+          format: date
+        end_date:
+          type: string
+          format: date
+        color:
+          type: integer
+        work_time:
+          type: integer
+          nullable: true
+        departments:
+          type: array
+          items:
+            type: integer
+        jobs:
+          type: array
+          items:
+            type: integer
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 1
+    name: Independence Day
+    company: 1
+    company_:
+      id: 1
+      name: Milestone
+    start_date: '2026-07-04'
+    end_date: '2026-07-04'
+    color: 3
+    work_time: null
+    departments: []
+    jobs: []
+  error: null
+  pagination: null
+  status: 201
+  success_message: null
