@@ -1,0 +1,21 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: leave
+    description: hr holiday - employee leave requests management.
+paths:
+  '/hr-holiday/leaves/search':
+    $ref: 'get_leave.yaml'
+  '/hr-holiday/leaves':
+    $ref: 'post_delete_leave.yaml'
+  '/hr-holiday/leaves/{obj_id}':
+    $ref: 'get_put_leave_by_id.yaml'
+  '/hr-holiday/leaves/{obj_id}/confirm':
+    $ref: 'post_confirm_leave_by_id.yaml'
+  '/hr-holiday/leaves/{obj_id}/approve':
+    $ref: 'post_approve_leave_by_id.yaml'
+  '/hr-holiday/leaves/{obj_id}/refuse':
+    $ref: 'post_refuse_leave_by_id.yaml'
+  '/hr-holiday/leaves/{obj_id}/cancel':
+    $ref: 'post_cancel_leave_by_id.yaml'
