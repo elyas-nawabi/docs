@@ -1,0 +1,87 @@
+post:
+  tags:
+    - accrual plan
+  summary: Get accrual plan list.
+  description: Get accrual plan list.
+  operationId: getAccrualPlans
+  requestBody:
+    description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of accrual plans.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    company:
+                      type: integer
+                    company_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    leave_type:
+                      type: integer
+                    leave_type_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    active:
+                      type: boolean
+                    transition_mode:
+                      type: string
+                    accrued_gain_time:
+                      type: string
+                    can_be_carryover:
+                      type: boolean
+                    added_value_type:
+                      type: string
+              error:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 1
+                company: 1
+                company_:
+                  id: 1
+                  name: Milestone
+                leave_type: 2
+                leave_type_:
+                  id: 2
+                  name: Annual Leave
+                active: true
+                transition_mode: immediate
+                accrued_gain_time: month
+                can_be_carryover: true
+                added_value_type: day
+            error: null
+            pagination: null
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

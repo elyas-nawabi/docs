@@ -1,0 +1,62 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        id:
+          type: integer
+        sequence:
+          type: integer
+        plan:
+          type: integer
+        milestone_date:
+          type: string
+        start_count:
+          type: integer
+        start_type:
+          type: string
+        added_value:
+          type: number
+        added_value_type:
+          type: string
+        frequency:
+          type: string
+        week_day:
+          type: string
+          nullable: true
+        maximum_leave:
+          type: number
+          nullable: true
+        maximum_leave_yearly:
+          type: number
+          nullable: true
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 1
+    sequence: 1
+    plan: 1
+    milestone_date: date
+    start_count: 0
+    start_type: day
+    added_value: 1.0
+    added_value_type: day
+    frequency: monthly
+    week_day: null
+    maximum_leave: null
+    maximum_leave_yearly: null
+  error: null
+  pagination: null
+  status: 201
+  success_message: null

@@ -1,0 +1,28 @@
+type: object
+properties:
+  employee:
+    type: integer
+    example: 5
+  leave_type:
+    type: integer
+    example: 2
+  start_date:
+    type: string
+    format: date
+    example: '2026-01-01'
+  end_date:
+    type: string
+    format: date
+    example: '2026-12-31'
+  quantity:
+    type: number
+    example: 15.0
+  auto_calculate:
+    type: boolean
+    example: false
+required:
+  - employee
+  - leave_type
+  - start_date
+  - end_date
+  - quantity

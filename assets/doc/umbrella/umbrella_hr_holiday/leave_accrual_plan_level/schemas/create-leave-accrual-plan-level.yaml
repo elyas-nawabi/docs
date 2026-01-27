@@ -1,0 +1,29 @@
+type: object
+properties:
+  sequence:
+    type: integer
+    example: 1
+  plan:
+    type: integer
+    example: 1
+  milestone_date:
+    type: string
+    example: date
+  start_count:
+    type: integer
+    example: 0
+  start_type:
+    type: string
+    example: day
+  added_value:
+    type: number
+    example: 1.0
+  added_value_type:
+    type: string
+    example: day
+  frequency:
+    type: string
+    example: monthly
+required:
+  - sequence
+  - plan
