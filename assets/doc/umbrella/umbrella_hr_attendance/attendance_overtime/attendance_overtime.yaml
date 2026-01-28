@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: attendance_overtime
+    description: hr attendance - extra hours management.
+paths:
+  '/hr-attendance/extra-hours/search':
+    $ref: 'get_attendance_overtime.yaml'
+  '/hr-attendance/extra-hours':
+    $ref: 'post_delete_attendance_overtime.yaml'
+  '/hr-attendance/extra-hours/{obj_id}':
+    $ref: 'get_put_attendance_overtime_by_id.yaml'
