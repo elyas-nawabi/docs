@@ -1,0 +1,106 @@
+post:
+  tags:
+    - attendance_overtime
+  summary: Get extra hours list.
+  description: Get extra hours list.
+  operationId: getExtraHours
+  requestBody:
+    description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of extra hours.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    employee:
+                      type: integer
+                    employee_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    company:
+                      type: integer
+                    company_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    date:
+                      type: string
+                      format: date
+                    duration:
+                      type: number
+                    duration_real:
+                      type: number
+                    adjustment:
+                      type: boolean
+                    create_date:
+                      type: string
+                      format: date-time
+                    create_uid:
+                      type: integer
+                    create_uid_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    write_date:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    write_uid:
+                      type: integer
+                      nullable: true
+              error:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 1
+                employee: 5
+                employee_:
+                  id: 5
+                  name: John Doe
+                company: 1
+                company_:
+                  id: 1
+                  name: Milestone
+                date: '2026-03-10'
+                duration: 2
+                duration_real: 2
+                adjustment: false
+                create_date: '2026-03-10T18:00:00'
+                create_uid: 1
+                create_uid_:
+                  id: 1
+                  name: Administrator
+                write_date: null
+                write_uid: null
+            error: null
+            pagination: null
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
