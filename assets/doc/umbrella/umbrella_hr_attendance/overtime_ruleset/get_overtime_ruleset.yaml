@@ -1,0 +1,102 @@
+post:
+  tags:
+    - overtime_ruleset
+  summary: Get overtime rulesets list.
+  description: Get overtime rulesets list.
+  operationId: getOvertimeRulesets
+  requestBody:
+    description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of overtime rulesets.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    country:
+                      type: integer
+                    country_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    company:
+                      type: integer
+                    company_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    rate_combination_mode:
+                      type: string
+                    rules_count:
+                      type: integer
+                    create_date:
+                      type: string
+                      format: date-time
+                    create_uid:
+                      type: integer
+                    create_uid_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    write_date:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    write_uid:
+                      type: integer
+                      nullable: true
+              error:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 1
+                name: UAE Overtime Rules
+                country: 1
+                country_:
+                  id: 1
+                  name: United Arab Emirates
+                company: 1
+                company_:
+                  id: 1
+                  name: Milestone
+                rate_combination_mode: sum
+                rules_count: 3
+                create_date: '2026-03-01T10:00:00'
+                create_uid: 1
+                create_uid_:
+                  id: 1
+                  name: Administrator
+                write_date: null
+                write_uid: null
+            error: null
+            pagination: null
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

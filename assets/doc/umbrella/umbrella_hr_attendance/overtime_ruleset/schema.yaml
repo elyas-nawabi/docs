@@ -1,0 +1,151 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        country:
+          type: integer
+        country_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        company:
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rate_combination_mode:
+          type: string
+        rules_count:
+          type: integer
+        rules:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
+              description:
+                type: string
+              base_off:
+                type: string
+              information_display:
+                type: string
+              amount_rate:
+                type: number
+              expected_hours_from_contract:
+                type: boolean
+              timing_type:
+                type: string
+              timing_start:
+                type: number
+              timing_stop:
+                type: number
+              resource_calendar:
+                type: integer
+              expected_hours:
+                type: number
+              quantity_period:
+                type: string
+              sequence:
+                type: integer
+              ruleset:
+                type: integer
+              paid:
+                type: boolean
+              employee_tolerance:
+                type: number
+              employer_tolerance:
+                type: number
+              create_date:
+                type: string
+                format: date-time
+              create_uid:
+                type: integer
+              write_date:
+                type: string
+                format: date-time
+                nullable: true
+              write_uid:
+                type: integer
+                nullable: true
+        create_date:
+          type: string
+          format: date-time
+        create_uid:
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date-time
+          nullable: true
+        write_uid:
+          type: integer
+          nullable: true
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 1
+    name: UAE Overtime Rules
+    description: Overtime ruleset for UAE.
+    country: 1
+    country_:
+      id: 1
+      name: United Arab Emirates
+    company: 1
+    company_:
+      id: 1
+      name: Milestone
+    rate_combination_mode: sum
+    rules_count: 1
+    rules:
+      - id: 10
+        name: Weekday OT
+        description: Weekday overtime rule
+        base_off: worked_hours
+        information_display: amount
+        amount_rate: 1.25
+        expected_hours_from_contract: true
+        timing_type: after
+        timing_start: 8
+        timing_stop: 24
+        resource_calendar: 1
+        expected_hours: 8
+        quantity_period: day
+        sequence: 1
+        ruleset: 1
+        paid: true
+        employee_tolerance: 0
+        employer_tolerance: 0
+        create_date: '2026-03-01T10:00:00'
+        create_uid: 1
+        write_date: null
+        write_uid: null
+    create_date: '2026-03-01T10:00:00'
+    create_uid: 1
+    create_uid_:
+      id: 1
+      name: Administrator
+    write_date: null
+    write_uid: null
+  error: null
+  pagination: null
+  status: 201
+  success_message: null

@@ -1,0 +1,15 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: overtime_ruleset
+    description: hr attendance - overtime rulesets management.
+paths:
+  '/hr-attendance/overtime-rulesets/search':
+    $ref: 'get_overtime_ruleset.yaml'
+  '/hr-attendance/overtime-rulesets':
+    $ref: 'post_delete_overtime_ruleset.yaml'
+  '/hr-attendance/overtime-rulesets/{obj_id}':
+    $ref: 'get_put_overtime_ruleset_by_id.yaml'
+  '/hr-attendance/overtime-rulesets/{obj_id}/regenerate-overtimes':
+    $ref: 'get_regenerate_overtimes_by_id.yaml'

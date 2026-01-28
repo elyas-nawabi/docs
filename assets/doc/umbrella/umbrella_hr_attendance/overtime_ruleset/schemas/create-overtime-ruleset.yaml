@@ -1,0 +1,73 @@
+schema:
+  properties:
+    name:
+      type: string
+    description:
+      type: string
+    country:
+      type: integer
+    company:
+      type: integer
+    rate_combination_mode:
+      type: string
+    rules:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+          description:
+            type: string
+          base_off:
+            type: string
+          information_display:
+            type: string
+          amount_rate:
+            type: number
+          expected_hours_from_contract:
+            type: boolean
+          timing_type:
+            type: string
+          timing_start:
+            type: number
+          timing_stop:
+            type: number
+          resource_calendar:
+            type: integer
+          expected_hours:
+            type: number
+          quantity_period:
+            type: string
+          sequence:
+            type: integer
+          paid:
+            type: boolean
+          employee_tolerance:
+            type: number
+          employer_tolerance:
+            type: number
+
+example:
+  name: UAE Overtime Rules
+  description: Overtime ruleset for UAE.
+  country: 1
+  company: 1
+  rate_combination_mode: sum
+  rules:
+    - name: Weekday OT
+      description: Weekday overtime rule
+      base_off: worked_hours
+      information_display: amount
+      amount_rate: 1.25
+      expected_hours_from_contract: true
+      timing_type: after
+      timing_start: 8
+      timing_stop: 24
+      resource_calendar: 1
+      expected_hours: 8
+      quantity_period: day
+      sequence: 1
+      paid: true
+      employee_tolerance: 0
+      employer_tolerance: 0
