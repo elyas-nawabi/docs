@@ -1,0 +1,142 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        id:
+          type: integer
+        employee:
+          type: integer
+        employee_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        department:
+          type: integer
+          nullable: true
+        department_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        manager:
+          type: integer
+          nullable: true
+        manager_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        check_in:
+          type: string
+          format: date-time
+        check_out:
+          type: string
+          format: date-time
+          nullable: true
+        worked_hours:
+          type: number
+        expected_hours:
+          type: number
+        overtime_hours:
+          type: number
+        validated_overtime_hours:
+          type: number
+        no_validated_overtime_hours:
+          type: boolean
+        overtime_status:
+          type: string
+        in_mode:
+          type: string
+        in_ip_address:
+          type: string
+        in_browser:
+          type: string
+        in_city:
+          type: string
+        in_country_name:
+          type: string
+        in_latitude:
+          type: number
+        in_longitude:
+          type: number
+        out_mode:
+          type: string
+        out_ip_address:
+          type: string
+        out_browser:
+          type: string
+        out_city:
+          type: string
+        out_country_name:
+          type: string
+        out_latitude:
+          type: number
+        out_longitude:
+          type: number
+        create_date:
+          type: string
+          format: date-time
+        create_uid:
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date-time
+          nullable: true
+        write_uid:
+          type: integer
+          nullable: true
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 1
+    employee: 5
+    employee_:
+      id: 5
+      name: John Doe
+    department: 2
+    department_:
+      id: 2
+      name: IT
+    manager: 8
+    manager_:
+      id: 8
+      name: Manager Name
+    check_in: '2026-03-10T09:00:00'
+    check_out: '2026-03-10T17:00:00'
+    worked_hours: 8
+    expected_hours: 8
+    overtime_hours: 0
+    validated_overtime_hours: 0
+    no_validated_overtime_hours: false
+    overtime_status: none
+    in_mode: kiosk
+    in_ip_address: '192.168.1.10'
+    in_browser: Chrome
+    in_city: Dubai
+    in_country_name: United Arab Emirates
+    in_latitude: 25.2048
+    in_longitude: 55.2708
+    out_mode: kiosk
+    out_ip_address: '192.168.1.10'
+    out_browser: Chrome
+    out_city: Dubai
+    out_country_name: United Arab Emirates
+    out_latitude: 25.2048
+    out_longitude: 55.2708
+    create_date: '2026-03-10T09:00:00'
+    create_uid: 1
+    create_uid_:
+      id: 1
+      name: Administrator
+    write_date: null
+    write_uid: null
+  error: null
+  pagination: null
+  status: 201
+  success_message: null
