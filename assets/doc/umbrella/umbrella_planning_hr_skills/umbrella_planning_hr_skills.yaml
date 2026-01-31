@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: umbrella_planning_hr_skills
+    description: >
+      Planning HR Skills integration module (Tryton).
+
+      This module does not add dedicated REST endpoints; it augments server-side
+      behavior by depending on "umbrella_planning" and "umbrella_hr_skills".
+
+      Use the generic Umbrella endpoints (model CRUD and execute/on_change)
+      documented under the "Umbrella" section.
+paths: {}
