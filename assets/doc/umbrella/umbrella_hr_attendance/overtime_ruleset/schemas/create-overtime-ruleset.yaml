@@ -17,6 +17,8 @@ schema:
         properties:
           name:
             type: string
+          work_entity_type:
+            type: string
           description:
             type: string
           base_off:
@@ -56,6 +58,7 @@ example:
   rate_combination_mode: sum
   rules:
     - name: Weekday OT
+      work_entity_type: ""
       description: Weekday overtime rule
       base_off: worked_hours
       information_display: amount

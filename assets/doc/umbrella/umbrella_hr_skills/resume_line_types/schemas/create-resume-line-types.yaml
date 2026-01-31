@@ -1,0 +1,10 @@
+schema:
+  properties:
+    name:
+      type: string
+    sequence:
+      type: string
+
+example:
+  name: ''
+  sequence: ''

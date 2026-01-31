@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: degrees
+    description: degrees - data management.
+paths:
+  '/hr-recruitment/degrees/search':
+    $ref: 'get_degrees.yaml'
+  '/hr-recruitment/degrees':
+    $ref: 'post_delete_degrees.yaml'
+  '/hr-recruitment/degrees/{obj_id}':
+    $ref: 'get_put_degrees_by_id.yaml'

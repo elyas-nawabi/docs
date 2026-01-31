@@ -1,0 +1,112 @@
+schema:
+  properties:
+    name:
+      type: string
+    login:
+      type: string
+    sessions:
+      type: string
+    avatar_url:
+      type: string
+    partner_name:
+      type: string
+    job:
+      type: string
+    application_status:
+      type: string
+    availability:
+      type: string
+    candidate:
+      type: string
+    categs:
+      type: string
+    company:
+      type: string
+    date_last_stage_update:
+      type: string
+    department:
+      type: string
+    email_from:
+      type: string
+    interviewers:
+      type: string
+    last_stage:
+      type: string
+    partner_phone:
+      type: string
+    priority:
+      type: string
+    refuse_reason:
+      type: string
+    salary_expected:
+      type: string
+    salary_proposed:
+      type: string
+    stage:
+      type: string
+    type:
+      type: string
+    user:
+      type: string
+    partner:
+      type: string
+    email_normalized:
+      type: string
+    partner_phone_sanitized:
+      type: string
+    linkedin_profile:
+      type: string
+    employee:
+      type: string
+    emp_is_active:
+      type: string
+    employee_name:
+      type: string
+    probability:
+      type: string
+    date_closed:
+      type: string
+    date_open:
+      type: string
+    salary_proposed_extra:
+      type: string
+    salary_expected_extra:
+      type: string
+    day_open:
+      type: string
+    day_close:
+      type: string
+    delay_close:
+      type: string
+    user_email:
+      type: string
+    kanban_state:
+      type: string
+    legend_blocked:
+      type: string
+    legend_done:
+      type: string
+    legend_normal:
+      type: string
+    meetings:
+      type: string
+    meeting_display_text:
+      type: string
+    meeting_display_date:
+      type: string
+    other_applications_count:
+      type: string
+    applicant_properties:
+      type: string
+    applicant_notes:
+      type: string
+    refuse_date:
+      type: string
+
+example:
+  name: ''
+  login: ''
+  sessions: ''
+  avatar_url: ''
+  partner_name: ''
+  job: ''

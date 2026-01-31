@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: tags
+    description: tags - data management.
+paths:
+  '/hr-recruitment/tags/search':
+    $ref: 'get_tags.yaml'
+  '/hr-recruitment/tags':
+    $ref: 'post_delete_tags.yaml'
+  '/hr-recruitment/tags/{obj_id}':
+    $ref: 'get_put_tags_by_id.yaml'

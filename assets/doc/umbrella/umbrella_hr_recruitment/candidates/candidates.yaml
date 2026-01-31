@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: candidates
+    description: candidates - data management.
+paths:
+  '/hr-recruitment/candidates/search':
+    $ref: 'get_candidates.yaml'
+  '/hr-recruitment/candidates':
+    $ref: 'post_delete_candidates.yaml'
+  '/hr-recruitment/candidates/{obj_id}':
+    $ref: 'get_put_candidates_by_id.yaml'

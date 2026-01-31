@@ -1,0 +1,15 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: work_entries
+    description: work_entries - data management.
+paths:
+  '/hr-work-entry/work-entries/search':
+    $ref: 'get_work_entries.yaml'
+  '/hr-work-entry/work-entries':
+    $ref: 'post_delete_work_entries.yaml'
+  '/hr-work-entry/work-entries/{obj_id}':
+    $ref: 'get_put_work_entries_by_id.yaml'
+  '/hr-work-entry/work-entries/regenerate-work-entries':
+    $ref: 'post_regenerate_work_entries.yaml'

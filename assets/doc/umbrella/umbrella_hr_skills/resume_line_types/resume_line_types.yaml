@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: resume_line_types
+    description: resume_line_types - data management.
+paths:
+  '/hr-skills/resume-line-types/search':
+    $ref: 'get_resume_line_types.yaml'
+  '/hr-skills/resume-line-types':
+    $ref: 'post_delete_resume_line_types.yaml'
+  '/hr-skills/resume-line-types/{obj_id}':
+    $ref: 'get_put_resume_line_types_by_id.yaml'
