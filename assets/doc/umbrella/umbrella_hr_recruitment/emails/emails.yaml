@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: emails
+    description: emails - data management.
+paths:
+  '/hr-recruitment/emails/search':
+    $ref: 'get_emails.yaml'
+  '/hr-recruitment/emails':
+    $ref: 'post_delete_emails.yaml'
+  '/hr-recruitment/emails/{obj_id}':
+    $ref: 'get_put_emails_by_id.yaml'

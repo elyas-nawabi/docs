@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: refuse_reasons
+    description: refuse_reasons - data management.
+paths:
+  '/hr-recruitment/refuse-reasons/search':
+    $ref: 'get_refuse_reasons.yaml'
+  '/hr-recruitment/refuse-reasons':
+    $ref: 'post_delete_refuse_reasons.yaml'
+  '/hr-recruitment/refuse-reasons/{obj_id}':
+    $ref: 'get_put_refuse_reasons_by_id.yaml'

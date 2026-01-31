@@ -1,0 +1,19 @@
+schema:
+  properties:
+    hr_presence_control_email:
+      type: string
+    hr_presence_control_email_amount:
+      type: string
+    hr_presence_control_ip:
+      type: string
+    hr_presence_last_compute_date:
+      type: string
+    hr_presence_control_ip_list:
+      type: string
+
+example:
+  hr_presence_control_email: ''
+  hr_presence_control_email_amount: ''
+  hr_presence_control_ip: ''
+  hr_presence_last_compute_date: ''
+  hr_presence_control_ip_list: ''

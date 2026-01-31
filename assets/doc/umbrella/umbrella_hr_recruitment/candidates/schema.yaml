@@ -1,0 +1,92 @@
+schema:
+  properties:
+    data:
+      type: object
+      properties:
+        id:
+          type: integer
+        partner_name:
+          type: string
+        email_from:
+          type: string
+        partner_phone:
+          type: string
+        user:
+          type: string
+        priority:
+          type: string
+        availability:
+          type: string
+        type:
+          type: string
+        linkedin_profile:
+          type: string
+        application_count:
+          type: string
+        refused_applications_count:
+          type: string
+        accepted_applications_count:
+          type: string
+        partner:
+          type: string
+        company:
+          type: string
+        applicants:
+          type: string
+        email_normalized:
+          type: string
+        categs:
+          type: string
+        employee:
+          type: string
+        emp_is_active:
+          type: string
+        employee_name:
+          type: string
+        similar_candidates_count:
+          type: string
+        applications_count:
+          type: string
+        meetings:
+          type: string
+        meeting_display_text:
+          type: string
+        meeting_display_date:
+          type: string
+        candidate_properties:
+          type: string
+        candidate_skills:
+          type: string
+        create_date:
+          type: string
+          format: date-time
+        create_uid:
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date-time
+          nullable: true
+        write_uid:
+          type: integer
+          nullable: true
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 1
+  error: null
+  pagination: null
+  status: 200
+  success_message: null

@@ -1,0 +1,30 @@
+schema:
+  properties:
+    name:
+      type: string
+    sequence:
+      type: string
+    fold:
+      type: string
+    hired_stage:
+      type: string
+    jobs:
+      type: string
+    requirements:
+      type: string
+    legend_blocked:
+      type: string
+    legend_done:
+      type: string
+    legend_normal:
+      type: string
+    is_warning_visible:
+      type: string
+
+example:
+  name: ''
+  sequence: ''
+  fold: ''
+  hired_stage: ''
+  jobs: ''
+  requirements: ''

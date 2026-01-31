@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: work_entry_types
+    description: work_entry_types - data management.
+paths:
+  '/hr-work-entry/work-entry-types/search':
+    $ref: 'get_work_entry_types.yaml'
+  '/hr-work-entry/work-entry-types':
+    $ref: 'post_delete_work_entry_types.yaml'
+  '/hr-work-entry/work-entry-types/{obj_id}':
+    $ref: 'get_put_work_entry_types_by_id.yaml'
