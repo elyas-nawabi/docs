@@ -18,17 +18,16 @@ get:
         application/json:
           schema:
             $ref: 'schema.yaml'
-'401':
-  description: >-
-    401 Unauthorized: The server could not verify that you are
-    authorized to access the URL requested. You either supplied the
-    wrong credentials (e.g. a bad password), or your browser doesn't
-    understand how to supply the credentials required.
-  content:
-    application/json:
-      schema:
-        $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
     '404':
       description: 404 Not Found.
       content:
@@ -54,7 +53,6 @@ put:
     content:
       application/json:
         schema:
-          type: object
           $ref: 'schemas/create-work-entries.yaml'
   responses:
     '200':
@@ -63,13 +61,13 @@ put:
         application/json:
           schema:
             $ref: 'schema.yaml'
-'401':
-  description: >-
-    401 Unauthorized: The server could not verify that you are
-    authorized to access the URL requested. You either supplied the
-    wrong credentials (e.g. a bad password), or your browser doesn't
-    understand how to supply the credentials required.
-  content:
-    application/json:
-      schema:
-        $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

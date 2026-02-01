@@ -1,57 +1,57 @@
-schema:
-  properties:
-    data:
-      type: object
-      properties:
-        id:
-          type: integer
-        name:
-          type: string
-        display_code:
-          type: string
-        code:
-          type: string
-        country:
-          type: string
-        amount_rate:
-          type: string
-        is_extra_hours:
-          type: string
-        external_code:
-          type: string
-        sequence:
-          type: string
-        country_code:
-          type: string
-        is_leave:
-          type: string
-        is_work:
-          type: string
-        create_date:
-          type: string
-          format: date-time
-        create_uid:
-          type: integer
-        create_uid_:
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        write_date:
-          type: string
-          format: date-time
-          nullable: true
-        write_uid:
-          type: integer
-          nullable: true
-    error:
-      type: object
-      nullable: true
-    pagination:
-      type: object
-      nullable: true
-    status:
-      type: integer
-    success_message:
-      type: string
-      nullable: true
+type: object
+properties:
+  data:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      display_code:
+        type: string
+      code:
+        type: string
+      country:
+        type: string
+      amount_rate:
+        type: string
+      is_extra_hours:
+        type: string
+      external_code:
+        type: string
+      sequence:
+        type: string
+      country_code:
+        type: string
+      is_leave:
+        type: string
+      is_work:
+        type: string
+      create_date:
+        type: string
+        format: date-time
+      create_uid:
+        type: integer
+      create_uid_:
+        $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+      write_date:
+        type: string
+        format: date-time
+        nullable: true
+      write_uid:
+        type: integer
+        nullable: true
+  error:
+    type: object
+    nullable: true
+  pagination:
+    type: object
+    nullable: true
+  status:
+    type: integer
+  success_message:
+    type: string
+    nullable: true
 
 example:
   data:

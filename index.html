@@ -9,206 +9,120 @@
     <link rel="stylesheet" type="text/css" href="assets/css/swagger-ui.css" />
     <link rel="shortcut icon" href="assets/images/tryton-logo.jpg" />
     <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/sidebar.css" />
+    <!-- Lucide Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/lucide-static/font/lucide.css" rel="stylesheet">
     <style>
-      .topbar {
-        display: none !important;
-      }
       .wrapper .float-right {
         display: none !important;
-      }
-
-      .api-version {
-        background-color: #7aaf97;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 0.9em;
-      }
-
-      .api-type {
-        background-color: #82c983;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 0.9em;
-        margin-left: 10px;
-      }
-      .api-link {
-        display: block;
-        margin-top: 10px;
-        font-size: 0.9em;
-        color: #0a7bce;
-        text-decoration: none;
-      }
-      .api-link:hover {
-        text-decoration: underline;
-      }
-      .api-content {
-        padding: 20px 20px 0 20px;
-        margin-bottom: -100px;
-        font-size: 14px;
-        /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-      }
-
-      .api-content h1 {
-        font-size: 1.8em;
-        margin-bottom: 10px;
-        color: #111;
-      }
-
-      .api-content h2 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-        color: #111;
-      }
-
-      .api-content h3 {
-        font-size: 1.3em;
-        margin-bottom: 10px;
-        color: #111;
-      }
-
-      ul {
-        list-style-type: disc;
-        margin-left: 20px;
-        margin-bottom: 15px;
-      }
-
-      li {
-        margin-bottom: 5px;
-      }
-
-      .api-content pre {
-        background-color: #f4f4f4;
-        padding: 10px;
-        border-radius: 5px;
-        overflow-x: auto;
-        margin-bottom: 15px;
-      }
-
-      .support-link {
-        display: inline-block;
-        margin-top: 20px;
-        color: #0a7bce;
-        text-decoration: none;
-      }
-
-      .support-link:hover {
-        text-decoration: underline;
       }
       hgroup .title {
         display: none;
       }
+      .swagger-ui .info {
+        margin: 20px 0;
+      }
     </style>
-    <!-- menu style -->
-    <style>
-      .menu-container {
-    width: auto;
-    /* position: relative; */
-}
-
-#menu-filter {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-.menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    /* max-height: 300px; Set a max height for scrollable menu */
-    /* overflow-y: auto; Enable scrolling */
-}
-
-.menu-item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.icon {
-    /* margin-right: 10px; */
-}
-
-.submenu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%; 
-    /* min-width: 150px; */
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000; 
-    
-}
-
-.submenu .menu-item {
-    /* padding: 10px; */
-    white-space: nowrap;
-    border-bottom: 1px solid #ddd;
-}
-.submenu .menu-item{
-  margin:0;
-  padding: 0;
-}
-.menu-item li a{
-    display: inline-block;
-    width: 100%;
-}
-
-.has-submenu .arrow {
-    font-size: 10px;
-    transition: transform 0.3s;
-}
-
-.has-submenu.open .arrow {
-    transform: rotate(90deg);
-}
-
-.has-submenu:hover .submenu,
-.has-submenu.open .submenu {
-    display: inline-block;
-}
-
-.has-submenu:hover > .menu-item {
-    /* background-color: #f0f0f0; */
-}
-
-@media (max-width: 600px) {
-    .submenu {
-        left: 0; 
-        top: auto;
-        width: 100%; 
-    }
-
-    .submenu .menu-item {
-        white-space: normal; 
-        padding: 10px; 
-    }
-    .menu{
-      max-height: 300px; 
-    overflow-y: auto; 
-    }
-}
-    </style>
-    
   </head>
 
   <body>
+    <div class="app-container">
+      <!-- Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <button class="menu-toggle" id="menuToggle" title="Toggle Menu">
+            <i class="icon-menu" style="font-size: 20px;"></i>
+          </button>
+          <span class="app-logo">Umbrella</span>
+          <div class="action-search">
+            <i class="icon-flag"></i>
+            <input type="text" id="actionSearch" placeholder="Action" />
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="user-info">
+            <div class="user-avatar">A</div>
+            <span>Administrator [USD]</span>
+          </div>
+          <button class="logout-btn" title="Logout">
+            <i class="icon-log-out" style="font-size: 18px;"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Body -->
+      <div class="app-body">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+          <div class="sidebar-content">
+            <ul class="menu-tree" id="menuTree"></ul>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+          <div class="auth-bar" id="authBar">
+            <div class="auth-bar-title">Authorization</div>
+            <div class="auth-bar-controls">
+              <input
+                type="password"
+                id="tokenInput"
+                placeholder="Paste token (JWT) or 'Bearer …'"
+                autocomplete="off"
+                spellcheck="false"
+              />
+              <button type="button" id="setTokenBtn">Set Token</button>
+              <span class="auth-bar-status" id="tokenStatus"></span>
+            </div>
+          </div>
+          <div id="swagger-ui"></div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/swagger-ui-bundle.js"></script>
+    <script src="assets/js/swagger-ui-standalone-preset.js"></script>
     <script>
-      let url = "assets/doc/api_doc.yaml";
-      let token = sessionStorage.getItem("token");
+      // Swagger UI Configuration
+      let url = "assets/doc/umbrella/umbrella/auth/auth.yaml";
+
+      function getStoredToken() {
+        return sessionStorage.getItem("token") || "";
+      }
+
+      function getSwaggerAuthorizedToken() {
+        try {
+          if (!window.ui || !window.ui.getSystem) return "";
+          const sys = window.ui.getSystem();
+          if (!sys || !sys.getState) return "";
+          const state = sys.getState();
+          if (!state || !state.getIn) return "";
+          const authorized = state.getIn(["auth", "authorized"]);
+          if (!authorized) return "";
+
+          // authorized is usually an Immutable.Map
+          if (typeof authorized.toJS === "function") {
+            const obj = authorized.toJS();
+            for (const val of Object.values(obj || {})) {
+              if (val && typeof val.value === "string" && val.value.trim()) {
+                return val.value.trim();
+              }
+            }
+          }
+
+          return "";
+        } catch (e) {
+          return "";
+        }
+      }
+
+      function normalizeAuthHeader(raw) {
+        const trimmed = String(raw || "").trim();
+        if (!trimmed) return "";
+        return trimmed.toLowerCase().startsWith("bearer ") ? trimmed : `Bearer ${trimmed}`;
+      }
+
       function pageNavigator(path) {
         window.ui = SwaggerUIBundle({
           url: path,
@@ -217,2216 +131,258 @@
           presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
           plugins: [SwaggerUIBundle.plugins.DownloadUrl],
           layout: "StandaloneLayout",
-
           requestInterceptor: (request) => {
-            if (token) {
-              request.headers["Authorization"] = `Bearer ${token}`;
+            const reqUrl = String(request.url || "");
+            const isAssetRequest = reqUrl.includes("assets/");
+
+            const stored = getStoredToken();
+            const swaggerAuthorized = getSwaggerAuthorizedToken();
+            const authHeader = normalizeAuthHeader(stored || swaggerAuthorized);
+
+            // Block executing API requests if token isn't set.
+            // Allow loading local docs/assets without a token.
+            if (!isAssetRequest && !authHeader) {
+              const msg = "Token is required. Please set/validate the token first.";
+              const statusEl = document.getElementById("tokenStatus");
+              if (statusEl) statusEl.textContent = msg;
+              // Do not throw here: Swagger UI can end up with a null response object
+              // and crash while rendering the response panel.
+              // Let the request go through and rely on the server's 401/403 response.
+              return request;
+            }
+
+            if (authHeader) {
+              request.headers["Authorization"] = authHeader;
             }
             return request;
           },
         });
       }
-      function setAuthorizationToken() {
-        token = document.getElementById("tokenInput").value;
-        sessionStorage.setItem("token", token);
-        document.querySelector("#btnToken").innerHTML = sessionStorage.getItem(
-          "token"
-        )
-          ? "<div style='color:green'>Token Verified</div>"
-          : "<div style='color:red'> Set Token </div>";
+
+      // Initialize Swagger UI
+      window.onload = function () {
+        pageNavigator(url);
+      };
+
+      function refreshTokenUI() {
+        const input = document.getElementById("tokenInput");
+        const status = document.getElementById("tokenStatus");
+        if (!input || !status) return;
+
+        const stored = getStoredToken();
+        if (!stored) {
+          status.textContent = "Token not set";
+          input.value = "";
+          return;
+        }
+
+        status.textContent = "Token set";
+        // Don't echo the token back into the field.
+        input.value = "";
       }
-    </script>
-    <header>
-      <div class="topnav" id="myTopnav">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Umbrella -
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content menu-container">
-            <input type="text" id="menu-filter" placeholder="Search menu...">
-            <ul class="menu">
 
-                <li class="menu-item has-submenu">
-                  <span class="icon">📄</span>
-                  Administration -> User Interface
-                  <span class="arrow">▶</span>
-                  <ul class="submenu">
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/icon/icon.yaml')"
-                          >Icon</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/ui_menu/ui_menu.yaml')"
-                        >
-                          UI Menu</a
-                        >
+      document.addEventListener("DOMContentLoaded", function () {
+        const setBtn = document.getElementById("setTokenBtn");
+        const tokenInput = document.getElementById("tokenInput");
+        const status = document.getElementById("tokenStatus");
 
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view/view.yaml')"
-                        >
-                          View</a
-                        >
+        refreshTokenUI();
 
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_search/view_search.yaml')"
-                        >
-                          View Search</a
-                        >
+        if (setBtn && tokenInput) {
+          setBtn.addEventListener("click", function () {
+            const raw = String(tokenInput.value || "").trim();
+            if (!raw) {
+              if (status) status.textContent = "Please enter a token";
+              return;
+            }
 
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_tree_optional/view_tree_optional.yaml')"
-                        >
-                          View Tree Optional</a
-                        >
-
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_tree_state/view_tree_state.yaml')"
-                        >
-                          View Tree State</a
-                        >
-
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/view_tree_width/view_tree_width.yaml')"
-                        >
-                          View Tree Width</a
-                        >
-
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action/action1.yaml')"
-                        >
-                          Action</a
-                        >
-
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_wizard/action_wizard.yaml')"
-                        >
-                          Action Wizard</a
-                        >
-
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_act_window/action_act_window.yaml')"
-                        >
-                          Action Act Window</a
-                        >
-
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_url/action_url.yaml')"
-                        >
-                          Action URL</a
-                        >
-
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/email_template/email_template.yaml')"
-                        >
-                          Email Template</a
-                        >
-
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/user_interface/action_report/action_report.yaml')"
-                        >
-                          Action Report</a
-                        >
-
-                      </li>
-                  </ul>
-                </li>
-
-                <li class="menu-item has-submenu">
-                  <span class="icon">⚙️</span>
-                  Administration
-                  <span class="arrow">▶</span>
-                  <ul class="submenu">
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/localization/lang/lang.yaml')"
-                          >Lang</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/localization/message/message.yaml')"
-                          >Message</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/localization/translation/translation.yaml')"
-                          >Translation</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/modules/module/module.yaml')"
-                          >Module</a
-                        >
-                        
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/modules/module_config_wizard_item/config_wizard_items.yaml')"
-                          >Module Config Wizard Items</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/users/group/group.yaml')"
-                          >Users-> Group</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/users/user/user.yaml')"
-                          >Users-> User</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/ir/export_import/export_import.yaml')"
-                          >IR-> Export Import</a
-                        >
-                      </li>
-                  </ul>
-                </li>
-                <li class="menu-item has-submenu">
-                  <span class="icon">⚙️</span>
-                  Administration (Sequences)
-                  <span class="arrow">▶</span>
-                  <ul class="submenu">
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml')"
-                          >Sequence Type</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml')"
-                          >Sequence Type</a
-                        >
-                      </li>
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_strict/sequence_strict.yaml')"
-                          >Sequence Strict</a
-                        >
-                      </li>
-                  </ul>
-                </li>
-                <li class="menu-item has-submenu">
-                    <span class="icon">📄</span>
-                    Currency
-                    <span class="arrow">▶</span>
-                    <ul class="submenu">
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/currency/currency.yaml')"
-                            >Currency</a
-                          >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/scheduled_rate_update/scheduled_rate_update.yaml')"
-                          >
-                            Scheduled Rate Update</a
-                          >
-
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-item has-submenu">
-                    <span class="icon">⚙️</span>
-                    Auth
-                    <span class="arrow">▶</span>
-                    <ul class="submenu">
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella/auth/auth.yaml')"
-                            >Auth</a
-                          >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella/smart_enum/smart_enum.yaml')"
-                            >Smart Enum</a
-                          >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella/wizard/wizard.yaml')"
-                            >Wizard</a
-                          >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella/user_warning/user_warning.yaml')"
-                            >User Warning</a
-                          >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella/get_access/get_access.yaml')"
-                            >Get Access</a
-                          >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella/get_menu/get_menu.yaml')"
-                            >Get Menu</a
-                          >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella/fields_structure/fields_structure.yaml')"
-                            >Fields Structure</a
-                          >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella/models_list/models_list.yaml')"
-                            >Models List</a
-                          >
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-item has-submenu">
-                  Model
-                  <span class="arrow">▶</span>
-                  <ul class="submenu">
-                      <li class="menu-item">
-                        <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/models/model/model.yaml')"
-                          >Model</a
-                        >
-                        
-                      </li>
-                  </ul>
-              </li>
-              <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella/toolbar/toolbar.yaml')"
-              >Toolbar</a
-            >
-                <!-- <li class="menu-item has-submenu">
-                    <span class="icon">🌐</span>
-                    Product
-                    <span class="arrow">▶</span>
-                    <ul class="submenu">
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product/product.yaml')"
-                            >Product</a
-                          >
-                          
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product_category/product_category.yaml')"
-                            >Product Category</a
-                          >
-                          
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_product/configuration/configuration.yaml')"
-                            >Configuration</a
-                          >
-                          
-                        </li>
-                        <li class="menu-item">
-                          <a
-                            href="#"
-                            onclick="pageNavigator('assets/doc/umbrella/umbrella_product/variant/variant.yaml')"
-                            >Variant</a
-                          >
-                         
-                        </li>
-                        <li class="menu-item">
-                          <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_product/unit_of_measure/unit_of_measure.yaml')"
-                          >Unit Of Measure</a
-                        >
-                        </li>
-                        <li class="menu-item">
-                          <a
-                          href="#"
-                          onclick="pageNavigator('assets/doc/umbrella/umbrella_product/uom_category/uom_category.yaml')"
-                          >UOM Category</a
-                        >
-                        </li>
-                        
-                    </ul>
-                  -->
-            </ul>
-          </div>
-          <!-- <div class="dropdown-content currency">
-            <div class="group">
-              <h3>Currency</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/currency/currency.yaml')"
-                >Currency</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_currency/scheduled_rate_update/scheduled_rate_update.yaml')"
-              >
-                Scheduled Rate Update</a
-              >
-              <h3>Auth</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella/auth/auth.yaml')"
-                >Auth</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella/smart_enum/smart_enum.yaml')"
-                >Smart Enum</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella/wizard/wizard.yaml')"
-                >Wizard</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella/user_warning/user_warning.yaml')"
-                >User Warning</a
-              >
-              <h3>Administration</h3>
-              <h3 style="font-size: 15px">- Sequences</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence/sequence.yaml')"
-                >Sequence</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml')"
-                >Sequence Type</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/sequences/sequence_strict/sequence_strict.yaml')"
-                >Sequence Strict</a
-              >
-              <h3 style="font-size: 15px">- Localization (lang)</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/localization/lang/lang.yaml')"
-                >Lang</a
-              >
-              <h3 style="font-size: 15px">- Modules</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/modules/module/module.yaml')"
-                >Module</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/modules/module_config_wizard_item/config_wizard_items.yaml')"
-                >Module Config Wizard Items</a
-              >
-              <h3 style="font-size: 15px">- Users</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_administration/users/group/group.yaml')"
-                >Group</a
-              >
-              <h3>Product</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product/product.yaml')"
-                >Product</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product_category/product_category.yaml')"
-                >Product Category</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/configuration/configuration.yaml')"
-                >Configuration</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/variant/variant.yaml')"
-                >Variant</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/unit_of_measure/unit_of_measure.yaml')"
-                >Unit Of Measure</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/uom_category/uom_category.yaml')"
-                >UOM Category</a
-              >
-            </div>
-          </div> -->
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Financial Accounting
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content accounting">
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account/account.yaml')"
-              >Account</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_move_line/account_move_line.yaml')"
-              >Account Move Line</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_move/account_move.yaml')"
-              >Account Move</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_type/account_type.yaml')"
-              >Account Type</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/configuration/configuration.yaml')"
-              >Configuration</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/fiscal_year/fiscal_year.yaml')"
-              >Fiscal Year</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/fiscal_period/fiscal_period.yaml')"
-              >Fiscal Period</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/journal/journal.yaml')"
-              >Journal</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/journal_period/journal_period.yaml')"
-              >Journal Period</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/write_off/write_off.yaml')"
-              >Write Off</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/tax/tax.yaml')"
-              >Tax</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/tax_code/tax_code.yaml')"
-              >Tax Code</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/tax_group/tax_group.yaml')"
-              >Tax Group</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/tax_rule/tax_rule.yaml')"
-              >Tax Rule</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/balance_non_deferral/balance.yaml')"
-              >Balance Non Deferral</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/reconcile/reconcile.yaml')"
-              >Reconcile</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/reports/reports.yaml')"
-              >Reports</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_payment/payment_journal/payment_journal.yaml')"
-              >Payment Journal</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_payment/payment/payment.yaml')"
-              >Payment</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_statement/statement_journal/statement_journal.yaml')"
-              >Statement Journal</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_statement/line_group/line_group.yaml')"
-              >Line Group</a
-            >
-            <!-- <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_payment/line_to_pay/line_to_pay.yaml')">Line to Pay</a> -->
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_statement/statement/statement.yaml')"
-              >Statement</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_invoice/invoice/invoice.yaml')"
-              >Invoice</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_invoice/payment_term/payment_term.yaml')"
-              >Payment Term</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_invoice/payment_method/payment_method.yaml')"
-              >Payment Method</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_payment/payment_group/payment_group.yaml')"
-              >Payment Group</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/account_template/account_template.yaml')"
-              >Account Template</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_financial_accounting/cashflow/account.yaml')"
-              >Account Tag & Cashflow</a
-            >
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Company & Country
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_company/company/company.yaml')"
-              >Company</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_company/employee/employee.yaml')"
-              >Employee</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_country/country/country.yaml')"
-              >Country</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_country/organization/organization.yaml')"
-              >Organization</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_country/region/region.yaml')"
-              >Region</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_country/subdivision/subdivision.yaml')"
-              >Subdivision</a
-            >
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Party & Banking
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_party/party/party.yaml')"
-              >Party</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_party/party_tax_identifier/party_tax_identifier.yaml')"
-              >Party Tax Identifier</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_party/address/address.yaml')"
-              >Address</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_party/category/category.yaml')"
-              >Category</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_party/contact_mechanism/contact_mechanism.yaml')"
-              >Contact Mechanism</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_banking/account/account.yaml')"
-              >Account</a
-            >
-            <a
-              href="#"
-              onclick="pageNavigator('assets/doc/umbrella/umbrella_banking/bank/bank.yaml')"
-              >Bank</a
-            >
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Health
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content health">
-            <div class="group">
-              <h3>Health</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/domiciliary_unit/domiciliary_unit.yaml')"
-                >Domiciliary Unit</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/family/family.yaml')"
-                >Family</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/family_member/family_member.yaml')"
-                >Family Member</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/occupation/occupation.yaml')"
-                >Occupation</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/medical_specialty/medical_specialty.yaml')"
-                >Medical Specialty</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/operational_area/operational_area.yaml')"
-                >Operational Area</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/operational_sector/operational_sector.yaml')"
-                >Operational Sector</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/insurance/insurance.yaml')"
-                >Insurance</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/insurance_plan/insurance_plan.yaml')"
-                >Insurance Plan</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/gnuhealth_command/gnuhealth_command.yaml')"
-                >GnuHealth Command</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/ethnicity/ethnicity.yaml')"
-                >Ethnicity</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/help_doc/help_doc.yaml')"
-                >Help Documentation</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/federation_country_config/federation_country_config.yaml')"
-                >Federation Country Config</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/immunization_schedule/immunization_schedule.yaml')"
-                >Immunization Schedule</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/immunization_schedule_line/immunization_schedule_line.yaml')"
-                >Immunization Schedule Line</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/immunization_schedule_dose/immunization_schedule_dose.yaml')"
-                >Immunization Schedule Dose</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/appointment/appointment.yaml')"
-                >Appointment</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/appointment_report/appointment_report.yaml')"
-                >Appointment Report</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/birth_certificate/birth_certificate.yaml')"
-                >Birth Certificate</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/death_certificate/death_certificate.yaml')"
-                >Death Certificate</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/drug_dose_unit/drug_dose_unit.yaml')"
-                >Drug Dose Unit</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/drug_form/drug_form.yaml')"
-                >Drug Form</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/drug_route/drug_route.yaml')"
-                >Drug Route</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/health_institution/health_institution.yaml')"
-                >Health Institution</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/health_institution_specialties/health_institution_specialties.yaml')"
-                >Health Institution Specialty</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/health_institution_operational_sector/health_institution_operational_sector.yaml')"
-                >Health Institution Operational Sector
-              </a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/health_professional/health_professional.yaml')"
-                >Health Professional</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/hospital_bed/hospital_bed.yaml')"
-                >Hospital Bed</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/hospital_building/hospital_building.yaml')"
-                >Hospital Building</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/hospital_or/hospital_or.yaml')"
-                >Hospital Or</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/hospital_unit/hospital_unit.yaml')"
-                >Hospital Unit</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/medical_specialty/medical_specialty.yaml')"
-                >Medical Specialty</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/medicament/medicament.yaml')"
-                >Medicament</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/medicament_category/medicament_category.yaml')"
-                >Medicament Category</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/medication_frequency/medication_frequency.yaml')"
-                >Medication Frequency</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/page_of_life/page_of_life.yaml')"
-                >Page Of Life</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/pathology/pathology.yaml')"
-                >Pathology</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/pathology_category/pathology_category.yaml')"
-                >Pathology Category</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/pathology_group/pathology_group.yaml')"
-                >Pathology Group</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/patient_ecg/patient_ecg.yaml')"
-                >Patient ECG</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/patient_prescription_order/patient_prescription_order.yaml')"
-                >Pateint Prescription Order</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/procedure_code/procedure_code.yaml')"
-                >Procedure Code</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/patient_data/patient_data.yaml')"
-                >Patient Data</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health/patient_evaluation/patient_evaluation.yaml')"
-                >Patient Evaluation</a
-              >
-
-              <h3>Health Disability</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_disability/activity_and_participation/activity_and_participation.yaml')"
-                >Activity and Participation</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_disability/activity_and_participation_category/activity_and_participation_category.yaml')"
-                >Activity and Participation Category</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_disability/body_function/body_function.yaml')"
-                >Body Function</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_disability/body_function_category/body_function_category.yaml')"
-                >Body Function Category</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_disability/body_structure/body_structure.yaml')"
-                >Body Structure</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_disability/body_structure_category/body_structure_category.yaml')"
-                >Body Structure Category</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_disability/environmental_factor/environmental_factor.yaml')"
-                >Environmental Factor</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_disability/environmental_factor_category/environmental_factor_category.yaml')"
-                >Environmental Factor Category</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_disability/patient_amputation/patient_amputation.yaml')"
-                >Patient Amputation</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_disability/patient_prothesis/patient_prothesis.yaml')"
-                >Patient Prothesis</a
-              >
-              <h3>Health Federation</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_federation/federation_node_config/federation_node_config.yaml')"
-                >Federation Node Config</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_federation/federation_object/federation_object.yaml')"
-                >Federation Object</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_federation/federation_queue/federation_queue.yaml')"
-                >Federation Queue</a
-              >
-
-              <h3>Health Genetics</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_genetics/gene/gene.yaml')"
-                >Gene</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_genetics/gene_variant/gene_variant.yaml')"
-                >Gene Variant</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_genetics/gene_variant_phenotype/gene_variant_phenotype.yaml')"
-                >Gene Variant Phenotype</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_genetics/protein_disease/protein_disease.yaml')"
-                >Protien Disease</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_genetics/patient_genetic_risk/patient_genetic_risk.yaml')"
-                >Patient Genetic Risk</a
-              >
-              <h3>Health Imaging</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_imaging/imaging_test/imaging_test.yaml')"
-                >Imaging Test</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_imaging/imaging_test_type/imaging_test_type.yaml')"
-                >Imaging Test Type</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_imaging/imaging_test_result/imaging_test_result.yaml')"
-                >Imaging Test Result</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_imaging/imaging_test_request/imaging_test_request.yaml')"
-                >Imaging Test Request</a
-              >
-
-              <h3>Health Ophthalmology</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_ophthalmology/ophthalmology_evaluation/ophthalmology_evaluation.yaml')"
-                >Ophthalmology Evaluation</a
-              >
-
-              <h3>Health ISS</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_iss/iss/iss.yaml')"
-                >ISS</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Health
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content health">
-            <div class="group">
-              <h3>Health Inpatient</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_inpatient/diet_therapeutic/diet_therapeutic.yaml')"
-                >Diet Therapeutic</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_inpatient/inpatient_meal/inpatient_meal.yaml')"
-                >Inpatient Meal</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_inpatient/inpatient_meal_order/inpatient_meal_order.yaml')"
-                >Inpatient Meal Order</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_inpatient/inpatient_registration/inpatient_registration.yaml')"
-                >Inpatient Registration</a
-              >
-
-              <h3>Health Insurance</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_insurance/insurance_plan_product_policy/insurance_plan_product_policy.yaml')"
-                >Insurance Plan Product Policy</a
-              >
-
-              <h3>Health Lab</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_lab/gnu_health_lab_test_unit/gnu_health_lab_test_unit.yaml')"
-                >Gnu Health Lab Test Unit</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_lab/gnu_health_patient_lab_test/gnu_health_patient_lab_test.yaml')"
-                >Gnu Health Pateint Lab Test</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_lab/lab/lab.yaml')"
-                >Lab</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_lab/test_type/test_type.yaml')"
-                >Test Type</a
-              >
-
-              <h3>Health Life Style</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_lifestyle/diet_belief/diet_belief.yaml')"
-                >Diet Belief</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_lifestyle/recreational_drugs/recreational_drugs.yaml')"
-                >Recreational Drugs</a
-              >
-
-              <h3>Health Orthanc</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_orthanc/orthanc_server_config/orthanc_server_config.yaml')"
-                >Orthanc Server Config</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_orthanc/orthanc_worklist_template/orthanc_worklist_template.yaml')"
-                >Orthanc WorkList Template</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_orthanc/orthanc_patient/orthanc_patient.yaml')"
-                >Orthanc Patient</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_orthanc/orthanc_study/orthanc_study.yaml')"
-                >Orthanc Study</a
-              >
-
-              <h3>Health Pediatrics Growth Chart WHO</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_pediatrics_growth_charts_who/health_pediatrics_growth_charts_who.yaml')"
-                >Health Pediatrics Growth Charts WHO</a
-              >
-
-              <h3>Health Pediatrics</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_pediatrics/new_born/new_born.yaml')"
-                >New Born</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_pediatrics/pediatric_symptoms_checklist/pediatric_symptoms_checklist.yaml')"
-                >Pediatric Symptoms Checklist</a
-              >
-
-              <h3>Surgery Protocols</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_surgery/surgery_protocol/surgery_protocol.yaml')"
-                >Surgery Protocols</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_surgery/surgery/surgery.yaml')"
-                >Surgery</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_surgery/or_scheduler/or_scheduler.yaml')"
-                >Or Scheduler</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_surgery/pre_operative_assessment/pre_operative_assessment.yaml')"
-                >Pre Operative Assessment</a
-              >
-
-              <h3>Health Services</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_services/health_service/health_service.yaml')"
-                >Health Service</a
-              >
-
-              <h3>Health Nursing</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_nursing/patient_rounding/patient_rounding.yaml')"
-                >Patient Rounding</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_nursing/patient_ambulatory_care/patient_ambulatory_care.yaml')"
-                >Patient Ambulatory Care</a
-              >
-
-              <h3>Health Gyneco</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_gyneco/patient_pregnancy/patient_pregnancy.yaml')"
-                >Patient Pregnancy</a
-              >
-
-              <h3>Health Ems</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_ems/ambulance/ambulance.yaml')"
-                >Ambulance</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_ems/ambulance_support/ambulance_support.yaml')"
-                >Ambulance Support</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_ems/support_request/support_request.yaml')"
-                >Support Request</a
-              >
-
-              <h3>Health Dentistry</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_dentistry/dentistry_procedure/dentistry_procedure.yaml')"
-                >Dentistry Procedure</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_dentistry/dentistry_treatment/dentistry_treatment.yaml')"
-                >Dentistry Treatment</a
-              >
-
-              <h3>Health Archive</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_archives/paper_archive/paper_archive.yaml')"
-                >Paper Archive</a
-              >
-
-              <h3>Health ICU</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_icu/apache_II/apache_II.yaml')"
-                >Apache II</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_icu/glasgow/glasgow.yaml')"
-                >GlasGow</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_icu/inpatient_icu/inpatient_icu.yaml')"
-                >Inpatient ICU</a
-              >
-
-              <h3>Health Contact Tracing</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_contact_tracing/contact_tracing/contact_tracing.yaml')"
-                >Contact Tracing</a
-              >
-
-              <h3>Health CalDav</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_caldav/calendar/calendar.yaml')"
-                >Calendar</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_caldav/category/category.yaml')"
-                >Category</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_caldav/event/event.yaml')"
-                >Event</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_caldav/location/location.yaml')"
-                >Location</a
-              >
-
-              <h3>Health Reporting</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_reporting/reports/reports.yaml')"
-                >Reports</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_reporting/top_diseases/top_diseases.yaml')"
-                >Top Diseases</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_reporting/evaluations_report/evaluations_report.yaml')"
-                >Evaluations Report</a
-              >
-
-              <h3>Health SocioEconomics</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/health/health_socioeconomics/patient_es_assessment/patient_es_assessment.yaml')"
-                >Patient es Assessment</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Stock
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <div class="group">
-              <h3>Umbrella Stock</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/configuration/configuration.yaml')"
-                >Configuration</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/location/location.yaml')"
-                >Location</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/location_lead_time/location_lead_time.yaml')"
-                >Location Lead Time</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/lot/lot.yaml')"
-                >Lot</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/lot_trace/lot_trace.yaml')"
-                >Lot Trace</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/lots_by_locations/lots_by_locations.yaml')"
-                >Lots By Locations</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/move/move.yaml')"
-                >Move</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/inventory/inventory.yaml')"
-                >Inventory</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/inventory_line/inventory_line.yaml')"
-                >Inventory Line</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/period/period.yaml')"
-                >Period</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/shipment_in/shipment_in.yaml')"
-                >Shipment In</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/shipment_out/shipment_out.yaml')"
-                >Shipment Out</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/shipment_internal/shipment_internal.yaml')"
-                >Shipment Internal</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/shipment_in_return/shipment_in_return.yaml')"
-                >Shipment In Return</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_stock/shipment_out_return/shipment_out_return.yaml')"
-                >Shipment Out Return</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Purchase
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <div class="group">
-              <h3>Umbrella Purchase</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_purchase/configuration/configuration.yaml')"
-                >Configuration</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_purchase/purchase/purchase.yaml')"
-                >Purchase</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_purchase/purchase_line/purchase_line.yaml')"
-                >Purchase Line</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_purchase/product_supplier/product_supplier.yaml')"
-                >Product Supplier</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_purchase/reporting_purchase/reporting_purchase.yaml')"
-                >Reporting Purchase</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_purchase/reporting_purchase_per_supplier/reporting_purchase_per_supplier.yaml')"
-                >Reporting Purchase Per Supplier </a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_purchase/reporting_purchase_per_product/reporting_purchase_per_product.yaml')"
-                >Reporting Purchase Per Product</a>
-              
-            </div>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Sale
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content health">
-            <div class="group">
-              <h3>Umbrella Sale</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/configuration/configuration.yaml')"
-                >Configuration</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/sale/sale.yaml')"
-                >Sale</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/sale_line/sale_line.yaml')"
-                >Sale Line</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/reporting_sale/reporting_sale.yaml')"
-                >Reporting Sale</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/reporting_sale_per_country/reporting_sale_per_country.yaml')"
-                >Reporting Sale Per Country</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/reporting_sale_per_customer/reporting_sale_per_customer.yaml')"
-                >Reporting Sale Per Customer</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/reporting_sale_per_customer_category/reporting_sale_per_customer_category.yaml')"
-                >Reporting Sale Per Customer Category</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/reporting_sale_per_product/reporting_sale_per_product.yaml')"
-                >Reporting Sale Per Product</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/reporting_sale_per_product_category/reporting_sale_per_product_category.yaml')"
-                >Reporting Sale Per Product Category</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/reporting_sale_per_region/reporting_sale_per_region.yaml')"
-                >Reporting Sale Per Region</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_sale/reporting_sale_per_subdivision/reporting_sale_per_subdivision.yaml')"
-                >Reporting Sale Per Sub Division</a>
-            </div>
-          </div>
-          
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Product
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <div class="group">
-              <h3>Product</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product/product.yaml')"
-                >Product</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/reporting/reporting.yaml')"
-                >Reporting</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/product_category/product_category.yaml')"
-                >Product Category</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/configuration/configuration.yaml')"
-                >Configuration</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/variant/variant.yaml')"
-                >Variant</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/unit_of_measure/unit_of_measure.yaml')"
-                >Unit Of Measure</a
-              >
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_product/uom_category/uom_category.yaml')"
-                >UOM Category</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            HR
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content health">
-            <div class="group">
-              <h3>Umbrella HR</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr/contract_type/contract_type.yaml')"
-                >Contract Type</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr/department/department.yaml')"
-                >Department</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr/departure_reason/departure_reason.yaml')"
-                >Departure Reason</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr/employee_category/employee_category.yaml')"
-                >Employee Category</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr/job/job.yaml')"
-                >Job</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr/work_location/work_location.yaml')"
-                >Work Location</a>
-              
-            </div>
-            <div class="group">
-              <h3>Umbrella HR Expense</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_expense/expense_sheet/expense_sheet.yaml')"
-                >Expense Sheet</a>
-              
-            </div>
-            <div class="group">
-              <h3>Umbrella HR Contract</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_contract/contract/contract.yaml')"
-                >Contract</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_contract/payroll_structure_type/payroll_structure_type.yaml')"
-                >Payroll Structure Type</a>
-            </div>
-            <div class="group">
-              <h3>Umbrella HR Holiday</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_holiday/leave/leave.yaml')"
-                >Leave</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_holiday/leave_type/leave_type.yaml')"
-                >Leave Type</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_holiday/leave_allocation/leave_allocation.yaml')"
-                >Leave Allocation</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_holiday/leave_accrual_plan/leave_accrual_plan.yaml')"
-                >Accrual Plan</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_holiday/leave_accrual_plan_level/leave_accrual_plan_level.yaml')"
-                >Accrual Level</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_holiday/leave_mandatory_day/leave_mandatory_day.yaml')"
-                >Mandatory Day</a>
-            </div>
-            <div class="group">
-              <h3>Umbrella HR Attendance</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_attendance/attendance/attendance.yaml')"
-                >Attendance</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_attendance/attendance_overtime/attendance_overtime.yaml')"
-                >Extra Hours</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_attendance/overtime_ruleset/overtime_ruleset.yaml')"
-                >Overtime Rulesets</a>
-            </div>
-            <div class="group">
-              <h3>Umbrella HR Skills</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_skills/skills/skills.yaml')"
-                >Skills</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_skills/skill_types/skill_types.yaml')"
-                >Skill Types</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_skills/skill_levels/skill_levels.yaml')"
-                >Skill Levels</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_skills/resume_line_types/resume_line_types.yaml')"
-                >Resume Line Types</a>
-            </div>
-            <div class="group">
-              <h3>Umbrella HR Work Entry</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_work_entry/work_entries/work_entries.yaml')"
-                >Work Entries</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_work_entry/work_entry_types/work_entry_types.yaml')"
-                >Work Entry Types</a>
-            </div>
-            <div class="group">
-              <h3>Umbrella HR Presence</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_presence/employees/employees.yaml')"
-                >Employees</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_presence/company/company.yaml')"
-                >Company</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_presence/check_presence/check_presence.yaml')"
-                >Check Presence</a>
-            </div>
-            <div class="group">
-              <h3>Umbrella HR Recruitment</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_recruitment/applications/applications.yaml')"
-                >Applications</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_recruitment/candidates/candidates.yaml')"
-                >Candidates</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_recruitment/stages/stages.yaml')"
-                >Stages</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_recruitment/tags/tags.yaml')"
-                >Tags</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_recruitment/degrees/degrees.yaml')"
-                >Degrees</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_recruitment/refuse_reasons/refuse_reasons.yaml')"
-                >Refuse Reasons</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_recruitment/emails/emails.yaml')"
-                >Emails</a>
-            </div>
-            <div class="group">
-              <h3>Umbrella Planning</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_planning/umbrella_planning.yaml')"
-                >Planning</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_planning_holidays/umbrella_planning_holidays.yaml')"
-                >Planning Holidays</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_planning_hr_skills/umbrella_planning_hr_skills.yaml')"
-                >Planning HR Skills</a>
-            </div>
-            <div class="group">
-              <h3>Umbrella HR Payroll</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_hr_payroll/payroll/payroll.yaml')"
-                >Payroll</a>
-            </div>
-            </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Mail & Resource
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              >
-                <path d="M0 0h24v24H0z" />
-                <path
-                  fill="white"
-                  d="M18 9c.852 0 1.297.986.783 1.623l-.076.084l-6 6a1 1 0 0 1-1.32.083l-.094-.083l-6-6l-.083-.094l-.054-.077l-.054-.096l-.017-.036l-.027-.067l-.032-.108l-.01-.053l-.01-.06l-.004-.057v-.118l.005-.058l.009-.06l.01-.052l.032-.108l.027-.067l.07-.132l.065-.09l.073-.081l.094-.083l.077-.054l.096-.054l.036-.017l.067-.027l.108-.032l.053-.01l.06-.01l.057-.004z"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <div class="group">
-              <h3>Umbrella Mail</h3>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_mail/activity/activity.yaml')"
-                >Activity</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_mail/activity_plan/activity_plan.yaml')"
-                >Activity Plan</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_mail/activity_type/activity_type.yaml')"
-                >Activity Type</a>
-              <a
-                href="#"
-                onclick="pageNavigator('assets/doc/umbrella/umbrella_mail/employee/employee.yaml')"
-                >Employee</a>
-            </div>
-            <div class="group">
-              <h3>Umbrella Resource</h3>
-             
-                    <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_resource/resources/resources.yaml')">Resources</a>
-                    <a href="#" onclick="pageNavigator('assets/doc/umbrella/umbrella_resource/working_schedules/working_schedules.yaml')">Working Schedules</a>
-              </div>
-            </div>
-            </div>
-        </div>
-        <a
-          href="javascript:void(0);"
-          style="font-size: 15px"
-          class="icon"
-          onclick="myFunction()"
-          >&#9776;</a
-        >
-      </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="api-content">
-      <div
-        style="
-          display: flex;
-          align-items: center;
-          flex-direction: row-reverse;
-          justify-content: space-between;
-        "
-      >
-        <div id="tokenBox">
-          <input type="text" id="tokenInput" placeholder="Enter token" />
-          <button onclick="setAuthorizationToken()" id="btnToken"></button>
-        </div>
-        <h1>UMBRELLA API Documentation Description:</h1>
-      </div>
-      <p>
-        Welcome to the official documentation for the UMBRELLA RESTful API. This
-        comprehensive guide is designed to assist developers and integrators in
-        effectively utilizing the power of our API. Our RESTful API provides a
-        simple and efficient way to access and interact with currencies,
-        finances, and more. Whether you're building a web application, mobile
-        app, or integrating with other services, our API offers the tools you
-        need to streamline your development process and unlock the full
-        potential of your project.
-      </p>
-      <p>
-        In this documentation, you'll find detailed information on how to make
-        API requests, authentication procedures, available endpoints,
-        request/response examples, error handling, and best practices for
-        integrating UMBRELLA into your projects.
-      </p>
-      <div style="display: flex; align-items: center">
-        <h2>API Version:</h2>
-        <span class="api-version" style="margin-left: 10px; margin-top: 10px"
-          >1.0.0</span
-        >
-      </div>
-      <div style="display: flex; align-items: center">
-        <h2>OpenApi Version:</h2>
-        <span class="api-type" style="margin-left: 10px; margin-top: 10px"
-          >OAS 3.1</span
-        >
-      </div>
-      <h2>Authorization:</h2>
-      <p>You can authorize your requests using this authorization method:</p>
-      <ul>
-        <li><strong>TOKEN</strong></li>
-      </ul>
-
-      <h3>TOKEN</h3>
-      <ul>
-        <li>The endpoints are authorized using a <strong>TOKEN</strong>.</li>
-        <li>
-          To authorize requests, please add a Token using the 'Authorize' button
-          with the following format:
-        </li>
-        <pre><code>"Bearer user-token"</code></pre>
-      </ul>
-
-      <a href="mailto:shadab@gmail.com" class="support-link"
-        >Contact API Support</a
-      >
-    </div>
-
-    <div id="swagger-ui"></div>
-    <script
-      src="assets/js/swagger-ui-bundle.js"
-      charset="UTF-8"
-      crossorigin
-    ></script>
-    <script
-      src="assets/js/swagger-ui-standalone-preset.js"
-      charset="UTF-8"
-      crossorigin
-    ></script>
-    <!-- <script src="assets/js/swagger-initializer.js"  charset="UTF-8" crossorigin> </script> -->
-    <script>
-      window.ui = SwaggerUIBundle({
-        url: url,
-        dom_id: "#swagger-ui",
-        deepLinking: true,
-        presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
-        plugins: [SwaggerUIBundle.plugins.DownloadUrl],
-        layout: "StandaloneLayout",
-        requestInterceptor: (request) => {
-          request.headers["Authorization"] = `Bearer ${token}`;
-          return request;
-        },
+            // Store exactly what user entered; interceptor normalizes to Bearer.
+            sessionStorage.setItem("token", raw);
+            refreshTokenUI();
+          });
+        }
       });
 
-      document.querySelector("#btnToken").innerHTML = sessionStorage.getItem(
-        "token"
-      )
-        ? "<div style='color:green'>Token Verified</div>"
-        : "<div style='color:red'> Set Token </div>";
-    </script>
+      // Sidebar Toggle
+      document.getElementById("menuToggle").addEventListener("click", function () {
+        document.getElementById("sidebar").classList.toggle("collapsed");
+      });
 
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
+      function createMenuItem(node) {
+        const li = document.createElement("li");
+        li.className = "menu-tree-item";
+
+        const header = document.createElement("div");
+        header.className = "menu-item-header";
+
+        const hasChildren = Array.isArray(node.children) && node.children.length > 0;
+        if (hasChildren) {
+          header.setAttribute("data-has-children", "true");
+        } else if (node.path) {
+          header.setAttribute("data-path", node.path);
+        }
+
+        const expand = document.createElement("span");
+        expand.className = "menu-expand-icon" + (hasChildren ? "" : " hidden");
+        if (hasChildren) {
+          const chevron = document.createElement("i");
+          chevron.className = "icon-chevron-right";
+          expand.appendChild(chevron);
+        }
+
+        const icon = document.createElement("span");
+        icon.className = "menu-icon";
+        const iconI = document.createElement("i");
+        iconI.className = node.icon || "icon-folder";
+        icon.appendChild(iconI);
+
+        const label = document.createElement("span");
+        label.className = "menu-label";
+        label.textContent = node.label || "";
+
+        header.appendChild(expand);
+        header.appendChild(icon);
+        header.appendChild(label);
+
+        if (!hasChildren) {
+          const fav = document.createElement("span");
+          fav.className = "menu-favorite";
+          const star = document.createElement("i");
+          star.className = "icon-star";
+          fav.appendChild(star);
+          header.appendChild(fav);
+        }
+
+        li.appendChild(header);
+
+        if (hasChildren) {
+          const ul = document.createElement("ul");
+          ul.className = "submenu-tree";
+          node.children.forEach((child) => ul.appendChild(createMenuItem(child)));
+          li.appendChild(ul);
+        }
+
+        return li;
+      }
+
+      async function loadAndRenderMenu() {
+        const menuTree = document.getElementById("menuTree");
+        if (!menuTree) return;
+
+        try {
+          const res = await fetch("assets/menu.json", { cache: "no-store" });
+          const data = await res.json();
+
+          menuTree.innerHTML = "";
+          data.forEach((node) => menuTree.appendChild(createMenuItem(node)));
+        } catch (e) {
+          // If the site is opened via file://, fetch may fail.
+          // Keep the menu empty instead of rendering incorrect/broken items.
+          console.warn("Failed to load menu.json", e);
         }
       }
-    </script>
-    <!-- menu script -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-    const filterInput = document.getElementById('menu-filter');
-    const menuItems = document.querySelectorAll('.menu-item');
-    const submenuItems = document.querySelectorAll('.has-submenu');
 
-    // Filter menu items based on input
-    filterInput.addEventListener('input', () => {
-        const filterValue = filterInput.value.toLowerCase();
-        menuItems.forEach(item => {
-            const text = item.textContent.toLowerCase();
-            if (text.includes(filterValue)) {
-                item.style.display = 'flex';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    });
+      // Menu Tree Functionality (event delegation)
+      document.getElementById("menuTree").addEventListener("click", function (e) {
+        const header = e.target.closest(".menu-item-header");
+        if (!header) return;
 
-    // Handle submenu toggle for click, ensuring only one submenu is open at a time
-    submenuItems.forEach(item => {
-        item.addEventListener('click', (event) => {
-            // Prevent event from firing on hover if user clicks
-            event.stopPropagation();
+        const hasChildren = header.getAttribute("data-has-children") === "true";
+        const path = header.getAttribute("data-path");
 
-            // Close any other open submenus
-            submenuItems.forEach(submenu => {
-                if (submenu !== item) {
-                    submenu.classList.remove('open');
+        if (hasChildren) {
+          const submenu = header.nextElementSibling;
+          const expandIcon = header.querySelector(".menu-expand-icon");
+          if (submenu && submenu.classList.contains("submenu-tree")) {
+            submenu.classList.toggle("open");
+            if (expandIcon) expandIcon.classList.toggle("expanded");
+          }
+          return;
+        }
+
+        if (path) {
+          pageNavigator(path);
+          document.querySelectorAll(".menu-item-header").forEach(function (h) {
+            h.classList.remove("active");
+          });
+          header.classList.add("active");
+        }
+      });
+
+      // Build the menu once the DOM is ready
+      document.addEventListener("DOMContentLoaded", loadAndRenderMenu);
+
+      // Action Search - Filter menu items
+      document.getElementById("actionSearch").addEventListener("input", function (e) {
+        const query = e.target.value.toLowerCase().trim();
+        const menuItems = document.querySelectorAll(".menu-tree-item");
+
+        if (!query) {
+          // Show all items when search is empty
+          menuItems.forEach(function (item) {
+            item.style.display = "";
+          });
+          // Collapse all submenus
+          document.querySelectorAll(".submenu-tree").forEach(function (submenu) {
+            submenu.classList.remove("open");
+          });
+          document.querySelectorAll(".menu-expand-icon").forEach(function (icon) {
+            icon.classList.remove("expanded");
+          });
+          return;
+        }
+
+        menuItems.forEach(function (item) {
+          const label = item.querySelector(".menu-label");
+          if (label) {
+            const text = label.textContent.toLowerCase();
+            if (text.includes(query)) {
+              item.style.display = "";
+              // Show parent items
+              let parent = item.parentElement;
+              while (parent) {
+                if (parent.classList && parent.classList.contains("submenu-tree")) {
+                  parent.classList.add("open");
+                  const parentHeader = parent.previousElementSibling;
+                  if (parentHeader) {
+                    const expandIcon = parentHeader.querySelector(".menu-expand-icon");
+                    if (expandIcon) {
+                      expandIcon.classList.add("expanded");
+                    }
+                  }
                 }
-            });
+                if (parent.classList && parent.classList.contains("menu-tree-item")) {
+                  parent.style.display = "";
+                }
+                parent = parent.parentElement;
+              }
+            } else {
+              // Check if any children match
+              const childLabels = item.querySelectorAll(".submenu-tree .menu-label");
+              let hasMatchingChild = false;
+              childLabels.forEach(function (childLabel) {
+                if (childLabel.textContent.toLowerCase().includes(query)) {
+                  hasMatchingChild = true;
+                }
+              });
 
-            // Toggle the clicked submenu
-            item.classList.toggle('open');
+              if (hasMatchingChild) {
+                item.style.display = "";
+                const submenu = item.querySelector(".submenu-tree");
+                if (submenu) {
+                  submenu.classList.add("open");
+                  const expandIcon = item.querySelector(".menu-expand-icon");
+                  if (expandIcon) {
+                    expandIcon.classList.add("expanded");
+                  }
+                }
+              } else {
+                item.style.display = "none";
+              }
+            }
+          }
         });
-    });
-
-    // Close all submenus when clicking outside the menu
-    document.addEventListener('click', (event) => {
-        submenuItems.forEach(submenu => {
-            submenu.classList.remove('open');
-        });
-    });
-});
-
+      });
     </script>
   </body>
 </html>

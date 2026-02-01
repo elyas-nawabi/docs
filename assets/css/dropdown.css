@@ -1,7 +1,14 @@
 body {margin:0;font-family:Arial}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
 .topnav {
     overflow: hidden !important;
     background-color: #333;
+    padding: 6px 8px;
   }
   
   .topnav a {
@@ -37,6 +44,69 @@ body {margin:0;font-family:Arial}
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+  }
+
+  .dropdown .dropbtn {
+    border-radius: 6px;
+  }
+
+  .dropdown .dropbtn:focus-visible {
+    outline: 2px solid #f2f2f2;
+    outline-offset: 2px;
+  }
+
+  .global-search {
+    float: right;
+    position: relative;
+    padding: 6px 8px;
+  }
+
+  .global-search input {
+    width: min(420px, 60vw);
+    padding: 10px 12px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
+  }
+
+  .global-search input:focus {
+    outline: none;
+    border-color: #555;
+  }
+
+  .global-search-results {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 8px;
+    width: min(520px, 85vw);
+    max-height: 60vh;
+    overflow: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3000;
+  }
+
+  .global-search-results a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .global-search-results a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .global-search-more {
+    padding: 10px 12px;
+    border-top: 1px solid #ddd;
+    color: #999;
+    font-size: 12px;
   }
   
   .dropdown-content {
@@ -111,6 +181,22 @@ body {margin:0;font-family:Arial}
       float: right;
       display: block;
     }
+
+    .global-search {
+      float: none;
+      width: 100%;
+      padding: 10px 16px;
+    }
+
+    .global-search input {
+      width: 100%;
+    }
+
+    .global-search-results {
+      right: 16px;
+      left: 16px;
+      width: auto;
+    }
   }
   
   @media screen and (max-width: 600px) {
@@ -132,6 +218,21 @@ body {margin:0;font-family:Arial}
       width: 100%;
       text-align: left;
     }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .health { column-count: 4; }
+  }
+
+  @media screen and (max-width: 900px) {
+    .health { column-count: 3; }
+    .accounting { column-count: 3; }
+  }
+
+  @media screen and (max-width: 700px) {
+    .health { column-count: 2; }
+    .accounting { column-count: 2; }
+    .currency { column-count: 1; }
   }
 
 #tokenBox {
