@@ -1,0 +1,1729 @@
+[
+  {
+    "label": "Umbrella (Core)",
+    "icon": "icon-shield-check",
+    "children": [
+      {
+        "label": "Auth",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella/auth/auth.yaml"
+      },
+      {
+        "label": "Fields Structure",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella/fields_structure/fields_structure.yaml"
+      },
+      {
+        "label": "Get Access",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella/get_access/get_access.yaml"
+      },
+      {
+        "label": "Get Menu",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella/get_menu/get_menu.yaml"
+      },
+      {
+        "label": "Models List",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella/models_list/models_list.yaml"
+      },
+      {
+        "label": "Smart Enum",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella/smart_enum/smart_enum.yaml"
+      },
+      {
+        "label": "Toolbar",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella/toolbar/toolbar.yaml"
+      },
+      {
+        "label": "User Warning",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella/user_warning/user_warning.yaml"
+      },
+      {
+        "label": "Wizard",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella/wizard/wizard.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Party",
+    "icon": "icon-users",
+    "children": [
+      {
+        "label": "Address",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_party/address/address.yaml"
+      },
+      {
+        "label": "Category",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_party/category/category.yaml"
+      },
+      {
+        "label": "Contact Mechanism",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_party/contact_mechanism/contact_mechanism.yaml"
+      },
+      {
+        "label": "Party",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_party/party/party.yaml"
+      },
+      {
+        "label": "Party Tax Identifier",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_party/party_tax_identifier/party_tax_identifier.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Company",
+    "icon": "icon-building-2",
+    "children": [
+      {
+        "label": "Company",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_company/company/company.yaml"
+      },
+      {
+        "label": "Employee",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_company/employee/employee.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Product",
+    "icon": "icon-layout-grid",
+    "children": [
+      {
+        "label": "Configuration",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_product/configuration/configuration.yaml"
+      },
+      {
+        "label": "Product",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_product/product/product.yaml"
+      },
+      {
+        "label": "Product Category",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_product/product_category/product_category.yaml"
+      },
+      {
+        "label": "Product Line",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_product/product_line/product_line.yaml"
+      },
+      {
+        "label": "Reporting",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_product/reporting/reporting.yaml"
+      },
+      {
+        "label": "Unit Of Measure",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_product/unit_of_measure/unit_of_measure.yaml"
+      },
+      {
+        "label": "Uom Category",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_product/uom_category/uom_category.yaml"
+      },
+      {
+        "label": "Variant",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_product/variant/variant.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Purchase",
+    "icon": "icon-shopping-cart",
+    "children": [
+      {
+        "label": "Configuration",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_purchase/configuration/configuration.yaml"
+      },
+      {
+        "label": "Product Supplier",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_purchase/product_supplier/product_supplier.yaml"
+      },
+      {
+        "label": "Purchase",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_purchase/purchase/purchase.yaml"
+      },
+      {
+        "label": "Purchase Line",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_purchase/purchase_line/purchase_line.yaml"
+      },
+      {
+        "label": "Reporting Purchase",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_purchase/reporting_purchase/reporting_purchase.yaml"
+      },
+      {
+        "label": "Reporting Purchase Per Product",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_purchase/reporting_purchase_per_product/reporting_purchase_per_product.yaml"
+      },
+      {
+        "label": "Reporting Purchase Per Supplier",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_purchase/reporting_purchase_per_supplier/reporting_purchase_per_supplier.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Sale",
+    "icon": "icon-store",
+    "children": [
+      {
+        "label": "Configuration",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/configuration/configuration.yaml"
+      },
+      {
+        "label": "Reporting Sale",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/reporting_sale/reporting_sale.yaml"
+      },
+      {
+        "label": "Reporting Sale Per Country",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/reporting_sale_per_country/reporting_sale_per_country.yaml"
+      },
+      {
+        "label": "Reporting Sale Per Customer",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/reporting_sale_per_customer/reporting_sale_per_customer.yaml"
+      },
+      {
+        "label": "Reporting Sale Per Customer Category",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/reporting_sale_per_customer_category/reporting_sale_per_customer_category.yaml"
+      },
+      {
+        "label": "Reporting Sale Per Product",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/reporting_sale_per_product/reporting_sale_per_product.yaml"
+      },
+      {
+        "label": "Reporting Sale Per Product Category",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/reporting_sale_per_product_category/reporting_sale_per_product_category.yaml"
+      },
+      {
+        "label": "Reporting Sale Per Region",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/reporting_sale_per_region/reporting_sale_per_region.yaml"
+      },
+      {
+        "label": "Reporting Sale Per Subdivision",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/reporting_sale_per_subdivision/reporting_sale_per_subdivision.yaml"
+      },
+      {
+        "label": "Sale",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/sale/sale.yaml"
+      },
+      {
+        "label": "Sale Line",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/sale_line/sale_line.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Stock",
+    "icon": "icon-warehouse",
+    "children": [
+      {
+        "label": "Configuration",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/configuration/configuration.yaml"
+      },
+      {
+        "label": "Inventory",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/inventory/inventory.yaml"
+      },
+      {
+        "label": "Inventory Line",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/inventory_line/inventory_line.yaml"
+      },
+      {
+        "label": "Location",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/location/location.yaml"
+      },
+      {
+        "label": "Location Lead Time",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/location_lead_time/location_lead_time.yaml"
+      },
+      {
+        "label": "Lot",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/lot/lot.yaml"
+      },
+      {
+        "label": "Lot Trace",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/lot_trace/lot_trace.yaml"
+      },
+      {
+        "label": "Lots By Locations",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/lots_by_locations/lots_by_locations.yaml"
+      },
+      {
+        "label": "Move",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/move/move.yaml"
+      },
+      {
+        "label": "Period",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/period/period.yaml"
+      },
+      {
+        "label": "Shipment In",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/shipment_in/shipment_in.yaml"
+      },
+      {
+        "label": "Shipment In Return",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/shipment_in_return/shipment_in_return.yaml"
+      },
+      {
+        "label": "Shipment Internal",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/shipment_internal/shipment_internal.yaml"
+      },
+      {
+        "label": "Shipment Out",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/shipment_out/shipment_out.yaml"
+      },
+      {
+        "label": "Shipment Out Return",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_stock/shipment_out_return/shipment_out_return.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Currency",
+    "icon": "icon-dollar-sign",
+    "children": [
+      {
+        "label": "Currency",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_currency/currency/currency.yaml"
+      },
+      {
+        "label": "Scheduled Rate Update",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_currency/scheduled_rate_update/scheduled_rate_update.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Banking",
+    "icon": "icon-banknote",
+    "children": [
+      {
+        "label": "Account",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_banking/account/account.yaml"
+      },
+      {
+        "label": "Bank",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_banking/bank/bank.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Financial Accounting",
+    "icon": "icon-building",
+    "children": [
+      {
+        "label": "Account",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account/account.yaml"
+      },
+      {
+        "label": "Account Invoice / Invoice",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_invoice/invoice/invoice.yaml"
+      },
+      {
+        "label": "Account Invoice / Payment Method",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_invoice/payment_method/payment_method.yaml"
+      },
+      {
+        "label": "Account Invoice / Payment Term",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_invoice/payment_term/payment_term.yaml"
+      },
+      {
+        "label": "Account Move",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_move/account_move.yaml"
+      },
+      {
+        "label": "Account Move Line",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_move_line/account_move_line.yaml"
+      },
+      {
+        "label": "Account Payment / Line To Pay",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_payment/line_to_pay/line_to_pay.yaml"
+      },
+      {
+        "label": "Account Payment / Payment",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_payment/payment/payment.yaml"
+      },
+      {
+        "label": "Account Payment / Payment Group",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_payment/payment_group/payment_group.yaml"
+      },
+      {
+        "label": "Account Payment / Payment Journal",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_payment/payment_journal/payment_journal.yaml"
+      },
+      {
+        "label": "Account Statement / Line Group",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_statement/line_group/line_group.yaml"
+      },
+      {
+        "label": "Account Statement / Statement",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_statement/statement/statement.yaml"
+      },
+      {
+        "label": "Account Statement / Statement Journal",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_statement/statement_journal/statement_journal.yaml"
+      },
+      {
+        "label": "Account Template",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_template/account_template.yaml"
+      },
+      {
+        "label": "Account Type",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_type/account_type.yaml"
+      },
+      {
+        "label": "Balance Non Deferral",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/balance_non_deferral/balance.yaml"
+      },
+      {
+        "label": "Cashflow",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/cashflow/account.yaml"
+      },
+      {
+        "label": "Configuration",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/configuration/configuration.yaml"
+      },
+      {
+        "label": "Fiscal Period",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/fiscal_period/fiscal_period.yaml"
+      },
+      {
+        "label": "Fiscal Year",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/fiscal_year/fiscal_year.yaml"
+      },
+      {
+        "label": "Journal",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/journal/journal.yaml"
+      },
+      {
+        "label": "Journal Period",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/journal_period/journal_period.yaml"
+      },
+      {
+        "label": "Reconcile",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/reconcile/reconcile.yaml"
+      },
+      {
+        "label": "Reports",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/reports/reports.yaml"
+      },
+      {
+        "label": "Tax",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/tax/tax.yaml"
+      },
+      {
+        "label": "Tax Code",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/tax_code/tax_code.yaml"
+      },
+      {
+        "label": "Tax Group",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/tax_group/tax_group.yaml"
+      },
+      {
+        "label": "Tax Rule",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/tax_rule/tax_rule.yaml"
+      },
+      {
+        "label": "Write Off",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/write_off/write_off.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Administration",
+    "icon": "icon-wrench",
+    "children": [
+      {
+        "label": "Ir / Export Import",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/ir/export_import/export_import.yaml"
+      },
+      {
+        "label": "Localization / Lang",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/localization/lang/lang.yaml"
+      },
+      {
+        "label": "Localization / Message",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/localization/message/message.yaml"
+      },
+      {
+        "label": "Localization / Translation",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/localization/translation/translation.yaml"
+      },
+      {
+        "label": "Models / Model",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/models/model/model.yaml"
+      },
+      {
+        "label": "Modules / Module",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/modules/module/module.yaml"
+      },
+      {
+        "label": "Modules / Module Config Wizard Item",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/modules/module_config_wizard_item/config_wizard_items.yaml"
+      },
+      {
+        "label": "Sequences / Sequence",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/sequences/sequence/sequence.yaml"
+      },
+      {
+        "label": "Sequences / Sequence Strict",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/sequences/sequence_strict/sequence_strict.yaml"
+      },
+      {
+        "label": "Sequences / Sequence Type",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/sequences/sequence_type/sequence_type.yaml"
+      },
+      {
+        "label": "User Interface / Action",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/action/action1.yaml"
+      },
+      {
+        "label": "User Interface / Action Act Window",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/action_act_window/action_act_window.yaml"
+      },
+      {
+        "label": "User Interface / Action Report",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/action_report/action_report.yaml"
+      },
+      {
+        "label": "User Interface / Action Url",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/action_url/action_url.yaml"
+      },
+      {
+        "label": "User Interface / Action Wizard",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/action_wizard/action_wizard.yaml"
+      },
+      {
+        "label": "User Interface / Email Template",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/email_template/email_template.yaml"
+      },
+      {
+        "label": "User Interface / Icon",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/icon/icon.yaml"
+      },
+      {
+        "label": "User Interface / UI Menu",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/ui_menu/ui_menu.yaml"
+      },
+      {
+        "label": "User Interface / View",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/view/view.yaml"
+      },
+      {
+        "label": "User Interface / View Search",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/view_search/view_search.yaml"
+      },
+      {
+        "label": "User Interface / View Tree Optional",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/view_tree_optional/view_tree_optional.yaml"
+      },
+      {
+        "label": "User Interface / View Tree State",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/view_tree_state/view_tree_state.yaml"
+      },
+      {
+        "label": "User Interface / View Tree Width",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/user_interface/view_tree_width/view_tree_width.yaml"
+      },
+      {
+        "label": "Users / Group",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/users/group/group.yaml"
+      },
+      {
+        "label": "Users / User",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_administration/users/user/user.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Country",
+    "icon": "icon-globe",
+    "children": [
+      {
+        "label": "Country",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_country/country/country.yaml"
+      },
+      {
+        "label": "Organization",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_country/organization/organization.yaml"
+      },
+      {
+        "label": "Region",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_country/region/region.yaml"
+      },
+      {
+        "label": "Subdivision",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_country/subdivision/subdivision.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Mail",
+    "icon": "icon-mail",
+    "children": [
+      {
+        "label": "Activity",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_mail/activity/activity.yaml"
+      },
+      {
+        "label": "Activity Plan",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_mail/activity_plan/activity_plan.yaml"
+      },
+      {
+        "label": "Activity Type",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_mail/activity_type/activity_type.yaml"
+      },
+      {
+        "label": "Employee",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_mail/employee/employee.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Resource",
+    "icon": "icon-hard-drive",
+    "children": [
+      {
+        "label": "Resources",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_resource/resources/resources.yaml"
+      },
+      {
+        "label": "Working Schedules",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_resource/working_schedules/working_schedules.yaml"
+      }
+    ]
+  },
+  {
+    "label": "Human Resources",
+    "icon": "icon-users-round",
+    "children": [
+      {
+        "label": "HR",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Contract Type",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr/contract_type/contract_type.yaml"
+          },
+          {
+            "label": "Department",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr/department/department.yaml"
+          },
+          {
+            "label": "Departure Reason",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr/departure_reason/departure_reason.yaml"
+          },
+          {
+            "label": "Employee Category",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr/employee_category/employee_category.yaml"
+          },
+          {
+            "label": "Job",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr/job/job.yaml"
+          },
+          {
+            "label": "Work Location",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr/work_location/work_location.yaml"
+          }
+        ]
+      },
+      {
+        "label": "HR Attendance",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Attendance",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_attendance/attendance/attendance.yaml"
+          },
+          {
+            "label": "Attendance Overtime",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_attendance/attendance_overtime/attendance_overtime.yaml"
+          },
+          {
+            "label": "Overtime Ruleset",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_attendance/overtime_ruleset/overtime_ruleset.yaml"
+          }
+        ]
+      },
+      {
+        "label": "HR Contract",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Contract",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_contract/contract/contract.yaml"
+          },
+          {
+            "label": "Payroll Structure Type",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_contract/payroll_structure_type/payroll_structure_type.yaml"
+          }
+        ]
+      },
+      {
+        "label": "HR Expense",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Expense Sheet",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_expense/expense_sheet/expense_sheet.yaml"
+          }
+        ]
+      },
+      {
+        "label": "HR Holiday",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Leave",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave/leave.yaml"
+          },
+          {
+            "label": "Leave Accrual Plan",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave_accrual_plan/leave_accrual_plan.yaml"
+          },
+          {
+            "label": "Leave Accrual Plan Level",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave_accrual_plan_level/leave_accrual_plan_level.yaml"
+          },
+          {
+            "label": "Leave Allocation",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave_allocation/leave_allocation.yaml"
+          },
+          {
+            "label": "Leave Mandatory Day",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave_mandatory_day/leave_mandatory_day.yaml"
+          },
+          {
+            "label": "Leave Type",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave_type/leave_type.yaml"
+          }
+        ]
+      },
+      {
+        "label": "HR Payroll",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Payroll",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_payroll/payroll/payroll.yaml"
+          }
+        ]
+      },
+      {
+        "label": "HR Presence",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Check Presence",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_presence/check_presence/check_presence.yaml"
+          },
+          {
+            "label": "Company",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_presence/company/company.yaml"
+          },
+          {
+            "label": "Employees",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_presence/employees/employees.yaml"
+          }
+        ]
+      },
+      {
+        "label": "HR Recruitment",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Applications",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_recruitment/applications/applications.yaml"
+          },
+          {
+            "label": "Candidates",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_recruitment/candidates/candidates.yaml"
+          },
+          {
+            "label": "Degrees",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_recruitment/degrees/degrees.yaml"
+          },
+          {
+            "label": "Emails",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_recruitment/emails/emails.yaml"
+          },
+          {
+            "label": "Refuse Reasons",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_recruitment/refuse_reasons/refuse_reasons.yaml"
+          },
+          {
+            "label": "Stages",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_recruitment/stages/stages.yaml"
+          },
+          {
+            "label": "Tags",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_recruitment/tags/tags.yaml"
+          }
+        ]
+      },
+      {
+        "label": "HR Skills",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Resume Line Types",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_skills/resume_line_types/resume_line_types.yaml"
+          },
+          {
+            "label": "Skill Levels",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_skills/skill_levels/skill_levels.yaml"
+          },
+          {
+            "label": "Skill Types",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_skills/skill_types/skill_types.yaml"
+          },
+          {
+            "label": "Skills",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_skills/skills/skills.yaml"
+          }
+        ]
+      },
+      {
+        "label": "HR Work Entry",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Work Entries",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_work_entry/work_entries/work_entries.yaml"
+          },
+          {
+            "label": "Work Entry Types",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_work_entry/work_entry_types/work_entry_types.yaml"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Planning",
+    "icon": "icon-calendar-days",
+    "children": [
+      {
+        "label": "Planning",
+        "icon": "icon-calendar-days",
+        "children": [
+          {
+            "label": "Planning",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_planning/umbrella_planning.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Planning Holidays",
+        "icon": "icon-calendar-days",
+        "children": [
+          {
+            "label": "Planning Holidays",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_planning_holidays/umbrella_planning_holidays.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Planning HR Skills",
+        "icon": "icon-calendar-days",
+        "children": [
+          {
+            "label": "Planning HR Skills",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_planning_hr_skills/umbrella_planning_hr_skills.yaml"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Health",
+    "icon": "icon-heart-pulse",
+    "children": [
+      {
+        "label": "Health",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Appointment",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/appointment/appointment.yaml"
+          },
+          {
+            "label": "Appointment Report",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/appointment_report/appointment_report.yaml"
+          },
+          {
+            "label": "Birth Certificate",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/birth_certificate/birth_certificate.yaml"
+          },
+          {
+            "label": "Death Certificate",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/death_certificate/death_certificate.yaml"
+          },
+          {
+            "label": "Domiciliary Unit",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/domiciliary_unit/domiciliary_unit.yaml"
+          },
+          {
+            "label": "Drug Dose Unit",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/drug_dose_unit/drug_dose_unit.yaml"
+          },
+          {
+            "label": "Drug Form",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/drug_form/drug_form.yaml"
+          },
+          {
+            "label": "Drug Route",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/drug_route/drug_route.yaml"
+          },
+          {
+            "label": "Ethnicity",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/ethnicity/ethnicity.yaml"
+          },
+          {
+            "label": "Family",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/family/family.yaml"
+          },
+          {
+            "label": "Family Member",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/family_member/family_member.yaml"
+          },
+          {
+            "label": "Federation Country Config",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/federation_country_config/federation_country_config.yaml"
+          },
+          {
+            "label": "Gnuhealth Command",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/gnuhealth_command/gnuhealth_command.yaml"
+          },
+          {
+            "label": "Health Institution",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/health_institution/health_institution.yaml"
+          },
+          {
+            "label": "Health Institution Operational Sector",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/health_institution_operational_sector/health_institution_operational_sector.yaml"
+          },
+          {
+            "label": "Health Institution Specialties",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/health_institution_specialties/health_institution_specialties.yaml"
+          },
+          {
+            "label": "Health Professional",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/health_professional/health_professional.yaml"
+          },
+          {
+            "label": "Health Professional Specialties",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/health_professional_specialties/health_professional_specialties.yaml"
+          },
+          {
+            "label": "Help Doc",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/help_doc/help_doc.yaml"
+          },
+          {
+            "label": "Hospital Bed",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/hospital_bed/hospital_bed.yaml"
+          },
+          {
+            "label": "Hospital Building",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/hospital_building/hospital_building.yaml"
+          },
+          {
+            "label": "Hospital Or",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/hospital_or/hospital_or.yaml"
+          },
+          {
+            "label": "Hospital Unit",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/hospital_unit/hospital_unit.yaml"
+          },
+          {
+            "label": "Hospital Ward",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/hospital_ward/hospital_ward.yaml"
+          },
+          {
+            "label": "Immunization Schedule",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/immunization_schedule/immunization_schedule.yaml"
+          },
+          {
+            "label": "Immunization Schedule Dose",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/immunization_schedule_dose/immunization_schedule_dose.yaml"
+          },
+          {
+            "label": "Immunization Schedule Line",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/immunization_schedule_line/immunization_schedule_line.yaml"
+          },
+          {
+            "label": "Insurance",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/insurance/insurance.yaml"
+          },
+          {
+            "label": "Insurance Plan",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/insurance_plan/insurance_plan.yaml"
+          },
+          {
+            "label": "Medical Specialty",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/medical_specialty/medical_specialty.yaml"
+          },
+          {
+            "label": "Medicament",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/medicament/medicament.yaml"
+          },
+          {
+            "label": "Medicament Category",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/medicament_category/medicament_category.yaml"
+          },
+          {
+            "label": "Medication Frequency",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/medication_frequency/medication_frequency.yaml"
+          },
+          {
+            "label": "Occupation",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/occupation/occupation.yaml"
+          },
+          {
+            "label": "Operational Area",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/operational_area/operational_area.yaml"
+          },
+          {
+            "label": "Operational Sector",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/operational_sector/operational_sector.yaml"
+          },
+          {
+            "label": "Page Of Life",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/page_of_life/page_of_life.yaml"
+          },
+          {
+            "label": "Pathology",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/pathology/pathology.yaml"
+          },
+          {
+            "label": "Pathology Category",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/pathology_category/pathology_category.yaml"
+          },
+          {
+            "label": "Pathology Group",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/pathology_group/pathology_group.yaml"
+          },
+          {
+            "label": "Patient Data",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/patient_data/patient_data.yaml"
+          },
+          {
+            "label": "Patient Ecg",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/patient_ecg/patient_ecg.yaml"
+          },
+          {
+            "label": "Patient Evaluation",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/patient_evaluation/patient_evaluation.yaml"
+          },
+          {
+            "label": "Patient Prescription Order",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/patient_prescription_order/patient_prescription_order.yaml"
+          },
+          {
+            "label": "Procedure Code",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health/procedure_code/procedure_code.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Archives",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Paper Archive",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_archives/paper_archive/paper_archive.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Caldav",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Calendar",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_caldav/calendar/calendar.yaml"
+          },
+          {
+            "label": "Category",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_caldav/category/category.yaml"
+          },
+          {
+            "label": "Event",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_caldav/event/event.yaml"
+          },
+          {
+            "label": "Location",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_caldav/location/location.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Contact Tracing",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Contact Tracing",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_contact_tracing/contact_tracing/contact_tracing.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Dentistry",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Dentistry Procedure",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_dentistry/dentistry_procedure/dentistry_procedure.yaml"
+          },
+          {
+            "label": "Dentistry Treatment",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_dentistry/dentistry_treatment/dentistry_treatment.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Disability",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Activity And Participation",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_disability/activity_and_participation/activity_and_participation.yaml"
+          },
+          {
+            "label": "Activity And Participation Category",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_disability/activity_and_participation_category/activity_and_participation_category.yaml"
+          },
+          {
+            "label": "Body Function",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_disability/body_function/body_function.yaml"
+          },
+          {
+            "label": "Body Function Category",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_disability/body_function_category/body_function_category.yaml"
+          },
+          {
+            "label": "Body Structure",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_disability/body_structure/body_structure.yaml"
+          },
+          {
+            "label": "Body Structure Category",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_disability/body_structure_category/body_structure_category.yaml"
+          },
+          {
+            "label": "Environmental Factor",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_disability/environmental_factor/environmental_factor.yaml"
+          },
+          {
+            "label": "Environmental Factor Category",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_disability/environmental_factor_category/environmental_factor_category.yaml"
+          },
+          {
+            "label": "Patient Amputation",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_disability/patient_amputation/patient_amputation.yaml"
+          },
+          {
+            "label": "Patient Prothesis",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_disability/patient_prothesis/patient_prothesis.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Ems",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Ambulance",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_ems/ambulance/ambulance.yaml"
+          },
+          {
+            "label": "Ambulance Support",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_ems/ambulance_support/ambulance_support.yaml"
+          },
+          {
+            "label": "Support Request",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_ems/support_request/support_request.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Federation",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Federation Node Config",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_federation/federation_node_config/federation_node_config.yaml"
+          },
+          {
+            "label": "Federation Object",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_federation/federation_object/federation_object.yaml"
+          },
+          {
+            "label": "Federation Queue",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_federation/federation_queue/federation_queue.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Genetics",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Gene",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_genetics/gene/gene.yaml"
+          },
+          {
+            "label": "Gene Variant",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_genetics/gene_variant/gene_variant.yaml"
+          },
+          {
+            "label": "Gene Variant Phenotype",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_genetics/gene_variant_phenotype/gene_variant_phenotype.yaml"
+          },
+          {
+            "label": "Patient Genetic Risk",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_genetics/patient_genetic_risk/patient_genetic_risk.yaml"
+          },
+          {
+            "label": "Protein Disease",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_genetics/protein_disease/protein_disease.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Gyneco",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Patient Pregnancy",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_gyneco/patient_pregnancy/patient_pregnancy.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Icu",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Apache II",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_icu/apache_II/apache_II.yaml"
+          },
+          {
+            "label": "Glasgow",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_icu/glasgow/glasgow.yaml"
+          },
+          {
+            "label": "Inpatient Icu",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_icu/inpatient_icu/inpatient_icu.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Imaging",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Imaging Test",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_imaging/imaging_test/imaging_test.yaml"
+          },
+          {
+            "label": "Imaging Test Request",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_imaging/imaging_test_request/imaging_test_request.yaml"
+          },
+          {
+            "label": "Imaging Test Result",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_imaging/imaging_test_result/imaging_test_result.yaml"
+          },
+          {
+            "label": "Imaging Test Type",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_imaging/imaging_test_type/imaging_test_type.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Inpatient",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Diet Therapeutic",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_inpatient/diet_therapeutic/diet_therapeutic.yaml"
+          },
+          {
+            "label": "Inpatient Meal",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_inpatient/inpatient_meal/inpatient_meal.yaml"
+          },
+          {
+            "label": "Inpatient Meal Order",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_inpatient/inpatient_meal_order/inpatient_meal_order.yaml"
+          },
+          {
+            "label": "Inpatient Registration",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_inpatient/inpatient_registration/inpatient_registration.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Insurance",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Insurance Plan Product Policy",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_insurance/insurance_plan_product_policy/insurance_plan_product_policy.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Iss",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Iss",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_iss/iss/iss.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Lab",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Gnu Health Lab Test Unit",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_lab/gnu_health_lab_test_unit/gnu_health_lab_test_unit.yaml"
+          },
+          {
+            "label": "Gnu Health Patient Lab Test",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_lab/gnu_health_patient_lab_test/gnu_health_patient_lab_test.yaml"
+          },
+          {
+            "label": "Lab",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_lab/lab/lab.yaml"
+          },
+          {
+            "label": "Test Type",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_lab/test_type/test_type.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Lifestyle",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Diet Belief",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_lifestyle/diet_belief/diet_belief.yaml"
+          },
+          {
+            "label": "Recreational Drugs",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_lifestyle/recreational_drugs/recreational_drugs.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Nursing",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Patient Ambulatory Care",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_nursing/patient_ambulatory_care/patient_ambulatory_care.yaml"
+          },
+          {
+            "label": "Patient Rounding",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_nursing/patient_rounding/patient_rounding.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Ophthalmology",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Ophthalmology Evaluation",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_ophthalmology/ophthalmology_evaluation/ophthalmology_evaluation.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Orthanc",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Orthanc Patient",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_orthanc/orthanc_patient/orthanc_patient.yaml"
+          },
+          {
+            "label": "Orthanc Server Config",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_orthanc/orthanc_server_config/orthanc_server_config.yaml"
+          },
+          {
+            "label": "Orthanc Study",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_orthanc/orthanc_study/orthanc_study.yaml"
+          },
+          {
+            "label": "Orthanc Worklist Template",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_orthanc/orthanc_worklist_template/orthanc_worklist_template.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Pediatrics",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "New Born",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_pediatrics/new_born/new_born.yaml"
+          },
+          {
+            "label": "Pediatric Symptoms Checklist",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_pediatrics/pediatric_symptoms_checklist/pediatric_symptoms_checklist.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Pediatrics Growth Charts Who",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Health Pediatrics Growth Charts Who",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_pediatrics_growth_charts_who/health_pediatrics_growth_charts_who.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Reporting",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Evaluations Report",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_reporting/evaluations_report/evaluations_report.yaml"
+          },
+          {
+            "label": "Reports",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_reporting/reports/reports.yaml"
+          },
+          {
+            "label": "Top Diseases",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_reporting/top_diseases/top_diseases.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Services",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Health Service",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_services/health_service/health_service.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Services Copy",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Health Service",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_services copy/health_service/patients_es_assessment.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Socieconomics",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Patients Es Assessment",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_socieconomics/patients_es_assessment/patients_es_assessment.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Health Surgery",
+        "icon": "icon-heart-pulse",
+        "children": [
+          {
+            "label": "Or Scheduler",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_surgery/or_scheduler/or_scheduler.yaml"
+          },
+          {
+            "label": "Pre Operative Assessment",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_surgery/pre_operative_assessment/pre_operative_assessment.yaml"
+          },
+          {
+            "label": "Surgery",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_surgery/surgery/surgery.yaml"
+          },
+          {
+            "label": "Surgery Protocol",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/health/health_surgery/surgery_protocol/surgery_protocol.yaml"
+          }
+        ]
+      }
+    ]
+  }
+]

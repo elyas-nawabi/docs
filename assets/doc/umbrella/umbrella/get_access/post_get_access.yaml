@@ -1,27 +1,26 @@
 post:
-      tags:
-        - get access
-      summary: Create models list.
-      description: Create models list.
-      operationId: postGetAccess
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: 'schemas/create-get-access.yaml'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                 type: object
-                 $ref: 'schema.yaml'  
-        '403':
-          content:
-            application/json:
-              schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP403'
+  tags:
+    - get access
+  summary: Create models list.
+  description: Create models list.
+  operationId: postGetAccess
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/create-get-access.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP403'
   
