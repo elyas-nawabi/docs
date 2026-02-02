@@ -11,5 +11,11 @@ paths:
     $ref: 'post_delete_work_entries.yaml'
   '/hr-work-entry/work-entries/{obj_id}':
     $ref: 'get_put_work_entries_by_id.yaml'
+  '/hr-work-entry/work-entries/{obj_id}/in-payslip':
+    $ref: 'get_in_payslip_by_id.yaml'
+  '/hr-work-entry/work-entries/{obj_id}/cancel':
+    $ref: 'get_cancel_by_id.yaml'
+  '/hr-work-entry/work-entries/{obj_id}/draft':
+    $ref: 'get_draft_by_id.yaml'
   '/hr-work-entry/work-entries/regenerate-work-entries':
     $ref: 'post_regenerate_work_entries.yaml'
