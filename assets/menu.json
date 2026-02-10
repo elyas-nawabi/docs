@@ -797,38 +797,38 @@
         ]
       },
       {
-        "label": "HR Holiday",
+        "label": "HR Holidays",
         "icon": "icon-users-round",
         "children": [
           {
             "label": "Leave",
             "icon": "icon-list",
-            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave/leave.yaml"
+            "path": "assets/doc/umbrella/umbrella_hr_holidays/leave/leave.yaml"
           },
           {
             "label": "Leave Accrual Plan",
             "icon": "icon-list",
-            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave_accrual_plan/leave_accrual_plan.yaml"
+            "path": "assets/doc/umbrella/umbrella_hr_holidays/leave_accrual_plan/leave_accrual_plan.yaml"
           },
           {
             "label": "Leave Accrual Plan Level",
             "icon": "icon-list",
-            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave_accrual_plan_level/leave_accrual_plan_level.yaml"
+            "path": "assets/doc/umbrella/umbrella_hr_holidays/leave_accrual_plan_level/leave_accrual_plan_level.yaml"
           },
           {
             "label": "Leave Allocation",
             "icon": "icon-list",
-            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave_allocation/leave_allocation.yaml"
+            "path": "assets/doc/umbrella/umbrella_hr_holidays/leave_allocation/leave_allocation.yaml"
           },
           {
             "label": "Leave Mandatory Day",
             "icon": "icon-list",
-            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave_mandatory_day/leave_mandatory_day.yaml"
+            "path": "assets/doc/umbrella/umbrella_hr_holidays/leave_mandatory_day/leave_mandatory_day.yaml"
           },
           {
             "label": "Leave Type",
             "icon": "icon-list",
-            "path": "assets/doc/umbrella/umbrella_hr_holiday/leave_type/leave_type.yaml"
+            "path": "assets/doc/umbrella/umbrella_hr_holidays/leave_type/leave_type.yaml"
           }
         ]
       },
