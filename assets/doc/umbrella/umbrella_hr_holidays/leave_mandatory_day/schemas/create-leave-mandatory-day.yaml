@@ -1,0 +1,39 @@
+﻿type: object
+properties:
+  name:
+    type: string
+    example: Independence Day
+  company:
+    type: integer
+    example: 1
+  start_date:
+    type: string
+    format: date
+    example: '2026-07-04'
+  end_date:
+    type: string
+    format: date
+    example: '2026-07-04'
+  color:
+    type: integer
+    example: 3
+  work_time:
+    type: integer
+    nullable: true
+    example: null
+  departments:
+    type: array
+    items:
+      type: integer
+    example: []
+  jobs:
+    type: array
+    items:
+      type: integer
+    example: []
+required:
+  - name
+  - company
+  - start_date
+  - end_date
+
