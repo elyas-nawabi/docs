@@ -108,7 +108,9 @@ def find_openapi_entrypoint_yaml(dir_path: Path) -> Path | None:
 
     for yml in sorted(dir_path.glob("*.yaml")):
         try:
-            head = yml.read_text(encoding="utf-8").lstrip()[:32]
+            # Use utf-8-sig to gracefully handle UTF-8 files with BOM
+            # (common on Windows when edited via PowerShell Set-Content).
+            head = yml.read_text(encoding="utf-8-sig").lstrip()[:32]
         except OSError:
             continue
         if head.lower().startswith("openapi:"):
