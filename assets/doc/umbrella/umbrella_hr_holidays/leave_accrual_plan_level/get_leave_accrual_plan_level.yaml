@@ -1,0 +1,81 @@
+﻿post:
+  tags:
+    - accrual level
+  summary: Get accrual level list.
+  description: Get accrual level list.
+  operationId: getAccrualLevels
+  requestBody:
+    description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of accrual levels.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    sequence:
+                      type: integer
+                    plan:
+                      type: integer
+                    milestone_date:
+                      type: string
+                    start_count:
+                      type: integer
+                    start_type:
+                      type: string
+                    added_value:
+                      type: number
+                    added_value_type:
+                      type: string
+                    frequency:
+                      type: string
+              error:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 1
+                sequence: 1
+                plan: 1
+                milestone_date: 'date'
+                start_count: 0
+                start_type: day
+                added_value: 1.0
+                added_value_type: day
+                frequency: monthly
+            error: null
+            pagination: null
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
