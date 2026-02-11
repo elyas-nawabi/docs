@@ -10,13 +10,13 @@ schema:
         hr_presence_state:
           type: string
         email_sent:
-          type: string
+          type: boolean
         ip_connected:
-          type: string
+          type: boolean
         manually_set_present:
-          type: string
+          type: boolean
         manually_set_presence:
-          type: string
+          type: boolean
         party:
           type: string
         company:
