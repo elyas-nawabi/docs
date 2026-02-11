@@ -7,7 +7,7 @@ tags:
       Planning Holidays integration module (Tryton).
 
       This module does not add dedicated REST endpoints; it augments server-side
-      behavior by depending on "umbrella_planning" and "umbrella_hr_holiday".
+      behavior by depending on "umbrella_planning" and "umbrella_hr_holidays".
 
       Use the generic Umbrella endpoints (model CRUD and execute/on_change)
       documented under the "Umbrella" section.
