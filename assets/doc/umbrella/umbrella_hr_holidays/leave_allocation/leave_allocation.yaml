@@ -1,0 +1,22 @@
+﻿openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: leave allocation
+    description: hr holiday - leave allocations management.
+paths:
+  '/hr-holidays/leave-allocations/search':
+    $ref: 'get_leave_allocation.yaml'
+  '/hr-holidays/leave-allocations':
+    $ref: 'post_delete_leave_allocation.yaml'
+  '/hr-holidays/leave-allocations/{obj_id}':
+    $ref: 'get_put_leave_allocation_by_id.yaml'
+  '/hr-holidays/leave-allocations/{obj_id}/confirm':
+    $ref: 'post_confirm_leave_allocation_by_id.yaml'
+  '/hr-holidays/leave-allocations/{obj_id}/approve':
+    $ref: 'post_approve_leave_allocation_by_id.yaml'
+  '/hr-holidays/leave-allocations/{obj_id}/refuse':
+    $ref: 'post_refuse_leave_allocation_by_id.yaml'
+  '/hr-holidays/leave-allocations/{obj_id}/cancel':
+    $ref: 'post_cancel_leave_allocation_by_id.yaml'
+
