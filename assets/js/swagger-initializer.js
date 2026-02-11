@@ -6,6 +6,7 @@ window.onload = function() {
     url: url,
     dom_id: '#swagger-ui',
     deepLinking: true,
+    docExpansion: "none", // Collapse all endpoints for faster load
     presets: [
       SwaggerUIBundle.presets.apis,
       SwaggerUIStandalonePreset
