@@ -1,0 +1,89 @@
+﻿schema:
+  properties:
+    data:
+      type: array
+      properties:
+        id:
+          type: integer
+        employee:
+          type: integer
+        employee_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        leave_type:
+          type: integer
+        leave_type_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        start_date:
+          type: string
+          format: date
+        end_date:
+          type: string
+          format: date
+        start_datetime:
+          type: string
+          format: date-time
+        end_datetime:
+          type: string
+          format: date-time
+        quantity:
+          type: number
+        state:
+          type: string
+        reason:
+          type: string
+        create_date:
+          type: string
+          format: date-time
+        create_uid:
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date-time
+          nullable: true
+        write_uid:
+          type: integer
+          nullable: true
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 1
+    employee: 5
+    employee_:
+      id: 5
+      name: John Doe
+    leave_type: 2
+    leave_type_:
+      id: 2
+      name: Annual Leave
+    start_date: '2026-03-10'
+    end_date: '2026-03-12'
+    start_datetime: '2026-03-10T09:00:00'
+    end_datetime: '2026-03-12T17:00:00'
+    quantity: 3.0
+    state: draft
+    reason: Personal matters
+    create_date: '2026-03-01T10:00:00'
+    create_uid: 1
+    create_uid_:
+      id: 1
+      name: Administrator
+    write_date: null
+    write_uid: null
+  error: null
+  pagination: null
+  status: 201
+  success_message: null
+
