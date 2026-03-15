@@ -5,7 +5,7 @@ tags:
   - name: employee
     description: employee - employee activity plan management.
 paths:
-  '/mail/employees/launch-plan':
+  '/company/employees/launch-plan':
     $ref: 'post_launch_plan.yaml'
-  '/mail/employees/{obj_id}/planned-activities':
+  '/company/employees/{obj_id}/planned-activities':
     $ref: 'get_planned_activities.yaml' 

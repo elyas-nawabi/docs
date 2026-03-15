@@ -33,4 +33,15 @@ paths:
     $ref: 'get_journal_cash.yaml'
   '/financial-accounting/reports/journal-cash':
     $ref: 'post_journal_cash.yaml'
-  
+  '/financial-accounting/reports/general-ledger-lines/default-context':
+    $ref: 'get_general_ledger_lines.yaml'
+  '/financial-accounting/reports/general-ledger-lines':
+    $ref: 'post_general_ledger_lines.yaml'
+  '/financial-accounting/reports/general-ledger-account-parties/default-context':
+    $ref: 'get_general_ledger_account_parties.yaml'
+  '/financial-accounting/reports/general-ledger-account-parties':
+    $ref: 'post_general_ledger_account_parties.yaml'
+  '/financial-accounting/reports/cashflow/default-context':
+    $ref: 'get_cashflow.yaml'
+  '/financial-accounting/reports/cashflow':
+    $ref: 'post_cashflow.yaml'

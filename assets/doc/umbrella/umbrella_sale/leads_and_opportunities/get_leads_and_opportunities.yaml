@@ -1,0 +1,49 @@
+post:
+  tags:
+    - leads and opportunities
+  summary: Search leads and opportunities.
+  description: Search leads and opportunities with optional filter criteria.
+  operationId: getLeadsAndOpportunities
+  requestBody:
+    description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of leads and opportunities.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+              errors:
+                type: object
+              pagination:
+                type: object
+                properties:
+                  page:
+                    type: integer
+                  per_page:
+                    type: integer
+                  total_pages:
+                    type: integer
+                  total_records:
+                    type: integer
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

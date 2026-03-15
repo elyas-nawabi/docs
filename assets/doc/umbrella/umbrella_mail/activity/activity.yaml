@@ -16,8 +16,4 @@ paths:
   '/mail/activities/{obj_id}/snooze':
     $ref: 'get_snooze.yaml'
   '/mail/activities/{obj_id}/cancel':
-    $ref: 'get_cancel.yaml'
-  '/mail/activities/launch-plan':
-    $ref: 'post_launch_plan.yaml'
-  '/mail/activities/{obj_id}/planned-activities':
-    $ref: 'get_planned_activities.yaml' 
+    $ref: 'get_cancel.yaml' 
