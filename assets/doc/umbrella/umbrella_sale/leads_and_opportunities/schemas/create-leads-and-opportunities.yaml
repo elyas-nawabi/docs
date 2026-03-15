@@ -1,0 +1,39 @@
+type: object
+properties:
+  company:
+    type: integer
+    description: Company ID
+  party:
+    type: integer
+    description: Party (contact) ID
+  employee:
+    type: integer
+    description: Responsible employee ID
+  currency:
+    type: integer
+    description: Currency ID
+  start_date:
+    type: string
+    format: date
+  end_date:
+    type: string
+    format: date
+  description:
+    type: string
+  comment:
+    type: string
+  lines:
+    type: array
+    items:
+      type: object
+      properties:
+        product:
+          type: integer
+        quantity:
+          type: number
+        unit:
+          type: integer
+        description:
+          type: string
+        summary:
+          type: string

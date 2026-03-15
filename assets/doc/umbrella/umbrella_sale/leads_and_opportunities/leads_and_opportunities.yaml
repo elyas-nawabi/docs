@@ -1,0 +1,23 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: leads and opportunities
+    description: leads and opportunities - sale leads and opportunities management.
+paths:
+  '/sale/leads-and-opportunities/search':
+    $ref: 'get_leads_and_opportunities.yaml'
+  '/sale/leads-and-opportunities':
+    $ref: 'post_delete_leads_and_opportunities.yaml'
+  '/sale/leads-and-opportunities/{obj_id}':
+    $ref: 'get_put_leads_and_opportunities_by_id.yaml'
+  '/sale/leads-and-opportunities/{obj_id}/cancel':
+    $ref: 'get_cancel_by_id.yaml'
+  '/sale/leads-and-opportunities/{obj_id}/set-as-lead':
+    $ref: 'get_set_as_lead_by_id.yaml'
+  '/sale/leads-and-opportunities/{obj_id}/mark-as-lost':
+    $ref: 'get_mark_as_lost_by_id.yaml'
+  '/sale/leads-and-opportunities/{obj_id}/convert-to-opportunity':
+    $ref: 'get_convert_to_opportunity_by_id.yaml'
+  '/sale/leads-and-opportunities/{obj_id}/convert-to-sale':
+    $ref: 'get_convert_to_sale_by_id.yaml'
