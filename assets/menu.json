@@ -963,28 +963,6 @@
             "path": "assets/doc/umbrella/umbrella_planning/umbrella_planning.yaml"
           }
         ]
-      },
-      {
-        "label": "Planning Holidays",
-        "icon": "icon-calendar-days",
-        "children": [
-          {
-            "label": "Planning Holidays",
-            "icon": "icon-list",
-            "path": "assets/doc/umbrella/umbrella_planning_holidays/umbrella_planning_holidays.yaml"
-          }
-        ]
-      },
-      {
-        "label": "Planning HR Skills",
-        "icon": "icon-calendar-days",
-        "children": [
-          {
-            "label": "Planning HR Skills",
-            "icon": "icon-list",
-            "path": "assets/doc/umbrella/umbrella_planning_hr_skills/umbrella_planning_hr_skills.yaml"
-          }
-        ]
       }
     ]
   },
