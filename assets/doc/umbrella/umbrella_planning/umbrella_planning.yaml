@@ -4,9 +4,615 @@ servers:
 tags:
   - name: umbrella_planning
     description: >
-      Planning base module (Tryton). This module is an integration layer and does
-      not define dedicated REST endpoints in the Umbrella API.
+      Planning module APIs for managing planning roles and planning slots.
 
-      Use the generic Umbrella endpoints (e.g. model CRUD and execute/on_change)
-      documented under the "Umbrella" section.
-paths: {}
+      Includes CRUD/search endpoints and planning slot workflow actions.
+paths:
+  '/planning/planning-roles/search':
+    post:
+      tags:
+        - umbrella_planning
+      summary: Search planning roles
+      description: Search planning roles with optional filter criteria.
+      operationId: searchPlanningRoles
+      requestBody:
+        description: >
+          If you wish to apply filtering, please set the criteria;
+          otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              $ref: '../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanningRoleResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+
+  '/planning/planning-roles':
+    post:
+      tags:
+        - umbrella_planning
+      summary: Create planning role
+      description: Create a new planning role.
+      operationId: createPlanningRole
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PlanningRoleUpsertRequest'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanningRoleResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+    delete:
+      tags:
+        - umbrella_planning
+      summary: Delete planning roles
+      description: Delete planning roles by IDs.
+      operationId: deletePlanningRoles
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+
+  '/planning/planning-roles/{obj_id}':
+    get:
+      tags:
+        - umbrella_planning
+      summary: Get planning role by ID
+      description: Get one planning role by ID.
+      operationId: getPlanningRoleById
+      parameters:
+        - name: obj_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanningRoleResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
+      tags:
+        - umbrella_planning
+      summary: Update planning role
+      description: Update planning role by ID.
+      operationId: updatePlanningRoleById
+      parameters:
+        - name: obj_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PlanningRoleUpsertRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanningRoleResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+
+  '/planning/planning-slots/search':
+    post:
+      tags:
+        - umbrella_planning
+      summary: Search planning slots
+      description: Search planning slots with optional filter criteria.
+      operationId: searchPlanningSlots
+      requestBody:
+        description: >
+          If you wish to apply filtering, please set the criteria;
+          otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              $ref: '../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanningSlotResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+
+  '/planning/planning-slots':
+    post:
+      tags:
+        - umbrella_planning
+      summary: Create planning slot
+      description: Create a new planning slot.
+      operationId: createPlanningSlot
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PlanningSlotUpsertRequest'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanningSlotResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+    delete:
+      tags:
+        - umbrella_planning
+      summary: Delete planning slots
+      description: Delete planning slots by IDs.
+      operationId: deletePlanningSlots
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+
+  '/planning/planning-slots/{obj_id}':
+    get:
+      tags:
+        - umbrella_planning
+      summary: Get planning slot by ID
+      description: Get one planning slot by ID.
+      operationId: getPlanningSlotById
+      parameters:
+        - name: obj_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanningSlotResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP404'
+    put:
+      tags:
+        - umbrella_planning
+      summary: Update planning slot
+      description: Update planning slot by ID.
+      operationId: updatePlanningSlotById
+      parameters:
+        - name: obj_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PlanningSlotUpsertRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanningSlotResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+
+  '/planning/planning-slots/{obj_id}/publish':
+    post:
+      tags:
+        - umbrella_planning
+      summary: Publish planning slot
+      description: Change planning slot state from `draft` to `published`.
+      operationId: publishPlanningSlotById
+      parameters:
+        - name: obj_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP200'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP404'
+
+  '/planning/planning-slots/{obj_id}/draft':
+    post:
+      tags:
+        - umbrella_planning
+      summary: Set planning slot to draft
+      description: Change planning slot state from `published` to `draft`.
+      operationId: draftPlanningSlotById
+      parameters:
+        - name: obj_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP200'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../api_doc.yaml#/components/schemas/HTTP404'
+
+components:
+  schemas:
+    PlanningRoleUpsertRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        sequence:
+          type: integer
+        active:
+          type: boolean
+        linked_resources:
+          type: array
+          items:
+            type: integer
+      required:
+        - name
+      example:
+        name: "Shift Leader"
+        sequence: 10
+        active: true
+        linked_resources: [12, 18]
+
+    PlanningRoleResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            sequence:
+              type: integer
+            active:
+              type: boolean
+            linked_resources:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+            create_date:
+              type: string
+              format: date-time
+            create_uid:
+              type: integer
+            write_date:
+              type: string
+              format: date-time
+              nullable: true
+            write_uid:
+              type: integer
+              nullable: true
+        error:
+          type: object
+          nullable: true
+        pagination:
+          type: object
+          nullable: true
+        status:
+          type: integer
+        success_message:
+          type: string
+          nullable: true
+      example:
+        data:
+          id: 1
+          name: "Shift Leader"
+          sequence: 10
+          active: true
+          linked_resources:
+            - id: 12
+              name: "John Doe"
+        error: null
+        pagination: null
+        status: 200
+        success_message: null
+
+    PlanningSlotUpsertRequest:
+      type: object
+      properties:
+        resource:
+          type: integer
+        company:
+          type: integer
+        role:
+          type: integer
+        start_datetime:
+          type: string
+          format: date-time
+        end_datetime:
+          type: string
+          format: date-time
+        allocated_percentage:
+          type: number
+        note:
+          type: string
+      required:
+        - resource
+        - start_datetime
+        - end_datetime
+      example:
+        resource: 12
+        company: 1
+        role: 1
+        start_datetime: "2026-04-15T09:00:00Z"
+        end_datetime: "2026-04-15T17:00:00Z"
+        allocated_percentage: 100
+        note: "Morning shift"
+
+    PlanningSlotResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            id:
+              type: integer
+            resource:
+              type: integer
+            employee:
+              type: integer
+              nullable: true
+            company:
+              type: integer
+              nullable: true
+            department:
+              type: integer
+              nullable: true
+            role:
+              type: integer
+              nullable: true
+            start_datetime:
+              type: string
+              format: date-time
+            end_datetime:
+              type: string
+              format: date-time
+            allocated_percentage:
+              type: number
+            duration:
+              type: number
+              nullable: true
+            allocated_hours:
+              type: number
+              nullable: true
+            state:
+              type: string
+              enum: [draft, published]
+            note:
+              type: string
+            create_date:
+              type: string
+              format: date-time
+            create_uid:
+              type: integer
+            write_date:
+              type: string
+              format: date-time
+              nullable: true
+            write_uid:
+              type: integer
+              nullable: true
+        error:
+          type: object
+          nullable: true
+        pagination:
+          type: object
+          nullable: true
+        status:
+          type: integer
+        success_message:
+          type: string
+          nullable: true
+      example:
+        data:
+          id: 5
+          resource: 12
+          employee: 7
+          company: 1
+          department: 3
+          role: 1
+          start_datetime: "2026-04-15T09:00:00Z"
+          end_datetime: "2026-04-15T17:00:00Z"
+          allocated_percentage: 100
+          duration: 8
+          allocated_hours: 8
+          state: "draft"
+          note: "Morning shift"
+        error: null
+        pagination: null
+        status: 200
+        success_message: null
