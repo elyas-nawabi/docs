@@ -23,8 +23,8 @@ Explore the available API endpoints and their functionalities in the [API Endpoi
 
 This repository is configured to deploy to GitHub Pages using the workflow in `.github/workflows/main.yml`.
 
-- Custom domain: `docs.umbrella.com` (configured via `CNAME` file)
 - Publish source: GitHub Actions
+- Default Pages URL: `https://<your-github-username>.github.io/<repo-name>/`
 
 ### One-time GitHub setup
 
@@ -32,13 +32,12 @@ This repository is configured to deploy to GitHub Pages using the workflow in `.
 2. Under **Build and deployment**, set **Source** to **GitHub Actions**
 3. Save settings
 
-### DNS setup for custom domain
+### Optional custom domain
 
-Create a CNAME DNS record:
+If you want a custom domain (for example `docs.umbrella.com`), add a `CNAME` file at repository root and configure DNS:
 
+- DNS record type: `CNAME`
 - Host/Name: `docs`
 - Value/Target: `<your-github-username>.github.io`
-
-After DNS propagation, GitHub Pages will serve this site at `https://docs.umbrella.com`.
 
 
