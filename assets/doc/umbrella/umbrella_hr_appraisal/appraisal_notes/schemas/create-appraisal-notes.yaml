@@ -1,0 +1,17 @@
+type: object
+description: Body for create/update appraisal note.
+properties:
+  name:
+    type: string
+    description: Display name of the rating / note template.
+  sequence:
+    type: integer
+    description: Ordering key.
+  company:
+    type: integer
+    description: Company id (`company.company`).
+
+example:
+  name: Exceeds expectations
+  sequence: 10
+  company: 1

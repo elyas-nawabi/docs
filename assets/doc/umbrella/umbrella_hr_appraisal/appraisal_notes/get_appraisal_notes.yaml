@@ -1,0 +1,71 @@
+post:
+  tags:
+    - appraisal_notes
+  summary: Search appraisal notes.
+  description: Returns a filtered list of appraisal note records.
+  operationId: searchAppraisalNotes
+  requestBody:
+    description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of appraisal notes.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    rec_name:
+                      type: string
+                    name:
+                      type: string
+                    sequence:
+                      type: integer
+                    company:
+                      type: integer
+                    company_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    create_date:
+                      type: string
+                      format: date-time
+                    create_uid:
+                      type: integer
+                    create_uid_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    write_date:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    write_uid:
+                      type: integer
+                      nullable: true
+              error:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

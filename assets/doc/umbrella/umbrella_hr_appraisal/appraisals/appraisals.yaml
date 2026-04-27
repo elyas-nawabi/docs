@@ -1,0 +1,27 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: appraisals
+    description: |
+      Employee performance appraisals (`hr.appraisal`). CRUD under `/hr-appraisal/appraisals`; workflow actions are **GET** routes on a record.
+      States: `new` (to confirm), `pending` (confirmed), `done`, `cancel`.
+      Related modules: **umbrella_hr_appraisal_contract** (contract bridge; no extra REST resources—use HR Contract + Appraisal APIs).
+      **umbrella_hr_appraisal_skills** adds skill lines at `/hr-appraisal-skills/appraisal-skills`.
+paths:
+  '/hr-appraisal/appraisals/search':
+    $ref: 'get_appraisals.yaml'
+  '/hr-appraisal/appraisals':
+    $ref: 'post_delete_appraisals.yaml'
+  '/hr-appraisal/appraisals/{obj_id}':
+    $ref: 'get_put_appraisals_by_id.yaml'
+  '/hr-appraisal/appraisals/{obj_id}/confirm':
+    $ref: 'get_confirm_appraisal_by_id.yaml'
+  '/hr-appraisal/appraisals/{obj_id}/done':
+    $ref: 'get_done_appraisal_by_id.yaml'
+  '/hr-appraisal/appraisals/{obj_id}/cancel':
+    $ref: 'get_cancel_appraisal_by_id.yaml'
+  '/hr-appraisal/appraisals/{obj_id}/draft':
+    $ref: 'get_draft_appraisal_by_id.yaml'
+  '/hr-appraisal/appraisals/{obj_id}/reopen':
+    $ref: 'get_reopen_appraisal_by_id.yaml'

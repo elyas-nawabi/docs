@@ -1,0 +1,46 @@
+type: object
+description: Body for create/update appraisal (subset of writable fields; server applies defaults and access rules).
+properties:
+  employee:
+    type: integer
+    description: Employee id (`company.employee`).
+  company:
+    type: integer
+    description: Company id (`company.company`).
+  date_close:
+    type: string
+    format: date
+    description: Appraisal closing date.
+  date_final_interview:
+    type: string
+    format: date
+    nullable: true
+  next_appraisal_date:
+    type: string
+    format: date
+    nullable: true
+  assessment_note:
+    type: integer
+    nullable: true
+    description: Final rating note id (`hr.appraisal.note`).
+  employee_feedback:
+    type: string
+    nullable: true
+  manager_feedback:
+    type: string
+    nullable: true
+  note:
+    type: string
+    nullable: true
+    description: Private manager note.
+
+example:
+  employee: 5
+  company: 1
+  date_close: '2026-06-30'
+  date_final_interview: '2026-06-15'
+  next_appraisal_date: '2027-06-30'
+  assessment_note: 2
+  employee_feedback: 'Goals met for Q1.'
+  manager_feedback: 'Strong collaboration.'
+  note: 'Internal comment.'
