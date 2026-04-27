@@ -194,6 +194,11 @@
         "path": "assets/doc/umbrella/umbrella_sale/configuration/configuration.yaml"
       },
       {
+        "label": "Leads And Opportunities",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_sale/leads_and_opportunities/leads_and_opportunities.yaml"
+      },
+      {
         "label": "Reporting Sale",
         "icon": "icon-list",
         "path": "assets/doc/umbrella/umbrella_sale/reporting_sale/reporting_sale.yaml"
@@ -749,6 +754,44 @@
         ]
       },
       {
+        "label": "HR Appraisal",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Appraisal Notes",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_appraisal/appraisal_notes/appraisal_notes.yaml"
+          },
+          {
+            "label": "Appraisals",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_appraisal/appraisals/appraisals.yaml"
+          }
+        ]
+      },
+      {
+        "label": "HR Appraisal Contract",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "HR Appraisal Contract",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_appraisal_contract/hr_appraisal_contract.yaml"
+          }
+        ]
+      },
+      {
+        "label": "HR Appraisal Skills",
+        "icon": "icon-users-round",
+        "children": [
+          {
+            "label": "Appraisal Skills",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_hr_appraisal_skills/appraisal_skills/appraisal_skills.yaml"
+          }
+        ]
+      },
+      {
         "label": "HR Attendance",
         "icon": "icon-users-round",
         "children": [
@@ -961,6 +1004,28 @@
             "label": "Planning",
             "icon": "icon-list",
             "path": "assets/doc/umbrella/umbrella_planning/umbrella_planning.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Planning Holidays",
+        "icon": "icon-calendar-days",
+        "children": [
+          {
+            "label": "Planning Holidays",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_planning_holidays/umbrella_planning_holidays.yaml"
+          }
+        ]
+      },
+      {
+        "label": "Planning HR Skills",
+        "icon": "icon-calendar-days",
+        "children": [
+          {
+            "label": "Planning HR Skills",
+            "icon": "icon-list",
+            "path": "assets/doc/umbrella/umbrella_planning_hr_skills/umbrella_planning_hr_skills.yaml"
           }
         ]
       }
