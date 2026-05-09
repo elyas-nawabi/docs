@@ -1,8 +1,8 @@
     post:
       tags:
         - category
-      summary: Get category details.
-      description: Get category details.
+      summary: Get all calendar event categories.
+      description: Return the category list used in Calendar > Events.
       operationId: getCategory
       requestBody:
         description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.

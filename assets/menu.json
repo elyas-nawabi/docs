@@ -1287,7 +1287,7 @@
             "path": "assets/doc/umbrella/health/health_caldav/calendar/calendar.yaml"
           },
           {
-            "label": "Category",
+            "label": "Event Categories",
             "icon": "icon-list",
             "path": "assets/doc/umbrella/health/health_caldav/category/category.yaml"
           },
