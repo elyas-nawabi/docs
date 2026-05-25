@@ -1,0 +1,60 @@
+properties:
+  name:
+    type: string
+    description: Display name of the template node.
+  code:
+    type: string
+    nullable: true
+    description: Account code in the chart (e.g. `1100`). Often empty on grouping nodes.
+  parent:
+    type: integer
+    nullable: true
+    description: Parent template id. Omit or null for a root chart template.
+  type:
+    type: integer
+    nullable: true
+    description: Linked account type template id (`account.account.type.template`).
+  debit_type:
+    type: integer
+    nullable: true
+  credit_type:
+    type: integer
+    nullable: true
+  closed:
+    type: boolean
+  reconcile:
+    type: boolean
+    description: When true, move lines on accounts created from this template can be reconciled.
+  party_required:
+    type: boolean
+  general_ledger_balance:
+    type: boolean
+  deferral:
+    type: boolean
+    description: Balance carries to the next fiscal period when true.
+  start_date:
+    type: string
+    format: date
+    nullable: true
+  end_date:
+    type: string
+    format: date
+    nullable: true
+  childs:
+    type: array
+    nullable: true
+    description: Nested child templates (same shape; used on create/update when building a subtree).
+    items:
+      type: object
+required:
+  - name
+example:
+  name: Cash
+  code: '1100'
+  parent: 1
+  type: 3
+  reconcile: false
+  deferral: true
+  closed: false
+  party_required: false
+  general_ledger_balance: false

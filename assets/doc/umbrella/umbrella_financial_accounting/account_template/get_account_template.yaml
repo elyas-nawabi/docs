@@ -1,102 +1,104 @@
-    post:
-      tags:
-        - account template
-      summary: Get list of account templates.
-      description: Get list of account templates.
-      operationId: getAccounttemplates
-      requestBody:
-        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
+post:
+  tags:
+    - account template
+  summary: Search account templates (root charts).
+  description: |
+    Search global account templates. The API applies a fixed filter: only **root** templates (`parent` is null) are returned, e.g. full chart definitions such as "Minimal Account Chart" or country-specific charts.
+
+    Each result includes a nested `childs` array with the template subtree (id + `rec_name`, further nested `childs`). Use `GET /account-templates/{obj_id}` for full fields on a specific node.
+
+    **Note:** This endpoint does not list company-specific accounts. After choosing a root template id, create the live chart with `POST /financial-accounting/accounts/create-coa-from-template`.
+  operationId: searchAccountTemplates
+  requestBody:
+    description: Optional filter criteria; send `{}` to list all root templates.
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
                   type: object
                   properties:
-                    data:
-                      type: array
-                      properties:
-                        childs:
-                          type: array
-                          properties:
-                            childs:
-                              type: array
-                              properties:
-                                childs:
-                                  type: array
-                                  properties:
-                                    childs: 
-                                      type: array
-                                    id:
-                                      type: integer
-                                    rec_name: 
-                                      type: string
-                                id: 
-                                  type: integer
-                                rec_name: 
-                                  type: string
-                            id: 
-                              type: integer
-                            rec_name: 
-                              type: string
-                        id: 
-                          type: integer
-                        rec_name: 
-                          type: string  
-                    errors:
-                      type: object
-                    pagination:
-                      properties:
-                        page:
-                          type: integer
-                        per_page:
-                          type: integer
-                        total_pages:
-                          type: integer
-                        total_records:
-                          type: integer
-                    status:
+                    id:
                       type: integer
-                    success_message:
+                    rec_name:
                       type: string
-                      nullable: true
-              example:
-                data:
-                  childs:
-                  - childs:
-                    - childs:
-                      - childs: []
-                        id: 2250
-                        rec_name: 100 - Capital social
-                      id: 2093
-                      rec_name: 10 - Capital
-                    id: 2089
+                    childs:
+                      type: array
+                      description: Nested template tree under this root.
+                      items:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                          rec_name:
+                            type: string
+                          childs:
+                            type: array
+              errors:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                properties:
+                  page:
+                    type: integer
+                  per_page:
+                    type: integer
+                  total_pages:
+                    type: integer
+                  total_records:
+                    type: integer
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 2085
+                rec_name: 0 - Plan Contable para PYMES 2008
+                childs:
+                  - id: 2089
                     rec_name: 4 - Acreedores y deudores por operaciones comerciales
-                  id: 2085
-                  rec_name: 0 - Plan Contable para PYMES 2008
-                errors: null
-                pagination:
-                  page: 1
-                  per_page: 100
-                  total_pages: 1
-                  total_records: 12
-                status: 200
-                success_message: null
-        '401':
-          description: >-
-            401 Unauthorized: The server could not verify that you are
-            authorized to access the URL requested. You either supplied the
-            wrong credentials (e.g. a bad password), or your browser doesn't
-            understand how to supply the credentials required.
-          content:
-            application/json:
-              schema:
-                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
-    
-    
+                    childs:
+                      - id: 2093
+                        rec_name: 10 - Capital
+                        childs:
+                          - id: 2250
+                            rec_name: 100 - Capital social
+                            childs: []
+              - id: 1
+                rec_name: Minimal Account Chart
+                childs:
+                  - id: 1172
+                    rec_name: Assets
+                    childs: []
+            errors: null
+            pagination:
+              page: 1
+              per_page: 100
+              total_pages: 1
+              total_records: 2
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

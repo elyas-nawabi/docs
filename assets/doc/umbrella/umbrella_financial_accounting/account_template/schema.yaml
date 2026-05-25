@@ -1,22 +1,73 @@
 schema:
   properties:
     data:
-      type: array
+      type: object
       properties:
-        create_date: 
-          type: string 
-          format: date 
-        create_uid: 
-          type: integer
-        create_uid_:
-          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
-        
-        write_date:
+        childs:
+          type: array
+          description: Direct child template nodes (nested tree on list/search responses).
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              rec_name:
+                type: string
+              childs:
+                type: array
+        closed:
+          type: boolean
+        code:
           type: string
-          format: date 
-        write_uid:
+          nullable: true
+        credit_type:
           type: integer
-        write_uid_:
+          nullable: true
+        credit_type_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        debit_type:
+          type: integer
+          nullable: true
+        debit_type_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        deferral:
+          type: boolean
+        end_date:
+          type: string
+          format: date
+          nullable: true
+        general_ledger_balance:
+          type: boolean
+        id:
+          type: integer
+        name:
+          type: string
+        parent:
+          type: integer
+          nullable: true
+        parent_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        party_required:
+          type: boolean
+        rec_name:
+          type: string
+        reconcile:
+          type: boolean
+        replaced_by:
+          type: integer
+          nullable: true
+        replaced_by_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        start_date:
+          type: string
+          format: date
+          nullable: true
+        taxes:
+          type: array
+        type:
+          type: integer
+          nullable: true
+        type_:
           $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
     errors:
       type: object
@@ -31,17 +82,36 @@ schema:
       nullable: true
 
 example:
-    data:
-      create_date: '2024-04-18T04:45:21.629821'
-      create_uid: 1
-      create_uid_:
-        id: 1
-        name: Administrator
-      
-      write_date: 
-      write_uid: 
-      write_uid_: {}
-    errors: null
-    pagination: null
-    status: 201
-    success_message: null
+  data:
+    childs:
+      - childs: []
+        id: 1172
+        rec_name: Assets
+    closed: false
+    code: null
+    credit_type: null
+    credit_type_: {}
+    debit_type: null
+    debit_type_: {}
+    deferral: false
+    end_date: null
+    general_ledger_balance: false
+    id: 1
+    name: Minimal Account Chart
+    parent: null
+    parent_: {}
+    party_required: false
+    rec_name: Minimal Account Chart
+    reconcile: false
+    replaced_by: null
+    replaced_by_: {}
+    start_date: null
+    taxes: []
+    type: 1
+    type_:
+      id: 1
+      name: Minimal Account Type Chart
+  errors: null
+  pagination: null
+  status: 200
+  success_message: null
