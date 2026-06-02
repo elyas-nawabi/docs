@@ -1,0 +1,27 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: move template
+    description: |
+      Company-specific journal entry templates (`account.move.template`). Move templates let accountants
+      define reusable, parameterised journal entries. Each template belongs to a **company** and a **journal**,
+      and carries a list of **keywords** (runtime variables, e.g. amount, party, date) and **lines** (debit/credit
+      account pairings with expressions that reference those keywords).
+
+      **This is different from COA templates** — move templates are not part of a chart of accounts; they
+      are operational templates used day-to-day to create recurring or standard journal moves.
+
+      **Typical flow**
+      1. `POST /move-templates/search` — list move templates for the current company.
+      2. `GET /move-templates/{obj_id}` — inspect one template, including `keywords` and `lines`.
+      3. `POST /move-templates` — create a new template.
+      4. When executing a template (creating an actual move from it), use the standard
+         `POST /financial-accounting/account-moves` endpoint and reference this template.
+paths:
+  '/financial-accounting/move-templates/search':
+    $ref: 'get_move_template.yaml'
+  '/financial-accounting/move-templates':
+    $ref: 'post_delete_move_template.yaml'
+  '/financial-accounting/move-templates/{obj_id}':
+    $ref: 'get_put_move_template_by_id.yaml'

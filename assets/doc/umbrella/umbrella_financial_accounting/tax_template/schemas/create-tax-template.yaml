@@ -1,0 +1,71 @@
+properties:
+  name:
+    type: string
+    description: Display name of the tax template.
+  description:
+    type: string
+    description: Short description shown on tax lines and reports.
+  account:
+    type: integer
+    description: Root account template id (`account.account.template` with `parent` = null) this tax belongs to.
+  group:
+    type: integer
+    nullable: true
+    description: Tax group id (`account.tax.group`). Omit for child taxes.
+  type:
+    type: string
+    enum: [percentage, fixed, none]
+    description: |
+      - `percentage` — rate-based tax; provide `rate`
+      - `fixed` — fixed monetary amount; provide `amount`
+      - `none` — placeholder with no computation
+  rate:
+    type: number
+    nullable: true
+    description: Rate as decimal (e.g. `0.21` = 21%). Required when `type` is `percentage`.
+  amount:
+    type: number
+    nullable: true
+    description: Fixed tax amount. Required when `type` is `fixed`.
+  update_unit_price:
+    type: boolean
+    description: When true the tax adjusts the unit price (excise-style). Only valid on root taxes (no parent).
+  parent:
+    type: integer
+    nullable: true
+    description: Parent tax template id. Omit or null for a root tax.
+  invoice_account:
+    type: integer
+    nullable: true
+    description: Account template id for invoice tax journal entries.
+  credit_note_account:
+    type: integer
+    nullable: true
+    description: Account template id for credit note tax journal entries.
+  start_date:
+    type: string
+    format: date
+    nullable: true
+  end_date:
+    type: string
+    format: date
+    nullable: true
+  legal_notice:
+    type: string
+    nullable: true
+    description: Legal text printed on documents for this tax.
+required:
+  - name
+  - description
+  - account
+  - type
+example:
+  name: 21% VAT
+  description: Standard Rate VAT
+  account: 1
+  group: 1
+  type: percentage
+  rate: '0.21'
+  update_unit_price: false
+  invoice_account: 100
+  credit_note_account: 101

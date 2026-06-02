@@ -1,0 +1,22 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: tax template
+    description: |
+      Global tax blueprints (`account.tax.template`). Tax templates are not tied to any company;
+      they define the default tax tree (name, type, rate/amount, accounts) installed with accounting modules.
+
+      **Typical flow**
+      1. `POST /tax-templates/search` — list root tax templates (each row includes a nested `childs` tree).
+      2. `GET /tax-templates/{obj_id}` — inspect one tax template node (root or child).
+      3. Taxes are materialized for a company when a chart of accounts is applied via `POST /accounts/create-coa-from-template`.
+
+      Search is restricted to **root templates** (`parent` is null). Child nodes are returned inside `childs` on search/get responses.
+paths:
+  '/financial-accounting/tax-templates/search':
+    $ref: 'get_tax_template.yaml'
+  '/financial-accounting/tax-templates':
+    $ref: 'post_delete_tax_template.yaml'
+  '/financial-accounting/tax-templates/{obj_id}':
+    $ref: 'get_put_tax_template_by_id.yaml'

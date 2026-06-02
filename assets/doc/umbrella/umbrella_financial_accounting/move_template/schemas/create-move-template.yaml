@@ -1,0 +1,105 @@
+properties:
+  name:
+    type: string
+    description: Display name of the move template (translatable).
+  company:
+    type: integer
+    description: Company id (`company.company`) this template belongs to.
+  journal:
+    type: integer
+    description: Journal id (`account.journal`) used for moves created from this template.
+  description:
+    type: string
+    nullable: true
+    description: |
+      Optional description for the generated move. Supports keyword substitution using braces,
+      e.g. `"Rent expense for {month}"` where `month` is a keyword name.
+  keywords:
+    type: array
+    nullable: true
+    description: Runtime variable definitions used in line amount expressions and description substitutions.
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Python identifier (must be a valid Python identifier, e.g. `amount`, `party_id`).
+        string:
+          type: string
+          description: Human-readable label shown in the create-move dialog.
+        type_:
+          type: string
+          enum: [char, numeric, date, party]
+          description: |
+            - `char` — free text
+            - `numeric` — decimal number (requires `digits`)
+            - `date` — calendar date
+            - `party` — `party.party` record selector
+        required:
+          type: boolean
+        digits:
+          type: integer
+          nullable: true
+          description: Decimal precision. Required when `type_` is `numeric`.
+      required:
+        - name
+        - string
+        - type_
+  lines:
+    type: array
+    nullable: true
+    description: Debit/credit account pairs that make up the journal entry.
+    items:
+      type: object
+      properties:
+        operation:
+          type: string
+          enum: [debit, credit]
+          description: Whether this line is a debit or credit entry.
+        amount:
+          type: string
+          description: |
+            Python expression evaluated at move creation time. Can reference keyword names and
+            use `Decimal` arithmetic (e.g. `"amount"`, `"amount * Decimal('0.21')"`).
+        account:
+          type: integer
+          description: Account id (`account.account`) for this line.
+        party:
+          type: string
+          nullable: true
+          description: Name of the `party`-type keyword whose value is used as the party for this line.
+        description:
+          type: string
+          nullable: true
+          description: Optional line description; supports keyword substitution.
+      required:
+        - operation
+        - amount
+        - account
+required:
+  - name
+  - company
+  - journal
+example:
+  name: Monthly Rent Expense
+  company: 1
+  journal: 3
+  description: Rent expense for {month}
+  keywords:
+    - name: amount
+      string: Amount
+      type_: numeric
+      required: true
+      digits: 2
+    - name: month
+      string: Month
+      type_: char
+      required: true
+  lines:
+    - operation: debit
+      amount: amount
+      account: 610
+      description: Rent - {month}
+    - operation: credit
+      amount: amount
+      account: 210

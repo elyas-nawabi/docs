@@ -1,0 +1,104 @@
+post:
+  tags:
+    - tax code template
+  summary: Search tax code templates (root nodes).
+  description: |
+    Search global tax code templates. The API applies a fixed filter: only **root** tax code templates (`parent` is null) are returned.
+
+    Each result includes a nested `childs` array. Use `GET /tax-code-templates/{obj_id}` for full fields on a specific node including `lines`.
+
+    **Note:** Tax code templates are linked to an account template (chart root) via the `account` field. They define the tax reporting structure used in tax period reports.
+  operationId: searchTaxCodeTemplates
+  requestBody:
+    description: Optional filter criteria; send `{}` to list all root tax code templates.
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    rec_name:
+                      type: string
+                    name:
+                      type: string
+                    code:
+                      type: string
+                    account:
+                      type: integer
+                    childs:
+                      type: array
+                      description: Nested child tax code templates.
+                      items:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                          rec_name:
+                            type: string
+                          childs:
+                            type: array
+              errors:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                properties:
+                  page:
+                    type: integer
+                  per_page:
+                    type: integer
+                  total_pages:
+                    type: integer
+                  total_records:
+                    type: integer
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 20
+                rec_name: VAT Codes
+                name: VAT Codes
+                code: null
+                account: 1
+                childs:
+                  - id: 21
+                    rec_name: Output VAT Base
+                    childs: []
+                  - id: 22
+                    rec_name: Output VAT Tax
+                    childs: []
+            errors: null
+            pagination:
+              page: 1
+              per_page: 100
+              total_pages: 1
+              total_records: 1
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

@@ -438,6 +438,16 @@
         "path": "assets/doc/umbrella/umbrella_financial_accounting/account_template/account_template.yaml"
       },
       {
+        "label": "Account Type Template",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/account_type_template/account_type_template.yaml"
+      },
+      {
+        "label": "Move Template",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/move_template/move_template.yaml"
+      },
+      {
         "label": "Account Type",
         "icon": "icon-list",
         "path": "assets/doc/umbrella/umbrella_financial_accounting/account_type/account_type.yaml"
@@ -498,6 +508,11 @@
         "path": "assets/doc/umbrella/umbrella_financial_accounting/tax_code/tax_code.yaml"
       },
       {
+        "label": "Tax Code Template",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/tax_code_template/tax_code_template.yaml"
+      },
+      {
         "label": "Tax Group",
         "icon": "icon-list",
         "path": "assets/doc/umbrella/umbrella_financial_accounting/tax_group/tax_group.yaml"
@@ -506,6 +521,16 @@
         "label": "Tax Rule",
         "icon": "icon-list",
         "path": "assets/doc/umbrella/umbrella_financial_accounting/tax_rule/tax_rule.yaml"
+      },
+      {
+        "label": "Tax Rule Template",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/tax_rule_template/tax_rule_template.yaml"
+      },
+      {
+        "label": "Tax Template",
+        "icon": "icon-list",
+        "path": "assets/doc/umbrella/umbrella_financial_accounting/tax_template/tax_template.yaml"
       },
       {
         "label": "Write Off",

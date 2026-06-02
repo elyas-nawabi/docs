@@ -1,0 +1,56 @@
+properties:
+  name:
+    type: string
+    description: Display name of the type template node.
+  parent:
+    type: integer
+    nullable: true
+    description: Parent type template id. Omit or null for a root chart type template.
+  sequence:
+    type: integer
+    nullable: true
+    description: Sort order among siblings.
+  statement:
+    type: string
+    nullable: true
+    enum: [balance, income, off-balance]
+    description: |
+      Financial statement category for this type.
+      - `balance` — Balance Sheet
+      - `income` — Income Statement
+      - `off-balance` — Off-Balance Sheet
+  assets:
+    type: boolean
+    description: Marks accounts of this type as assets.
+  receivable:
+    type: boolean
+    description: Marks accounts of this type as receivable.
+  stock:
+    type: boolean
+    description: Marks accounts of this type as stock.
+  payable:
+    type: boolean
+    description: Marks accounts of this type as payable.
+  debt:
+    type: boolean
+    description: Marks accounts of this type as debt.
+  revenue:
+    type: boolean
+    description: Marks accounts of this type as revenue.
+  expense:
+    type: boolean
+    description: Marks accounts of this type as expense.
+required:
+  - name
+example:
+  name: Assets
+  parent: 1
+  sequence: 10
+  statement: balance
+  assets: true
+  receivable: false
+  stock: false
+  payable: false
+  debt: false
+  revenue: false
+  expense: false
