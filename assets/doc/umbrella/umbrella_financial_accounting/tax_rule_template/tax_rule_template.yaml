@@ -1,0 +1,23 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: tax rule template
+    description: |
+      Global tax-rule blueprints (`account.tax.rule.template`). Tax rule templates define automatic tax substitution
+      rules for a chart of accounts, and are not tied to any company.
+
+      A tax rule replaces one tax with another based on the party context (sale/purchase/both). Each rule contains
+      one or more **lines** (`account.tax.rule.line.template`) that define the substitution conditions.
+
+      **Typical flow**
+      1. `POST /tax-rule-templates/search` — list all tax rule templates for a given chart.
+      2. `GET /tax-rule-templates/{obj_id}` — inspect one rule template including its `lines`.
+      3. Tax rules are materialized for a company when a chart of accounts is applied via `POST /accounts/create-coa-from-template`.
+paths:
+  '/financial-accounting/tax-rule-templates/search':
+    $ref: 'get_tax_rule_template.yaml'
+  '/financial-accounting/tax-rule-templates':
+    $ref: 'post_delete_tax_rule_template.yaml'
+  '/financial-accounting/tax-rule-templates/{obj_id}':
+    $ref: 'get_put_tax_rule_template_by_id.yaml'

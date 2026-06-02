@@ -1,0 +1,22 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: tax code template
+    description: |
+      Global tax-code blueprints (`account.tax.code.template`). Tax code templates define the tax reporting tree
+      (tax base and tax amount buckets) for a chart of accounts, and are not tied to any company.
+
+      **Typical flow**
+      1. `POST /tax-code-templates/search` — list root tax code templates (each row includes nested `childs`).
+      2. `GET /tax-code-templates/{obj_id}` — inspect one tax code template node, including its `lines`.
+      3. Tax codes are materialized for a company when a chart of accounts is applied via `POST /accounts/create-coa-from-template`.
+
+      Search is restricted to **root templates** (`parent` is null). Child nodes are returned inside `childs` on search/get responses.
+paths:
+  '/financial-accounting/tax-code-templates/search':
+    $ref: 'get_tax_code_template.yaml'
+  '/financial-accounting/tax-code-templates':
+    $ref: 'post_delete_tax_code_template.yaml'
+  '/financial-accounting/tax-code-templates/{obj_id}':
+    $ref: 'get_put_tax_code_template_by_id.yaml'

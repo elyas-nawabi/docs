@@ -1,0 +1,23 @@
+properties:
+  name:
+    type: string
+    description: Display name of the tax rule template.
+  account:
+    type: integer
+    description: Root account template id (`account.account.template` with `parent` = null) this rule belongs to.
+  kind:
+    type: string
+    enum: [sale, purchase, both]
+    description: |
+      Transaction side on which the rule is applied.
+      - `sale` — customer invoices
+      - `purchase` — supplier invoices
+      - `both` — both sides
+required:
+  - name
+  - account
+  - kind
+example:
+  name: EU Intra-Community
+  account: 1
+  kind: sale

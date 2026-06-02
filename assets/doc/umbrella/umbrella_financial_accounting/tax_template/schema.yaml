@@ -1,0 +1,135 @@
+schema:
+  properties:
+    data:
+      type: object
+      properties:
+        id:
+          type: integer
+        rec_name:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        group:
+          type: integer
+          nullable: true
+        group_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        type:
+          type: string
+          enum: [percentage, fixed, none]
+          description: |
+            - `percentage` — rate-based tax (uses `rate` field)
+            - `fixed` — fixed monetary amount (uses `amount` field)
+            - `none` — tax line placeholder with no computation
+        active:
+          type: boolean
+        sequence:
+          type: integer
+          nullable: true
+        start_date:
+          type: string
+          format: date
+          nullable: true
+        end_date:
+          type: string
+          format: date
+          nullable: true
+        amount:
+          type: number
+          nullable: true
+          description: Fixed tax amount. Only relevant when `type` is `fixed`.
+        rate:
+          type: number
+          nullable: true
+          description: Tax rate as a decimal (e.g. `0.21` for 21%). Only relevant when `type` is `percentage`.
+        update_unit_price:
+          type: boolean
+          description: When true, the tax updates the unit price of the line (used for excise-style taxes).
+        parent:
+          type: integer
+          nullable: true
+        parent_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        childs:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              rec_name:
+                type: string
+              childs:
+                type: array
+        invoice_account:
+          type: integer
+          nullable: true
+          description: Account template id used for invoice tax entries.
+        invoice_account_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        credit_note_account:
+          type: integer
+          nullable: true
+          description: Account template id used for credit note tax entries.
+        credit_note_account_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        account:
+          type: integer
+          description: Root account template id this tax belongs to.
+        account_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        legal_notice:
+          type: string
+          nullable: true
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 10
+    rec_name: 21% VAT
+    name: 21% VAT
+    description: Standard Rate VAT
+    group: 1
+    group_:
+      id: 1
+      name: VAT
+    type: percentage
+    active: true
+    sequence: 10
+    start_date: null
+    end_date: null
+    amount: null
+    rate: '0.21'
+    update_unit_price: false
+    parent: null
+    parent_: {}
+    childs: []
+    invoice_account: 100
+    invoice_account_:
+      id: 100
+      name: VAT Payable
+    credit_note_account: 101
+    credit_note_account_:
+      id: 101
+      name: VAT Refundable
+    account: 1
+    account_:
+      id: 1
+      name: Minimal Account Chart
+    legal_notice: null
+  errors: null
+  pagination: null
+  status: 200
+  success_message: null

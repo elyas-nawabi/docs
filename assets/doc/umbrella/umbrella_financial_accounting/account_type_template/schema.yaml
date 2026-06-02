@@ -1,0 +1,90 @@
+schema:
+  properties:
+    data:
+      type: object
+      properties:
+        id:
+          type: integer
+        rec_name:
+          type: string
+        name:
+          type: string
+        parent:
+          type: integer
+          nullable: true
+        parent_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        sequence:
+          type: integer
+          nullable: true
+        statement:
+          type: string
+          nullable: true
+          enum: [balance, income, off-balance, null]
+          description: |
+            Determines where this type appears in financial reports.
+            - `balance` — Balance Sheet
+            - `income` — Income Statement
+            - `off-balance` — Off-Balance Sheet
+        assets:
+          type: boolean
+        receivable:
+          type: boolean
+        stock:
+          type: boolean
+        payable:
+          type: boolean
+        debt:
+          type: boolean
+        revenue:
+          type: boolean
+        expense:
+          type: boolean
+        childs:
+          type: array
+          description: Direct child type template nodes (nested tree).
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              rec_name:
+                type: string
+              childs:
+                type: array
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 1
+    rec_name: Minimal Account Type Chart
+    name: Minimal Account Type Chart
+    parent: null
+    parent_: {}
+    sequence: 10
+    statement: null
+    assets: false
+    receivable: false
+    stock: false
+    payable: false
+    debt: false
+    revenue: false
+    expense: false
+    childs:
+      - id: 2
+        rec_name: Balance Sheet
+        childs: []
+  errors: null
+  pagination: null
+  status: 200
+  success_message: null
