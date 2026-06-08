@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Layout from '@theme/Layout';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css';
 
 // ─── Menu helpers ────────────────────────────────────────────────────────────
@@ -194,9 +195,11 @@ export default function ApiExplorer() {
   const [token, setToken] = useState('');
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
+  const menuJsonUrl = useBaseUrl('assets/menu.json');
+  const assetBase = useBaseUrl('');
 
   useEffect(() => {
-    fetch('assets/menu.json', { cache: 'no-store' })
+    fetch(menuJsonUrl, { cache: 'no-store' })
       .then((r) => r.json())
       .then((data) => {
         setMenu(data);
@@ -209,14 +212,16 @@ export default function ApiExplorer() {
           return null;
         }
         const first = firstLeaf(data);
-        if (first) setActiveYaml(first);
+        if (first) setActiveYaml(first.startsWith('http') ? first : `${assetBase}${first}`);
       })
       .catch((err) => console.warn('Failed to load menu.json', err));
-  }, []);
+  }, [menuJsonUrl]);
 
   const handleSelect = useCallback((path) => {
-    setActiveYaml(path);
-  }, []);
+    // path from menu.json is relative (e.g. "assets/doc/…") — prefix with baseUrl
+    const resolved = path.startsWith('http') ? path : `${assetBase}${path}`;
+    setActiveYaml(resolved);
+  }, [assetBase]);
 
   const filteredMenu = filterMenu(menu, searchQuery);
 

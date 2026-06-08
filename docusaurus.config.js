@@ -7,11 +7,11 @@ const config = {
   tagline: 'Interactive API reference for the Umbrella ERP platform',
   favicon: 'img/favicon.ico',
 
-  url: 'https://umbrella-api-docs.vercel.app',
-  baseUrl: '/',
+  url: 'https://elyas-nawabi.github.io',
+  baseUrl: '/docs/',
 
-  organizationName: 'milestone',
-  projectName: 'umbrella-api-docs',
+  organizationName: 'elyas-nawabi',
+  projectName: 'docs',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
