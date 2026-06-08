@@ -75,7 +75,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Umbrella API',
+        title: '',
         logo: {
           alt: 'Umbrella Logo',
           src: 'img/umbrella.png',
