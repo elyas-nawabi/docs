@@ -1,0 +1,207 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        comment: 
+          type: string
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        confirmed_by: 
+          type: integer
+        confirmed_by_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        contact: 
+          type: integer
+        contact_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        currency: 
+          type: integer
+        currency_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        delivery_date: 
+          type: string
+          format: date
+        description: 
+          type: string
+        id: 
+          type: integer
+        invoice_address: 
+          type: integer
+        invoice_address_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        invoice_method: 
+          type: string
+        invoice_party: 
+          type: integer
+        invoice_party_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        invoice_state: 
+          type: string
+        invoices: 
+          type: array
+        invoices_ignored: 
+          type: array
+        invoices_recreated: 
+          type: array
+        lines: 
+          type: array
+        moves: 
+          type: array
+        number: 
+        origin: 
+          type: string
+        party: 
+          type: integer
+        party_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        party_lang: 
+          type: string
+        payment_term: 
+          type: integer
+        payment_term_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        purchase_date: 
+          type: string
+          format: date
+        quoted_by: 
+          type: integer
+        quoted_by_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        reference: 
+          type: string
+        shipment_returns: 
+          type: array
+        shipment_state:   
+          type: string
+        shipments: 
+          type: array
+        state: 
+          type: string
+        tax_amount: 
+          type: integer
+        tax_amount_cache: 
+          type: integer
+        total_amount: 
+          type: integer
+        total_amount_cache: 
+          type: integer
+        untaxed_amount: 
+          type: integer
+        untaxed_amount_cache: 
+          type: integer
+        warehouse: 
+          type: integer
+        warehouse_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      comment: ''
+      company: 1
+      company_:
+        id: 1
+        name: elyas
+      confirmed_by: 1
+      confirmed_by_:
+        id: 1
+        name: milestone
+      contact: 1
+      contact_:
+        id: 1
+        name: Demo <017777>
+      create_date: '2024-09-02T16:38:18.843651'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      currency: 1
+      currency_:
+        id: 1
+        name: Afghani
+      delivery_date: '2024-09-02'
+      description: this is some description
+      id: 1
+      invoice_address: 3
+      invoice_address_:
+        id: 3
+        name: elyas, AC
+      invoice_method: order
+      invoice_party: 2
+      invoice_party_:
+        id: 2
+        name: elyas
+      invoice_state: none
+      invoices: []
+      invoices_ignored: []
+      invoices_recreated: []
+      lines: []
+      moves: []
+      number: 
+      origin: purchase.purchase,-1
+      party: 3
+      party_:
+        id: 3
+        name: milestone
+      party_lang: en
+      payment_term: 1
+      payment_term_:
+        id: 1
+        name: payment001
+      purchase_date: '2024-09-03'
+      quoted_by: 1
+      quoted_by_:
+        id: 1
+        name: milestone
+      rec_name: "[ab.hasib]"
+      reference: ab.hasib
+      shipment_returns: []
+      shipment_state: none
+      shipments: []
+      state: draft
+      tax_amount: 0
+      tax_amount_cache: 
+      total_amount: 0
+      total_amount_cache: 
+      untaxed_amount: 0
+      untaxed_amount_cache: 
+      warehouse: 5
+      warehouse_:
+        id: 5
+        name: Warehouse
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 200
+    success_message: null

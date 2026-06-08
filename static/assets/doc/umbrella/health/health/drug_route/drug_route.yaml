@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: drug route
+    description: drug route - drug route data management.
+paths:
+  '/health/drug-administration-routes/search':
+    $ref: 'get_drug_route.yaml'
+  '/health/drug-administration-routes':
+    $ref: 'post_delete_drug_route.yaml'
+  '/health/drug-administration-routes/{obj_id}':
+    $ref: 'get_put_drug_route_by_id.yaml'
+  

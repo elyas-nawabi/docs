@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: uom category
+    description: uom category - uom category data management.
+paths:
+  '/product/unit-of-measure-categories/search':
+    $ref: 'get_uom_category.yaml'
+  '/product/unit-of-measure-categories':
+    $ref: 'post_delete_uom_category.yaml'
+  '/product/unit-of-measure-categories/{obj_id}':
+    $ref: 'get_put_uom_category_by_id.yaml'
+ 

@@ -1,0 +1,17 @@
+      properties:
+        code:
+            type: string
+        name: 
+            type: string
+        notes: 
+            type: string
+        rec_name: 
+            type: string
+        
+      required:
+          - 
+      example:
+        code: BLACK
+        name: Black
+        notes: 
+        rec_name: Black

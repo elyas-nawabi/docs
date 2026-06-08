@@ -1,0 +1,15 @@
+      properties:
+        name: 
+            type: string
+        parent: 
+            type: integer
+        rec_name: 
+            type: string
+  
+      required:
+          - 
+      example:
+        name: Adrenal hormones and synthetic substitutes
+        parent: 116
+        rec_name: Medicaments / WHO essential Medicines / HORMONES, OTHER ENDOCRINE MEDICINES
+            AND CONTRACEPTIVES / Adrenal hormones and synthetic substitutes

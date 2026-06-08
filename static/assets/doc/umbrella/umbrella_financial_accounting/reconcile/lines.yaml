@@ -1,0 +1,78 @@
+    post:
+      tags:
+        - reconcile
+      summary: Reconcile line.
+      description: Reconcile line.
+      operationId: reconcileLine
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: 'schemas/reconcile-line.yaml'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        account: 
+                          type: integer
+                        company:
+                          type: integer
+                        currency:
+                          type: integer
+                        date:
+                          type: string 
+                          format: date 
+                        description:
+                          type: string
+                        lines:
+                          type: array 
+                        party:
+                          type: integer
+                        write_off:
+                          type: integer
+                        write_off_amount:
+                          type: integer
+                        session_id:
+                          type: integer
+                    errors:
+                      type: object
+                    pagination:
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data: null
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

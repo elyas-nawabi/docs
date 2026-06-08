@@ -1,0 +1,62 @@
+post:
+      tags:
+        - orthanc worklist template
+      summary: Create an orthanc worklist template.
+      description: Create an orthanc worklist template.
+      operationId: postOrthancWorklistTemplateById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: 'schemas/create-orthanc-worklist-template.yaml'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: 'schema.yaml'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+      tags:
+        - orthanc worklist template
+      summary: Delete orthanc worklist templates.
+      description: Delete orthanc worklist templates.
+      operationId: deleteOrthancWorklistTemplatesById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    

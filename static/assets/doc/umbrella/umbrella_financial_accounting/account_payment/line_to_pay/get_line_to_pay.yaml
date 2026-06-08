@@ -1,0 +1,236 @@
+    post:
+      tags:
+        - line to pay
+      summary: Get list of lines to pay.
+      description: Get list of lines to pay.
+      operationId: getLineToPay
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                          account:
+                            type: integer
+                          account_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          amount:
+                            type: number
+                            format: decimal
+                          amount_currency: 
+                            type: integer
+                          amount_second_currency: 
+                            type: integer
+                          company: 
+                            type: integer
+                          company_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          credit: 
+                            type: number
+                            format: decimal
+                          currency:
+                            type: integer
+                          currency_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          date:
+                            type: string 
+                            format: date
+                          debit: 
+                            type: integer
+                          delegated_amount: 
+                            type: integer
+                          description:
+                            type: string
+                          has_maturity_date: 
+                            type: boolean
+                          id: 
+                            type: integer
+                          journal: 
+                            type: integer
+                          journal_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          maturity_date: 
+                            type: string
+                            format: date
+                          move: 
+                            type: integer
+                          move_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          move_description_used:
+                            type: string
+                          move_origin:
+                            type: string
+                          move_origin_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          move_state: 
+                            type: string
+                          origin: 
+                            type: integer
+                          origin_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          party: 
+                            type: integer
+                          party_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          party_required: 
+                            type: boolean
+                          payable_receivable_balance: 
+                            type: integer
+                          payment_blocked: 
+                            type: boolean
+                          payment_direct_debit: 
+                            type: boolean
+                          payment_kind: 
+                            type: string
+                          payments:
+                            type: array
+                          period:
+                            type: integer
+                          period_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          rec_name: 
+                            type: string
+                          reconciliation: 
+                            type: integer
+                          reconciliation_: 
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          second_currency: 
+                            type: integer
+                          second_currency_: 
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          second_currency_required: 
+                            type: integer
+                          second_currency_required_: 
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          state: 
+                            type: string
+                          tax_lines: 
+                            type: array  
+                    errors:
+                      type: object
+                    pagination:
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - account: 2
+                    account_:
+                      id: 2
+                      name: Deposit
+                    amount: 0
+                    amount_currency: 1
+                    amount_second_currency: 
+                    company: 1
+                    company_:
+                      id: 1
+                      name: Milestone
+                    create_date: '2024-05-13T09:58:47.501863'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    credit: 0
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    date: '2024-05-13'
+                    debit: 0
+                    delegated_amount: 
+                    description: ''
+                    has_maturity_date: false
+                    id: 22
+                    journal: 2
+                    journal_:
+                      id: 2
+                      name: Expense
+                    maturity_date: 
+                    move: 13
+                    move_:
+                      id: 13
+                      name: '13'
+                    move_description_used: ''
+                    move_origin: 
+                    move_origin_: {}
+                    move_state: posted
+                    origin: 
+                    origin_: {}
+                    party: 1
+                    party_:
+                      id: 1
+                      name: Milestone
+                    party_required: true
+                    payable_receivable_balance: 
+                    payment_amount: 
+                    payment_blocked: false
+                    payment_currency: 1
+                    payment_currency_:
+                      id: 1
+                      name: Afghani
+                    payment_direct_debit: false
+                    payment_kind: 
+                    payments: []
+                    period: 9
+                    period_:
+                      id: 9
+                      name: 2024 Periods
+                    rec_name: "(Deposit)"
+                    reconciliation: 1
+                    reconciliation_:
+                      id: 1
+                      name: '1'
+                    second_currency: 
+                    second_currency_: {}
+                    second_currency_required: 
+                    second_currency_required_: {}
+                    state: valid
+                    tax_lines: []
+                    write_date: '2024-05-13T09:59:00.665702'
+                    write_uid: 1
+                    write_uid_:
+                      id: 1
+                      name: Administrator
+                errors: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 12
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

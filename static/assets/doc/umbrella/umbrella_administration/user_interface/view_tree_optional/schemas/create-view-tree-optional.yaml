@@ -1,0 +1,20 @@
+properties:
+   field: 
+      type: string
+   rec_name: 
+      type: string
+   user: 
+      type: integer
+   value: 
+      type: boolean
+   view_id:  
+      type: integer
+
+required:
+   -     
+example:
+   field: name
+   rec_name: '55'
+   user: 1
+   value: false
+   view_id: 161

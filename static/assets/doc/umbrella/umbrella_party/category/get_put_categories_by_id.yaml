@@ -1,0 +1,68 @@
+    get:
+      tags:
+        - category
+      summary: Get one category.
+      description: Get one category.
+      operationId: getCategoryById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 3
+      responses:
+        '200':
+          description: OK.
+          content:
+            application/json:
+              schema:
+                $ref: 'schema.yaml'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
+    put:
+      tags:
+        - category
+      summary: Update a category.
+      description: Update a category.
+      operationId: updateCategoryById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: 'schemas/create-category.yaml'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: 'schema.yaml'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+  

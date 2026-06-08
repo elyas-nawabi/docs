@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: orthanc worklist template
+    description: orthanc worklist template - orthanc worklist template data management.
+paths:
+  '/health-orthanc/worklist-templates/search':
+    $ref: 'get_orthanc_worklist_template.yaml'
+  '/health-orthanc/worklist-templates':
+    $ref: 'post_delete_orthanc_worklist_template.yaml'
+  '/health-orthanc/worklist-templates/{obj_id}':
+    $ref: 'get_put_orthanc_worklist_template_by_id.yaml'
+  '/health-orthanc/get-default-template':
+    $ref: 'get_default_template.yaml'
+  

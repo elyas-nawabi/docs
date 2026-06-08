@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: pathology
+    description: pathology - pathology data management.
+paths:
+  '/health/conditions/search':
+    $ref: 'get_pathology.yaml'
+  '/health/conditions':
+    $ref: 'post_delete_pathology.yaml'
+  '/health/conditions/{obj_id}':
+    $ref: 'get_put_pathology_by_id.yaml'
+  

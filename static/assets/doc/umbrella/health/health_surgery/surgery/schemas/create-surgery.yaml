@@ -1,0 +1,161 @@
+      properties:
+        admission: 
+          type: integer
+        age: 
+          type: integer
+        anesthesia_report: 
+          type: string
+        anesthesia_type:  
+          type: string
+        anesthetist: 
+          type: integer
+        approach: 
+          type: string
+        classification: 
+          type: string
+        clavien_dindo: 
+          type: string
+        code: 
+          type: string
+        complications_notes: 
+          type: string
+        computed_age: 
+          type: string
+        description: 
+          type: string
+        discharge_instructions: 
+          type: string
+        drains: 
+          type: array
+        ellapsed_time: 
+          type: integer
+        extra_info: 
+          type: string
+        gender: 
+          type: string
+        institution: 
+          type: integer
+        laterality: 
+          type: string
+        location: 
+          type: integer
+        main_procedure: 
+          type: integer
+        moves: 
+          type: array
+        operating_room: 
+          type: integer
+        pathology:
+          type: integer
+        patient: 
+          type: integer
+        patient_positioning: 
+          type: string
+        postoperative_dx: 
+          type: integer
+        postoperative_guidelines: 
+          type: string
+        preop_antibiotics: 
+          type: boolean
+        preop_assessment: 
+          type: integer
+        preop_bleeding_risk: 
+          type: boolean
+        preop_oximeter: 
+          type: boolean
+        preop_site_marking: 
+          type: boolean
+        preop_sterility: 
+          type: boolean
+        procedures: 
+          type: array
+        protocol: 
+          type: integer
+        rec_name:   
+          type: string
+        report_surgery_date: 
+          type: string
+          format: date
+        report_surgery_time: 
+          type: string
+        signed_by: 
+          type: integer
+        specialty:
+          type: string
+        state: 
+          type: string
+        supplies: 
+          type: array
+        surgeon: 
+          type: integer
+        surgery_complications: 
+          type: array
+        surgery_date: 
+          type: string
+          format: date
+        surgery_end_date: 
+          type: string
+          format: date
+        surgery_length: 
+          type: string
+        surgery_team: 
+          type: array
+        surgical_intervention:
+          type: integer 
+        surgical_wound: 
+          type: string 
+        
+      required:
+          - 
+      example:
+        admission: 
+        age: 
+        anesthesia_report: ''
+        anesthesia_type: regional
+        anesthetist: 
+        approach: endoscopic
+        classification: o
+        clavien_dindo: 
+        code: SRG-2024-00001
+        complications_notes: ''
+        computed_age: 
+        description: this is some description
+        discharge_instructions: ''
+        drains: []
+        ellapsed_time: 
+        extra_info: ''
+        gender: u
+        institution: 1
+        laterality: 
+        location: 
+        main_procedure: 
+        moves: []
+        operating_room: 
+        pathology: 
+        patient: 1
+        patient_positioning: 
+        postoperative_dx: 
+        postoperative_guidelines: ''
+        preop_antibiotics: false
+        preop_assessment: 
+        preop_bleeding_risk: true
+        preop_oximeter: false
+        preop_site_marking: false
+        preop_sterility: false
+        procedures: []
+        protocol: 
+        rec_name: SRG-2024-00001  (this is some description)
+        report_surgery_date: '2024-08-11'
+        report_surgery_time: '17:43:01'
+        signed_by: 
+        specialty: 
+        state: draft
+        supplies: []
+        surgeon: 1
+        surgery_complications: []
+        surgery_date: '2024-08-11T17:43:01'
+        surgery_end_date: 
+        surgery_length: 
+        surgery_team: []
+        surgical_intervention: 
+        surgical_wound: 

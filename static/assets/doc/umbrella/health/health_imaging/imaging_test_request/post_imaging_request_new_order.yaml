@@ -1,0 +1,88 @@
+post:
+      tags:
+        - imaging test request
+      summary: Create an imaging test request.
+      description: Create an imaging test request.
+      operationId: postImagingTestRequestById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                doctor:
+                  type: integer
+                patient: 
+                  type: integer
+              required:
+                - doctor
+                - patient
+              example:
+                doctor: 1
+                patient: 2
+                
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                data: 
+                  type: object
+                error: 
+                  type: object 
+                pagination:
+                  type: object
+                status:
+                  type: integer
+                success_message:
+                  type: object
+              example:
+                data: null
+                error: null 
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+      tags:
+        - imaging test request
+      summary: Delete imaging test requests.
+      description: Delete imaging test requests.
+      operationId: deleteImagingTestRequestsById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    

@@ -1,0 +1,17 @@
+      properties:
+        enabled: true
+        fields: "\nname:people:name,\nlastname:people:lastname,\ndob:people:dob,\ngender:people:gender,\nfederation_account:people:id\n
+            \           "
+        model: 
+            type: string 
+        rec_name: 
+            type: string 
+        
+      required:
+          - 
+      example:
+        enabled: true
+        fields: "\nname:people:name,\nlastname:people:lastname,\ndob:people:dob,\ngender:people:gender,\nfederation_account:people:id\n
+            \           "
+        model: party.party
+        rec_name: '1'

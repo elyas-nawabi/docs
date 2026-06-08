@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: sequence strict
+    description: sequence strict - sequence strict data management.
+paths:
+  '/administration/sequences-restrict/search':
+    $ref: 'get_sequence_strict.yaml'
+  '/administration/sequences-restrict':
+    $ref: 'post_delete_sequence_strict.yaml'
+  '/administration/sequences-restrict/{obj_id}':
+    $ref: 'get_put_sequence_strict_by_id.yaml'
+  

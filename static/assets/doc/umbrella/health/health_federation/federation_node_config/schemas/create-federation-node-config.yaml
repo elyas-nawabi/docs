@@ -1,0 +1,14 @@
+      properties:
+        enabled: 
+            type: boolean
+        host: 
+            type: string
+        rec_name: 
+            type: string
+        
+      required:
+          - 
+      example:
+        enabled: true
+        host: localhost
+        rec_name: 

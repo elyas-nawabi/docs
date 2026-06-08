@@ -1,0 +1,18 @@
+      properties:
+        code:
+            type: string
+        description:
+            type: string
+        name:
+            type: string
+        rec_name:
+            type: string
+        
+      required:
+          - 
+      example:
+        code: NPO
+        description: Nil per Os. Withhold oral food and fluids from the patient
+        name: Nothing by Mouth / NPO
+        rec_name: Nothing by Mouth / NPO
+        

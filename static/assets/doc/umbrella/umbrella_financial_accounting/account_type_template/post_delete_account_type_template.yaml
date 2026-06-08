@@ -1,0 +1,64 @@
+post:
+  tags:
+    - account type template
+  summary: Create an account type template.
+  description: |
+    Create a global account type template node. Use `parent` to attach under an existing type template, or omit `parent` for a new root type chart.
+
+    To materialize account types for a company from templates use `GET /financial-accounting/account-types/import-default-account-types-to-company/{company_id}` instead.
+  operationId: postAccountTypeTemplate
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: 'schemas/create-account-type-template.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+  tags:
+    - account type template
+  summary: Delete account type templates.
+  description: Delete one or more account type template records by id.
+  operationId: deleteAccountTypeTemplate
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

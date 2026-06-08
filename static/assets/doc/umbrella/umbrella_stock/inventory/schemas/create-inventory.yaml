@@ -1,0 +1,62 @@
+      properties:
+        company: 
+          type: integer
+        date: 
+          type: string 
+          format: date
+        empty_quantity: 
+          type: string 
+        lines:
+          type: array
+          properties:
+            expected_quantity: 
+              type: integer
+            inventory: 
+              type: integer
+            inventory_date: 
+              type: string 
+              format: date
+            inventory_location: 
+              type: integer
+            inventory_state: 
+              type: string
+            moves: 
+              type: array
+            product: 
+              type: integer
+            quantity: 
+              type: integer
+            rec_name: 
+              type: string
+            unit: 
+              type: integer
+        location: 
+          type: integer
+        number: 
+          type: string
+        rec_name: 
+          type: string
+        state: 
+          type: string
+  
+      required:
+          - 
+      example:
+        company: 1
+        date: '2024-08-10'
+        empty_quantity: keep
+        lines:
+        - expected_quantity: 0
+          inventory: 1
+          inventory_date: '2024-08-10'
+          inventory_location: 2
+          inventory_state: draft
+          moves: []
+          product: 384
+          quantity: 1
+          rec_name: acetazolamide - 1
+          unit: 1
+        location: 2
+        number: '1'
+        rec_name: "[1] Output Zone @ 08/10/2024"
+        state: draft 

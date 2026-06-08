@@ -1,0 +1,75 @@
+    get:
+      tags:
+        - action wizard
+      summary: Get action wizard details.
+      description: Get action wizard details.
+      operationId: getActionWizards
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: List of action wizards.
+          content:
+            application/json:
+              schema:
+                type: array
+                properties:
+                  create_date: 
+                    type: string 
+                    format: date 
+                  create_uid: 
+                    type: integer
+                  create_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  active: 
+                    type: boolean
+                  id: 
+                    type: integer
+                  name: 
+                    type: string
+                  rec_name: 
+                    type: string
+                  type: 
+                    type: string
+                  wiz_name:
+                    type: string
+                  write_date:
+                    type: string
+                    format: date 
+                  write_uid:
+                    type: integer
+                  write_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              example:
+              - active: true
+                create_date: '2024-06-24T12:35:58.699428'
+                create_uid: 0
+                create_uid_:
+                  id: 0
+                  name: Root
+                id: 4
+                name: Show View
+                rec_name: Show View
+                type: ir.action.wizard
+                wiz_name: ir.ui.view.show
+                write_date: '2024-06-24T12:35:58.699428'
+                write_uid: 0
+                write_uid_:
+                  id: 0
+                  name: Root
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    

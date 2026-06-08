@@ -1,0 +1,69 @@
+get:
+  tags:
+    - leads and opportunities
+  summary: Get one lead or opportunity.
+  description: Get a lead or opportunity by ID.
+  operationId: getLeadsAndOpportunitiesById
+  parameters:
+    - name: obj_id
+      in: path
+      schema:
+        type: integer
+      required: true
+      example: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    '404':
+      description: 404 Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+put:
+  tags:
+    - leads and opportunities
+  summary: Update a lead or opportunity.
+  description: Update a lead or opportunity by ID.
+  operationId: updateLeadsAndOpportunitiesById
+  parameters:
+    - name: obj_id
+      required: true
+      in: path
+      schema:
+        type: integer
+      example: 1
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: 'schemas/create-leads-and-opportunities.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

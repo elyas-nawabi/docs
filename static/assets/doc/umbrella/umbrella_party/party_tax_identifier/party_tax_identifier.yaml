@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: party tax identifier
+    description: party tax identifier - party tax identifier data management.
+paths:
+  '/party/party-tax-identifiers/search':
+    $ref: 'get_party_tax_identifier.yaml'
+  '/party/party-tax-identifiers':
+    $ref: 'post_delete_party_tax_identifier.yaml'
+  '/party/party-tax-identifiers/{obj_id}':
+    $ref: 'get_put_party_tax_identifier_by_id.yaml'
+  

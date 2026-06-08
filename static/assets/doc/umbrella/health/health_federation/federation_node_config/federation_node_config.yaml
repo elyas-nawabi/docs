@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: federation node config
+    description: federation node config - federation node config data management.
+paths:
+  '/health-federation/node-configurations/search':
+    $ref: 'get_federation_node_config.yaml'
+  '/health-federation/node-configurations':
+    $ref: 'post_delete_federation_node_config.yaml'
+  '/health-federation/node-configurations/{obj_id}':
+    $ref: 'get_put_federation_node_config_by_id.yaml'
+  

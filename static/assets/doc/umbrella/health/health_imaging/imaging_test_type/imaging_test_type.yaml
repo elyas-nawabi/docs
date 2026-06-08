@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: imaging test type
+    description: imaging test type - imaging test type data management.
+paths:
+  '/health-imaging/medical-imaging-types/search':
+    $ref: 'get_imaging_test_type.yaml'
+  '/health-imaging/medical-imaging-types':
+    $ref: 'post_delete_imaging_test_type.yaml'
+  '/health-imaging/medical-imaging-types/{obj_id}':
+    $ref: 'get_put_imaging_test_type_by_id.yaml'
+  

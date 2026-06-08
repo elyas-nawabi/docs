@@ -1,0 +1,18 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: health service
+    description: health service - health service data management.
+paths:
+  '/health-services/health-services/search':
+    $ref: 'get_health_service.yaml'
+  '/health-services/health-services':
+    $ref: 'post_delete_health_service.yaml'
+  '/health-services/health-services/{obj_id}':
+    $ref: 'get_put_health_service_by_id.yaml'
+  '/health-services/health-services/{obj_id}/set-to-draft':
+    $ref: 'get_set_to_draft.yaml'
+  '/health-services/health-services/{obj_id}/create-health-service-invoice':
+    $ref: 'get_create_health_service_invoice.yaml'
+  

@@ -1,0 +1,46 @@
+      properties:
+        comments: 
+          type: string
+        health_condition: 
+          type: integer
+        healthprof: 
+          type: integer
+        institution: 
+          type: integer
+        name: 
+          type: integer
+        patient: 
+          type: integer
+        rec_name: 
+          type: string
+        reserve_from: 
+          type: string
+          format: date
+        reserve_to: 
+          type: string
+          format: date
+        specialty: 
+          type: integer
+        state: 
+          type: string
+        surgery: 
+          type: integer
+        urgency: 
+          type: string
+        
+      required:
+          - 
+      example:
+        comments: remarks here...
+        health_condition: 47527
+        healthprof: 1
+        institution: 1
+        name: 1
+        patient: 1
+        rec_name: '1'
+        reserve_from: '2024-08-11T17:37:18'
+        reserve_to: '2024-08-11T18:37:18'
+        specialty: 1
+        state: free
+        surgery: 1
+        urgency: r

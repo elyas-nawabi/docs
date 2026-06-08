@@ -1,0 +1,75 @@
+get:
+  tags:
+    - tax rule template
+  summary: Get one tax rule template.
+  description: |
+    Returns a single `account.tax.rule.template` record with all fields including the `lines` array (rule line templates).
+  operationId: getTaxRuleTemplateById
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+      example: 30
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    '404':
+      description: 404 Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+
+put:
+  tags:
+    - tax rule template
+  summary: Update a tax rule template.
+  description: Update fields on an existing tax rule template.
+  operationId: updateTaxRuleTemplateById
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+      example: 30
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: 'schemas/create-tax-rule-template.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

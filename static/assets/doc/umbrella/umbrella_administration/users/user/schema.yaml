@@ -1,0 +1,150 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        actions: 
+          type: array
+        active: 
+          type: boolean
+        applications: 
+          type: array
+        avatar: 
+          type: string
+        avatar_badge_url: 
+          type: string
+        avatar_url: 
+          type: string
+        calendar: 
+          type: integer
+        calendar_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        companies: 
+          type: array
+        company: 
+          type: integer
+        company_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        company_filter: 
+          type: string
+        email: 
+          type: string
+        employee: 
+          type: integer
+        employee_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        employees: 
+          type: array
+        groups: 
+          type: array
+        id: 
+          type: integer
+        language: 
+          type: integer
+        language_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        language_direction: 
+          type: string
+        login: 
+          type: string
+        menu: 
+          type: integer
+        menu_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+          type: string
+        password: 
+          type: string
+        rec_name: 
+          type: string
+        sessions: 
+          type: integer
+        signature: 
+          type: string
+        status_bar: 
+          type: string
+        use_caldav: 
+          type: boolean
+        warehouse: 
+          type: integer
+        warehouse_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      actions: []
+      active: 
+      applications: []
+      avatar: "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABkAGQDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAQGAgUHAQP/xAAvEAACAQMBBAoBBQEAAAAAAAAAAQIDBBEFBhIhQRMUIjFRcoGRobHBFTJhcZTh/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECBAMF/8QAIBEBAQADAAICAwEAAAAAAAAAAAECAxESMQQTISJBcf/aAAwDAQACEQMRAD8A2YAPBeMAAAAAAAAAAAAAAAAAAAAAABlTpVK1SNOlCU5yeIxist/0gMQSK1ld21NVK9pXpQbwpVKbis+GWiOLLPabOewABAAAAAAAAAAABZtibLptWndSXYoQ4eaXBfGSsnQdChHRdk53tRJTnF1XnnyivXh7nf42Pc+31Py7aMe59v8AE/W6FPVtCu6VFqcob27jlOD7vjHqcvLpsRqEqtS7tKssyk+mjnm+6X4K3rdl1DWbq3SxBT3oeV8V9nT5F+zHHZP8X3/vjM414AMjMAAAAAAAAAACRYWkr6/oWsO+rNRz4Lmy47a3attMttPp9lTeXFcoR7l749jX7EWXS6lVvJLs0IbsfNL/AJn3NzqOvaC72pTu7eNetSbpuUqCnjD7k3/OTZqwk1W286168ZNV7edUzRL39P1i2uW8QU92flfB/ZZNurPtW19FeNKb+V+T6vXNluWn0v8ALE2d/wBBtDszWlaZcXFumnHDUovux6Y9S2GufXlhMu/1bHCeFwl65oADCxAAAAAAAAAAA6Foiho2yUrma7coOs882/2r69zn0pSnOU5NuUnlt82eA67NvnJJOcdM9nlJOeguewl7u9as5PwqwXw/wUwEatl15TJGvPwy8k/W7TqWsXNFLEFPeh5XxX3ggAFMrLexW3t7AAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf//Z"
+      avatar_badge_url: 
+      avatar_url: "/avatar/dW1icmVsbGE%3D/403c8931315748daafd83373aacbd621"
+      calendar: 
+      calendar_: {}
+      companies: []
+      company: 
+      company_: {}
+      company_filter: all
+      create_date: '2024-09-17T08:58:53.058544'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      email: 
+      employee: 
+      employee_: {}
+      employees: []
+      groups: []
+      id: 28
+      language: 
+      language_: {}
+      language_direction: ltr
+      login: admin2
+      menu: 2
+      menu_:
+        id: 2
+        name: Menu
+      name: 
+      password: xxxxxxxxxx
+      rec_name: admin2
+      sessions: 0
+      signature: 
+      status_bar: 
+      use_caldav: 
+      warehouse: 
+      warehouse_: {}
+      write_date: '2024-09-17T08:58:53.058544'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
+
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

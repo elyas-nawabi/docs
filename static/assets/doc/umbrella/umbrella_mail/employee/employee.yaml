@@ -1,0 +1,11 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: employee
+    description: employee - employee activity plan management.
+paths:
+  '/company/employees/launch-plan':
+    $ref: 'post_launch_plan.yaml'
+  '/company/employees/{obj_id}/planned-activities':
+    $ref: 'get_planned_activities.yaml' 

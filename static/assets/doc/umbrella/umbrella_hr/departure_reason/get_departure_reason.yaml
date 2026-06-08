@@ -1,0 +1,98 @@
+post:
+  tags:
+    - departure reasons
+  summary: Get departure reasons details.
+  description: Get departure reasons details.
+  operationId: getDepartureReasons
+  requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of departure reasons.
+      content:
+        application/json:
+          schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  properties:
+                    create_date: 
+                      type: string 
+                      format: date 
+                    create_uid: 
+                      type: integer
+                    create_uid_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    id: 
+                      type: integer
+                    name: 
+                      type: string
+                    reason_code: 
+                      type: integer
+                    rec_name: 
+                      type: string
+                    sequence: 
+                      type: integer
+                    write_date:
+                      type: string
+                      format: date 
+                    write_uid:
+                      type: integer
+                error:
+                  type: object
+                  nullable: true
+                pagination:
+                  type: object
+                  properties:
+                    page:
+                      type: integer
+                    per_page:
+                      type: integer
+                    total_pages:
+                      type: integer
+                    total_records:
+                      type: integer
+                status:
+                  type: integer
+                success_message:
+                  type: string
+                  nullable: true
+          example:
+            data:
+              - create_date: '2025-02-26T10:36:30.627365'
+                create_uid: 0
+                create_uid_:
+                  id: 0
+                  name: Root
+                id: 1
+                name: Retired
+                reason_code: 340
+                rec_name: Retired
+                sequence: 10
+                write_date: 
+                write_uid: 
+            error: null
+            pagination:
+              page: 1
+              per_page: 100
+              total_pages: 1
+              total_records: 1
+            status: 200
+            success_message: null
+    
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

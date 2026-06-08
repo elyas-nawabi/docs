@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: glasgow
+    description: glasgow - glasgow data management.
+paths:
+  '/health-icu/gcs/search':
+    $ref: 'get_glasgow.yaml'
+  '/health-icu/gcs':
+    $ref: 'post_delete_glasgow.yaml'
+  '/health-icu/gcs/{obj_id}':
+    $ref: 'get_put_glasgow_by_id.yaml'
+  

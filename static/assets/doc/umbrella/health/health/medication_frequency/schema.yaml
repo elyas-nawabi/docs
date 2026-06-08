@@ -1,0 +1,60 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        abbreviation: 
+          type: string
+        code: 
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        name: 
+          type: string
+        rec_name: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      abbreviation: od
+      code: '229797004'
+      create_date: '2024-05-27T12:26:56.434108'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      id: 1
+      name: 1 time per day
+      rec_name: 1 time per day
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

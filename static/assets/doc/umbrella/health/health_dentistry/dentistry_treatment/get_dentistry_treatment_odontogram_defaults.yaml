@@ -1,0 +1,72 @@
+    get:
+      tags:
+        - dentistry treatment
+      summary: Get one dentistry treatment.
+      description: Get one dentistry treatment.
+      operationId: getDentistrytreatmentById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  defaults:
+                    type: object
+                    properties:
+                      d11: 
+                        type: boolean
+                      i11: 
+                        type: boolean
+                      include_primary: 
+                        type: boolean
+                      l31: 
+                        type: boolean
+                      m11: 
+                        type: boolean
+                      o14: 
+                        type: boolean
+                      p11: 
+                        type: boolean
+                      t11: 
+                        type: string
+                      v11: 
+                        type: boolean
+              example:
+                defaults:
+                  d11: false
+                  i11: false
+                  include_primary: false
+                  l31: false
+                  m11: false
+                  o14: false
+                  p11: false
+                  t11: ''
+                  v11: false
+                  
+
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+    

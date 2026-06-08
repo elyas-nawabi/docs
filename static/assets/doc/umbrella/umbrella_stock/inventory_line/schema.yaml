@@ -1,0 +1,104 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        expected_quantity: 
+          type: integer
+        id: 
+          type: integer
+        inventory: 
+          type: integer
+        inventory_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        inventory_date: 
+          type: string
+          format: date
+        inventory_location: 
+          type: integer
+        inventory_location_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        inventory_state: 
+          type: string
+        lot: 
+          type: integer
+        moves: 
+          type: array
+        product:  
+          type: integer
+        product_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        quantity: 
+          type: integer
+        rec_name: 
+          type: string
+        unit: 
+          type: integer
+        unit_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      create_date: '2025-03-02T09:38:52.237430'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      expected_quantity: 0
+      id: 14
+      inventory: 1
+      inventory_:
+        id: 1
+        name: "[1] [IN] Input Zone @ 03/02/2025"
+      inventory_date: '2025-03-02'
+      inventory_location: 1
+      inventory_location_:
+        id: 1
+        name: "[IN] Input Zone"
+      inventory_state: draft
+      lot: 
+      moves: []
+      product: 107
+      product_:
+        id: 107
+        name: cefotaxime
+      quantity: 1
+      rec_name: cefotaxime
+      unit: 1
+      unit_:
+        id: 1
+        name: Unit
+      write_date: '2025-03-02T09:39:13.321772'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
+    error: 
+    pagination: 
+    status: 200
+    success_message: 

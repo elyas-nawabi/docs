@@ -1,0 +1,15 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: journal period
+    description: journal period - journal period data management.
+paths:
+  '/financial-accounting/journals-periods/search':
+    $ref: 'get_journal_period.yaml'
+  '/financial-accounting/journals-periods/{obj_id}/close':
+    $ref: 'close_journal_period.yaml'
+  '/financial-accounting/journals-periods/{obj_id}/reopen':
+    $ref: 'reopen_journal_period.yaml'
+  
+  

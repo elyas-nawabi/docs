@@ -1,0 +1,115 @@
+      properties:
+        comment: 
+          type: string
+        company: 
+          type: integer
+        confirmed_by: 
+          type: integer
+        contact: 
+          type: integer
+        currency: 
+          type: integer
+        delivery_date: 
+          type: string
+          format: date
+        description: 
+          type: string
+        invoice_address: 
+          type: integer
+        invoice_method: 
+          type: string
+        invoice_party: 
+          type: integer
+        invoice_state: 
+          type: string
+        invoices: 
+          type: array
+        invoices_ignored: 
+          type: array
+        invoices_recreated: 
+          type: array
+        lines: 
+          type: array
+        moves: 
+          type: array
+        number: 
+        origin: 
+          type: string
+        party: 
+          type: integer
+        party_lang: 
+          type: string
+        payment_term: 
+          type: integer
+        purchase_date: 
+          type: string
+          format: date
+        quoted_by: 
+          type: integer
+        rec_name: 
+          type: string
+        reference: 
+          type: string
+        shipment_returns: 
+          type: array
+        shipment_state:   
+          type: string
+        shipments: 
+          type: array
+        state: 
+          type: string
+        tax_amount: 
+          type: integer
+        tax_amount_cache: 
+          type: integer
+        total_amount: 
+          type: integer
+        total_amount_cache: 
+          type: integer
+        untaxed_amount: 
+          type: integer
+        untaxed_amount_cache: 
+          type: integer
+        warehouse: 
+          type: integer
+          
+      required:
+        - 
+        
+      example:
+        comment: ''
+        company: 1
+        confirmed_by: 1
+        contact: 1
+        currency: 1
+        delivery_date: '2024-09-02'
+        description: this is some description
+        invoice_address: 3
+        invoice_method: order
+        invoice_party: 2
+        invoice_state: none
+        invoices: []
+        invoices_ignored: []
+        invoices_recreated: []
+        lines: []
+        moves: []
+        number: 
+        origin: purchase.purchase,-1
+        party: 3
+        party_lang: en
+        payment_term: 1
+        purchase_date: '2024-09-03'
+        quoted_by: 1
+        rec_name: "[ab.hasib]"
+        reference: ab.hasib
+        shipment_returns: []
+        shipment_state: none
+        shipments: []
+        state: draft
+        tax_amount: 0
+        tax_amount_cache: 
+        total_amount: 0
+        total_amount_cache: 
+        untaxed_amount: 0
+        untaxed_amount_cache: 
+        warehouse: 5

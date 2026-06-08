@@ -1,0 +1,162 @@
+post:
+  tags:
+    - contract
+  summary: Get contract details.
+  description: Get contract details.
+  operationId: getContracts
+  requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of contracts.
+      content:
+        application/json:
+          schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  properties:
+                    create_date: 
+                      type: string 
+                      format: date 
+                    create_uid: 
+                      type: integer
+                    create_uid_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    company: 
+                      type: integer
+                    company_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    contract_type: 
+                      type: integer
+                    contract_type_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    date_end: 
+                      type: string
+                      format: date
+                    date_start:
+                      type: string
+                      format: date
+                    department: 
+                      type: integer
+                    department_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    employee: 
+                      type: integer
+                    employee_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    id: 
+                      type: integer
+                    job: 
+                      type: integer
+                    job_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    kanban_state: 
+                      type: string
+                    name: 
+                      type: string
+                    rec_name: 
+                      type: string
+                    state: 
+                      type: string
+                    structure_type: 
+                      type: integer
+                    structure_type_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    wage: 
+                      type: integer
+                    write_date:
+                      type: string
+                      format: date 
+                    write_uid:
+                      type: integer
+                    write_uid_:
+                      $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                error:
+                  type: object
+                  nullable: true
+                pagination:
+                  type: object
+                  properties:
+                    page:
+                      type: integer
+                    per_page:
+                      type: integer
+                    total_pages:
+                      type: integer
+                    total_records:
+                      type: integer
+                status:
+                  type: integer
+                success_message:
+                  type: string
+                  nullable: true
+          example:
+            data:
+              - company: 1
+                company_:
+                  id: 1
+                  name: Milestone
+                contract_type: 1
+                contract_type_:
+                  id: 1
+                  name: Full Time
+                create_date: '2025-03-16T10:32:04.732972'
+                create_uid: 1
+                create_uid_:
+                  id: 1
+                  name: Administrator
+                date_end: '2025-03-31'
+                date_start: '2025-03-16'
+                department: 1
+                department_:
+                  id: 1
+                  name: Technical
+                employee: 8
+                employee_:
+                  id: 8
+                  name: Milestone
+                id: 1
+                job: 1
+                job_:
+                  id: 1
+                  name: Manager
+                kanban_state: normal
+                name: my refrence
+                rec_name: my refrence
+                state: open
+                structure_type: 1
+                structure_type_:
+                  id: 1
+                  name: NTA Grade A
+                wage: 12
+                write_date: '2025-03-16T10:32:21.595327'
+                write_uid: 1
+                write_uid_:
+                  id: 1
+                  name: Administrator
+
+            error: null
+            pagination:
+              page: 1
+              per_page: 100
+              total_pages: 1
+              total_records: 9
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

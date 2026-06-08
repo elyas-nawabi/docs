@@ -1,0 +1,7 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: hr payroll
+    description: hr payroll - module overview (no REST endpoints documented yet).
+paths: {}

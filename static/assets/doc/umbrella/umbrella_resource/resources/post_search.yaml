@@ -1,0 +1,59 @@
+post:
+  tags:
+    - Resources
+  summary: Search resources
+  description: List of Resources with filtering and pagination
+  operationId: searchResources
+  requestBody:
+    required: true
+    description: Search criteria and pagination
+    content:
+      application/json:
+        schema:
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: List of resources
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: 'schema.yaml#/schema'
+              errors:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 1
+                name: "Default Resource"
+                res_model: 1
+                company: 1
+            errors: null
+            pagination:
+              page: 1
+              per_page: 20
+              total: 1
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401' 

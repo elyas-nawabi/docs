@@ -1,0 +1,16 @@
+properties:
+  category: 
+    type: integer
+  code: 
+    type: string
+  name: 
+    type: string
+  rec_name: 
+    type: string
+required:
+
+example:
+  category: 1
+  code: e110
+  name: For personal consumption (food, medicines)
+  rec_name: For personal consumption (food, medicines)

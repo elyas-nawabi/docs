@@ -1,0 +1,64 @@
+post:
+  tags:
+    - account template
+  summary: Create an account template.
+  description: |
+    Create a global account template node. Use `parent` to attach under an existing template, or omit `parent` for a new root chart.
+
+    To materialize accounts for a company from a root template, use `POST /financial-accounting/accounts/create-coa-from-template` instead of creating `account.account` rows manually.
+  operationId: postAccountTemplate
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: 'schemas/create-account-template.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+  tags:
+    - account template
+  summary: Delete account templates.
+  description: Delete one or more account template records by id.
+  operationId: deleteAccountTemplate
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

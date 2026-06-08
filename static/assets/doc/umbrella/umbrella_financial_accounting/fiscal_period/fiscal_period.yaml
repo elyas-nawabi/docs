@@ -1,0 +1,20 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: fiscal period
+    description: fiscal period - fiscal period data management.
+paths:
+  '/financial-accounting/fiscal-periods/search':
+    $ref: 'get_fiscal_period.yaml'
+  '/financial-accounting/fiscal-periods':
+    $ref: 'post_delete_fiscal_period.yaml'
+  '/financial-accounting/fiscal-periods/{obj_id}':
+    $ref: 'get_put_fiscal_period_by_id.yaml'
+  '/financial-accounting/fiscal-periods/{obj_id}/close':
+    $ref: 'get_close_fiscal_period.yaml'
+  '/financial-accounting/fiscal-periods/{obj_id}/lock':
+    $ref: 'get_lock_fiscal_period.yaml'
+  '/financial-accounting/fiscal-periods/{obj_id}/reopen':
+    $ref: 'get_reopen_fiscal_period.yaml'
+  

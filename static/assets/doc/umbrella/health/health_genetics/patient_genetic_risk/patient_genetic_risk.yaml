@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: patient genetic risk
+    description: patient genetic risk - patient genetic risk data management.
+paths:
+  '/health-genetics/person-genetic-information/search':
+    $ref: 'get_patient_genetic_risk.yaml'
+  '/health-genetics/person-genetic-information':
+    $ref: 'post_delete_patient_genetic_risk.yaml'
+  '/health-genetics/person-genetic-information/{obj_id}':
+    $ref: 'get_put_patient_genetic_risk_by_id.yaml'
+  

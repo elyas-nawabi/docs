@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: federation country configuration
+    description: federation country configuration - federation country configuration data management.
+paths:
+  '/health/federation-country-configurations/search':
+    $ref: 'get_federation_country_config.yaml'
+  '/health/federation-country-configurations':
+    $ref: 'post_delete_federation_country_config.yaml'
+  '/health/federation-country-configurations/{obj_id}':
+    $ref: 'get_put_federation_country_config_by_id.yaml'
+  

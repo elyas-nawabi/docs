@@ -1,0 +1,68 @@
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        expected_quantity: 
+          type: integer
+        id: 
+          type: integer
+        inventory: 
+          type: integer
+        inventory_date: 
+          type: string
+          format: date
+        inventory_location: 
+          type: integer
+        inventory_state: 
+          type: string
+        lot: 
+          type: integer
+        moves: 
+          type: array
+        product:  
+          type: integer
+        quantity: 
+          type: integer
+        rec_name: 
+          type: string
+        unit: 
+          type: integer
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+  
+      required:
+          - 
+      example:
+        create_date: '2025-03-02T09:38:52.237430'
+        create_uid: 1
+        expected_quantity: 0
+        id: 14
+        inventory: 1
+        inventory_:
+          id: 1
+          name: "[1] [IN] Input Zone @ 03/02/2025"
+        inventory_date: '2025-03-02'
+        inventory_location: 1
+        inventory_location_:
+          id: 1
+          name: "[IN] Input Zone"
+        inventory_state: draft
+        lot: 
+        moves: []
+        product: 107
+        product_:
+          id: 107
+          name: cefotaxime
+        quantity: 1
+        rec_name: cefotaxime
+        unit: 1
+        unit_:
+          id: 1
+          name: Unit
+        write_date: '2025-03-02T09:39:13.321772'
+        write_uid: 1

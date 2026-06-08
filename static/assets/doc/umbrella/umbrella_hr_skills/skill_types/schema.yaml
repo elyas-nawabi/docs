@@ -1,0 +1,48 @@
+schema:
+  properties:
+    data:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        skills:
+          type: string
+        skill_levels:
+          type: string
+        active:
+          type: string
+        create_date:
+          type: string
+          format: date-time
+        create_uid:
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date-time
+          nullable: true
+        write_uid:
+          type: integer
+          nullable: true
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 1
+  error: null
+  pagination: null
+  status: 200
+  success_message: null

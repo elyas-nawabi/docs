@@ -1,0 +1,120 @@
+    post:
+      tags:
+        - inpatient icu
+      summary: Get inpatient icu details.
+      description: Get inpatient icu details.
+      operationId: getInpatientIcu
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of inpatient icu.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+              
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        admitted: 
+                          type: boolean
+                        discharged_from_icu: 
+                          type: boolean
+                        icu_admission_date: 
+                          type: string 
+                          format: date 
+                        icu_discharge_date: 
+                          type: string 
+                          format: date 
+                        icu_stay: 
+                          type: string
+                        id: 
+                          type: integer
+                        name: 
+                          type: integer
+                        name_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - admitted: true
+                    create_date: '2024-07-30T04:17:10.750772'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    discharged_from_icu: true
+                    icu_admission_date: '2024-07-30T04:14:00'
+                    icu_discharge_date: '2024-08-06T04:15:00'
+                    icu_stay: 7 days, 0:00:00
+                    id: 3
+                    name: 3
+                    name_:
+                      id: 3
+                      name: INPAC003:acetylsalicylic acid:Milestone
+                    rec_name: '3'
+                    write_date: '2024-08-03T08:25:29.503143'
+                    write_uid: 1
+                    write_uid_:
+                      id: 1
+                      name: Administrator
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

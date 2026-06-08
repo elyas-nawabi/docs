@@ -1,0 +1,122 @@
+      properties:
+        address: 
+          type: string
+        ambulances:
+          type: array
+          properties:
+            ambulance: 
+              type: integer
+            healthprofs: 
+              type: array
+            healthprofs_count: 
+              type: integer
+            rec_name: 
+              type: string
+            sr:
+              type: integer
+            state: 
+              type: string
+        code: 
+          type: string
+        complaint:
+          type: string
+        evaluation: 
+          type: integer
+        event_specific: 
+          type: integer
+        event_type: 
+          type: string
+        healthcenter: 
+          type: integer
+        id: 
+          type: integer
+        latitude: 
+          type: number
+          format: decimal
+        longitude: 
+          type: number
+          format: decimal
+        multiple_casualties: 
+          type: boolean
+        operational_sector: 
+          type: integer
+        operator: 
+          type: integer
+        patient: 
+          type: integer
+        patient_age: 
+          type: string
+        patient_sex: 
+          type: string
+        place_occurrance: 
+          type: string
+        rec_name: 
+          type: string
+        request_actions:
+          type: array
+          properties:
+            action: 
+            rec_name: 
+              type: string
+            remarks: 
+              type: string
+            sr: 
+              type: integer
+            timestamp: 
+              type: string
+              format: date
+        request_date: 
+          type: string
+          format: date
+        request_extra_info: 
+          type: string
+        requestor: 
+          type: integer
+        state: 
+          type: string
+        urgency: 
+          type: string
+        urladdr: 
+          type: string
+        
+      required:
+          - request_date
+          - timestamp
+      example:
+        address: ''
+        ambulances:
+        - ambulance: 50
+          healthprofs: []
+          healthprofs_count: 0
+          rec_name: '32'
+          sr: 3
+          state: 
+        code: SRG-2024-00003
+        complaint: 
+        evaluation: 
+        event_specific: 
+        event_type: event3
+        healthcenter: 
+        latitude: 
+        longitude: 
+        multiple_casualties: false
+        operational_sector: 
+        operator: 1
+        patient: 
+        patient_age: 
+        patient_sex: 
+        place_occurrance: 
+        rec_name: SRG-2024-00003
+        request_actions:
+        - action: ambulance
+          id: 1
+          rec_name: '1'
+          remarks: returning
+          sr: 3
+          timestamp: '2024-07-06T04:33:35'
+        request_date: '2024-07-06T03:52:53'
+        request_extra_info: ''
+        requestor: 
+        state: open
+        urgency: emergency
+        urladdr: ''

@@ -1,0 +1,11 @@
+      properties:
+        name:   
+            type: string
+        rec_name:   
+            type: string
+  
+      required:
+          - 
+      example:
+        name: health
+        rec_name: health

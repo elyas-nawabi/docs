@@ -1,0 +1,160 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        account_category:
+          type: integer 
+        account_category_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        active: 
+          type: boolean
+        categories: 
+          type: array
+        code: 
+          type: string
+        code_readonly: 
+          type: boolean
+        consumable: 
+          type: boolean
+        cost_price: 
+          type: number
+          format: decimal
+        cost_price_method: 
+          type: string
+        create_date: 
+          type: string
+          format: date
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        default_uom: 
+          type: integer
+        default_uom_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        default_uom_category: 1
+        default_uom_category_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        list_price: 
+          type: number
+          format: decimal
+        name:  
+          type: string
+        products:
+          type: array
+          properties:
+            account_category: 
+              type: integer
+            account_category_: 
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            active: 
+              type: boolean
+            categories: 
+              type: array
+            code: 
+              type: string
+            code_readonly: 
+              type: boolean
+            consumable: 
+              type: boolean
+            cost_price: 
+              type: integer
+            cost_price_method:
+              type: string
+            cost_price_uom: 
+              type: string
+            create_date: 
+              type: string
+              format: date
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            default_uom: 
+              type: integer
+            default_uom_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            description: 
+              type: string
+            id: 
+              type: integer
+            identifiers: 
+              type: array
+            is_bed: 
+              type: boolean
+            is_insurance_plan: 
+              type: boolean
+            is_medical_supply: 
+              type: boolean
+            is_medicament: 
+              type: boolean
+            is_vaccine: 
+              type: boolean
+            list_price: 
+              type: number
+              format: decimal
+            list_price_uom: 
+              type: number
+              format: decimal
+            name: 
+              type: string
+            prefix_code: 
+                type: string
+            rec_name: 
+              type: string
+            suffix_code: 
+              type: string
+            template: 
+              type: integer
+            template_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            type: 
+              type: string
+            write_date:
+              type: string
+              format: date
+            write_uid: 
+              type: integer
+            write_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        type: 
+          type: string
+        write_date: 
+          type: string
+          format: date
+        write_uid: 
+          type: integer
+        write_uid_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      create_date: '2024-04-18T04:45:21.629821'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

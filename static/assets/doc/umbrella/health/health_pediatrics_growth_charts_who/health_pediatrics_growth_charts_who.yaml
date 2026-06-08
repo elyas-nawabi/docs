@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: pediatrics growth charts who
+    description: pediatrics growth charts who - pediatrics growth charts who data management.
+paths:
+  '/health-pediatrics-growth-charts-who/pediatrics-growth-charts-who/search':
+    $ref: 'get_health_pediatrics_growth_charts_who.yaml'
+  '/health-pediatrics-growth-charts-who/pediatrics-growth-charts-who':
+    $ref: 'post_delete_health_pediatrics_growth_charts_who.yaml'
+  '/health-pediatrics-growth-charts-who/pediatrics-growth-charts-who/{obj_id}':
+    $ref: 'get_put_health_pediatrics_growth_charts_who_by_id.yaml'
+  

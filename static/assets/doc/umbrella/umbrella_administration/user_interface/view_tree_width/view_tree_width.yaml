@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: view tree width
+    description: view tree width - view tree width data management.
+paths:
+  '/administration/view-tree-width/search':
+    $ref: 'get_view_tree_width.yaml'
+  '/administration/view-tree-width':
+    $ref: 'post_delete_view_tree_width.yaml'
+  '/administration/view-tree-width/{obj_id}':
+    $ref: 'get_put_view_tree_width_by_id.yaml'
+
+    
+  

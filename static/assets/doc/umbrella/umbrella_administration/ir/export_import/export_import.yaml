@@ -1,0 +1,17 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: export import
+    description: export import - data export and import management.
+paths:
+  '/administration/export/predefined-exports/{model}':
+    $ref: 'get_predefined_exports.yaml'
+  '/administration/export/predefined-exports':
+    $ref: 'post_predefined_exports.yaml'
+  '/administration/export/predefined-exports/{export_id}':
+    $ref: 'put_delete_predefined_exports.yaml'
+  '/administration/export/export-data/{model}':
+    $ref: 'post_export_data.yaml'
+  '/administration/export/import-data/{model}':
+    $ref: 'post_import_data.yaml'

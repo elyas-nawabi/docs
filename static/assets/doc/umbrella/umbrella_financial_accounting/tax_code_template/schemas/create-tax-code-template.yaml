@@ -1,0 +1,38 @@
+properties:
+  name:
+    type: string
+    description: Display name of the tax code template.
+  code:
+    type: string
+    nullable: true
+    description: Short code used on tax reports (e.g. `B01`, `T01`).
+  account:
+    type: integer
+    description: Root account template id (`account.account.template` with `parent` = null) this tax code belongs to.
+  parent:
+    type: integer
+    nullable: true
+    description: Parent tax code template id. Omit or null for a root code.
+  description:
+    type: string
+    nullable: true
+    description: Longer description shown in tax reports.
+  start_date:
+    type: string
+    format: date
+    nullable: true
+    description: Date from which this code is active.
+  end_date:
+    type: string
+    format: date
+    nullable: true
+    description: Date until which this code is active.
+required:
+  - name
+  - account
+example:
+  name: Output VAT Base
+  code: B01
+  account: 1
+  parent: 20
+  description: Base amount for standard output VAT

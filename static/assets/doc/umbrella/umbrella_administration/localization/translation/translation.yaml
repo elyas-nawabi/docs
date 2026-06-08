@@ -1,0 +1,15 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: translation
+    description: translation - translation data management.
+paths:
+  '/administration/translations/search':
+    $ref: 'get_translation.yaml'
+  '/administration/translations':
+    $ref: 'post_delete_translation.yaml'
+  '/administration/translations/{obj_id}':
+    $ref: 'get_put_translation_by_id.yaml'
+    
+  

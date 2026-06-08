@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: party
+    description: party - party data management.
+paths:
+  '/party/parties/search':
+    $ref: 'get_party.yaml'
+  '/party/parties':
+    $ref: 'post_delete_party.yaml'
+  '/party/parties/{obj_id}':
+    $ref: 'get_put_party_by_id.yaml'
+  

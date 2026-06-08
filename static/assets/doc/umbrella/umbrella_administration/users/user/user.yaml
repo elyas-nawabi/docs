@@ -1,0 +1,21 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: user
+    description: user - user data management.
+paths:
+  '/administration/users/search':
+    $ref: 'get_user.yaml'
+  '/administration/users':
+    $ref: 'post_delete_user.yaml'
+  '/administration/users/{obj_id}':
+    $ref: 'get_put_user_by_id.yaml'
+  '/administration/users/{obj_id}/reset-password':
+    $ref: 'put_user_reset_password.yaml'
+  '/administration/users/get-user-application-key':
+    $ref: 'get_user_application_key.yaml'
+  '/administration/users/user-application/{obj_id}/validate':
+    $ref: 'get_user_validate.yaml'
+  '/administration/users/user-application/{obj_id}/cancel':
+    $ref: 'get_user_cancel.yaml'

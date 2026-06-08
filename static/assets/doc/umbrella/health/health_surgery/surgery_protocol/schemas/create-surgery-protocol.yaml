@@ -1,0 +1,53 @@
+      properties:
+        approach: 
+          type: string
+        classification: 
+          type: string
+        code: 
+          type: string
+        anesthesia_type: 
+          type: string
+        description: 
+          type: string
+        discharge_instructions: 
+          type: string
+        general_info: 
+          type: string
+        laterality: 
+          type: string
+        name: 
+          type: string
+        pathology: 
+          type: integer
+        patient_positioning: 
+          type: string
+        postoperative_guidelines: 
+          type: string
+        rec_name: 
+          type: string
+        surgical_intervention: 
+          type: string
+        
+      required:
+          - 
+      example:
+        anesthesia_type: local
+        approach: open
+        classification: o
+        code: RESKELOID
+        description: KELOID SCAR
+        discharge_instructions: |-
+            - YOUR USUAL TREATMENT, AS ABOVE
+            - IF PAIN, PARACTEAMOL 650MG 1 TABLET/8H. IF PAIN INCREASES, ALTERNATE WITH NOLOTIL 575MG 1 TABLET/8H.
+            - KEEP THE WOUND CLEAN AND DRY
+            - DRESS THE WOUND DAILY WITH ANTISEPTIC AND REMOVE STITCHES/SHRINKAGE WITHIN 10 DAYS AT THE HEALTH CENTER
+        general_info: |-
+            UNDER LOCAL ANESTHESIA, TRIAMCIANOLONE IS INFILTRATED AND THE KELOID IS RESECTED LEAVING ITS BORDERS,
+            CLOSURE WITH NON-ABSORBABLE MONOFILAMENT. REMOVAL OF ALTERNATE STITCHES FROM THE 10TH DAY.
+        laterality: ''
+        name: KELOID SCAR
+        pathology: 5336
+        patient_positioning: supine_decubitus
+        postoperative_guidelines: ''
+        rec_name: KELOID SCAR
+        surgical_intervention: 

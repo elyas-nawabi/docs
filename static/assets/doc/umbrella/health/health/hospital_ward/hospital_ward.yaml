@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: hospital ward
+    description: hospital ward - hospital ward data management.
+paths:
+  '/health/wards/search':
+    $ref: 'get_hospital_ward.yaml'
+  '/health/wards':
+    $ref: 'post_delete_hospital_ward.yaml'
+  '/health/wards/{obj_id}':
+    $ref: 'get_put_hospital_ward_by_id.yaml'
+  

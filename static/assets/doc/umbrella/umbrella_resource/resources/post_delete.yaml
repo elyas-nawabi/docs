@@ -1,0 +1,88 @@
+post:
+  tags:
+    - Resources
+  summary: Create a resource
+  description: Create a new resource
+  operationId: createResource
+  requestBody:
+    required: true
+    description: Resource data
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/resources-schema.yaml'
+  responses:
+    '201':
+      description: Resource created successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: ID of the created resource
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              id: 123
+            errors: null
+            status: 201
+            success_message: "Resource created successfully"
+    '400':
+      description: Bad Request - Invalid input data
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP400'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+  tags:
+    - Resources
+  summary: Delete resources
+  description: Delete multiple resources by IDs
+  operationId: deleteResources
+  requestBody:
+    required: true
+    description: IDs of resources to delete
+    content:
+      application/json:
+        schema:
+          $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+  responses:
+    '200':
+      description: Mail activity plans deleted successfully
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401' 

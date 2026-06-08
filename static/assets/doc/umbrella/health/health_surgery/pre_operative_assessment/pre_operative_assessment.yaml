@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: pre operative assessment
+    description: pre operative assessment - pre operative assessment data management.
+paths:
+  '/health-surgery/preoperative-assessments/search':
+    $ref: 'get_pre_operative_assessment.yaml'
+  '/health-surgery/preoperative-assessments':
+    $ref: 'post_delete_pre_operative_assessment.yaml'
+  '/health-surgery/preoperative-assessments/{obj_id}':
+    $ref: 'get_put_pre_operative_assessment_by_id.yaml'
+  

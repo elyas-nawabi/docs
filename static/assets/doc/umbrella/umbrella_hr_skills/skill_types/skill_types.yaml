@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: skill_types
+    description: skill_types - data management.
+paths:
+  '/hr-skills/skill-types/search':
+    $ref: 'get_skill_types.yaml'
+  '/hr-skills/skill-types':
+    $ref: 'post_delete_skill_types.yaml'
+  '/hr-skills/skill-types/{obj_id}':
+    $ref: 'get_put_skill_types_by_id.yaml'

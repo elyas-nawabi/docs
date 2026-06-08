@@ -1,0 +1,20 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: patient evaluation
+    description: patient evaluation - patient evaluation data management.
+paths:
+  '/health/patient-evaluations/search':
+    $ref: 'get_patient_evaluation.yaml'
+  '/health/patient-evaluations':
+    $ref: 'post_delete_patient_evaluation.yaml'
+  '/health/patient-evaluations/{obj_id}':
+    $ref: 'get_put_patient_evaluation_by_id.yaml'
+  '/health/patient-evaluations/{obj_id}/update-service':
+    $ref: 'get_update_service.yaml'
+  '/health/patient-evaluations/{obj_id}/discharge':
+    $ref: 'get_discharge.yaml'
+  '/health/patient-evaluations/{obj_id}/close-evaluation':
+    $ref: 'get_close_evaluation.yaml'
+  

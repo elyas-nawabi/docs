@@ -1,0 +1,80 @@
+get:
+      tags:
+        - income statement
+      summary: Get income statements.
+      description: Get income statements.
+      operationId: getIncomeStatement
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                        comparison:
+                          type: boolean
+                        fiscalyear:
+                          type: integer
+                        posted:
+                          type: boolean
+                    errors:
+                      type: object
+                    pagination:
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  comparison: false
+                  fiscalyear: 2
+                  posted: false
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'

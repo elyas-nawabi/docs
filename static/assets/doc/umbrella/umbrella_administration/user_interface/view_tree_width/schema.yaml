@@ -1,0 +1,68 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        field: 
+          type: string
+        id: 
+          type: integer
+        model: 
+          type: string
+        rec_name: 
+          type: string
+        user: 
+          type: integer
+        user_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        width: 
+          type: integer
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      - create_date: '2024-09-23T17:33:29.371094'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        field: ui_menu_list
+        id: 1
+        model: ir.ui.menu
+        rec_name: ir.ui.menu
+        user: 6
+        user_:
+          id: 6
+          name: Health Dentist
+        width: 21
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

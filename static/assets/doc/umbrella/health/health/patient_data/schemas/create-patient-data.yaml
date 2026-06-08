@@ -1,0 +1,477 @@
+      properties:
+        abortions: 
+          type: integer
+        active: 
+          type: boolean
+        age: 
+          type: integer
+        age_quit_drinking: 
+          type: integer
+        age_quit_drugs: 
+          type: integer
+        age_quit_smoking: 
+          type: integer
+        age_start_drinking: 
+          type: integer
+        age_start_drugs: 
+          type: integer
+        age_start_smoking: 
+          type: integer
+        alcohol: 
+          type: boolean
+        alcohol_beer_number: 
+          type: integer
+        alcohol_liquor_number: 
+          type: integer
+        alcohol_wine_number: 
+          type: integer
+        amputations: 
+          type: array
+        amputee: 
+          type: boolean
+        amputee_since: 
+          type: string
+          format: date
+        anticonceptive: 
+          type: string
+        barcode: 
+          type: string
+        biological_sex: 
+        blood_type: 
+          type: string
+        breast_self_examination: 
+          type: boolean
+        cage: 
+          type: array
+        car_child_safety: 
+          type: boolean
+        car_revision: 
+          type: boolean
+        car_seat_belt: 
+          type: boolean
+        childbearing_age: 
+        cod: 
+          type: integer
+        coffee: 
+          type: boolean
+        coffee_cups: 
+          type: integer
+        colposcopy: 
+          type: boolean
+        colposcopy_history: 
+          type: array
+        colposcopy_last: 
+          type: string
+          format: date
+        crit_allergic: 
+          type: boolean
+        crit_cancer: 
+          type: boolean
+        crit_cardio: 
+          type: boolean
+        crit_cognitive: 
+          type: boolean
+        crit_dbt: 
+          type: boolean
+        crit_hbp: 
+          type: boolean
+        crit_immuno: 
+          type: boolean
+        crit_nutrition: 
+          type: boolean
+        crit_social: 
+          type: boolean
+        critical_info: 
+          type: string
+        critical_summary: 
+          type: string
+        current_address: 
+          type: integer
+        current_insurance: 
+          type: integer
+        currently_pregnant: 
+          type: boolean
+        deceased: 
+          type: boolean
+        dental_schema: 
+          type: string
+        dental_schema_primary: 
+          type: string
+        dentistry_treatments: 
+          type: array
+        diet: 
+          type: boolean
+        diet_belief: 
+          type: integer
+        diet_info: 
+          type: string
+        disability: 
+          type: boolean
+        disability_assesments: 
+          type: array
+        diseases: 
+          type: array
+        dmft_index: 
+          type: integer
+        dmft_index_primary:
+          type: integer 
+        dob: 
+          type: string
+          format: date
+        dod: 
+          type: string
+          format: date
+        domestic_violence: 
+          type: boolean
+        drug_addiction: 
+          type: boolean
+        drug_iv: 
+          type: boolean
+        drug_usage: 
+          type: boolean
+        eats_alone: 
+          type: boolean
+        education: 
+        ex_alcoholic: 
+          type: boolean
+        ex_drug_addict: 
+          type: boolean
+        ex_smoker: 
+          type: boolean
+        exercise: 
+          type: boolean
+        exercise_minutes_day: 
+          type: integer
+        family: 
+          type: integer
+        family_history: 
+          type: array
+        fertile: 
+          type: boolean
+        first_sexual_encounter: 
+          type: integer
+        full_term: 
+          type: integer
+        gender: 
+          type: string
+        general_info: 
+          type: string
+        genetic_risks: 
+          type: array
+        gravida:  
+          type: integer
+        hb: 
+          type: string
+        helmet: 
+          type: boolean
+        home_safety: 
+          type: boolean
+        hostile_area: 
+          type: boolean
+        hours_outside: 
+          type: integer
+        housing: 
+          type: string
+        lab_test_ids: 
+          type: array
+        lastname: 
+          type: string
+        lifestyle_info: 
+          type: string
+        mammography: 
+          type: boolean
+        mammography_history: 
+          type: array
+        mammography_last: 
+          type: string
+          format: date
+        marital_status: 
+          type: string
+        medications: 
+          type: array
+        menarche: 
+          type: integer
+        menopausal: 
+          type: boolean
+        menopause: 
+          type: integer
+        menstrual_history: 
+          type: array
+        motorcycle_rider: 
+          type: boolean
+        name: 
+          type: integer
+        number_of_meals: 
+          type: integer
+        occupation: 
+          type: integer
+        orthanc_patients: 
+          type: array
+        pap_history: 
+          type: array
+        pap_test: 
+          type: boolean
+        pap_test_last: 
+          type: string 
+          format: date
+        patient_status: 
+          type: boolean
+        photo: 
+          type: string
+        pregnancy_history: 
+          type: array
+        premature: 
+          type: integer
+        primary_care_doctor: 
+          type: integer
+        prison_current: 
+          type: boolean
+        prison_past: 
+          type: boolean
+        prostitute: 
+          type: boolean
+        protheses: 
+          type: array
+        puid: 
+          type: string
+        qr: 
+          type: string
+        rec_name: 
+          type: string
+        recreational_drugs: 
+          type: array
+        relative_in_prison: 
+          type: boolean
+        rh: 
+          type: string
+        salt: 
+          type: boolean
+        school_withdrawal: 
+          type: boolean
+        second_hand_smoker: 
+          type: boolean
+        ses: 
+          type: string
+        ses_assessments: 
+          type: array
+        ses_notes: 
+          type: string
+        sex_anal:
+          type: string 
+        sex_oral: 
+          type: string
+        sex_with_prostitutes: 
+          type: boolean
+        sexual_abuse: 
+          type: boolean
+        sexual_partners: 
+          type: string
+        sexual_partners_number: 
+          type: number
+        sexual_practices: 
+          type: string
+        sexual_preferences: 
+          type: string
+        sexuality_info:
+          type: string 
+        single_parent: 
+          type: boolean
+        sleep_during_daytime: 
+          type: boolean
+        sleep_hours: 
+          type: integer
+        smoking: 
+          type: boolean
+        smoking_number: 
+          type: integer
+        soft_drinks: 
+          type: boolean
+        stillbirths: 
+          type: integer
+        surgery: 
+          type: array
+        teenage_pregnancy: 
+          type: boolean
+        teeth1: 
+          type: string
+        teeth2: 
+          type: string
+        teeth3: 
+          type: string
+        teeth4: 
+          type: string
+        teeth5: 
+          type: string
+        teeth6: 
+          type: string
+        teeth7: 
+          type: string
+        teeth8: 
+          type: string
+        traffic_laws: 
+          type: boolean
+        use_primary_schema: 
+          type: boolean
+        uxo: 
+          type: boolean
+        vaccinations: 
+          type: array
+        vegetarian_type: 
+          type: integer
+        working_children: 
+          type: boolean
+        works_at_home: 
+          type: boolean
+  
+      required:
+          - 
+      example:
+        abortions: 0
+        active: true
+        age: 
+        age_quit_drinking: 
+        age_quit_drugs: 
+        age_quit_smoking: 
+        age_start_drinking: 
+        age_start_drugs: 
+        age_start_smoking: 
+        alcohol: false
+        alcohol_beer_number: 
+        alcohol_liquor_number: 
+        alcohol_wine_number: 
+        amputations: []
+        amputee: false
+        amputee_since: 
+        anticonceptive: 
+        barcode: ''
+        biological_sex: 
+        blood_type: 
+        breast_self_examination: false
+        cage: []
+        car_child_safety: false
+        car_revision: false
+        car_seat_belt: false
+        childbearing_age: 
+        cod: 
+        coffee: false
+        coffee_cups: 
+        colposcopy: false
+        colposcopy_history: []
+        colposcopy_last: 
+        crit_allergic: false
+        crit_cancer: false
+        crit_cardio: false
+        crit_cognitive: false
+        crit_dbt: false
+        crit_hbp: false
+        crit_immuno: false
+        crit_nutrition: false
+        crit_social: false
+        critical_info: 
+        critical_summary: ''
+        current_address: 
+        current_address_: {}
+        current_insurance: 
+        currently_pregnant: false
+        deceased: false
+        dental_schema: 
+        dental_schema_primary: 
+        dentistry_treatments: []
+        diet: false
+        diet_belief: 
+        diet_info: 
+        disability: false
+        disability_assesments: []
+        diseases: []
+        dmft_index: 
+        dmft_index_primary: 
+        dob: 
+        dod: 
+        domestic_violence: false
+        drug_addiction: false
+        drug_iv: false
+        drug_usage: false
+        eats_alone: false
+        education: 
+        ex_alcoholic: false
+        ex_drug_addict: false
+        ex_smoker: false
+        exercise: false
+        exercise_minutes_day: 
+        family: 
+        fertile: false
+        first_sexual_encounter: 
+        full_term: 
+        gender: m
+        general_info: 
+        gravida: 0
+        hb: 
+        helmet: false
+        home_safety: false
+        hostile_area: false
+        hours_outside: 
+        housing: 
+        lastname: ''
+        lifestyle_info: 
+        mammography: false
+        mammography_last: 
+        marital_status: 
+        menarche: 
+        menopausal: false
+        menopause: 
+        motorcycle_rider: false
+        name: 40
+        number_of_meals: 
+        occupation: 
+        pap_test: false
+        pap_test_last: 
+        patient_status: false
+        photo: 
+        pregnancy_history: []
+        premature: 0
+        primary_care_doctor: 
+        prison_current: false
+        prison_past: false
+        prostitute: false
+        puid: EPG711ERX
+        qr: ''
+        rec_name: ayesha
+        relative_in_prison: false
+        rh: 
+        salt: false
+        school_withdrawal: false
+        second_hand_smoker: false
+        ses: 
+        ses_notes: 
+        sex_anal: 
+        sex_oral: 
+        sex_with_prostitutes: false
+        sexual_abuse: false
+        sexual_partners: 
+        sexual_partners_number: 
+        sexual_practices: 
+        sexual_preferences: 
+        sexuality_info: 
+        single_parent: false
+        sleep_during_daytime: false
+        sleep_hours: 
+        smoking: false
+        smoking_number: 
+        soft_drinks: false
+        stillbirths: 0
+        teenage_pregnancy: false
+        teeth1: ''
+        teeth2: ''
+        teeth3: ''
+        teeth4: ''
+        teeth5: ''
+        teeth6: ''
+        teeth7: ''
+        teeth8: ''
+        traffic_laws: false
+        use_primary_schema: false
+        uxo: false
+        vaccinations: []
+        vegetarian_type: 
+        working_children: false
+        works_at_home: false

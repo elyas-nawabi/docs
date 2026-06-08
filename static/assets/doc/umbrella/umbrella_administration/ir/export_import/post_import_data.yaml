@@ -1,0 +1,106 @@
+post:
+  tags:
+    - export import
+  summary: Import data for a model
+  description: Import data into a model from provided data set
+  operationId: importData
+  parameters:
+    - name: resource
+      required: true
+      in: path
+      description: The model name to import data into
+      schema:
+        type: string
+      example: "account.invoice"
+  requestBody:
+    required: true
+    description: Import data and configuration
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/import-data-schema.yaml'
+  responses:
+    '200':
+      description: Data imported successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                nullable: true
+                description: Import result data
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data: null
+            errors: null
+            status: 200
+            success_message: "Data imported successfully"
+    '400':
+      description: Bad Request - Invalid import data or format
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP400'
+    '422':
+      description: Unprocessable Entity - Data validation errors
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                nullable: true
+              errors:
+                type: object
+                properties:
+                  validation_errors:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        row:
+                          type: integer
+                          description: Row number with error
+                        field:
+                          type: string
+                          description: Field name with error
+                        message:
+                          type: string
+                          description: Error message
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+            example:
+              data: null
+              errors:
+                validation_errors:
+                  - row: 2
+                    field: "party"
+                    message: "Required field is missing"
+                  - row: 3
+                    field: "invoice_date"
+                    message: "Invalid date format"
+              status: 422
+              success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401' 

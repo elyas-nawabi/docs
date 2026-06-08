@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: gnuhealth command
+    description: gnuhealth command - gnuhealth command data management.
+paths:
+  '/health/gnu-health-commands/search':
+    $ref: 'get_gnuhealth_command.yaml'
+  '/health/gnu-health-commands':
+    $ref: 'post_delete_gnuhealth_command.yaml'
+  '/health/gnu-health-commands/{obj_id}':
+    $ref: 'get_put_gnuhealth_command_by_id.yaml'
+  

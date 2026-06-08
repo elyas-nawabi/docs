@@ -1,0 +1,18 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: birth certificate
+    description: birth certificate - birth certificate data management.
+paths:
+  '/health/birth-certificates/search':
+    $ref: 'get_birth_certificate.yaml'
+  '/health/birth-certificates':
+    $ref: 'post_delete_birth_certificate.yaml'
+  '/health/birth-certificates/{obj_id}':
+    $ref: 'get_put_birth_certificate_by_id.yaml'
+  '/health/birth-certificates/{obj_id}/sign':
+    $ref: 'get_birth_certificate_sign.yaml'
+  '/health/birth-certificates/{obj_id}/generate':
+    $ref: 'get_birth_certificate_generate.yaml'
+  

@@ -1,0 +1,187 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        active: 
+          type: boolean
+        country: 
+          type: integer
+        country_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        desc: 
+          type: string
+        id: 
+          type: integer
+        rec_name: 
+          type: string
+        sched: 
+          type: string
+        vaccines:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            doses:
+              type: array
+              properties:
+                age_dose: 
+                  type: integer
+                age_unit: 
+                  type: string
+                create_date: 
+                  type: string 
+                  format: date 
+                create_uid: 
+                  type: integer
+                create_uid_:
+                  $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                dose_number: 
+                  type: integer
+              id: 
+                type: integer
+              rec_name: 
+                type: string
+              remarks: 
+                type: string
+              sched: 
+                type: string
+              vaccine: 
+                type: integer
+              vaccine_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                
+              write_date:
+                type: string
+                format: date 
+              write_uid:
+                type: integer
+              write_uid_:
+                $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            rec_name: 
+              type: string
+            remarks: 
+              type: string
+            sched: 
+              type: integer
+            sched_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              
+            scope: 
+              type: string
+            vaccine:  
+              type: integer
+            vaccine_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        year: 2024
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      active: true
+      country: 1
+      country_:
+        id: 1
+        name: "Afghanistan"
+      create_date: '2024-07-27T06:01:45.550394'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      desc: test data for immunization schedule
+      id: 1
+      rec_name: '009'
+      sched: '009'
+      vaccines:
+      - create_date: '2024-07-27T06:01:45.550394'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        doses:
+        - age_dose: 29
+          age_unit: months
+          create_date: '2024-07-27T06:01:45.550394'
+          create_uid: 1
+          create_uid_:
+            id: 1
+            name: Administrator
+          dose_number: 1
+          id: 1
+          rec_name: '1'
+          remarks: ''
+          sched: '009'
+          vaccine: 1
+          vaccine_:
+            id: 1
+            name: BCG vaccine
+          write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 1
+        rec_name: BCG vaccine
+        remarks: ''
+        sched: 1
+        sched_:
+          id: 1
+          name: '009'
+        scope: systematic
+        vaccine: 353
+        vaccine_:
+          id: 353
+          name: BCG vaccine
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+      year: 2024
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

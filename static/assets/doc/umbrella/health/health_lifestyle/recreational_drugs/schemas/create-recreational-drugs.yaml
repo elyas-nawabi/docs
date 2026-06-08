@@ -1,0 +1,80 @@
+      properties:
+        addiction_level:
+          type: string
+        category: 
+          type: string
+        code: 
+          type: string
+        dea_schedule_i: 
+          type: boolean
+        dea_schedule_ii: 
+          type: boolean
+        dea_schedule_iii: 
+          type: boolean
+        dea_schedule_iv: 
+          type: boolean
+        dea_schedule_v: 
+          type: boolean
+        dependence_level: 
+          type: integer
+        info: 
+          type: string
+        intoxication_level: 
+          type: integer
+        legal_status: 
+          type: string
+        name: 
+          type: string
+        rec_name: 
+          type: string
+        reinforcement_level: 
+          type: integer
+        route_inhaling:   
+          type: boolean
+        route_injection: 
+          type: boolean
+        route_oral:   
+          type: boolean
+        route_popping: 
+          type: boolean
+        route_sniffing: 
+          type: boolean
+        street_name: 
+          type: string
+        tolerance_level: 
+          type: integer
+        toxicity: 
+          type: string
+        withdrawal_level: 
+          type: integer
+        
+      required:
+          - 
+      example:
+        addiction_level: '1'
+        category: cannabinoid
+        code: MARIJUANA
+        dea_schedule_i: true
+        dea_schedule_ii: false
+        dea_schedule_iii: false
+        dea_schedule_iv: false
+        dea_schedule_v: false
+        dependence_level: 6
+        info: euphoria, slowed thinking and reaction time, confusion, impaired balance and
+            coordination/cough, frequent respiratory infections; impaired memory and learning;
+            increased heart rate, anxiety; panic attacks; tolerance, addiction
+        intoxication_level: 4
+        legal_status: '1'
+        name: Marijuana
+        rec_name: Marijuana
+        reinforcement_level: 5
+        route_inhaling: true
+        route_injection: false
+        route_oral: true
+        route_popping: false
+        route_sniffing: false
+        street_name: blunt, dope, ganja, grass, herb, joints, Mary Jane, pot, reefer, sinsemilla,
+            skunk, weed
+        tolerance_level: 6
+        toxicity: '1'
+        withdrawal_level: 6

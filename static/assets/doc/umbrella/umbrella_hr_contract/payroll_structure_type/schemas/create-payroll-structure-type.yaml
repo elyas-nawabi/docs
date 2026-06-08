@@ -1,0 +1,30 @@
+  properties:
+    create_date: 
+      type: string 
+      format: date 
+    create_uid: 
+      type: integer
+    country: 
+      type: integer
+    country_code: 
+      type: string
+    name: 
+      type: string
+    rec_name: 
+      type: string
+    write_date:
+      type: string
+      format: date 
+    write_uid:
+      type: integer
+  required:
+    
+  example:
+    country: 1
+    country_code: ''
+    create_date: '2025-03-16T10:30:12.020342'
+    create_uid: 1
+    name: NTA Grade A
+    rec_name: NTA Grade A
+    write_date: 
+    write_uid:

@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: gnu health lab test unit
+    description: gnu health lab test unit - gnu health lab test unit data management.
+paths:
+  '/health-lab/lab-test-units/search':
+    $ref: 'get_gnu_health_lab_test_unit.yaml'
+  '/health-lab/lab-test-units':
+    $ref: 'post_delete_gnu_health_lab_test_unit.yaml'
+  '/health-lab/lab-test-units/{obj_id}':
+    $ref: 'get_put_gnu_health_lab_test_unit_by_id.yaml'
+  

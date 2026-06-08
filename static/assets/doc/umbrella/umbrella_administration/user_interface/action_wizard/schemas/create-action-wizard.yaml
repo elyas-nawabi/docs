@@ -1,0 +1,42 @@
+properties:
+  action: 
+    type: integer
+  active: 
+    type: boolean
+  groups: 
+    type: array
+  icon: 
+    type: integer
+  keywords: 
+    type: array
+  model: 
+    type: string
+  name: 
+    type: string
+  rec_name: 
+    type: string
+  records: 
+    type: string
+  type: 
+    type: string
+  usage: 
+    type: string
+  window: 
+    type: boolean
+  wiz_name: 
+    type: string
+
+example:
+  action: 4
+  active: true
+  groups: []
+  icon: 
+  keywords: []
+  model: 
+  name: Show View
+  rec_name: Show View
+  records: selected
+  type: ir.action.wizard
+  usage: 
+  window: false
+  wiz_name: ir.ui.view.show

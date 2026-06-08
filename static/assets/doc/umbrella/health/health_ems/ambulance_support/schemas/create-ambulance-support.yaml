@@ -1,0 +1,23 @@
+      properties:
+        ambulance: 
+          type: integer
+        healthprofs: 
+          type: array
+        healthprofs_count: 
+          type: integer
+        rec_name:
+          type: string
+        sr: 
+          type: integer
+        state:
+          type: string 
+        
+      required:
+          - sr
+      example:
+        ambulance: 50
+        healthprofs: []
+        healthprofs_count: 0
+        rec_name: '32'
+        sr: 3
+        state: 

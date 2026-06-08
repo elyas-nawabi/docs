@@ -1,0 +1,98 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        company:
+          type: integer
+        company_:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+        end_date:
+          type: string
+          format: date
+        id:
+          type: integer
+        party: 
+          type: integer
+        party_:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+        rec_name:
+          type: string
+        start_date: 
+          type: string
+          format: date
+        supervisor:
+          type: integer
+        supervisor_:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      create_date: '2024-04-18T04:45:21.629821'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      company: 2
+      company_:
+        id: 2
+        name: Party 1
+      end_date: '2024-02-13'
+      id: 5
+      party: 1
+      party_:
+        id: 1
+        name: Party 1
+      rec_name: Party 1
+      start_date: '2024-02-01'
+      supervisor: 5 
+      supervisor_: 
+        id: 5
+        name: Party 1
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

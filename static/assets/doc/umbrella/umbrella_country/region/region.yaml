@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: region
+    description: region - region data management.
+paths:
+  '/country/regions/search':
+    $ref: 'get_region.yaml'
+  '/country/regions':
+    $ref: 'post_delete_region.yaml'
+  '/country/regions/{obj_id}':
+    $ref: 'get_put_region_by_id.yaml'
+  

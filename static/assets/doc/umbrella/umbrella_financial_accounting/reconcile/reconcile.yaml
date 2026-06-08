@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: reconcile
+    description: reconcile - reconcile data management.
+paths:
+  '/financial-accounting/reconcile-accounts/execute':
+    $ref: 'post_reconcile.yaml'
+  '/financial-accounting/reconcile-accounts/lines':
+    $ref: 'lines.yaml'
+  '/financial-accounting/reconcile-accounts/skip':
+    $ref: 'skip.yaml'
+  

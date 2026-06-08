@@ -1,0 +1,17 @@
+      properties:
+        info: 
+            type: string
+        name: 
+            type: string
+        rec_name: 
+            type: string
+        operational_area: 
+            type: string
+  
+      required:
+          - 
+      example:
+        info: put extra info here...
+        name: op_sec_1
+        operational_area: 1
+        rec_name: op_sec_1

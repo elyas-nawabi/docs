@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: product supplier
+    description: product supplier - product supplier data management.
+paths:
+  '/purchase/product-suppliers/search':
+    $ref: 'get_product_supplier.yaml'
+  '/purchase/product-suppliers':
+    $ref: 'post_delete_product_supplier.yaml'
+  '/purchase/product-suppliers/{obj_id}':
+    $ref: 'get_put_product_supplier_by_id.yaml'
+  

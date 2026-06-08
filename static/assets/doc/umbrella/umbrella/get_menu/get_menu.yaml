@@ -1,0 +1,13 @@
+openapi: 3.1.0
+version: 1.0.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: get menu
+    description: get menu - get menu data management.
+paths:
+  '/get-user-menu':
+    $ref: 'post_get_menu.yaml'
+  
+ 
+  

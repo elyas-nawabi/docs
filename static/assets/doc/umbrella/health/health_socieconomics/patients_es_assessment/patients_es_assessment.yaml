@@ -1,0 +1,17 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: patients_es_assessment
+    description: patients_es_assessment - patients_es_assessment data management.
+paths:
+  '/health-socioeconomics/socioeconomics-assessments/search':
+    $ref: 'get_patients_es_assessment.yaml'
+  '/health-socioeconomics/socioeconomics-assessments':
+    $ref: 'post_delete_patients_es_assessment.yaml'
+  '/health-socioeconomics/socioeconomics-assessments/{obj_id}':
+    $ref: 'get_put_patients_es_assessment_by_id.yaml'
+  '/health-socioeconomics/socioeconomics-assessments/{obj_id}/done':
+    $ref: 'get_done.yaml'
+
+  

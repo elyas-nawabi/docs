@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: hospital unit
+    description: hospital unit - hospital unit data management.
+paths:
+  '/health/units/search':
+    $ref: 'get_hospital_unit.yaml'
+  '/health/units':
+    $ref: 'post_delete_hospital_unit.yaml'
+  '/health/units/{obj_id}':
+    $ref: 'get_put_hospital_unit_by_id.yaml'
+  

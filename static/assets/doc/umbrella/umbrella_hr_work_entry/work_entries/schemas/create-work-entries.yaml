@@ -1,0 +1,44 @@
+schema:
+  properties:
+    date:
+      type: string
+    employee:
+      type: string
+    work_entry_type:
+      type: string
+    duration:
+      type: string
+    state:
+      type: string
+    amount_rate:
+      type: string
+    name:
+      type: string
+    display_code:
+      type: string
+    code:
+      type: string
+    external_code:
+      type: string
+    company:
+      type: string
+    conflict:
+      type: string
+    department:
+      type: string
+    country:
+      type: string
+    employee_ids:
+      type: string
+    date_from:
+      type: string
+    date_to:
+      type: string
+
+example:
+  date: ''
+  employee: ''
+  work_entry_type: ''
+  duration: ''
+  state: ''
+  amount_rate: ''

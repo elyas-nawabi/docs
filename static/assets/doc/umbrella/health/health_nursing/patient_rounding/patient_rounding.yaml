@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: patient rounding
+    description: patient rounding - patient rounding data management.
+paths:
+  '/health-nursing/roundings/search':
+    $ref: 'get_patient_rounding.yaml'
+  '/health-nursing/roundings':
+    $ref: 'post_delete_patient_rounding.yaml'
+  '/health-nursing/roundings/{obj_id}':
+    $ref: 'get_put_patient_rounding_by_id.yaml'
+  

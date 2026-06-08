@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: paper archive
+    description: paper archive - paper archive data management.
+paths:
+  '/health-archives/archives/search':
+    $ref: 'get_paper_archive.yaml'
+  '/health-archives/archives':
+    $ref: 'post_delete_paper_archive.yaml'
+  '/health-archives/archives/{obj_id}':
+    $ref: 'get_put_paper_archive_by_id.yaml'
+  

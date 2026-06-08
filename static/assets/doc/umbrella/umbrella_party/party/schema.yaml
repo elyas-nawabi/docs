@@ -1,0 +1,692 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        account_payable:
+          type: string
+          nullable: true
+        account_receivable: 
+          type: string
+          nullable: true
+        activation_date: 
+          type: string
+          format: date
+        active: 
+          type: boolean
+        addresses:
+          type: array
+          properties:
+            active:
+              type: boolean
+            city: 
+              type: string
+            contact_mechanisms:
+              type: array
+            country:
+              type: integer
+            country_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            delivery:
+              type: integer
+            full_address:
+              type: string
+            identifiers: 
+              type: array
+            is_school: false
+            is_work: false
+            id:
+              type: integer
+            invoice:
+              type: integer
+            name: 
+              type: string
+            party:
+              type: integer
+            party_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            party_name: 
+              type: string
+            postal_code: 
+              type: string
+            rec_name:
+              type: string
+            relationship: 
+              type: string
+            relative_id: 
+              type: integer
+            relative_id_: 
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            sequence: 
+              type: integer
+            street: 
+              type: string
+            street_single_line: 
+              type: string
+            subdivision:
+              type: integer
+            subdivision_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            subdivision_types:
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        age: 
+          type: integer
+        alternative_identification: 
+          type: boolean
+        alternative_ids: 
+          type: array
+        bank_accounts:
+          type: array
+          properties:
+            active: 
+              type: boolean
+            bank: 
+              type: integer
+            bank_:
+              type: object
+              properties:
+                id: 
+                  type: integer
+                name: 
+                  type: object
+            currency: 
+              type: integer
+            currency_:
+              type: object
+              properties:
+                id: 
+                  type: integer
+                name: 
+                  type: object
+            id: 
+              type: integer
+            numbers:
+              type: array
+              properties:
+                account: 
+                  type: integer
+                active: 
+                  type: integer
+                id: 
+                  type: integer
+                number: 
+                  type: string
+                number_compact: 
+                  type: string
+                rec_name: 
+                  type: string
+                sequence: 
+                  type: integer
+                type: 
+                  type: string
+            owners:
+              type: array
+              properties:
+                code:
+                  type: string
+                deposit: 
+                  type: integer
+                id: 
+                  type: integer
+                lang: 
+                  type: integer
+                name: 
+                  type: string
+                payable_today: 
+                  type: integer
+                rec_name: 
+                  type: string
+                receivable_today: 
+                  type: integer
+                tax_identifier: 
+                  type: string
+            rec_name: 
+              type: string
+        birth_certificate: 
+          type: integer
+        birth_certificate_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        categories:
+          type: array
+          properties:
+            active:
+              type: boolean
+            childs:
+              type: array
+            id:
+              type: integer
+            name: 
+              type: string
+            parent:
+              type: integer
+            parent_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name:
+              type: string
+        citizenship: 
+          type: integer
+        citizenship_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        code: 
+          type: string
+        contact_mechanisms:
+          type: array
+          properties:
+            active:
+              type: boolean
+            address:
+              type: integer
+            address_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            comment: 
+              type: string
+            delivery: 
+              type: string
+            id: 
+              type: integer
+            invoice: 
+              type: integer
+            language: 
+              type: string
+            name: 
+              type: string
+            party:
+              type: integer
+            party_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            sequence:
+              type: integer
+            type: 
+              type: string
+            value: 
+              type: string
+        create_target: 
+          type: boolean
+        customer_location: 
+          type: integer
+        customer_location_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        credit_amount:
+          type: integer
+        credit_limit_amount: 
+          type: integer 
+        customer_payment_term: 
+          type: integer
+        customer_payment_term_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        customer_tax_rule:
+          type: integer
+          nullable: true
+        deposit:
+          type: integer
+        id:
+          type: integer
+        lang:
+          type: integer
+        name: 
+          type: string
+        payable_today:
+          type: integer
+        rec_name:
+          type: string
+        receivable:
+          type: integer
+        receivable_today:
+          type: integer
+        supplier_payment_term: 
+          type: integer
+        supplier_payment_term_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        supplier_tax_rule: 
+          type: integer
+        tax_identifier: 
+          type: string
+          nullable: true
+        payable: 
+          type: integer
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        death_certificate: 
+          type: integer
+        death_certificate_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        deceased: 
+          type: boolean
+        delivered_to_warehouses: 
+          type: array
+        dob: 
+          type: string
+          format: date 
+        dod: 
+          type: string
+          format: date 
+        du: 
+          type: integer
+        du_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        du_address: 
+          type: string
+        est_dob: 
+          type: boolean
+        est_years: 
+          type: integer
+        ethnic_group:
+          type: integer 
+        ethnic_group_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        father: 
+          type: integer
+        father_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        fed_country: 
+          type: string
+        federation_account: 
+          type: string
+        gender: 
+          type: string
+        identifiers: 
+          type: array
+        insurance:
+          type: array
+          properties:
+            category: 
+              type: string
+            company: 
+              type: integer
+            company_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            insurance_type: 
+              type: string
+            member_exp: 
+              type: string 
+              format: date
+            member_since: 
+              type: string 
+              format: date
+            name: 
+              type: integer
+            name_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            notes: 
+              type: string 
+            number: 
+              type: string 
+            plan_id: 
+              type: integer
+            plan_id_: 
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+
+            rec_name: 
+              type: string 
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        insurance_company_type: 
+          type: string
+        internal_user: 
+          type: integer
+        internal_user_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+
+        is_healthprof: 
+          type: boolean
+        is_institution: 
+          type: boolean
+        is_insurance_company: 
+          type: boolean
+        is_patient: 
+          type: boolean
+        is_person: 
+          type: boolean
+        is_pharmacy: 
+          type: boolean
+        lastname: 
+          type: string
+        marital_status: 
+          type: string
+        mother: 
+          type: integer
+        mother_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+
+        person_names:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            date_from:
+              type: string 
+              format: date  
+            date_to: 
+              type: string 
+              format: date 
+            family: 
+              type: string
+            given: 
+              type: string
+            id: 
+              type: integer
+            party: 
+              type: integer
+            prefix: 
+              type: string
+            rec_name: 
+              type: string
+            suffix: 
+              type: string
+            use: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        ref: 
+          type: string
+        residence: 
+          type: integer
+        residence_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        supplier_location: 
+          type: integer
+        supplier_location_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        unidentified: 
+          type: boolean
+        
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      account_payable: 
+      account_receivable: 6
+      account_receivable_:
+        id: 6
+        name: Main Receivable
+      activation_date: '2024-06-25'
+      active: true
+      addresses:
+      - active: true
+        city: kabul
+        contact_mechanisms: []
+        country: 1
+        country_:
+          id: 1
+          name: "\U0001F1E6\U0001F1D5 Afghanistan"
+        create_date: '2024-06-25T04:25:06.261382'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        delivery: false
+        full_address: |-
+          afghanbuilding
+          taimani
+          1001 kabul
+          AFGHANISTAN
+        id: 1
+        identifiers: []
+        invoice: 
+        is_school: 
+        is_work: 
+        name: afghanbuilding
+        party: 1
+        party_:
+          id: 1
+          name: elyas
+        party_name: abcParty
+        postal_code: '1001'
+        rec_name: abcParty, afghanbuilding, taimani, 1001, kabul, A0
+        relationship: 
+        relative_id: 
+        relative_id_: {}
+        sequence: 
+        street: taimani
+        street_single_line: taimani
+        subdivision: 
+        subdivision_: {}
+        subdivision_types: "[]"
+        write_date: '2024-08-23T05:17:01.987740'
+        write_uid: 1
+        write_uid_:
+          id: 1
+          name: Administrator
+      age: 32​y ​0​m ​4​d​
+      alternative_identification: 
+      alternative_ids: []
+      bank_accounts:
+      - active: true
+        bank: 5
+        bank_:
+          id: 5
+          name: elyas
+        create_date: '2024-08-20T17:09:24.185395'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        currency: 1
+        currency_:
+          id: 1
+          name: Afghani
+        id: 1
+        numbers: []
+        owners:
+        - code: '1'
+          create_date: '2024-06-25T04:25:06.261382'
+          create_uid: 1
+          create_uid_:
+            id: 1
+            name: Administrator
+          deposit: 0
+          id: 1
+          lang: 
+          name: elyas
+          payable_today: 0
+          rec_name: elyas
+          receivable_today: 0
+          tax_identifier: 
+          write_date: '2024-08-26T11:58:13.564413'
+          write_uid: 1
+          write_uid_:
+            id: 1
+            name: Administrator
+        rec_name: "(1) @ elyas [AFN]"
+        write_date: '2024-08-20T17:13:57.121972'
+        write_uid: 1
+        write_uid_:
+          id: 1
+          name: Administrator
+      birth_certificate: 
+      birth_certificate_: {}
+      categories: []
+      citizenship: 
+      citizenship_: {}
+      code: '1'
+      contact_mechanisms:
+      - active: true
+        address: 2
+        address_:
+          id: 2
+          name: Milestone, 12, 2, 10001, Kabul
+        comment: 
+        create_date: '2024-08-26T11:44:21.185280'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        emergency: false
+        id: 4
+        invoice: false
+        language: 9
+        name: Test
+        party: 1
+        party_:
+          id: 1
+          name: elyas
+        rec_name: Test <77777777>
+        remarks: 
+        sequence: 
+        type: phone
+        value: '77777777'
+        write_date: '2024-08-26T11:44:21.185280'
+        write_uid: 1
+        write_uid_:
+          id: 1
+          name: Administrator
+      create_date: '2024-06-25T04:25:06.261382'
+      create_target: true
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      customer_location: 7
+      customer_location_:
+        id: 7
+        name: Customer
+      customer_payment_term: 1
+      customer_payment_term_:
+        id: 1
+        name: payment001
+      customer_tax_rule: 
+      death_certificate: 
+      death_certificate_: {}
+      deceased: 
+      delivered_to_warehouses: []
+      deposit: 0
+      dob: '1992-08-23'
+      dod: 
+      du: 1
+      du_:
+        id: 1
+        name: d01
+      du_address: "kabul01 1, 123, \nKabul, Afghanistan,  - 1007, "
+      est_dob: true
+      est_years: 
+      ethnic_group: 
+      ethnic_group_: {}
+      father: 
+      father_: {}
+      fed_country: 
+      federation_account: 
+      gender: m
+      id: 1
+      identifiers: []
+      insurance: []
+      insurance_company_type: 
+      internal_user: 1
+      internal_user_:
+        id: 1
+        name: Administrator
+      is_healthprof: true
+      is_institution: true
+      is_insurance_company: 
+      is_patient: true
+      is_person: true
+      is_pharmacy: 
+      lang: 
+      lastname: 
+      marital_status: m
+      mother: 
+      mother_: {}
+      name: elyas
+      name_representation: 
+      payable: 0
+      payable_today: 0
+      person_names:
+      - create_date: '2024-08-23T05:13:11.325854'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        date_from: 
+        date_to: 
+        family: 
+        given: elyas
+        id: 2
+        party: 1
+        prefix: 
+        rec_name: '2'
+        suffix: 
+        use: official
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      photo: 
+      rec_name: elyas
+      receivable: 0
+      receivable_today: 0
+      ref: '001'
+      residence: 
+      residence_: {}
+      supplier_location: 6
+      supplier_location_:
+        id: 6
+        name: Supplier
+      supplier_payment_term: 1
+      supplier_payment_term_:
+        id: 1
+        name: payment001
+      supplier_tax_rule: 
+      tax_identifier: 
+      unidentified: true
+      write_date: '2024-08-26T11:58:13.564413'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

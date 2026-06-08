@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: icon
+    description: icon - icon data management.
+paths:
+  '/administration/icons/search':
+    $ref: 'get_icon.yaml'
+  '/administration/icons':
+    $ref: 'post_delete_icon.yaml'
+  '/administration/icons/{obj_id}':
+    $ref: 'get_put_icon_by_id.yaml'
+  
+    
+  

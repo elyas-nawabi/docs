@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: contact tracing
+    description: contact tracing - contact tracing data management.
+paths:
+  '/health-contact-tracing/contact-tracing/search':
+    $ref: 'get_contact_tracing.yaml'
+  '/health-contact-tracing/contact-tracing':
+    $ref: 'post_delete_contact_tracing.yaml'
+  '/health-contact-tracing/contact-tracing/{obj_id}':
+    $ref: 'get_put_contact_tracing_by_id.yaml'
+  

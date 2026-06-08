@@ -1,0 +1,10 @@
+openapi: 3.1.0
+version: 1.0.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: toolbar
+    description: toolbar - view toolbar data management.
+paths:
+  '/get-view-toolbar/{model_name}':
+    $ref: 'get_view_toolbar.yaml' 

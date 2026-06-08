@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: category
+    description: category - category data management.
+paths:
+  '/health-caldav/calendar-categories/search':
+    $ref: 'get_category.yaml'
+  '/health-caldav/calendar-categories':
+    $ref: 'post_delete_category.yaml'
+  '/health-caldav/calendar-categories/{obj_id}':
+    $ref: 'get_put_category_by_id.yaml'
+  

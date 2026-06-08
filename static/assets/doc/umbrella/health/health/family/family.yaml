@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: family
+    description: family - family data management.
+paths:
+  '/health/families/search':
+    $ref: 'get_family.yaml'
+  '/health/families':
+    $ref: 'post_delete_family.yaml'
+  '/health/families/{obj_id}':
+    $ref: 'get_put_family_by_id.yaml'
+  

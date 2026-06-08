@@ -1,0 +1,110 @@
+schema:
+  properties:
+    data:
+      type: object
+      properties:
+        id:
+          type: integer
+        rec_name:
+          type: string
+        name:
+          type: string
+        kind:
+          type: string
+          enum: [sale, purchase, both]
+          description: |
+            Determines on which transaction side the rule is applied.
+            - `sale` — applied on sales/customer invoices
+            - `purchase` — applied on purchases/supplier invoices
+            - `both` — applied on both
+        account:
+          type: integer
+          description: Root account template id this rule belongs to.
+        account_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        lines:
+          type: array
+          description: |
+            Rule line templates that define substitution conditions. Lines are evaluated in sequence order;
+            the first matching line applies.
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              sequence:
+                type: integer
+              start_date:
+                type: string
+                format: date
+                nullable: true
+              end_date:
+                type: string
+                format: date
+                nullable: true
+              group:
+                type: integer
+                nullable: true
+                description: Tax group filter — only applies to taxes in this group.
+              group_:
+                $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+              origin_tax:
+                type: integer
+                nullable: true
+                description: If set, the rule only applies when this specific tax template is matched.
+              origin_tax_:
+                $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+              keep_origin:
+                type: boolean
+                description: When true, the original tax is kept alongside the substitution tax.
+              tax:
+                type: integer
+                nullable: true
+                description: Substitution tax template. Null means the original tax is removed (zero-rated).
+              tax_:
+                $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+              rule:
+                type: integer
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 30
+    rec_name: EU Intra-Community
+    name: EU Intra-Community
+    kind: sale
+    account: 1
+    account_:
+      id: 1
+      name: Minimal Account Chart
+    lines:
+      - id: 60
+        sequence: 10
+        start_date: null
+        end_date: null
+        group: 1
+        group_:
+          id: 1
+          name: VAT
+        origin_tax: 10
+        origin_tax_:
+          id: 10
+          name: 21% VAT
+        keep_origin: false
+        tax: null
+        tax_: {}
+        rule: 30
+  errors: null
+  pagination: null
+  status: 200
+  success_message: null

@@ -1,0 +1,75 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        age_dose: 
+          type: integer
+        age_unit: 
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        dose_number: 
+          type: integer
+        id: 
+          type: integer
+        rec_name: 
+          type: string
+        remarks: 
+          type: string
+        sched: 
+          type: string
+        vaccine: 
+          type: integer
+        vaccine_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      age_dose: 29
+      age_unit: months
+      create_date: '2024-07-27T06:01:45.550394'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      dose_number: 1
+      id: 1
+      rec_name: '1'
+      remarks: ''
+      sched: '009'
+      vaccine: 1
+      vaccine_:
+        id: 1
+        name: BCG vaccine
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

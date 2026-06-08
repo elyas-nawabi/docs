@@ -1,0 +1,175 @@
+schema:
+  properties:
+    data:
+      type: object
+      properties:
+        id:
+          type: integer
+        rec_name:
+          type: string
+        name:
+          type: string
+          description: Display name of the template (translatable).
+        active:
+          type: boolean
+          description: Inactive templates are hidden from the create-move wizard but remain accessible via the API.
+        company:
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        journal:
+          type: integer
+          description: Journal id (`account.journal`) used for moves created from this template.
+        journal_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        description:
+          type: string
+          nullable: true
+          description: |
+            Optional description for moves created from this template. Supports keyword substitution
+            using braces: e.g. `"Rent expense for {month}"` where `month` is a keyword name.
+        keywords:
+          type: array
+          description: |
+            Runtime variable definitions. When creating a move from this template, each keyword
+            must be supplied a value. The value is then referenced in `lines[].amount` expressions.
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
+                description: Python identifier used in amount expressions (e.g. `amount`, `party_id`).
+              string:
+                type: string
+                description: Human-readable label shown in the create-move dialog.
+              type_:
+                type: string
+                enum: [char, numeric, date, party]
+                description: |
+                  - `char` — free text
+                  - `numeric` — decimal number (requires `digits`)
+                  - `date` — calendar date
+                  - `party` — `party.party` record selector
+              required:
+                type: boolean
+              digits:
+                type: integer
+                nullable: true
+                description: Decimal precision. Only relevant when `type_` is `numeric`.
+              sequence:
+                type: integer
+        lines:
+          type: array
+          description: |
+            Debit/credit account pairs. Each line computes its amount from a Python expression
+            that can reference keyword names (e.g. `"amount * Decimal('0.21')"`).
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              operation:
+                type: string
+                enum: [debit, credit]
+              amount:
+                type: string
+                description: Python expression evaluated at move creation time (e.g. `"amount"`).
+              account:
+                type: integer
+                description: Account id (`account.account`) for this line.
+              account_:
+                $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+              party:
+                type: string
+                nullable: true
+                description: Keyword name whose value is used as the party for this line.
+              description:
+                type: string
+                nullable: true
+                description: Optional line description; supports keyword substitution.
+              taxes:
+                type: array
+                description: Tax line templates attached to this move line template.
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    amount:
+                      type: string
+                      description: Python expression for the tax amount.
+                    type:
+                      type: string
+                      enum: [tax, base]
+                    tax:
+                      type: integer
+                      nullable: true
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 1
+    rec_name: Monthly Rent Expense
+    name: Monthly Rent Expense
+    active: true
+    company: 1
+    company_:
+      id: 1
+      name: My Company
+    journal: 3
+    journal_:
+      id: 3
+      name: Miscellaneous
+    description: Rent expense for {month}
+    keywords:
+      - id: 1
+        name: amount
+        string: Amount
+        type_: numeric
+        required: true
+        digits: 2
+        sequence: 10
+      - id: 2
+        name: month
+        string: Month
+        type_: char
+        required: true
+        digits: null
+        sequence: 20
+    lines:
+      - id: 1
+        operation: debit
+        amount: amount
+        account: 610
+        account_:
+          id: 610
+          name: Rent Expense
+        party: null
+        description: Rent - {month}
+        taxes: []
+      - id: 2
+        operation: credit
+        amount: amount
+        account: 210
+        account_:
+          id: 210
+          name: Accounts Payable
+        party: null
+        description: null
+        taxes: []
+  errors: null
+  pagination: null
+  status: 200
+  success_message: null

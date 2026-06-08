@@ -1,0 +1,92 @@
+    post:
+      tags:
+        - reporting
+      summary: Get list of margins.
+      description: Get list of margins.
+      operationId: getListOfMargins
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context:
+                  type: object
+                  properties:
+                    from_date:
+                      type: string
+                      format: date
+                    to_date:
+                      type: string
+                      format: date
+                    company:
+                      type: integer
+                    period:
+                      type: integer
+                    include_lost:
+                      type: boolean
+                
+            required:
+              - company     
+              - period     
+
+            example:
+              context:
+                from_date: "2024-04-09"
+                to_date: "2024-05-09"
+                company: 1
+                period: "2024"
+                include_lost: true
+            
+
+      responses:
+        '200':
+          description: List of margins.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                    errors:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data: []
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 0
+                  total_records: 0
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

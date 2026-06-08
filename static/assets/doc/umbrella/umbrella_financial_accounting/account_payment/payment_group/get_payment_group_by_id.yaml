@@ -1,0 +1,117 @@
+get:
+      tags:
+        - payment group
+      summary: Get one payment group.
+      description: Get one payment group.
+      operationId: getPaymentGroupById
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 2
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        company: 
+                          type: integer
+                        company_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        currency: 
+                          type: integer
+                        currency_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        id: 
+                          type: integer
+                        journal:
+                          type: integer
+                        journal_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        kind: 
+                          type: string
+                        number: 
+                          type: string
+                        payment_amount: 
+                          type: integer
+                        payment_amount_succeeded: 
+                          type: integer
+                        payment_complete: 
+                          type: boolean
+                        payment_count: 
+                          type: integer
+                        process_method: 
+                          type: string
+                        rec_name: 
+                          type: string
+                    errors:
+                      type: object
+                    pagination:
+                      items:
+                        type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  company: 1
+                  company_:
+                    id: 1
+                    name: Party 1
+                  currency: 1
+                  currency_:
+                    id: 1
+                    name: Afghani
+                  id: 1
+                  journal: 10
+                  journal_:
+                    id: 10
+                    name: payment_journal_test
+                  kind: receivable
+                  number: '1'
+                  payment_amount: 6
+                  payment_amount_succeeded: 5
+                  payment_complete: true
+                  payment_count: 6
+                  process_method: stripe
+                  rec_name: '1'
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+  

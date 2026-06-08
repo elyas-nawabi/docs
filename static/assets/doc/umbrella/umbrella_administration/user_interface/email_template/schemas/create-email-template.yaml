@@ -1,0 +1,44 @@
+properties:
+   body: 
+      type: string
+   model: 
+      type: integer
+   model_name: 
+      type: string
+   name: 
+      type: string
+   rec_name: 
+      type: string
+   recipients: 
+      type: integer
+   recipients_hidden: 
+      type: integer
+   recipients_hidden_pyson: 
+      type: string
+   recipients_pyson: 
+      type: string
+   recipients_secondary: 
+      type: integer
+   recipients_secondary_pyson: 
+      type: string
+   reports: 
+      type: array
+   subject: 
+      type: string
+
+required:
+   -     
+example:
+   body: body text here...
+   model: 186
+   model_name: account.account
+   name: email_template
+   rec_name: email_template
+   recipients: 2109
+   recipients_hidden: 2109
+   recipients_hidden_pyson: ''
+   recipients_pyson: ''
+   recipients_secondary: 2137
+   recipients_secondary_pyson: ''
+   reports: []
+   subject: ''

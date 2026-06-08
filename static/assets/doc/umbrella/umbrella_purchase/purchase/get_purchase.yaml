@@ -1,0 +1,151 @@
+    post:
+      tags:
+        - purchase
+      summary: Get purchase details.
+      description: Get purchase details.
+      operationId: getPurchase
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of purchases.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        company: 
+                          type: integer
+                        company_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        currency: 
+                          type: integer
+                        currency_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        description: 
+                          type: string
+                        id: 
+                          type: integer
+                        invoice_state: 
+                          type: string
+                        number: 
+                          type: integer
+                        party: 
+                          type: integer
+                        party_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        purchase_date: 
+                          type: string
+                          format: date
+                        rec_name: 
+                          type: string
+                        reference:
+                          type: string
+                        shipment_state: 
+                          type: string
+                        state: 
+                          type: string
+                        untaxed_amount: 
+                          type: integer
+                        warehouse: 
+                          type: integer
+                        warehouse_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                      nullable: true
+                    pagination:
+                      type: object
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - company: 1
+                    company_:
+                      id: 1
+                      name: elyas
+                    create_date: '2024-09-02T16:38:18.843651'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    description: this is some description
+                    id: 1
+                    invoice_state: none
+                    number: 
+                    party: 3
+                    party_:
+                      id: 3
+                      name: milestone
+                    purchase_date: '2024-09-03'
+                    rec_name: "[ab.hasib]"
+                    reference: ab.hasib
+                    shipment_state: none
+                    state: draft
+                    untaxed_amount: 0
+                    warehouse: 5
+                    warehouse_:
+                      id: 5
+                      name: Warehouse
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

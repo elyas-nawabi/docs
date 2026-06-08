@@ -1,0 +1,55 @@
+      properties:
+        
+  
+      required:
+          - 
+      example:
+        assigned_by: 
+        company: 1
+        delay: -172800
+        done_by: 
+        effective_date: '2024-08-06'
+        effective_start_date: '2024-08-06'
+        from_location: 1
+        moves:
+          - assignation_required: true
+            company: 1
+            cost_price: 
+            cost_price_required: true
+            currency: 
+            delay: '0:00:00'
+            effective_date: 
+            from_location: 1
+            internal_quantity: 3
+            lot: 
+            origin: stock.move,-1
+            origin_planned_date: 
+            planned_date: '2024-08-08'
+            product: 147
+            product_:
+            id: 147
+            name: abacavir (ABC)
+            product_cost_price: 
+            product_uom_category: 1
+            quantity: 3
+            rec_name: 3 u abacavir (ABC)
+            shipment: stock.shipment.internal,1
+            state: draft
+            to_location: 4
+            unit: 1
+            unit_price: 
+            unit_price_company: 
+            unit_price_required: false
+            unit_price_updated: true
+        number: '1'
+        origin_planned_date: 
+        partially_assigned: false
+        planned_date: '2024-08-08'
+        planned_start_date: '2024-08-08'
+        rec_name: '1'
+        reference: ''
+        shipped_by: 
+        state: waiting
+        to_location: 4
+        transit_location: 
+        warehouse: 5

@@ -1,0 +1,40 @@
+      properties:
+        appointment_minutes: 
+            type: integer
+        date_end: 
+            type: string
+            format: date
+        date_start: 
+            type: string
+            format: date
+        healthprof: 
+            type: integer
+        institution: 
+            type: integer
+        specialty: 
+            type: integer
+        time_end: 
+            type: string
+            format: time
+        time_start: 
+            type: string
+            format: time
+      required:
+          - appointment_minutes
+          - date_end
+          - date_start
+          - healthprof
+          - institution
+          - specialty
+          - time_end
+          - time_start
+
+      example:
+        appointment_minutes: 1
+        date_end: '2024-01-05'
+        date_start: '2024-01-03'
+        healthprof: 1
+        institution: 1
+        specialty: 1
+        time_end: '01:23'
+        time_start: '02:33'

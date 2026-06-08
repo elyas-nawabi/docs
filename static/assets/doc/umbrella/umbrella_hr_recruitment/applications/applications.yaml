@@ -1,0 +1,21 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: applications
+    description: applications - data management.
+paths:
+  '/hr-recruitment/applications/search':
+    $ref: 'get_applications.yaml'
+  '/hr-recruitment/applications':
+    $ref: 'post_delete_applications.yaml'
+  '/hr-recruitment/applications/{obj_id}':
+    $ref: 'get_put_applications_by_id.yaml'
+  '/hr-recruitment/applications/{obj_id}/change-stage-to/{stage_id}':
+    $ref: 'get_change_stage.yaml'
+  '/hr-recruitment/applications/{obj_id}/refuse/{refuse_reason_id}':
+    $ref: 'get_refuse.yaml'
+  '/hr-recruitment/applications/{obj_id}/restore':
+    $ref: 'get_restore.yaml'
+  '/hr-recruitment/applications/{obj_id}/create-employee':
+    $ref: 'get_create_employee.yaml'

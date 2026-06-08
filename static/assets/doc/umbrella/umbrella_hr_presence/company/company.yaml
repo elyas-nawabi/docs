@@ -1,0 +1,9 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: presence_company
+    description: presence_company - data management.
+paths:
+  '/hr-presence/company/{obj_id}/presence-config':
+    $ref: 'get_put_presence_config.yaml'

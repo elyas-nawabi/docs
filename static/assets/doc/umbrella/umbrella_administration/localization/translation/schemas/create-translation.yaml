@@ -1,0 +1,38 @@
+properties:
+   fuzzy: 
+      type: boolean
+   lang: 
+      type: string
+   model: 
+      type: string
+   module: 
+      type: string
+   name: 
+      type: string
+   overriding_module: 
+      type: string
+   rec_name: 
+      type: string
+   res_id:   
+      type: integer
+   src: 
+      type: string
+   type: 
+      type: string
+   value: 
+      type: string
+
+required:
+   -     
+example:
+   fuzzy: false
+   lang: en
+   model: ir.configuration
+   module: ir
+   name: ir.configuration,name
+   overriding_module: 
+   rec_name: ir.configuration,name
+   res_id: -1
+   src: Configuration
+   type: model
+   value: ''

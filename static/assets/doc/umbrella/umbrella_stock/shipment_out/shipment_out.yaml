@@ -1,0 +1,26 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: shipment out
+    description: shipment out - shipment out data management.
+paths:
+  '/stock/customer-shipments/search':
+    $ref: 'get_shipment_out.yaml'
+  '/stock/customer-shipments':
+    $ref: 'post_delete_shipment_out.yaml'
+  '/stock/customer-shipments/{obj_id}':
+    $ref: 'get_put_shipment_out_by_id.yaml'
+  '/stock/customer-shipments/{obj_id}/assign':
+    $ref: 'get_assign.yaml'
+  '/stock/customer-shipments/{obj_id}/draft':
+    $ref: 'get_draft.yaml'
+  '/stock/customer-shipments/{obj_id}/cancel':
+    $ref: 'get_cancel.yaml'
+  '/stock/customer-shipments/{obj_id}/wait':
+    $ref: 'get_wait.yaml'
+  '/stock/customer-shipments/{obj_id}/done':
+    $ref: 'get_done.yaml'
+  '/stock/customer-shipments/{obj_id}/pack':
+    $ref: 'get_pack.yaml'
+  

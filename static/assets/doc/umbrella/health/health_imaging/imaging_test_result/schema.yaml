@@ -1,0 +1,115 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        comment: 
+          type: string
+        computed_age: 
+          type: integer
+        date: 
+          type: string
+          format: date
+        doctor: 
+          type: integer
+        doctor_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        images: 
+          type: array
+        merge_id: 1.2.836.0.1.3240043.7.198.99293174957540775760679610770776780505
+        number: 
+          type: string
+        order: 
+          type: string
+        patient:  
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        rec_name:   
+          type: string
+        request: 
+          type: integer
+        request_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        request_date:
+          type: string
+          format: date
+        requested_test: 
+          type: integer
+        requested_test_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        studies: 
+          type: array
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      comment: 
+      computed_age: 
+      create_date: '2024-08-19T17:40:26.847911'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      date: '2024-08-19T17:40:26'
+      doctor: 1
+      doctor_:
+        id: 1
+        name: Milestone
+      id: 1
+      images: []
+      merge_id: 1.2.836.0.1.3240043.7.198.99293174957540775760679610770776780505
+      number: TEST001
+      order: '001'
+      patient: 1
+      patient_:
+        id: 1
+        name: Milestone
+      rec_name: TEST001 (new_study)
+      request: 1
+      request_:
+        id: 1
+        name: "**Urgent** (Milestone) // CONTEXT: A00 : Cholera"
+      request_date: '2024-08-19T15:39:10'
+      requested_test: 1
+      requested_test_:
+        id: 1
+        name: new_study
+      studies: []
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

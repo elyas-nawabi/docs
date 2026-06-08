@@ -1,0 +1,110 @@
+    post:
+      tags:
+        - gene
+      summary: Get gene details.
+      description: Get gene details.
+      operationId: getGenes
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of genes.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        chromosome:
+                          type: string 
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        gene_type: 
+                          type: string 
+                        hgnc_id: 
+                          type: string 
+                        id: 
+                          type: integer
+                        long_name:
+                          type: string
+                        name:
+                          type: string
+                        rec_name: 
+                          type: string
+                        variants_count: 
+                          type: integer
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - chromosome: '19'
+                    create_date: '2024-05-27T12:27:26.974045'
+                    create_uid: 0
+                    create_uid_:
+                      id: 0
+                      name: Root
+                    gene_type: protein_coding
+                    hgnc_id: HGNC:5
+                    id: 1
+                    long_name: alpha-1-B glycoprotein
+                    name: A1BG
+                    rec_name: A1BG (P04217) :alpha-1-B glycoprotein
+                    variants_count: 2
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

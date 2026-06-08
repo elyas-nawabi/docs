@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: imaging test
+    description: imaging test - imaging test data management.
+paths:
+  '/health-imaging/medical-imaging-studies/search':
+    $ref: 'get_imaging_test.yaml'
+  '/health-imaging/medical-imaging-studies':
+    $ref: 'post_delete_imaging_test.yaml'
+  '/health-imaging/medical-imaging-studies/{obj_id}':
+    $ref: 'get_put_imaging_test_by_id.yaml'
+  

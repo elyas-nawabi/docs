@@ -1,0 +1,11 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: appointment report
+    description: appointment report - appointment report data management.
+paths:
+  
+  '/health/appointments-with-dx-report/search':
+    $ref: 'post_appointment_report.yaml'
+  

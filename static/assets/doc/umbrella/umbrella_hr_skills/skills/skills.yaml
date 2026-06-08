@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: skills
+    description: skills - data management.
+paths:
+  '/hr-skills/skills/search':
+    $ref: 'get_skills.yaml'
+  '/hr-skills/skills':
+    $ref: 'post_delete_skills.yaml'
+  '/hr-skills/skills/{obj_id}':
+    $ref: 'get_put_skills_by_id.yaml'

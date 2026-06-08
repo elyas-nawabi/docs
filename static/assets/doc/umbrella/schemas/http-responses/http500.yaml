@@ -1,0 +1,29 @@
+      properties:
+        data:
+          type: object
+          nullable: true
+        errors:
+          type: array
+          properties:
+            error_message:
+              type: string
+            identifier:
+              type: string
+            serverity:
+              type: integer
+        pagination:
+          type: object
+          nullable: true
+        status:
+          type: integer
+        success_message:
+          type: string
+      example:
+        data: null
+        errors:
+          - error_message: Internal server error
+            identifier: currency.currency
+            serverity: 1
+        pagination: null
+        status: 500
+        success_message: null

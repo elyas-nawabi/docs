@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: job position
+    description: job position - job position data management.
+paths:
+  '/hr/job-positions/search':
+    $ref: 'get_job.yaml'
+  '/hr/job-positions':
+    $ref: 'post_delete_job.yaml'
+  '/hr/job-positions/{obj_id}':
+    $ref: 'get_put_job_by_id.yaml'
+  

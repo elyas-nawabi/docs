@@ -1,0 +1,95 @@
+schema:
+  properties:
+    id:
+      type: integer
+      description: Unique identifier for the mail activity plan
+    name:
+      type: string
+      description: Name of the activity plan
+    res_model:
+      type: integer
+      description: ID of the model this plan applies to
+    steps_count:
+      type: integer
+      description: Number of steps in the plan
+    company:
+      type: integer
+      description: ID of the company this plan belongs to
+    templates:
+      type: array
+      description: List of activity plan templates
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+            description: Template ID
+          activity_type:
+            type: integer
+            description: ID of the activity type
+          summary:
+            type: string
+            description: Summary of the activity
+          responsible_type:
+            type: string
+            description: Type of responsible party
+          responsible:
+            type: integer
+            description: ID of the responsible party
+          delay_count:
+            type: integer
+            description: Number of delay units
+          delay_unit:
+            type: string
+            description: Unit for delay (days, hours, etc.)
+          delay_from:
+            type: string
+            description: Reference point for delay calculation
+          plan:
+            type: integer
+            description: ID of the plan this template belongs to
+          res_model_string:
+            type: string
+            description: Model string this template applies to
+          company:
+            type: integer
+            description: ID of the company
+          sequence:
+            type: integer
+            description: Sequence number for ordering
+          icon:
+            type: string
+            description: Icon to display
+          note:
+            type: string
+            description: Additional notes
+    res_model_string:
+      type: string
+      description: Model string this plan applies to
+    has_user_on_demand:
+      type: boolean
+      description: Whether the plan has user on demand functionality
+
+example:
+  id: 123
+  name: "Customer Onboarding Plan"
+  res_model: 1
+  steps_count: 5
+  company: 1
+  templates:
+    - id: 1
+      activity_type: 1
+      summary: "Initial contact call"
+      responsible_type: "user"
+      responsible: 1
+      delay_count: 0
+      delay_unit: "days"
+      delay_from: "creation"
+      plan: 123
+      res_model_string: "res.partner"
+      company: 1
+      sequence: 1
+      icon: "phone"
+      note: "Make initial contact with customer"
+  res_model_string: "res.partner"
+  has_user_on_demand: true

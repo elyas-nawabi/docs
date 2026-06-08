@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: view search
+    description: view search - view search data management.
+paths:
+  '/administration/view-search/search':
+    $ref: 'get_view_search.yaml'
+  '/administration/view-search':
+    $ref: 'post_delete_view_search.yaml'
+  '/administration/view-search/{obj_id}':
+    $ref: 'get_put_view_search_by_id.yaml'
+
+    
+  

@@ -1,0 +1,129 @@
+    post:
+      tags:
+        - appointment
+      summary: Get appointment details.
+      description: Get appointment details.
+      operationId: getAppointments
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of appointments.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        appointment_date:
+                          type: string
+                          format: date
+                        create_date: 
+                          type: string
+                          format: date
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        healthprof: 
+                          type: integer
+                        healthprof_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        id: 
+                          type: integer
+                        patient: 
+                          type: integer
+                        patient_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        speciality: 
+                          type: integer
+                        speciality_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        state: 
+                          type: string
+                        urgency: 
+                          type: string
+                        visit_type: 
+                          type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - appointment_date: '2024-07-23T17:58:51'
+                    create_date: '2024-07-23T18:01:36.152001'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    healthprof: 1
+                    healthprof_:
+                      id: 1
+                      name: Milestone
+                    id: 1
+                    patient: 17
+                    patient_:
+                      id: 17
+                      name: Milestone
+                    rec_name: APP 2024/1
+                    speciality: 1
+                    speciality_:
+                      id: 1
+                      name: Anatomy
+                    state: confirmed
+                    urgency: b
+                    visit_type: new
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

@@ -1,0 +1,13 @@
+properties:
+    code:
+        type: string
+    name: 
+        type: string
+    rec_name: 
+        type: string
+required:
+
+example:
+    code: e1
+    name: PRODUCTS AND TECHNOLOGY
+    rec_name: PRODUCTS AND TECHNOLOGY

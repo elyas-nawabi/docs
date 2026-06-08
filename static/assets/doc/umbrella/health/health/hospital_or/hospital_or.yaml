@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: hospital or
+    description: hospital or - hospital or data management.
+paths:
+  '/health/operating-rooms/search':
+    $ref: 'get_hospital_or.yaml'
+  '/health/operating-rooms':
+    $ref: 'post_delete_hospital_or.yaml'
+  '/health/operating-rooms/{obj_id}':
+    $ref: 'get_put_hospital_or_by_id.yaml'
+  

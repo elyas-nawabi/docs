@@ -1,0 +1,161 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        active:
+          type: boolean
+        city:
+          type: string
+        contact_mechanisms:
+          type: array
+          properties:
+            address: 
+              type: integer
+            address_: 
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            language: 
+              type: integer
+            name: 
+              type: string
+            party: 
+              type: integer
+            party_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            type: 
+              type: string
+            value:
+              type: string
+        country:
+          type: integer
+        country_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        delivery:
+          type: integer 
+        full_address:
+          type: string
+        id: 
+          type: integer
+        invoice:
+          type: integer
+        is_school: 
+          type: boolean
+        is_work: 
+          type: boolean
+        name: 
+          type: string 
+        party: 
+          type: integer
+        party_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        party_name:
+          type: string
+        postal_code:
+          type: string 
+        rec_name:
+          type: string 
+        relationship: 
+          type: string
+        relative_id: 
+          type: integer
+        relative_id_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        sequence: 
+          type: integer
+        street: 
+          type: string 
+        street_single_line:
+          type: string
+        subdivision: 
+          type: integer
+        subdivision_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      active: true
+      city: Kabul
+      contact_mechanisms:
+      - address: 1
+        address_:
+          id: 1
+          name: Patient 1
+        id: 29
+        language: 
+        name: p1
+        party: 1
+        party_:
+          id: 1
+          name: Party 1
+        rec_name: suhaib <0771680435>
+        type: mobile
+        value: '0771680435'
+      country: 1
+      country_:
+        id: 1
+        name: Afghanistan
+      create_date: '2024-05-08T12:21:10.626191'
+      create_uid: 1
+      create_uid_:
+          id: 1,
+          name: Administrator
+      delivery: 
+      id: 1
+      invoice: false
+      is_school: false
+      is_work: false
+      name: ada
+      party: 1
+      party_:
+        id: 1
+        name: Party 1
+      party_name: ptupdate
+      postal_code: '1004'
+      full_address: afghanbuilding\ntaimani\n1001 kabul\nAFGHANISTAN
+      rec_name: patient 1
+      relationship: null
+      relative_id: null
+      relative_id_: {}
+      sequence: 1
+      street: street 3
+      street_single_line: taimani
+      subdivision: 3
+      subdivision_:
+        id: 3
+        name: sbd1
+      write_date: null
+      write_uid: null
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

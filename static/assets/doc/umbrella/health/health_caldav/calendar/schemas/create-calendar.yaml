@@ -1,0 +1,49 @@
+      properties:
+        description: 
+          type: string
+        name: 
+          type: string
+        owner: 
+          type: integer
+        read_users:
+          type: array
+          properties:
+            login: 
+              type: string
+            name: 
+              type: string
+            rec_name: 
+              type: string
+            sessions: 
+              type: integer
+        rec_name:
+          type: string
+        write_users:
+          type: array
+          properties:
+            login: 
+              type: string
+            name: 
+              type: string
+            rec_name: 
+              type: string
+            sessions: 
+              type: integer
+  
+      required:
+          - 
+      example:
+        description: description here...
+        name: '2025'
+        owner: 1
+        read_users:
+          - login: demo_dentist
+            name: Health Dentist
+            rec_name: Health Dentist
+            sessions: 0
+        rec_name: '2025'
+        write_users:
+          - login: admin
+            name: Administrator
+            rec_name: Administrator
+            sessions: 10

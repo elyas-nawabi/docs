@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: immunization schedule line
+    description: immunization schedule line - immunization schedule line data management.
+paths:
+  '/health/schedule-vaccines/search':
+    $ref: 'get_immunization_schedule_line.yaml'
+  '/health/schedule-vaccines':
+    $ref: 'post_delete_immunization_schedule_line.yaml'
+  '/health/schedule-vaccines/{obj_id}':
+    $ref: 'get_put_immunization_schedule_line_by_id.yaml'
+  

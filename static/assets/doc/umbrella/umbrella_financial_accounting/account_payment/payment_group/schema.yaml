@@ -1,0 +1,101 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        currency: 
+          type: integer
+        currency_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        id: 
+          type: integer
+        journal: 
+          type: integer
+        journal_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          
+        kind: 
+          type: string
+        number: 
+          type: string
+        payment_amount: 
+          type: number
+          format: decimal
+        payment_amount_succeeded: 
+          type: number
+          format: decimal
+        payment_complete: 
+          type: boolean
+        payment_count: 
+          type: integer
+        process_method: 
+          type: string
+        rec_name: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      create_date: '2024-07-06T08:33:27.527024'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      currency: 1
+      currency_:
+        id: 1
+        name: Afghani
+      id: 1
+      journal: 2
+      journal_:
+        id: 2
+        name: Receivable Journal
+      kind: receivable
+      number: '1'
+      payment_amount: 
+      payment_amount_succeeded: 
+      payment_complete: 
+      payment_count: 
+      process_method: manual
+      rec_name: '1'
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

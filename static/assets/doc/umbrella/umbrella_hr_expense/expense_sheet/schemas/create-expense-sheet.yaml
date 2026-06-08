@@ -1,0 +1,84 @@
+  properties:
+    name:
+      type: string
+    company:
+      type: integer
+    employee:
+      type: integer
+    department:
+      type: integer
+    user:
+      type: integer
+    currency:
+      type: integer
+    accounting_date:
+      type: string
+      format: date
+    journal:
+      type: integer
+    payment_mode:
+      type: string
+    expense_lines:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+          date:
+            type: string
+            format: date
+          employee:
+            type: integer
+          company:
+            type: integer
+          product:
+            type: integer
+          product_uom:
+            type: integer
+          quantity:
+            type: number
+          description:
+            type: string
+          price_unit:
+            type: number
+          payment_mode:
+            type: string
+          vendor:
+            type: integer
+          account:
+            type: integer
+          taxes:
+            type: array
+            items:
+              type: integer
+          accounting_date:
+            type: string
+            format: date
+  required: []
+
+  example:
+    name: EXP/2026/0001
+    company: 1
+    employee: 10
+    department: 3
+    user: 1
+    currency: 1
+    accounting_date: '2026-01-10'
+    journal: 2
+    payment_mode: company
+    expense_lines:
+      - name: Taxi
+        date: '2026-01-10'
+        employee: 10
+        company: 1
+        product: 55
+        product_uom: 1
+        quantity: 1
+        description: Airport to office
+        price_unit: 25
+        payment_mode: company
+        vendor: 200
+        account: 330
+        taxes: [1]
+        accounting_date: '2026-01-10'

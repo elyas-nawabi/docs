@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: insurance plan product policy
+    description: insurance plan product policy - insurance plan product policy data management.
+paths:
+  '/health-insurance/insurance-plan-product-policies/search':
+    $ref: 'get_insurance_plan_product_policy.yaml'
+  '/health-insurance/insurance-plan-product-policies':
+    $ref: 'post_delete_insurance_plan_product_policy.yaml'
+  '/health-insurance/insurance-plan-product-policies/{obj_id}':
+    $ref: 'get_put_insurance_plan_product_policy_by_id.yaml'
+  

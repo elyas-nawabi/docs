@@ -1,0 +1,18 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: employee
+    description: employee - employee data management.
+paths:
+  '/company/employees/search':
+    $ref: 'get_employee.yaml'
+  '/company/employees':
+    $ref: 'post_delete_employee.yaml'
+  '/company/employees/{obj_id}':
+    $ref: 'get_put_employee_by_id.yaml'
+  '/company/employees/launch-plan':
+    $ref: '../../umbrella_mail/employee/post_launch_plan.yaml'
+  '/company/employees/{obj_id}/planned-activities':
+    $ref: '../../umbrella_mail/employee/get_planned_activities.yaml'
+  

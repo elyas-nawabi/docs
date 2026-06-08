@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: email template
+    description: email template - email template data management.
+paths:
+  '/administration/email-templates/search':
+    $ref: 'get_email_template.yaml'
+  '/administration/email-templates':
+    $ref: 'post_delete_email_template.yaml'
+  '/administration/email-templates/{obj_id}':
+    $ref: 'get_put_email_template_by_id.yaml'
+
+    
+  

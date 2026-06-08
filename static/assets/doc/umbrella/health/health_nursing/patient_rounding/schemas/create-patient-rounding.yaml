@@ -1,0 +1,301 @@
+      properties:
+        anisocoria: 
+          type: boolean
+        arterial_access: 
+          type: boolean
+        bacteremia: 
+          type: boolean
+        bowel_sounds: increased
+        bpm: 
+          type: integer
+        cellulitis: 
+          type: boolean
+        chest_drainages:
+          type: array
+          properties:
+            air_leak: 
+              type: boolean
+            fluid_aspect: 
+              type: string
+            fluid_volume: 
+              type: integer
+            location: 
+              type: string
+            name: 
+              type: integer
+            oscillation: 
+              type: boolean
+            rec_name: 
+              type: string
+            remarks: 
+              type: string
+            suction: 
+              type: boolean
+            suction_pressure: 
+              type: integer
+        chest_expansion: 
+          type: string
+        code: 
+          type: string
+        depression: 
+          type: boolean
+        dialysis: 
+          type: boolean
+        diastolic: 
+          type: integer
+        diuresis: 
+          type: integer
+        ecg: 
+          type: integer
+        edema: 
+          type: string
+        environmental_assessment: 
+          type: string
+        evaluation_end: 
+          type: string
+          format: date
+        evaluation_start: 
+          type: string
+          format: date
+        evolution: 
+          type: string
+        fio2: 
+          type: integer
+        gcs: 
+          type: integer
+        glycemia: 
+          type: integer
+        health_professional: 
+          type: integer
+        hospitalization_location: 
+          type: integer
+        icu_patient: 
+          type: boolean
+        left_pupil: 
+          type: integer
+        lips_lesion: 
+          type: boolean
+        medical_supplies: 
+          type: array
+        medicaments:
+          type: array
+          properties:
+            lot: 
+              type: integer
+            medicament: 
+              type: integer
+            name: 
+              type: integer
+            product: 
+              type: integer
+            quantity: 
+              type: integer
+            rec_name: 
+              type: string
+            short_comment: 
+              type: string
+        moves: 
+          type: array
+        name: 
+          type: integer
+        necrotizing_fasciitis: 
+          type: boolean
+        oral_mucosa_lesion: 
+          type: boolean
+        osat:   
+          type: integer
+        oxygen_mask: 
+          type: boolean
+        pain: 
+          type: boolean
+        pain_level: 
+          type: integer
+        paradoxical_expansion: 
+          type: boolean
+        peep: 
+          type: boolean
+        peep_pressure: 
+          type: integer
+        peritonitis: 
+          type: boolean
+        personal_needs: 
+          type: boolean
+        position: 
+          type: boolean
+        potty: 
+          type: boolean
+        procedures:
+          type: array
+          properties:
+            name: 
+              type: integer
+            notes: 
+              type: string
+            procedure: 
+              type: integer
+            rec_name: 
+              type: string
+        proximity: 
+          type: boolean
+        pump: 
+          type: boolean
+        pupil_consensual_resp: 
+          type: boolean
+        pupil_dilation: 
+          type: string
+        pupillary_reactivity: 
+          type: string
+        rec_name: 
+          type: string
+        report_start_date: 
+          type: string 
+          format: date
+        report_start_time: 
+          type: string
+          format: duration
+        respiration_type: 
+          type: string
+        respiratory_rate: 
+          type: integer
+        right_pupil: 
+          type: integer
+        round_summary: 
+          type: string
+        sce: 
+          type: boolean
+        signed_by: 
+          type: integer
+        ssi: 
+          type: boolean
+        state: 
+          type: string
+        stools:
+          type: string
+        swan_ganz: 
+          type: boolean
+        systolic: 
+          type: integer
+        temperature: 
+          type: integer
+        trachea_alignment: 
+          type: string
+        tracheal_tug: 
+          type: boolean
+        urinary_catheter: 
+          type: boolean
+        venous_access: 
+          type: string
+        vomiting: 
+          type: string
+        warning: 
+          type: boolean
+        warning_icon: 
+          type: string
+        weight: 
+          type: integer
+        wound_dehiscence: 
+          type: boolean
+        xray:
+          type: string 
+          format: byte
+          description: "A byte field representing the image data. It should be encoded in base64."
+        
+      required:
+          - 
+      example:
+        anisocoria: true
+        arterial_access: false
+        bacteremia: false
+        bowel_sounds: increased
+        bpm: 12
+        cellulitis: true
+        chest_drainages:
+        - air_leak: true
+          fluid_aspect: bloody
+          fluid_volume: 1
+          location: ll
+          name: 1
+          oscillation: true
+          rec_name: '1'
+          remarks: ''
+          suction: true
+          suction_pressure: 1
+        chest_expansion: symmetric
+        code: ROUND 2024/0001
+        depression: true
+        dialysis: false
+        diastolic: 12
+        diuresis: 12
+        ecg: 2
+        edema: anasarca
+        environmental_assessment: ''
+        evaluation_end: 
+        evaluation_start: '2024-08-18T11:46:17'
+        evolution: i
+        fio2: 
+        gcs: 1
+        glycemia: 12
+        health_professional: 1
+        hospitalization_location: 8
+        icu_patient: true
+        left_pupil: 2
+        lips_lesion: true
+        medical_supplies: []
+        medicaments:
+        - lot: 
+          medicament: 1
+          name: 1
+          product: 34
+          quantity: 1
+          rec_name: '1'
+          short_comment: ''
+        moves: []
+        name: 1
+        necrotizing_fasciitis: false
+        oral_mucosa_lesion: true
+        osat: 12
+        oxygen_mask: true
+        pain: false
+        pain_level: 2
+        paradoxical_expansion: true
+        peep: true
+        peep_pressure: 3
+        peritonitis: true
+        personal_needs: false
+        position: false
+        potty: true
+        procedures:
+        - name: 1
+          notes: details here...
+          procedure: 18509
+          rec_name: '1'
+        proximity: true
+        pump: false
+        pupil_consensual_resp: true
+        pupil_dilation: normal
+        pupillary_reactivity: sluggish
+        rec_name: '1'
+        report_start_date: '2024-08-18'
+        report_start_time: '11:46:17'
+        respiration_type: deep
+        respiratory_rate: 33
+        right_pupil: 1
+        round_summary: ''
+        sce: false
+        signed_by: 
+        ssi: false
+        state: draft
+        stools: diarrhea
+        swan_ganz: true
+        systolic: 44
+        temperature: 38
+        trachea_alignment: midline
+        tracheal_tug: false
+        urinary_catheter: true
+        venous_access: central
+        vomiting: vomiting
+        warning: false
+        warning_icon: 
+        weight: 21
+        wound_dehiscence: false
+        xray:

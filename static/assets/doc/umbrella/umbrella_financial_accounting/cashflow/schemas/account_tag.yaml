@@ -1,0 +1,117 @@
+AccountTag:
+  type: object
+  properties:
+    id:
+      type: integer
+      description: Unique identifier for the account tag
+      example: 1
+    name:
+      type: string
+      description: Name of the account tag
+      example: Non-Cash Expense
+    sequence:
+      type: integer
+      description: Sequence order for sorting
+      example: 1
+    is_non_cash_expense:
+      type: boolean
+      description: Flag indicating if this is a non-cash expense (e.g., depreciation, amortization)
+      example: true
+    is_operating_asset:
+      type: boolean
+      description: Flag indicating if this is an operating asset (current assets used in operations)
+      example: false
+    is_operating_liability:
+      type: boolean
+      description: Flag indicating if this is an operating liability (current liabilities from operations)
+      example: false
+    is_investing:
+      type: boolean
+      description: Flag indicating if this relates to investing activities
+      example: false
+    is_financing:
+      type: boolean
+      description: Flag indicating if this relates to financing activities
+      example: false
+    is_revenue:
+      type: boolean
+      description: Flag indicating if this is revenue-related
+      example: false
+    is_expense:
+      type: boolean
+      description: Flag indicating if this is expense-related
+      example: false
+    create_date:
+      type: string
+      format: date-time
+      description: Creation date
+      example: '2024-01-15T10:30:00'
+    create_uid:
+      type: integer
+      description: User ID who created the record
+      example: 1
+    create_uid_:
+      $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    write_date:
+      type: string
+      format: date-time
+      nullable: true
+      description: Last modification date
+      example: null
+    write_uid:
+      type: integer
+      nullable: true
+      description: User ID who last modified the record
+      example: null
+    write_uid_:
+      $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+
+AccountTagInput:
+  type: object
+  required:
+    - name
+  properties:
+    name:
+      type: string
+      description: Name of the account tag
+      example: Non-Cash Expense
+    sequence:
+      type: integer
+      description: Sequence order for sorting
+      example: 1
+    is_non_cash_expense:
+      type: boolean
+      description: Flag indicating if this is a non-cash expense (e.g., depreciation, amortization)
+      default: false
+      example: true
+    is_operating_asset:
+      type: boolean
+      description: Flag indicating if this is an operating asset (current assets used in operations)
+      default: false
+      example: false
+    is_operating_liability:
+      type: boolean
+      description: Flag indicating if this is an operating liability (current liabilities from operations)
+      default: false
+      example: false
+    is_investing:
+      type: boolean
+      description: Flag indicating if this relates to investing activities
+      default: false
+      example: false
+    is_financing:
+      type: boolean
+      description: Flag indicating if this relates to financing activities
+      default: false
+      example: false
+    is_revenue:
+      type: boolean
+      description: Flag indicating if this is revenue-related
+      default: false
+      example: false
+    is_expense:
+      type: boolean
+      description: Flag indicating if this is expense-related
+      default: false
+      example: false
+

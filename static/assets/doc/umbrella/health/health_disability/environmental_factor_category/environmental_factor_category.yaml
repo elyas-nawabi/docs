@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: environmental factor category
+    description: environmental factor category - environmental factor category data management.
+paths:
+  '/health-disability/environmental-factor-categories/search':
+    $ref: 'get_environmental_factor_category.yaml'
+  '/health-disability/environmental-factor-categories':
+    $ref: 'post_delete_environmental_factor_category.yaml'
+  '/health-disability/environmental-factor-categories/{obj_id}':
+    $ref: 'get_put_environmental_factor_category_by_id.yaml'
+  

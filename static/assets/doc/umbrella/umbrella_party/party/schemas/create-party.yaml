@@ -1,0 +1,410 @@
+  properties:
+    account_payable:
+      type: string
+      nullable: true
+    account_receivable: 
+      type: string
+      nullable: true
+    activation_date: 
+      type: string
+      format: date
+    active: 
+      type: boolean
+    addresses:
+      type: array
+      properties:
+        active:
+          type: boolean
+        city: 
+          type: string
+        contact_mechanisms:
+          type: array
+        country:
+          type: integer
+        delivery:
+          type: integer
+        full_address:
+          type: string
+        identifiers: 
+          type: array
+        is_school: false
+        is_work: false
+        invoice:
+          type: integer
+        name: 
+          type: string
+        party:
+          type: integer
+        party_name: 
+          type: string
+        postal_code: 
+          type: string
+        rec_name:
+          type: string
+        relationship: 
+          type: string
+        relative_id: 
+          type: integer
+        sequence: 
+          type: integer
+        street: 
+          type: string
+        street_single_line: 
+          type: string
+        subdivision:
+          type: integer
+        subdivision_types:
+          type: string
+    age: 
+      type: integer
+    alternative_identification: 
+      type: boolean
+    alternative_ids: 
+      type: array
+    bank_accounts:
+      type: array
+      properties:
+        active: 
+          type: boolean
+        bank: 
+          type: integer
+        currency: 
+          type: integer
+        numbers:
+          type: array
+          properties:
+            account: 
+              type: integer
+            active: 
+              type: integer
+            number: 
+              type: string
+            number_compact: 
+              type: string
+            rec_name: 
+              type: string
+            sequence: 
+              type: integer
+            type: 
+              type: string
+        owners:
+          type: array
+          properties:
+            code:
+              type: string
+            deposit: 
+              type: integer
+            lang: 
+              type: integer
+            name: 
+              type: string
+            payable_today: 
+              type: integer
+            rec_name: 
+              type: string
+            receivable_today: 
+              type: integer
+            tax_identifier: 
+              type: string
+        rec_name: 
+          type: string
+    birth_certificate: 
+      type: integer
+    categories:
+      type: array
+      properties:
+        active:
+          type: boolean
+        childs:
+          type: array
+        name: 
+          type: string
+        parent:
+          type: integer
+        rec_name:
+          type: string
+    citizenship: 
+      type: integer
+    code: 
+      type: string
+    contact_mechanisms:
+      type: array
+      properties:
+        active:
+          type: boolean
+        address:
+          type: integer
+        comment: 
+          type: string
+        delivery: 
+          type: string
+        invoice: 
+          type: integer
+        language: 
+          type: string
+        name: 
+          type: string
+        party:
+          type: integer
+        rec_name: 
+          type: string
+        sequence:
+          type: integer
+        type: 
+          type: string
+        value: 
+          type: string
+    create_target: 
+      type: boolean
+    customer_location: 
+      type: integer
+    credit_amount:
+      type: integer
+    credit_limit_amount: 
+      type: integer 
+    customer_payment_term: 
+      type: integer
+    customer_tax_rule:
+      type: integer
+      nullable: true
+    deposit:
+      type: integer
+    lang:
+      type: integer
+    name: 
+      type: string
+    payable_today:
+      type: integer
+    rec_name:
+      type: string
+    receivable:
+      type: integer
+    receivable_today:
+      type: integer
+    supplier_payment_term: 
+      type: integer
+    supplier_tax_rule: 
+      type: integer
+    tax_identifier: 
+      type: string
+      nullable: true
+    payable: 
+      type: integer
+    death_certificate: 
+      type: integer
+    deceased: 
+      type: boolean
+    delivered_to_warehouses: 
+      type: array
+    dob: 
+      type: string
+      format: date 
+    dod: 
+      type: string
+      format: date 
+    du: 
+      type: integer
+    du_address: 
+      type: string
+    est_dob: 
+      type: boolean
+    est_years: 
+      type: integer
+    ethnic_group:
+      type: integer 
+    father: 
+      type: integer
+    fed_country: 
+      type: string
+    federation_account: 
+      type: string
+    gender: 
+      type: string
+    identifiers: 
+      type: array
+    insurance:
+      type: array
+      properties:
+        category: 
+          type: string
+        company: 
+          type: integer
+        insurance_type: 
+          type: string
+        member_exp: 
+          type: string 
+          format: date
+        member_since: 
+          type: string 
+          format: date
+        name: 
+          type: integer
+        notes: 
+          type: string 
+        number: 
+          type: string 
+        plan_id: 
+          type: integer
+        rec_name: 
+          type: string 
+           
+    insurance_company_type: 
+    internal_user: 
+    is_healthprof: 
+      type: boolean
+    is_institution: 
+      type: boolean
+    is_insurance_company: 
+      type: boolean
+    is_patient: 
+      type: boolean
+    is_person: 
+      type: boolean
+    is_pharmacy: 
+      type: boolean
+    lastname: 
+      type: string
+    marital_status: 
+      type: string
+    mother: 
+      type: integer
+    person_names:
+      type: array
+      properties:
+        date_from:
+          type: string 
+          format: date  
+        date_to: 
+          type: string 
+          format: date 
+        family: 
+          type: string
+        given: 
+          type: string
+        party: 
+          type: integer
+        prefix: 
+          type: string
+        rec_name: 
+          type: string
+        suffix: 
+          type: string
+        use: 
+          type: string
+    ref: 
+      type: string
+    residence: 
+      type: integer
+    supplier_location: 
+      type: integer
+    unidentified: 
+      type: boolean
+  required:
+    - code
+    - name    
+  example:
+      account_payable: 
+      account_receivable: 
+      activation_date: '2024-08-23'
+      active: true
+      addresses:
+      - active: true
+        city: ''
+        contact_mechanisms: []
+        country: 
+        delivery: false
+        full_address: ''
+        identifiers: []
+        invoice: false
+        is_school: false
+        is_work: false
+        name: ''
+        party: 2
+        party_name: ''
+        postal_code: ''
+        rec_name: elyas
+        relationship: 
+        relative_id: 
+        sequence: 
+        street: ''
+        street_single_line: 
+        subdivision: 
+        subdivision_types: "[]"
+      age: 
+      alternative_identification: false
+      alternative_ids: []
+      bank_accounts: []
+      birth_certificate: 
+      categories: []
+      citizenship: 
+      code: 71c847ef-3c72-498e-a7c2-0bc427bd8fbc-Milestone
+      contact_mechanisms: []
+      create_target: true
+      customer_location: 7
+      customer_payment_term: 
+      customer_tax_rule: 
+      death_certificate: 
+      deceased: false
+      delivered_to_warehouses: []
+      deposit: 0
+      dob: 
+      dod: 
+      du: 
+      du_address: 
+      est_dob: false
+      est_years: 
+      ethnic_group: 
+      father: 
+      fed_country: ''
+      federation_account: XXXYSQ260VIV
+      gender: m
+      id: 2
+      identifiers: []
+      insurance:
+      - category: yearly
+        company: 3
+        insurance_type: private
+        member_exp: '2027-10-23'
+        member_since: '2024-08-04'
+        name: 2
+        notes: ''
+        number: i002
+        plan_id: 
+        rec_name: 'milestone : i002'
+      insurance_company_type: 
+      internal_user: 
+      is_healthprof: false
+      is_institution: false
+      is_insurance_company: false
+      is_patient: true
+      is_person: true
+      is_pharmacy: false
+      lang: 
+      lastname: ''
+      marital_status: 
+      mother: 
+      name: elyas
+      name_representation: 
+      payable: 0
+      payable_today: 0
+      person_names:
+      - date_from: 
+        date_to: 
+        family: ''
+        given: elyas
+        party: 2
+        prefix: 
+        rec_name: '1'
+        suffix: 
+        use: official
+      photo: 
+      rec_name: elyas
+      receivable: 0
+      receivable_today: 0
+      ref: YSQ260VIV
+      residence: 
+      supplier_location: 6
+      supplier_payment_term: 
+      supplier_tax_rule: 
+      tax_identifier: 
+      unidentified: false   

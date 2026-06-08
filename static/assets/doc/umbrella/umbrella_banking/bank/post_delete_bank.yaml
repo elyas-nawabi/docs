@@ -1,0 +1,99 @@
+post:
+      tags:
+        - bank
+      summary: Create a bank.
+      description: Create a bank.
+      operationId: postBankById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: 'schemas/create-bank.yaml'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          bic:
+                            type: string
+                          id: 
+                            type: integer
+                          party: 
+                            type: integer
+                          party_:
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                          rec_name: 
+                            type: string
+                      errors:
+                        type: object
+                        nullable: true
+                      pagination:
+                        type: object
+                        nullable: true
+                      status:
+                        type: integer
+                      success_message:
+                        type: string
+                        nullable: true
+              example:
+                data:
+                  bic: ''
+                  id: 5
+                  party: 1
+                  party_:
+                    id: 1
+                    name: Party 1
+                  rec_name: Party 1
+                error: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+delete:
+      tags:
+        - bank
+      summary: Delete banks.
+      description: Delete banks.
+      operationId: deleteBanksById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+  

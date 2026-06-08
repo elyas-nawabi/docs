@@ -1,0 +1,120 @@
+schema:
+  properties:
+    data:
+      type: object
+      properties:
+        id:
+          type: integer
+        rec_name:
+          type: string
+        employee:
+          type: integer
+        employee_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        company:
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        department:
+          type: integer
+          nullable: true
+        department_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          nullable: true
+        date_close:
+          type: string
+          format: date
+        date_final_interview:
+          type: string
+          format: date
+          nullable: true
+        previous_appraisal_date:
+          type: string
+          format: date
+          nullable: true
+        next_appraisal_date:
+          type: string
+          format: date
+          nullable: true
+        assessment_note:
+          type: integer
+          nullable: true
+        assessment_note_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+          nullable: true
+        state:
+          type: string
+        employee_feedback:
+          type: string
+          nullable: true
+        manager_feedback:
+          type: string
+          nullable: true
+        note:
+          type: string
+          nullable: true
+        create_date:
+          type: string
+          format: date-time
+        create_uid:
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date-time
+          nullable: true
+        write_uid:
+          type: integer
+          nullable: true
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 1
+    rec_name: Jane Smith
+    employee: 5
+    employee_:
+      id: 5
+      name: Jane Smith
+    company: 1
+    company_:
+      id: 1
+      name: Demo Company
+    department: 3
+    department_:
+      id: 3
+      name: Operations
+    date_close: '2026-06-30'
+    date_final_interview: '2026-06-15'
+    previous_appraisal_date: '2025-06-30'
+    next_appraisal_date: '2027-06-30'
+    assessment_note: 2
+    assessment_note_:
+      id: 2
+      name: Exceeds expectations
+    state: pending
+    employee_feedback: 'Goals met for Q1.'
+    manager_feedback: 'Strong collaboration.'
+    note: null
+    create_date: '2026-04-01T10:00:00'
+    create_uid: 1
+    create_uid_:
+      id: 1
+      name: Administrator
+    write_date: null
+    write_uid: null
+  error: null
+  pagination: null
+  status: 200
+  success_message: null

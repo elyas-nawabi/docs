@@ -1,0 +1,31 @@
+type: object
+properties:
+  employee:
+    type: integer
+    description: ID of the employee to launch the plan for
+    example: 123
+  plan:
+    type: integer
+    description: ID of the activity plan to launch
+    example: 1
+  plan_date:
+    type: string
+    format: date
+    description: Date when the plan should be launched
+    example: "2024-01-15"
+  assigned_to:
+    type: integer
+    nullable: true
+    description: ID of the user assigned to execute the plan
+    example: 1
+
+required:
+  - employee
+  - plan
+  - plan_date
+
+example:
+  employee: 123
+  plan: 1
+  plan_date: "2024-01-15"
+  assigned_to: 1 

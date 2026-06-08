@@ -1,0 +1,225 @@
+      properties:
+        apgar1: 
+          type: integer
+        apgar5: 
+          type: integer
+        apgar_scores:
+          type: array
+          properties:
+            apgar_activity: 
+              type: string
+            apgar_appearance: 
+              type: string
+            apgar_grimace: 
+              type: string
+            apgar_minute: 
+              type: integer
+            apgar_pulse: 
+              type: string
+            apgar_respiration: 
+              type: string
+            apgar_score: 
+              type: integer
+            name: 
+              type: integer
+            rec_name: 
+              type: string
+        bd: 
+          type: boolean
+        birth_date: 
+          type: string
+          format: date
+        cephalic_perimeter: 
+          type: integer
+        cod: 
+          type: string
+          format: date
+        died_at_delivery: 
+          type: boolean
+        died_at_the_hospital: 
+          type: boolean
+        died_being_transferred: 
+          type: boolean
+        dismissed: 
+          type: string
+          format: date
+        healthprof: 
+          type: integer
+        length: 
+          type: integer
+        meconium: 
+          type: boolean
+        mother: 
+          type: integer
+        name: 
+          type: string
+        neonatal_ambiguous_genitalia: 
+          type: boolean
+        neonatal_babinski_reflex: 
+          type: boolean
+        neonatal_barlow: 
+          type: boolean
+        neonatal_blink_reflex: 
+          type: boolean
+        neonatal_erbs_palsy: 
+          type: boolean
+        neonatal_grasp_reflex: 
+          type: boolean
+        neonatal_hematoma: 
+          type: boolean
+        neonatal_hernia: 
+          type: boolean
+        neonatal_moro_reflex: 
+          type: boolean
+        neonatal_ortolani: 
+          type: boolean
+        neonatal_palmar_crease: 
+          type: boolean
+        neonatal_polydactyly: 
+          type: boolean
+        neonatal_rooting_reflex: 
+          type: boolean
+        neonatal_stepping_reflex: 
+          type: boolean
+        neonatal_sucking_reflex: 
+          type: boolean
+        neonatal_swimming_reflex: 
+          type: boolean
+        neonatal_syndactyly: 
+          type: boolean
+        neonatal_talipes_equinovarus: 
+          type: boolean
+        neonatal_tonic_neck_reflex: 
+          type: boolean
+        newborn_name: 
+          type: string
+        notes: 
+          type: string
+        patient: 
+          type: integer
+        photo: 
+          type: string
+          formate: byte
+        qr: 
+          type: string
+        reanimation_aspiration: 
+          type: boolean
+        reanimation_intubation: 
+          type: boolean
+        reanimation_mask: 
+          type: boolean
+        reanimation_oxygen: 
+          type: boolean
+        reanimation_stimulation: 
+          type: boolean
+        rec_name: 
+          type: string
+        sex: 
+          type: string
+        signed_by: 
+          type: integer
+        state: 
+          type: string
+        test_billirubin: 
+          type: boolean
+        test_chagas: 
+          type: boolean
+        test_metabolic: 
+          type: boolean
+        test_toxo: 
+          type: boolean
+        test_vdrl: 
+          type: boolean
+        tod: 
+          type: string
+          format: date
+        weight: 
+          type: integer
+      required:
+          - 
+      example:
+        apgar1: 
+        apgar5: 
+        apgar_scores:
+          - apgar_activity: '1'
+            apgar_appearance: '1'
+            apgar_grimace: '0'
+            apgar_minute: 1
+            apgar_pulse: '1'
+            apgar_respiration: '0'
+            apgar_score: 3
+            name: 1
+            rec_name: '1'
+        bd: false
+        birth_date: '1990-01-13T21:45:00'
+        cephalic_perimeter: 1
+        cod: 
+        died_at_delivery: false
+        died_at_the_hospital: false
+        died_being_transferred: false
+        dismissed: 
+        healthprof: 1
+        length: 2
+        meconium: true
+        mother: 1
+        name: 
+        neonatal_ambiguous_genitalia: true
+        neonatal_babinski_reflex: false
+        neonatal_barlow: true
+        neonatal_blink_reflex: true
+        neonatal_erbs_palsy: true
+        neonatal_grasp_reflex: true
+        neonatal_hematoma: true
+        neonatal_hernia: true
+        neonatal_moro_reflex: true
+        neonatal_ortolani: true
+        neonatal_palmar_crease: true
+        neonatal_polydactyly: true
+        neonatal_rooting_reflex: false
+        neonatal_stepping_reflex: true
+        neonatal_sucking_reflex: true
+        neonatal_swimming_reflex: true
+        neonatal_syndactyly: true
+        neonatal_talipes_equinovarus: true
+        neonatal_tonic_neck_reflex: false
+        newborn_name: omer
+        notes: ''
+        patient: 3
+        photo: 
+        qr: iVBORw0KGgoAAAANSUhEUgAAAcIAAAHCAQAAAABUY/ToAAADZklEQVR4
+            nO2cTW6jQBBGXw2WvMTSHCBHaW4wR5oz5QZwlBwgEiwjgWoW3Q0FTmYRj
+            Sd29JWUyDY8AVKp+qufxpzP2fDjkyCIFClSpEiRIkXeH2nFTlg3mQGLwXT
+            COoDBTsBUz+q++G5F3heJu7uT3N19bDxbT1N/26wezQf6x3pOkbcnpxJfz
+            MwM2jdjqLGJwcwgHz3dw92KvGcyRxpocjDy/j9cU+Q3I4cgioA0AtC4dbe7
+            psiHJuvS1DowgdG+mg+/Xk+WHKCdIY0/cSaIBcnHek6RNyez9rkA6eXs9vv
+            l7CUvq8mZdSxW1NJX363IuyJzHNriiw9Pb+bD0wzDpSHHIVjM91Ho0Z5T5O
+            3ImtuPjbuP4D42nlVQkUIAOdWf61Hl9iKjlUSsnSH5TPamtT5EGsH7LIrKy
+            aWE9FjPKfJ2JLGoOBIiDbTu3rdeQlBPdC75kMhqa1424sPTfLL0DDBdID0b
+            pBfDmX4WLZR8kaYWebBdN4McbqD1fa+jxKGy3CkOiYwWNfXekYKwbmeyI0l
+            Ti7y24Dk+Nl5+G8F7ipyuR6Fqb/mQyGAx1VrTr23dWp2mBiP17UUebWuyHh
+            evLRErDY+1SCQfEhkthqCtZd96mBWqxWrYDsiHRO5J66YyqUjymdK3z7+dg
+            jIKs40P+Zwib0GGGmP9BDVN22djWstE/o1M/rYOSzdOmKeezm5dbbwCYN1X
+            363I+ySbVRS9GcOl2XvOYkVnT5qFFXm0Q30oF4T6TURTi0R9u650WstERqs
+            +VDdt5DLQbg/H4Z/0kMi9Vc/ZyekSh5qS6pcSEgRHkg+JrLblZTHpWueHog
+            /FwpF8SOSetA7IiZhdlrqTFSCNi5ldFstiW/UhkdcWNHUOMutaVgYXV3mkf
+            a4i37dtocrfS9Ns9ZeRMiSbj0pTi7wy39smimCdRmMbr5YPibyykHSx9uiB
+            OqJfBxdzr2MbcJQPiawWJM5WYwyfvMyg1TikfpnID8j63g/Sy9nzez/KLvsq
+            lIZti+s/uqbIb0ya2dlJ42Leb62yWoa07hbXFPltSOuy09RakNnZ46Z79VxF
+            Hu343g8fnuYTtc0xW+rBwbH0bMRN94/1nCJvR76fl61FonjmOi6rvExktKv3
+            foQ/5sOrPjye/FjPKVKkSJEiRYoU+ZH9AVGDfL6AxgDTAAAAAElFTkSuQmCC
+        reanimation_aspiration: false
+        reanimation_intubation: false
+        reanimation_mask: false
+        reanimation_oxygen: false
+        reanimation_stimulation: false
+        rec_name: None
+        sex: m
+        signed_by: 
+        state: draft
+        test_billirubin: true
+        test_chagas: false
+        test_metabolic: false
+        test_toxo: true
+        test_vdrl: true
+        tod: 
+        weight: 1 

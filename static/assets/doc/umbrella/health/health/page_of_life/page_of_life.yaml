@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: page of life
+    description: page of life - page of life data management.
+paths:
+  '/health/page-of-life/search':
+    $ref: 'get_page_of_life.yaml'
+  '/health/page-of-life':
+    $ref: 'post_delete_page_of_life.yaml'
+  '/health/page-of-life/{obj_id}':
+    $ref: 'get_put_page_of_life_by_id.yaml'
+  

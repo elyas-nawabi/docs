@@ -1,0 +1,125 @@
+get:
+  tags:
+    - Resources
+  summary: Get a resource
+  description: Get one Resource by ID
+  operationId: getResource
+  parameters:
+    - name: obj_id
+      required: true
+      in: path
+      description: The ID of the resource to retrieve
+      schema:
+        type: integer
+      example: 123
+  responses:
+    '200':
+      description: Resource details
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: 'schema.yaml#/schema'
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              id: 123
+              name: "Default Resource"
+              res_model: 1
+              company: 1
+            errors: null
+            status: 200
+            success_message: null
+    '404':
+      description: resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+put:
+  tags:
+    - Resources
+  summary: Update a resource
+  description: Update an existing Resource
+  operationId: updateResource
+  parameters:
+    - name: obj_id
+      required: true
+      in: path
+      description: The ID of the resource to update
+      schema:
+        type: integer
+      example: 123
+  requestBody:
+    required: true
+    description: Updated resource data
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/resources-schema.yaml'
+  responses:
+    '200':
+      description: Resource updated successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                nullable: true
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data: null
+            errors: null
+            status: 200
+            success_message: "Resource updated successfully"
+    '400':
+      description: Bad Request - Invalid input data
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP400'
+    '404':
+      description: resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401' 

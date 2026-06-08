@@ -1,0 +1,43 @@
+      properties:
+        active: 
+          type: boolean
+        category: 
+          type: integer
+        chromosome: 
+          type: string
+        code: 
+          type: string
+        
+        gene: 
+          type: string
+        groups:
+          type: array
+          properties:
+            disease_group: 
+              type: integer
+            
+        info: 
+          type: string
+        name: 
+          type: string
+        protein: 
+        rec_name: 
+          type: string
+        uri: 
+          type: string
+  
+      required:
+          - 
+      example:
+        active: true
+        category: 24
+        chromosome: 
+        code: A00
+        gene: 
+        groups:
+          - disease_group: 19
+        info: 
+        name: Cholera
+        protein: 
+        rec_name: 'A00 : Cholera'
+        uri: 

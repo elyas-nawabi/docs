@@ -1,0 +1,15 @@
+properties:
+  name: 
+    type: integer
+  rec_name: 
+    type: string
+  specialty: 
+    type: integer
+  
+
+required:
+    - 
+example:
+  name: 1
+  rec_name: Cardiology
+  specialty: 6     

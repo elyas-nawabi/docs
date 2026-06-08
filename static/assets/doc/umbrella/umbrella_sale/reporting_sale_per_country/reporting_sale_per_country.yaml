@@ -1,0 +1,12 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: reporting sale per country
+    description: reporting sale per country - reporting sale per country data management.
+paths:
+  '/sale/reporting/sales-per-country/search':
+    $ref: 'post_reporting_sale_per_country.yaml'
+  '/sale/reporting/sales-per-country-timeseries/search':
+    $ref: 'post_reporting_sale_per_country_timeseries.yaml'
+  

@@ -1,0 +1,52 @@
+    get:
+      tags:
+        - dentistry treatment
+      summary: Cancel Inpatient Meal Order.
+      description: Cancel Inpatient Meal Order.
+      operationId: cancelInpatientMealOrder
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                data: 
+                  type: object
+                pagination:
+                  type: object
+                errors:     
+                  type: object
+                status:
+                  type: integer
+                success_message:
+                  type: string
+              example:
+                data: null
+                pagination: null
+                errors: null
+                status: null
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+  

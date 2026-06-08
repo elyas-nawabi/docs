@@ -1,0 +1,253 @@
+openapi: 3.1.0
+info:
+  description: >
+    ## UMBRELLA API Documentation Description:
+
+    Welcome to the official documentation for the UMBRELLA RESTful API. 
+
+    This comprehensive guide is designed to assist developers and integrators, 
+
+    in effectively utilizing the power of our API.
+
+    Our RESTful API provides:
+
+    A simple and efficient way to access and interact 
+
+    with, currencies, finances ....... 
+
+    Whether you're building 
+
+    a web application, mobile app, or integrating 
+
+    with other services, our API offers the tools 
+
+    you need to streamline your development process 
+
+    and unlock the full potential of your project.
+
+    In this documentation, you'll find detailed 
+
+    information on how to make API requests, 
+
+    authentication procedures, available endpoints, 
+
+    request/response examples, error handling, 
+
+    and best practices for integrating UMBRELLA
+
+    into your projects.
+
+
+    ## Authorization:
+
+    You can authorize your requests using this authorization method:
+
+    - TOKEN
+
+
+    ## TOKEN
+
+    - The endpoints are authorized using a TOKEN.
+
+    - To authorize requests, please add a Token using the 'Authorize' button
+    with the following format:
+      ### "Bearer user-token"
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: shadab@gmail.com
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+# tags:
+#   - name: currency
+#     description: currency - currency data management.
+#   - name: scheduled rate update
+#     description: scheduled rate update - scheduled rate update data management.
+#   - name: fiscal year
+#     description: fiscal year - fiscal year data management.
+#   - name: fiscal period
+#     description: fiscal period - fiscal period data management.
+#   - name: auth
+#     description: auth - auth data management.
+#   - name: party
+#     description: party - party data management.
+#   - name: category
+#     description: category - category data management.
+#   - name: contact mechanism
+#     description: contact mechanism - contact mechanism data management.
+#   - name: address
+#     description: address - address data management.
+#   - name: sequence
+#     description: sequence - sequence data management.
+#   - name: sequence type
+#     description: sequence type - sequence type data management.
+#   - name: company
+#     description: company - company data management.
+#   - name: employee
+#     description: employee - employee data management.
+#   - name: country
+#     description: country - country data management.
+#   - name: organization
+#     description: organization - organization data management.
+#   - name: region
+#     description: region - region data management.
+#   - name: configuration
+#     description: configuration - configuration data management.
+#   - name: account
+#     description: account - account data management.
+#   - name: account type
+#     description: account type - account type data management.
+#   - name: account move line
+#     description: account move line - account move line data management.
+#   - name: write off
+#     description: write_off - write_off data management.
+
+    
+components:
+  schemas:
+    CreateCurrency:
+      $ref: 'umbrella/schemas/umbrella_currency/create-currency.yaml'
+    UpdateCurrency:
+      $ref: 'umbrella/schemas/umbrella_currency/update-currency.yaml'
+    CreateCron:
+      $ref: 'umbrella/schemas/umbrella_currency/create-cron.yaml'
+    UpdateCron:
+      $ref: 'umbrella/schemas/umbrella_currency/update-cron.yaml'
+    CreateFiscalYear:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-fiscal-year.yaml'
+    UpdateFiscalYear:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-fiscal-year.yaml'
+    CreateFiscalPeriod:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-fiscal-period.yaml'
+    UpdateFiscalPeriod:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-fiscal-period.yaml'
+    CreateAccount:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account.yaml'
+    UpdateAccount:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account.yaml'
+    CreateAccountType:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account-type.yaml'
+    UpdateAccountType:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account-type.yaml'
+    UpdateConfiguration:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-configuration.yaml'
+    CreateJournal:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-journal.yaml'
+    UpdateJournal:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-journal.yaml'
+    CreateTaxCode:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-code.yaml'
+    UpdateTaxCode:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-tax-code.yaml'
+    CreateTaxGroup:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-group.yaml'
+    UpdateTaxGroup:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-tax-group.yaml'
+    CreateTaxRule:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-group.yaml'
+    UpdateTaxRule:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-tax-group.yaml'
+    CreateWriteOff:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-write-off.yaml'
+    UpdateWriteOff:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-write-off.yaml'
+    CreateAccountMoveLine:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account-move-line.yaml'
+    UpdateAccountMoveLine:
+      $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account-move-line.yaml'
+    CreateAuth:
+      $ref: 'umbrella/schemas/umbrella/create-auth.yaml'
+    CreateParty:
+      $ref: 'umbrella/schemas/umbrella_party/create-party.yaml'
+    UpdateParty:
+      $ref: 'umbrella/schemas/umbrella_party/update-party.yaml'
+    DeleteRequestBody: 
+      $ref: 'umbrella/schemas/delete-request-body.yaml'
+    DeleteApiResponse:
+      $ref: 'umbrella/schemas/delete-api-response.yaml'
+    CreateCategory:
+      $ref: 'umbrella/schemas/umbrella_party/create-category.yaml'
+    UpdateCategory:
+      $ref: 'umbrella/schemas/umbrella_party/update-category.yaml'
+    CreateContactMechanism:
+      $ref: 'umbrella/schemas/umbrella_party/create-contact-mechanism.yaml'
+    UpdateContactMechanism:
+      $ref: 'umbrella/schemas/umbrella_party/update-contact-mechanism.yaml'
+    CreateAddress:
+      $ref: 'umbrella/schemas/umbrella_party/create-address.yaml'
+    UpdateAddress:
+      $ref: 'umbrella/schemas/umbrella_party/update-address.yaml'
+    CreateSequence:
+      $ref: 'umbrella/schemas/umbrella_administration/create-sequence.yaml'
+    UpdateSequence:
+      $ref: 'umbrella/schemas/umbrella_administration/update-sequence.yaml'
+    CreateSequenceType:
+      $ref: 'umbrella/schemas/umbrella_administration/create-sequence-type.yaml'
+    UpdateSequenceType:
+      $ref: 'umbrella/schemas/umbrella_administration/update-sequence-type.yaml'
+    ExportSchema:
+      $ref: 'umbrella/umbrella_administration/ir/export_import/schemas/export-schema.yaml'
+    ExportUpdateSchema:
+      $ref: 'umbrella/umbrella_administration/ir/export_import/schemas/export-update-schema.yaml'
+    ExportDataSchema:
+      $ref: 'umbrella/umbrella_administration/ir/export_import/schemas/export-data-schema.yaml'
+    ImportDataSchema:
+      $ref: 'umbrella/umbrella_administration/ir/export_import/schemas/import-data-schema.yaml'
+    CreateExportImport:
+      $ref: 'umbrella/umbrella_administration/ir/export_import/schemas/create-export-import.yaml'
+    MailActivitySchema:
+      $ref: 'umbrella/umbrella_mail/activity/schemas/mail-activity-schema.yaml'
+    MailActivityListSchema:
+      $ref: 'umbrella/umbrella_mail/activity/schema.yaml#/schema'
+    MailActivityTypeSchema:
+      $ref: 'umbrella/umbrella_mail/activity_type/schema.yaml#/schema'
+    MailActivityTypeUpsertSchema:
+      $ref: 'umbrella/umbrella_mail/activity_type/schemas/mail-activity-type-upsert-schema.yaml'
+    MailActivityPlanSchema:
+      $ref: 'umbrella/umbrella_mail/activity_plan/schema.yaml#/schema'
+    EmployeeSchema:
+      $ref: 'umbrella/umbrella_mail/employee/schema.yaml#/schema'
+    LaunchPlanSchema:
+      $ref: 'umbrella/umbrella_mail/employee/schemas/launch-plan-schema.yaml'
+    CreateCompany:
+      $ref: 'umbrella/schemas/umbrella_company/create-company.yaml'
+    UpdateCompany:
+      $ref: 'umbrella/schemas/umbrella_company/update-company.yaml'
+    CreateEmployee:
+      $ref: 'umbrella/schemas/umbrella_company/create-employee.yaml'
+    UpdateEmployee:
+      $ref: 'umbrella/schemas/umbrella_company/update-employee.yaml'
+    CreateCountry:
+      $ref: 'umbrella/schemas/umbrella_country/create-country.yaml'
+    UpdateCountry:
+      $ref: 'umbrella/schemas/umbrella_country/update-country.yaml'
+    CreateOrganization:
+      $ref: 'umbrella/schemas/umbrella_country/create-organization.yaml'
+    UpdateOrganization:
+      $ref: 'umbrella/schemas/umbrella_country/update-organization.yaml'
+    CreateRegion:
+      $ref: 'umbrella/schemas/umbrella_country/create-region.yaml'
+    UpdateRegion:
+      $ref: 'umbrella/schemas/umbrella_country/update-region.yaml'
+    HTTP200:
+      $ref: 'umbrella/schemas/http-responses/http200.yaml'
+    HTTP401:
+      $ref: 'umbrella/schemas/http-responses/http401.yaml'
+    HTTP404:
+      $ref: 'umbrella/schemas/http-responses/http404.yaml'
+    HTTP400:
+      $ref: 'umbrella/schemas/http-responses/http400.yaml'
+    HTTP403:
+      $ref: 'umbrella/schemas/http-responses/http403.yaml'
+    HTTP500:
+      $ref: 'umbrella/schemas/http-responses/http500.yaml'
+    ViewToolbar:
+      $ref: 'umbrella/umbrella/toolbar/schema.yaml#/schema'
+  
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+
+security:
+  - bearerAuth: []

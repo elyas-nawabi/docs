@@ -1,0 +1,68 @@
+      properties:
+        certification_date: 
+          type: string
+          format: date
+        code:
+          type: string
+        country: 
+          type: integer
+        country_subdivision: 
+          type: integer
+        digest_current: 
+          type: string
+        digest_status: 
+          type: boolean
+        digital_signature: 
+          type: string
+        dob: 
+          type: string
+          format: date
+        document_digest: 
+          type: string
+        father: 
+          type: integer
+        institution: 
+          type: integer
+        mother: 
+          type: integer
+        name: 
+          type: integer
+        observations: 
+          type: string
+        rec_name: 
+          type: string
+        serializer: 
+          type: string
+        serializer_current: 
+          type: string
+        signed_by: 
+          type: string
+        state: 
+          type: string
+  
+      required:
+          - 
+      example:
+        certification_date: '2024-07-25'
+        code: '123321'
+        country: 1
+        country_subdivision: 1
+        digest_current: 79c0e167bc6a572d53ae1810e2bba2d1950fa48cbd9752a3175d371f0609135c782789a3c5ca76c65c6290f94f0ff8e30f65ff093c22942a16032d277c519a90
+        digest_status: false
+        digital_signature: 
+        dob: '2001-07-25'
+        document_digest: 
+        father: 41
+        institution: 1
+        mother: 40
+        name: 39
+        observations: add some test data.
+        rec_name: '1'
+        serializer: 
+        serializer_current: "{\"certificate\": \"123321\", \"Date\": \"2001-07-25\", \"HP\":
+            \"\", \"Person\": \"test, ahmad\", \"Person_dob\": \"2001-07-25\", \"Person_ID\":
+            \"1\", \"Country\": \" ahmad\", \"Country_subdivision\": \"kabul\",
+            \"Mother\": \"ayesha\", \"Father\": \"sediq\", \"Observations\": \"add some test
+            data.\"}"
+        signed_by: 
+        state: draft

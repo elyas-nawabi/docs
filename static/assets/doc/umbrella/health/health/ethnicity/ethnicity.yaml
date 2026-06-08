@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: ethnicity
+    description: ethnicity - ethnicity data management.
+paths:
+  '/health/ethnicities/search':
+    $ref: 'get_ethnicity.yaml'
+  '/health/ethnicities':
+    $ref: 'post_delete_ethnicity.yaml'
+  '/health/ethnicities/{obj_id}':
+    $ref: 'get_put_ethnicity_by_id.yaml'
+  

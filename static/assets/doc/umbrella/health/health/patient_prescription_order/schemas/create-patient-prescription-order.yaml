@@ -1,0 +1,79 @@
+      properties:
+        digest_current: 
+          type: string
+        digest_status: 
+          type: boolean
+        digital_signature: 
+          type: integer
+        document_digest: 
+          type: string
+        healthprof: 
+          type: integer
+        moves: 
+          type: array
+        notes: 
+          type: string
+        patient: 
+          type: integer
+        pharmacy: 
+          type: integer
+        pregnancy_warning: 
+          type: boolean
+        prescription_date: 
+          type: string
+          format: date
+        prescription_id: 
+          type: string
+        prescription_line: 
+          type: arrary
+        prescription_warning_ack: 
+          type: boolean
+        rec_name: 
+          type: string
+        report_prescription_date: 
+          type: string
+          format: date
+        report_prescription_time:
+          type: string
+        serializer: 
+          type: integer
+        serializer_current: 
+          type: string
+        service: 
+          type: string
+        service_updated: 
+          type: string
+        state:
+          type: string
+        user_id: 
+          type: integer
+  
+      required:
+          - 
+      example:
+        digest_current: 26ca16315e6e07dc4b7af3fd2e3e23b27fcc3c01efbcfd67a9435943ddd34734c577c1cdcc300a87ca11a49a8bddb043aab9e5fcb9c2290356afe4e0307a1294
+        digest_status: false
+        digital_signature: 
+        digital_signature_: {}
+        document_digest: 
+        healthprof: 1
+        moves: []
+        notes: ''
+        patient: 17
+        pharmacy: 
+        pregnancy_warning: false
+        prescription_date: '2024-07-30T15:09:24'
+        prescription_id: PRES 2024/000001
+        prescription_line: []
+        prescription_warning_ack: true
+        rec_name: PRES 2024/000001
+        report_prescription_date: '2024-07-30'
+        report_prescription_time: '15:09:24'
+        serializer: 
+        serializer_current: '{"Prescription": "PRES 2024/000001", "Date": "2024-07-30 15:09:24",
+            "HP": "Milestone", "Patient": "Milestone", "Patient_ID": "None", "Prescription_line":
+            "[]", "Notes": ""}'
+        service: 
+        service_updated: 'yes'
+        state: draft
+        user_id: 1

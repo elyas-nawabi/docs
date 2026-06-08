@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: orthanc patient
+    description: orthanc patient - orthanc patient data management.
+paths:
+  '/health-orthanc/patients/search':
+    $ref: 'get_orthanc_patient.yaml'
+  '/health-orthanc/patients':
+    $ref: 'post_delete_orthanc_patient.yaml'
+  '/health-orthanc/patients/{obj_id}':
+    $ref: 'get_put_orthanc_patient_by_id.yaml'
+  

@@ -1,0 +1,19 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: lang
+    description: lang - lang data management.
+paths:
+  '/administration/languages/search':
+    $ref: 'get_lang.yaml'
+  '/administration/languages':
+    $ref: 'post_delete_lang.yaml'
+  '/administration/languages/{obj_id}':
+    $ref: 'get_put_lang_by_id.yaml'
+  '/administration/languages/{obj_id}/load-translations':
+    $ref: 'get_load_translations.yaml'
+  '/administration/languages/{obj_id}/unload-translations':
+    $ref: 'get_unload_translations.yaml'
+    
+  

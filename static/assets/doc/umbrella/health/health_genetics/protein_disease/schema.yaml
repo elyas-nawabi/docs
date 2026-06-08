@@ -1,0 +1,145 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        acronym: 
+          type: string
+        active: 
+          type: boolean
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        description: 
+          type: string
+        disease_name: 
+          type: string
+        disease_uri: 
+          type: string
+        gene_variant:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            gene: 
+              type: integer
+            gene_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            name: 
+              type: string 
+            phenotype: 
+              type: integer
+            phenotype_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            variant: 
+              type: integer
+            variant_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        inheritance_pattern: 
+          type: string
+        keywords: 
+          type: string
+        mim_reference:
+          type: string
+        name:
+          type: string
+        rec_name: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        xrefs: 
+          type: string
+        
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      acronym: HSD10MD
+      active: true
+      create_date: '2024-05-27T12:29:51.795048'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      description: An X-linked multisystemic disorder with highly variable severity. Age
+        at onset ranges from the neonatal period to early childhood. Features include
+        progressive neurodegeneration, psychomotor retardation, loss of mental and motor
+        skills, seizures, cardiomyopathy, and visual and hearing impairment. Some patients
+        manifest lactic acidosis and metabolic acidosis.
+      disease_name: HDS10 mitochondrial disease
+      disease_uri: http://www.uniprot.org/diseases/DI-00001
+      gene_variant:
+      - create_date: '2024-05-27T12:29:51.795048'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        gene: 12212
+        gene_:
+          id: 12212
+          name: HSD17B10 (Q99714) :hydroxysteroid 17-beta dehydrogenase 10
+        id: 11551
+        name: VARPHEN11551
+        phenotype: 1
+        phenotype_:
+          id: 1
+          name: DI-00001:HDS10 mitochondrial disease
+        rec_name: DI-00001:HDS10 mitochondrial disease
+        variant: 14967
+        variant_:
+          id: 14967
+          name: 'VAR_015987 : p.Leu122Val'
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      id: 1
+      inheritance_pattern: 
+      keywords: Neurodegeneration
+      mim_reference: MIM:300438
+      name: DI-00001
+      rec_name: DI-00001:HDS10 mitochondrial disease
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+      xrefs: MIM:300438,MedGen:C1845517,MeSH:D020739
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

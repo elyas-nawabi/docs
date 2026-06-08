@@ -1,0 +1,21 @@
+      properties:
+        code: 
+            type: string
+        extra_info: 
+            type: string
+        institution: 
+            type: integer
+        name: 
+            type: string
+        rec_name: 
+            type: string
+  
+      required:
+          - 
+      example:
+        code: '009'
+        extra_info: ''
+        institution: 1
+        name: new_building
+        rec_name: new_building
+       

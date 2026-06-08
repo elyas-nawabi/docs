@@ -1,0 +1,20 @@
+properties:
+   field: 
+      type: string
+   model: 
+      type: string
+   rec_name: 
+      type: string
+   user: 
+      type: integer
+   width: 
+      type: integer
+
+required:
+   -     
+example:
+   field: ui_menu_list
+   model: ir.ui.menu
+   rec_name: ir.ui.menu
+   user: 6
+   width: 21

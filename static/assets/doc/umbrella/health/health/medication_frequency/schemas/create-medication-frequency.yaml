@@ -1,0 +1,17 @@
+      properties:
+        abbreviation: 
+            type: string
+        code: 
+            type: string
+        name: 
+            type: string
+        rec_name: 
+            type: string
+  
+      required:
+          - 
+      example:
+        abbreviation: od
+        code: '229797004'
+        name: 1 time per day
+        rec_name: 1 time per day

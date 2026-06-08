@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: view
+    description: view - view data management.
+paths:
+  '/administration/views/search':
+    $ref: 'get_view.yaml'
+  '/administration/views':
+    $ref: 'post_delete_view.yaml'
+  '/administration/views/{obj_id}':
+    $ref: 'get_put_view_by_id.yaml'
+
+    
+  

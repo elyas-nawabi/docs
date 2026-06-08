@@ -1,0 +1,16 @@
+openapi: 3.1.0
+info:
+  title: HR Appraisal Contract
+  version: '1.0'
+  description: |
+    Tryton module **umbrella_hr_appraisal_contract** connects employee appraisals with HR contracts
+    (depends on `umbrella_hr_appraisal` and `umbrella_hr_contract`).
+
+    **REST API:** this bridge module does not register additional HTTP resources. Use the
+    **umbrella_hr_contract** contract API and the **umbrella_hr_appraisal** appraisals API for HTTP access.
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: hr_appraisal_contract
+    description: Contract–appraisal integration (no standalone endpoints in this module).
+paths: {}

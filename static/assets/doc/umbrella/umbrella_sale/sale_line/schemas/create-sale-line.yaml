@@ -1,0 +1,117 @@
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        actual_quantity: 
+          type: number
+          format: decimal
+        amount: 
+          type: integer
+        company: 
+          type: integer
+        currency: 
+          type: integer
+        customer: 
+          type: integer
+        description: 
+          type: string
+        from_location: 
+          type: integer
+        id: 
+          type: integer
+        invoice_lines: 
+          type: array
+        moves: 
+          type: array
+        moves_exception: 
+          type: boolean
+        moves_ignored: 
+          type: array
+        moves_progress: 
+          type: number
+          format: float
+        moves_recreated: 
+          type: array
+        note: 
+          type: string
+        product: 
+          type: integer
+        product_uom_category: 
+          type: integer
+        quantity: 
+          type: integer
+        rec_name: 
+          type: string
+        sale: 
+          type: integer
+        sale_date: 
+          type: string
+          format: date
+        sale_state: 
+          type: string
+        sequence: 
+          type: integer
+        shipping_date: 
+          type: string
+          format: date 
+        summary: 
+          type: string
+        taxes: 
+          type: array
+        to_location: 
+          type: integer
+        type: 
+          type: string
+        unit: 
+          type: integer
+        unit_price: 
+          type: number
+          format: decimal
+        warehouse: 
+          type: integer
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+  
+      required:
+          - 
+      example:
+        actual_quantity: 
+        amount: 0
+        company: 1
+        create_date: '2025-03-01T10:06:32.391090'
+        create_uid: 1
+        currency: 1
+        customer: 1
+        description: description
+        from_location: 2
+        id: 4
+        invoice_lines: []
+        moves: []
+        moves_exception: false
+        moves_ignored: []
+        moves_progress: 
+        moves_recreated: []
+        note: note
+        product: 
+        product_uom_category: 
+        quantity: 
+        rec_name: "(3)"
+        sale: 3
+        sale_date: 
+        sale_state: draft
+        sequence: 12
+        shipping_date: 
+        summary: description
+        taxes: []
+        to_location: 7
+        type: title
+        unit: 
+        unit_price: 
+        warehouse: 5
+        write_date: 
+        write_uid: 

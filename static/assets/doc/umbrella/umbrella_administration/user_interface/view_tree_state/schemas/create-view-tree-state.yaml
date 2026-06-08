@@ -1,0 +1,26 @@
+properties:
+   child_name: 
+      type: string
+   domain:
+      type: string
+   model: 
+      type: string
+   nodes:
+      type: string
+   rec_name: 
+      type: string
+   selected_nodes: 
+      type: string
+   user: 
+      type: integer
+
+required:
+   -     
+example:
+   domain: '[["parent","=",null]]'
+   id: 147
+   model: ir.ui.menu
+   nodes: [[339],[339,340]]
+   rec_name: ir.ui.menu
+   selected_nodes: []
+   user: 1

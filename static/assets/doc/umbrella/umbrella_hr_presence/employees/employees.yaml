@@ -1,0 +1,15 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: presence_employees
+    description: presence_employees - data management.
+paths:
+  '/hr-presence/employees':
+    $ref: 'get_employees.yaml'
+  '/hr-presence/employees/{obj_id}/presence':
+    $ref: 'get_employee_presence.yaml'
+  '/hr-presence/employees/{obj_id}/set-present':
+    $ref: 'post_set_present.yaml'
+  '/hr-presence/employees/{obj_id}/set-absent':
+    $ref: 'post_set_absent.yaml'

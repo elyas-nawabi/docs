@@ -1,0 +1,130 @@
+    post:
+      tags:
+        - address
+      summary: Get addresses.
+      description: Get addresses.
+      operationId: getAddresses
+     
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of addresses.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        city:
+                          type: string
+                        country:
+                          type: integer
+                        country_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                        party: 
+                          type: integer
+                        party_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        party_name:
+                          type: string
+                        postal_code:
+                          type: string 
+                        rec_name: 
+                          type: string
+                        street: 
+                          type: string
+                        subdivision:
+                          type: integer
+                        subdivision_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                - city: "kabul"
+                  country: 1
+                  country_:
+                    id: 1
+                    name: "Afghanistan"
+                  create_date: '2024-05-08T12:21:10.626191'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  id: 1
+                  name: "shamali tower"
+                  party: 1
+                  party_:
+                      id: 1
+                      name: "Party 1"
+                  party_name: "prt1"
+                  postal_code: "1001"
+                  rec_name: prt2, herat tower, street 2, 1002, Herat, 1
+                  street: "2nd street"
+                  subdivision: 1
+                  subdivision_:
+                    id: 2
+                    name: "sbd1"
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
+                errors: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 1
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'  
+    
+    

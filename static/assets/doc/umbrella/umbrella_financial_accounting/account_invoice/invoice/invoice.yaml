@@ -1,0 +1,41 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: invoice
+    description: invoice - invoice data management.
+paths:
+  '/financial-accounting/invoices/search':
+    $ref: 'get_invoice.yaml'
+  '/financial-accounting/invoices':
+    $ref: 'post_delete_invoice.yaml'
+  '/financial-accounting/invoices/{obj_id}':
+    $ref: 'get_put_invoice_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/draft':
+    $ref: 'draft_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/validate':
+    $ref: 'validate_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/post':
+    $ref: 'post_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/cancel':
+    $ref: 'cancel_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/recall-deposit':
+    $ref: 'recall_deposit_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/process':
+    $ref: 'process_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/pay':
+    $ref: 'pay_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/party-invoices-count':
+    $ref: 'party_invoices_count_by_id.yaml'
+
+
+  '/financial-accounting/invoices/{obj_id}/preview':
+    $ref: 'post_preview_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/credit':
+    $ref: 'post_credit_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/modify-payee':
+    $ref: 'post_modify_payee_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/reschedule/preview':
+    $ref: 'post_reschedule_preview_by_id.yaml'
+  '/financial-accounting/invoices/{obj_id}/reschedule':
+    $ref: 'post_reschedule_by_id.yaml'

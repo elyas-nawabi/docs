@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: insurance plan
+    description: insurance plan - insurance plan data management.
+paths:
+  '/health/insurance-plans/search':
+    $ref: 'get_insurance_plan.yaml'
+  '/health/insurance-plans':
+    $ref: 'post_delete_insurance_plan.yaml'
+  '/health/insurance-plans/{obj_id}':
+    $ref: 'get_put_insurance_plan_by_id.yaml'
+  

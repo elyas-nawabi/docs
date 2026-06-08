@@ -1,0 +1,18 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: lot
+    description: lot - lot data management.
+paths:
+  '/stock/lots/search':
+    $ref: 'get_lot.yaml'
+  '/stock/lots':
+    $ref: 'post_delete_lot.yaml'
+  '/stock/lots/{obj_id}':
+    $ref: 'get_put_lot_by_id.yaml'
+  '/stock/lots/{obj_id}/upward-traces':
+    $ref: 'get_upward.yaml'
+  '/stock/lots/{obj_id}/downward-traces':
+    $ref: 'get_downward.yaml'
+  

@@ -1,0 +1,19 @@
+properties:
+  purchase_invoice_method: 
+    type: string
+  purchase_process_after: 
+    type: string 
+  purchase_sequence: 
+    type: integer
+  rec_name: 
+    type: string
+    
+required:
+  - purchase_invoice_method
+  - purchase_sequence
+  
+example:
+  purchase_invoice_method: order
+  purchase_process_after: 
+  purchase_sequence: 29
+  rec_name: elyas

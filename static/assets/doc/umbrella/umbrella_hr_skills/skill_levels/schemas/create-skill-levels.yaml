@@ -1,0 +1,16 @@
+schema:
+  properties:
+    skill_type:
+      type: string
+    name:
+      type: string
+    level_progress:
+      type: string
+    default_level:
+      type: string
+
+example:
+  skill_type: ''
+  name: ''
+  level_progress: ''
+  default_level: ''

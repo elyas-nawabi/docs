@@ -1,0 +1,252 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        admission: 
+          type: integer
+        admission_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        age: 
+          type: integer
+        anesthesia_report: 
+          type: string
+        anesthesia_type:  
+          type: string
+        anesthetist: 
+          type: integer
+        anesthetist_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        approach: 
+          type: string
+        classification: 
+          type: string
+        clavien_dindo: 
+          type: string
+        code: 
+          type: string
+        complications_notes: 
+          type: string
+        computed_age: 
+          type: string
+        description: 
+          type: string
+        discharge_instructions: 
+          type: string
+        drains: 
+          type: array
+        ellapsed_time: 
+          type: integer
+        extra_info: 
+          type: string
+        gender: 
+          type: string
+        id: 
+          type: integer
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        laterality: 
+          type: string
+        location: 
+          type: integer
+        location_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        main_procedure: 
+          type: integer
+        main_procedure_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        moves: 
+          type: array
+        operating_room: 
+          type: integer
+        operating_room_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        pathology:
+          type: integer
+        pathology_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        patient: 
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        patient_positioning: 
+          type: string
+        postoperative_dx: 
+          type: integer
+        postoperative_dx_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        postoperative_guidelines: 
+          type: string
+        preop_antibiotics: 
+          type: boolean
+        preop_assessment: 
+          type: integer
+        preop_assessment_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        preop_bleeding_risk: 
+          type: boolean
+        preop_oximeter: 
+          type: boolean
+        preop_site_marking: 
+          type: boolean
+        preop_sterility: 
+          type: boolean
+        procedures: 
+          type: array
+        protocol: 
+          type: integer
+        protocol_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name:   
+          type: string
+        report_surgery_date: 
+          type: string
+          format: date
+        report_surgery_time: 
+          type: string
+        signed_by: 
+          type: integer
+        signed_by_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        specialty:
+          type: string
+        state: 
+          type: string
+        supplies: 
+          type: array
+        surgeon: 
+          type: integer
+        surgeon_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        surgery_complications: 
+          type: array
+        surgery_date: 
+          type: string
+          format: date
+        surgery_end_date: 
+          type: string
+          format: date
+        surgery_length: 
+          type: string
+        surgery_team: 
+          type: array
+        surgical_intervention:
+          type: integer 
+        surgical_intervention_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        surgical_wound: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      admission: 
+      admission_: {}
+      age: 
+      anesthesia_report: ''
+      anesthesia_type: regional
+      anesthetist: 
+      anesthetist_: {}
+      approach: endoscopic
+      classification: o
+      clavien_dindo: 
+      code: SRG-2024-00001
+      complications_notes: ''
+      computed_age: 
+      create_date: '2024-08-11T17:47:03.635988'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      description: this is some description
+      discharge_instructions: ''
+      drains: []
+      ellapsed_time: 
+      extra_info: ''
+      gender: u
+      id: 1
+      institution: 1
+      institution_:
+        id: 1
+        name: Milestone
+      laterality: 
+      location: 
+      location_: {}
+      main_procedure: 
+      main_procedure_: {}
+      moves: []
+      operating_room: 
+      operating_room_: {}
+      pathology: 
+      pathology_: {}
+      patient: 1
+      patient_:
+        id: 1
+        name: Milestone
+      patient_positioning: 
+      postoperative_dx: 
+      postoperative_dx_: {}
+      postoperative_guidelines: ''
+      preop_antibiotics: false
+      preop_assessment: 
+      preop_assessment_: {}
+      preop_bleeding_risk: true
+      preop_oximeter: false
+      preop_site_marking: false
+      preop_sterility: false
+      procedures: []
+      protocol: 
+      protocol_: {}
+      rec_name: SRG-2024-00001  (this is some description)
+      report_surgery_date: '2024-08-11'
+      report_surgery_time: '17:43:01'
+      signed_by: 
+      signed_by_: {}
+      specialty: 
+      state: draft
+      supplies: []
+      surgeon: 1
+      surgeon_:
+        id: 1
+        name: Milestone
+      surgery_complications: []
+      surgery_date: '2024-08-11T17:43:01'
+      surgery_end_date: 
+      surgery_length: 
+      surgery_team: []
+      surgical_intervention: 
+      surgical_intervention_: {}
+      surgical_wound: 
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

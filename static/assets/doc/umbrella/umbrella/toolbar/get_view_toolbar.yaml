@@ -1,0 +1,46 @@
+get:
+  tags:
+    - toolbar
+  summary: Get view toolbar for a model.
+  description: Get view toolbar configuration and actions for a specific model.
+  operationId: getViewToolbar
+  parameters:
+    - name: model_name
+      in: path
+      schema:
+        type: string
+      required: true
+      example: "ir.model"
+      description: The name of the model to get toolbar for
+  responses:
+    '200':
+      description: View toolbar data retrieved successfully
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    '404':
+      description: >-
+        404 Not Found: The requested model was not found or does not exist.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    '500':
+      description: >-
+        500 Internal Server Error: The server encountered an unexpected condition
+        that prevented it from fulfilling the request.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP500' 

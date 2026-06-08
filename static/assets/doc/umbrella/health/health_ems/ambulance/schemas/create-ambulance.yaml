@@ -1,0 +1,41 @@
+      properties:
+        active: 
+          type: boolean
+        rec_name: 
+          type: string
+        state: 
+          type: string
+        vehicle_brand: 
+          type: string
+        vehicle_function: 
+          type: string
+        vehicle_identifier:
+          type: string
+        vehicle_model: 
+          type: string
+        vehicle_odometer: 
+          type: integer
+        vehicle_remarks: 
+          type: string
+        vehicle_station: 
+          type: integer
+        vehicle_type: 
+          type: string
+        
+      required:
+          - vehicle_function
+          - vehicle_identifier
+          - vehicle_type  
+      example:
+        active: true
+        rec_name: '0004 : helicopter'
+        state: returning
+        vehicle_brand: ''
+        vehicle_function: emergency
+        vehicle_identifier: '0004'
+        vehicle_model: ''
+        vehicle_odometer: 
+        vehicle_remarks: ''
+        vehicle_station: 
+        vehicle_type: helicopter
+      

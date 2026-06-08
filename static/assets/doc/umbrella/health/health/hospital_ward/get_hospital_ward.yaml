@@ -1,0 +1,113 @@
+    post:
+      tags:
+        - hospital ward
+      summary: Get hospital ward details.
+      description: Get hospital ward details.
+      operationId: getHospitalWards
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of hospital wards.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        gender: 
+                          type: string
+                        id: 
+                          type: integer
+                        institution: 
+                          type: integer
+                        institution_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          
+                        name: 
+                          type: string
+                        number_of_beds: 
+                          type: integer
+                        rec_name: 
+                          type: string
+                        state:  
+                          type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - create_date: '2024-07-27T05:49:51.222845'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    gender: men
+                    id: 1
+                    institution: 1
+                    institution_:
+                      id: 1
+                      name: Milestone
+                    name: opd
+                    number_of_beds: 1
+                    rec_name: opd
+                    state: beds_available
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    
