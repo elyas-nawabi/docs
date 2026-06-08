@@ -1,0 +1,76 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        ambulance: 
+          type: integer
+        ambulance_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        healthprofs: 
+          type: array
+        healthprofs_count: 
+          type: integer
+        id: 
+          type: integer
+        rec_name:
+          type: string
+        sr: 
+          type: integer
+        sr_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        state:
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      ambulance: 50
+      ambulance_:
+        id: 50
+        name: '0004 : helicopter'
+      create_date: '2024-07-11T09:53:08.702266'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      healthprofs: []
+      healthprofs_count: 0
+      id: 32
+      rec_name: '32'
+      sr: 3
+      sr_:
+        id: 3
+        name: SRG-2024-00003
+      state: 
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

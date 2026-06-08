@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: write off
+    description: write off - write off data management.
+paths:
+  '/financial-accounting/write-offs/search':
+    $ref: 'get_write_off.yaml'
+  '/financial-accounting/write-offs':
+    $ref: 'post_delete_write_off.yaml'
+  '/financial-accounting/write-offs/{obj_id}':
+    $ref: 'get_put_write_off_by_id.yaml'
+  

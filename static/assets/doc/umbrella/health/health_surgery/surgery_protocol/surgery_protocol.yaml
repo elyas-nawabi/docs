@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: surgery protocols
+    description: surgery protocols - surgery protocols data management.
+paths:
+  '/health-surgery/surgery-protocols/search':
+    $ref: 'get_surgery_protocol.yaml'
+  '/health-surgery/surgery-protocols':
+    $ref: 'post_delete_surgery_protocol.yaml'
+  '/health-surgery/surgery-protocols/{obj_id}':
+    $ref: 'get_put_surgery_protocol_by_id.yaml'
+  

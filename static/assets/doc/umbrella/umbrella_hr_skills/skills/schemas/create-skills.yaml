@@ -1,0 +1,13 @@
+schema:
+  properties:
+    name:
+      type: string
+    sequence:
+      type: string
+    skill_type:
+      type: string
+
+example:
+  name: ''
+  sequence: ''
+  skill_type: ''

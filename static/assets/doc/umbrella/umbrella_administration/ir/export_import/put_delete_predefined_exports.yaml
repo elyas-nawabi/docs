@@ -1,0 +1,122 @@
+put:
+  tags:
+    - export import
+  summary: Update a predefined export configuration
+  description: Update an existing predefined export configuration
+  operationId: updatePredefinedExports
+  parameters:
+    - name: export_id
+      required: true
+      in: path
+      description: The ID of the export configuration to update
+      schema:
+        type: integer
+      example: 123
+  requestBody:
+    required: true
+    description: Updated export configuration data
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/export-update-schema.yaml'
+  responses:
+    '200':
+      description: Export configuration updated successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                nullable: true
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data: null
+            errors: null
+            status: 200
+            success_message: "Export configuration updated successfully"
+    '400':
+      description: Bad Request - Invalid input data
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP400'
+    '404':
+      description: Export configuration not found
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+  tags:
+    - export import
+  summary: Delete a predefined export configuration
+  description: Delete an existing predefined export configuration
+  operationId: deletePredefinedExports
+  parameters:
+    - name: export_id
+      required: true
+      in: path
+      description: The ID of the export configuration to delete
+      schema:
+        type: integer
+      example: 123
+  responses:
+    '200':
+      description: Export configuration deleted successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                nullable: true
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data: null
+            errors: null
+            status: 200
+            success_message: "Export configuration deleted successfully"
+    '404':
+      description: Export configuration not found
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401' 

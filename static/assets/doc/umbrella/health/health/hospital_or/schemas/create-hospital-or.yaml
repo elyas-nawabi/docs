@@ -1,0 +1,29 @@
+      properties:
+        building: 
+            type: integer
+        extra_info: 
+            type: string
+        institution: 
+            type: integer
+        name: 
+            type: string
+        rec_name: 
+            type: string
+        state:  
+            type: string
+        timeslot:   
+            type: integer
+        unit: 
+            type: integer
+  
+      required:
+          - 
+      example:
+        building: 1
+        extra_info: put your comments or extra information here.
+        institution: 1
+        name: operating_room_1
+        rec_name: operating_room_1
+        state: free
+        timeslot: 60
+        unit: 1

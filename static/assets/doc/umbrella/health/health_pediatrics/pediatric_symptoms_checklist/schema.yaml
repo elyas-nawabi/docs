@@ -1,0 +1,190 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        evaluation_date: 
+          type: integer
+        evaluation_date_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        evaluation_start: 
+          type: string 
+          format: date
+        id: 
+          type: integer
+        notes: 
+          type: string
+        patient: 
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        psc_absent_from_school: 
+          type: string
+        psc_aches_pains: 
+          type: string
+        psc_act_as_younger: 
+          type: string
+        psc_acts_as_driven_by_motor: 
+          type: string
+        psc_afraid_of_new_situations: 
+          type: string
+        psc_blames_others: 
+          type: string
+        psc_daydreams_too_much: 
+          type: string
+        psc_distracted_easily: 
+          type: string
+        psc_does_not_get_people_feelings: 
+          type: string
+        psc_does_not_listen_to_rules: 
+          type: string
+        psc_does_not_show_feelings: 
+          type: string
+        psc_down_on_self: 
+          type: string
+        psc_feels_hopeless: 
+          type: string
+        psc_feels_is_bad_child: 
+          type: string
+        psc_fidgety: 
+          type: string
+        psc_fights_with_others: 
+          type: string
+        psc_gets_hurt_often: 
+          type: string
+        psc_having_less_fun: 
+          type: string
+        psc_irritable_angry: 
+          type: string
+        psc_less_interest_in_school: 
+          type: string
+        psc_less_interested_in_friends: 
+          type: string
+        psc_refuses_to_share: 
+          type: string
+        psc_sad_unhappy: 
+          type: string
+        psc_school_grades_dropping: 
+          type: string
+        psc_spend_time_alone: 
+          type: string
+        psc_takes_things_from_others: 
+          type: string
+        psc_takes_unnecesary_risks: 
+          type: string
+        psc_teases_others: 
+          type: string
+        psc_tires_easily: 
+          type: string
+        psc_total: 
+          type: integer
+        psc_trouble_concentrating: 
+          type: string
+        psc_trouble_sleeping: 
+          type: string
+        psc_trouble_with_teacher: 
+          type: string
+        psc_visit_doctor_finds_ok: 
+          type: string
+        psc_wants_to_be_with_parents: 
+          type: string
+        psc_worries_a_lot: 
+          type: string
+        rec_name: 
+          type: string
+        user_id: 
+          type: integer
+        user_id_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      create_date: '2024-08-14T07:17:56.499797'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      evaluation_date: 2
+      evaluation_date_:
+        id: 2
+        name: APP 2024/2
+      evaluation_start: '2024-08-11T18:08:30'
+      id: 1
+      notes: 
+      patient: 3
+      patient_:
+        id: 3
+        name: Adel
+      psc_absent_from_school: 
+      psc_aches_pains: '1'
+      psc_act_as_younger: 
+      psc_acts_as_driven_by_motor: 
+      psc_afraid_of_new_situations: 
+      psc_blames_others: 
+      psc_daydreams_too_much: 
+      psc_distracted_easily: '2'
+      psc_does_not_get_people_feelings: 
+      psc_does_not_listen_to_rules: 
+      psc_does_not_show_feelings: 
+      psc_down_on_self: 
+      psc_feels_hopeless: '1'
+      psc_feels_is_bad_child: '2'
+      psc_fidgety: '0'
+      psc_fights_with_others: 
+      psc_gets_hurt_often: 
+      psc_having_less_fun: 
+      psc_irritable_angry: 
+      psc_less_interest_in_school: '0'
+      psc_less_interested_in_friends: 
+      psc_refuses_to_share: '0'
+      psc_sad_unhappy: 
+      psc_school_grades_dropping: '2'
+      psc_spend_time_alone: '1'
+      psc_takes_things_from_others: '0'
+      psc_takes_unnecesary_risks: 
+      psc_teases_others: 
+      psc_tires_easily: '1'
+      psc_total: 13
+      psc_trouble_concentrating: '1'
+      psc_trouble_sleeping: 
+      psc_trouble_with_teacher: '0'
+      psc_visit_doctor_finds_ok: 
+      psc_wants_to_be_with_parents: '2'
+      psc_worries_a_lot: 
+      rec_name: '1'
+      user_id: 1
+      user_id_:
+        id: 1
+        name: Administrator
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

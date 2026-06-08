@@ -1,0 +1,42 @@
+      properties:
+        
+        diet_belief: 
+            type: integer
+        diet_belief_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        diet_therapeutic: 
+            type: integer
+        diet_therapeutic_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        diet_vegetarian: 
+            type: integer
+        diet_vegetarian_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+       
+        institution: 
+            type: integer
+        institution_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+            type: integer
+        name_:
+            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+            type: string
+        
+      required:
+          - 
+      example:
+                  
+        diet_belief: 1
+        
+        diet_therapeutic: 1
+        
+        diet_vegetarian: 1
+    
+        institution: 1
+        
+        name: 147
+        
+        rec_name: abacavir (ABC)
+        

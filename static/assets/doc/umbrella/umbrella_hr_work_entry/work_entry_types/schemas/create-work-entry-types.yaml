@@ -1,0 +1,32 @@
+schema:
+  properties:
+    name:
+      type: string
+    display_code:
+      type: string
+    code:
+      type: string
+    country:
+      type: string
+    amount_rate:
+      type: string
+    is_extra_hours:
+      type: string
+    external_code:
+      type: string
+    sequence:
+      type: string
+    country_code:
+      type: string
+    is_leave:
+      type: string
+    is_work:
+      type: string
+
+example:
+  name: ''
+  display_code: ''
+  code: ''
+  country: ''
+  amount_rate: ''
+  is_extra_hours: ''

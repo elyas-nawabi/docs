@@ -1,0 +1,26 @@
+properties:
+  dependencies:
+    type: array
+  description: 
+    type: string
+  id: 
+    type: integer
+  name: 
+    type: string
+  rec_name: 
+    type: string
+  state: 
+    type: string
+  version:  
+    type: string
+required:
+    -
+        
+example:
+  dependencies: []
+  description: 
+  id: 1
+  name: ir
+  rec_name: ir
+  state: activated
+  version: ''

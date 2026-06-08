@@ -1,0 +1,119 @@
+    post:
+      tags:
+        - gene variant phenotype
+      summary: Get gene variant phenotype details.
+      description: Get gene variant phenotype details.
+      operationId: getGeneVariantPhenotypes
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of gene variant phenotypes.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                          create_date: 
+                            type: string 
+                            format: date 
+                          create_uid: 
+                            type: integer
+                          create_uid_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          gene: 
+                            type: integer
+                          gene_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          id:   
+                            type: integer
+                          name: 
+                            type: string
+                          phenotype:
+                            type: integer
+                          phenotype_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          rec_name: DI-00042:Adrenal hyperplasia 2
+                          variant: 
+                            type: integer
+                          variant_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          write_date:
+                            type: string
+                            format: date 
+                          write_uid:
+                            type: integer
+                          write_uid_:
+                            $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - create_date: '2024-05-27T12:29:51.795048'
+                    create_uid: 0
+                    create_uid_:
+                      id: 0
+                      name: Root
+                    gene: 12188
+                    gene_:
+                      id: 12188
+                      name: HSD3B2 (P26439) :hydroxy-delta-5-steroid dehydrogenase, 3 beta- and steroid
+                        delta-isomerase 2
+                    id: 1
+                    name: VARPHEN1
+                    phenotype: 41
+                    phenotype_:
+                      id: 41
+                      name: DI-00042:Adrenal hyperplasia 2
+                    rec_name: DI-00042:Adrenal hyperplasia 2
+                    variant: 2
+                    variant_:
+                      id: 2
+                      name: 'VAR_000006 : p.Glu142Lys'
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

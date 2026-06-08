@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: country
+    description: country - country data management.
+paths:
+  '/country/countries/search':
+    $ref: 'get_country.yaml'
+  '/country/countries':
+    $ref: 'post_delete_country.yaml'
+  '/country/countries/{obj_id}':
+    $ref: 'get_put_country_by_id.yaml'
+  

@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: mail activity type
+    description: mail activity type - mail activity type management.
+paths:
+  '/mail/activity-types/search':
+    $ref: 'post_search.yaml'
+  '/mail/activity-types':
+    $ref: 'post_delete.yaml'
+  '/mail/activity-types/{obj_id}':
+    $ref: 'get_put.yaml' 

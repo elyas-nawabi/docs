@@ -1,0 +1,16 @@
+schema:
+  properties:
+    name:
+      type: string
+    skills:
+      type: string
+    skill_levels:
+      type: string
+    active:
+      type: string
+
+example:
+  name: ''
+  skills: ''
+  skill_levels: ''
+  active: ''

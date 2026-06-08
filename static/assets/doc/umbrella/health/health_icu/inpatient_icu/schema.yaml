@@ -1,0 +1,81 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        admitted: 
+          type: boolean
+        discharged_from_icu: 
+          type: boolean
+        icu_admission_date: 
+          type: string 
+          format: date 
+        icu_discharge_date: 
+          type: string 
+          format: date 
+        icu_stay: 
+          type: string
+        mv_history: 
+          type: array
+        id: 
+          type: integer
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      admitted: true
+      create_date: '2024-07-30T04:17:10.750772'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      discharged_from_icu: true
+      icu_admission_date: '2024-07-30T04:14:00'
+      icu_discharge_date: '2024-08-06T04:15:00'
+      icu_stay: 7 days, 0:00:00
+      mv_history: []
+      id: 3
+      name: 3
+      name_:
+        id: 3
+        name: INPAC003:acetylsalicylic acid:Milestone
+      rec_name: '3'
+      write_date: '2024-08-03T08:25:29.503143'
+      write_uid: 1
+      write_uid_:
+        id: 1
+        name: Administrator
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

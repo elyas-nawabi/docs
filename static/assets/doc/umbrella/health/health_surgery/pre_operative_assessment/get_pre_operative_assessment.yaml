@@ -1,0 +1,125 @@
+    post:
+      tags:
+        - pre operative assessment
+      summary: Get pre operative assessment details.
+      description: Get pre operative assessment details.
+      operationId: getPreOperativeAssessments
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of pre operative assessment.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        assessment_date: 
+                          type: string
+                          format: date
+                        health_professional: 
+                          type: integer
+                        health_professional_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        id: 
+                          type: integer
+                        patient: 
+                          type: integer
+                        patient_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        short_notes: 
+                          type: string
+                        surgery: 
+                          type: integer
+                        surgery_: 
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        surgical_decision: 
+                          type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - assessment_date: '2024-08-11'
+                    create_date: '2024-08-11T18:14:40.705263'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    health_professional: 1
+                    health_professional_:
+                      id: 1
+                      name: Milestone
+                    id: 1
+                    patient: 1
+                    patient_:
+                      id: 1
+                      name: Milestone
+                    rec_name: '2024-08-11 ASA: ps1'
+                    short_notes: ''
+                    surgery: 
+                    surgery_: {}
+                    surgical_decision: watchful_waiting
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

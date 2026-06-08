@@ -1,0 +1,59 @@
+      properties:
+        acronym: 
+            type: string
+        active: 
+            type: boolean
+        description: 
+            type: string
+        disease_name: 
+            type: string
+        disease_uri: 
+            type: string
+        gene_variant:
+            type: array 
+            properties:
+                gene: 12212
+                name: 
+                    type: string
+                phenotype: 1
+                rec_name:   
+                    type: string
+                variant: 14967
+        inheritance_pattern:
+            type: string 
+        keywords: 
+            type: string
+        mim_reference:
+            type: string
+        name: 
+            type: string
+        rec_name: 
+            type: string
+        xrefs: 
+            type: string
+        
+      required:
+          - 
+      example:
+        acronym: HSD10MD
+        active: true
+        create_date: '2024-05-27T12:29:51.795048'
+        description: An X-linked multisystemic disorder with highly variable severity. Age
+            at onset ranges from the neonatal period to early childhood. Features include
+            progressive neurodegeneration, psychomotor retardation, loss of mental and motor
+            skills, seizures, cardiomyopathy, and visual and hearing impairment. Some patients
+            manifest lactic acidosis and metabolic acidosis.
+        disease_name: HDS10 mitochondrial disease
+        disease_uri: http://www.uniprot.org/diseases/DI-00001
+        gene_variant:
+          - gene: 12212
+            name: VARPHEN11551
+            phenotype: 1
+            rec_name: DI-00001:HDS10 mitochondrial disease
+            variant: 14967
+        inheritance_pattern: 
+        keywords: Neurodegeneration
+        mim_reference: MIM:300438
+        name: DI-00001
+        rec_name: DI-00001:HDS10 mitochondrial disease
+        xrefs: MIM:300438,MedGen:C1845517,MeSH:D020739

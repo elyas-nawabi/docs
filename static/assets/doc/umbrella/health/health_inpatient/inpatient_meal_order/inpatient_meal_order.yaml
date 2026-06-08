@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: inpatient meal order
+    description: inpatient meal order - inpatient meal order data management.
+paths:
+  '/health-inpatient/meal-orders/search':
+    $ref: 'get_inpatient_meal_order.yaml'
+  '/health-inpatient/meal-orders':
+    $ref: 'post_delete_inpatient_meal_order.yaml'
+  '/health-inpatient/meal-orders/{obj_id}':
+    $ref: 'get_put_inpatient_meal_order_by_id.yaml'
+  

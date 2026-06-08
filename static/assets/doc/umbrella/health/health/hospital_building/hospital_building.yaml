@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: hospital building
+    description: hospital building - hospital building data management.
+paths:
+  '/health/buildings/search':
+    $ref: 'get_hospital_building.yaml'
+  '/health/buildings':
+    $ref: 'post_delete_hospital_building.yaml'
+  '/health/buildings/{obj_id}':
+    $ref: 'get_put_hospital_building_by_id.yaml'
+  

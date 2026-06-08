@@ -1,0 +1,19 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: account-tags
+    description: account-tags - account tags management for cash flow categorization.
+  - name: cashflow-report
+    description: cashflow-report - cash flow statement generation and reporting.
+paths:
+  '/financial-accounting/account-tags/search':
+    $ref: 'get_account_tags.yaml'
+  '/financial-accounting/account-tags':
+    $ref: 'post_delete_account_tags.yaml'
+  '/financial-accounting/account-tags/{obj_id}':
+    $ref: 'get_put_account_tag_by_id.yaml'
+  
+  '/financial-accounting/cashflow-report/generate':
+    $ref: 'post_generate_cashflow_report.yaml'
+  

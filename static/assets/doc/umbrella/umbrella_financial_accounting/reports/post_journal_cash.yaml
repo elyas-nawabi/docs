@@ -1,0 +1,100 @@
+post:
+      tags:
+        - journal cash
+      summary: Get journal cash based on the context provided in the body.
+      description: Get journal cash based on the context provided in the body.
+      operationId: getJournalCashs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: 'schemas/create-journal-cash.yaml'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data: 
+                      type: array
+                      properties:
+                          active: 
+                            type: boolean
+                          balance: 
+                            type: integer
+                          code:
+                            type: string
+                          credit: 
+                            type: integer
+                          currency: 
+                          currency_:
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                          debit: 
+                            type: integer
+                          id: 
+                            type: integer
+                          matching_sequence: 
+                            type: integer
+                          name:
+                            type: string
+                          rec_name:
+                            type: string
+                          sequence: 
+                            type: integer
+                          sequence_:
+                            $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                          type:
+                            type: string
+                    errors:
+                      type: object
+                    pagination:
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  - active: true
+                    balance: 0
+                    code: CASH
+                    credit: 0
+                    currency: 
+                    currency_: {}
+                    debit: 0
+                    id: 3
+                    matching_sequence: 
+                    name: Cash
+                    rec_name: Cash
+                    sequence: 2
+                    sequence_:
+                      id: 2
+                      name: Default Account Journal
+                    type: cash
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    

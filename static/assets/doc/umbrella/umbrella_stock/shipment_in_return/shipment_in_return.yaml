@@ -1,0 +1,30 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: shipment in return
+    description: shipment in return - shipment in return data management.
+paths:
+  '/stock/supplier-returns/search':
+    $ref: 'get_shipment_in_return.yaml'
+  '/stock/supplier-returns':
+    $ref: 'post_delete_shipment_in_return.yaml'
+  '/stock/supplier-returns/{obj_id}':
+    $ref: 'get_put_shipment_in_return_by_id.yaml'
+  '/stock/supplier-returns/{obj_id}/cancel':
+    $ref: 'get_shipmentir_cancel.yaml'
+  '/stock/supplier-returns/{obj_id}/draft':
+    $ref: 'get_shipmentir_draft.yaml'
+  '/stock/supplier-returns/{obj_id}/wait':
+    $ref: 'get_shipmentir_wait.yaml'
+  '/stock/supplier-returns/{obj_id}/assign':
+    $ref: 'get_shipmentir_assign.yaml'
+  '/stock/supplier-returns/{obj_id}/assign/cancel':
+    $ref: 'get_shipmentir_assign_cancel.yaml'
+  '/stock/supplier-returns/{obj_id}/assign/ignore':
+    $ref: 'get_shipmentir_ignore.yaml'
+  '/stock/supplier-returns/{obj_id}/assign/force':
+    $ref: 'get_shipmentir_force.yaml'
+  '/stock/supplier-returns/{obj_id}/done':
+    $ref: 'get_shipmentir_done.yaml'
+  

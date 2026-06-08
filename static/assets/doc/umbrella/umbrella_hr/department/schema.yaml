@@ -1,0 +1,92 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        active: 
+          type: boolean
+        children:
+          type: array
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        complete_name: 
+          type: string
+        id: 
+          type: integer
+        manager: 
+          type: integer
+        master_department: 
+          type: integer
+        master_department_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        members: 
+          type: array
+        name: 
+          type: string
+        note: 
+          type: string
+        parent: 
+          type: integer
+        rec_name: 
+          type: string
+        total_employee: 
+          type: integer
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      active: true
+      children:
+      - 2
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      complete_name: Technical
+      create_date: '2025-03-16T09:58:27.122989'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      id: 1
+      manager: 
+      master_department: 1
+      master_department_:
+        id: 1
+        name: Technical
+      members: []
+      name: Technical
+      note: ''
+      parent: 
+      rec_name: Technical
+      total_employee: 0
+      write_date: 
+      write_uid:
+    error: null
+    pagination: null
+    status: 201
+    success_message: null

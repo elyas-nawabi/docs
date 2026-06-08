@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: medical specialty
+    description: medical specialty - medical specialty data management.
+paths:
+  '/health/medical-specialties/search':
+    $ref: 'get_medical_specialty.yaml'
+  '/health/medical-specialties':
+    $ref: 'post_delete_medical_specialty.yaml'
+  '/health/medical-specialties/{obj_id}':
+    $ref: 'get_put_medical_specialty_by_id.yaml'
+  

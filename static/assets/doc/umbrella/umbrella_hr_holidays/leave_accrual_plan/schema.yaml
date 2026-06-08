@@ -1,0 +1,71 @@
+﻿schema:
+  properties:
+    data:
+      type: array
+      properties:
+        id:
+          type: integer
+        company:
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        leave_type:
+          type: integer
+        leave_type_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        active:
+          type: boolean
+        transition_mode:
+          type: string
+        accrued_gain_time:
+          type: string
+        can_be_carryover:
+          type: boolean
+        added_value_type:
+          type: string
+        carryover_month:
+          type: string
+          nullable: true
+        carryover_day:
+          type: integer
+          nullable: true
+        levels:
+          type: array
+          items:
+            type: integer
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 1
+    company: 1
+    company_:
+      id: 1
+      name: Milestone
+    leave_type: 2
+    leave_type_:
+      id: 2
+      name: Annual Leave
+    active: true
+    transition_mode: immediate
+    accrued_gain_time: month
+    can_be_carryover: true
+    added_value_type: day
+    carryover_month: '12'
+    carryover_day: 31
+    levels: [1]
+  error: null
+  pagination: null
+  status: 201
+  success_message: null
+

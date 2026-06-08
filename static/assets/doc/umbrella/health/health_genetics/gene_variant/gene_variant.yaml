@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: gene variant
+    description: gene variant - gene variant data management.
+paths:
+  '/health-genetics/natural-variants/search':
+    $ref: 'get_gene_variant.yaml'
+  '/health-genetics/natural-variants':
+    $ref: 'post_delete_gene_variant.yaml'
+  '/health-genetics/natural-variants/{obj_id}':
+    $ref: 'get_put_gene_variant_by_id.yaml'
+  

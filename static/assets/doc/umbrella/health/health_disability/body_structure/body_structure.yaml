@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: body structure
+    description: body structure - body structure data management.
+paths:
+  '/health-disability/body-structures/search':
+    $ref: 'get_body_structure.yaml'
+  '/health-disability/body-structures':
+    $ref: 'post_delete_body_structure.yaml'
+  '/health-disability/body-structures/{obj_id}':
+    $ref: 'get_put_body_structure_by_id.yaml'
+  

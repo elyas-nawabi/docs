@@ -1,0 +1,12 @@
+      properties:
+        name:   
+            type: string
+        rec_name:   
+            type: string
+  
+      required:
+          - 
+      example:
+        name: kabul
+        rec_name: kabul
+        

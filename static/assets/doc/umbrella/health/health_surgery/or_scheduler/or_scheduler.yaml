@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: or scheduler
+    description: or scheduler - or scheduler data management.
+paths:
+  '/health-surgery/or-schedule/search':
+    $ref: 'get_or_scheduler.yaml'
+  '/health-surgery/or-schedule':
+    $ref: 'post_delete_or_scheduler.yaml'
+  '/health-surgery/or-schedule/{obj_id}':
+    $ref: 'get_put_or_scheduler_by_id.yaml'
+  

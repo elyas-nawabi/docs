@@ -1,0 +1,13 @@
+schema:
+  properties:
+    name:
+      type: string
+    email:
+      type: string
+    regex:
+      type: string
+
+example:
+  name: ''
+  email: ''
+  regex: ''

@@ -1,0 +1,122 @@
+    post:
+      tags:
+        - lab
+      summary: Get lab details.
+      description: Get lab details.
+      operationId: getLabDetails
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of labs.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        analytes_summary: 
+                          type: string
+                        date_analysis: 
+                          type: string 
+                          format: date 
+                        id: 
+                          type: integer
+                        name: 
+                          type: string
+                        rec_name: 
+                          type: string
+                        request_order: 
+                          type: integer
+                        source_name: 
+                          type: string
+                        source_type: 
+                          type: string
+                        state: 
+                          type: string
+                        test: 
+                          type: integer
+                        test_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - analytes_summary: 'test  2.0 (s/co)  negative'
+                    create_date: '2024-08-11T15:57:05.497329'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    date_analysis: '2024-08-11T15:53:31'
+                    id: 1
+                    name: TEST001
+                    rec_name: TEST001
+                    request_order: 
+                    source_name: ''
+                    source_type: patient
+                    state: draft
+                    test: 19
+                    test_:
+                      id: 19
+                      name: CHAGAS STROUT
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

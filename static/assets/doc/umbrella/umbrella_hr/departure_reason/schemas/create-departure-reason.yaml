@@ -1,0 +1,30 @@
+  properties:
+    create_date: 
+      type: string 
+      format: date 
+    create_uid: 
+      type: integer
+    name: 
+      type: string
+    reason_code: 
+      type: integer
+    rec_name: 
+      type: string
+    sequence: 
+      type: integer
+    write_date:
+      type: string
+      format: date 
+    write_uid:
+      type: integer
+  required:
+    
+  example:
+    create_date: '2025-02-26T10:36:30.627365'
+    create_uid: 0
+    name: Retired
+    reason_code: 340
+    rec_name: Retired
+    sequence: 10
+    write_date: 
+    write_uid: 

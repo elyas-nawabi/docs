@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: iss
+    description: iss - iss data management.
+paths:
+  '/health-iss/injury-surveillance-system-registration/search':
+    $ref: 'get_iss.yaml'
+  '/health-iss/injury-surveillance-system-registration':
+    $ref: 'post_delete_iss.yaml'
+  '/health-iss/injury-surveillance-system-registration/{obj_id}':
+    $ref: 'get_put_iss_by_id.yaml'
+  

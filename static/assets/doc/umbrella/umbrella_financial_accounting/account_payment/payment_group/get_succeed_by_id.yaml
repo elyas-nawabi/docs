@@ -1,0 +1,53 @@
+get:
+  tags:
+    - payment group
+  summary: Succeed payment group
+  description: Mark a payment group as succeeded
+  operationId: succeedPaymentGroup
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+      example: 2
+  responses:
+    '200':
+      description: Payment group succeeded
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                nullable: true
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data: null
+            errors: null
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    '404':
+      description: 404 Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP404'

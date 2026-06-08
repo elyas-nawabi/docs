@@ -1,0 +1,28 @@
+schema:
+  properties:
+    data:
+      type: object
+      properties:
+        warning_name:
+          type: string
+        always: 
+          type: boolean
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+example:
+    data:
+      warning_name: overloaded_data
+      always: true
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

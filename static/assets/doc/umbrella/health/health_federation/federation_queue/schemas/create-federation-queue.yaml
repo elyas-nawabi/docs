@@ -1,0 +1,70 @@
+      properties:
+        args: 
+            type: string
+        args_preview: 
+            type: string
+        
+        federation_locator: 
+            type: string
+        method: 
+            type: string
+        model: 
+            type: string
+        msgid: 
+            type: string
+        node: 
+            type: string
+        rec_name:
+            type: string
+        state:  
+            type: string
+        time_stamp: 
+            type: string
+            format: date
+        url_suffix: 
+            type: string 
+        
+      required:
+          - 
+      example:
+        args: '[{"resource": "people", "fields": [{"name": "name", "value": "ahmad"}, {"name":
+                    "lastname", "value": "test"}, {"name": "dob", "value": "2001-07-25"}, {"name":
+                    "gender", "value": "m"}, {"name": "id", "value": ""}]}]'
+        args_preview: |-
+            [
+                {
+                    "resource": "people",
+                    "fields": [
+                        {
+                            "name": "name",
+                            "value": "ahmad"
+                        },
+                        {
+                            "name": "lastname",
+                            "value": "test"
+                        },
+                        {
+                            "name": "dob",
+                            "value": "2001-07-25"
+                        },
+                        {
+                            "name": "gender",
+                            "value": "m"
+                        },
+                        {
+                            "name": "id",
+                            "value": ""
+                        }
+                    ]
+                }
+            ]
+        federation_locator: XXXOAL149KBM
+        method: POST
+        model: party.party
+        msgid: 0b74c1f0-cc43-4af6-b253-caf1f55411f1
+        node: dfsd
+        rec_name: '1'
+        state: queued
+        time_stamp: '2024-07-25 20:02:32.031680'
+        url_suffix: XXXOAL149KBM
+                  

@@ -1,0 +1,46 @@
+schema:
+  properties:
+    id:
+      type: integer
+      description: Unique identifier for the resource
+    name:
+      type: string
+      description: Name of the resource
+    company:
+      type: integer
+      description: ID of the company this resource belongs to
+    resource_type:
+      type: string
+      description: Type/category of the resource
+    user:
+      type: integer
+      description: ID of the user associated with the resource
+    time_efficiency:
+      type: number
+      format: float
+      description: Time efficiency metric for the resource
+    calendar:
+      type: integer
+      description: ID of the calendar linked to this resource
+    tz:
+      type: string
+      description: Timezone identifier for the resource
+    email:
+      type: string
+      format: email
+      description: Contact email for the resource
+    phone:
+      type: string
+      description: Contact phone for the resource
+
+example:
+  id: 10
+  name: "Default Resource"
+  company: 1
+  resource_type: "human"
+  user: 42
+  time_efficiency: 0.85
+  calendar: 7
+  tz: "UTC"
+  email: "user@example.com"
+  phone: "+1-555-555-5555"

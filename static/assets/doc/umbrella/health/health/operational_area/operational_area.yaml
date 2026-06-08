@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: operational area
+    description: operational area - operational area data management.
+paths:
+  '/health/operational-areas/search':
+    $ref: 'get_operational_area.yaml'
+  '/health/operational-areas':
+    $ref: 'post_delete_operational_area.yaml'
+  '/health/operational-areas/{obj_id}':
+    $ref: 'get_put_operational_area_by_id.yaml'
+  

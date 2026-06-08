@@ -1,0 +1,20 @@
+      properties:
+        gene: 
+            type: integer
+        name: 
+            type: string
+        phenotype: 
+            type: integer
+        rec_name: 
+            type: string
+        variant: 
+            type: integer
+        
+      required:
+          - 
+      example:
+        gene: 12188
+        name: VARPHEN1
+        phenotype: 41
+        rec_name: DI-00042:Adrenal hyperplasia 2
+        variant: 2

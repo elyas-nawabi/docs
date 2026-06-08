@@ -1,0 +1,61 @@
+/**
+ * Umbrella API Docs — custom theme.
+ * Colors match the umbrella-erp-docs Docusaurus project.
+ */
+
+:root {
+  --ifm-color-primary: #6d43f4;
+  --ifm-color-primary-dark: #5d39d0;
+  --ifm-color-primary-darker: #4f30ad;
+  --ifm-color-primary-darkest: #3e2588;
+  --ifm-color-primary-light: #8460f6;
+  --ifm-color-primary-lighter: #9e7ef8;
+  --ifm-color-primary-lightest: #b99cfa;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* API Explorer specific */
+  --api-sidebar-width: 300px;
+  --api-sidebar-bg: #f8f8fc;
+  --api-sidebar-border: #e8e0fc;
+  --api-header-height: 0px;
+  --api-item-hover: #ede8fd;
+  --api-item-active-bg: #6d43f4;
+  --api-item-active-color: #ffffff;
+  --api-auth-bg: #faf9ff;
+  --api-auth-border: #ddd6fe;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #9e7ef8;
+  --ifm-color-primary-dark: #8460f6;
+  --ifm-color-primary-darker: #6d43f4;
+  --ifm-color-primary-darkest: #5d39d0;
+  --ifm-color-primary-light: #b99cfa;
+  --ifm-color-primary-lighter: #cbb9fb;
+  --ifm-color-primary-lightest: #ddd6fd;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --api-sidebar-bg: #1a1625;
+  --api-sidebar-border: #2e2545;
+  --api-item-hover: #2e2545;
+  --api-item-active-bg: #6d43f4;
+  --api-item-active-color: #ffffff;
+  --api-auth-bg: #1a1625;
+  --api-auth-border: #2e2545;
+}
+
+/* Remove extra padding from main wrapper so the explorer fills the viewport */
+.main-wrapper {
+  padding: 0 !important;
+}
+
+/* Swagger UI color overrides */
+.swagger-ui .opblock.opblock-get .opblock-summary-method { background: #6d43f4; }
+.swagger-ui .opblock.opblock-post .opblock-summary-method { background: #22c55e; }
+.swagger-ui .opblock.opblock-put .opblock-summary-method { background: #f59e0b; }
+.swagger-ui .opblock.opblock-delete .opblock-summary-method { background: #ef4444; }
+.swagger-ui .opblock.opblock-patch .opblock-summary-method { background: #8b5cf6; }
+
+.swagger-ui .btn.authorize { border-color: #6d43f4; color: #6d43f4; }
+.swagger-ui .btn.authorize svg { fill: #6d43f4; }

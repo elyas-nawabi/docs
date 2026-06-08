@@ -1,0 +1,72 @@
+    get:
+      tags:
+        - email template
+      summary: Get email template details.
+      description: Get email template details.
+      operationId: getEmailTemplates
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: List of email templates.
+          content:
+            application/json:
+              schema:
+                type: array
+                properties:
+                  create_date: 
+                    type: string 
+                    format: date 
+                  create_uid: 
+                    type: integer
+                  create_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  id: 
+                    type: integer
+                  model: 
+                    type: integer
+                  model_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  name: 
+                    type: string
+                  rec_name: 
+                    type: string
+                  write_date:
+                    type: string
+                    format: date 
+                  write_uid:
+                    type: integer
+                  write_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              example:
+                - create_date: '2024-09-24T17:09:32.353542'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  id: 1
+                  model: 186
+                  model_:
+                    id: 186
+                    name: Account
+                  name: email_template
+                  rec_name: email_template
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    

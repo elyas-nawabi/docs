@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: pediatric symptoms checklist
+    description: pediatric symptoms checklist - pediatric symptoms checklist data management.
+paths:
+  '/health-pediatrics/psc/search':
+    $ref: 'get_pediatric_symptoms_checklist.yaml'
+  '/health-pediatrics/psc':
+    $ref: 'post_delete_pediatric_symptoms_checklist.yaml'
+  '/health-pediatrics/psc/{obj_id}':
+    $ref: 'get_put_pediatric_symptoms_checklist_by_id.yaml'
+  

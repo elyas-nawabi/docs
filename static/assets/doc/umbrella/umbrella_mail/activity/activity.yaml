@@ -1,0 +1,19 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: mail activity
+    description: mail activity - mail activity management.
+paths:
+  '/mail/activities/search':
+    $ref: 'post_search.yaml'
+  '/mail/activities':
+    $ref: 'post_delete.yaml'
+  '/mail/activities/{obj_id}':
+    $ref: 'get_put.yaml'
+  '/mail/activities/{obj_id}/done':
+    $ref: 'get_done.yaml'
+  '/mail/activities/{obj_id}/snooze':
+    $ref: 'get_snooze.yaml'
+  '/mail/activities/{obj_id}/cancel':
+    $ref: 'get_cancel.yaml' 

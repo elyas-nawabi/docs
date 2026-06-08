@@ -1,0 +1,376 @@
+      properties:
+        address_city: 
+          type: string
+        address_country: 
+          type: string
+        address_district: 
+          type: string
+        address_municipality: 
+          type: string
+        address_repr: 
+          type: string
+        address_street: 
+          type: string
+        address_street_bis: 
+          type: string
+        address_street_number: 
+          type: string
+        address_subdivision: 
+          type: string
+        address_zip: 
+          type: string
+        altitude: 
+          type: integer
+        bathrooms: 
+          type: integer
+        bedrooms: 
+          type: integer
+        desc:
+          type: string
+        dwelling: 
+          type: string
+        electricity: 
+          type: boolean
+        gas: 
+          type: boolean
+        housing: 
+          type: string
+        internet: 
+          type: boolean
+        latitude: 
+          type: string
+          format: decimal
+        longitude: 
+          type: string
+          format: decimal
+        materials: 
+          type: string
+        members:
+          type: array
+          properties:
+            account_payable: 
+              type: integer
+            account_receivable: 
+              type: integer
+            activation_date: 
+              type: string
+              format: date
+            active: 
+              type: boolean
+            addresses:
+              type: array
+              properties:
+                active: 
+                  type: boolean
+                city:   
+                  type: string
+                contact_mechanisms: 
+                  type: array
+                country: 
+                  type: string
+                invoice: 
+                  type: integer
+                is_school: 
+                  type: integer
+                is_work: 
+                  type: integer
+                name: 
+                  type: string
+                party: 
+                  type: integer
+                party_name: 
+                  type: string
+                postal_code: 
+                  type: string
+                rec_name: 
+                  type: string
+                relationship: 
+                  type: integer
+                relative_id: 
+                  type: integer
+                sequence: 
+                  type: string
+                street: 
+                  type: string
+                subdivision: 
+                  type: string
+            age: 
+              type: string
+            alternative_identification: 
+              type: boolean
+            alternative_ids: 
+              type: array
+            bank_accounts: 
+              type: array
+            birth_certificate: 
+              type: integer
+            categories: 
+              type: array
+            citizenship: 
+            code: 
+              type: string
+            contact_mechanisms: 
+              type: array
+            create_target: 
+              type: boolean
+            customer_payment_term: 
+              type: integer
+            customer_tax_rule: 
+              type: integer
+            death_certificate: 
+              type: integer
+            deceased: 
+              type: boolean
+            deposit: 
+              type: integer
+            dob: 
+              type: string
+              format: date
+            dod: 
+              type: string
+              format: date
+            du: 
+              type: integer
+            du_address: 
+              type: string
+            est_dob: 
+              type: boolean
+            est_years: 
+            ethnic_group: 
+              type: integer
+            father: 
+              type: integer
+            fed_country: 
+              type: string
+            federation_account: 
+              type: string
+            gender: 
+              type: string
+            insurance: 
+              type: array
+            insurance_company_type: 
+              type: string
+            internal_user: 
+              type: string
+            is_healthprof: 
+              type: boolean
+            is_institution: 
+              type: boolean
+            is_insurance_company: 
+              type: boolean
+            is_patient: 
+              type: boolean
+            is_person: 
+              type: boolean
+            is_pharmacy: 
+              type: boolean
+            lang: 
+              type: string
+            lastname: 
+              type: string
+            marital_status: 
+              type: string
+            mother:
+              type: integer
+            name: 
+              type: string
+            name_representation: 
+            payable: 
+              type: integer
+            payable_today: 
+              type: integer
+            person_names:
+              type: array
+              properties:
+                date_from: 
+                  type: string
+                  format: date
+                date_to: 
+                  type: string
+                  format: date
+                family: 
+                  type: string
+                given: 
+                  type: string
+                party: 
+                  type: integer
+                prefix: 
+                  type: string
+                rec_name: 
+                  type: string
+                suffix: 
+                  type: string
+                use: 
+                  type: string
+            photo: 
+              type: string
+            rec_name: 
+              type: string
+            receivable: 
+              type: integer
+            receivable_today: 
+              type: integer
+            ref: 
+              type: string
+            residence: 
+              type: integer
+            supplier_payment_term: 
+              type: integer
+            supplier_tax_rule: 
+              type: integer
+            tax_identifier: 
+              type: integer
+            unidentified: 
+              type: boolean
+        name: 
+          type: string
+        operational_sector: 
+          type: integer
+        picture: 
+          type: string
+        rec_name: 
+          type: string
+        roof_type: 
+          type: string
+        sewers: 
+          type: boolean
+        telephone: 
+          type: boolean
+        television: 
+          type: boolean
+        total_surface: 
+          type: integer
+        trash: 
+          type: boolean
+        urladdr: 
+          type: string
+        water: 
+          type: boolean
+  
+      required:
+          - 
+      example:
+        address_city: kabul
+        address_country: 
+        address_district: '11'
+        address_municipality: kabul
+        address_repr: "kabul 1, 1, \n11, kabul, kabul,  - 1008, "
+        address_street: kabul
+        address_street_bis: '1'
+        address_street_number: '1'
+        address_subdivision: 
+        address_zip: '1008'
+        altitude: 2
+        bathrooms: 1
+        bedrooms: 1
+        desc: test data
+        dwelling: apartment
+        electricity: true
+        gas: false
+        housing: '0'
+        internet: false
+        latitude: 111.111
+        longitude: 111.111
+        materials: concrete
+        members:
+        - account_payable: 
+            account_receivable: 
+            activation_date: '2024-07-25'
+            active: true
+            addresses:
+              - active: true
+                city: ''
+                contact_mechanisms: []
+                country: 
+                id: 40
+                invoice: false
+                is_school: false
+                is_work: false
+                name: ''
+                party: 39
+                party_name: ''
+                postal_code: ''
+                rec_name: ahmad
+                relationship: 
+                relative_id: 
+                sequence: 
+                street: ''
+                subdivision: 
+                age: 23​y ​0​m ​1​d​
+            alternative_identification: true
+            alternative_ids: []
+            bank_accounts: []
+            birth_certificate: 1
+            categories: []
+            citizenship: 
+            code: f53caac8-7258-4b1e-85b9-c9ffc9f38ac4-Milestone
+            contact_mechanisms: []
+            create_date: '2024-07-25T20:02:32.031680'
+            create_target: true
+            create_uid: 1
+            customer_payment_term: 
+            customer_tax_rule: 
+            death_certificate: 
+            deceased: false
+            deposit: 0
+            dob: '2001-07-25'
+            dod: 
+            du: 1
+            du_address: "kabul 1, 1, \n11, kabul, kabul,  - 1008, "
+            est_dob: true
+            est_years: 
+            ethnic_group: 
+            father: 41
+            fed_country: ''
+            federation_account: XXXOAL149KBM
+            gender: m
+            id: 39
+            insurance: []
+            insurance_company_type: 
+            internal_user: 
+            is_healthprof: false
+            is_institution: false
+            is_insurance_company: false
+            is_patient: true
+            is_person: true
+            is_pharmacy: false
+            lang: 
+            lastname: test
+            marital_status: s
+            mother: 40
+            name: ahmad
+            name_representation: 
+            payable: 0
+            payable_today: 0
+            person_names:
+             -  date_from: 
+                date_to: 
+                family: test
+                given: ahmad
+                party: 39
+                prefix: 
+                rec_name: '33'
+                suffix: 
+                use: official
+            photo: 
+            rec_name: test, ahmad
+            receivable: 0
+            receivable_today: 0
+            ref: '1'
+            residence: 1
+            supplier_payment_term: 
+            supplier_tax_rule: 
+            tax_identifier: 
+            unidentified: true
+        name: '111'
+        operational_sector: 
+        picture: 
+        rec_name: '111'
+        roof_type: wood
+        sewers: true
+        telephone: false
+        television: false
+        total_surface: 1
+        trash: false
+        urladdr: http://openstreetmap.org/?mlat=111.111&mlon=111.111
+        water: false

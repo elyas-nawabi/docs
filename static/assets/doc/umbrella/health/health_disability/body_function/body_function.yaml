@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: body function
+    description: body function - body function data management.
+paths:
+  '/health-disability/body-functions/search':
+    $ref: 'get_body_function.yaml'
+  '/health-disability/body-functions':
+    $ref: 'post_delete_body_function.yaml'
+  '/health-disability/body-functions/{obj_id}':
+    $ref: 'get_put_body_function_by_id.yaml'
+  

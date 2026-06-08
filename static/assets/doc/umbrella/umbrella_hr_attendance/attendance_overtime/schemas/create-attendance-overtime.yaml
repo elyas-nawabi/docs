@@ -1,0 +1,25 @@
+schema:
+  properties:
+    employee:
+      type: integer
+      description: Employee ID.
+    company:
+      type: integer
+      description: Company ID.
+    date:
+      type: string
+      format: date
+    duration:
+      type: number
+    duration_real:
+      type: number
+    adjustment:
+      type: boolean
+
+example:
+  employee: 5
+  company: 1
+  date: '2026-03-10'
+  duration: 2
+  duration_real: 2
+  adjustment: false

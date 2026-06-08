@@ -1,0 +1,93 @@
+post:
+  tags:
+    - move template
+  summary: Search move templates.
+  description: |
+    Search company-specific journal entry templates (`account.move.template`).
+
+    Filter by `company` to narrow results to one company. Results include `keywords` and `lines` in the list view
+    (as arrays of ids), and the full nested structure in the detail view.
+  operationId: searchMoveTemplates
+  requestBody:
+    description: Optional filter criteria; send `{}` to list all move templates visible to the current user.
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    rec_name:
+                      type: string
+                    name:
+                      type: string
+                    company:
+                      type: integer
+                    journal:
+                      type: integer
+                    active:
+                      type: boolean
+              errors:
+                type: object
+                nullable: true
+              pagination:
+                type: object
+                properties:
+                  page:
+                    type: integer
+                  per_page:
+                    type: integer
+                  total_pages:
+                    type: integer
+                  total_records:
+                    type: integer
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - id: 1
+                rec_name: Monthly Rent Expense
+                name: Monthly Rent Expense
+                company: 1
+                journal: 3
+                active: true
+              - id: 2
+                rec_name: Payroll Accrual
+                name: Payroll Accrual
+                company: 1
+                journal: 3
+                active: true
+            errors: null
+            pagination:
+              page: 1
+              per_page: 100
+              total_pages: 1
+              total_records: 2
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

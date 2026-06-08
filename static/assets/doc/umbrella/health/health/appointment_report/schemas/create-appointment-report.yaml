@@ -1,0 +1,38 @@
+      properties:
+        ref: 
+          type: string
+        patient: 
+          type: integer
+        healthprof: 
+          type: integer
+        age: 
+          type: integer
+        gender: 
+          type: string
+        address: 
+          type: string
+        insurance: 
+          type: string
+        date_end: 
+          type: string
+          format: date
+        date_start: 
+          type: string
+          format: date
+        diagnosis: 
+          type: integer
+        
+      required:
+          - date_end
+          - date_start
+      example:
+        ref: 
+        patient: 1
+        healthprof: 1
+        age: 20
+        gender: male
+        address: kabul
+        insurance: 
+        date_end: '2024-02-02'
+        date_start: '2024-01-02'
+        diagnosis: 1

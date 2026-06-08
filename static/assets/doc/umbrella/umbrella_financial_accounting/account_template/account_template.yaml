@@ -1,0 +1,22 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: account template
+    description: |
+      Global chart-of-accounts blueprints (`account.account.template`). Templates are not tied to a company;
+      they define the default account tree (code, name, type, flags) installed by accounting modules.
+
+      **Typical flow**
+      1. `POST /account-templates/search` — list root chart templates (each row includes a nested `childs` tree).
+      2. `GET /account-templates/{obj_id}` — inspect one template node (root or child).
+      3. Apply a chart to a company with `POST /accounts/create-coa-from-template` (see **Account** docs), passing `account_template` (root template id) and `company`.
+
+      Search is restricted to **root templates** (`parent` is null). Child nodes are returned inside `childs` on search/get responses, not via a separate `/childs` route.
+paths:
+  '/financial-accounting/account-templates/search':
+    $ref: 'get_account_template.yaml'
+  '/financial-accounting/account-templates':
+    $ref: 'post_delete_account_template.yaml'
+  '/financial-accounting/account-templates/{obj_id}':
+    $ref: 'get_put_account_template_by_id.yaml'

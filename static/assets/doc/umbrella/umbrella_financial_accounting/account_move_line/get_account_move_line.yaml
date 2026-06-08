@@ -1,0 +1,58 @@
+    post:
+      tags:
+        - account move line
+      summary: Create an account move line.
+      description: Create an account move line.
+      operationId: postAccountMoveLineById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: 'schemas/create-account-move-line.yaml'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data: 
+                      type: array
+                      properties:
+                        
+                    errors:
+                      type: object
+                    pagination:
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data: []
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+   

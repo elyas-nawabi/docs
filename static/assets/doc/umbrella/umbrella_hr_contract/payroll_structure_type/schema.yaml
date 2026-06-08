@@ -1,0 +1,62 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        country: 
+          type: integer
+        country_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        country_code: 
+          type: string
+        id: 
+          type: integer
+        name: 
+          type: string
+        rec_name: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      country: 1
+      country_:
+        id: 1
+        name: Oman
+      country_code: ''
+      create_date: '2025-03-16T10:30:12.020342'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      id: 1
+      name: NTA Grade A
+      rec_name: NTA Grade A
+      write_date: 
+      write_uid:
+    error: null
+    pagination: null
+    status: 201
+    success_message: null

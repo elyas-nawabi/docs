@@ -1,0 +1,14 @@
+      properties:
+        desc: 
+            type: string
+        name: 
+            type: string
+        rec_name: 
+            type: string
+  
+      required:
+          - 
+      example:
+        desc: milliliter
+        name: mL
+        rec_name: mL

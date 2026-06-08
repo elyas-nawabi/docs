@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: patient prothesis
+    description: patient prothesis - patient prothesis data management.
+paths:
+  '/health-disability/protheses/search':
+    $ref: 'get_patient_prothesis.yaml'
+  '/health-disability/protheses':
+    $ref: 'post_delete_patient_prothesis.yaml'
+  '/health-disability/protheses/{obj_id}':
+    $ref: 'get_put_patient_prothesis_by_id.yaml'
+  

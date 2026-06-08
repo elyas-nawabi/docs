@@ -1,0 +1,149 @@
+      properties:
+        assigned_by: 
+          type: integer
+        company: 
+          type: integer
+        delay: 
+          type: integer
+        delivery_address: 
+          type: integer
+        done_by: 
+          type: integer
+        effective_date: 
+          type: string
+          format: date
+        from_location: 
+          type: integer
+        moves:
+          type: array
+          properties:
+            assignation_required: 
+              type: boolean
+            company: 
+              type: integer
+            cost_price: 
+              type: number
+              format: decimal
+            cost_price_required: 
+              type: boolean
+            currency: 
+              type: integer
+            delay:
+              type: string
+              format: duration
+            effective_date: 
+              type: string
+              format: date
+            from_location: 
+              type: integer
+            internal_quantity: 
+              type: integer
+            lot: 
+              type: integer
+            origin: 
+              type: string
+            origin_planned_date: 
+              type: string
+              format: date
+            planned_date: 
+              type: string
+              format: date
+            product: 
+              type: integer
+            product_cost_price: 
+              type: number
+              format: decimal
+            product_uom_category: 
+              type: integer
+            quantity:   
+              type: integer
+            rec_name: 
+              type: string
+            shipment: 
+              type: string
+            state: 
+              type: string
+            to_location:  
+              type: integer
+            unit: 
+              type: integer
+            unit_price: 
+              type: integer
+            unit_price_company: 
+              type: integer
+            unit_price_required: 
+              type: boolean
+            unit_price_updated: 
+              type: boolean
+            
+        number: 
+          type: string
+        origin_planned_date: 
+        origins: 
+          type: string
+        partially_assigned: 
+          type: boolean
+        planned_date: 
+          type: string
+          format: date
+        rec_name: 
+          type: string
+        reference: 
+          type: string
+        state: 
+          type: string
+        supplier: 
+          type: integer
+        to_location: 
+          type: integer
+        warehouse: 
+          type: integer
+  
+      required:
+          - 
+      example:
+        assigned_by: 
+        company: 1
+        delay: 1382400
+        delivery_address: 1
+        done_by: 
+        effective_date: '2024-08-26'
+        from_location: 8
+        moves:
+          - assignation_required: true
+            company: 1
+            cost_price: 
+            cost_price_required: true
+            currency: 1
+            delay: '0:00:00'
+            effective_date: 
+            from_location: 8
+            internal_quantity: 2
+            lot: 2
+            origin: gnuhealth.patient.ambulatory_care,1
+            origin_planned_date: 
+            planned_date: '2024-08-10'
+            product: 147
+            product_cost_price: 
+            product_uom_category: 1
+            quantity: 2
+            rec_name: 2 u abacavir (ABC)
+            shipment: stock.shipment.in.return,1
+            state: draft
+            to_location: 6
+            unit: 1
+            unit_price: 3000
+            unit_price_company: 3000
+            unit_price_required: true
+            unit_price_updated: true
+        number: '1'
+        origin_planned_date: 
+        origins: AC 2024/001
+        partially_assigned: false
+        planned_date: '2024-08-10'
+        rec_name: '1'
+        reference: ''
+        state: draft
+        supplier: 1
+        to_location: 6
+        warehouse:

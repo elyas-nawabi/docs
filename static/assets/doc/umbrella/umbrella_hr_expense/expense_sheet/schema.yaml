@@ -1,0 +1,229 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        state:
+          type: string
+        company:
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        employee:
+          type: integer
+        employee_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        department:
+          type: integer
+        department_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        user:
+          type: integer
+        user_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        total_amount:
+          type: number
+        currency:
+          type: integer
+        currency_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        payment_state:
+          type: string
+        accounting_date:
+          type: string
+          format: date
+        journal:
+          type: integer
+        journal_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        is_editable:
+          type: boolean
+        expense_lines:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
+              date:
+                type: string
+                format: date
+              employee:
+                type: integer
+              company:
+                type: integer
+              product:
+                type: integer
+              product_uom:
+                type: integer
+              quantity:
+                type: number
+              description:
+                type: string
+              state:
+                type: string
+              sheet:
+                type: integer
+              tax_amount:
+                type: number
+              total_amount:
+                type: number
+              price_unit:
+                type: number
+              payment_mode:
+                type: string
+              vendor:
+                type: integer
+              account:
+                type: integer
+              taxes:
+                type: array
+                items:
+                  $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+              accounting_date:
+                type: string
+                format: date
+              is_editable:
+                type: boolean
+        nb_expense:
+          type: integer
+        approval_state:
+          type: string
+        approval_date:
+          type: string
+          format: date-time
+        untaxed_amount:
+          type: number
+        total_tax_amount:
+          type: number
+        amount_residual:
+          type: number
+        payment_mode:
+          type: string
+        employee_journal:
+          type: integer
+        account_moves:
+          type: array
+          items:
+            type: integer
+        nb_account_move:
+          type: integer
+        can_reset:
+          type: boolean
+        can_approve:
+          type: boolean
+        cannot_approve_reason:
+          type: string
+        create_date:
+          type: string
+          format: date-time
+        create_uid:
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date-time
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      id: 1
+      name: EXP/2026/0001
+      state: draft
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      employee: 10
+      employee_:
+        id: 10
+        name: John Doe
+      department: 3
+      department_:
+        id: 3
+        name: Finance
+      user: 1
+      user_:
+        id: 1
+        name: Administrator
+      total_amount: 125.5
+      currency: 1
+      currency_:
+        id: 1
+        name: USD
+      payment_state: pending
+      accounting_date: '2026-01-10'
+      journal: 2
+      journal_:
+        id: 2
+        name: Expenses Journal
+      is_editable: true
+      expense_lines:
+        - id: 100
+          name: Taxi
+          date: '2026-01-10'
+          employee: 10
+          company: 1
+          product: 55
+          product_uom: 1
+          quantity: 1
+          description: Airport to office
+          state: draft
+          sheet: 1
+          tax_amount: 5
+          total_amount: 25
+          price_unit: 25
+          payment_mode: company
+          vendor: 200
+          account: 330
+          taxes:
+            - id: 1
+              name: VAT 20%
+          accounting_date: '2026-01-10'
+          is_editable: true
+      nb_expense: 1
+      approval_state: to_approve
+      approval_date: null
+      untaxed_amount: 120.5
+      total_tax_amount: 5
+      amount_residual: 125.5
+      payment_mode: company
+      employee_journal: 2
+      account_moves: []
+      nb_account_move: 0
+      can_reset: true
+      can_approve: true
+      cannot_approve_reason: null
+      create_date: '2026-01-10T09:58:27.122989'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      write_date: null
+      write_uid: null
+      write_uid_: null
+    errors: null
+    pagination: null
+    status: 200
+    success_message: null

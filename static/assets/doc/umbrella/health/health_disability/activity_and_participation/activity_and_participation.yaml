@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: activity and participation
+    description: activity and participation - activity and participation data management.
+paths:
+  '/health-disability/activities-and-participation/search':
+    $ref: 'get_activity_and_participation.yaml'
+  '/health-disability/activities-and-participation':
+    $ref: 'post_delete_activity_and_participation.yaml'
+  '/health-disability/activities-and-participation/{obj_id}':
+    $ref: 'get_put_activity_and_participation_by_id.yaml'
+  

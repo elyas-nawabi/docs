@@ -1,0 +1,91 @@
+      properties:
+            active:
+               type: boolean
+            amount: 
+               type: number
+               format: float
+            childs:
+               type: array
+            company:
+               type: integer
+            credit_base_amount: 
+               type: integer
+            credit_note_account:
+               type: integer
+            credit_tax_amount:
+               type: number
+               format: float
+            currency:
+               type: integer
+            description:
+               type: string
+            end_date:
+               type: string
+            group: 
+               type: integer
+            id:
+               type: integer
+            invoice_account:
+               type: integer
+            invoice_base_amount:
+               type: number
+               format: float
+            invoice_tax_amount:
+               type: number
+               format: float
+            legal_notice: 
+               type: string
+            name:
+               type: string
+            parent: 
+               type: integer
+            rate:
+               type: number
+               format: float
+            rec_name:
+               type: string
+            sequence:
+               type: integer
+            start_date: 
+               type: string
+               format: date
+            template: 
+              type: integer
+            template_override:
+              type: boolean
+            type: 
+              type: string
+            update_unit_price:
+              type: boolean
+      required:
+        - company
+        - credit_note_account
+        - invoice_account
+        - name
+        - type
+      example:
+            active: true
+            amount: null
+            childs: []
+            company: 1
+            credit_base_amount: 0
+            credit_note_account: 31
+            credit_tax_amount: 0
+            currency: 1
+            description: no desc
+            end_date: '2024-03-31'
+            group: 20
+            invoice_account: 30
+            invoice_base_amount: 0
+            invoice_tax_amount: 0
+            legal_notice: some legal notice
+            name: tx1
+            parent: null
+            rate: 0.01
+            rec_name: tx1
+            sequence: 1
+            start_date: '2024-03-03'
+            template: null
+            template_override: false
+            type: percentage
+            update_unit_price: true

@@ -1,0 +1,122 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        currency_exchange_credit_account:
+          type: integer
+        currency_exchange_credit_account_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        currency_exchange_debit_account: 
+          type: integer
+        currency_exchange_debit_account_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        currency_exchange_journal: 
+          type: integer 
+        currency_exchange_journal_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType' 
+        default_account_payable: 
+          type: integer
+        default_account_payable_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        default_account_receivable: 
+          type: integer
+        default_account_receivable_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        default_customer_payment_term: 
+          type: integer
+        default_customer_payment_term_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        default_customer_tax_rule:
+          type: integer
+        default_customer_tax_rule_: 
+          type: object
+        default_supplier_tax_rule:
+          type: integer
+        default_supplier_tax_rule_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        payment_group_sequence: 
+          type: integer
+        payment_group_sequence_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name:
+          type: string
+        reconciliation_sequence: 
+          type: integer
+        reconciliation_sequence_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        tax_rounding:
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      create_date: '2024-04-18T04:45:21.629821'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      currency_exchange_credit_account: null
+      currency_exchange_credit_account_: {}
+      currency_exchange_debit_account: null
+      currency_exchange_debit_account_: {}
+      currency_exchange_journal: 6
+      currency_exchange_journal_:
+        id: 6
+        name: Currency Exchange
+      default_account_payable: 4
+      default_account_payable_:
+        id: 4
+        name: Main Payable
+      default_account_receivable: 5
+      default_account_receivable_:
+        id: 5
+        name: Main Receivable
+      default_customer_payment_term: 
+      default_customer_payment_term_: {}
+      default_customer_tax_rule: null
+      default_customer_tax_rule_: {}
+      default_supplier_tax_rule: null
+      default_supplier_tax_rule_: {}
+      id: 1
+      payment_group_sequence: 25
+      payment_group_sequence_:
+        id: 25
+        name: Default Account Payment Group
+      rec_name: '1'
+      reconciliation_sequence: 3
+      reconciliation_sequence_:
+        id: 3
+        name: Default Account Move Reconciliation
+      tax_rounding: document
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

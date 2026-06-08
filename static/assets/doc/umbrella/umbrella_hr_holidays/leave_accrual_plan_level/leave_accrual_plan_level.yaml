@@ -1,0 +1,14 @@
+﻿openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: accrual level
+    description: hr holiday - leave accrual levels management.
+paths:
+  '/hr-holidays/accrual-levels/search':
+    $ref: 'get_leave_accrual_plan_level.yaml'
+  '/hr-holidays/accrual-levels':
+    $ref: 'post_delete_leave_accrual_plan_level.yaml'
+  '/hr-holidays/accrual-levels/{obj_id}':
+    $ref: 'get_put_leave_accrual_plan_level_by_id.yaml'
+

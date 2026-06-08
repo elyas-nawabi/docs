@@ -1,0 +1,68 @@
+schema:
+  properties:
+    data:
+      type: array
+      description: Array of export configurations or exported data
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+            description: Export configuration ID
+          name:
+            type: string
+            description: Name of the export configuration
+          header:
+            type: boolean
+            description: Whether to include headers in export
+          records:
+            type: array
+            description: Records to export
+          export_fields:
+            type: array
+            items:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Field name to export
+    errors:
+      type: object
+      nullable: true
+      description: Error information if any
+    pagination:
+      type: object
+      nullable: true
+      description: Pagination information
+    status:
+      type: integer
+      description: HTTP status code
+    success_message:
+      type: string
+      nullable: true
+      description: Success message if applicable
+
+example:
+  data:
+    - id: 1
+      name: "Invoice Export Configuration"
+      header: true
+      records: []
+      export_fields:
+        - name: "number"
+        - name: "party.name"
+        - name: "invoice_date"
+        - name: "total_amount"
+    - id: 2
+      name: "Product Export Configuration"
+      header: true
+      records: []
+      export_fields:
+        - name: "code"
+        - name: "name"
+        - name: "list_price"
+        - name: "cost_price"
+  errors: null
+  pagination: null
+  status: 200
+  success_message: null

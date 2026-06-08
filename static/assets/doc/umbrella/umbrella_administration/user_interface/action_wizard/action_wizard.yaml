@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: action wizard
+    description: action wizard - action wizard data management.
+paths:
+  '/administration/wizards/search':
+    $ref: 'get_action_wizard.yaml'
+  '/administration/wizards':
+    $ref: 'post_delete_action_wizard.yaml'
+  '/administration/wizards/{obj_id}':
+    $ref: 'get_put_action_wizard_by_id.yaml'
+
+    
+  

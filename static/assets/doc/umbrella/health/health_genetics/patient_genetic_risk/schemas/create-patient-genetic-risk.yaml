@@ -1,0 +1,32 @@
+      properties:
+        disease_gene: 
+          type: integer
+        healthprof: 
+          type: integer
+        institution: 
+          type: integer
+        natural_variant: 
+          type: integer
+        notes: 
+          type: string
+        onset: 
+          type: integer
+        patient: 
+          type: integer
+        rec_name: 
+          type: string
+        variant_phenotype: 
+          type: integer
+        
+      required:
+          - 
+      example:
+        disease_gene: 41
+        healthprof: 1
+        institution: 1
+        natural_variant: 81160
+        notes: some notes
+        onset: 1
+        patient: 4
+        rec_name: '21'
+        variant_phenotype: 39739

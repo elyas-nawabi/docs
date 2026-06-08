@@ -1,0 +1,86 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        active: 
+          type: boolean
+        default_uom: 
+          type: integer
+        default_uom_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        expiration_date: 
+          type: string 
+          format: date
+        forecast_quantity: 
+          type: integer
+        has_sequence: 
+          type: boolean
+        id: 
+          type: integer
+        number: 
+          type: string
+        product: 
+          type: integer
+        product_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        quantity: 
+          type: integer
+        rec_name: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      active: true
+      create_date: '2024-08-09T15:06:39.383193'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      default_uom: 1
+      default_uom_:
+        id: 1
+        name: Unit
+      expiration_date: 
+      forecast_quantity: 0
+      has_sequence: false
+      id: 1
+      number: '1'
+      product: 146
+      product_:
+        id: 146
+        name: aciclovir
+      quantity: 0
+      rec_name: '1'
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

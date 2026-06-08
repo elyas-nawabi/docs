@@ -1,0 +1,34 @@
+      properties:
+        context:
+          type: object
+          properties:
+            company:
+              type: integer
+            end_period: 
+              type: integer
+            fiscalyear: 
+              type: integer
+            method:
+              type: string
+            period: 
+              type: integer
+            periods:
+              type: array
+            start_period: 
+              type: integer
+
+      required:
+        - context
+        - company
+        - method
+        - period
+        
+      example:
+        context:
+          company: 1
+          end_period: 2
+          fiscalyear: 2
+          method: period
+          period: 2
+          periods: []
+          start_period: 2

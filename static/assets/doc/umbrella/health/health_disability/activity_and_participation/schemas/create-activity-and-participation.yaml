@@ -1,0 +1,18 @@
+      properties:
+        category: 
+            type: integer
+        code: 
+            type: string
+        name: 
+            type: string
+        rec_name: 
+            type: string
+        
+      required:
+          - 
+      example:
+        category: 1
+        code: d110
+        create_uid: 0
+        name: Watching
+        rec_name: Watching

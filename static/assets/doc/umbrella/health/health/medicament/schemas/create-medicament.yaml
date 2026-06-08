@@ -1,0 +1,86 @@
+      properties:
+        active: 
+          type: boolean
+        active_component: 
+          type: string
+        adverse_reaction: 
+          type: string
+        category:   
+          type: integer
+        composition: 
+          type: string
+        dosage: 
+          type: string
+        form: 
+          type: integer
+        indications: 
+          type: string
+        is_vaccine:   
+          type: boolean
+        name: 
+          type: integer
+        notes: 
+          type: string
+        overdosage: 
+          type: string
+        pregnancy:
+          type: string 
+        pregnancy_category: 
+          type: string
+        pregnancy_warning: 
+          type: boolean
+        presentation: 
+          type: string
+        rec_name: 
+          type: string
+        route: 
+          type: string
+        sol_conc: 
+          type: string
+          format: decimal
+        sol_conc_unit: 
+          type: integer
+        sol_vol: 
+          type: string
+          format: decimal
+        sol_vol_unit: 
+          type: integer
+        storage: 
+          type: string
+        strength:
+          type: string
+          format: decimal 
+        therapeutic_action:
+          type: string 
+        unit: 
+          type: integer
+  
+      required:
+          - 
+      example:
+        active: true
+        active_component: halothane
+        adverse_reaction: 
+        category: 5
+        composition: 
+        dosage: 
+        form: 
+        indications: 
+        is_vaccine: false
+        name: 16
+        notes: Inhalation
+        overdosage: 
+        pregnancy: 
+        pregnancy_category: C
+        pregnancy_warning: true
+        presentation: 
+        rec_name: halothane
+        route: 
+        sol_conc: 
+        sol_conc_unit: 
+        sol_vol: 
+        sol_vol_unit: 
+        storage: 
+        strength: 
+        therapeutic_action: 
+        unit:

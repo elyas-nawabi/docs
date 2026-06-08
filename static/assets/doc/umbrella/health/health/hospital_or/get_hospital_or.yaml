@@ -1,0 +1,132 @@
+    post:
+      tags:
+        - operating room
+      summary: Get operating room details.
+      description: Get operating room details.
+      operationId: getOperatingRooms
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of operating rooms.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        building:   
+                          type: integer
+                        building_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        extra_info: 
+                          type: string
+                        id: 
+                          type: integer
+                        institution: 
+                          type: integer
+                        institution_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        
+                        name: 
+                          type: string
+                        rec_name: 
+                          type: string
+                        state:  
+                          type: string
+                        timeslot: 
+                          type: integer
+                        unit:   
+                          type: integer
+                        unit_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - building: 1
+                    building_:
+                      id: 1
+                      name: new_building
+                    create_date: '2024-07-27T05:35:02.235436'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    extra_info: put your comments or extra information here.
+                    id: 1
+                    institution: 1
+                    institution_:
+                      id: 1
+                      name: Milestone
+                    name: operating_room_1
+                    rec_name: operating_room_1
+                    state: free
+                    timeslot: 60
+                    unit: 1
+                    unit_:
+                      id: 1
+                      name: emergency
+                    write_date: 
+                    write_uid: 
+                    write_uid_: {}
+
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

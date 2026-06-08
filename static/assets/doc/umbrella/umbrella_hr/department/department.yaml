@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: department
+    description: department - department data management.
+paths:
+  '/hr/departments/search':
+    $ref: 'get_department.yaml'
+  '/hr/departments':
+    $ref: 'post_delete_department.yaml'
+  '/hr/departments/{obj_id}':
+    $ref: 'get_put_department_by_id.yaml'
+  

@@ -1,0 +1,174 @@
+get:
+  tags:
+    - account-tags
+  summary: Get account tag by ID.
+  description: Retrieve a specific account tag by its ID.
+  operationId: getAccountTagById
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+      example: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+              type: object
+              properties:
+                data:
+                  $ref: 'schemas/account_tag.yaml#/AccountTag'
+                errors:
+                  type: object
+                  nullable: true
+                pagination:
+                  type: object
+                  nullable: true
+                status:
+                  type: integer
+                success_message:
+                  type: string
+                  nullable: true
+          example:
+            data:
+              id: 1
+              name: Non-Cash Expense
+              sequence: 1
+              is_non_cash_expense: true
+              is_operating_asset: false
+              is_operating_liability: false
+              is_investing: false
+              is_financing: false
+              is_revenue: false
+              is_expense: false
+              create_date: '2024-01-15T10:30:00'
+              create_uid: 1
+              create_uid_:
+                id: 1
+                name: Administrator
+              write_date: null
+              write_uid: null
+              write_uid_: {}
+            errors: null
+            pagination: null
+            status: 200
+            success_message: null
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    '404':
+      description: 404 Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+
+put:
+  tags:
+    - account-tags
+  summary: Update account tag by ID.
+  description: Update an existing account tag.
+  operationId: updateAccountTagById
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+      example: 1
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/account_tag.yaml#/AccountTagInput'
+        example:
+          name: Non-Cash Expense (Updated)
+          sequence: 1
+          is_non_cash_expense: true
+          is_operating_asset: false
+          is_operating_liability: false
+          is_investing: false
+          is_financing: false
+          is_revenue: false
+          is_expense: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+              type: object
+              properties:
+                data:
+                  $ref: 'schemas/account_tag.yaml#/AccountTag'
+                errors:
+                  type: object
+                  nullable: true
+                pagination:
+                  type: object
+                  nullable: true
+                status:
+                  type: integer
+                success_message:
+                  type: string
+                  nullable: true
+          example:
+            data:
+              id: 1
+              name: Non-Cash Expense (Updated)
+              sequence: 1
+              is_non_cash_expense: true
+              is_operating_asset: false
+              is_operating_liability: false
+              is_investing: false
+              is_financing: false
+              is_revenue: false
+              is_expense: true
+              create_date: '2024-01-15T10:30:00'
+              create_uid: 1
+              create_uid_:
+                id: 1
+                name: Administrator
+              write_date: '2024-01-20T15:45:00'
+              write_uid: 1
+              write_uid_:
+                id: 1
+                name: Administrator
+            errors: null
+            pagination: null
+            status: 200
+            success_message: Account tag updated successfully
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP400'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    '404':
+      description: 404 Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+

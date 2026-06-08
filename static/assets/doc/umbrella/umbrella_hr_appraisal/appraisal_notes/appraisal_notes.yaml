@@ -1,0 +1,15 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: appraisal_notes
+    description: |
+      Rating / assessment note templates (`hr.appraisal.note`) used as **Final Rating** on appraisals.
+      CRUD under `/hr-appraisal/appraisal-notes` (same module prefix as appraisals).
+paths:
+  '/hr-appraisal/appraisal-notes/search':
+    $ref: 'get_appraisal_notes.yaml'
+  '/hr-appraisal/appraisal-notes':
+    $ref: 'post_delete_appraisal_notes.yaml'
+  '/hr-appraisal/appraisal-notes/{obj_id}':
+    $ref: 'get_put_appraisal_notes_by_id.yaml'

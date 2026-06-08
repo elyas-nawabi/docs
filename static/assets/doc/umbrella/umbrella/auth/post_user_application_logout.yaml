@@ -1,0 +1,43 @@
+post:
+  tags:
+    - auth
+  summary: Logout an application user.
+  description: Logout an application user.
+  operationId: postLogout
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/create-logout.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                nullable: true
+              errors:
+                nullable: true
+              pagination:
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+          example:
+            data: null
+            errors: null
+            pagination: null
+            status: 200
+            success_message: Logged out successfully
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP403'
+  

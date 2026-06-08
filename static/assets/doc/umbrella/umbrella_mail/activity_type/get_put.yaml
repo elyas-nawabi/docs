@@ -1,0 +1,142 @@
+get:
+  tags:
+    - mail activity type
+  summary: Get a mail activity type
+  description: Get one Mail Activity Type by ID
+  operationId: getMailActivityType
+  parameters:
+    - name: obj_id
+      required: true
+      in: path
+      description: The ID of the mail activity type to retrieve
+      schema:
+        type: integer
+      example: 123
+  responses:
+    '200':
+      description: Mail activity type details
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: 'schema.yaml#/schema'
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              id: 123
+              name: "Phone Call"
+              summary: "Make a phone call"
+              delay_label: "2 days"
+              delay_from: "previous_activity"
+              res_model: "res.partner"
+              icon: "phone"
+              sequence: 1
+              delay_count: 2
+              delay_unit: "days"
+              decoration_type: "info"
+              triggered_next_type: null
+              chaining_type: "suggest"
+              suggested_next_types: []
+              previous_types: []
+              category: "phone"
+              default_user: 1
+              default_note: "Call the customer"
+              keep_done: true
+              initial_res_model: "res.partner"
+              res_model_change: false
+            errors: null
+            status: 200
+            success_message: null
+    '404':
+      description: Mail activity type not found
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+put:
+  tags:
+    - mail activity type
+  summary: Update a mail activity type
+  description: Update an existing mail activity type
+  operationId: updateMailActivityType
+  parameters:
+    - name: obj_id
+      required: true
+      in: path
+      description: The ID of the mail activity type to update
+      schema:
+        type: integer
+      example: 123
+  requestBody:
+    required: true
+    description: Updated mail activity type data
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/mail-activity-type-upsert-schema.yaml'
+  responses:
+    '200':
+      description: Mail activity type updated successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                nullable: true
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data: null
+            errors: null
+            status: 200
+            success_message: "Mail activity type updated successfully"
+    '400':
+      description: Bad Request - Invalid input data
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP400'
+    '404':
+      description: Mail activity type not found
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401' 

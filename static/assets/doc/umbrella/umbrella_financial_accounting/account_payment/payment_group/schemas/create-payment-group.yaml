@@ -1,0 +1,39 @@
+properties:
+  company: 
+    type: integer
+  currency: 
+    type: integer
+  journal: 
+    type: integer
+  kind: 
+    type: string
+  number: 
+    type: string
+  payment_amount: 
+    type: number
+    format: decimal
+  payment_amount_succeeded: 
+    type: number
+    format: decimal
+  payment_complete: 
+    type: boolean
+  payment_count: 
+    type: integer
+  process_method: 
+    type: string
+  rec_name: 
+    type: string
+required:
+
+example:
+  company: 1
+  currency: 1
+  journal: 2
+  kind: receivable
+  number: '1'
+  payment_amount: 
+  payment_amount_succeeded: 
+  payment_complete: 
+  payment_count: 
+  process_method: manual
+  rec_name: '1'

@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: recreational drugs
+    description: recreational drugs - recreational drugs data management.
+paths:
+  '/health-lifestyle/recreational-drugs/search':
+    $ref: 'get_recreational_drugs.yaml'
+  '/health-lifestyle/recreational-drugs':
+    $ref: 'post_delete_recreational_drugs.yaml'
+  '/health-lifestyle/recreational-drugs/{obj_id}':
+    $ref: 'get_put_recreational_drugs_by_id.yaml'
+  

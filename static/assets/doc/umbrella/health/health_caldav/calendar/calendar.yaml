@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: calendar
+    description: calendar - calendar data management.
+paths:
+  '/health-caldav/calendars/search':
+    $ref: 'get_calendar.yaml'
+  '/health-caldav/calendars':
+    $ref: 'post_delete_calendar.yaml'
+  '/health-caldav/calendars/{obj_id}':
+    $ref: 'get_put_calendar_by_id.yaml'
+  

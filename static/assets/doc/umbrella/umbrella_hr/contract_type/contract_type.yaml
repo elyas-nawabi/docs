@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: contract type
+    description: contract type - contract type data management.
+paths:
+  '/hr/employment-types/search':
+    $ref: 'get_contract_type.yaml'
+  '/hr/employment-types':
+    $ref: 'post_delete_contract_type.yaml'
+  '/hr/employment-types/{obj_id}':
+    $ref: 'get_put_contract_type_by_id.yaml'
+  

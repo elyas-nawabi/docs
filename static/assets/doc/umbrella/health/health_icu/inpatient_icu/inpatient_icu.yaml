@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: inpatient icu
+    description: inpatient icu - inpatient icu data management.
+paths:
+  '/health-icu/patient-icu-info/search':
+    $ref: 'get_inpatient_icu.yaml'
+  '/health-icu/patient-icu-info':
+    $ref: 'post_delete_inpatient_icu.yaml'
+  '/health-icu/patient-icu-info/{obj_id}':
+    $ref: 'get_put_inpatient_icu_by_id.yaml'
+  

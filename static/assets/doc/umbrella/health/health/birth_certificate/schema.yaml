@@ -1,0 +1,144 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        certification_date: 
+          type: string
+          format: date
+        code:
+          type: string
+        country: 
+          type: integer
+        country_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        country_subdivision: 
+          type: integer
+        country_subdivision_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        create_date: 
+          type: string
+          format: date
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        digest_current: 
+          type: string
+        digest_status: 
+          type: boolean
+        digital_signature: 
+          type: string
+        dob: 
+          type: string
+          format: date
+        document_digest: 
+          type: string
+        father: 
+          type: integer
+        father_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        mother: 
+          type: integer
+        mother_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        observations: 
+          type: string
+        rec_name: 
+          type: string
+        serializer: 
+          type: string
+        serializer_current: 
+          type: string
+        signed_by: 
+          type: string
+        signed_by_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        state: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      certification_date: '2024-07-25'
+      code: '123321'
+      country: 1
+      country_:
+        id: 1
+        name: "ahmad"
+      country_subdivision: 1
+      country_subdivision_:
+        id: 1
+        name: kabul
+      create_date: '2024-07-25T20:05:17.317113'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      digest_current: 79c0e167bc6a572d53ae1810e2bba2d1950fa48cbd9752a3175d371f0609135c782789a3c5ca76c65c6290f94f0ff8e30f65ff093c22942a16032d277c519a90
+      digest_status: false
+      digital_signature: 
+      dob: '2001-07-25'
+      document_digest: 
+      father: 41
+      father_:
+        id: 41
+        name: sediq
+      id: 1
+      institution: 1
+      institution_:
+        id: 1
+        name: Milestone
+      mother: 40
+      mother_:
+        id: 40
+        name: ayesha
+      name: 39
+      name_:
+        id: 39
+        name: test, ahmad
+      observations: add some test data.
+      rec_name: '1'
+      serializer: 
+      serializer_current: "{\"certificate\": \"123321\", \"Date\": \"2001-07-25\", \"HP\":
+        \"\", \"Person\": \"test, ahmad\", \"Person_dob\": \"2001-07-25\", \"Person_ID\":
+        \"1\", \"Country\": \" ahmad\", \"Country_subdivision\": \"kabul\",
+        \"Mother\": \"ayesha\", \"Father\": \"sediq\", \"Observations\": \"add some test
+        data.\"}"
+      signed_by: 
+      signed_by_: {}
+      state: draft
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

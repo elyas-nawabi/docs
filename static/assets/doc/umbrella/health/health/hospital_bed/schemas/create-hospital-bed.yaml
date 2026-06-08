@@ -1,0 +1,32 @@
+      properties:
+        bed_type: 
+          type: string
+        calendar: 
+          type: integer
+        extra_info: 
+          type: string
+        institution: 
+          type: integer
+        name: 
+          type: integer
+        rec_name: 
+          type: string
+        state: 
+          type: string
+        telephone_number: 
+          type: string
+        ward: 
+          type: integer
+  
+      required:
+          - 
+      example:
+        bed_type: gatch
+        calendar: 
+        extra_info: ''
+        institution: 1
+        name: 394
+        rec_name: acetylsalicylic acid
+        state: free
+        telephone_number: ''
+        ward: 

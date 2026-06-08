@@ -1,0 +1,87 @@
+  properties:
+    create_date: 
+      type: string 
+      format: date 
+    create_uid: 
+      type: integer
+    company: 
+      type: integer
+    contract_type: 
+      type: integer
+    contracts_count: 
+      type: integer
+    currency: 
+      type: integer
+    date_end: 
+      type: string
+      format: date
+    date_start:
+      type: string
+      format: date
+    department: 
+      type: integer
+    employee: 
+      type: integer
+    first_contract_date: 
+      type: string
+      format: date
+    hr_responsible: 
+      type: integer
+    job: 
+      type: integer
+    kanban_state: 
+      type: string
+    name: 
+      type: string
+    notes: 
+      type: string
+    permit_no: 
+      type: string
+    rec_name: 
+      type: string
+    state: 
+      type: string
+    structure_type: 
+      type: integer
+    trial_date_end: 
+      type: string
+      format: date
+    visa_no: 
+      type: string
+    wage: 
+      type: number
+      format: decimal
+    write_date:
+      type: string
+      format: date 
+    write_uid:
+      type: integer
+    
+  required:
+    
+  example:
+    company: 1
+    contract_type: 1
+    contracts_count: 1
+    create_date: '2025-03-16T10:32:04.732972'
+    create_uid: 1
+    currency: 1
+    date_end: '2025-03-31'
+    date_start: '2025-03-16'
+    department: 1
+    employee: 8
+    first_contract_date: '2025-03-10'
+    hr_responsible: 
+    job: 1
+    kanban_state: normal
+    name: my refrence
+    notes: some description.
+    permit_no: 
+    rec_name: my refrence
+    state: open
+    structure_type: 1
+    trial_date_end: 
+    visa_no: 
+    wage: 12
+    write_date: '2025-03-16T10:32:21.595327'
+    write_uid: 1

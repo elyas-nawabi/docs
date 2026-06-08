@@ -1,0 +1,374 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        account: 
+          type: integer
+        account_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        accounting_date:
+          type: string
+          format: date
+        allow_cancel:
+          type: boolean
+        alternative_payees:
+          type: array
+        amount_to_pay: 
+          type: integer
+        amount_to_pay_today: 
+          type: integer
+        cancel_move:
+          type: integer 
+        cancel_move_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        comment: 
+          type: string
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        company_party: 
+          type: integer
+        company_party_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        currency: 
+          type: integer
+        currency_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        currency_date:
+          type: string
+          format: date
+        description:
+          type: string
+        has_payment_method:
+          type: boolean
+        has_report_cache: 
+          type: boolean
+        id: 
+          type: integer
+        invoice_address: 
+          type: integer
+        invoice_address_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        invoice_date: 
+          type: string
+          format: date
+        journal: 
+          type: integer
+        journal_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        lines:
+          type: array
+          properties:
+            account: 
+              type: integer
+            account_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            amount: 
+              type: integer
+            company: 
+              type: integer
+            company_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            currency: 
+              type: integer
+            currency_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            description: 
+              type: string
+            id: 
+              type: integer
+            invoice: 
+              type: integer
+            invoice_description: 
+              type: string
+            invoice_party: 
+              type: integer
+            invoice_party_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            invoice_state: 
+              type: string
+            invoice_type: 
+              type: string
+            note: 
+              type: string
+            origin:
+              type: string 
+            origin_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            party: 
+              type: integer
+            party_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            party_lang: 
+              type: string
+            product: 
+              type: integer
+            product_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            product_uom_category: 
+              type: integer
+            product_uom_category_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            quantity: 
+              type: integer
+            rec_name: 
+              type: string
+            summary: 
+              type: string
+            taxes: 
+              type: array
+            taxes_date: 
+              type: string
+              format: date
+            taxes_deductible_rate: 
+              type: integer
+            type: 
+              type: string
+            unit:
+              type: integer
+            unit_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            unit_price: 
+              type: integer
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        lines_to_pay: 
+          type: array
+          properties:
+            account: 
+              type: integer
+            account_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            amount: 
+              type: integer
+            amount_currency: 
+              type: integer
+            amount_second_currency: 
+              type: integer
+            company: 
+              type: integer
+            company_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            credit: 
+              type: integer
+            currency: 
+              type: integer
+            currency_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            date: 
+              type: string
+              format: date 
+            debit: 
+              type: integer
+            delegated_amount: 
+              type: integer
+            description: 
+              type: string
+            has_maturity_date: 
+              type: boolean
+            id: 
+              type: integer
+            journal: 
+              type: integer
+            journal_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            maturity_date: '2024-07-05'
+            move: 
+              type: integer
+            move_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            move_description_used: 
+              type: string
+            move_origin:
+              type: string
+            move_origin_:
+              type: object
+              properties:
+                entity:
+                  type: string
+                  nullable: true
+                id: 
+                  type: integer
+                name: 
+                  type: string
+            move_state: 
+              type: string
+            origin:
+              type: string 
+            origin_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            party: 
+              type: integer
+            party_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            party_required:
+              type: boolean
+            payable_receivable_balance: 
+              type: integer
+            payment_blocked:
+              type: boolean
+            payment_kind: 
+              type: string
+            period: 
+              type: integer
+            period_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            reconciliation: 
+              type: string
+            reconciliation_: 
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            second_currency: 
+              type: integer
+            second_currency_: 
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            second_currency_required: 
+              type: integer
+            second_currency_required_: 
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            state: 
+              type: string
+            tax_lines: 
+              type: array
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        move: 
+          type: integer
+        move_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        number: 
+          type: string
+        origins: 
+          type: string
+        party: 
+          type: integer
+        party_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        party_lang: 
+          type: string
+        party_tax_identifier: 
+          type: string
+        party_tax_identifier_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        payment_lines:
+          type: array
+        payment_term: 
+          type: integer
+        payment_term_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        payment_term_date:
+          type: string
+          format: date
+        posted_by: 
+          type: integer
+        posted_by_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        reconciled: 
+          type: boolean
+        reconciliation_lines:
+          type: string
+        reference: 
+          type: string
+        sequence: 
+          type: integer
+        state: 
+          type: string
+        tax_amount: 
+          type: integer
+        tax_amount_cache: 
+          type: number
+          format: decimal
+        tax_identifier: 
+          type: integer
+        tax_identifier_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        taxes: 
+          type: array
+        total_amount: 
+          type: integer
+        total_amount_cache:
+          type: number
+          format: decimal 
+        type: 
+          type: string
+        type_name: 
+          type: string
+        untaxed_amount: 
+          type: integer
+        untaxed_amount_cache: 
+          type: number
+          format: decimal
+        validated_by:
+          type: integer 
+        validated_by_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date: 
+          type: string
+          format: date
+        write_uid: 
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      create_date: '2024-04-18T04:45:21.629821'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

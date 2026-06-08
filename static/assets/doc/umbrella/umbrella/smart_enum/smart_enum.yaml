@@ -1,0 +1,11 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: smart enum
+    description: smart enum - smart enum data management.
+paths:
+  '/smart-enum/{model}/{enum_name}':
+    $ref: 'get_auth.yaml'
+ 
+  

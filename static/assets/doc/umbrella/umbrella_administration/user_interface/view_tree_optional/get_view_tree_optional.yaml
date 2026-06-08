@@ -1,0 +1,84 @@
+    get:
+      tags:
+        - view tree optional
+      summary: Get view tree optional details.
+      description: Get view tree optional details.
+      operationId: getViewTreeOptionals
+      parameters:
+        - name: obj_id
+          in: path
+          schema:
+            type: integer
+          rquired: true
+          example: 1
+      responses:
+        '200':
+          description: List of view tree optionals.
+          content:
+            application/json:
+              schema:
+                type: array
+                properties:
+                  create_date: 
+                    type: string 
+                    format: date 
+                  create_uid: 
+                    type: integer
+                  create_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  field: 
+                    type: string
+                  id: 
+                    type: integer
+                  rec_name: 
+                    type: string
+                  user: 
+                    type: integer
+                  user_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  value: 
+                    type: boolean
+                  view_id:  
+                    type: integer
+                  view_id_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  write_date:
+                    type: string
+                    format: date 
+                  write_uid:
+                    type: integer
+                  write_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              example:
+              - create_date: '2024-08-20T19:15:50.636980'
+                create_uid: 1
+                create_uid_:
+                  id: 1
+                  name: Administrator
+                field: name
+                id: 55
+                rec_name: '55'
+                user: 1
+                user_:
+                  id: 1
+                  name: Administrator
+                value: false
+                view_id: 161
+                view_id_:
+                  id: 161
+                  name: party.contact_mechanism (Tree)
+                write_date: 
+                write_uid: 
+                write_uid_: {}
+                
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    

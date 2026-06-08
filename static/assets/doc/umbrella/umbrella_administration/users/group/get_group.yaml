@@ -1,0 +1,75 @@
+    post:
+      tags:
+        - group
+      summary: Get group details.
+      description: Get group details.
+      operationId: getGroups
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of groups.
+          content:
+            application/json:
+              schema:
+                type: array
+                properties:
+                  create_date: 
+                    type: string 
+                    format: date 
+                  create_uid: 
+                    type: integer
+                  create_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  description: 
+                    type: string
+                  id: 
+                    type: integer
+                  name: 
+                    type: string
+                  parent: 
+                    type: integer
+                  parent_: 
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  rec_name: 
+                    type: string
+                  write_date:
+                    type: string
+                    format: date 
+                  write_uid:
+                    type: integer
+                  write_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              example:
+                create_date: '2024-06-24T12:36:12.451943'
+                create_uid: 0
+                create_uid_:
+                  id: 0
+                  name: Root
+                description: 
+                id: 11
+                name: account
+                parent: null
+                parent_: {}
+                rec_name: account
+                write_date: '2024-06-25T04:28:10.818003'
+                write_uid: 1
+                write_uid_:
+                  id: 1
+                  name: Administrator
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    

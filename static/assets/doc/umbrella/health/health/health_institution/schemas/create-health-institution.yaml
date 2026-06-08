@@ -1,0 +1,57 @@
+      properties:
+        beds: 
+          type: integer
+        code: 
+          type: string
+        extra_info: 
+          type: string
+        heliport: 
+          type: boolean
+        institution_type: 
+          type: string
+        main_specialty: 
+          type: integer
+        name: 
+          type: integer
+        operating_room: 
+          type: boolean
+        operational_sectors: 
+          type: array
+        or_number: 
+          type: integer
+        picture: 
+          type: string
+          format: bytes
+        public_level:   
+          type: string
+        rec_name: 
+          type: string
+        specialties:
+          type: array
+        teaching: 
+          type: boolean
+        trauma_center: 
+          type: boolean
+        trauma_level: 
+          type: string
+  
+      required:
+          - 
+      example:
+        beds: 
+        code: dfsd
+        extra_info: ''
+        heliport: false
+        institution_type: clinic
+        main_specialty: 
+        name: 1
+        operating_room: false
+        operational_sectors: []
+        or_number: 
+        picture: 
+        public_level: public
+        rec_name: Milestone
+        specialties: []
+        teaching: false
+        trauma_center: false
+        trauma_level: 

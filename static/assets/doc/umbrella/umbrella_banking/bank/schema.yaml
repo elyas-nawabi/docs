@@ -1,0 +1,62 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        bic:
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        party: 
+          type: integer
+        party_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      - bic: KABUAFKA
+        create_date: '2024-04-21T11:16:24.309788'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        id: 2
+        party: 1
+        party_:
+          id: 1
+          name: Milestone
+        rec_name: Milestone
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

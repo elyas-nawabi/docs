@@ -1,0 +1,36 @@
+get:
+      tags:
+        - fields structure
+      summary: Get fields structure.
+      description: Get fields structure.
+      operationId: getFieldsStructure
+      parameters:
+        - name: model
+          in: path
+          schema:
+            type: string
+          rquired: true
+          example: 
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: 'schema.yaml'
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+        '404':
+          description: 404 Not Found.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'

@@ -1,0 +1,15 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: appraisal_skills
+    description: |
+      Lines linking an appraisal to HR skills and levels (`hr.appraisal.skill`). Depends on **umbrella_hr_appraisal** and **umbrella_hr_skills**.
+      CRUD under `/hr-appraisal-skills/appraisal-skills`.
+paths:
+  '/hr-appraisal-skills/appraisal-skills/search':
+    $ref: 'get_appraisal_skills.yaml'
+  '/hr-appraisal-skills/appraisal-skills':
+    $ref: 'post_delete_appraisal_skills.yaml'
+  '/hr-appraisal-skills/appraisal-skills/{obj_id}':
+    $ref: 'get_put_appraisal_skills_by_id.yaml'

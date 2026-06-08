@@ -1,0 +1,128 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        active:
+          type: boolean
+        code:
+          type: string
+        code3:
+          type: string
+        code_numeric:
+          type: string
+        id:
+          type: integer
+        members:
+          type: array
+          properties:
+              from_date: 
+                type: string
+                format: date
+              id: 
+                type: integer
+              organization:
+                type: integer
+              organization_:
+                $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+              rec_name: 
+                type: string
+              to_date: 
+                type: string
+                format: date
+        name:
+          type: string
+        rec_name: 
+          type: string
+        region:
+          type: integer
+        region_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        subdivisions:
+          type: array
+          properties:
+            active:
+              type: boolean
+            code:
+              type: string
+            id:
+              type: integer
+            name:
+              type: string
+            parent: 
+              type: integer
+            parent_:
+              $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+            rec_name: 
+              type: string
+            type:
+              type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      create_date: '2024-04-18T04:45:21.629821'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      active: true
+      code: '1'
+      code3: '101'
+      code_numeric: '10001'
+      id: 1
+      members:
+      - from_date: '2024-02-15'
+        id: 5
+        organization: 20
+        organization_:
+          id: 20
+          name: South Asian Free Trade Area20
+        rec_name: '5'
+        to_date: '2024-02-20'
+      name: Afghanistan
+      rec_name: "Afghanistan"
+      region: 34
+      region_:
+        id: 34
+        name: kabul
+      subdivisions:
+      - active: true
+        code: '10001'
+        id: 3
+        name: sbd1
+        parent: 
+        parent_: {}
+        rec_name: sbd1
+        type: city
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

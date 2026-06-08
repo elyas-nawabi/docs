@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: immunization schedule dose
+    description: immunization schedule dose - immunization schedule dose data management.
+paths:
+  '/health/vaccine-doses/search':
+    $ref: 'get_immunization_schedule_dose.yaml'
+  '/health/vaccine-doses':
+    $ref: 'post_delete_immunization_schedule_dose.yaml'
+  '/health/vaccine-doses/{obj_id}':
+    $ref: 'get_put_immunization_schedule_dose_by_id.yaml'
+  

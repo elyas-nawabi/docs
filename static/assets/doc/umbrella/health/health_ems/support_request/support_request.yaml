@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: support request
+    description: support request - support request data management.
+paths:
+  '/health-ems/support-centers/search':
+    $ref: 'get_support_request.yaml'
+  '/health-ems/support-centers':
+    $ref: 'post_delete_support_request.yaml'
+  '/health-ems/support-centers/{obj_id}':
+    $ref: 'get_put_support_request_by_id.yaml'
+  

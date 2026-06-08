@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: gene
+    description: gene - gene data management.
+paths:
+  '/health-genetics/genes/search':
+    $ref: 'get_gene.yaml'
+  '/health-genetics/genes':
+    $ref: 'post_delete_gene.yaml'
+  '/health-genetics/genes/{obj_id}':
+    $ref: 'get_put_gene_by_id.yaml'
+  

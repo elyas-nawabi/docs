@@ -1,0 +1,31 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: module
+    description: module - module data management.
+paths:
+  '/administration/modules/search':
+    $ref: 'get_module.yaml'
+  '/administration/modules':
+    $ref: 'post_delete_module.yaml'
+  '/administration/modules/{obj_id}':
+    $ref: 'get_put_module_by_id.yaml'
+  '/administration/modules/{obj_id}/deactivate':
+    $ref: 'get_deactivate.yaml'
+  '/administration/modules/{obj_id}/cancel-deactivate':
+    $ref: 'get_cancel_deactivate.yaml'
+  '/administration/modules/{obj_id}/activate':
+    $ref: 'get_activate.yaml'
+  '/administration/modules/{obj_id}/cancel-activate':
+    $ref: 'get_cancel_activate.yaml'
+  '/administration/modules/{obj_id}/upgrade':
+    $ref: 'get_upgrade.yaml'
+  '/administration/modules/{obj_id}/cancel-upgrade':
+    $ref: 'get_cancel_upgrade.yaml'
+  '/administration/modules/modules-to-update':
+    $ref: 'get_modules_to_update.yaml'
+  '/administration/modules/start-upgrade':
+    $ref: 'get_start_upgrade.yaml'
+    
+  

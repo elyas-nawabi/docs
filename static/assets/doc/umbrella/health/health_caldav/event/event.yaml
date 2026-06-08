@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: event
+    description: event - event data management.
+paths:
+  '/health-caldav/events/search':
+    $ref: 'get_event.yaml'
+  '/health-caldav/events':
+    $ref: 'post_delete_event.yaml'
+  '/health-caldav/events/{obj_id}':
+    $ref: 'get_put_event_by_id.yaml'
+  

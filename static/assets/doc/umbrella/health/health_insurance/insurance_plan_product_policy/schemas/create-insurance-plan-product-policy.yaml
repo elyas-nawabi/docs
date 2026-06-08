@@ -1,0 +1,23 @@
+      properties:
+        discount: 
+          typ: integer
+        plan: 
+          typ: integer
+        price: 
+          type: integer
+        product: 
+          type: integer
+        product_category: 
+          typ: integer
+        rec_name: 
+          type: string
+        
+      required:
+          - 
+      example:
+        discount: 1
+        plan: 2
+        price: 111
+        product: 395
+        product_category: 3
+        rec_name: '1'

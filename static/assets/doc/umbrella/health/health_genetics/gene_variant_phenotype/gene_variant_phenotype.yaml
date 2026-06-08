@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: gene variant phenotype
+    description: gene variant phenotype - gene variant phenotype data management.
+paths:
+  '/health-genetics/variant-phenotypes/search':
+    $ref: 'get_gene_variant_phenotype.yaml'
+  '/health-genetics/variant-phenotypes':
+    $ref: 'post_delete_gene_variant_phenotype.yaml'
+  '/health-genetics/variant-phenotypes/{obj_id}':
+    $ref: 'get_put_gene_variant_phenotype_by_id.yaml'
+  

@@ -1,0 +1,208 @@
+post:
+      tags:
+        - chart of account
+      summary: Get chart of account based on the context provided in the body.
+      description: Get chart of account based on the context provided in the body.
+      operationId: getChartOfAccounts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: 'schemas/create-chart-of-account.yaml'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data: 
+                      type: array
+                      properties:
+                        active:
+                          type: boolean
+                        amount_second_currency: 
+                          type: integer
+                        balance: 
+                          type: integer
+                        childs:
+                          type: array
+                        closed:
+                          type: boolean
+                        code:
+                          type: string
+                        company: 
+                          type: integer
+                        company_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                        credit: 
+                          type: integer
+                          format: decimal
+                        credit_type:
+                          type: integer
+                        credit_type_:
+                          type: object
+                        currency: 
+                          type: integer
+                        currency_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                        debit: 
+                          type: integer
+                        debit_type: 
+                          type: integer
+                        debit_type_:
+                          type: object
+                        deferral:
+                          type: boolean
+                        deferrals:
+                          type: array
+                        end_date: 
+                          type: string
+                          format: date
+                        general_ledger_balance:
+                          type: boolean
+                        id:  
+                          type: integer
+                        left: 
+                          type: integer
+                        line_count: 
+                          type: integer
+                        name:
+                          type: string
+                        note:
+                          type: string
+                        parent: 
+                          type: integer
+                        parent_:
+                          type: object
+                        party_required:
+                          type: boolean
+                        rec_name:
+                          type: string
+                        reconcile:
+                          type: boolean
+                        replaced_by: 
+                          type: integer
+                        replaced_by_:
+                          type: object
+                        right: 
+                          type: integer
+                        second_currency: 
+                          type: integer
+                        second_currency_:
+                          type: object
+                        start_date:
+                          type: string
+                          format: date
+                        taxes:
+                          type: array
+                        template: 
+                          type: integer
+                        template_:
+                          type: object
+                        template_override:
+                          type: boolean
+                        type:  
+                          type: integer
+                        type_:
+                          type: object
+                          properties:
+                            id: 
+                              type: integer
+                            name:
+                              type: string
+                      
+                    errors:
+                      type: object
+                    pagination:
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+              example:
+                data:
+                  - active: true
+                    amount_second_currency: 0
+                    balance: 0
+                    childs: []
+                    closed: false
+                    code: '1'
+                    company: 1
+                    company_:
+                      id: 1
+                      name: Party 1
+                    credit: 0
+                    credit_type: 
+                    credit_type_: {}
+                    currency: 1
+                    currency_:
+                      id: 1
+                      name: Afghani
+                    debit: 0
+                    debit_type: null
+                    debit_type_: {}
+                    deferral: false
+                    deferrals: []
+                    end_date: '2024-02-29'
+                    general_ledger_balance: false
+                    id: 29
+                    left: 103
+                    line_count: 0
+                    name: '1'
+                    note: ''
+                    parent: null
+                    parent_: {}
+                    party_required: false
+                    rec_name: 1 - 1
+                    reconcile: true
+                    replaced_by: null
+                    replaced_by_: {}
+                    right: 104
+                    second_currency: null
+                    second_currency_: {}
+                    start_date: '2024-02-27'
+                    taxes: []
+                    template: null
+                    template_: {}
+                    template_override: false
+                    type: 23
+                    type_:
+                      id: 23
+                      name: Minimal Account Type Chart 2
+                errors: null
+                pagination: null
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    

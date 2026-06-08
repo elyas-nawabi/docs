@@ -1,0 +1,323 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        active: 
+          type: boolean
+        buttons:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            model: 
+              type: integer
+            model_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            name: 
+              type: string
+            rec_name: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        field_access:
+          type: array
+          properties:
+            active: 
+              type: boolean
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            description: 
+              type: string
+            field: 
+              type: integer
+            field_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            group: 
+              type: integer
+            group_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id:   
+              type: integer
+            perm_create: 
+              type: boolean
+            perm_delete: 
+              type: boolean
+            perm_read: 
+              type: boolean
+            perm_write: 
+              type: boolean
+            rec_name: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        menu_access:
+          type: array
+          properties:
+            complete_name: 
+              type: string
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            rec_name: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        model_access:
+          type: array
+          properties:
+            active: 
+              type: boolean
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            description: 
+              type: string
+            group: 
+              type: integer
+            group_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            model: 
+              type: integer
+            model_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            perm_create: 
+              type: boolean
+            perm_delete: 
+              type: boolean
+            perm_read: 
+              type: boolean
+            perm_write: 
+              type: boolean
+            rec_name: 
+              type: string
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+          type: string
+        parent: 
+          type: integer
+        parent_: 
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        rule_groups: 
+          type: array
+        users:
+          type: array
+          properties:
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            id: 
+              type: integer
+            login: 
+              type: string
+            name: 
+              type: string
+            rec_name: 
+              type: string
+            sessions: 
+              type: integer
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      active: true
+      buttons:
+      - create_date: '2024-06-25T04:28:36.095502'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        id: 81
+        model: 282
+        model_:
+          id: 282
+          name: Account Statement
+        name: draft
+        rec_name: draft
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      create_date: '2024-06-25T04:28:19.548786'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      field_access:
+      - active: true
+        create_date: '2024-06-25T04:28:19.548786'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        description: 
+        field: 2046
+        field_:
+          id: 2046
+          name: Amount (amount)
+        group: 11
+        group_:
+          id: 11
+          name: Account
+        id: 4
+        perm_create: true
+        perm_delete: true
+        perm_read: true
+        perm_write: false
+        rec_name: Amount (amount)
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      id: 11
+      menu_access:
+      - complete_name: Financial
+        create_date: '2024-06-25T04:28:19.548786'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        id: 106
+        rec_name: Financial
+        write_date: '2024-08-30T06:49:28.836358'
+        write_uid: 0
+        write_uid_:
+          id: 0
+          name: Root
+      model_access:
+      - active: true
+        create_date: '2024-06-25T04:28:19.548786'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        description: 
+        group: 11
+        group_:
+          id: 11
+          name: Account
+        id: 145
+        model: 191
+        model_:
+          id: 191
+          name: General Ledger Account
+        perm_create: false
+        perm_delete: false
+        perm_read: true
+        perm_write: false
+        rec_name: General Ledger Account
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      name: Account
+      parent: 
+      parent_: {}
+      rec_name: Account
+      rule_groups: []
+      users:
+      - create_date: '2024-06-24T12:36:08.706972'
+        create_uid: 0
+        create_uid_:
+          id: 0
+          name: Root
+        id: 1
+        login: admin
+        name: Administrator
+        rec_name: Administrator
+        sessions: 8
+        write_date: '2024-06-25T04:26:12.287590'
+        write_uid: 1
+        write_uid_:
+          id: 1
+          name: Administrator
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

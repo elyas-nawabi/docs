@@ -1,0 +1,18 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: period
+    description: period - period data management.
+paths:
+  '/stock/periods/search':
+    $ref: 'get_period.yaml'
+  '/stock/periods':
+    $ref: 'post_delete_period.yaml'
+  '/stock/periods/{obj_id}':
+    $ref: 'get_put_period_by_id.yaml'
+  '/stock/periods/{obj_id}/draft':
+    $ref: 'get_draft.yaml'
+  '/stock/periods/{obj_id}/close':
+    $ref: 'get_close.yaml'
+  

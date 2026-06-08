@@ -1,0 +1,431 @@
+openapi: 3.1.0
+# info:
+#   description: >
+#     ## UMBRELLA API Documentation Description:
+
+#     Welcome to the official documentation for the UMBRELLA RESTful API. 
+
+#     This comprehensive guide is designed to assist developers and integrators, 
+
+#     in effectively utilizing the power of our API.
+
+#     Our RESTful API provides:
+
+#     A simple and efficient way to access and interact 
+
+#     with, currencies, finances ....... 
+
+#     Whether you're building 
+
+#     a web application, mobile app, or integrating 
+
+#     with other services, our API offers the tools 
+
+#     you need to streamline your development process 
+
+#     and unlock the full potential of your project.
+
+#     In this documentation, you'll find detailed 
+
+#     information on how to make API requests, 
+
+#     authentication procedures, available endpoints, 
+
+#     request/response examples, error handling, 
+
+#     and best practices for integrating UMBRELLA
+
+#     into your projects.
+
+
+#     ## Authorization:
+
+#     You can authorize your requests using this authorization method:
+
+#     - TOKEN
+
+
+#     ## TOKEN
+
+#     - The endpoints are authorized using a TOKEN.
+
+#     - To authorize requests, please add a Token using the 'Authorize' button
+#     with the following format:
+#       ### "Bearer user-token"
+#   version: 1.0.0
+#   contact:
+#     name: API Support
+#     email: shadab@gmail.com
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+#   - name: currency
+#     description: currency - currency data management.
+#   - name: scheduled rate update
+#     description: scheduled rate update - scheduled rate update data management.
+#   - name: fiscal year
+#     description: fiscal year - fiscal year data management.
+#   - name: fiscal period
+#     description: fiscal period - fiscal period data management.
+  - name: auth
+    description: auth - auth data management.
+#   - name: party
+#     description: party - party data management.
+#   - name: category
+#     description: category - category data management.
+#   - name: contact mechanism
+#     description: contact mechanism - contact mechanism data management.
+#   - name: address
+#     description: address - address data management.
+#   - name: sequence
+#     description: sequence - sequence data management.
+#   - name: sequence type
+#     description: sequence type - sequence type data management.
+#   - name: company
+#     description: company - company data management.
+#   - name: employee
+#     description: employee - employee data management.
+#   - name: country
+#     description: country - country data management.
+#   - name: organization
+#     description: organization - organization data management.
+#   - name: region
+#     description: region - region data management.
+#   - name: configuration
+#     description: configuration - configuration data management.
+#   - name: account
+#     description: account - account data management.
+#   - name: account type
+#     description: account type - account type data management.
+#   - name: account move line
+#     description: account move line - account move line data management.
+#   - name: write off
+#     description: write_off - write_off data management.
+paths:
+  '/jwt/login':
+    $ref: 'umbrella/umbrella/auth/post_auth.yaml'
+  '/user-application/login':
+    $ref: 'umbrella/umbrella/auth/post_user_application_login.yaml'
+  '/user-application/logout':
+    $ref: 'umbrella/umbrella/auth/post_user_application_logout.yaml'
+#   '/currency/currencies/{obj_id}':
+#     $ref: 'umbrella/umbrella_currency/currency/get_put_currency_by_id.yaml'
+#   '/currency/scheduled-rate-updates':
+#     $ref: 'umbrella/umbrella_currency/scheduled_rate_update/get_post_delete_scheduled_rate_updates.yaml'
+#   '/currency/scheduled-rate-updates/{obj_id}':
+#     $ref: 'umbrella/umbrella_currency/scheduled_rate_update/get_put_scheduled_rate_updates_by_id.yaml'
+#   '/financial-accounting/fiscal-years':
+#     $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_post_delete_fiscal_year.yaml'
+#   '/financial-accounting/fiscal-years/{obj_id}':
+#     $ref: 'umbrella/umbrella_financial_accounting/fiscal_year/get_put_fiscal_year_by_id.yaml'
+#   '/financial-accounting/fiscal-periods':
+#     $ref: 'umbrella/umbrella_financial_accounting/fiscal_period/get_post_delete_fiscal_period.yaml'
+#   '/financial-accounting/fiscal-periods/{obj_id}':
+#     $ref: 'umbrella/umbrella_financial_accounting/fiscal_period/get_put_fiscal_period_by_id.yaml'
+#   '/financial-accounting/accounts':
+#     $ref: 'umbrella/umbrella_financial_accounting/account/get_post_delete_account.yaml'
+#   '/financial-accounting/accounts/{obj_id}':
+#     $ref: 'umbrella/umbrella_financial_accounting/account/get_put_account_by_id.yaml'
+#   '/financial-accounting/account-types':
+#     $ref: 'umbrella/umbrella_financial_accounting/account_type/get_post_delete_account_type.yaml'
+#   '/financial-accounting/configurations':
+#     $ref: 'umbrella/umbrella_financial_accounting/configuration/get_put_configuration.yaml'
+#   '/financial-accounting/account-types/{obj_id}':
+#     $ref: 'umbrella/umbrella_financial_accounting/account_type/get_put_account_type_by_id.yaml'
+#   '/financial-accounting/account_move_line':
+#     $ref: 'umbrella/umbrella_financial_accounting/account_move_line/get_post_delete_account_move_line.yaml'
+#   '/financial-accounting/journals':
+#     $ref: 'umbrella/umbrella_financial_accounting/journal/get_post_delete_journal.yaml'
+#   '/financial-accounting/journals/{obj_id}':
+#     $ref: 'umbrella/umbrella_financial_accounting/journal/get_put_journal_by_id.yaml'
+#   '/financial-accounting/journals-periods':
+#     $ref: 'umbrella/umbrella_financial_accounting/journal_period/get_post_delete_journal_period.yaml'
+#   '/financial-accounting/write-offs':
+#     $ref: 'umbrella/umbrella_financial_accounting/write_off/get_post_delete_write_off.yaml'
+#   '/financial-accounting/write-offs/{obj_id}':
+#     $ref: 'umbrella/umbrella_financial_accounting/write_off/get_put_write_off_by_id.yaml'
+#   '/login':
+#     $ref: 'umbrella/umbrella/auth/post_auth.yaml'
+#   '/party/parties':
+#     $ref: 'umbrella/umbrella_party/party/get_post_delete_party.yaml'
+#   '/party/parties/{obj_id}':
+#     $ref: 'umbrella/umbrella_party/party/get_put_party_by_id.yaml'
+#   '/party/categories':
+#     $ref: 'umbrella/umbrella_party/category/get_post_delete_categories.yaml'
+#   '/party/categories/{obj_id}':
+#     $ref: 'umbrella/umbrella_party/category/get_put_categories_by_id.yaml'
+#   '/party/contact-mechanisms':
+#     $ref: 'umbrella/umbrella_party/contact_mechanism/get_post_delete_contact_mechanism.yaml'
+#   '/party/contact-mechanisms/{obj_id}':
+#     $ref: 'umbrella/umbrella_party/contact_mechanism/get_put_contact_mechanism.yaml'
+#   '/party/addresses':
+#     $ref: 'umbrella/umbrella_party/address/get_post_delete_address.yaml'
+#   '/party/addresses/{obj_id}':
+#     $ref: 'umbrella/umbrella_party/address/get_put_address_by_id.yaml'
+#   '/administration/sequence_types':
+#     $ref: 'umbrella/umbrella_administration/sequence_type/get_post_delete_sequence_types.yaml'
+#   '/administration/sequence_types/{obj_id}':
+#     $ref: 'umbrella/umbrella_administration/sequence_type/get_put_sequence_types_by_id.yaml'
+#   '/administration/sequences':
+#     $ref: 'umbrella/umbrella_administration/sequence/get_post_delete_sequences.yaml'
+#   '/administration/sequences/{obj_id}':
+#     $ref: 'umbrella/umbrella_administration/sequence/get_put_sequences_by_id.yaml'
+#   '/company/companies':
+#     $ref: 'umbrella/umbrella_company/company/get_post_delete_company.yaml'
+#   '/company/companies/{obj_id}':
+#     $ref: 'umbrella/umbrella_company/company/get_put_company_by_id.yaml'
+#   '/company/employees':
+#     $ref: 'umbrella/umbrella_company/employee/get_post_delete_employee.yaml'
+#   '/company/employees/{obj_id}':
+#     $ref: 'umbrella/umbrella_company/employee/get_put_employee_by_id.yaml'
+#   '/country/countries':
+#     $ref: 'umbrella/umbrella_country/country/get_post_delete_country.yaml'
+#   '/country/countries/{obj_id}':
+#     $ref: 'umbrella/umbrella_country/country/get_put_country_by_id.yaml'
+#   '/country/organizations':
+#     $ref: 'umbrella/umbrella_country/organization/get_post_delete_organization.yaml'
+#   '/country/organizations/{obj_id}':
+#     $ref: 'umbrella/umbrella_country/organization/get_put_organization_by_id.yaml'
+#   '/country/regions':
+#     $ref: 'umbrella/umbrella_country/region/get_post_delete_region.yaml'
+#   '/country/regions/{obj_id}':
+#     $ref: 'umbrella/umbrella_country/region/get_put_region_by_id.yaml'
+  
+    
+components:
+  schemas:
+    # CreateFiscalYear:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-fiscal-year.yaml'
+    # UpdateFiscalYear:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-fiscal-year.yaml'
+    # CreatePeriod:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-periods.yaml'
+    # RenewFiscalYear:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/renew-fiscal-year.yaml'
+    # CreateFiscalPeriod:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-fiscal-period.yaml'
+    # UpdateFiscalPeriod:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-fiscal-period.yaml'
+    # CreateAccount:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account.yaml'
+    # UpdateAccount:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account.yaml'
+    # CreateCOATemplate:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-coa-template.yaml'
+    # CreateCOATemplateProperties:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-coa-template-properties.yaml'
+    # UpdateCOATemplate:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-coa-template.yaml'
+    # CreateAccountType:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account-type.yaml'
+    # UpdateAccountType:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account-type.yaml'
+    # UpdateConfiguration:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-configuration.yaml'
+    # CreateJournal:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-journal.yaml'
+    # UpdateJournal:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-journal.yaml'
+    # OpenJournal:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/open-journal.yaml'
+    # CreateTax:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax.yaml'
+    # UpdateTax:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-tax.yaml'
+    # CreateTaxCode:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-code.yaml'
+    # UpdateTaxCode:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-tax-code.yaml'
+    # CreateTaxGroup:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-group.yaml'
+    # UpdateTaxGroup:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-tax-group.yaml'
+    # CreateTaxRule:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-group.yaml'
+    # UpdateTaxRule:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-tax-group.yaml'
+    # CreateWriteOff:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-write-off.yaml'
+    # UpdateWriteOff:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-write-off.yaml'
+    # CreateAccountMoveLine:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account-move-line.yaml'
+    # UpdateAccountMoveLine:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account-move-line.yaml'
+    # CreateAuth:
+    #   $ref: 'umbrella/schemas/umbrella/create-auth.yaml'
+    # CreateLogin:
+    #   $ref: 'umbrella/schemas/umbrella/create-login.yaml'
+    # CreateLogout:
+    #   $ref: 'umbrella/schemas/umbrella/create-logout.yaml'
+    # CreateParty:
+    #   $ref: 'umbrella/schemas/umbrella_party/create-party.yaml'
+    # UpdateParty:
+    #   $ref: 'umbrella/schemas/umbrella_party/update-party.yaml'
+    
+    # CreateCategory:
+    #   $ref: 'umbrella/schemas/umbrella_party/create-category.yaml'
+    # UpdateCategory:
+    #   $ref: 'umbrella/schemas/umbrella_party/update-category.yaml'
+    # CreateContactMechanism:
+    #   $ref: 'umbrella/schemas/umbrella_party/create-contact-mechanism.yaml'
+    # UpdateContactMechanism:
+    #   $ref: 'umbrella/schemas/umbrella_party/update-contact-mechanism.yaml'
+    # CreateAddress:
+    #   $ref: 'umbrella/schemas/umbrella_party/create-address.yaml'
+    # UpdateAddress:
+    #   $ref: 'umbrella/schemas/umbrella_party/update-address.yaml'
+    # CreateSequence:
+    #   $ref: 'umbrella/schemas/umbrella_administration/create-sequence.yaml'
+    # CreateSequenceRestrict:
+    #   $ref: 'umbrella/schemas/umbrella_administration/create-sequence-restrict.yaml'
+    # UpdateSequence:
+    #   $ref: 'umbrella/schemas/umbrella_administration/update-sequence.yaml'
+    # CreateSequenceType:
+    #   $ref: 'umbrella/schemas/umbrella_administration/create-sequence-type.yaml'
+    # UpdateSequenceType:
+    #   $ref: 'umbrella/schemas/umbrella_administration/update-sequence-type.yaml'
+    # CreateCompany:
+    #   $ref: 'umbrella/schemas/umbrella_company/create-company.yaml'
+    # UpdateCompany:
+    #   $ref: 'umbrella/schemas/umbrella_company/update-company.yaml'
+    # CreateEmployee:
+    #   $ref: 'umbrella/schemas/umbrella_company/create-employee.yaml'
+    # UpdateEmployee:
+    #   $ref: 'umbrella/schemas/umbrella_company/update-employee.yaml'
+    # CreateCountry:
+    #   $ref: 'umbrella/schemas/umbrella_country/create-country.yaml'
+    # UpdateCountry:
+    #   $ref: 'umbrella/schemas/umbrella_country/update-country.yaml'
+    # CreateOrganization:
+    #   $ref: 'umbrella/schemas/umbrella_country/create-organization.yaml'
+    # UpdateOrganization:
+    #   $ref: 'umbrella/schemas/umbrella_country/update-organization.yaml'
+    # CreateRegion:
+    #   $ref: 'umbrella/schemas/umbrella_country/create-region.yaml'
+    # UpdateRegion:
+    #   $ref: 'umbrella/schemas/umbrella_country/update-region.yaml'
+    # CreateAccountMove:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-account-move.yaml'
+    # UpdateAccountMove:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-account-move.yaml'
+    # CreateBalanceNonDeferral:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-balance-non-deferral.yaml'
+    # CreateReports:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-reports.yaml'
+    # UpdateReports:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/update-reports.yaml'
+    # CreateChartOfAccount:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-chart-of-account.yaml'
+    # CreateGeneralLedger:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-general-ledger.yaml'
+    # CreateBalanceSheet:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-balance-sheet.yaml'
+    # CreateIncomeStatement:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-income-statement.yaml'
+    # CreateAgedBalance:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-aged-balance.yaml'
+    # CreateJournalCash:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-journal-cash.yaml'
+    # CreateChartOfTaxCodes:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-chart-of-tax-codes.yaml'
+    # CreatePaymentJournal:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_payment/create-payment-journal.yaml'
+    # UpdatePaymentJournal:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_payment/create-payment-journal.yaml'
+    # CreateStatementJournal:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement-journal.yaml'
+    # UpdateStatementJournal:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement-journal.yaml'
+    # CreatePayment:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_payment/create-payment.yaml'
+    # UpdatePayment:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_payment/create-payment.yaml'
+    # CreateLineGroup:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-line-group.yaml'
+    # UpdateLineGroup:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-line-group.yaml'
+    # CreateStatement:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement.yaml'
+    # UpdateStatement:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_statement/create-statement.yaml'
+    # CreatePaymentMethod:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-payment-method.yaml'
+    # UpdatePaymentMethod:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-payment-method.yaml'
+    # CreatePaymentTerm:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-payment-term.yaml'
+    # CreateTest:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-test.yaml'
+    # CreateTaxTest:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/create-tax-test.yaml'
+    # UpdatePaymentTerm:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-payment-term.yaml'
+    # CreateInvoice:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-invoice.yaml'
+    # UpdateInvoice:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/account_invoice/create-invoice.yaml'
+    # ReconcileExecute:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/reconcile-execute.yaml'
+    # ReconcileSkip:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/reconcile-skip.yaml'
+    # ReconcileLine:
+    #   $ref: 'umbrella/schemas/umbrella_financial_accounting/reconcile-line.yaml'
+    # CreateBankAccount:
+    #   $ref: 'umbrella/schemas/umbrella_banking/create-account.yaml'
+    # UpdateBankAccount:
+    #   $ref: 'umbrella/schemas/umbrella_banking/create-account.yaml'
+    # CreateBank:
+    #   $ref: 'umbrella/schemas/umbrella_banking/create-bank.yaml'
+    # UpdateBank:
+    #   $ref: 'umbrella/schemas/umbrella_banking/create-bank.yaml'
+    # UpdateProductConfiguration:
+    #   $ref: 'umbrella/schemas/umbrella_product/create-configuration.yaml'
+    # CreateProduct:
+    #   $ref: 'umbrella/schemas/umbrella_product/create-product.yaml'
+    # CreateProductCategory:
+    #   $ref: 'umbrella/schemas/umbrella_product/create-product-category.yaml'
+    # CreateUnitOfMeasure:
+    #   $ref: 'umbrella/schemas/umbrella_product/create-unit-of-measure.yaml'
+    # CreateUOMCategory:
+    #   $ref: 'umbrella/schemas/umbrella_product/create-uom-category.yaml'
+    # CreateVariant:
+    #   $ref: 'umbrella/schemas/umbrella_product/create-variant.yaml'
+
+    DeleteRequestBody: 
+      $ref: 'umbrella/schemas/delete-request-body.yaml'
+    DeleteApiResponse:
+      $ref: 'umbrella/schemas/delete-api-response.yaml'
+      
+    # get with filters feature
+    Filter:
+      $ref: 'umbrella/schemas/filter.yaml'
+
+    CommonType:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+
+    HTTP200:
+      $ref: 'umbrella/schemas/http-responses/http200.yaml'
+    HTTP401:
+      $ref: 'umbrella/schemas/http-responses/http401.yaml'
+    HTTP404:
+      $ref: 'umbrella/schemas/http-responses/http404.yaml'
+    HTTP400:
+      $ref: 'umbrella/schemas/http-responses/http400.yaml'
+    HTTP403:
+      $ref: 'umbrella/schemas/http-responses/http403.yaml'
+    HTTP500:
+      $ref: 'umbrella/schemas/http-responses/http500.yaml'
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+
+security:
+  - bearerAuth: []

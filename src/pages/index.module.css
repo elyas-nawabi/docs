@@ -1,0 +1,322 @@
+/* ── Root layout ─────────────────────────────────────────────────────────── */
+.explorerRoot {
+  display: flex;
+  height: calc(100vh - var(--ifm-navbar-height));
+  overflow: hidden;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+.sidebar {
+  width: var(--api-sidebar-width, 300px);
+  min-width: var(--api-sidebar-width, 300px);
+  background: var(--api-sidebar-bg, #f8f8fc);
+  border-right: 1px solid var(--api-sidebar-border, #e8e0fc);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: width 0.2s ease, min-width 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sidebarCollapsed {
+  width: 40px;
+  min-width: 40px;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 10px 6px;
+  border-bottom: 1px solid var(--api-sidebar-border, #e8e0fc);
+  flex-shrink: 0;
+}
+
+.sidebarToggle {
+  background: none;
+  border: 1px solid var(--api-sidebar-border, #e8e0fc);
+  border-radius: 4px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--ifm-color-primary);
+  flex-shrink: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.sidebarToggle:hover {
+  background: var(--api-item-hover, #ede8fd);
+}
+
+.sidebarTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Search ──────────────────────────────────────────────────────────────── */
+.searchWrap {
+  padding: 8px 10px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--api-sidebar-border, #e8e0fc);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid var(--api-sidebar-border, #e8e0fc);
+  border-radius: 4px;
+  font-size: 12px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.searchInput:focus {
+  border-color: var(--ifm-color-primary);
+}
+
+/* ── Navigation tree ─────────────────────────────────────────────────────── */
+.menuNav {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  padding: 6px 0;
+}
+
+.menuRoot,
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu {
+  padding-left: 12px;
+  border-left: 2px solid var(--api-sidebar-border, #e8e0fc);
+  margin-left: 14px;
+}
+
+/* Group item */
+.menuGroup {
+  margin: 1px 0;
+}
+
+.menuGroupBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+  text-align: left;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.menuGroupBtn:hover {
+  background: var(--api-item-hover, #ede8fd);
+}
+
+.menuGroupBtnOpen {
+  color: var(--ifm-color-primary);
+}
+
+.chevron {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+  transition: transform 0.15s;
+  color: var(--ifm-color-primary-lighter);
+  flex-shrink: 0;
+}
+
+.chevronOpen {
+  transform: rotate(90deg);
+}
+
+/* Leaf item */
+.menuLeaf {
+  margin: 1px 0;
+}
+
+.menuLeafBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--ifm-font-color-base);
+  text-align: left;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.menuLeafBtn:hover {
+  background: var(--api-item-hover, #ede8fd);
+  color: var(--ifm-color-primary);
+}
+
+.menuLeafBtnActive {
+  background: var(--api-item-active-bg, #6d43f4) !important;
+  color: var(--api-item-active-color, #fff) !important;
+  font-weight: 600;
+}
+
+.menuDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.menuLabel {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.noResults {
+  padding: 12px 14px;
+  font-size: 12px;
+  color: var(--ifm-color-emphasis-500);
+  font-style: italic;
+}
+
+/* ── Auth bar ─────────────────────────────────────────────────────────────── */
+.authBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--api-auth-bg, #faf9ff);
+  border-bottom: 1px solid var(--api-auth-border, #ddd6fe);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.authLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.authInput {
+  flex: 1;
+  min-width: 200px;
+  max-width: 420px;
+  padding: 5px 10px;
+  border: 1px solid var(--api-auth-border, #ddd6fe);
+  border-radius: 4px;
+  font-size: 12px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  outline: none;
+}
+
+.authInput:focus {
+  border-color: var(--ifm-color-primary);
+}
+
+.authBtn {
+  padding: 5px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--ifm-color-primary);
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.authBtn:hover {
+  background: var(--ifm-color-primary-dark);
+}
+
+.authBtnSecondary {
+  background: transparent;
+  color: var(--ifm-color-primary);
+}
+
+.authBtnSecondary:hover {
+  background: var(--api-item-hover, #ede8fd);
+}
+
+.authStatus {
+  font-size: 11.5px;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.authStatusOk {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/* ── Main content ─────────────────────────────────────────────────────────── */
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.swaggerWrap {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.swaggerLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  font-size: 14px;
+  color: var(--ifm-color-emphasis-500);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: var(--ifm-navbar-height);
+    left: 0;
+    height: calc(100vh - var(--ifm-navbar-height));
+    z-index: 100;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .sidebarCollapsed {
+    transform: translateX(-100%);
+    width: 0;
+    min-width: 0;
+  }
+}

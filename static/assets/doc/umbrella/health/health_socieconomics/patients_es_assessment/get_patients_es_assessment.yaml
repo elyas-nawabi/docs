@@ -1,0 +1,140 @@
+    post:
+      tags:
+        - patients es assessment
+      summary: Get patients es assessment details.
+      description: Get patients es assessment details.
+      operationId: getPES
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of patients es assessments.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        assessment_date: 
+                          type: string 
+                          format: date 
+                        du: 
+                          type: integer
+                        du_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        education: 
+                          type: string
+                        fam_apgar_score: 
+                          type: integer
+                        housing: 
+                          type: string
+                        id: 
+                          type: integer
+                        income: 
+                          type: string
+                        occupation: 
+                          type: integer
+                        occupation_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        patient: 1
+                        patient_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        rec_name: 
+                          type: string
+                        ses: 
+                          type: string
+                        state: 
+                          type: string
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - assessment_date: '2024-08-25T19:10:24'
+                    create_date: '2024-08-25T19:11:38.923772'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    du: 1
+                    du_:
+                      id: 1
+                      name: d01
+                    education: '2'
+                    fam_apgar_score: 5
+                    housing: '1'
+                    id: 1
+                    income: m
+                    occupation: 8
+                    occupation_:
+                      id: 8
+                      name: Author
+                    patient: 1
+                    patient_:
+                      id: 1
+                      name: elyas
+                    rec_name: '1'
+                    ses: '1'
+                    state: done
+                    write_date: '2024-08-25T19:11:44.288827'
+                    write_uid: 1
+                    write_uid_:
+                      id: 1
+                      name: Administrator
+
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

@@ -1,0 +1,123 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        axis: 
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        ecg_date: 
+          type: string
+          format: date
+        ecg_strip: 
+          type: string
+        healthprof:   
+          type: integer
+        healthprof_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        id: 
+          type: integer
+        inpatient_registration_code: 
+          type: integer
+        inpatient_registration_code_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        interpretation: 
+          type: string
+        lead: 
+          type: string
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        pacemaker: 
+          type: string
+        pr: 
+          type: integer
+        qrs: 
+          type: integer
+        qt: 
+          type: integer
+        rate: 
+          type: integer
+        rec_name: 
+          type: string
+        rhythm: 
+          type: string
+        st_segment: 
+          type: string
+        twave_inversion: 
+          type: boolean
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      axis: normal
+      create_date: '2024-07-30T14:56:31.772680'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      ecg_date: '2024-07-30T14:55:36'
+      ecg_strip: 
+      healthprof: 1
+      healthprof_:
+        id: 1
+        name: Milestone
+      id: 1
+      inpatient_registration_code: 1
+      inpatient_registration_code_:
+        id: 1
+        name: INPAC001:acetylsalicylic acid:Milestone
+      institution: 1
+      institution_:
+        id: 1
+        name: Milestone
+      interpretation: '1'
+      lead: avf
+      name: 17
+      name_:
+        id: 17
+        name: Milestone
+      pacemaker: sa
+      pr: 1
+      qrs: 1
+      qt: 1
+      rate: 2
+      rec_name: 1 // Rate 2
+      rhythm: regular
+      st_segment: normal
+      twave_inversion: true
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

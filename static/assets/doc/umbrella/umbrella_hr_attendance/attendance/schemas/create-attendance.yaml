@@ -1,0 +1,47 @@
+schema:
+  properties:
+    employee:
+      type: integer
+      description: Employee ID.
+    check_in:
+      type: string
+      format: date-time
+    check_out:
+      type: string
+      format: date-time
+      nullable: true
+    in_mode:
+      type: string
+    in_latitude:
+      type: number
+    in_longitude:
+      type: number
+    in_city:
+      type: string
+    in_country_name:
+      type: string
+    out_mode:
+      type: string
+    out_latitude:
+      type: number
+    out_longitude:
+      type: number
+    out_city:
+      type: string
+    out_country_name:
+      type: string
+
+example:
+  employee: 5
+  check_in: '2026-03-10T09:00:00'
+  check_out: '2026-03-10T17:00:00'
+  in_mode: kiosk
+  in_latitude: 25.2048
+  in_longitude: 55.2708
+  in_city: Dubai
+  in_country_name: United Arab Emirates
+  out_mode: kiosk
+  out_latitude: 25.2048
+  out_longitude: 55.2708
+  out_city: Dubai
+  out_country_name: United Arab Emirates

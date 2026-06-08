@@ -1,0 +1,28 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: payment
+    description: payment - payment data management.
+paths:
+  '/financial-accounting/payments/search':
+    $ref: 'get_payment.yaml'
+  '/financial-accounting/payments':
+    $ref: 'post_delete_payment.yaml'
+  '/financial-accounting/payments/{obj_id}':
+    $ref: 'get_put_payment_by_id.yaml'
+  '/financial-accounting/payments/{obj_id}/process':
+    $ref: 'get_process_by_id.yaml'
+  '/financial-accounting/payments/{obj_id}/draft':
+    $ref: 'get_draft_by_id.yaml'
+  '/financial-accounting/payments/{obj_id}/submit':
+    $ref: 'get_submit_by_id.yaml'
+  '/financial-accounting/payments/{obj_id}/approve':
+    $ref: 'get_approve_by_id.yaml'
+  '/financial-accounting/payments/{obj_id}/proceed':
+    $ref: 'get_proceed_by_id.yaml'
+  '/financial-accounting/payments/{obj_id}/succeed':
+    $ref: 'get_succeed_by_id.yaml'
+  '/financial-accounting/payments/{obj_id}/fail':
+    $ref: 'get_fail_by_id.yaml'
+  

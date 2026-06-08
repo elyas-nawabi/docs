@@ -1,0 +1,84 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        category: 
+          type: string
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        description: 
+          type: string
+        documentation: 
+          type: string
+        id: 
+          type: integer
+        keywords: 
+          type: string
+        name: 
+          type: string
+        package: 
+          type: integer
+        package_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name: 
+          type: string
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      category: 
+      create_date: '2024-05-27T12:26:56.434108'
+      create_uid: 0
+      create_uid_:
+        id: 0
+        name: Root
+      description: Verify and check for safety in pregnancy the prescribed drug
+      documentation: "\n\n<div align=\"left\"><b><font size=\"7\" face=\"normal\">Verify
+        and check for safety in pregnancy the prescribed drug</font></b></div>\n<div><br/><br/></div>\n<div
+        align=\"left\"><font face=\"normal\">During the prescription process, GNU Health
+        checks whether the patient is in <b>childbearing</b> age.</font></div>\n<div><br/><br/></div>\n<div
+        align=\"left\"><font face=\"normal\">In the case the person is a female, it will
+        check whether they might be in childbearing age.</font></div>\n<div><br/><br/></div>\n<div
+        align=\"left\"><font face=\"normal\">If that is the case, the health professional
+        must check the field <b>\"Prescription Verified\"</b> to be able to proceed.</font></div>\n<div><br/><br/></div>\n<div
+        align=\"left\"><font face=\"normal\">For each drug, GNU Health allows to enter
+        the current pregnancy safety category / fetal risk (A,B,<font color=\"#ed333b\">C,D,X</font>,N)</font></div>\n<div><br/><br/></div>\n<div
+        align=\"left\"><font face=\"normal\">Command: <b>RX</b></font></div>\n\n            "
+      id: 1
+      keywords: 
+      name: SM-CORE-0006
+      package: 33
+      package_:
+        id: 33
+        name: health
+      rec_name: SM-CORE-0006
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

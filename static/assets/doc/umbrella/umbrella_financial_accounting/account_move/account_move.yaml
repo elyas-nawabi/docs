@@ -1,0 +1,18 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: account move
+    description: account move - account move data management.
+paths:
+  '/financial-accounting/account-moves/search':
+    $ref: 'get_account_move.yaml'
+  '/financial-accounting/account-moves':
+    $ref: 'post_delete_account_move.yaml'
+  '/financial-accounting/account-moves/{obj_id}':
+    $ref: 'get_put_account_move_by_id.yaml'
+  '/financial-accounting/account-moves/{obj_id}/post':
+    $ref: 'post_account_move_by_id.yaml'
+  '/financial-accounting/account-moves/cancel-moves':
+    $ref: 'post_cancel_move.yaml'
+  

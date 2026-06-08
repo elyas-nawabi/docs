@@ -1,0 +1,16 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: payment group
+    description: payment group - payment group data management.
+paths:
+  '/financial-accounting/payment-groups/search':
+    $ref: 'get_payment_group.yaml'
+  '/financial-accounting/payment-groups/{obj_id}':
+    $ref: 'get_payment_group_by_id.yaml'
+  '/financial-accounting/payment-groups/{obj_id}/payments-count':
+    $ref: 'get_payment_count_by_id.yaml'
+  '/financial-accounting/payment-groups/{obj_id}/succeed':
+    $ref: 'get_succeed_by_id.yaml'
+  

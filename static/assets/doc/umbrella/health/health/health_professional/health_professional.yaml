@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: health professional
+    description: health professional - health professional data management.
+paths:
+  '/health/health-professionals/search':
+    $ref: 'get_health_professional.yaml'
+  '/health/health-professionals':
+    $ref: 'post_delete_health_professional.yaml'
+  '/health/health-professionals/{obj_id}':
+    $ref: 'get_put_health_professional_by_id.yaml'
+  

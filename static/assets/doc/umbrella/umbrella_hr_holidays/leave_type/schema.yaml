@@ -1,0 +1,71 @@
+﻿schema:
+  properties:
+    data:
+      type: array
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        company:
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        requires_allocation:
+          type: boolean
+        request_unit:
+          type: string
+        unpaid:
+          type: boolean
+        active:
+          type: boolean
+        create_date:
+          type: string
+          format: date-time
+        create_uid:
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        write_date:
+          type: string
+          format: date-time
+          nullable: true
+        write_uid:
+          type: integer
+          nullable: true
+    error:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+  data:
+    id: 2
+    name: Annual Leave
+    company: 1
+    company_:
+      id: 1
+      name: Milestone
+    requires_allocation: true
+    request_unit: day
+    unpaid: false
+    active: true
+    create_date: '2026-03-01T10:00:00'
+    create_uid: 1
+    create_uid_:
+      id: 1
+      name: Administrator
+    write_date: null
+    write_uid: null
+  error: null
+  pagination: null
+  status: 201
+  success_message: null
+

@@ -1,0 +1,9 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: presence_check
+    description: presence_check - data management.
+paths:
+  '/hr-presence/check-presence':
+    $ref: 'post_check_presence.yaml'

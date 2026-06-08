@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: inpatient meal
+    description: inpatient meal - inpatient meal data management.
+paths:
+  '/health-inpatient/inpatient-meals/search':
+    $ref: 'get_inpatient_meal.yaml'
+  '/health-inpatient/inpatient-meals':
+    $ref: 'post_delete_inpatient_meal.yaml'
+  '/health-inpatient/inpatient-meals/{obj_id}':
+    $ref: 'get_put_inpatient_meal_by_id.yaml'
+  

@@ -1,0 +1,23 @@
+      items:
+        type: object
+        properties:
+          data:
+            type: object
+            nullable: true
+          errors:
+            type: object
+            nullable: true
+          pagination:
+            type: object
+            nullable: true
+          status:
+            type: integer
+          success_message:
+            type: string
+            nullable: true
+      example:
+        data: null
+        errors: null
+        pagination: null
+        status: 200
+        success_message: null   

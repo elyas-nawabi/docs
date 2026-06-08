@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: occupation
+    description: occupation - occupation data management.
+paths:
+  '/health/occupations/search':
+    $ref: 'get_occupation.yaml'
+  '/health/occupations':
+    $ref: 'post_delete_occupation.yaml'
+  '/health/occupations/{obj_id}':
+    $ref: 'get_put_occupation_by_id.yaml'
+  

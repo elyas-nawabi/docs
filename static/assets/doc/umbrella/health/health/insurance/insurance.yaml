@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: insurance
+    description: insurance - insurance data management.
+paths:
+  '/health/insurances/search':
+    $ref: 'get_insurance.yaml'
+  '/health/insurances':
+    $ref: 'post_delete_insurance.yaml'
+  '/health/insurances/{obj_id}':
+    $ref: 'get_put_insurance_by_id.yaml'
+  

@@ -1,0 +1,111 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        date:
+          type: string 
+          format: date
+        document:
+          type: integer 
+        document_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        downward_traces: 
+          type: array
+        id: 
+          type: integer
+        lot: 
+          type: integer
+        lot_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        product: 
+          type: integer
+        product_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        quantity: 
+          type: integer
+        rec_name: 
+          type: string
+        shipment: 
+          type: integer
+        shipment_: 
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        unit: 
+          type: integer
+        unit_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+        upward_traces: 
+          type: array
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      create_date: '2024-08-10T17:06:31.344034'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      date: '2024-08-10'
+      document: 
+      document_: {}
+      downward_traces: []
+      id: 5
+      lot: 3
+      lot_:
+        id: 3
+        name: '1'
+      product: 384
+      product_:
+        id: 384
+        name: acetazolamide
+      quantity: 1
+      rec_name: '5'
+      shipment: 
+      shipment_: {}
+      unit: 1
+      unit_:
+        id: 1
+        name: Unit
+      upward_traces: []
+      write_date: '2024-08-10T17:06:31.344034'
+      write_uid: 0
+      write_uid_:
+        id: 0
+        name: Root
+
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

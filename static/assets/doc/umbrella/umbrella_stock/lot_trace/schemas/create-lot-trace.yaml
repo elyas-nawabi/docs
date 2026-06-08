@@ -1,0 +1,39 @@
+      properties:
+        company: 
+          type: integer
+        date:
+          type: string 
+          format: date
+        document:
+          type: integer 
+        downward_traces: 
+          type: array
+        lot: 
+          type: integer
+        product: 
+          type: integer
+        quantity: 
+          type: integer
+        rec_name: 
+          type: string
+        shipment: 
+          type: integer
+        unit: 
+          type: integer
+        upward_traces: 
+          type: array
+  
+      required:
+          - 
+      example:
+        company: 1
+        date: '2024-08-10'
+        document: 
+        downward_traces: []
+        lot: 3
+        product: 384
+        quantity: 1
+        rec_name: '5'
+        shipment: 
+        unit: 1
+        upward_traces: []

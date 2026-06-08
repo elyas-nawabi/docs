@@ -1,0 +1,58 @@
+    get:
+      tags:
+        - user
+      summary: Get user application key.
+      description: Get user application key.
+      operationId: getUserById
+      parameters:
+        - name: obj_id
+          rquired: true
+          in: path
+          schema:
+            type: integer
+          example: 19
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+            example:
+              password: "elyas@123"
+            
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                data: 
+                  type: object
+                error: 
+                  type: object
+                pagination: 
+                  type: object
+                status: 
+                  type: object
+                success_message: 
+                  type: object
+              example:
+                data: null
+                error: null
+                pagination: null
+                status: null
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+  

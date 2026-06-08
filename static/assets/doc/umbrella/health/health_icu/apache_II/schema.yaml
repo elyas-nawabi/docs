@@ -1,0 +1,128 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        aado2:
+          type: integer 
+        age: 
+          type: integer 
+        apache_score: 
+          type: integer
+        arf: 
+          type: boolean 
+        chronic_condition: 
+          type: boolean
+        fio2: 
+          type: number
+          format: decimal
+        heart_rate: 
+          type: integer
+        hematocrit: 
+          type: number
+          format: decimal
+        hospital_admission_type: 
+          type: string
+        id: 
+          type: integer
+        mean_ap: 
+          type: integer
+        name: 
+          type: integer
+        name_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        paco2: 
+          type: integer
+        pao2: 
+          type: integer
+        ph: 
+          type: number
+          format: decimal
+        rec_name: 
+          type: string
+        respiratory_rate: 
+          type: integer
+        score_date:
+          type: string
+          format: date
+        serum_creatinine: 
+          type: number
+          format: decimal
+        serum_potassium: 
+          type: number
+          format: decimal
+        serum_sodium: 
+          type: integer
+        temperature:
+          type: number
+          format: decimal 
+        wbc: 
+          type: number
+          format: decimal
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      aado2: 
+      age: 
+      apache_score: 15
+      arf: 
+      chronic_condition: 
+      create_date: '2024-07-25T03:55:57.517626'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      fio2: 
+      heart_rate: 
+      hematocrit: 
+      hospital_admission_type: 
+      id: 73
+      mean_ap: 
+      name: 1
+      name_:
+        id: 1
+        name: INPAC001:acetylsalicylic acid:Milestone
+      paco2: 
+      pao2: 
+      ph: 
+      rec_name: '73'
+      respiratory_rate: 
+      score_date: '2024-07-23T05:31:00'
+      serum_creatinine: 
+      serum_potassium: 
+      serum_sodium: 
+      temperature: 
+      wbc: 
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

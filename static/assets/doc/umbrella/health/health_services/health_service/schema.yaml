@@ -1,0 +1,187 @@
+schema:
+  properties:
+    data:
+      type: array
+      properties:
+        create_date: 
+          type: string 
+          format: date 
+        create_uid: 
+          type: integer
+        create_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        company: 
+          type: integer
+        company_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        desc: 
+          type: string
+        id: 
+          type: integer
+        institution: 
+          type: integer
+        institution_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        insurance_holder: 
+          type: integer
+        insurance_holder_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        insurance_plan: 
+          type: integer
+        insurance_plan_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        invoice_to: 
+          type: integer
+        invoice_to_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        name: 
+          type: string
+        patient: 
+          type: integer
+        patient_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        rec_name:
+          type: string
+        service_date: 
+          type: string
+          format: date
+        service_line:
+          type: array
+          properties:
+            action_required: 
+              type: boolean
+            appointment: 
+              type: integer
+            appointment_: 
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            create_date: 
+              type: string 
+              format: date 
+            create_uid: 
+              type: integer
+            create_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+            desc: acetylsalicylic acid
+            from_date: '2024-02-15'
+            id: 
+              type: integer
+            name: 
+              type: integer
+            name_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              
+            product: 
+              type: integer
+            product_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              
+            qty: 
+              type: integer
+            rec_name: 
+              type: string
+            remarks: 
+              type: string
+            to_date:
+              type: string
+              format: date
+            to_invoice: 
+              type: boolean
+            write_date:
+              type: string
+              format: date 
+            write_uid:
+              type: integer
+            write_uid_:
+              $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+        state: draft
+        write_date:
+          type: string
+          format: date 
+        write_uid:
+          type: integer
+        write_uid_:
+          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+    errors:
+      type: object
+      nullable: true
+    pagination:
+      type: object
+      nullable: true
+    status:
+      type: integer
+    success_message:
+      type: string
+      nullable: true
+
+example:
+    data:
+      company: 1
+      company_:
+        id: 1
+        name: Milestone
+      create_date: '2024-08-03T08:44:22.502245'
+      create_uid: 1
+      create_uid_:
+        id: 1
+        name: Administrator
+      desc: test data
+      id: 1
+      institution: 1
+      institution_:
+        id: 1
+        name: Milestone
+      insurance_holder: 1
+      insurance_holder_:
+        id: 1
+        name: Milestone
+      insurance_plan: 12
+      insurance_plan_:
+        id: 12
+        name: " : 1"
+      invoice_to: 3
+      invoice_to_:
+        id: 3
+        name: Azizi
+      name: SERV 2024/001
+      patient: 17
+      patient_:
+        id: 17
+        name: Milestone
+      rec_name: SERV 2024/001
+      service_date: '2024-08-03'
+      service_line:
+      - action_required: true
+        appointment: 
+        appointment_: {}
+        create_date: '2024-08-03T08:44:22.502245'
+        create_uid: 1
+        create_uid_:
+          id: 1
+          name: Administrator
+        desc: acetylsalicylic acid
+        from_date: '2024-02-15'
+        id: 1
+        name: 1
+        name_:
+          id: 1
+          name: SERV 2024/001
+        product: 394
+        product_:
+          id: 394
+          name: "[Bed 1] acetylsalicylic acid"
+        qty: 1
+        rec_name: acetylsalicylic acid (SERV 2024/001)
+        remarks: ''
+        to_date: '2024-02-20'
+        to_invoice: true
+        write_date: 
+        write_uid: 
+        write_uid_: {}
+      state: draft
+      write_date: 
+      write_uid: 
+      write_uid_: {}
+    errors: null
+    pagination: null
+    status: 201
+    success_message: null

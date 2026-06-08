@@ -1,0 +1,33 @@
+  properties:
+    create_date: 
+      type: string 
+      format: date 
+    create_uid: 
+      type: integer
+    code: 
+      type: string
+    country: 
+      type: integer
+    name: 
+      type: string
+    rec_name: 
+      type: string
+    sequence: 
+      type: integer
+    write_date:
+      type: string
+      format: date 
+    write_uid:
+      type: integer 
+  required:
+    
+  example:
+    code: '102'
+    country: 1
+    create_date: '2025-03-16T10:28:21.473496'
+    create_uid: 1
+    name: Full Time
+    rec_name: Full Time
+    sequence: 12
+    write_date: 
+    write_uid:  

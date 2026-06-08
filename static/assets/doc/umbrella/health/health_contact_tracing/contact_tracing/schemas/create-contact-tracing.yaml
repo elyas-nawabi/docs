@@ -1,0 +1,42 @@
+      properties:
+        comments: 
+          type: string
+        contact: 
+          type: integer
+        contact_date: 
+          type: string 
+          format: date 
+        context: 
+          type: string
+        du: 
+          type: integer
+        exposure_risk: 
+          type: string
+        exposure_time: 
+          type: integer
+        operational_sector: 
+          type: integer
+        pathology: 
+          type: integer
+        patient: 
+          type: integer
+        rec_name: 
+          type: string
+        status: 
+          type: string
+        
+      required:
+          - 
+      example:
+        comments: extra info ...
+        contact: 1
+        contact_date: '2024-08-03T07:16:00'
+        context: context name
+        du: 1
+        exposure_risk: high
+        exposure_time: 1
+        operational_sector: 1
+        pathology: 1
+        patient: 17
+        rec_name: '1'
+        status: followingup

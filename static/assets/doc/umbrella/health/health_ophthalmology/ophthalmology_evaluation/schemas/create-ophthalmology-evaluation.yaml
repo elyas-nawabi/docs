@@ -1,0 +1,145 @@
+      properties:
+        computed_age: 
+          type: string
+        findings:
+          type: array
+          properties:
+            affected_eye: 
+              type: string
+            eye_structure: 
+              type: string
+            finding: 
+              type: string
+            name: 
+              type: integer
+            rec_name: 
+              type: string
+        gender: 
+          type: string
+        health_professional: 
+          type: integer
+        iop_method: 
+          type: string
+        laxis: 
+          type: integer
+        lbcva: 
+          type: string
+        lbcva_axis: 
+          type: integer
+        lbcva_cylinder: 
+          type: integer
+        lbcva_nv: 
+          type: string
+        lbcva_nv_add: 
+          type: integer
+        lbcva_spherical: 
+          type: integer
+        lcylinder: 
+          type: integer
+        ldva: 
+          type: string
+        ldva_aid: 
+          type: string
+        ldva_pinhole: 
+        liop: 
+          type: integer
+        lnv: 
+          type: string
+        lnv_add: 
+          type: integer
+        lspherical: 
+          type: integer
+        notes: 
+          type: string
+        patient: 
+          type: integer
+        raxis: 
+          type: integer
+        rbcva: 
+          type: string
+        rbcva_axis: 
+          type: integer
+        rbcva_cylinder: 
+          type: integer
+        rbcva_nv: 
+          type: string
+        rbcva_nv_add: 
+          type: integer
+        rbcva_spherical: 
+          type: integer
+        rcylinder: 
+          type: integer
+        rdva: 
+          type: string
+        rdva_aid:
+          type: string
+        rdva_pinhole: 
+          type: string
+        rec_name: 
+          type: string
+        riop: 
+          type: integer
+        rnv: 
+          type: string
+        rnv_add: 
+          type: integer
+        rspherical: 
+          type: integer
+        signed_by: 
+          type: integer
+        state: 
+          type: string
+        visit_date: 
+          type: string
+          format: date 
+        
+        
+      required:
+          - 
+      example:
+        computed_age: 32​y ​0​m ​3​d​
+        findings:
+        - affected_eye: right
+          eye_structure: lid
+          finding: findings here...
+          name: 1
+          rec_name: '1'
+        gender: m
+        health_professional: 1
+        iop_method: nct
+        laxis: 5
+        lbcva: '5_60'
+        lbcva_axis: 5
+        lbcva_cylinder: 1
+        lbcva_nv: N12
+        lbcva_nv_add: 3
+        lbcva_spherical: 1
+        lcylinder: 1
+        ldva: '5_60'
+        ldva_aid: '4_60'
+        ldva_pinhole: 
+        liop: 2
+        lnv: N12
+        lnv_add: 3
+        lspherical: 1
+        notes: ''
+        patient: 1
+        raxis: 3
+        rbcva: '6_12'
+        rbcva_axis: 3
+        rbcva_cylinder: 4
+        rbcva_nv: N18
+        rbcva_nv_add: 7
+        rbcva_spherical: 3
+        rcylinder: 4
+        rdva: '6_12'
+        rdva_aid: '6_9'
+        rdva_pinhole: '6_12'
+        rec_name: '1'
+        riop: 1
+        rnv: N18
+        rnv_add: 7
+        rspherical: 3
+        signed_by: 
+        state: in_progress
+        visit_date: '2024-08-26T18:43:51'

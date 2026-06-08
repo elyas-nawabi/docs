@@ -1,0 +1,49 @@
+      properties:
+        registration_code: 
+            type: string
+        mealtime: 
+            type: string
+        name:  
+            type: integer
+        order_date: 
+            type: string
+            format: datetime
+        health_professional: 
+            type: integer
+        status: 
+            type: string
+        meal_item: 
+            type: array
+        meal_order: 
+            type: string
+        meal_warning: 
+            type: boolean
+        meal_warning_ack: 
+            type: boolean
+        rec_name: 
+            type: string
+        remarks: 
+            type: string
+        state: 
+            type: string
+
+      required:
+          - mealtime
+          - name
+          - order_date 
+          - health_professional
+          
+      example:
+        registration_code: INPAC001:abacavir (ABC):Milestone
+        mealtime: lunch
+        name: 1
+        order_date: '2024-12-04T04:56:54.503550'
+        health_professional: 1
+        status: draft
+        meal_item: []
+        meal_order: ''
+        meal_warning: 
+        meal_warning_ack: 
+        rec_name: '24'
+        remarks: 
+        state: 

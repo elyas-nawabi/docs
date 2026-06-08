@@ -1,0 +1,21 @@
+      properties:
+        code: 
+            type: string
+        extra_info: 
+             type: string
+        institution: 
+             type: integer
+        name: 
+            type: string
+        rec_name: 
+            type: string
+  
+      required:
+          - 
+      example:
+        code: e009
+        extra_info: ''
+        institution: 1
+        name: emergency
+        rec_name: emergency
+        

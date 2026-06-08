@@ -1,0 +1,22 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: shipment in
+    description: shipment in - shipment in data management.
+paths:
+  '/stock/supplier-shipments/search':
+    $ref: 'get_shipment_in.yaml'
+  '/stock/supplier-shipments':
+    $ref: 'post_delete_shipment_in.yaml'
+  '/stock/supplier-shipments/{obj_id}':
+    $ref: 'get_put_shipment_in_by_id.yaml'
+  '/stock/supplier-shipments/{obj_id}/draft':
+    $ref: 'get_shipment_draft.yaml'
+  '/stock/supplier-shipments/{obj_id}/cancel':
+    $ref: 'get_shipment_cancel.yaml'
+  '/stock/supplier-shipments/{obj_id}/recieve':
+    $ref: 'get_shipment_recieve.yaml'
+  '/stock/supplier-shipments/{obj_id}/done':
+    $ref: 'get_shipment_done.yaml'
+  

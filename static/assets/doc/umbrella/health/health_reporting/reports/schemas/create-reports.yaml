@@ -1,0 +1,22 @@
+      properties:
+        institution: 
+          type: integer
+        start_date: 
+          type: string
+          format: date
+        end_date:
+          type: string
+          format: date
+        demographics: 
+          type: boolean
+        patient_evaluations: 
+          type: boolean
+        
+      required:
+          - 
+      example:
+        institution: 1
+        start_date: '2024-01-08'
+        end_date: '2024-01-23'
+        demographics: true
+        patient_evaluations: true

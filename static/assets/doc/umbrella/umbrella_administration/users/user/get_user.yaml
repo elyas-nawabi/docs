@@ -1,0 +1,79 @@
+    post:
+      tags:
+        - user
+      summary: Get user details.
+      description: Get user details.
+      operationId: getUsers
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of users.
+          content:
+            application/json:
+              schema:
+                type: array
+                properties:
+                  create_date: 
+                    type: string 
+                    format: date 
+                  create_uid: 
+                    type: integer
+                  create_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                  avatar: 
+                    type: string
+                  avatar_url: 
+                    type: string
+                  id: 
+                    type: integer
+                  login: 
+                    type: string
+                  name: 
+                    type: string
+                  rec_name: 
+                    type: string
+                  sessions: 
+                    type: integer
+                  write_date:
+                    type: string
+                    format: date 
+                  write_uid:
+                    type: integer
+                  write_uid_:
+                    $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+              example:
+                - avatar: "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABkAGQDASIAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAAAAUGBwQDAv/EADMQAAEDAwEFAwsFAAAAAAAAAAABAgMEBREGBxIhQYEUFZEWIjFRYnFykqGiwjRVYZWx/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAHhEBAAMAAgIDAAAAAAAAAAAAAAECERIhAyJBUXH/2gAMAwEAAhEDEQA/AIAAHpuMAAAAAAAAAAAAAAAAAAAAAAD0hglqZmQwRPlleuGsY1XOcv8ACJ6Ql5g7Kq03KhiSWrt9VBGq7qPmgcxFX1ZVPTwU4yN0AASgAAAAAAAAAAAvWy+19r1BLXvbmOjj81fbdwT6bxRTYNKRs0xs9luczUR8jHVKovPKYYnXh8xl5ZyuR8r0jtM6mpYdQ6UuMFO5JHx7+7j0pJGvFPflFTqYMafssvD5ZrhbZ5Fc969qYq81Xg/8fqUnVVr7n1NXUaNxGkivj+B3FPBFx0KeL1maLX7iLIYAHQyAAAAAAAAAAB2Wm3vut2pKGPO9PK1mU5Iq8V6JlTSdp1wZRWSjs1PhqSqjlanKNnBE8cfKRGyy19pvdRcnt8ylj3WL7buH+IviWW7as0h3lNBcqNlVUU7lhc59I2TGFXKIq8s5Oa9tvHW41rHr+sz0xdO59R0NarsRtkRsnwO4O+i56F22s2zzqG6sbwVFp5F+5v5HR5VaB/Z4P69hN3VaPWGhqp9vRXNcxXQtVuFR7FyiY5Zxj3KVtaeUWmMTEesxrDwAdbEAAAAAAAAAAGyaYZHpjZ0+vlaiSPjdVOReauTDE6pu+Jjr3ulkdI9yue5Vc5V5qp8gpWnGZn7WtbcgNN2T3P8AX2t7vVURp9rvxMyAvXlGFZydTOq7X3RqWupWtxGkm/H8DuKeGcdCGALRGQiQAEoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/9k="
+                  avatar_url: "/avatar/dW1icmVsbGE%3D/1692fe33918d4609817707f4591e7073"
+                  create_date: '2024-06-24T12:36:08.706972'
+                  create_uid: 0
+                  create_uid_:
+                    id: 0
+                    name: Root
+                  id: 1
+                  login: admin
+                  name: Administrator
+                  rec_name: Administrator
+                  sessions: 8
+                  write_date: '2024-06-25T04:26:12.287590'
+                  write_uid: 1
+                  write_uid_:
+                    id: 1
+                    name: Administrator
+                
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    

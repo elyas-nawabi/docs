@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: work location
+    description: work location - work location data management.
+paths:
+  '/hr/work-locations/search':
+    $ref: 'get_work_location.yaml'
+  '/hr/work-locations':
+    $ref: 'post_delete_work_location.yaml'
+  '/hr/work-locations/{obj_id}':
+    $ref: 'get_put_work_location_by_id.yaml'
+  

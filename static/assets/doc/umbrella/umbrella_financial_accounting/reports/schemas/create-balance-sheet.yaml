@@ -1,0 +1,28 @@
+      properties:
+        context:
+          type: object
+          properties:
+            company: 
+              type: integer
+            comparison:
+              type: boolean
+            date: 
+              type: string
+              format: date
+            date_cmp: 
+              type: string
+              format: date
+            posted:
+              type: boolean
+      required:
+        - context
+        - company
+        
+        
+      example:
+        context:
+          company: 1
+          comparison: true
+          date: '2024-11-11'
+          date_cmp: '2024-11-11'
+          posted: true

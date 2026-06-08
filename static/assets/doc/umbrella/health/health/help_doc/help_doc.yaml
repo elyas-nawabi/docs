@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: help and documentation
+    description: help and documentation - help and documentation data management.
+paths:
+  '/health/help-and-documentations/search':
+    $ref: 'get_help_doc.yaml'
+  '/health/help-and-documentations':
+    $ref: 'post_delete_help_doc.yaml'
+  '/health/help-and-documentations/{obj_id}':
+    $ref: 'get_put_help_doc_by_id.yaml'
+  

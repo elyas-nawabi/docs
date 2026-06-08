@@ -1,0 +1,23 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: move
+    description: move - move data management.
+paths:
+  '/stock/moves/search':
+    $ref: 'get_move.yaml'
+  '/stock/moves':
+    $ref: 'post_delete_move.yaml'
+  '/stock/moves/{obj_id}':
+    $ref: 'get_put_move_by_id.yaml'
+  '/stock/moves/{obj_id}/cancel':
+    $ref: 'get_cancel.yaml'
+  '/stock/moves/{obj_id}/draft':
+    $ref: 'get_draft.yaml'
+  '/stock/moves/{obj_id}/done':
+    $ref: 'get_done.yaml'
+  '/stock/moves/{obj_id}/add-lots':
+    $ref: 'post_add_lots.yaml'
+
+  

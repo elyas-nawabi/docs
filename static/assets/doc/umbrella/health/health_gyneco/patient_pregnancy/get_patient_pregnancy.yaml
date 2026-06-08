@@ -1,0 +1,146 @@
+    post:
+      tags:
+        - patient pregnancy
+      summary: Get patient pregnancy details.
+      description: Get patient pregnancy details.
+      operationId: getPatientPregnancies
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: List of patient pregnancies.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+              
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                        bba: 
+                          type: boolean
+                        computed_age: 
+                          type: string
+                        current_pregnancy: 
+                          type: boolean
+                        fetuses: 
+                          type: integer
+                        gravida: 
+                          type: integer
+                        home_birth: 
+                          type: boolean
+                        id: 
+                          type: integer
+                        iugr: 
+                          type: string
+                        lmp: 
+                          type: string
+                          format: date
+                        name:   
+                          type: integer
+                        name_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                          
+                        pdd: 
+                          type: string
+                          format: date
+                        pregnancy_end_age: 
+                          type: integer
+                        pregnancy_end_date: 
+                          type: string
+                          format: date
+                        pregnancy_end_result: 
+                          type: string
+                          format: date
+                        rec_name: 
+                          type: string
+                        warning: 
+                          type: boolean
+                        write_date:
+                          type: string
+                          format: date 
+                        write_uid:
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      type: object
+                      page:
+                        type: integer
+                      per_page:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      total_records:
+                        type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                - bba: false
+                  computed_age: '19'
+                  create_date: '2024-08-03T07:54:51.681486'
+                  create_uid: 1
+                  create_uid_:
+                    id: 1
+                    name: Administrator
+                  current_pregnancy: true
+                  fetuses: 1
+                  gravida: 1
+                  home_birth: false
+                  id: 1
+                  iugr: symmetric
+                  lmp: '2024-08-03'
+                  name: 26
+                  name_:
+                    id: 26
+                    name: Khan
+                  pdd: '2025-05-10'
+                  pregnancy_end_age: 0
+                  pregnancy_end_date: 
+                  pregnancy_end_result: 
+                  rec_name: '1'
+                  warning: false
+                  write_date: 
+                  write_uid: 
+                  write_uid_: {}
+
+                error: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 9
+                status: 200
+                success_message: null
+        
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

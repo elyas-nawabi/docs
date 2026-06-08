@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: contact mechanism
+    description: contact mechanism - contact mechanism data management.
+paths:
+  '/party/contact-mechanisms/search':
+    $ref: 'get_contact_mechanism.yaml'
+  '/party/contact-mechanisms':
+    $ref: 'post_delete_contact_mechanism.yaml'
+  '/party/contact-mechanisms/{obj_id}':
+    $ref: 'get_put_contact_mechanism_by_id.yaml'
+  

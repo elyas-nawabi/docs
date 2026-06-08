@@ -1,0 +1,16 @@
+      properties:
+        info: 
+          type: string
+        members:
+          type: array
+        name: 
+          type: string
+        rec_name: 
+          type: string
+  
+      required:
+          - 
+      example:
+        info: ''
+        name: Khanzada
+        rec_name: Khanzada

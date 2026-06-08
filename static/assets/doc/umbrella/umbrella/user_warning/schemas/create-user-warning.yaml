@@ -1,0 +1,10 @@
+      properties:
+        warning_name: 
+           type: string
+        always:
+           type: boolean
+      required:
+          - warning_name
+      example:
+        warning_name: overloaded_data
+        always: true

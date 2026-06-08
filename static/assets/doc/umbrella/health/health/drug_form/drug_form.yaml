@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: drug form
+    description: drug form - drug form data management.
+paths:
+  '/health/drug-forms/search':
+    $ref: 'get_drug_form.yaml'
+  '/health/drug-forms':
+    $ref: 'post_delete_drug_form.yaml'
+  '/health/drug-forms/{obj_id}':
+    $ref: 'get_put_drug_form_by_id.yaml'
+  

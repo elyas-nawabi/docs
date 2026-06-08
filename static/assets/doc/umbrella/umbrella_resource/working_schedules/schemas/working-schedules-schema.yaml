@@ -1,0 +1,136 @@
+type: object
+description: Schema for Resource Calendar (list/detail/upsert)
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+    description: Name of the calendar
+    example: "Default Calendar"
+  company:
+    type: integer
+    description: Company id
+    example: 1
+  full_time_required_hours:
+    type: number
+    format: float
+    description: Required full-time hours
+    example: 40.0
+  attendances:
+    type: array
+    description: List of attendance definitions for the calendar
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Morning"
+        dayofweek:
+          type: string
+          description: Day of week (0=Monday ... 6=Sunday)
+          example: "0"
+        date_from:
+          type: string
+          format: date
+          example: "2024-01-01"
+        date_to:
+          type: string
+          format: date
+          example: "2024-12-31"
+        hour_from:
+          type: number
+          format: float
+          example: 8.0
+        hour_to:
+          type: number
+          format: float
+          example: 12.0
+        duration_hours:
+          type: number
+          format: float
+          example: 4.0
+        duration_days:
+          type: number
+          format: float
+          example: 0.5
+        calendar:
+          type: integer
+        day_period:
+          type: string
+        resource:
+          type: integer
+        week_type:
+          type: string
+        two_weeks_calendar:
+          type: boolean
+        display_type:
+          type: string
+        sequence:
+          type: integer
+  leaves:
+    type: array
+    items:
+      type: integer
+    description: List of leave ids
+  global_leaves:
+    type: array
+    items:
+      type: integer
+    description: List of global leave ids
+  hours_per_day:
+    type: number
+    format: float
+  tz:
+    type: string
+    description: Timezone identifier
+    example: "UTC"
+  tz_offset:
+    type: string
+    description: Timezone offset
+    example: "+00:00"
+  two_weeks_calendar:
+    type: boolean
+  two_weeks_explanation:
+    type: string
+  flexible_hours:
+    type: boolean
+  upsert_attendances:
+    type: array
+    description: Attendances used for upsert operations (same structure as attendances)
+    items:
+      $ref: '#'
+
+required:
+  - name
+  - company
+
+example:
+  id: 1
+  name: "Default Calendar"
+  company: 1
+  full_time_required_hours: 40.0
+  attendances:
+    - name: "Morning"
+      dayofweek: "0"
+      date_from: "2024-01-01"
+      date_to: "2024-12-31"
+      hour_from: 8.0
+      hour_to: 12.0
+      duration_hours: 4.0
+      duration_days: 0.5
+      calendar: 1
+      day_period: "morning"
+      resource: 10
+      week_type: "even"
+      two_weeks_calendar: false
+      display_type: "work"
+      sequence: 1
+  leaves: [2, 3]
+  global_leaves: [4]
+  hours_per_day: 8.0
+  tz: "UTC"
+  tz_offset: "+00:00"
+  two_weeks_calendar: false
+  two_weeks_explanation: "Not applicable"
+  flexible_hours: false
+  upsert_attendances: []

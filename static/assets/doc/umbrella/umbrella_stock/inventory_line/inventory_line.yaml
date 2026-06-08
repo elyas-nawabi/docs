@@ -1,0 +1,15 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: inventory line
+    description: inventory line - inventory line data management.
+paths:
+  '/stock/inventory-lines/search':
+    $ref: 'get_inventory_line.yaml'
+  '/stock/inventory-lines':
+    $ref: 'post_delete_inventory_line.yaml'
+  '/stock/inventory-lines/{obj_id}':
+    $ref: 'get_put_inventory_line_by_id.yaml'
+  
+  

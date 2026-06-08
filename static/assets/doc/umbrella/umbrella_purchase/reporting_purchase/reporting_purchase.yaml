@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: reporting purchase
+    description: reporting purchase - reporting purchase data management.
+paths:
+  '/purchase/reporting/purchases/search':
+    $ref: 'post_reporting_purchase.yaml'
+  '/purchase/reporting/purchases-timeseries/search':
+    $ref: 'post_purchases_timeseries.yaml'
+  
+  

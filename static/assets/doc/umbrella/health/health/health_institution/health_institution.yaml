@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: health institution
+    description: health institution - health institution data management.
+paths:
+  '/health/institutions/search':
+    $ref: 'get_health_institution.yaml'
+  '/health/institutions':
+    $ref: 'post_delete_health_institution.yaml'
+  '/health/institutions/{obj_id}':
+    $ref: 'get_put_health_institution_by_id.yaml'
+  

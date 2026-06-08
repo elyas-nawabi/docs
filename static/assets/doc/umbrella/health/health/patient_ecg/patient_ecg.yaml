@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: patient ecg
+    description: patient ecg - patient ecg data management.
+paths:
+  '/health/ecgs/search':
+    $ref: 'get_patient_ecg.yaml'
+  '/health/ecgs':
+    $ref: 'post_delete_patient_ecg.yaml'
+  '/health/ecgs/{obj_id}':
+    $ref: 'get_put_patient_ecg_by_id.yaml'
+  

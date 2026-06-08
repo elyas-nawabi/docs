@@ -1,0 +1,69 @@
+post:
+  tags:
+    - export import
+  summary: Export data for a model
+  description: Export actual data from a model based on specified criteria
+  operationId: exportData
+  parameters:
+    - name: model
+      required: true
+      in: path
+      description: The model name to export data from
+      schema:
+        type: string
+      example: "account.invoice"
+  requestBody:
+    required: true
+    description: Export data criteria and configuration
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/export-data-schema.yaml'
+  responses:
+    '200':
+      description: Data exported successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                description: Exported data records
+                items:
+                  type: array
+                  description: Row data as array of values
+                  items:
+                    type: string
+              errors:
+                type: object
+                nullable: true
+              status:
+                type: integer
+              success_message:
+                type: string
+                nullable: true
+          example:
+            data:
+              - ["INV001", "Customer A", "2024-01-15", "1000.00"]
+              - ["INV002", "Customer B", "2024-01-16", "1500.00"]
+              - ["INV003", "Customer C", "2024-01-17", "750.00"]
+            errors: null
+            status: 200
+            success_message: "Data exported successfully"
+    '400':
+      description: Bad Request - Invalid export criteria
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP400'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested. You either supplied the
+        wrong credentials (e.g. a bad password), or your browser doesn't
+        understand how to supply the credentials required.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../api_doc.yaml#/components/schemas/HTTP401' 

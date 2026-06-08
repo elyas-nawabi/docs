@@ -1,0 +1,55 @@
+properties:
+  account_expense: 
+    type: integer
+  account_parent: 
+    type: boolean
+  account_revenue: 
+    type: integer
+  accounting: 
+    type: boolean
+  childs: 
+    type: array
+  create_date: 
+    type: string 
+    format: date 
+  create_uid: 
+    type: integer
+  customer_taxes: 
+    type: array
+  name: 
+    type: string
+  parent: 
+    type: integer
+  rec_name: 
+    type: string
+  supplier_taxes: 
+    type: array
+  supplier_taxes_deductible_rate: 
+    type: integer
+  taxes_parent: 
+    type: boolean
+  write_date: 
+    type: string
+    format: date
+  write_uid: 
+    type: integer
+
+required:
+
+example:
+  account_expense: null
+  account_parent: false
+  account_revenue: null
+  accounting: false
+  childs: []
+  create_date: '2024-04-18T04:47:18.743589'
+  create_uid: 0
+  customer_taxes: []
+  name: Insurances
+  parent: null
+  rec_name: Insurances
+  supplier_taxes: []
+  supplier_taxes_deductible_rate: 1
+  taxes_parent: false
+  write_date: null
+  write_uid: null

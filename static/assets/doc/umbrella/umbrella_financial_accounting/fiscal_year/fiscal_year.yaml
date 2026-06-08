@@ -1,0 +1,23 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: fiscal year
+    description: fiscal year - fiscal year data management.
+paths:
+  '/financial-accounting/fiscal-years/search':
+    $ref: 'get_fiscal_year.yaml'
+  '/financial-accounting/fiscal-years':
+    $ref: 'post_delete_fiscal_year.yaml'
+  '/financial-accounting/fiscal-years/{obj_id}':
+    $ref: 'get_put_fiscal_year_by_id.yaml'
+  '/financial-accounting/fiscal-years/{obj_id}/close':
+    $ref: 'get_close_fiscal_year.yaml'
+  '/financial-accounting/fiscal-years/{obj_id}/lock':
+    $ref: 'get_lock_fiscal_year.yaml'
+  '/financial-accounting/fiscal-years/{obj_id}/reopen':
+    $ref: 'get_reopen_fiscal_year.yaml'
+  '/financial-accounting/fiscal-years/renew':
+    $ref: 'post_renew_fiscal_year.yaml'
+  '/financial-accounting/fiscal-years/{obj_id}/create-periods':
+    $ref: 'create_periods.yaml'

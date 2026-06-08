@@ -1,0 +1,26 @@
+      properties:
+        data:
+          type: object
+          nullable: true
+        errors:
+          type: object
+        pagination:
+          type: object
+          nullable: true
+        status:
+          type: integer
+        success_message:
+          type: string
+      example:
+        data: null
+        errors:
+          - error_message: >-
+              401 Unauthorized: The server could not verify that you are
+              authorized to access the URL requested. You either supplied the
+              wrong credentials (e.g. a bad password), or your browser doesn't
+              understand how to supply the credentials required.
+            identifier: Global
+            severity: 1
+        pagination: null
+        status: 401
+        success_message: null

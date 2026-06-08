@@ -1,0 +1,14 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: health institution operational sector
+    description: health institution operational sector - health institution operational sector data management.
+paths:
+  '/health/operational-sectors-by-institution/search':
+    $ref: 'get_health_institution_operational_sector.yaml'
+  '/health/operational-sectors-by-institution':
+    $ref: 'post_delete_health_institution_operational_sector.yaml'
+  '/health/operational-sectors-by-institution/{obj_id}':
+    $ref: 'get_put_health_institution_operational_sector_by_id.yaml'
+  

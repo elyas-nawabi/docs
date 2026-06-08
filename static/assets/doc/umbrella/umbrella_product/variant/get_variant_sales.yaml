@@ -1,0 +1,136 @@
+    post:
+      tags:
+        - variant
+      summary: Get list of variants for sales.
+      description: Get list of variants for sales.
+      operationId: getVariantSales
+      requestBody:
+        description: If you wish to apply filtering, please set the criteria; otherwise, send an empty JSON request.
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      properties:
+                        create_date: 
+                          type: string 
+                          format: date 
+                        create_uid: 
+                          type: integer
+                        create_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        active: 
+                          type: boolean
+                        code: 
+                          type: string
+                        cost_price_uom: 
+                          type: number
+                          format: decimal
+                        default_uom: 
+                          type: integer
+                        default_uom_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        forecast_quantity: 
+                          type: integer
+                        id: 
+                          type: integer
+                        list_price_uom: 
+                          type: number
+                          format: decimal
+                        name: 
+                          type: string
+                        quantity: 
+                          type: integer
+                        rec_name: 
+                          type: string
+                        sale_price_uom: 
+                          type: number
+                          format: decimal
+                        template: 
+                          type: integer
+                        template_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                        write_date: 
+                          type: string
+                          format: date
+                        write_uid: 
+                          type: integer
+                        write_uid_:
+                          $ref: '../../../api_doc.yaml#/components/schemas/CommonType'
+                    errors:
+                      type: object
+                    pagination:
+                      properties:
+                        page:
+                          type: integer
+                        per_page:
+                          type: integer
+                        total_pages:
+                          type: integer
+                        total_records:
+                          type: integer
+                    status:
+                      type: integer
+                    success_message:
+                      type: string
+                      nullable: true
+              example:
+                data:
+                  - active: true
+                    code: AFG88
+                    cost_price_uom: 
+                    create_date: '2024-09-10T12:48:42.383477'
+                    create_uid: 1
+                    create_uid_:
+                      id: 1
+                      name: Administrator
+                    default_uom: 24
+                    default_uom_:
+                      id: 24
+                      name: Gallon
+                    forecast_quantity: 0
+                    id: 412
+                    list_price_uom: 
+                    name: test
+                    quantity: 0
+                    rec_name: "[AFG88] test"
+                    sale_price_uom: 
+                    template: 410
+                    template_:
+                      id: 410
+                      name: "[AFG] test"
+                    write_date: '2024-09-26T05:10:32.498733'
+                    write_uid: 1
+                    write_uid_:
+                      id: 1
+                      name: Administrator
+                errors: null
+                pagination:
+                  page: 1
+                  per_page: 100
+                  total_pages: 1
+                  total_records: 12
+                status: 200
+                success_message: null
+        '401':
+          description: >-
+            401 Unauthorized: The server could not verify that you are
+            authorized to access the URL requested. You either supplied the
+            wrong credentials (e.g. a bad password), or your browser doesn't
+            understand how to supply the credentials required.
+          content:
+            application/json:
+              schema:
+                $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+    
+    

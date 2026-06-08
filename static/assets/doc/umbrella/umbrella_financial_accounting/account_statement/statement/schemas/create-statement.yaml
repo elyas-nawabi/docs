@@ -1,0 +1,165 @@
+properties:
+  balance: 
+    type: number
+    format: decimal
+  company: 
+    type: integer
+  currency: 
+    type: integer
+  date: 
+    type: string
+    format: date
+  end_balance:
+    type: number 
+    format: decimal
+  journal: 
+    type: integer
+  lines: 
+    type: array
+    properties:
+        account: 
+          type: integer
+        amount: 
+          type: number
+          format: decimal
+        company: 
+          type: integer
+        currency: 
+          type: integer
+        date:
+          type: string
+          format: date
+        description: 
+          type: string
+        move: 
+          type: integer
+        number: 
+          type: string
+        origin: 
+          type: string
+        party: 
+          type: integer
+        party_required: 
+          type: boolean
+        rec_name: 
+          type: string
+        related_to: 
+          type: string
+        sequence: 
+          type: integer
+        statement: 
+          type: integer
+        statement_state: 
+          type: string
+  name: 
+    type: string
+  number_of_lines: 
+    type: integer
+  origin_file: 
+    type: string
+  origin_file_id: 
+    type: string 
+  origins: 
+    type: array
+    properties:
+        account: 
+          type: integer
+        amount: 
+          type: integer
+        company: 
+          type: integer
+        currency: 
+          type: integer
+        date: 
+          type: string
+          format: date
+        description: 
+          type: string
+        lines: 
+          type: array
+        number: 
+          type: string
+        party: 
+          type: integer
+        pending_amount: 
+          type: integer
+        rec_name: 
+          type: string
+        statement: 
+          type: integer
+        statement_id: 
+          type: integer
+        statement_state:
+          type: string
+  rec_name: 
+    type: string
+  start_balance: 
+    type: number
+    format: decimal
+  state: 
+    type: string
+  to_reconcile: 
+    type: boolean
+  total_amount: 
+    type: number
+    format: decimal
+  validation: 
+    type: string
+required:
+  - company
+  - date
+  - end_balance
+  - journal
+  - name
+  - start_balance
+  - state
+
+example:
+  balance: 0.93
+  company: 1
+  currency: 1
+  date: '2024-03-15'
+  end_balance: 1
+  journal: 6
+  lines:
+  - account: 5
+    amount: 0.04
+    company: 1
+    currency: 1
+    date: '2024-03-13'
+    description: this is some description
+    move: 
+    number: '1'
+    origin: 
+    party: 1
+    party_required: true
+    rec_name: stm1
+    related_to: account.payment,-1
+    sequence: 
+    statement: 2
+    statement_state: draft
+  name: stm1
+  number_of_lines: 
+  origin_file: 
+  origin_file_id: 
+  origins:
+  - account: 29
+    amount: 1
+    company: 1
+    currency: 1
+    date: '2024-03-14'
+    description: this is some description
+    lines: []
+    number: '1'
+    party: 1
+    pending_amount: 1
+    rec_name: '1'
+    statement: 2
+    statement_id: 2
+    statement_state: draft
+  rec_name: stm1
+  start_balance: 0.07
+  state: draft
+  to_reconcile: false
+  total_amount: 
+  validation: balance

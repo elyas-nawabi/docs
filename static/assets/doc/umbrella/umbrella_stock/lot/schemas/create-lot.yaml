@@ -1,0 +1,33 @@
+      properties:
+        active: 
+          type: boolean
+        default_uom: 
+          type: integer
+        expiration_date: 
+          type: string 
+          format: date
+        forecast_quantity: 
+          type: integer
+        has_sequence: 
+          type: boolean
+        number: 
+          type: string
+        product: 
+          type: integer
+        quantity: 
+          type: integer
+        rec_name: 
+          type: string
+  
+      required:
+          - 
+      example:
+        active: true
+        default_uom: 1
+        expiration_date: 
+        forecast_quantity: 0
+        has_sequence: false
+        number: '1'
+        product: 146
+        quantity: 0
+        rec_name: '1' 

@@ -1,0 +1,46 @@
+properties:
+  doses:
+    type: array
+    properties:
+      age_dose: 
+        type: integer
+      age_unit: 
+        type: string
+      dose_number: 
+        type: integer
+      rec_name: 
+        type: string
+      remarks: 
+        type: string
+      sched:
+        type: string
+      vaccine: 
+        type: integer
+      
+  rec_name: 
+    type: string
+  remarks: 
+    type: string
+  sched: 
+    type: integer
+ 
+  scope:  
+    type: string
+  vaccine:  
+    type: integer
+required:
+  - 
+example:
+  doses:
+    - age_dose: 29
+      age_unit: months
+      dose_number: 1
+      rec_name: '1'
+      remarks: ''
+      sched: '009'
+      vaccine: 1
+  rec_name: BCG vaccine
+  remarks: ''
+  sched: 1
+  scope: systematic
+  vaccine: 353

@@ -1,0 +1,15 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: lot trace
+    description: lot trace - lot trace data management.
+paths:
+  '/stock/lot-traces/search':
+    $ref: 'get_lot_trace.yaml'
+  '/stock/lot-traces':
+    $ref: 'post_delete_lot_trace.yaml'
+  '/stock/lot-traces/{obj_id}':
+    $ref: 'get_put_lot_trace_by_id.yaml'
+
+  

@@ -1,0 +1,57 @@
+post:
+  tags:
+    - appraisals
+  summary: Create an appraisal.
+  description: Create a new appraisal record (default state on server is typically `new`).
+  operationId: createAppraisal
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: 'schemas/create-appraisals.yaml'
+  responses:
+    '201':
+      description: Created.
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+delete:
+  tags:
+    - appraisals
+  summary: Delete appraisals.
+  description: Delete one or more appraisals by id (standard Umbrella delete request body).
+  operationId: deleteAppraisals
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: '../../../api_doc.yaml#/components/schemas/DeleteRequestBody'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/DeleteApiResponse'
+    '401':
+      description: >-
+        401 Unauthorized: The server could not verify that you are
+        authorized to access the URL requested.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'

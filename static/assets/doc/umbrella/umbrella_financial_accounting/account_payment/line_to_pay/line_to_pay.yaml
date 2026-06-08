@@ -1,0 +1,18 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: line to pay
+    description: line to pay - line to pay data management.
+paths:
+  '/financial-accounting/lines-to-pay/search':
+    $ref: 'get_line_to_pay.yaml'
+  '/financial-accounting/lines-to-pay/count':
+    $ref: 'get_count.yaml'
+  '/financial-accounting/lines-to-pay/{obj_id}':
+    $ref: 'get_line_to_pay_by_id.yaml'
+  '/financial-accounting/{obj_id}/block':
+    $ref: 'get_block.yaml'
+  '/financial-accounting/{obj_id}/unblock':
+    $ref: 'get_unblock.yaml'
+  
