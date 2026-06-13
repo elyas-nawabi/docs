@@ -1,0 +1,73 @@
+get:
+  tags:
+    - salary_rule_categories
+  summary: Get Salary Rule Categories by id.
+  description: Get Salary Rule Categories by id.
+  operationId: getSalaryrulecategoriesById
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+    '404':
+      description: Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+
+
+put:
+  tags:
+    - salary_rule_categories
+  summary: Update Salary Rule Categories.
+  description: Update Salary Rule Categories.
+  operationId: updateSalaryrulecategories
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/create-salary-rule-categories.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+    '404':
+      description: Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+

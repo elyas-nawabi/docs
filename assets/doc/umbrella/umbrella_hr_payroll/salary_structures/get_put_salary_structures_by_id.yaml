@@ -1,0 +1,73 @@
+get:
+  tags:
+    - salary_structures
+  summary: Get Salary Structures by id.
+  description: Get Salary Structures by id.
+  operationId: getSalarystructuresById
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+    '404':
+      description: Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+
+
+put:
+  tags:
+    - salary_structures
+  summary: Update Salary Structures.
+  description: Update Salary Structures.
+  operationId: updateSalarystructures
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/create-salary-structures.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+    '404':
+      description: Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+

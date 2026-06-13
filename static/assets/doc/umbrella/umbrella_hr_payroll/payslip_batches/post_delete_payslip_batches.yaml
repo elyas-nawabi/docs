@@ -1,0 +1,58 @@
+post:
+  tags:
+    - payslip_batches
+  summary: Create Payslip Batches.
+  description: Create Payslip Batches.
+  operationId: createPayslipbatches
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/create-payslip-batches.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+
+delete:
+  tags:
+    - payslip_batches
+  summary: Delete Payslip Batches.
+  description: Delete one or more Payslip Batches by id.
+  operationId: deletePayslipbatches
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            ids:
+              type: array
+              items:
+                type: integer
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP200'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+

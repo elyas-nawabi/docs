@@ -1,0 +1,58 @@
+post:
+  tags:
+    - salary_rule_categories
+  summary: Create Salary Rule Categories.
+  description: Create Salary Rule Categories.
+  operationId: createSalaryrulecategories
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/create-salary-rule-categories.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+
+delete:
+  tags:
+    - salary_rule_categories
+  summary: Delete Salary Rule Categories.
+  description: Delete one or more Salary Rule Categories by id.
+  operationId: deleteSalaryrulecategories
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            ids:
+              type: array
+              items:
+                type: integer
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP200'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+

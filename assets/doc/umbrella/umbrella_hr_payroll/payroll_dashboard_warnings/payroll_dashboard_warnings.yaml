@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: payroll_dashboard_warnings
+    description: Payroll Dashboard Warnings — payroll data management.
+paths:
+  '/hr-payroll/payroll-dashboard-warnings/search':
+    $ref: 'get_payroll_dashboard_warnings.yaml'
+  '/hr-payroll/payroll-dashboard-warnings':
+    $ref: 'post_delete_payroll_dashboard_warnings.yaml'
+  '/hr-payroll/payroll-dashboard-warnings/{obj_id}':
+    $ref: 'get_put_payroll_dashboard_warnings_by_id.yaml'

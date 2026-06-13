@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: salary_rule_categories
+    description: Salary Rule Categories — payroll data management.
+paths:
+  '/hr-payroll/salary-rule-categories/search':
+    $ref: 'get_salary_rule_categories.yaml'
+  '/hr-payroll/salary-rule-categories':
+    $ref: 'post_delete_salary_rule_categories.yaml'
+  '/hr-payroll/salary-rule-categories/{obj_id}':
+    $ref: 'get_put_salary_rule_categories_by_id.yaml'

@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: salary_structures
+    description: Salary Structures — payroll data management.
+paths:
+  '/hr-payroll/salary-structures/search':
+    $ref: 'get_salary_structures.yaml'
+  '/hr-payroll/salary-structures':
+    $ref: 'post_delete_salary_structures.yaml'
+  '/hr-payroll/salary-structures/{obj_id}':
+    $ref: 'get_put_salary_structures_by_id.yaml'

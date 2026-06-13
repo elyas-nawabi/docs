@@ -1,0 +1,33 @@
+get:
+  tags:
+    - salary_attachments
+  summary: Cancel salary attachment.
+  description: Cancel salary attachment.
+  operationId: cancelSalaryAttachment
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP200'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+    '404':
+      description: Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+

@@ -1,0 +1,25 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: payslips
+    description: Payslips — payroll data management.
+paths:
+  '/hr-payroll/payslips/search':
+    $ref: 'get_payslips.yaml'
+  '/hr-payroll/payslips':
+    $ref: 'post_delete_payslips.yaml'
+  '/hr-payroll/payslips/{obj_id}':
+    $ref: 'get_put_payslips_by_id.yaml'
+  '/hr-payroll/payslips/{obj_id}/compute-sheet':
+    $ref: 'get_compute_sheet_by_id.yaml'
+  '/hr-payroll/payslips/{obj_id}/confirm':
+    $ref: 'get_confirm_by_id.yaml'
+  '/hr-payroll/payslips/{obj_id}/mark-as-paid':
+    $ref: 'get_mark_as_paid_by_id.yaml'
+  '/hr-payroll/payslips/{obj_id}/cancel':
+    $ref: 'get_cancel_by_id.yaml'
+  '/hr-payroll/payslips/{obj_id}/draft':
+    $ref: 'get_draft_by_id.yaml'
+  '/hr-payroll/payslips/{obj_id}/print':
+    $ref: 'get_print_by_id.yaml'

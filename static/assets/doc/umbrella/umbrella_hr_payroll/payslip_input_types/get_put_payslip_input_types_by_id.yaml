@@ -1,0 +1,73 @@
+get:
+  tags:
+    - payslip_input_types
+  summary: Get Payslip Input Types by id.
+  description: Get Payslip Input Types by id.
+  operationId: getPayslipinputtypesById
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+    '404':
+      description: Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+
+
+put:
+  tags:
+    - payslip_input_types
+  summary: Update Payslip Input Types.
+  description: Update Payslip Input Types.
+  operationId: updatePayslipinputtypes
+  parameters:
+    - name: obj_id
+      in: path
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/create-payslip-input-types.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+    '404':
+      description: Not Found.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP404'
+

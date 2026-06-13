@@ -1,0 +1,26 @@
+post:
+  tags:
+    - payroll_dashboard_warnings
+  summary: Search Payroll Dashboard Warnings.
+  description: Search Payroll Dashboard Warnings.
+  operationId: searchPayrolldashboardwarnings
+  requestBody:
+    description: Optional filter criteria; send an empty JSON object for all records.
+    content:
+      application/json:
+        schema:
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
