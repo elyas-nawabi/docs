@@ -1,0 +1,23 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: payslip_batches
+    description: Payslip Batches — payroll data management.
+paths:
+  '/hr-payroll/payslip-batches/search':
+    $ref: 'get_payslip_batches.yaml'
+  '/hr-payroll/payslip-batches':
+    $ref: 'post_delete_payslip_batches.yaml'
+  '/hr-payroll/payslip-batches/{obj_id}':
+    $ref: 'get_put_payslip_batches_by_id.yaml'
+  '/hr-payroll/payslip-batches/{obj_id}/reset-to-draft':
+    $ref: 'get_reset_to_draft_by_id.yaml'
+  '/hr-payroll/payslip-batches/{obj_id}/confirm':
+    $ref: 'get_confirm_by_id.yaml'
+  '/hr-payroll/payslip-batches/{obj_id}/validate':
+    $ref: 'get_validate_by_id.yaml'
+  '/hr-payroll/payslip-batches/{obj_id}/mark-as-paid':
+    $ref: 'get_mark_as_paid_by_id.yaml'
+  '/hr-payroll/payslip-batches/{obj_id}/generate-payslips':
+    $ref: 'post_generate_payslips.yaml'

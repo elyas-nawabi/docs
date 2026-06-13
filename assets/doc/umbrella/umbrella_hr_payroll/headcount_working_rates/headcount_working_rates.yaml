@@ -1,0 +1,13 @@
+openapi: 3.1.0
+servers:
+  - url: 'http://api-alpha.umbrellaerp.com'
+tags:
+  - name: headcount_working_rates
+    description: Headcount Working Rate — payroll data management.
+paths:
+  '/hr-payroll/headcount-working-rates/search':
+    $ref: 'get_headcount_working_rates.yaml'
+  '/hr-payroll/headcount-working-rates':
+    $ref: 'post_delete_headcount_working_rates.yaml'
+  '/hr-payroll/headcount-working-rates/{obj_id}':
+    $ref: 'get_put_headcount_working_rates_by_id.yaml'

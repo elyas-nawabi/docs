@@ -1,0 +1,16 @@
+type: object
+properties:
+  data:
+    type: object
+    additionalProperties: true
+  error:
+    type: object
+    nullable: true
+  pagination:
+    type: object
+    nullable: true
+  status:
+    type: integer
+  success_message:
+    type: string
+    nullable: true

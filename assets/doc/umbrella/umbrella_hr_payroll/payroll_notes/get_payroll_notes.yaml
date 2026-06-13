@@ -1,0 +1,26 @@
+post:
+  tags:
+    - payroll_notes
+  summary: Search Payroll Notes.
+  description: Search Payroll Notes.
+  operationId: searchPayrollnotes
+  requestBody:
+    description: Optional filter criteria; send an empty JSON object for all records.
+    content:
+      application/json:
+        schema:
+          $ref: '../../../api_doc.yaml#/components/schemas/Filter'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+

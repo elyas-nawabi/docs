@@ -1,0 +1,58 @@
+post:
+  tags:
+    - payroll_dashboard_warnings
+  summary: Create Payroll Dashboard Warnings.
+  description: Create Payroll Dashboard Warnings.
+  operationId: createPayrolldashboardwarnings
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'schemas/create-payroll-dashboard-warnings.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: 'schema.yaml'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
+
+delete:
+  tags:
+    - payroll_dashboard_warnings
+  summary: Delete Payroll Dashboard Warnings.
+  description: Delete one or more Payroll Dashboard Warnings by id.
+  operationId: deletePayrolldashboardwarnings
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            ids:
+              type: array
+              items:
+                type: integer
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP200'
+    '401':
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../api_doc.yaml#/components/schemas/HTTP401'
+
